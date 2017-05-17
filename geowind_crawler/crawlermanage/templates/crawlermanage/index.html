@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+{% block head %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,14 +13,15 @@
   <link rel="stylesheet" href="../../static/dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="../../static/dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="../../static/plugins/iCheck/flat/blue.css">
-
 </head>
+{% endblock %}
+
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="{%url 'crawlermanage.views.index' %}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>爬</b>虫</span>
       <!-- logo for regular state and mobile devices -->
@@ -138,8 +140,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="pages/tasks.html"><i class="fa fa-circle-o"></i>爬虫状态</a></li>
-            <li><a href="pages/taskdata.html"><i class="fa fa-circle-o"></i>数据显示</a></li>
+            <li class="active"><a href="{%url 'crawlermanage.views.tasks'%}"><i class="fa fa-circle-o"></i>爬虫状态</a></li>
+            <li><a href="{%url 'crawlermanage.views.taskdata'%}"><i class="fa fa-circle-o"></i>数据显示</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -151,14 +153,14 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+            <li><a href="layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+            <li><a href="layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
+            <li><a href="layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
+            <li><a href="layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
           </ul>
         </li>
         <li>
-          <a href="pages/widgets.html">
+          <a href="{%url 'crawlermanage.views.layout'%}">
             <i class="fa fa-tasks"></i> <span>布置任务</span>
             <!-- <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
@@ -196,9 +198,12 @@
     </section>
 
     <!-- Main content -->
-    <section class="content"> 
+    <section class="content">
+      {% block maincontent %}
+      {% endblock %}
     </section>
     <!-- /.content -->
+
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -212,6 +217,7 @@
 </div>
 <!-- ./wrapper -->
 
+{% block script %}
 <!-- jQuery 2.2.3 -->
 <script src="../../static/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
@@ -220,5 +226,8 @@
 <script src="../../static/dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../static/dist/js/demo.js"></script>
+{% endblock %}
+
 </body>
 </html>
+

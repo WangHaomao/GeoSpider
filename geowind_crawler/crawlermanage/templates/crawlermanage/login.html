@@ -50,16 +50,20 @@
 <body>
   <div class="container">
 
-      <form action="/login/" method="post" class="form-signin" role="form">
+      <form action="/crawlermanage/login/" method="post" class="form-signin" role="form">{% csrf_token %}
         <h2 class="form-signin-heading">请先登录</h2>
         <input name="username" type="text" class="form-control" placeholder="输入账号" required autofocus>
         <input name="password" type="password" class="form-control" placeholder="输入密码" required>
+        <p style="color: red;">{{error}}</p>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> 记住我
           </label>
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+        {% if error %}
+
+    {% endif %}
       </form>
 
     </div> <!-- /container -->
