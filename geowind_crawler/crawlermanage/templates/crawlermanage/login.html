@@ -50,10 +50,10 @@
 <body>
   <div class="container">
 
-      <form class="form-signin" role="form">
+      <form action="/login/" method="post" class="form-signin" role="form">
         <h2 class="form-signin-heading">请先登录</h2>
-        <input type="text" class="form-control" placeholder="输入账号" required autofocus>
-        <input type="password" class="form-control" placeholder="输入密码" required>
+        <input name="username" type="text" class="form-control" placeholder="输入账号" required autofocus>
+        <input name="password" type="password" class="form-control" placeholder="输入密码" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> 记住我
