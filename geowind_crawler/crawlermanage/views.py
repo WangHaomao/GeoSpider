@@ -1,13 +1,21 @@
 # -*- encoding: utf-8 -*-
+import os
+
+import mongoengine
+import redis
 from django import forms
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
+from scrapy import cmdline
+
+from bigcrawler.main import run
+
 import logging
 
 from crawlermanage.models import Task
 
 logger = logging.getLogger('crawlermanage.views')
-
+mongoengine.register_connection('default', 'p')
 
 # Create your views here.
 
@@ -38,6 +46,9 @@ def login(request):
         return render_to_response('crawlermanage/login.html')
 
 def index(request):
+    main = os.path.dirname(__file__) + "/../../bigcrawler/main.py"
+    logger.info(main)
+    os.system("python " + main)
     return render(request, 'crawlermanage/index.html')
 
 def tasks(request):
@@ -57,6 +68,7 @@ def layout(request):
         starturls = request.POST.get('starturls', '')
         webtype = request.POST.get('webtype', '')
         runmodel = request.POST.get('runmodel', '')
+
         if taskname=='' or starturls=='':
             error1 = None
             error2 = None
@@ -66,7 +78,14 @@ def layout(request):
                 error2= u'起始URL不能为空'
             return render_to_response('crawlermanage/layout.html', {'taskname':taskname, 'starturls':starturls, 'error1': error1, 'error2': error2})
         else:
-            Task.objects.create(taskname=taskname, starturls=starturls, webtype=webtype, runmodel=runmodel)
+            status = 'running'
+            list_url = starturls.strip().split('\n')
+            task = Task.objects.create(taskname=taskname, starturls=list_url, status=status, webtype=webtype, runmodel=runmodel)
+
+            main = os.path.dirname(__file__) + "/../../bigcrawler/main.py"
+            logger.info(main)
+            os.system("python " + main)
+
             return HttpResponseRedirect('/crawlermanage/tasks')
     else:
         return render_to_response('crawlermanage/layout.html')
