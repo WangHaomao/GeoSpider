@@ -26,25 +26,31 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <form role="form">
+            <form action="/crawlermanage/layout/" method="post" role="form">{% csrf_token %}
               <!-- text input -->
               <div class="form-group">
                 <label>任务名</label>
-                <input type="text" class="form-control" placeholder="输入任务名 ...">
+                <input name="taskname" type="text" class="form-control" placeholder="输入任务名 ..." value="{% if taskname %}{{taskname}}{% endif %}">
+                {% if error1 %}
+                  <p style="color: red;">{{error1}}</p>
+                {% endif %}
               </div>
               <!-- textarea -->
               <div class="form-group">
-                <label>启始URL（如有多个用","分割）</label>
-                <textarea class="form-control" rows="3" placeholder="例如：https://www.geowind.com,http://www.bootstrap.com"></textarea>
+                <label>起始URL（如有多个用","分割）</label>
+                <textarea name="starturls" class="form-control" rows="3" placeholder="例如：https://www.geowind.com,http://www.bootstrap.com">{% if starturls %}{{starturls}}{% endif %}</textarea>
+                {% if error2 %}
+                  <p style="color: red;">{{error2}}</p>
+                {% endif %}
               </div>
 
               <!-- select -->
               <div class="form-group">
                 <label>网站类型</label>
-                <select class="form-control">
-                  <option>电商网站</option>
-                  <option>新闻、博客</option>
-                  <option>混合（暂未实现）</option>
+                <select class="form-control" name="webtype">
+                  <option value="option1">电商网站</option>
+                  <option value="option1">新闻、博客</option>
+                  <option value="option1">混合（暂未实现）</option>
                 </select>
               </div>
 
@@ -53,19 +59,19 @@
                 <label>运行模式</label>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    <input type="radio" name="runmodel" id="optionsRadios1" value="option1" checked>
                     均衡模式&mdash;默认模式运行，消耗内存比较小
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    <input type="radio" name="runmodel" id="optionsRadios2" value="option2">
                     进程最大&mdash;启动额定的最大进程数，速度快，但内存消耗大
                   </label>
                 </div>
                 <div class="radio">
                   <label>
-                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                    <input type="radio" name="runmodel" id="optionsRadios3" value="option3" disabled>
                     还在思考
                   </label>
                 </div>
@@ -110,7 +116,7 @@
               </div>
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-default">取消</button>
+                <button type="button" class="btn btn-default">取消</button>
                 <button type="submit" class="btn btn-primary pull-right">确认</button>
               </div>
             </form>
