@@ -923,3 +923,2100 @@ ValidationError: ValidationError (Task:None) (Only dictionaries may be used in a
 2017-05-19 04:25:39,259 [Thread-11:140472019932928] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
 2017-05-19 04:25:40,240 [Thread-13:140472019932928] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
 2017-05-19 04:25:47,596 [Thread-15:140472019932928] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 05:28:38,085 [Thread-15:140139633112832] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 05:28:42,786 [Thread-17:140139633112832] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 05:29:22,749 [Thread-3:140017401849600] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 05:30:11,287 [Thread-7:140346017171200] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 05:44:36,805 [Thread-10:140442477786880] [django.request:170] [WARNING]- Not Found: /
+2017-05-19 05:44:41,785 [Thread-24:140442477786880] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 05:44:46,397 [Thread-32:140442435389184] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 05:45:23,535 [Thread-33:140442477786880] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 83, in layout
+    task = Task.objects.create(taskname=taskname, starturls=list_url, status=status, webtype=webtype, runmodel=runmodel)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 173, in _get_collection
+    db = cls._get_db()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 166, in _get_db
+    return get_db(cls._meta.get('db_alias', DEFAULT_CONNECTION_NAME))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/connection.py", line 227, in get_db
+    db = conn[conn_settings['name']]
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 996, in __getitem__
+    return database.Database(self, name)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/database.py", line 103, in __init__
+    "of %s" % (string_type.__name__,))
+TypeError: name must be an instance of basestring
+2017-05-19 05:46:04,505 [Thread-3:140220856710912] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 05:46:22,677 [Thread-8:140220839925504] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 85, in layout
+    task = Task.objects.create(taskname=taskname, starturls=list_url, status=status, webtype=webtype, runmodel=runmodel)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 173, in _get_collection
+    db = cls._get_db()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 166, in _get_db
+    return get_db(cls._meta.get('db_alias', DEFAULT_CONNECTION_NAME))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/connection.py", line 227, in get_db
+    db = conn[conn_settings['name']]
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 996, in __getitem__
+    return database.Database(self, name)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/database.py", line 103, in __init__
+    "of %s" % (string_type.__name__,))
+TypeError: name must be an instance of basestring
+2017-05-19 05:47:50,265 [Thread-3:140566134966016] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 05:47:56,514 [Thread-4:140566126311168] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 85, in layout
+    task = Task.objects.create(taskname=taskname, starturls=list_url, status=status, webtype=webtype, runmodel=runmodel)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 173, in _get_collection
+    db = cls._get_db()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 166, in _get_db
+    return get_db(cls._meta.get('db_alias', DEFAULT_CONNECTION_NAME))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/connection.py", line 227, in get_db
+    db = conn[conn_settings['name']]
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 996, in __getitem__
+    return database.Database(self, name)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/database.py", line 103, in __init__
+    "of %s" % (string_type.__name__,))
+TypeError: name must be an instance of basestring
+2017-05-19 05:48:23,919 [Thread-2:140393029052160] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 85, in layout
+    task = Task.objects.create(taskname=taskname, starturls=list_url, status=status, webtype=webtype, runmodel=runmodel)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 173, in _get_collection
+    db = cls._get_db()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 166, in _get_db
+    return get_db(cls._meta.get('db_alias', DEFAULT_CONNECTION_NAME))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/connection.py", line 227, in get_db
+    db = conn[conn_settings['name']]
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 996, in __getitem__
+    return database.Database(self, name)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/database.py", line 103, in __init__
+    "of %s" % (string_type.__name__,))
+TypeError: name must be an instance of basestring
+2017-05-19 05:48:27,794 [Thread-4:140392808834816] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 05:48:36,135 [Thread-6:140393029052160] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 85, in layout
+    task = Task.objects.create(taskname=taskname, starturls=list_url, status=status, webtype=webtype, runmodel=runmodel)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 173, in _get_collection
+    db = cls._get_db()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 166, in _get_db
+    return get_db(cls._meta.get('db_alias', DEFAULT_CONNECTION_NAME))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/connection.py", line 227, in get_db
+    db = conn[conn_settings['name']]
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 996, in __getitem__
+    return database.Database(self, name)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/database.py", line 103, in __init__
+    "of %s" % (string_type.__name__,))
+TypeError: name must be an instance of basestring
+2017-05-19 05:50:28,127 [Thread-3:139808845711104] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 05:50:31,686 [Thread-5:139808845711104] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 05:50:32,889 [Thread-6:139808845711104] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in tasks
+    tasklist = Task.objects.all()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 173, in _get_collection
+    db = cls._get_db()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 166, in _get_db
+    return get_db(cls._meta.get('db_alias', DEFAULT_CONNECTION_NAME))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/connection.py", line 227, in get_db
+    db = conn[conn_settings['name']]
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 996, in __getitem__
+    return database.Database(self, name)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/database.py", line 103, in __init__
+    "of %s" % (string_type.__name__,))
+TypeError: name must be an instance of basestring
+2017-05-19 05:54:55,418 [Thread-7:140106881537792] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 05:54:56,970 [Thread-8:140106881537792] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 51, in tasks
+    tasklist = Task.objects.all()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 173, in _get_collection
+    db = cls._get_db()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 166, in _get_db
+    return get_db(cls._meta.get('db_alias', DEFAULT_CONNECTION_NAME))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/connection.py", line 227, in get_db
+    db = conn[conn_settings['name']]
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 996, in __getitem__
+    return database.Database(self, name)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/database.py", line 103, in __init__
+    "of %s" % (string_type.__name__,))
+TypeError: name must be an instance of basestring
+2017-05-19 05:57:33,196 [Thread-3:139655278872320] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 05:57:34,751 [Thread-5:139655262086912] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 05:57:36,190 [Thread-7:139655245301504] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 05:57:36,947 [Thread-9:139655245301504] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 05:57:38,478 [Thread-11:139655245301504] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 05:57:40,723 [Thread-13:139655245301504] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 05:57:41,538 [Thread-14:139655245301504] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/pages/widgets.html
+2017-05-19 06:08:17,095 [Thread-3:140510760531712] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 06:08:19,378 [Thread-5:140510743746304] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 06:08:20,724 [Thread-7:140510391957248] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 06:08:21,191 [Thread-9:140510391957248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 06:08:21,959 [Thread-11:140510391957248] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 06:08:22,467 [Thread-12:140510391957248] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/pages/widgets.html
+2017-05-19 06:09:47,702 [Thread-2:139751242245888] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 46, in index
+    subprocess.Popen(['scrapy','crawl','news2'],cwd="../../bigcrawler/")
+  File "/usr/lib/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1343, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory: '../../bigcrawler/'
+2017-05-19 06:10:25,208 [Thread-5:140033315043072] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 46, in index
+    subprocess.Popen(['scrapy','crawl','news2'],cwd="../../bigcrawler/",shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1343, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory: '../../bigcrawler/'
+2017-05-19 06:12:03,006 [Thread-6:140033315043072] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 46, in index
+    subprocess.Popen(['scrapy','crawl','news2'],cwd="../../bigcrawler/",shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1343, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory: '../../bigcrawler/'
+2017-05-19 06:15:08,127 [Thread-5:140213450741504] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 46, in index
+    subprocess.call("python main.py",cwd="../../bigcrawler/",shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 523, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1343, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory: '../../bigcrawler/'
+2017-05-19 06:15:43,852 [Thread-5:140431597758208] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 46, in index
+    subprocess.call("python main.py",cwd=r"../../bigcrawler/",shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 523, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1343, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory: '../../bigcrawler/'
+2017-05-19 06:16:00,120 [Thread-2:140682762602240] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 46, in index
+    subprocess.call("python main.py",cwd=r"../../bigcrawler",shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 523, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1343, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory: '../../bigcrawler'
+2017-05-19 06:18:20,001 [Thread-3:139649248843520] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 06:18:22,906 [Thread-5:139649240450816] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 06:19:13,539 [Thread-3:139651168941824] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 06:21:51,479 [Thread-9:139651143763712] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 06:24:03,026 [Thread-3:139841241081600] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 06:26:40,321 [Thread-3:139998780704512] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 06:28:33,010 [Thread-9:139998763919104] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 06:30:03,665 [Thread-3:140221131351808] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 06:34:08,765 [Thread-9:140221122959104] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 07:20:19,899 [Thread-3:140671386121984] [django.request:170] [WARNING]- Not Found: /favicon.ico
+2017-05-19 07:20:22,058 [Thread-7:140671386121984] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 07:20:23,605 [Thread-9:140671386121984] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:20:24,973 [Thread-11:140671386121984] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 07:20:25,846 [Thread-12:140671386121984] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/pages/widgets.html
+2017-05-19 07:20:28,113 [Thread-14:140671377729280] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:20:30,578 [Thread-16:140671360943872] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:20:31,676 [Thread-18:140671344158464] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:20:47,026 [Thread-20:140671344158464] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:20:49,894 [Thread-22:140671344158464] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 07:21:27,050 [Thread-23:140671344158464] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 79, in layout
+    subprocess.Popen("python main.py", cwd=r"/home/kui/work/python/project/bigcrawler/ls", shell=True)
+  File "/usr/lib/python2.7/subprocess.py", line 711, in __init__
+    errread, errwrite)
+  File "/usr/lib/python2.7/subprocess.py", line 1343, in _execute_child
+    raise child_exception
+OSError: [Errno 2] No such file or directory: '/home/kui/work/python/project/bigcrawler/ls'
+2017-05-19 07:21:50,873 [Thread-3:140031320090368] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 07:22:14,528 [Thread-9:140031092057856] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:23:07,355 [Thread-11:140031092057856] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:23:07,758 [Thread-13:140031092057856] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:28:36,860 [Thread-3:139720127567616] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:28:39,235 [Thread-5:139719908255488] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:28:40,741 [Thread-7:139719891470080] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:28:42,806 [Thread-9:139720135960320] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 07:28:43,999 [Thread-11:139720135960320] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:28:45,516 [Thread-13:139720135960320] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:28:47,416 [Thread-15:139720135960320] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 07:28:48,401 [Thread-16:139720135960320] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/pages/widgets.html
+2017-05-19 07:28:50,374 [Thread-18:139720127567616] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 07:28:52,912 [Thread-20:139719899862784] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:29:35,548 [Thread-6:140431757887232] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 07:29:36,898 [Thread-8:140431757887232] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:29:38,076 [Thread-10:140431757887232] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:30:29,418 [Thread-12:140431757887232] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 07:30:36,694 [Thread-14:140431757887232] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 07:30:41,431 [Thread-16:140431757887232] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:30:53,584 [Thread-18:140431757887232] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:30:54,225 [Thread-20:140431757887232] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:31:07,706 [Thread-22:140431757887232] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:31:09,517 [Thread-24:140431757887232] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:31:10,843 [Thread-26:140431757887232] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:36:05,352 [Thread-3:140698296776448] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:36:11,618 [Thread-5:140698279991040] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:36:16,908 [Thread-9:140698376345344] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 07:36:17,978 [Thread-11:140698376345344] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:36:20,598 [Thread-13:140698376345344] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:37:37,194 [Thread-15:140698376345344] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 07:37:39,085 [Thread-17:140698376345344] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:37:41,161 [Thread-19:140698376345344] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:38:54,035 [Thread-21:140698296776448] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:38:55,714 [Thread-23:140698263205632] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:38:56,795 [Thread-25:140698279991040] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 07:39:00,183 [Thread-27:140698279991040] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdetail/dist/img/user2-160x160.jpg
+2017-05-19 07:42:39,483 [Thread-3:139704404158208] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 07:42:43,530 [Thread-5:139704404158208] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:42:45,305 [Thread-6:139704404158208] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail/?id={{news.id}}' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-05-19 07:43:12,517 [Thread-14:139704372950784] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 07:43:14,634 [Thread-3:140380102555392] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:43:16,058 [Thread-4:140380102555392] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail/?id={{news.id}}' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-05-19 07:48:20,847 [Thread-3:140186514016000] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:48:23,826 [Thread-4:140186505623296] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail/?id=aa' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-05-19 07:50:00,668 [Thread-7:140186505623296] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:50:03,712 [Thread-8:140186505623296] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/$']
+2017-05-19 07:56:07,291 [Thread-2:139885908383488] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 50, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'tasklist':tasklist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 433, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 298, in _populate
+    p_pattern = pattern.regex.pattern
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 195, in regex
+    (regex, six.text_type(e)))
+ImproperlyConfigured: "^crawlermanage/newsdetail/?P<id>\d+)/$" is not a valid regular expression: unbalanced parenthesis
+2017-05-19 07:56:09,005 [Thread-3:139885908383488] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 50, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'tasklist':tasklist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 433, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 298, in _populate
+    p_pattern = pattern.regex.pattern
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 195, in regex
+    (regex, six.text_type(e)))
+ImproperlyConfigured: "^crawlermanage/newsdetail/?P<id>\d+)/$" is not a valid regular expression: unbalanced parenthesis
+2017-05-19 07:57:01,790 [Thread-3:139835534419712] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 07:57:06,149 [Thread-4:139835534419712] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/$']
+2017-05-19 08:00:57,249 [Thread-2:140259321636608] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/$']
+2017-05-19 08:01:14,098 [Thread-10:140259313243904] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:01:15,978 [Thread-12:140259313243904] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:01:19,621 [Thread-13:140259313243904] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/$']
+2017-05-19 08:01:23,444 [Thread-14:140259304851200] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/$']
+2017-05-19 08:02:35,248 [Thread-16:140259313243904] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:02:38,991 [Thread-17:140259296458496] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail/?news.id' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-05-19 08:02:55,875 [Thread-22:140258769102592] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:02:59,564 [Thread-23:140259321636608] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail/?{news.id}' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-05-19 08:03:18,337 [Thread-27:140259313243904] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:03:21,959 [Thread-28:140259321636608] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail/?{{news.id}}' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-05-19 08:06:25,834 [Thread-3:139847049381632] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:06:29,552 [Thread-4:139847049381632] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '()' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\d+)$']
+2017-05-19 08:06:50,869 [Thread-6:139847049381632] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:06:54,313 [Thread-7:139847049381632] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\d+)$']
+2017-05-19 08:07:44,151 [Thread-3:139642843084544] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:07:44,433 [Thread-5:139642817644288] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:07:47,551 [Thread-6:139642473019136] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\\\d+)$']
+2017-05-19 08:08:49,910 [Thread-3:140663419270912] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:08:53,360 [Thread-4:140663410878208] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\s+)$']
+2017-05-19 08:11:29,828 [Thread-7:139785750443776] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:11:32,097 [Thread-9:139785750443776] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:11:35,833 [Thread-10:139785750443776] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(?P<poll_id>\\d+)$']
+2017-05-19 08:14:39,934 [Thread-3:139670950041344] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:14:44,098 [Thread-4:139670941648640] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\s+)$']
+2017-05-19 08:15:22,466 [Thread-6:140056190772992] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:15:25,650 [Thread-8:140056190772992] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:15:29,447 [Thread-9:140056190772992] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\d+)$']
+2017-05-19 08:16:09,078 [Thread-10:140056190772992] [django.request:170] [WARNING]- Not Found: /gen204
+2017-05-19 08:17:35,727 [Thread-12:140056173205248] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:18:11,961 [Thread-3:140488424630016] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:18:19,643 [Thread-5:140488424630016] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:18:57,866 [Thread-7:140475763783424] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:19:02,409 [Thread-9:140475763783424] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:19:14,759 [Thread-12:140476245579520] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:19:25,492 [Thread-14:140476245579520] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:19:33,627 [Thread-16:140476245579520] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:19:51,248 [Thread-17:140476245579520] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdetail/591e9bee9c1da9105df43726
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: newsdetail() takes exactly 1 argument (2 given)
+2017-05-19 08:20:11,788 [Thread-18:140476245579520] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdetail/591e9bee9c1da9105df43726
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: newsdetail() takes exactly 1 argument (2 given)
+2017-05-19 08:21:07,008 [Thread-3:140021945767680] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:21:17,901 [Thread-8:140021570991872] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dsffsad
+2017-05-19 08:21:32,928 [Thread-15:140021937374976] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/(.+)/$
+2017-05-19 08:21:55,690 [Thread-21:140021920589568] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/591e9bee9c1da9105df43726
+2017-05-19 08:23:17,646 [Thread-27:140021954160384] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdetail/591e9bee9c1da9105df43726/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: newsdetail() takes exactly 1 argument (2 given)
+2017-05-19 08:23:44,270 [Thread-28:140021954160384] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdetail.html
+2017-05-19 08:24:15,554 [Thread-2:140289108342528] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\s*)/$']
+2017-05-19 08:24:18,358 [Thread-3:140288865597184] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\s*)/$']
+2017-05-19 08:24:27,831 [Thread-9:140288857204480] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:24:30,909 [Thread-11:140288857204480] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:24:35,000 [Thread-12:140288857204480] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\s*)/$']
+2017-05-19 08:24:44,979 [Thread-13:140288857204480] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\s*)/$']
+2017-05-19 08:25:08,746 [Thread-3:140561779099392] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:25:12,356 [Thread-4:140561779099392] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/$']
+2017-05-19 08:25:42,622 [Thread-10:140561779099392] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:25:44,725 [Thread-12:140561779099392] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:25:50,251 [Thread-14:140561779099392] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:26:02,997 [Thread-15:140561779099392] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 61, in newsdetail
+    news = News.objects.get(id=id)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 273, in get
+    result = queryset.next()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1547, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1590, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 89, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/transform.py", line 98, in query
+    value = field.prepare_query_value(op, value)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 465, in prepare_query_value
+    return self.to_mongo(value)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 461, in to_mongo
+    self.error(six.text_type(e))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 159, in error
+    raise ValidationError(message, errors=errors, field_name=field_name)
+ValidationError: u'None' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2017-05-19 08:26:27,489 [Thread-2:139690090051328] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\s*)/$']
+2017-05-19 08:26:48,243 [Thread-2:140159227344640] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\s+)/$']
+2017-05-19 08:26:56,795 [Thread-3:140159227344640] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '()' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\s+)/$']
+2017-05-19 08:27:06,004 [Thread-10:140159227344640] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:27:07,972 [Thread-12:140159227344640] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:27:11,922 [Thread-13:140159227344640] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '()' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\s+)/$']
+2017-05-19 08:33:28,942 [Thread-3:140669328451328] [django.request:170] [WARNING]- Not Found: /favicon.ico
+2017-05-19 08:33:33,881 [Thread-7:140669104420608] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:34:07,322 [Thread-8:140669104420608] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 50, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'tasklist':tasklist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 1114, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 1036, in _refresh
+    self.__collation))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 873, in __send_message
+    **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 888, in _send_message_with_response
+    server = topology.select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: localhost:27017: [Errno 111] Connection refused
+2017-05-19 08:34:09,852 [Thread-9:140669336844032] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 50, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'tasklist':tasklist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 1114, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 1036, in _refresh
+    self.__collation))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 873, in __send_message
+    **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 888, in _send_message_with_response
+    server = topology.select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: localhost:27017: [Errno 111] Connection refused
+2017-05-19 08:34:21,702 [Thread-10:140669104420608] [django.request:170] [WARNING]- Not Found: /
+2017-05-19 08:34:29,663 [Thread-15:140669070849792] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:34:32,143 [Thread-17:140669104420608] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:34:36,862 [Thread-18:140669104420608] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '()' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/(\\s+)/$']
+2017-05-19 08:35:25,229 [Thread-7:139641239881472] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:35:27,194 [Thread-9:139641231488768] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:35:32,725 [Thread-11:139641231488768] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:36:30,624 [Thread-12:139641231488768] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 61, in newsdetail
+    news = News.objects.get(id=id)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 273, in get
+    result = queryset.next()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1547, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1590, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 89, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/transform.py", line 98, in query
+    value = field.prepare_query_value(op, value)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 465, in prepare_query_value
+    return self.to_mongo(value)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 461, in to_mongo
+    self.error(six.text_type(e))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 159, in error
+    raise ValidationError(message, errors=errors, field_name=field_name)
+ValidationError: u'None' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2017-05-19 08:38:33,205 [Thread-13:139641231488768] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/$']
+2017-05-19 08:38:59,951 [Thread-23:139641256666880] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:39:08,966 [Thread-26:139641231488768] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:39:13,221 [Thread-27:139641231488768] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/$']
+2017-05-19 08:39:15,024 [Thread-28:139641256666880] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail' with arguments '(ObjectId('591e9bee9c1da9105df43726'),)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['crawlermanage/newsdetail/$']
+2017-05-19 08:40:14,341 [Thread-6:139731147253504] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:40:20,037 [Thread-8:139731147253504] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:40:27,086 [Thread-10:139731147253504] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:41:33,302 [Thread-11:139731147253504] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 57, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 217, in render
+    nodelist.append(node.render(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'newsdetail/?{{news.id}}' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-05-19 08:43:17,002 [Thread-19:139730903619328] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:43:34,632 [Thread-23:139730912012032] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdetail//
+2017-05-19 08:44:25,416 [Thread-29:139730912012032] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:44:28,921 [Thread-31:139730912012032] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:44:33,786 [Thread-33:139730912012032] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:44:50,446 [Thread-35:139730912012032] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdetail/dist/img/user2-160x160.jpg
+2017-05-19 08:45:11,777 [Thread-41:139730878441216] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:45:13,938 [Thread-43:139730878441216] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:45:19,921 [Thread-45:139730878441216] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:45:46,064 [Thread-47:139730878441216] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdetail/dist/img/user2-160x160.jpg
+2017-05-19 08:46:43,467 [Thread-53:139730903619328] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:46:46,024 [Thread-55:139730903619328] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:46:51,335 [Thread-57:139730903619328] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:47:40,934 [Thread-59:139730903619328] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdetail/dist/img/user2-160x160.jpg
+2017-05-19 08:51:25,936 [Thread-2:140020695807744] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 61, in newsdetail
+    news = News.objects.get(id=id)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: News matching query does not exist.
+2017-05-19 08:51:37,800 [Thread-11:140020653844224] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:51:39,752 [Thread-13:140020653844224] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:51:45,396 [Thread-15:140020653844224] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:51:57,822 [Thread-17:140020653844224] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdetail/dist/img/user2-160x160.jpg
+2017-05-19 08:53:03,427 [Thread-27:140020653844224] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:53:07,655 [Thread-29:140020653844224] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:53:09,622 [Thread-31:140020653844224] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 08:54:30,968 [Thread-36:140020670629632] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-19 08:54:33,495 [Thread-38:140020670629632] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:54:36,335 [Thread-40:140020670629632] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-19 08:54:55,138 [Thread-44:140020670629632] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-19 08:55:00,199 [Thread-46:140020670629632] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:57:30,547 [Thread-48:140020679022336] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-19 08:57:41,979 [Thread-54:140020662236928] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdetail/dist/img/user2-160x160.jpg

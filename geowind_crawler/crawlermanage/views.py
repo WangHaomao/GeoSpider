@@ -1,21 +1,18 @@
 # -*- encoding: utf-8 -*-
 import os
 
-import mongoengine
-import redis
 from django import forms
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
-from scrapy import cmdline
+import subprocess
 
-from bigcrawler.main import run
 
 import logging
 
-from crawlermanage.models import Task
+from crawlermanage.models import Task, News
 
 logger = logging.getLogger('crawlermanage.views')
-mongoengine.register_connection('default', 'p')
+#mongoengine.register_connection('default', 'p')
 
 # Create your views here.
 
@@ -46,9 +43,6 @@ def login(request):
         return render_to_response('crawlermanage/login.html')
 
 def index(request):
-    main = os.path.dirname(__file__) + "/../../bigcrawler/main.py"
-    logger.info(main)
-    os.system("python " + main)
     return render(request, 'crawlermanage/index.html')
 
 def tasks(request):
@@ -59,7 +53,13 @@ def ecommercedata(request):
     return render(request, 'crawlermanage/ecommercedata.html')
 
 def newsdata(request):
-    return render(request, 'crawlermanage/newsdata.html')
+    newslist = News.objects.all()
+    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+
+def newsdetail(request):
+    id = request.GET.get('id')
+    news = News.objects.get(id=id)
+    return render(request, 'crawlermanage/newsdetail.html', {'news':news})
 
 def layout(request):
     # taskname=ads&starturls=fsd&webtype=option1&optionsRadios=option1
@@ -79,12 +79,10 @@ def layout(request):
             return render_to_response('crawlermanage/layout.html', {'taskname':taskname, 'starturls':starturls, 'error1': error1, 'error2': error2})
         else:
             status = 'running'
-            list_url = starturls.strip().split('\n')
+            list_url = starturls.split('\n')
             task = Task.objects.create(taskname=taskname, starturls=list_url, status=status, webtype=webtype, runmodel=runmodel)
 
-            main = os.path.dirname(__file__) + "/../../bigcrawler/main.py"
-            logger.info(main)
-            os.system("python " + main)
+            subprocess.Popen("python main.py", cwd=r"/home/kui/work/python/project/bigcrawler/", shell=True)
 
             return HttpResponseRedirect('/crawlermanage/tasks')
     else:

@@ -17,6 +17,8 @@ import logging
 import django.utils.log
 import logging.handlers
 
+import mongoengine
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -87,15 +89,18 @@ DATABASES = {
     }
 }
 
-MONGODB_DATABASES = {
-    "default": {
-        "name": 'bigcrawler',
-        "host": '127.0.0.1',
-        #"password": database_password,
-        #"username": database_user,
-        "tz_aware": True, # if you using timezones in django (USE_TZ = True)
-    },
-}
+# MONGODB_DATABASES = {
+#     "default": {
+#         "name": 'p',
+#         "host": '127.0.0.1',
+#         #"password": database_password,
+#         #"username": database_user,
+#         "tz_aware": True, # if you using timezones in django (USE_TZ = True)
+#     },
+# }
+# mongoengine.connect(MONGODB_DATABASES)
+
+mongoengine.register_connection('default', 'news')
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
