@@ -2,6 +2,7 @@
 import os
 
 from django import forms
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 import subprocess
@@ -9,7 +10,10 @@ import subprocess
 
 import logging
 
+from django.views.generic import ListView
+
 from crawlermanage.models import Task, News
+from crawlermanage.page import paging
 
 logger = logging.getLogger('crawlermanage.views')
 #mongoengine.register_connection('default', 'p')
@@ -52,13 +56,40 @@ def tasks(request):
 def ecommercedata(request):
     return render(request, 'crawlermanage/ecommercedata.html')
 
+# def newsdata(request):
+#     # newslist = News.objects.all()
+#     # return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+#     limit = 10  # 每页显示的记录数
+#     allnews = News.objects.all()
+#     logger.info("allnews:")
+#     logger.info(len(allnews))
+#     paginator = Paginator(allnews, limit)  # 实例化一个分页对象
+#
+#     page = request.GET.get('page')  # 获取页码
+#     try:
+#         newslist = paginator.page(page)  # 获取某页对应的记录
+#     except PageNotAnInteger:  # 如果页码不是个整数
+#         newslist = paginator.page(1)  # 取第一页的记录
+#     except EmptyPage:  # 如果页码太大，没有相应的记录
+#         newslist = paginator.page(paginator.num_pages)  # 取最后一页的记录
+#     logger.info("newslist:")
+#     logger.info(len(newslist))
+#     return render(request, 'crawlermanage/newsdata.html', {'newslist': newslist})
+
 def newsdata(request):
-    newslist = News.objects.all()
-    return render(request, 'crawlermanage/newsdata.html', {'newslist':newslist})
+    id = request.GET.get('id')
+    if id == None:
+        id = 1
+    p = paging(News,id,5)
+    return render(request,'crawlermanage/newsdata.html',locals())
 
 def newsdetail(request):
     id = request.GET.get('id')
+    if id==None:
+        return
     news = News.objects.get(id=id)
+    if news == None:
+        return
     return render(request, 'crawlermanage/newsdetail.html', {'news':news})
 
 def layout(request):

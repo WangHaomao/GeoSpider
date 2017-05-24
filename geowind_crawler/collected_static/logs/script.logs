@@ -3020,3 +3020,504 @@ DoesNotExist: News matching query does not exist.
 2017-05-19 08:55:00,199 [Thread-46:140020670629632] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
 2017-05-19 08:57:30,547 [Thread-48:140020679022336] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
 2017-05-19 08:57:41,979 [Thread-54:140020662236928] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdetail/dist/img/user2-160x160.jpg
+2017-05-24 12:21:41,362 [Thread-6:140221126084352] [django.request:170] [WARNING]- Not Found: /favicon.ico
+2017-05-24 12:21:43,830 [Thread-16:140221117691648] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 12:22:18,739 [Thread-18:140221109036800] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 50, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'tasklist':tasklist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 1114, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 1036, in _refresh
+    self.__collation))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 873, in __send_message
+    **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 888, in _send_message_with_response
+    server = topology.select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: localhost:27017: [Errno 111] Connection refused
+2017-05-24 12:22:23,510 [Thread-23:140220741707520] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 12:22:25,957 [Thread-25:140220733314816] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 12:25:39,778 [Thread-28:140220741707520] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 12:27:38,401 [Thread-44:140221134477056] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 12:28:40,105 [Thread-47:140221134477056] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 12:28:41,944 [Thread-51:140221134477056] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-24 12:28:43,675 [Thread-52:140221099071232] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/pages/widgets.html
+2017-05-24 12:28:57,933 [Thread-54:140221134477056] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-24 12:29:05,288 [Thread-56:140221134477056] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 12:41:54,533 [Thread-58:140221134477056] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 12:46:34,794 [Thread-61:140221134477056] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 12:47:09,910 [Thread-64:140221134477056] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 12:52:40,983 [Thread-3:140319013246720] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 14:38:40,787 [Thread-2:140020342896384] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 70, in newsdata
+    return render_to_response('index.html', {'newslist': newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: index.html
+2017-05-24 14:39:14,440 [Thread-6:140371311032064] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 14:39:15,919 [Thread-8:140371311032064] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 14:39:17,977 [Thread-9:140371311032064] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 70, in newsdata
+    return render_to_response(request, 'crawlermanage/newsdata.html', {'newslist': newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 45, in render_to_response
+    using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in render_to_string
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: <WSGIRequest: GET '/crawlermanage/newsdata/'>
+2017-05-24 14:45:13,321 [Thread-12:140371293198080] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 14:45:14,901 [Thread-14:140370805520128] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 14:45:16,769 [Thread-15:140370797127424] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 70, in newsdata
+    return render_to_response(request, 'crawlermanage/newsdata.html', {'newslist': newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 45, in render_to_response
+    using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in render_to_string
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: <WSGIRequest: GET '/crawlermanage/newsdata/'>
+2017-05-24 14:46:01,890 [Thread-2:140577979954944] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 70, in newsdata
+    return render_to_response(request, 'crawlermanage/newsdata.html', context={'newslist': newslist})
+TypeError: render_to_response() got multiple values for keyword argument 'context'
+2017-05-24 14:46:03,095 [Thread-3:140577903474432] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 70, in newsdata
+    return render_to_response(request, 'crawlermanage/newsdata.html', context={'newslist': newslist})
+TypeError: render_to_response() got multiple values for keyword argument 'context'
+2017-05-24 14:46:06,769 [Thread-5:140577886689024] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 14:46:10,728 [Thread-7:140577869903616] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 14:46:11,961 [Thread-8:140577979954944] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 70, in newsdata
+    return render_to_response(request, 'crawlermanage/newsdata.html', context={'newslist': newslist})
+TypeError: render_to_response() got multiple values for keyword argument 'context'
+2017-05-24 14:51:32,815 [Thread-3:139837818529536] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 14:51:35,832 [Thread-5:139837801744128] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 14:51:36,902 [Thread-6:139837793351424] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 72, in newsdata
+    return render_to_response(request, 'crawlermanage/newsdata.html', context={'newslist': newslist})
+TypeError: render_to_response() got multiple values for keyword argument 'context'
+2017-05-24 14:51:55,948 [Thread-3:139712786315008] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 14:51:57,674 [Thread-4:139712777922304] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 72, in newsdata
+    return render_to_response(request, 'crawlermanage/newsdata.html', {'newslist': newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 45, in render_to_response
+    using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in render_to_string
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: <WSGIRequest: GET '/crawlermanage/newsdata/'>
+2017-05-24 14:55:47,109 [Thread-3:140113360434944] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 14:55:49,179 [Thread-5:140113343649536] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 14:55:51,461 [Thread-7:140113326864128] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 14:55:52,817 [Thread-8:140113360434944] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 72, in newsdata
+    return render_to_response(request, 'crawlermanage/newsdata.html', context={'newslist': newslist})
+TypeError: render_to_response() got multiple values for keyword argument 'context'
+2017-05-24 15:05:49,087 [Thread-8:140256268896000] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 15:05:53,248 [Thread-10:140256268896000] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 15:05:54,934 [Thread-11:140256268896000] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 73, in newsdata
+    return render_to_response(request, 'crawlermanage/newsdata.html', context={'newslist': newslist})
+TypeError: render_to_response() got multiple values for keyword argument 'context'
+2017-05-24 15:07:12,111 [Thread-3:140670715033344] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 15:07:21,301 [Thread-5:140670698247936] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 15:07:22,444 [Thread-8:140670689855232] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 63, in newsdata
+    logger.info("allnews:"+len(allnews))
+TypeError: cannot concatenate 'str' and 'int' objects
+2017-05-24 15:08:01,044 [Thread-3:140646570874624] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 15:08:02,385 [Thread-4:140646354515712] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 74, in newsdata
+    return render_to_response(request, 'crawlermanage/newsdata.html', context={'newslist': newslist})
+TypeError: render_to_response() got multiple values for keyword argument 'context'
+2017-05-24 15:09:11,391 [Thread-3:139646397601536] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 15:09:11,861 [Thread-5:139646380816128] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 15:09:12,298 [Thread-7:139646021396224] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 15:09:12,857 [Thread-9:139646021396224] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 15:09:20,539 [Thread-10:139646029788928] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 76, in newsdata
+    return render_to_response(request, 'crawlermanage/newsdata.html', context={'newslist': newslist})
+TypeError: render_to_response() got multiple values for keyword argument 'context'
+2017-05-24 15:13:04,845 [Thread-2:139884642973440] [django.request:170] [WARNING]- Not Found: /crawlermanage/news/
+2017-05-24 15:13:08,014 [Thread-4:139884642973440] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 15:13:10,837 [Thread-6:139884642973440] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 15:13:12,153 [Thread-7:139884642973440] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 76, in newsdata
+    return render_to_response(request, 'crawlermanage/newsdata.html', {'newslist': newslist})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 45, in render_to_response
+    using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 138, in render_to_string
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: <WSGIRequest: GET '/crawlermanage/newsdata/'>
+2017-05-24 15:14:24,482 [Thread-3:140686164440832] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 15:14:27,531 [Thread-5:140685940352768] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 15:14:29,195 [Thread-7:140685923567360] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:14:31,316 [Thread-9:140685923567360] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:14:32,293 [Thread-11:140685923567360] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:15:31,829 [Thread-13:140685931960064] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:16:33,095 [Thread-19:140685915174656] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:16:36,193 [Thread-21:140685948745472] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:16:40,410 [Thread-23:140685923567360] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:16:43,088 [Thread-25:140685923567360] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:16:45,876 [Thread-27:140685923567360] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:22:10,913 [Thread-2:139662785312512] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 16, in <module>
+    url(r'^crawlermanage/newsdata/$',views.newsdata, name='newsdata'),
+AttributeError: 'module' object has no attribute 'newsdata'
+2017-05-24 15:26:18,622 [Thread-8:139662760134400] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 16, in <module>
+    url(r'^crawlermanage/newsdata/$',views.newsdata, name='newsdata'),
+AttributeError: 'module' object has no attribute 'newsdata'
+2017-05-24 15:26:19,732 [Thread-9:139662768527104] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 16, in <module>
+    url(r'^crawlermanage/newsdata/$',views.newsdata, name='newsdata'),
+AttributeError: 'module' object has no attribute 'newsdata'
+2017-05-24 15:26:21,508 [Thread-10:139662751741696] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 16, in <module>
+    url(r'^crawlermanage/newsdata/$',views.newsdata, name='newsdata'),
+AttributeError: 'module' object has no attribute 'newsdata'
+2017-05-24 15:27:16,694 [Thread-2:140716899952384] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 16, in <module>
+    url(r'^crawlermanage/newsdata/$',views.newsdata, name='newsdata'),
+AttributeError: 'module' object has no attribute 'newsdata'
+2017-05-24 15:27:17,665 [Thread-3:140716818822912] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 16, in <module>
+    url(r'^crawlermanage/newsdata/$',views.newsdata, name='newsdata'),
+AttributeError: 'module' object has no attribute 'newsdata'
+2017-05-24 15:27:18,292 [Thread-4:140716810430208] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 16, in <module>
+    url(r'^crawlermanage/newsdata/$',views.newsdata, name='newsdata'),
+AttributeError: 'module' object has no attribute 'newsdata'
+2017-05-24 15:27:18,802 [Thread-5:140716899952384] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 16, in <module>
+    url(r'^crawlermanage/newsdata/$',views.newsdata, name='newsdata'),
+AttributeError: 'module' object has no attribute 'newsdata'
+2017-05-24 15:27:19,181 [Thread-6:140716899952384] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 16, in <module>
+    url(r'^crawlermanage/newsdata/$',views.newsdata, name='newsdata'),
+AttributeError: 'module' object has no attribute 'newsdata'
+2017-05-24 15:27:27,572 [Thread-3:140151604229888] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 15:27:30,750 [Thread-5:140151604229888] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 15:27:32,010 [Thread-6:140151604229888] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes exactly 1 argument (2 given)
+2017-05-24 15:31:42,233 [Thread-7:140151604229888] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes exactly 1 argument (2 given)
+2017-05-24 15:47:23,930 [Thread-3:140584557713152] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:47:26,935 [Thread-5:140584337532672] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:47:28,843 [Thread-7:140584320747264] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:47:30,400 [Thread-9:140584320747264] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:47:32,159 [Thread-11:140584320747264] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:47:33,426 [Thread-13:140584320747264] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:47:34,755 [Thread-15:140584320747264] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:47:38,584 [Thread-17:140584320747264] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:47:43,929 [Thread-19:140584320747264] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:47:45,374 [Thread-21:140584320747264] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:47:48,501 [Thread-23:140584320747264] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 15:48:13,944 [Thread-2:139731850151680] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes exactly 1 argument (2 given)
+2017-05-24 15:48:25,783 [Thread-5:139731832841984] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 15:48:28,760 [Thread-7:139731824449280] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 15:48:30,170 [Thread-8:139731824449280] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: __init__() takes exactly 1 argument (2 given)
+2017-05-24 16:03:22,855 [Thread-3:140136383125248] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 16:03:26,146 [Thread-5:140136366339840] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 16:03:27,444 [Thread-6:140136357947136] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: newsdata() takes exactly 2 arguments (1 given)
+2017-05-24 16:05:41,857 [Thread-2:139904214124288] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 81, in newsdata
+    return render(request,'show_version.html',locals())
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: show_version.html
+2017-05-24 16:05:57,629 [Thread-3:140388039530240] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:06:02,636 [Thread-4:140388031137536] [django.request:170] [WARNING]- Not Found: /show_version-2.html
+2017-05-24 16:08:44,464 [Thread-12:140388014352128] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:08:51,771 [Thread-15:140388031137536] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 16:08:55,994 [Thread-18:140388039530240] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 16:08:57,597 [Thread-20:140388005959424] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:09:02,311 [Thread-21:140388005959424] [django.request:170] [WARNING]- Not Found: /show_version-2.html
+2017-05-24 16:09:37,428 [Thread-29:140388031137536] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:10:19,845 [Thread-35:140388022744832] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:15:24,073 [Thread-41:140388014352128] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:16:46,159 [Thread-46:140388031137536] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:16:48,188 [Thread-47:140388022744832] [django.request:170] [WARNING]- Not Found: /show_version-2.html
+2017-05-24 16:17:03,109 [Thread-51:140388047922944] [django.request:170] [WARNING]- Not Found: /show_version-2.html
+2017-05-24 16:18:43,406 [Thread-53:140388022744832] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-24 16:18:45,301 [Thread-55:140388031137536] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 16:18:46,623 [Thread-57:140388031137536] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:18:49,124 [Thread-58:140388031137536] [django.request:170] [WARNING]- Not Found: /show_version-2.html
+2017-05-24 16:19:17,213 [Thread-66:140388005959424] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:19:18,794 [Thread-67:140388022744832] [django.request:170] [WARNING]- Not Found: /show_version-2.html
+2017-05-24 16:19:23,225 [Thread-69:140388014352128] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 16:19:24,657 [Thread-71:140388022744832] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:19:26,847 [Thread-72:140388005959424] [django.request:170] [WARNING]- Not Found: /show_version-2.html
+2017-05-24 16:20:27,174 [Thread-78:140388022744832] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:20:28,365 [Thread-79:140388005959424] [django.request:170] [WARNING]- Not Found: /show_version-2.html
+2017-05-24 16:25:08,953 [Thread-2:140251643844352] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: newsdata() takes exactly 2 arguments (1 given)
+2017-05-24 16:30:38,117 [Thread-2:139782760814336] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 81, in newsdata
+    p = paging(News,id,10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/page.py", line 14, in __init__
+    self.page = int(id)
+TypeError: int() argument must be a string or a number, not 'NoneType'
+2017-05-24 16:30:52,198 [Thread-4:139782760814336] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 16:30:53,658 [Thread-6:139782760814336] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 16:30:55,648 [Thread-7:139782760814336] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 81, in newsdata
+    p = paging(News,id,10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/page.py", line 14, in __init__
+    self.page = int(id)
+TypeError: int() argument must be a string or a number, not 'NoneType'
+2017-05-24 16:32:13,570 [Thread-3:140673458104064] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 16:32:15,369 [Thread-5:140673441318656] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-24 16:32:16,737 [Thread-7:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:32:19,381 [Thread-8:140673424533248] [django.request:170] [WARNING]- Not Found: /show_version-2.html
+2017-05-24 16:35:17,614 [Thread-10:140673432925952] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:18,225 [Thread-12:140673449711360] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:19,602 [Thread-14:140672929625856] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:22,911 [Thread-16:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:25,756 [Thread-18:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:27,443 [Thread-20:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:32,375 [Thread-22:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:34,187 [Thread-24:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:36,135 [Thread-26:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:39,502 [Thread-28:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:41,158 [Thread-30:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:45,684 [Thread-32:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:49,648 [Thread-34:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:51,213 [Thread-36:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:53,264 [Thread-38:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:54,723 [Thread-40:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:56,717 [Thread-42:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:35:58,442 [Thread-44:140673424533248] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:27,409 [Thread-3:140695000049408] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:29,487 [Thread-5:140694983264000] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:30,552 [Thread-7:140694983264000] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:31,351 [Thread-9:140694983264000] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:31,939 [Thread-11:140694983264000] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:32,494 [Thread-13:140694983264000] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:33,491 [Thread-15:140694983264000] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:34,340 [Thread-17:140694983264000] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:35,037 [Thread-19:140694983264000] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:35,545 [Thread-21:140694983264000] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:36,424 [Thread-23:140694983264000] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:37,295 [Thread-25:140694983264000] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-24 16:36:39,026 [Thread-27:140694983264000] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
