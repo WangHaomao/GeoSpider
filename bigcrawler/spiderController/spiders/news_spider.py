@@ -4,8 +4,8 @@ from scrapy.linkextractors import LinkExtractor
 
 from scrapy_redis.spiders import RedisCrawlSpider
 
-from example.news.model import *
-from example.items import News
+from spiderController.news.model import *
+from spiderController.items import News
 import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")

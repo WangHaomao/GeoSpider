@@ -55,4 +55,8 @@ class News(Item):
     acticle = Field()
     url = Field()
 
+# class ShopItem(Item):
+#     navbar = Field()
+
+
 
