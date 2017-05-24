@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 from scrapy.linkextractors import LinkExtractor
-from example.items import Profile
+from spiderController.items import Profile
 import re
 from scrapy.dupefilters import RFPDupeFilter
 from scrapy.spiders import CrawlSpider,Rule

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy,re,urllib
 from scrapy.http import Request
-from example.items import Cloth
+from spiderController.items import Cloth
 from scrapy_redis.spiders import RedisCrawlSpider
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule

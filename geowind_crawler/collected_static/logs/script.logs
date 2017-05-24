@@ -3020,3 +3020,321 @@ DoesNotExist: News matching query does not exist.
 2017-05-19 08:55:00,199 [Thread-46:140020670629632] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
 2017-05-19 08:57:30,547 [Thread-48:140020679022336] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
 2017-05-19 08:57:41,979 [Thread-54:140020662236928] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdetail/dist/img/user2-160x160.jpg
+2017-05-24 12:33:30,976 [Thread-7:123145418944512] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-05-24 12:33:34,303 [Thread-17:123145427357696] [django.request:152] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-24 12:33:43,568 [Thread-30:123145461010432] [django.request:152] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-24 12:34:07,353 [Thread-19:123145418944512] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 50, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'tasklist':tasklist})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 1114, in next
+    if len(self.__data) or self._refresh():
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 1036, in _refresh
+    self.__collation))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 873, in __send_message
+    **kwargs)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/mongo_client.py", line 888, in _send_message_with_response
+    server = topology.select_server(selector)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: localhost:27017: [Errno 61] Connection refused
+2017-05-24 12:34:08,363 [Thread-20:123145431564288] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 50, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'tasklist':tasklist})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 1114, in next
+    if len(self.__data) or self._refresh():
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 1036, in _refresh
+    self.__collation))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 873, in __send_message
+    **kwargs)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/mongo_client.py", line 888, in _send_message_with_response
+    server = topology.select_server(selector)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: localhost:27017: [Errno 61] Connection refused
+2017-05-24 12:34:11,398 [Thread-21:123145435770880] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 50, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'tasklist':tasklist})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 1114, in next
+    if len(self.__data) or self._refresh():
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 1036, in _refresh
+    self.__collation))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 873, in __send_message
+    **kwargs)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/mongo_client.py", line 888, in _send_message_with_response
+    server = topology.select_server(selector)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: localhost:27017: [Errno 61] Connection refused
+2017-05-24 12:34:11,915 [Thread-22:123145439977472] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 50, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'tasklist':tasklist})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 1114, in next
+    if len(self.__data) or self._refresh():
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 1036, in _refresh
+    self.__collation))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 873, in __send_message
+    **kwargs)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/mongo_client.py", line 888, in _send_message_with_response
+    server = topology.select_server(selector)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: localhost:27017: [Errno 61] Connection refused
+2017-05-24 12:34:12,419 [Thread-23:123145444184064] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 50, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'tasklist':tasklist})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 1114, in next
+    if len(self.__data) or self._refresh():
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 1036, in _refresh
+    self.__collation))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/cursor.py", line 873, in __send_message
+    **kwargs)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/mongo_client.py", line 888, in _send_message_with_response
+    server = topology.select_server(selector)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: localhost:27017: [Errno 61] Connection refused
