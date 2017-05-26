@@ -11,7 +11,7 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 class NewsSpider(RedisCrawlSpider):
     """Spider that reads urls from redis queue (myspider:start_urls)."""
-    name = 'news'
+    name = 'oldnews'
     redis_key = 'myspider:start_urls'
     allowed_domains = ['news.qq.com']
 

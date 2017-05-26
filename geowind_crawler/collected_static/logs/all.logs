@@ -1,0 +1,14 @@
+2017-05-25 09:10:14,958 [Dummy-1:140165819377408] [django.db.backends:89] [DEBUG]- (0.042) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-05-25 09:10:14,992 [Dummy-1:140165819377408] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-05-25 09:12:59,111 [Dummy-1:140130003490560] [django.db.backends:89] [DEBUG]- (0.000) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-05-25 09:12:59,117 [Dummy-1:140130003490560] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-05-25 09:21:59,355 [Dummy-1:140316220323584] [django.db.backends:89] [DEBUG]- (0.000) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-05-25 09:21:59,361 [Dummy-1:140316220323584] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-05-25 09:29:51,790 [Thread-4:140316192450304] [crawlermanage.views:53] [INFO]- add
+2017-05-25 09:29:54,869 [Thread-6:140316200843008] [crawlermanage.views:53] [INFO]- add
+2017-05-25 09:32:05,395 [Dummy-1:140024379410176] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-05-25 09:32:05,405 [Dummy-1:140024379410176] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-05-25 09:32:19,393 [Thread-2:140024368584448] [crawlermanage.views:53] [INFO]- aaa
+2017-05-25 09:35:40,284 [Dummy-1:139984170891008] [django.db.backends:89] [DEBUG]- (0.000) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-05-25 09:35:40,293 [Dummy-1:139984170891008] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-05-25 11:23:11,109 [Thread-34:139984160065280] [crawlermanage.views:53] [INFO]- aaa

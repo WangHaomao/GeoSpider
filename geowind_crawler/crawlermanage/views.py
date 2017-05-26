@@ -2,10 +2,10 @@
 import os
 
 from django import forms
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 import subprocess
+from sys import path
 
 
 import logging
@@ -47,6 +47,12 @@ def login(request):
         return render_to_response('crawlermanage/login.html')
 
 def index(request):
+    path.append(r'/home/kui/work/python/project/bigcrawler')
+    import main
+    from main import *
+    logger.info(main.add())
+    x = subprocess
+
     return render(request, 'crawlermanage/index.html')
 
 def tasks(request):
