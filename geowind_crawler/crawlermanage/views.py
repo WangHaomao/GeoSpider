@@ -14,11 +14,15 @@ from django.views.generic import ListView
 
 from crawlermanage.models import Task, News
 from crawlermanage.page import paging
+from crawlermanage import Message
 
 logger = logging.getLogger('crawlermanage.views')
 #mongoengine.register_connection('default', 'p')
 
 # Create your views here.
+
+message = Message('127.0.0.1')
+message.subscribe('crawler')
 
 class LoginForm(forms.Form):
     username = forms.CharField()
@@ -47,12 +51,11 @@ def login(request):
         return render_to_response('crawlermanage/login.html')
 
 def index(request):
-    path.append(r'/home/kui/work/python/project/bigcrawler')
-    import main
-    from main import *
-    logger.info(main.add())
-    x = subprocess
-
+    # path.append(r'/home/kui/work/python/project/bigcrawler')
+    # import main
+    # from main import *
+    # logger.info(main.add())
+    # x = subprocess
     return render(request, 'crawlermanage/index.html')
 
 def tasks(request):
@@ -119,7 +122,8 @@ def layout(request):
             list_url = starturls.split('\n')
             task = Task.objects.create(taskname=taskname, starturls=list_url, status=status, webtype=webtype, runmodel=runmodel)
 
-            subprocess.Popen("python main.py", cwd=r"/home/kui/work/python/project/bigcrawler/", shell=True)
+            # subprocess.Popen("python main.py", cwd=r"/home/kui/work/python/project/bigcrawler/", shell=True)
+            #message.publish('crawler', 'taskid='+taskid)
 
             return HttpResponseRedirect('/crawlermanage/tasks')
     else:
