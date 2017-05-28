@@ -14,7 +14,7 @@ from django.views.generic import ListView
 
 from crawlermanage.models import Task, News
 from crawlermanage.page import paging
-from crawlermanage import Message
+from crawlermanage.message import Message
 
 logger = logging.getLogger('crawlermanage.views')
 #mongoengine.register_connection('default', 'p')

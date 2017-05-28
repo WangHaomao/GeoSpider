@@ -7,14 +7,13 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="../../static/style/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../static/plugins/iCheck/flat/blue.css">
+  <link rel="stylesheet" href="../../static/plugins/datatables/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="../../static/plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="../../static/plugins/select2/select2.min.css">
   <link rel="stylesheet" href="../../static/dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="../../static/dist/css/skins/_all-skins.min.css">
-  <link rel="stylesheet" href="../../static/plugins/iCheck/flat/blue.css">
-
-  <link rel="stylesheet" href="../../static/plugins/datatables/dataTables.bootstrap.css">
-  <link rel="stylesheet" href="../../static/plugins/select2/select2.min.css">
   <!-- <link rel="stylesheet" href="../../static/plugins/iCheck/all.css"> -->
 
 </head>
@@ -44,6 +43,12 @@
                 {% endif %}
               </div>
 
+              <div class="form-group">
+                <label>任务描述</label>
+                <textarea name="starturls" class="form-control" rows="3" placeholder="点击输入"></textarea>
+                  <p style="color: red;">{{error2}}</p>
+              </div>
+
               <!-- select -->
               <div class="form-group">
                 <label>网站类型</label>
@@ -55,27 +60,28 @@
               </div>
 
               <!-- radio -->
-              <div class="form-group">
-                <label>运行模式</label>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="runmodel" id="optionsRadios1" value="option1" checked>
-                    均衡模式&mdash;默认模式运行，消耗内存比较小
-                  </label>
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="runmodel" id="optionsRadios2" value="option2">
-                    进程最大&mdash;启动额定的最大进程数，速度快，但内存消耗大
-                  </label>
-                </div>
-                <div class="radio">
-                  <label>
-                    <input type="radio" name="runmodel" id="optionsRadios3" value="option3" disabled>
-                    还在思考
-                  </label>
-                </div>
-              </div>
+              <!--<div class="form-group">-->
+                <!--<label>运行模式</label>-->
+                <!--<div class="radio">-->
+                  <!--<label>-->
+                    <!--<input type="radio" name="runmodel" id="optionsRadios1" value="option1" checked>-->
+                    <!--均衡模式&mdash;默认模式运行，消耗内存比较小-->
+                  <!--</label>-->
+                <!--</div>-->
+                <!--<div class="radio">-->
+                  <!--<label>-->
+                    <!--<input type="radio" name="runmodel" id="optionsRadios2" value="option2">-->
+                    <!--进程最大&mdash;启动额定的最大进程数，速度快，但内存消耗大-->
+                  <!--</label>-->
+                <!--</div>-->
+                <!--<div class="radio">-->
+                  <!--<label>-->
+                    <!--<input type="radio" name="runmodel" id="optionsRadios3" value="option3" disabled>-->
+                    <!--还在思考-->
+                  <!--</label>-->
+                <!--</div>-->
+              <!--</div>-->
+
               <!-- 下拉列表：高级设置 -->
               <label class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> 高级参数（点击设置）</label>
               <div class="form-group">
@@ -90,11 +96,17 @@
                   <tbody>
                     <tr>
                       <th><label>运行时间区间</label></th>
-                      <td>时间选择框</td>
-                    </tr>
-                    <tr>
-                      <th><label>任务优先度（该任务是否插队）</label></th>
-                      <td>选择任务插队</td>
+                      <td>
+                          <div class="form-group">
+                            <div class="input-group">
+                              <div class="input-group-addon">
+                                <i class="fa fa-clock-o"></i>
+                              </div>
+                              <input type="text" class="form-control pull-right" id="reservationtime">
+                            </div>
+                            <!-- /.input group -->
+                          </div>
+                      </td>
                     </tr>
                     <tr>
                       <th><label>优先抓取（视网站类型变化）</label></th>
@@ -108,6 +120,20 @@
                         </div>
                       </td>
                     </tr>
+                    <tr>
+                      <th><label>分布式主机</label></th>
+                      <td>
+                        <div class="form-group">
+                          <select class="form-control select2" multiple="multiple" data-placeholder="以下主机可用" style="width: 100%;">
+                            <option>linux 115.123.123.33</option>
+                            <option>代号xxx</option>
+                            <option>代号666</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+
+
                   </tbody>
                 </table>
                 </div>
@@ -135,6 +161,9 @@
 <script src="../../static/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../../static/plugins/datatables/dataTables.bootstrap.min.js"></script>
 <script src="../../static/plugins/select2/select2.full.min.js"></script>
+
+<script src="../../static/plugins/bootstrap3-editable/js/moment.js"></script>
+<script src="../../static/plugins/daterangepicker/daterangepicker.js"></script>
 <script>
   $(function () {
     // $("#example1").DataTable();
@@ -148,6 +177,8 @@
     });
 
     $(".select2").select2();
+    $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
+
   });
 </script>
 {% endblock %}

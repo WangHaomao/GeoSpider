@@ -12,3 +12,325 @@
 2017-05-25 09:35:40,284 [Dummy-1:139984170891008] [django.db.backends:89] [DEBUG]- (0.000) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
 2017-05-25 09:35:40,293 [Dummy-1:139984170891008] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
 2017-05-25 11:23:11,109 [Thread-34:139984160065280] [crawlermanage.views:53] [INFO]- aaa
+2017-05-27 08:56:37,467 [Dummy-1:123145520984064] [django.db.backends:91] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-05-27 08:56:37,470 [Dummy-1:123145520984064] [django.db.backends:91] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-05-27 08:56:50,786 [Thread-2:123145525190656] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:56:50,790 [Thread-2:123145525190656] [django.server:124] [WARNING]- "GET / HTTP/1.1" 404 3036
+2017-05-27 08:56:50,923 [Thread-3:123145529397248] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:56:50,925 [Thread-3:123145529397248] [django.server:124] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 3087
+2017-05-27 08:57:08,729 [Thread-5:123145525190656] [django.server:124] [INFO]- "GET /crawlermanage HTTP/1.1" 301 0
+2017-05-27 08:57:08,738 [Thread-6:123145529397248] [django.template:925] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-05-27 08:57:08,739 [Thread-6:123145529397248] [django.server:124] [INFO]- "GET /crawlermanage/ HTTP/1.1" 200 2068
+2017-05-27 08:57:08,796 [Thread-9:123145529397248] [django.server:124] [INFO]- "GET /static/plugins/jQuery/jquery-2.2.3.min.js HTTP/1.1" 200 85659
+2017-05-27 08:57:08,808 [Thread-8:123145525190656] [django.server:124] [INFO]- "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 37045
+2017-05-27 08:57:08,809 [Thread-7:123145533603840] [django.server:124] [INFO]- "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200
+2017-05-27 08:57:12,258 [Thread-10:123145525190656] [django.server:124] [INFO]- "POST /crawlermanage/login/ HTTP/1.1" 302 0
+2017-05-27 08:57:12,263 [Thread-11:123145525190656] [django.server:124] [INFO]- "GET /crawlermanage/index HTTP/1.1" 301 0
+2017-05-27 08:57:12,274 [Thread-12:123145525190656] [django.server:124] [INFO]- "GET /crawlermanage/index/ HTTP/1.1" 200 7679
+2017-05-27 08:57:12,315 [Thread-13:123145525190656] [django.server:124] [INFO]- "GET /static/style/font-awesome/css/font-awesome.min.css HTTP/1.1" 200 31000
+2017-05-27 08:57:12,326 [Thread-15:123145529397248] [django.server:124] [INFO]- "GET /static/dist/css/AdminLTE.min.css HTTP/1.1" 200 90390
+2017-05-27 08:57:12,327 [Thread-14:123145525190656] [django.server:124] [INFO]- "GET /static/dist/css/skins/_all-skins.min.css HTTP/1.1" 200 40757
+2017-05-27 08:57:12,344 [Thread-16:123145525190656] [django.server:124] [INFO]- "GET /static/plugins/iCheck/flat/blue.css HTTP/1.1" 200 1428
+2017-05-27 08:57:12,357 [Thread-17:123145525190656] [django.server:124] [INFO]- "GET /static/dist/js/app.min.js HTTP/1.1" 200 9923
+2017-05-27 08:57:12,369 [Thread-19:123145529397248] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:12,372 [Thread-19:123145529397248] [django.server:124] [WARNING]- "GET /crawlermanage/index/dist/img/user2-160x160.jpg HTTP/1.1" 404 3192
+2017-05-27 08:57:12,373 [Thread-18:123145525190656] [django.server:124] [INFO]- "GET /static/dist/js/demo.js HTTP/1.1" 200 17319
+2017-05-27 08:57:12,402 [Thread-20:123145525190656] [django.server:124] [INFO]- "GET /static/style/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+2017-05-27 08:57:15,119 [Thread-21:123145525190656] [django.template:925] [DEBUG]- Exception while resolving variable 'taskname' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [taskname] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10dfdbc90>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:15,119 [Thread-21:123145525190656] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10dfdbc90>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:15,119 [Thread-21:123145525190656] [django.template:925] [DEBUG]- Exception while resolving variable 'starturls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [starturls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10dfdbc90>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:15,120 [Thread-21:123145525190656] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10dfdbc90>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:15,121 [Thread-21:123145525190656] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 12972
+2017-05-27 08:57:15,140 [Thread-23:123145529397248] [django.server:124] [INFO]- "GET /static/plugins/select2/select2.min.css HTTP/1.1" 200 15196
+2017-05-27 08:57:15,140 [Thread-22:123145525190656] [django.server:124] [INFO]- "GET /static/plugins/datatables/dataTables.bootstrap.css HTTP/1.1" 200 8829
+2017-05-27 08:57:15,155 [Thread-24:123145525190656] [django.server:124] [INFO]- "GET /static/plugins/datatables/dataTables.bootstrap.min.js HTTP/1.1" 200 2065
+2017-05-27 08:57:15,162 [Thread-27:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:15,166 [Thread-27:123145537810432] [django.server:124] [WARNING]- "GET /crawlermanage/layout/dist/img/user2-160x160.jpg HTTP/1.1" 404 3195
+2017-05-27 08:57:15,166 [Thread-25:123145529397248] [django.server:124] [INFO]- "GET /static/plugins/datatables/jquery.dataTables.min.js HTTP/1.1" 200 79881
+2017-05-27 08:57:15,168 [Thread-26:123145533603840] [django.server:124] [INFO]- "GET /static/plugins/select2/select2.full.min.js HTTP/1.1" 200 75005
+2017-05-27 08:57:21,638 [Thread-29:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'taskname' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [taskname] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e019cd0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:21,638 [Thread-29:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e019cd0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:21,638 [Thread-29:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'starturls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [starturls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e019cd0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:21,638 [Thread-29:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e019cd0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:21,639 [Thread-29:123145537810432] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 12972
+2017-05-27 08:57:21,672 [Thread-30:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:21,675 [Thread-30:123145537810432] [django.server:124] [WARNING]- "GET /crawlermanage/layout/dist/img/user2-160x160.jpg HTTP/1.1" 404 3195
+2017-05-27 08:57:22,982 [Thread-31:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:22,984 [Thread-31:123145537810432] [django.server:124] [WARNING]- "GET /crawlermanage/layout/pages/widgets.html HTTP/1.1" 404 3171
+2017-05-27 08:57:26,752 [Thread-32:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'taskname' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [taskname] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e081110>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:26,752 [Thread-32:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e081110>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:26,753 [Thread-32:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'starturls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [starturls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e081110>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:26,753 [Thread-32:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e081110>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:26,754 [Thread-32:123145537810432] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 12972
+2017-05-27 08:57:26,778 [Thread-33:123145542017024] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:26,781 [Thread-33:123145542017024] [django.server:124] [WARNING]- "GET /crawlermanage/layout/dist/img/user2-160x160.jpg HTTP/1.1" 404 3195
+2017-05-27 08:57:26,795 [Thread-34:123145546223616] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:26,799 [Thread-34:123145546223616] [django.server:124] [WARNING]- "GET /crawlermanage/layout/dist/img/user2-160x160.jpg HTTP/1.1" 404 3195
+2017-05-27 08:57:28,681 [Thread-35:123145550430208] [django.template:925] [DEBUG]- Exception while resolving variable 'taskname' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [taskname] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e048d50>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:28,681 [Thread-35:123145550430208] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e048d50>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:28,682 [Thread-35:123145550430208] [django.template:925] [DEBUG]- Exception while resolving variable 'starturls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [starturls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e048d50>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:28,682 [Thread-35:123145550430208] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e048d50>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:28,683 [Thread-35:123145550430208] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 12972
+2017-05-27 08:57:28,711 [Thread-36:123145554636800] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:28,714 [Thread-36:123145554636800] [django.server:124] [WARNING]- "GET /crawlermanage/layout/dist/img/user2-160x160.jpg HTTP/1.1" 404 3195
+2017-05-27 08:57:29,641 [Thread-37:123145558843392] [django.template:925] [DEBUG]- Exception while resolving variable 'taskname' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [taskname] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e08a1d0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:29,642 [Thread-37:123145558843392] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e08a1d0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:29,642 [Thread-37:123145558843392] [django.template:925] [DEBUG]- Exception while resolving variable 'starturls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [starturls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e08a1d0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:29,643 [Thread-37:123145558843392] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e08a1d0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:29,647 [Thread-37:123145558843392] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 12972
+2017-05-27 08:57:29,666 [Thread-38:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:29,668 [Thread-38:123145537810432] [django.server:124] [WARNING]- "GET /crawlermanage/layout/dist/img/user2-160x160.jpg HTTP/1.1" 404 3195
+2017-05-27 08:57:30,114 [Thread-39:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'taskname' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [taskname] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e08a3d0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,114 [Thread-39:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e08a3d0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,115 [Thread-39:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'starturls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [starturls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e08a3d0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,115 [Thread-39:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e08a3d0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,117 [Thread-39:123145537810432] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 12972
+2017-05-27 08:57:30,155 [Thread-40:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:30,158 [Thread-40:123145537810432] [django.server:124] [WARNING]- "GET /crawlermanage/layout/dist/img/user2-160x160.jpg HTTP/1.1" 404 3195
+2017-05-27 08:57:30,321 [Thread-41:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'taskname' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [taskname] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e096410>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,322 [Thread-41:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e096410>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,323 [Thread-41:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'starturls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [starturls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e096410>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,325 [Thread-41:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e096410>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,327 [Thread-41:123145537810432] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 12972
+2017-05-27 08:57:30,342 [Thread-42:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:30,345 [Thread-42:123145537810432] [django.server:124] [WARNING]- "GET /crawlermanage/layout/dist/img/user2-160x160.jpg HTTP/1.1" 404 3195
+2017-05-27 08:57:30,359 [Thread-43:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:30,361 [Thread-43:123145537810432] [django.server:124] [WARNING]- "GET /crawlermanage/layout/dist/img/user2-160x160.jpg HTTP/1.1" 404 3195
+2017-05-27 08:57:30,499 [Thread-44:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'taskname' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [taskname] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e048bd0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,499 [Thread-44:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e048bd0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,500 [Thread-44:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'starturls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [starturls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e048bd0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,500 [Thread-44:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e048bd0>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,501 [Thread-44:123145537810432] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 12972
+2017-05-27 08:57:30,533 [Thread-45:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:30,535 [Thread-45:123145537810432] [django.server:124] [WARNING]- "GET /crawlermanage/layout/dist/img/user2-160x160.jpg HTTP/1.1" 404 3195
+2017-05-27 08:57:30,682 [Thread-46:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'taskname' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [taskname] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e048b50>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,683 [Thread-46:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e048b50>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,683 [Thread-46:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'starturls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [starturls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e048b50>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,683 [Thread-46:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n<div class="box box-prim\'>, <django.template.defaulttags.CsrfTokenNode object at 0x10e048b50>, <TextNode: u\'\\n              <!-- text \'>, <IfNode>, <TextNode: u\'">\\n                \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n   \'>, <IfNode>, <TextNode: u\'</textarea>\\n             \'>, <IfNode>, <TextNode: u\'\\n              </div>\\n\\n  \'>]>}]'
+2017-05-27 08:57:30,684 [Thread-46:123145537810432] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 12972
+2017-05-27 08:57:30,705 [Thread-47:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:30,708 [Thread-47:123145537810432] [django.server:124] [WARNING]- "GET /crawlermanage/layout/dist/img/user2-160x160.jpg HTTP/1.1" 404 3195
+2017-05-27 08:57:30,721 [Thread-48:123145537810432] [django.template:925] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-05-27 08:57:30,723 [Thread-48:123145537810432] [django.server:124] [WARNING]- "GET /crawlermanage/layout/dist/img/user2-160x160.jpg HTTP/1.1" 404 3195
+2017-05-27 08:58:20,790 [Thread-28:123145525190656] [django.server:124] [ERROR]- "GET /crawlermanage/tasks/ HTTP/1.1" 500 188605
+2017-05-27 08:58:20,791 [Thread-28:123145525190656] [django.server:78] [INFO]- - Broken pipe from ('127.0.0.1', 58769)
+
+2017-05-27 08:58:40,990 [Thread-49:123145537810432] [django.server:124] [ERROR]- "GET /crawlermanage/tasks/ HTTP/1.1" 500 188605
+2017-05-27 08:58:40,990 [Thread-49:123145537810432] [django.server:78] [INFO]- - Broken pipe from ('127.0.0.1', 58836)
+
+2017-05-27 08:58:52,984 [Thread-50:123145542017024] [django.server:124] [ERROR]- "GET /crawlermanage/tasks/ HTTP/1.1" 500 188605
