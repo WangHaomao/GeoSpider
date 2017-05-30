@@ -9,18 +9,18 @@ import pymongo
 from geospider.spiders.news_spider import NewsSpider
 
 
-def init(taskid, type):
-    temp = None
-    if "news"==type:
-        temp = deepcopy(NewsSpider)
-        temp.name = taskid
-        temp.redis_key = taskid+":start_urls"
-
+def init(taskid):
     client = pymongo.MongoClient('mongodb://localhost:27017')
     db_name = 'news'
     db = client[db_name]
     task = db.task.find_one({'_id': ObjectId(taskid)})
     client.close()
+
+    temp = None
+    if "news"==task['webtype']:
+        temp = deepcopy(NewsSpider)
+        temp.name = taskid
+        temp.redis_key = taskid+":start_urls"
 
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     for url in task['starturls']:
@@ -33,3 +33,4 @@ def run(taskid):
 def delete(taskid):
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     r.delete(taskid+":requests")
+    r.delete(taskid + ":start_urls")

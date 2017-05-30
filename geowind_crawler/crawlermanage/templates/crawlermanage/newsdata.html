@@ -95,7 +95,7 @@
                             <!--{% endif %}-->
                           <!--</div>-->
 
-
+                          <!-- 服务器分页开始 -->
                           <table class="table">
                             <thead>
                               <tr>
@@ -110,7 +110,7 @@
                               {% for i in p.p_content %}
                               <tr>
                                 <td>{{i.id}}</td>
-                                <td><a href="{%url 'newsdetail' %}?id={{news.id}}" target="_blank">{{i.title}}</a></td>
+                                <td><a href="{%url 'newsdetail' %}?id={{i.id}}" target="_blank">{{i.title}}</a></td>
                                 <td><a href={{i.url}} target="_blank">{{i.url}}</a></td>
                                 <td>{{i.keywords}}</td>
                                 <td>{{i.time}}</td>
@@ -121,24 +121,24 @@
                           <div>
                             <div id="pagination_div1">
                                 <ul class="pagination" >
-                                共 <span  class="badge">{{p.p_count}}</span> 条记录，总 <span  class="badge">{{p.p_pages}}</span> 页，当前在<span  class="badge">{{id}}</span>页
+                                共 <span  class="badge">{{p.p_count}}</span> 条记录，总 <span  class="badge">{{p.p_pages}}</span> 页，当前在<span  class="badge">{{page}}</span>页
                                 </ul>
                             </div>
                             <div id="pagination_div2">
                                 <nav>
                                     <ul class="pagination" >
-                                        <li><a href="{%url 'newsdata' %}?id={{p.p_previous}}">&laquo;</a></li>
-                                        <li> <a href="{%url 'newsdata' %}?id=1">首页</a></li>
+                                        <li><a href="{%url 'newsdata' %}?taskid={{p.p_content.0.taskid}}&page={{p.p_previous}}">&laquo;</a></li>
+                                        <li> <a href="{%url 'newsdata' %}?taskid={{p.p_content.0.taskid}}&page=1">首页</a></li>
                                             {% for i in p.p_range %}
-                                                <li  {% ifequal p.p_id i %} class="active" {% endifequal %}><a href="{%url 'newsdata' %}?id={{i}}">{{i}}</a></li>
+                                                <li  {% ifequal p.p_id i %} class="active" {% endifequal %}><a href="{%url 'newsdata' %}?taskid={{p.p_content.0.taskid}}&page={{i}}">{{i}}</a></li>
                                             {% endfor %}
-                                        <li> <a href="{%url 'newsdata' %}?id={{p.p_pages}}">尾页</a></li>
-                                        <li><a href="{%url 'newsdata' %}?id={{p.p_next}}">&raquo;</a></li>
+                                        <li> <a href="{%url 'newsdata' %}?taskid={{p.p_content.0.taskid}}&page={{p.p_pages}}">尾页</a></li>
+                                        <li><a href="{%url 'newsdata' %}?taskid={{p.p_content.0.taskid}}&page={{p.p_next}}">&raquo;</a></li>
                                     </ul>
                                 </nav>
                             </div>
                           </div>
-
+                          <!-- 服务器分页结束 -->
                         </div>
 
                         <!-- /.box-body -->

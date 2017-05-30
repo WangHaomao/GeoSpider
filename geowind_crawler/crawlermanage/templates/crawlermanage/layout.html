@@ -25,37 +25,37 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <form action="/crawlermanage/layout/" method="post" role="form">{% csrf_token %}
+            <!--<form action="/crawlermanage/layout/" method="post" role="form">{% csrf_token %}-->
               <!-- text input -->
               <div class="form-group">
                 <label>任务名</label>
-                <input name="taskname" type="text" class="form-control" placeholder="输入任务名 ..." value="{% if taskname %}{{taskname}}{% endif %}">
-                {% if error1 %}
+                <input id="taskname" type="text" class="form-control" placeholder="输入任务名 ...">
+                <!-- {% if error1 %}
                   <p style="color: red;">{{error1}}</p>
-                {% endif %}
+                {% endif %} -->
               </div>
               <!-- textarea -->
               <div class="form-group">
                 <label>起始URL（如有多个用","分割）</label>
-                <textarea name="starturls" class="form-control" rows="3" placeholder="例如：https://www.geowind.com,http://www.bootstrap.com">{% if starturls %}{{starturls}}{% endif %}</textarea>
-                {% if error2 %}
+                <textarea id="starturls" class="form-control" rows="3" placeholder="例如：https://www.geowind.com,http://www.bootstrap.com"></textarea>
+                <!-- {% if error2 %}
                   <p style="color: red;">{{error2}}</p>
-                {% endif %}
+                {% endif %} -->
               </div>
 
               <div class="form-group">
                 <label>任务描述</label>
-                <textarea name="starturls" class="form-control" rows="3" placeholder="点击输入"></textarea>
+                <textarea id="describe" class="form-control" rows="3" placeholder="点击输入"></textarea>
                   <p style="color: red;">{{error2}}</p>
               </div>
 
               <!-- select -->
               <div class="form-group">
                 <label>网站类型</label>
-                <select class="form-control" name="webtype">
-                  <option value="option1">电商网站</option>
-                  <option value="option1">新闻、博客</option>
-                  <option value="option1">混合（暂未实现）</option>
+                <select class="form-control" id="webtype">
+                  <option value="ecommerce">电商网站</option>
+                  <option value="news">新闻、博客</option>
+                  <option value="other">混合（暂未实现）</option>
                 </select>
               </div>
 
@@ -102,7 +102,8 @@
                               <div class="input-group-addon">
                                 <i class="fa fa-clock-o"></i>
                               </div>
-                              <input type="text" class="form-control pull-right" id="reservationtime">
+                              <!--<input type="text" class="form-control pull-right" id="reservationtime">-->
+                              <input id="reservationtime" class="form-control pull-right" class="daterangepicker-field"></input>
                             </div>
                             <!-- /.input group -->
                           </div>
@@ -124,9 +125,9 @@
                       <th><label>分布式主机</label></th>
                       <td>
                         <div class="form-group">
-                          <select class="form-control select2" multiple="multiple" data-placeholder="以下主机可用" style="width: 100%;">
-                            <option>linux 115.123.123.33</option>
-                            <option>代号xxx</option>
+                          <select class="form-control select2" multiple="multiple" data-placeholder="以下主机可用" id="slave" style="width: 100%;">
+                            <option value="127.0.0.1">linux 115.123.123.33</option>
+                            <option value="111.111.111.111">代号xxx</option>
                             <option>代号666</option>
                           </select>
                         </div>
@@ -143,9 +144,9 @@
 
               <div class="box-footer">
                 <button type="button" class="btn btn-default">取消</button>
-                <button type="submit" class="btn btn-primary pull-right">确认</button>
+                <button id="submit" type="button" class="btn btn-primary pull-right">确认</button>
               </div>
-            </form>
+            <!--</form>-->
           </div>
           <!-- /.box-body -->
         </div>
@@ -177,8 +178,64 @@
     });
 
     $(".select2").select2();
-    $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
+    // $('#reservationtime').daterangepicker({
+    //   forceUpdate: true,
+    //   callback: function(startDate, endDate, period){
+    //     var title = startDate.format('L') + ' – ' + endDate.format('L');
+    //     $(this).val(title)
+    //   }
+    // });
+    
+    $('#reservationtime').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 1,
+        timePicker24Hour: true,
+        locale: {
+            format: 'YYYY/MM/DD HH:mm',
+            cancelLabel: 'Clear'
+        },
+        autoUpdateInput: false
+    });
+    $('#reservationtime').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('YYYY/MM/DD HH:mm') + ' - ' + picker.endDate.format('YYYY/MM/DD HH:mm'));
+    });
 
+    $('#reservationtime').on('cancel.daterangepicker', function(ev, picker) {
+      $(this).val('');
+    });
+
+
+  });
+
+  $("#submit").click(function() {
+    taskname = $('#taskname').val()
+    starturls = $('#starturls').val()
+    describe = $('#describe').val()
+    webtype = $('#webtype').val()
+    reservationtime = $('#reservationtime').val()
+    slave = $('#slave').val()
+    if(taskname=='' || starturls=='') {
+      alert('请完善信息...')
+      return
+    }
+    if(slave!=null) {
+      slave = slave.toString()
+    }
+    $.post('/crawlermanage/layout/', {
+      taskname:taskname,
+      starturls:starturls,
+      describe:describe,
+      webtype:webtype,
+      reservationtime:reservationtime,
+      slave:slave
+    }, function(data) {
+      if(data!=null){
+        if (data['status']=='success') {
+          location.href = '/crawlermanage/tasks'
+        }
+        
+      }
+    }, 'json')
   });
 </script>
 {% endblock %}

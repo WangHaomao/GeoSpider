@@ -13,10 +13,13 @@ urlpatterns = [
     url(r'^crawlermanage/login/$',views.login, name='login'),
     url(r'^crawlermanage/index/$',views.index, name='index'),
     url(r'^crawlermanage/tasks/$',views.tasks, name='tasks'),
+    url(r'^crawlermanage/edittask/$',views.edittask, name='edittask'),
     url(r'^crawlermanage/newsdata/$',views.newsdata, name='newsdata'),
     url(r'^crawlermanage/newsdetail/$',views.newsdetail, name='newsdetail'),
     url(r'^crawlermanage/ecommercedata/$',views.ecommercedata, name='ecommercedata'),
     url(r'^crawlermanage/layout/$',views.layout, name='layout'),
+    url(r'^crawlermanage/taskdetail/$',views.taskdetail, name='taskdetail'),
+
 
     # url(r'^crawlermanage/$','crawlermanage.views.login'),
     # url(r'^crawlermanage/login/$','crawlermanage.views.login'),

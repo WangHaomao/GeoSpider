@@ -1,6 +1,8 @@
 # -*- encoding: utf-8 -*-
+import json
 import os
 
+import time
 from django import forms
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
@@ -28,6 +30,9 @@ class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField()
 
+'''
+    登录
+'''
 def login(request):
     if request.method == 'POST':
         uf = LoginForm(request.POST)
@@ -51,16 +56,47 @@ def login(request):
         return render_to_response('crawlermanage/login.html')
 
 def index(request):
-    # path.append(r'/home/kui/work/python/project/bigcrawler')
-    # import main
-    # from main import *
-    # logger.info(main.add())
-    # x = subprocess
     return render(request, 'crawlermanage/index.html')
 
+'''
+    爬虫任务列表
+'''
 def tasks(request):
-    tasklist = Task.objects.all()
-    return render(request, 'crawlermanage/tasks.html', {'tasklist':tasklist})
+    page = request.GET.get('page')
+    logger.info(page)
+    if page == None:
+        page = 1
+    list = Task.objects.filter(status__in=['running', 'waitting', 'error'])
+    p = paging(list,page,10)
+    return render(request, 'crawlermanage/tasks.html', locals())
+
+'''
+    编辑爬虫状态：暂停/唤醒/结束
+'''
+def edittask(request):
+    if request.method == 'POST':
+        op = request.POST.get('op')
+        taskid = request.POST.get('taskid')
+        task = Task.objects.filter(id=taskid)
+        logger.info(task)
+        if op=='running':
+            task.update(status='running')
+            msg = 'op=resumetask&taskid=' + taskid
+            message.publish('crawler', msg)
+            ret = {'status': 'success', 'taskstatus': 'running'}
+            return HttpResponse(json.dumps(ret))
+        elif op=='waitting':
+            task.update(status='waitting')
+            msg = 'op=suspendtask&taskid=' + taskid
+            message.publish('crawler', msg)
+            ret = {'status': 'success', 'taskstatus': 'waitting'}
+            return HttpResponse(json.dumps(ret))
+        elif op=='stopping':
+            task.update(status='stopping')
+            msg = 'op=terminatetask&taskid=' + taskid
+            message.publish('crawler', msg)
+            ret = {'status': 'success', 'taskstatus': 'stopping'}
+            return HttpResponse(json.dumps(ret))
 
 def ecommercedata(request):
     return render(request, 'crawlermanage/ecommercedata.html')
@@ -85,13 +121,23 @@ def ecommercedata(request):
 #     logger.info(len(newslist))
 #     return render(request, 'crawlermanage/newsdata.html', {'newslist': newslist})
 
+'''
+    新闻列表
+'''
 def newsdata(request):
-    id = request.GET.get('id')
-    if id == None:
-        id = 1
-    p = paging(News,id,5)
+    taskid = request.GET.get('taskid')
+    list = []
+    if taskid != None:
+        list = News.objects.filter(taskid=taskid)
+    page = request.GET.get('page')
+    if page == None:
+        page = 1
+    p = paging(list,page,10)
     return render(request,'crawlermanage/newsdata.html',locals())
 
+'''
+    新闻详细内容
+'''
 def newsdetail(request):
     id = request.GET.get('id')
     if id==None:
@@ -101,31 +147,57 @@ def newsdetail(request):
         return
     return render(request, 'crawlermanage/newsdetail.html', {'news':news})
 
+'''
+    布置爬虫任务
+'''
 def layout(request):
-    # taskname=ads&starturls=fsd&webtype=option1&optionsRadios=option1
+    # taskname:taskname,
+    # starturls:starturls,
+    # describe:describe,
+    # webtype:webtype,
+    # reservationtime:reservationtime,
+    # slave:slave
     if request.method == 'POST':
         taskname = request.POST.get('taskname', '')
         starturls = request.POST.get('starturls', '')
+        describe = request.POST.get('describe', '')
         webtype = request.POST.get('webtype', '')
-        runmodel = request.POST.get('runmodel', '')
-
-        if taskname=='' or starturls=='':
-            error1 = None
-            error2 = None
-            if taskname=='':
-                error1 = u'任务名不能为空'
-            if starturls=='':
-                error2= u'起始URL不能为空'
-            return render_to_response('crawlermanage/layout.html', {'taskname':taskname, 'starturls':starturls, 'error1': error1, 'error2': error2})
-        else:
+        reservationtime = request.POST.get('reservationtime', '')
+        slave = request.POST.get('slave', '')
+        #logger.info(taskname+" "+starturls+" "+describe+" "+webtype+" "+reservationtime+" "+slave)
+        list_url = starturls.split('\n')
+        status = ''
+        starttime = ''
+        endtime = ''
+        if reservationtime == '':
+            starttime = time.strftime("%Y/%m/%d %H:%M")
             status = 'running'
-            list_url = starturls.split('\n')
-            task = Task.objects.create(taskname=taskname, starturls=list_url, status=status, webtype=webtype, runmodel=runmodel)
-
-            # subprocess.Popen("python main.py", cwd=r"/home/kui/work/python/project/bigcrawler/", shell=True)
-            #message.publish('crawler', 'taskid='+taskid)
-
-            return HttpResponseRedirect('/crawlermanage/tasks')
+        else:
+            temp = reservationtime.split('-')
+            starttime = temp[0].strip()
+            endtime = temp[1].strip()
+            # logger.info(starttime)
+            # logger.info(endtime)
+            status = 'waiting'
+        slave_list = []
+        if slave == '':
+            slave = '127.0.0.1'
+        slave_list = slave.split(',')
+        task = Task.objects.create(taskname=taskname, starturls=list_url, starttime=starttime, endtime=endtime,
+                                   webtype=webtype, describe=describe, slave=slave_list, status=status)
+        taskid = str(task['id'])
+        msg = 'op=starttask&taskid='+taskid
+        message.publish('crawler', msg)
+        # logger.info(taskid)
+        ret = {'status': 'success'}
+        return HttpResponse(json.dumps(ret))
     else:
         return render_to_response('crawlermanage/layout.html')
 
+'''
+    爬虫任务详情
+'''
+def taskdetail(request):
+    taskid = request.GET.get('taskid')
+    task = Task.objects.get(id=taskid)
+    return render_to_response('crawlermanage/taskdetail.html', {'task':task})

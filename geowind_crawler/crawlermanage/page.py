@@ -6,15 +6,16 @@ class paging():
     '''
     此为文章分页功能，需要往里传递三个参数，分别如下：
     tablename:表名
+    data: 数据集合
     id:页码号，即第几页,这个一般从URL的GET中得到
     pagenum:每页显示多少条记录
     '''
-    def __init__(self,tablename,id,pagenum):
-        self.tablename = tablename
+    def __init__(self,data,id,pagenum):
+        #self.tablename = tablename
         self.page = int(id)
         self.pagenum = int(pagenum)
-        tn = self.tablename.objects.all()                           #查询tablename表中所有记录数
-        self.p = Paginator(tn,self.pagenum)                         #对表数据进行分页，每页显示pagenum条
+        #data = self.tablename.objects.all()                           #查询tablename表中所有记录数
+        self.p = Paginator(data,self.pagenum)                         #对表数据进行分页，每页显示pagenum条
         self.p_count = self.p.count                                 #数据库共多少条记录
         self.p_pages = self.p.num_pages                             #共可分成多少页
         self.p_content = self.p.page(self.page).object_list         #第N页的内容列表

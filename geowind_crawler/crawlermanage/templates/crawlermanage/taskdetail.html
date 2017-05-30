@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../static/style/font-awesome/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+  <!-- Ionicons -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"> -->
   <link rel="stylesheet" href="../../static/dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="../../static/dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="../../static/plugins/iCheck/flat/blue.css">
@@ -229,43 +232,62 @@
                       <table class="table table-bordered table-striped">
                         <tbody>
                           <tr>
+                            <th><label>任务ID</label></th>
+                            <td>{{task.id}}</td>
                             <th><label>任务名</label></th>
-                            <td>爬取哈哈啊</td>
-                            <th><label>网站类型</label></th>
-                            <td>电商</td>
-                            <th><label>当前状态</label></th>
-                            <td>
-                              <span class="label label-success" id="status_span">
-                                <a href="#" id="status_a" class="editable editable-click" style="color: white; ">正在运行</a>
-                              </span>
-                            </td>
+                            <td>{{task.taskname}}</td>
+                            <th><label>任务类型</label></th>
+                            <td>{{task.webtype}}</td>
+                            
                           </tr>
                           <tr>
 
                             <th><label>开始时间</label></th>
-                            <td>2017/05/05 12:22:22</td>
+                            <td>{{task.starttime}}</td>
                             <th><label>结束时间</label></th>
                             <td>
                             <!-- <a href="#" id="end_time" class="editable editable-click editable-empty">自动停止，点击设置</a> -->
                             <!-- <a href="#" id="end_time" data-type="combodate" data-pk="1" data-url="/post" data-value="1984-05-15" data-title="Select date"></a> -->
                             <a href="#" id="end_time" class="editable editable-click editable-empty" data-original-title="" title="">默认自动停止，点击设置</a>
                             </td>
-
-
+                            <th><label>当前状态</label></th>
+                            <!-- <td>
+                              <span class="label label-success" id="status_span">
+                                <a href="#" id="status_a" class="editable editable-click" style="color: white; ">正在运行</a>
+                              </span>
+                            </td> -->
+                              <td>
+                                {% if task.status = 'running' %}
+                                <span id="span_{{task.id}}" class="label label-success" >
+                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'running')" style="color: white; text-decoration: none">正在运行</a>
+                                </span>
+                                {% elif task.status = 'waitting'  %}
+                                 <span id="span_{{task.id}}" class="label label-warning" >
+                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'waitting')" style="color: white; text-decoration: none">等待运行</a>
+                                 </span>
+                                {% elif task.status = 'error' %}
+                                <span id="span_{{task.id}}" class="label label-danger">
+                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">任务故障</a>
+                                </span>
+                                {% endif %}
+                                </td>
                           </tr>
                           <tr>
                             <th><label>目标URL</label></th>
                             <td colspan="6">
                             <!-- 你自己修改一下。。。。 -->
-                              <a href="https://www.taobao.com" style="display: block;" target="_blank"> https://www.taobao.com</a>
-                              <a style="display: block;" target="_blank"> http://www.jd.com</a>
+                              <!-- <a href="https://www.taobao.com" style="display: block;" target="_blank"> https://www.taobao.com</a>
+                              <a style="display: block;" target="_blank"> http://www.jd.com</a> -->
+                              {% for url in task.starturls %}
+                                <a href="{{url}}" style="display: block;" target="_blank">{{url}}</a>
+                              {% endfor %}
 
                             </td>
                           </tr>
                           <tr>
                             <th><label>任务描述</label></th>
                             <td colspan="6">
-                              <textarea class="form-control" rows="3" placeholder="xx"></textarea>
+                              <textarea class="form-control" rows="3" placeholder="">{{task.describe}}</textarea>
                             </td>
                           </tr>
                           <tr>
