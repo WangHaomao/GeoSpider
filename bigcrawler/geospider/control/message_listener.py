@@ -31,7 +31,7 @@ if __name__ == '__main__':
         msg = listener.listen()
         params = Analyze(msg)
         op = params.get('op')
-        print op
+        print(op)
         if op=='starttask':
             taskid = params.get('taskid')
             p.start(taskid)

@@ -153,7 +153,7 @@
             <li><a href="index2.html"><i class="fa fa-circle-o"></i>数据显示</a></li>
           </ul>
         </li>
-        <li class="treeview">
+        <!-- <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
             <span>Layout Options</span>
@@ -167,7 +167,7 @@
             <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
             <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
           </ul>
-        </li>
+        </li> -->
         <li>
           <a href="pages/widgets.html">
             <i class="fa fa-tasks"></i> <span>布置任务</span>
@@ -268,6 +268,10 @@
                                 {% elif task.status = 'error' %}
                                 <span id="span_{{task.id}}" class="label label-danger">
                                     <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">任务故障</a>
+                                </span>
+                                {% elif task.status = 'stopping' %}
+                                <span id="span_{{task.id}}" class="label label-danger">
+                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">已经结束</a>
                                 </span>
                                 {% endif %}
                                 </td>

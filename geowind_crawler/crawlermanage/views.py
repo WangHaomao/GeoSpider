@@ -60,15 +60,22 @@ def index(request):
 
 '''
     爬虫任务列表
+    p:正在进行、等待运行、出现故障的任务
+    p2:结束的任务
 '''
 def tasks(request):
     page = request.GET.get('page')
-    logger.info(page)
+    page2 = request.GET.get('page2')
+    logger.info(page2)
     if page == None:
         page = 1
+    if page2 == None:
+    	page2 = 1
     list = Task.objects.filter(status__in=['running', 'waitting', 'error'])
+    list2 = Task.objects.filter(status='stopping')
     p = paging(list,page,10)
-    return render(request, 'crawlermanage/tasks.html', locals())
+    p2 = paging(list2,page2,10)
+    return render(request, 'crawlermanage/tasks.html', {'p':p, 'p2':p2})
 
 '''
     编辑爬虫状态：暂停/唤醒/结束

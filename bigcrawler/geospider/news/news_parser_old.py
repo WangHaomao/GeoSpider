@@ -80,7 +80,14 @@ def getcodetype(html):
 
 #获取标题
 def gettitle(soup):
-    return soup.title
+    title_node = soup.title
+    h1_node = soup.h1
+    if title_node != None and h1_node != None:
+        title = title_node.text
+        h1 = h1_node.text
+        if h1 in title:
+            return h1
+    return None
 
 #获取关键词
 def getkeywords(soup):
@@ -119,7 +126,7 @@ def get_all_url(soup):
 
 
 #获取正文父级标签
-def getparent_by_most(html_str, content):
+def get_parent(html_str, content):
     soup = BeautifulSoup(html_str, "lxml")
     [script.extract() for script in soup.find_all('script')]
     [style.extract() for style in soup.find_all('style')]
@@ -140,10 +147,6 @@ def getparent_by_most(html_str, content):
                 nidaye = element.parent
                 parents.append(element.parent.name + str(element.parent.attrs))
                 print (element.parent.name + str(element.parent.attrs))
-                print ("=============")
-                # for s in parents:
-                #     print s
-                #     print "==========="
 
 #获取正文1
 def getcontent1(lst):
@@ -219,53 +222,24 @@ def getcontent2(lst):
     return ''.join(content)
 
 
-def choose_stratigy():
-    pass
-
-
-# def run(url):
-#     ctthtml = getcontentfromweb(url)
-#     soup = filter_tags(ctthtml)
-#     soup2 = filter_ul_tags(soup)
-#     title = gettitle(soup)
-#     print title
-#     print "==========="
-#     time = gettime(soup)
-#     print time
-#     print "==========="
-#     keywords = getkeywords(soup)
-#     print keywords
-#     print "============"
-#     origin_content = get_origin_content(soup2)
-#     content = getcontent1(origin_content)
-#     if len(content) < 30:
-#         origin_content = get_origin_content(soup)
-#         content = getcontent1(origin_content)
-#     print content
-#     print "==========="
-#     return title,time,keywords,content
-#
-#
-# if __name__ == "__main__":#http://news.sohu.com/s2014/nanshuibeidiao/
-#     ctthtml = getcontentfromweb('http://news.sohu.com/s2014/nanshuibeidiao/')
-#     soup = filter_tags(ctthtml)
-#     print get_all_url(soup)
-#     print len(get_all_url(soup))
-#     soup2 = filter_ul_tags(soup)
-#     title = gettitle(soup)
-#     print title
-#     print "==========="
-#     time = gettime(soup)
-#     print time
-#     print "==========="
-#     keywords = getkeywords(soup)
-#     print keywords
-#     print "============"
-#     origin_content = get_origin_content(soup2)
-#     content = getcontent1(origin_content)
-#     # if len(content)<30:
-#     #     origin_content = get_origin_content(soup)
-#     #     content = getcontent1(origin_content)
-#     print content
-#     print "==========="
+if __name__ == "__main__":#http://news.sohu.com/s2014/nanshuibeidiao/
+    ctthtml = getcontentfromweb('http://news.sohu.com/20161112/n473015294.shtml')
+    soup = filter_tags(ctthtml)
+    soup2 = filter_ul_tags(soup)
+    title = gettitle(soup)
+    print(title)
+    print("===========")
+    time = gettime(soup)
+    print(time)
+    print ("===========")
+    keywords = getkeywords(soup)
+    print (keywords)
+    print ("============")
+    origin_content = get_origin_content(soup2)
+    content = getcontent1(origin_content)
+    # if len(content)<30:
+    #     origin_content = get_origin_content(soup)
+    #     content = getcontent1(origin_content)
+    print (content)
+    print ("===========")
 

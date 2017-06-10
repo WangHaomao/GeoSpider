@@ -10446,3 +10446,293 @@ ValidationError: u'None' is not a valid ObjectId, it must be a 12-byte input or 
 2017-05-30 16:29:52,988 [Thread-63:140196588738304] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
 2017-05-30 16:29:54,659 [Thread-65:140196588738304] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
 2017-05-30 16:29:55,972 [Thread-67:140196588738304] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-31 16:54:45,970 [Thread-3:140651647723264] [django.request:170] [WARNING]- Not Found: /favicon.ico
+2017-05-31 16:54:49,236 [Thread-7:140651614152448] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:55:06,052 [Thread-9:140651622545152] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:55:06,831 [Thread-11:140651639330560] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:55:27,316 [Thread-17:140651622545152] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:55:27,978 [Thread-19:140651614152448] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:55:28,362 [Thread-21:140651630937856] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:55:28,739 [Thread-23:140651614152448] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:55:29,171 [Thread-25:140651614152448] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:55:29,554 [Thread-27:140651614152448] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:55:29,948 [Thread-29:140651614152448] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:56:09,432 [Thread-31:140651614152448] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:56:19,521 [Thread-34:140651630937856] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:56:20,552 [Thread-36:140651656115968] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:57:05,902 [Thread-41:140651614152448] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:57:36,224 [Thread-46:140651656115968] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:57:37,107 [Thread-48:140651614152448] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 16:57:39,282 [Thread-51:140651656115968] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-31 16:57:46,653 [Thread-56:140651656115968] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-05-31 16:57:59,860 [Thread-60:140651639330560] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/index2.html
+2017-05-31 08:58:11,150 [Thread-61:140651639330560] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/index.html
+2017-05-31 08:58:18,983 [Thread-68:140651119245056] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 08:58:21,734 [Thread-70:140651605759744] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-31 08:58:23,928 [Thread-72:140651622545152] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-31 08:58:35,148 [Thread-74:140651656115968] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-05-31 08:58:49,477 [Thread-79:140651605759744] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/index.html
+2017-05-31 09:00:23,800 [Thread-86:140651622545152] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/pages/widgets.html
+2017-05-31 09:00:56,246 [Thread-93:140651639330560] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-05-31 09:00:58,418 [Thread-94:140651622545152] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/index.html
+2017-05-31 09:01:24,357 [Thread-99:140651639330560] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-05-31 09:01:27,142 [Thread-101:140651622545152] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-31 09:01:41,627 [Thread-103:140651622545152] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-31 09:02:50,460 [Thread-105:140651622545152] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-31 09:02:51,989 [Thread-109:140651622545152] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-05-31 09:04:25,741 [Thread-113:140651622545152] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-05-31 09:04:39,404 [Thread-115:140651622545152] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-05-31 09:04:53,848 [Thread-117:140651639330560] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-01 14:18:53,182 [Thread-6:139915908069120] [django.request:170] [WARNING]- Not Found: /favicon.ico
+2017-06-01 14:18:59,970 [Thread-16:139915899676416] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-01 14:19:05,733 [Thread-23:139915899676416] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-01 14:19:34,206 [Thread-28:139915899676416] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:20:13,465 [Thread-30:139915933247232] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:20:47,286 [Thread-36:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-01 14:20:57,075 [Thread-39:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:22:52,560 [Thread-47:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:22:55,818 [Thread-49:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:22:57,542 [Thread-51:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:23:00,625 [Thread-53:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:23:02,677 [Thread-55:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:23:04,028 [Thread-57:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:23:05,898 [Thread-59:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:23:08,114 [Thread-61:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:23:09,796 [Thread-63:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:23:12,692 [Thread-65:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:23:14,795 [Thread-67:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:23:28,643 [Thread-69:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:23:38,204 [Thread-72:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:27:32,412 [Thread-74:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:27:34,807 [Thread-77:139915933247232] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-01 14:29:04,940 [Thread-87:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-01 14:29:10,976 [Thread-89:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-01 14:29:43,159 [Thread-92:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:29:51,581 [Thread-94:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:29:57,011 [Thread-96:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:30:00,243 [Thread-98:139915941639936] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:30:01,895 [Thread-100:139915899676416] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:30:02,883 [Thread-102:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:30:04,161 [Thread-104:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:30:35,386 [Thread-108:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:31:11,280 [Thread-112:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-01 14:31:21,913 [Thread-115:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:34:27,797 [Thread-121:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-01 14:34:30,393 [Thread-123:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-01 14:34:57,072 [Thread-126:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:34:59,476 [Thread-128:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:01,331 [Thread-130:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:02,774 [Thread-132:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:03,470 [Thread-134:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:03,932 [Thread-136:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:04,122 [Thread-138:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:04,310 [Thread-140:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:04,501 [Thread-142:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:06,546 [Thread-144:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:08,085 [Thread-146:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:10,653 [Thread-148:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:12,707 [Thread-150:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:13,636 [Thread-152:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:14,764 [Thread-154:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:35:29,253 [Thread-156:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-01 14:36:29,542 [Thread-162:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-01 14:36:32,257 [Thread-164:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-01 14:36:51,214 [Thread-167:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:36:55,160 [Thread-169:139915891283712] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-01 14:37:04,252 [Thread-171:139915404769024] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:37:06,490 [Thread-173:139915924854528] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:37:08,107 [Thread-175:139915924854528] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:37:11,803 [Thread-177:139915899676416] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:37:38,132 [Thread-181:139915899676416] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:37:40,629 [Thread-183:139915899676416] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-01 14:37:56,617 [Thread-187:139915899676416] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-01 14:38:01,670 [Thread-190:139915899676416] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:18:13,712 [Thread-3:139860009166592] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-02 13:18:14,242 [Thread-4:139860009166592] [django.request:170] [WARNING]- Not Found: /favicon.ico
+2017-06-02 13:18:45,742 [Thread-5:139860009166592] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list,page,10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: localhost:27017: [Errno 111] Connection refused
+2017-06-02 13:18:47,249 [Thread-6:139859991856896] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list,page,10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: localhost:27017: [Errno 111] Connection refused
+2017-06-02 13:18:47,761 [Thread-7:139859983464192] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list,page,10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: localhost:27017: [Errno 111] Connection refused
+2017-06-02 13:19:47,679 [Thread-11:139907888576256] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:21:09,266 [Thread-13:139907888576256] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:34:47,817 [Thread-3:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:34:48,763 [Thread-5:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:36:00,167 [Thread-7:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:36:01,884 [Thread-9:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:04,242 [Thread-11:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:05,568 [Thread-13:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:07,275 [Thread-15:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:08,932 [Thread-17:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:10,101 [Thread-19:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:11,894 [Thread-21:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:14,585 [Thread-23:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:15,748 [Thread-25:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:17,507 [Thread-27:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:25,942 [Thread-29:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:27,613 [Thread-31:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:29,608 [Thread-33:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:31,221 [Thread-35:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:32,451 [Thread-37:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:36:33,801 [Thread-39:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:38:47,126 [Thread-41:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:38:47,510 [Thread-43:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:38:51,212 [Thread-45:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:38:54,944 [Thread-47:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:38:56,929 [Thread-49:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:38:58,000 [Thread-51:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:38:59,053 [Thread-53:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:39:00,027 [Thread-55:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:39:01,217 [Thread-57:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:39:04,023 [Thread-59:140267390760704] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:39:07,874 [Thread-63:140267390760704] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 76, in tasks
+    p = paging(list,page,10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/page.py", line 15, in __init__
+    self.page = int(id)
+ValueError: invalid literal for int() with base 10: ''
+2017-06-02 13:39:47,387 [Thread-2:140275594524416] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 76, in tasks
+    p = paging(list,page,10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/page.py", line 15, in __init__
+    self.page = int(id)
+ValueError: invalid literal for int() with base 10: ''
+2017-06-02 13:39:48,223 [Thread-3:140275594524416] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 76, in tasks
+    p = paging(list,page,10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/page.py", line 15, in __init__
+    self.page = int(id)
+ValueError: invalid literal for int() with base 10: ''
+2017-06-02 13:39:49,808 [Thread-4:140275594524416] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 76, in tasks
+    p = paging(list,page,10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/page.py", line 15, in __init__
+    self.page = int(id)
+ValueError: invalid literal for int() with base 10: ''
+2017-06-02 13:40:42,871 [Thread-2:140064130926336] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 76, in tasks
+    p = paging(list,page,10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/page.py", line 15, in __init__
+    self.page = int(id)
+ValueError: invalid literal for int() with base 10: ''
+2017-06-02 13:40:47,020 [Thread-4:140064034117376] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:40:49,831 [Thread-6:140064034117376] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:40:50,811 [Thread-8:140064034117376] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:40:54,155 [Thread-10:140064034117376] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:40:56,205 [Thread-12:140064034117376] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:40:57,593 [Thread-14:140064034117376] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:40:58,794 [Thread-16:140064034117376] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:41:00,209 [Thread-18:140064034117376] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:41:05,091 [Thread-24:140064130926336] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-02 13:41:33,802 [Thread-28:140064130926336] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:41:41,987 [Thread-30:140064130926336] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:41:43,999 [Thread-32:140064130926336] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:41:45,581 [Thread-34:140064130926336] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:41:47,475 [Thread-36:140064130926336] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-02 13:41:59,554 [Thread-38:140064130926336] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-02 13:42:08,470 [Thread-42:140064130926336] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-02 13:42:15,405 [Thread-46:140064034117376] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-02 13:43:32,202 [Thread-52:140064008939264] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
