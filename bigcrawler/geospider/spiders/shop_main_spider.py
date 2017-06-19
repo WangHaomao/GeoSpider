@@ -5,7 +5,6 @@ from scrapy.linkextractors import LinkExtractor
 
 from scrapy_redis.spiders import RedisCrawlSpider
 from scrapy.http import Request
-from geospider.news.news_parser_old import *
 from geospider.items import News
 import sys
 class ShopSpider(RedisSpider):

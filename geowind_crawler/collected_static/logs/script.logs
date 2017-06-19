@@ -10736,3 +10736,10 @@ ValueError: invalid literal for int() with base 10: ''
 2017-06-02 13:42:08,470 [Thread-42:140064130926336] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
 2017-06-02 13:42:15,405 [Thread-46:140064034117376] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
 2017-06-02 13:43:32,202 [Thread-52:140064008939264] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-13 09:42:18,302 [Thread-6:139748974786304] [django.request:170] [WARNING]- Not Found: /favicon.ico
+2017-06-13 09:42:20,013 [Thread-16:139748966393600] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-13 09:42:28,227 [Thread-24:139748941215488] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-13 09:42:34,431 [Thread-26:139748949608192] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-13 09:42:40,053 [Thread-33:139749054867200] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-13 09:42:43,164 [Thread-34:139748941215488] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/pages/widgets.html
+2017-06-13 09:42:46,046 [Thread-35:139748941215488] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/pages/widgets.html

@@ -23,7 +23,7 @@ def traversal_brother(obj):
     next_soup = BeautifulSoup(str(obj), 'lxml')
     res = reg1.sub('', next_soup.prettify()).split('\n')
     content = ''.join(res)
-    print str(len(content))+" "+content
+    print(str(len(content))+" "+content)
     nodes.append(obj)
     msg_len.append(len(content))
 
@@ -32,7 +32,7 @@ def traversal_brother(obj):
         next_soup = BeautifulSoup(str(next), 'lxml')
         res = reg1.sub('', next_soup.prettify()).split('\n')
         content = ''.join(res)
-        print str(len(content)) + " " + content
+        print(str(len(content)) + " " + content)
         nodes.append(next)
         msg_len.append(len(content))
         next = next.next_sibling
@@ -72,8 +72,8 @@ def parser(obj):
 
 
     for n in nodes:
-        print n
-        print "======================"
+        print(n)
+        print("======================")
 
     # next = title.next_sibling
     # next_soup = BeautifulSoup(str(next), 'lxml')
@@ -148,5 +148,5 @@ def getcodetype(html):
 
 
 if __name__ == '__main__':
-    text  =getcontentfromweb('http://news.sina.com.cn/china/xlxw/2017-06-03/doc-ifyfuzny2864577.shtml')
+    text  =getcontentfromweb('http://news.qq.com/a/20170619/002792.htm')
     parser(text)

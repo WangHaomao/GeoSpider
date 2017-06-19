@@ -23,8 +23,12 @@ def init(taskid):
         temp.redis_key = taskid+":start_urls"
 
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
+    allowed_domains = []
     for url in task['starturls']:
         r.lpush(taskid+":start_urls", url)
+        allowed_domains.append(url.split('/')[2])
+    temp.allowed_domains = allowed_domains
+
 
 
 def run(taskid):

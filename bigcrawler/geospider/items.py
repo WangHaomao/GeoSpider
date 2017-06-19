@@ -56,6 +56,14 @@ class News(Item):
     url = Field()
     taskid = Field()
 
+class Blog(Item):
+    title = Field()
+    keywords = Field()
+    time = Field()
+    acticle = Field()
+    url = Field()
+    taskid = Field()
+
 # class ShopItem(Item):
 #     navbar = Field()
 

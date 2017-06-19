@@ -215,3 +215,6 @@
 2017-06-02 13:40:50,780 [Thread-7:140064034117376] [crawlermanage.views:69] [INFO]- None
 2017-06-02 13:41:33,766 [Thread-27:140064130926336] [crawlermanage.views:69] [INFO]- None
 2017-06-02 13:41:59,511 [Thread-37:140064130926336] [crawlermanage.views:69] [INFO]- None
+2017-06-13 09:42:06,353 [Dummy-1:139749065955072] [django.db.backends:89] [DEBUG]- (0.058) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-13 09:42:06,440 [Dummy-1:139749065955072] [django.db.backends:89] [DEBUG]- (0.005) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-06-13 09:42:28,070 [Thread-18:139748958000896] [crawlermanage.views:69] [INFO]- None

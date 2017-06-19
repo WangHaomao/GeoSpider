@@ -10,11 +10,18 @@ class MongoDBPipeline(object):
         self.url = settings['MONGO_URI']
         self.db = settings['MONGO_DATABASE']
         self.col = settings['MONGO_COLLECTION']
+
+
+    def process_item(self, item, spider):
+        # print("++++++++++++++++++++++++++++++++")
+        classname = str(type(spider))
+        if classname == "<class 'geospider.spiders.blog_spider.BlogSpider'>":
+            self.col='blog'
+        elif classname == "<class 'geospider.spiders.blog_spider.NewsSpider'>":
+            self.col='news'
         connection = pymongo.MongoClient(self.url)
         db = connection[self.db]
         self.collection = db[self.col]
-
-    def process_item(self, item, spider):
         err_msg = ''
         for field, data in item.items():
             if not data:

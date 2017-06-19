@@ -24,7 +24,7 @@ class MongoPipeline(object):
         self.client.close()
 
     def process_item(self, item, spider):
-        print dict(item)
+        print(dict(item))
         self.db[self.collection_name].insert(dict(item))
         # data = {'title': item["title"][0], 'link': item["link"], 'price': item["price"][0],
         #        'comment': item["comment"][0]}

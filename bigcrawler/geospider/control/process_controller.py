@@ -44,14 +44,14 @@ class ProcessController(object):
     # 睡眠
     def sleep(self, taskid, t):
         for p in self.process_list:
-            print p.name
+            print(p.name)
             if p.name == taskid:
                 time.sleep(t)
                 break
 
     def processes(self):
         for p in self.process_list:
-            print str(p.pid)+" "+p.name
+            print(str(p.pid)+" "+p.name)
 
 if __name__ == '__main__':
     p = ProcessController()

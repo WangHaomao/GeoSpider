@@ -22,4 +22,4 @@ class Analyze(object):
 if __name__ == '__main__':
     a = Analyze('d=e&u=d')
     dict = a.dict
-    print dict['d']
+    print(dict['d'])

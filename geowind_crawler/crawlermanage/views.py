@@ -1,22 +1,15 @@
 # -*- encoding: utf-8 -*-
 import json
-import os
-
+import logging
 import time
+
 from django import forms
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
-import subprocess
-from sys import path
 
-
-import logging
-
-from django.views.generic import ListView
-
-from crawlermanage.models import Task, News
-from crawlermanage.page import paging
 from crawlermanage.message import Message
+from crawlermanage.models import Task, News
+from crawlermanage.utils.page import paging
 
 logger = logging.getLogger('crawlermanage.views')
 #mongoengine.register_connection('default', 'p')
