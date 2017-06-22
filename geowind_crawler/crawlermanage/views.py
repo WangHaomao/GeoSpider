@@ -68,7 +68,7 @@ def tasks(request):
     if page2 == None:
     	page2 = 1
 
-    list = Task.objects.filter(status__in=['running', 'waitting', 'error'])
+    list = Task.objects.filter(status__in=['running', 'waitting', 'error', 'pausing'])
     list2 = Task.objects.filter(status='stopping')
     p = paging(list,page,10)
     p2 = paging(list2,page2,10)
@@ -187,6 +187,7 @@ def layout(request):
         if slave == '':
             slave = '127.0.0.1'
         slave_list = slave.split(',')
+        logger.info(starttime)
         task = Task.objects.create(taskname=taskname, starturls=list_url, starttime=starttime, endtime=endtime,
                                    webtype=webtype, describe=describe, slave=slave_list, status=status)
         taskid = str(task['id'])

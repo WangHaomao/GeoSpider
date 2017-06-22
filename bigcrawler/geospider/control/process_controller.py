@@ -6,12 +6,16 @@ import time
 import psutil
 import signal
 
-from geospider.control.spider_controller import init, run, delete, wait, scan
+from geospider.control.spider_controller import init, run, delete, wait, scaner
+from geospider.utils.mongodb_helper import connect_mongodb, ProcessDao, TaskDao
 
 
 class ProcessController(object):
 
-    process_list = []
+    def __init__(self):
+        mongodb = connect_mongodb()
+        self.processdao = ProcessDao(mongodb)
+        self.taskdao = TaskDao(mongodb)
 
     '''
         开始一个进程，开始任务
@@ -20,49 +24,52 @@ class ProcessController(object):
         init(taskid)
         p = Process(name=taskid, target=run, args=(taskid,))
         p.start()
-        print(p.pid)
-        self.process_list.append(p)
+        self.processdao.insert_process(p.pid, taskid, 'running')
+        #self.process_list.append(p)
 
     '''
         唤醒一个阻塞的进程，将暂停状态的任务重新启动
     '''
     def resume(self, taskid):
-        for p in self.process_list:
-            if p.name == taskid and p.is_alive():
-                ps = psutil.Process(p.pid)
+        process_list = self.processdao.find_by_taskid(taskid)
+        for p in process_list:
+            if p['taskid'] == taskid:
+                ps = psutil.Process(p['pid'])
                 ps.resume()
-                break
+        self.processdao.update_status_by_taskid(taskid, 'running')
 
     '''
         杀死一个进程，终止任务
     '''
     def terminate(self, taskid):
-        for p in self.process_list:
-            if p.name == taskid and p.is_alive():
+        process_list = self.processdao.find_by_taskid(taskid)
+        for p in process_list:
+            if p['taskid'] == taskid and p['status']!='stopping':
                 print("杀死进程%s"%(taskid))
                 # p.terminate()
-                os.kill(p.pid, signal.SIGKILL)
-                delete(taskid)
-                self.process_list.remove(p)
-                break
+                os.kill(p['pid'], signal.SIGKILL)
+                delete(taskid, True)
+        self.processdao.delete_by_taskid(taskid)
 
     '''
         暂停进程，暂停任务
     '''
     def suspend(self, taskid):
-        for p in self.process_list:
-            if p.name == taskid and p.is_alive():
-                ps = psutil.Process(p.pid)
+        process_list = self.processdao.find_by_taskid(taskid)
+        for p in process_list:
+            if p['taskid'] == taskid and p['status']!='stopping':
+                ps = psutil.Process(p['pid'])
                 ps.suspend()
-                break
+        self.processdao.update_status_by_taskid(taskid, 'pausing')
 
     '''
         休眠
     '''
     def sleep(self, taskid, t):
-        for p in self.process_list:
-            print(p.name)
-            if p.name == taskid:
+        process_list = self.processdao.find_all()
+        for p in process_list:
+            print(p['taskid'])
+            if p['taskid'] == taskid:
                 time.sleep(t)
                 break
 
@@ -70,8 +77,9 @@ class ProcessController(object):
         查看所有的进程名
     '''
     def processes(self):
-        for p in self.process_list:
-            print(str(p.pid)+" "+p.name)
+        process_list = self.processdao.find_all()
+        for p in process_list:
+            print(str(p['pid'])+" "+p['taskid'])
 
     '''
         开启一个进程，等待任务启动
@@ -81,15 +89,17 @@ class ProcessController(object):
         p = Process(name=taskid, target=wait, args=(taskid,))
         p.start()
         print(p.pid)
-        self.process_list.append(p)
+        self.processdao.insert_process(p.pid, taskid, 'waitting')
 
     '''
         扫描所有进程，将到时间的进程杀死
     '''
     def scan(self):
-        p = Process(name='spider_scaner', target=scan)
-        p.start()
-        self.process_list.append(p)
+        scanner = self.processdao.find_by_status('scanner')
+        if len(scanner)==0:
+            p = Process(name='spider_scaner', target=scaner)
+            p.start()
+            self.processdao.insert_process(p.pid, '', 'scanner')
 
 if __name__ == '__main__':
     p = ProcessController()

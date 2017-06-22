@@ -5,7 +5,7 @@ def connect_redis():
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     return r
 
-class URLManager(object):
+class URLDao(object):
     def __init__(self, redis):
         self.redis = redis
 

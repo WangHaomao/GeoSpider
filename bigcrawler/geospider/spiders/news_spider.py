@@ -35,7 +35,7 @@ class NewsSpider(RedisSpider):
         yield Request(url=response.url, callback=self.parse_page)
 
     def parse_page(self, response):
-        print("ccccc:" + response.url)
+        # print("ccccc:" + response.url)
         a_list = response.xpath(
             "//a[(starts-with(@href,'http') or starts-with(@href, 'https')) and string-length(text())>0]")
         #print("href:%s num:%d" % (response.url, len(a_list)))
@@ -52,22 +52,22 @@ class NewsSpider(RedisSpider):
             if flag == 1:
                 # print("该url不在域名内")
                 continue
-            print("'%s'," % (item_href))
+            # print("'%s'," % (item_href))
             # for k, v in dict.items():
             # 5为一个阈值，当value小于5时为导航页，当value大于5时视为新闻详情页
             #print("parse_page:%s %s" % (item_text, item_href))
             #flag = is_acricle_page_by_url_and_text(item_href, item_text)
             flag = is_articel_content_page_blog_and_news(item_href)
             if flag:
-                print('a'+item_text)
+                # print('a'+item_text)
                 yield Request(url=item_href, callback=self.parse_acticle)
             else:
-                print("b:"+item_text)
+                # print("b:"+item_text)
                 yield Request(url=item_href, callback=self.parse_page)
 
 
     def parse_acticle(self, response):
-        print("parse_acticle:"+response.url)
+        # print("parse_acticle:"+response.url)
         html = get_html(response.url)
         article = extract_content(html)
         title = get_title(html)
@@ -78,7 +78,7 @@ class NewsSpider(RedisSpider):
         flag = is_acricle_page_by_allinfo(html,title,keywords,article,url_num)
 
         if flag:
-            print("parse successful......%s"%(response.url))
+            # print("parse successful......%s"%(response.url))
             item = News()
             item['url'] = str(response.url)
             item['title'] = str(title)

@@ -1,24 +1,22 @@
 #-*- encoding: utf-8 -*-
+import os
+
 import redis
 from copy import deepcopy
 
 import time
+
+import signal
 from bson import ObjectId
 from scrapy import cmdline
 import pymongo
-
 from geospider.spiders.news_spider import NewsSpider
-from geospider.utils.mongodb_helper import connect_mongodb, TaskDao
+from geospider.utils.mongodb_helper import connect_mongodb, TaskDao, ProcessDao
+from geospider.utils.redis_helper import connect_redis, URLDao
 from geospider.utils.time_util import compare_time
 
 
 def init(taskid):
-    # client = pymongo.MongoClient('mongodb://localhost:27017')
-    # db_name = 'news'
-    # db = client[db_name]
-    # task = db.task.find_one({'_id': ObjectId(taskid)})
-    # client.close()
-
     mongodb = connect_mongodb()
     taskdao = TaskDao(mongodb)
     task = taskdao.find_by_id(taskid)
@@ -29,54 +27,75 @@ def init(taskid):
         temp.name = taskid
         temp.redis_key = taskid+":start_urls"
 
-    r = redis.Redis(host='127.0.0.1', port=6379, db=0)
+    redis = connect_redis()
+    url_manager = URLDao(redis)
     allowed_domains = []
     for url in task['starturls']:
-        r.lpush(taskid+":start_urls", url)
+        url_manager.insert_url(taskid, url)
         allowed_domains.append(url.split('/')[2])
     temp.allowed_domains = allowed_domains
 
 
-
 def run(taskid):
-    cmdline.execute(("scrapy crawl "+taskid).split())
+    cmdline.execute(("scrapy crawl "+taskid+" --nolog").split())
 
 def wait(taskid):
-    client = pymongo.MongoClient('mongodb://localhost:27017')
-    db_name = 'news'
-    db = client[db_name]
-    task = db.task.find_one({'_id': ObjectId(taskid)})
+
+    mongodb = connect_mongodb()
+    taskdao = TaskDao(mongodb)
+    task = taskdao.find_by_id(taskid)
+
     starttime = task['starttime']
     endtime = task['endtime']
-    client.close()
     flag = False
     while(flag is False):
         flag = compare_time(time.strftime("%Y/%m/%d %H:%M"), starttime, endtime)
         time.sleep(60)
     if flag is True:
         task['status'] = 'running'
-        db.task.save(task)
+        taskdao.save(task)
+        processdao = ProcessDao(mongodb)
+        processdao.update_status_by_taskid(taskid, 'running')
         run(taskid)
 
 
 
-def delete(taskid):
-    r = redis.Redis(host='127.0.0.1', port=6379, db=0)
-    r.delete(taskid+":requests")
-    r.delete(taskid + ":start_urls")
-    r.delete(taskid + ":dupefilter")
+def delete(taskid, is_changed):
+    redis = connect_redis()
+    url_manager = URLDao(redis)
+    url_manager.delete_task(taskid)
 
-    client = pymongo.MongoClient('mongodb://localhost:27017')
-    db_name = 'news'
-    db = client[db_name]
-    task = db.task.find_one({'_id': ObjectId(taskid)})
+    if is_changed:
+        mongodb = connect_mongodb()
+        taskdao = TaskDao(mongodb)
+        task = taskdao.find_by_id(taskid)
 
-    endtime = time.strftime("%Y/%m/%d %H:%M")
-    task['endtime']=endtime
-    db.task.save(task)
-    client.close()
+        endtime = time.strftime("%Y/%m/%d %H:%M")
+        task['endtime']=endtime
+        taskdao.save(task)
 
 
-
-def scan():
-    pass
+def scaner():
+    mongodb = connect_mongodb()
+    taskdao = TaskDao(mongodb)
+    processdao = ProcessDao(mongodb)
+    while(True):
+        task_list = taskdao.find_by_status('running')
+        for t in task_list:
+            starttime = t['starttime']
+            endtime = t['endtime']
+            if endtime != '':
+                if compare_time(time.strftime("%Y/%m/%d %H:%M"), starttime, endtime) is False:
+                    taskid = str(t['_id'])
+                    process_list = processdao.find_by_taskid(taskid)
+                    test = processdao.find_by_taskid('')
+                    for p in process_list:
+                        if p['taskid'] == taskid and p['status']!='stopping':
+                            print("杀死进程%s" % (taskid))
+                            # p.terminate()
+                            os.kill(p['pid'], signal.SIGKILL)
+                            delete(taskid, False)
+                            t['status']='stopping'
+                            taskdao.save(t)
+                    processdao.delete_by_taskid(taskid)
+        time.sleep(60)

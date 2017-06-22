@@ -50,18 +50,3 @@ if __name__ == '__main__':
         elif op=='terminatetask':
             taskid = params.get('taskid')
             p.terminate(taskid)
-
-
-    # p = ProcessController()
-    # p.start('592ceac49c1da96d222995d9')
-    # p.sleep('592ceac49c1da96d222995d9', 10)
-    # p.processes()
-    # print('pause......')
-    # #p.pause('592ceac49c1da96d222995d9')
-    # p.processes()
-    # p.suspend('592ceac49c1da96d222995d9')
-    # p.sleep('592ceac49c1da96d222995d9', 10)
-    # p.resume('592ceac49c1da96d222995d9')
-    # print('restart...')
-    # p.restart('592ceac49c1da96d222995d9')
-    # p.processes()
