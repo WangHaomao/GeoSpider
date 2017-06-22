@@ -19,6 +19,9 @@ urlpatterns = [
     url(r'^crawlermanage/ecommercedata/$',views.ecommercedata, name='ecommercedata'),
     url(r'^crawlermanage/layout/$',views.layout, name='layout'),
     url(r'^crawlermanage/taskdetail/$',views.taskdetail, name='taskdetail'),
+    url(r'^crawlermanage/testarticles/$',views.testarticles, name='testarticles'),
+    url(r'^crawlermanage/testlist/$',views.testlist, name='testlist'),
+    url(r'^crawlermanage/extractarticle/$',views.extractarticle, name='extractarticle'),
 
 
     # url(r'^crawlermanage/$','crawlermanage.views.login'),

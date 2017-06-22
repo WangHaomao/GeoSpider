@@ -16,13 +16,13 @@ def start():
     #print conn_table.find_one({'_id': ObjectId('591eb2df9c1da9154b001832')}).get('starturls')
 
     b = deepcopy(NewsSpider)
-    b.name='bbb'
-    b.redis_key = "bbb:start_urls"
+    b.name='aaa'
+    b.redis_key = "aaa:start_urls"
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     # r.sadd("myspider:start_urls", 'http://news.qq.com/')
-    r.lpush("bbb:start_urls", "http://news.sohu.com/")
-    b.allowed_domains=["news.sohu.com"]
-    cmdline.execute("scrapy crawl bbb".split())
+    r.lpush("aaa:start_urls", "http://news.qq.com/")
+    b.allowed_domains=["news.qq.com"]
+    cmdline.execute("scrapy crawl aaa".split())
 
     # process = CrawlerProcess(get_project_settings())
     # process.crawl(news_spider)

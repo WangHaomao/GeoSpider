@@ -76,7 +76,7 @@ def get_title(html_str):
     title = soup.title.text
     title = re.sub(r'(-|_)','#', title)
     title = title.split('#')[0]
-    print(title)
+    # print(title)
     if(len(title.strip())>=8):
         return title
     return None
@@ -99,7 +99,7 @@ def get_img(html_str):
 
 #获取时间
 def get_time_by_html(html_str):
-    time_str = re.search(r'\d{4}(-|\u5E74)(0{0,1}[1-9]|1[0-2])(-|\u6708)(0{0,1}[1-9]|[1-2][0-9]|3[0-1])\u65E5{0,1}', html_str)
+    time_str = re.search(ur'\d{4}(-|\u5E74)(0{0,1}[1-9]|1[0-2])(-|\u6708)(0{0,1}[1-9]|[1-2][0-9]|3[0-1])\u65E5{0,1}', html_str)
     if time_str is not None:
         return time_str.group(0)
     return None
@@ -107,9 +107,9 @@ def get_time_by_html(html_str):
 def get_time_by_url(url):
     html = get_html(url)
     time_str = get_time_by_html(html)
-    if time_str is None:
-        html=get_html_after_selenium(url)
-        time_str=get_time_by_html(html)
+    # if time_str is None:
+    #     html=get_html_after_selenium(url)
+    #     time_str=get_time_by_html(html)
     return time_str
 
 def get_all_url(html_str):
@@ -129,28 +129,28 @@ def get_all_url(html_str):
     return href_list
 
 def is_acricle_page_by_url_and_text(href, text):
-    print("%s %s"%(href, text))
+    # print("%s %s"%(href, text))
     if href.endswith("index.html") or href.endswith("index.shtml") or href.endswith("index.htm"):
-        print("index结尾")
+        # print("index结尾")
         return False
     if len(text.strip()) < 6:
-        print("%s" %(text))
-        print("标题文本太短")
+        # print("%s" %(text))
+        # print("标题文本太短")
         return False
     return True
 
-def is_acricle_page_by_allinfo(html,title,time,keywords,content,url_num):
+def is_acricle_page_by_allinfo(html,title,keywords,content,url_num):
     if title is None:
-        print("标题太短")
+        # print("标题太短")
         return False
     if content is None or len(content.strip())<20:
-        print("正文太短")
+        # print("正文太短")
         return False
     if url_num > 300:
-        print("url太多")
+        # print("url太多")
         return False
     if has_special_words(html):
-        print("有特殊词")
+        # print("有特殊词")
         return False
     return True
 
@@ -163,6 +163,10 @@ def has_special_words(html):
         return True
     return False
     # flag2 = re.search('阅读全文', html)
-
+from urllib2 import quote
 if __name__ == "__main__":#http://news.sohu.com/s2014/nanshuibeidiao/
-    url = "http://news.163.com/16/0522/11/BNLTAO3E00014AED.html"
+    # url = quote("http://tags.blog.sina.com.cn/花千骨")
+    # url = url.replace('%3A',':')
+    # print url
+    # html = get_html(url)
+    url = 'http://blog.sina.com.cn/s/blog_4d3048200102x6nb.html'

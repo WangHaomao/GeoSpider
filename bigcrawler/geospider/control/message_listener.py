@@ -27,6 +27,7 @@ if __name__ == '__main__':
     listener = MessageListener('127.0.0.1')
     listener.subscribe('crawler')
     p = ProcessController()
+    p.scan()
     while(True):
         msg = listener.listen()
         params = Analyze(msg)
@@ -34,7 +35,12 @@ if __name__ == '__main__':
         print(op)
         if op=='starttask':
             taskid = params.get('taskid')
-            p.start(taskid)
+            status = params.get('status')
+            print(status)
+            if status=='running':
+                p.start(taskid)
+            elif status=='waitting':
+                p.wait(taskid)
         elif op=='suspendtask':
             taskid = params.get('taskid')
             p.suspend(taskid)

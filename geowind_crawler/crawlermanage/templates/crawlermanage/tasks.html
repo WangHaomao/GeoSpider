@@ -17,6 +17,55 @@
   <link rel="stylesheet" href="../../static/plugins/bootstrap3-editable/css/bootstrap-editable.css">
 </head>
 {% endblock %}
+{% block sidebar %}
+      <ul class="sidebar-menu">
+        <li class="header">主控面板</li>
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>查看任务</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li c><a href="{%url 'tasks' %}"><i class="fa fa-circle-o"></i>爬虫状态</a></li>
+            <!--<li><a href="{%url 'newsdata'%}"><i class="fa fa-circle-o"></i>数据显示</a></li>-->
+          </ul>
+        </li>
+        <li>
+          <a href="{%url 'layout'%}">
+            <i class="fa fa-tasks"></i> <span>布置任务</span>
+            <!-- <span class="pull-right-container">
+              <small class="label pull-right bg-green">new</small>
+            </span> -->
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>正文测试</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{%url 'extractarticle' %}"><i class="fa fa-circle-o"></i>批量测试</a></li>
+            <li><a href="{%url 'testarticles' %}"><i class="fa fa-circle-o"></i>测试结果</a></li>
+            <!--<li><a href="{%url 'newsdata'%}"><i class="fa fa-circle-o"></i>数据显示</a></li>-->
+          </ul>
+        </li>
+        <li>
+          <a href="pages/widgets.html">
+            <i class="fa fa-book"></i> <span>使用说明</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="pages/widgets.html">
+            <i class="fa fa-share"></i> <span>联系我们</span>
+          </a>
+        </li>
+      </ul>
+{% endblock %}
 {% block maincontent %}
 <div>
           <div class="nav-tabs-custom">
@@ -80,15 +129,19 @@
                                 <td>
                                     {% if i.status = 'running' %}
                                     <span id="span_{{i.id}}" class="label label-success" >
-                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'running')" style="color: white; text-decoration: none">正在运行</a>
+                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'running')" style="color: white; text-decoration: none">运行</a>
                                     </span>
-                                    {% elif i.status = 'waitting'  %}
+                                    {% elif i.status = 'pausing'  %}
                                      <span id="span_{{i.id}}" class="label label-warning" >
-                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'waitting')" style="color: white; text-decoration: none">等待运行</a>
+                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'pausing')" style="color: white; text-decoration: none">暂停</a>
+                                     </span>
+                                     {% elif i.status = 'waitting'  %}
+                                     <span id="span_{{i.id}}" class="label label-warning" >
+                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'waitting')" style="color: white; text-decoration: none">等待</a>
                                      </span>
                                     {% elif i.status = 'error' %}
                                     <span id="span_{{i.id}}" class="label label-danger">
-                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'error')" style="color: white; text-decoration: none">任务故障</a>
+                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'error')" style="color: white; text-decoration: none">故障</a>
                                     </span>
                                     {% endif %}
                                 </td>
@@ -160,7 +213,7 @@
                                 <td>
                                     {% if i.status = 'stopping' %}
                                     <span id="span_{{i.id}}" class="label label-danger" >
-                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">已经停止</a>
+                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">停止</a>
                                     </span>
                                     {% endif %}
                                 </td>
@@ -206,6 +259,7 @@
           <!-- /.nav-tabs-custom -->
         </div>
 {% endblock %}
+
 {% block script %}
 <script src="../../static/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
@@ -257,14 +311,14 @@
     $('#status_'+id).editable({
         type: "select",
         value: status,
-        source: [{ value: 'running', text: "正在运行" }, { value: 'waitting', text: "等待运行" }, {value:'stopping',text:"任务结束"}],
+        source: [{ value: 'running', text: "运行" }, { value: 'pausing', text: "暂停" }, {value:'stopping',text:"停止"}],
         emptytext: "空文本",       //空值的默认文本
         mode: "popup",            //编辑框的模式：支持popup和inline两种模式，默认是popup
         validate: function (value) { //字段验证
             if(value=='running'){
               $('#span_'+id).attr("class","label label-success")
 
-            }else if(value=='waitting'){
+            }else if(value=='pausing'){
               $('#span_'+id).attr("class","label label-warning")
 
             }else if(value=='stopping'){
@@ -280,8 +334,12 @@
                 taskid: id,
             }, function(data) {
                 if(data!=null) {
+                  page = "{{page}}"
+                  if(page==''){
+                    page = 1
+                  }
                   if (data['status']=='success' && data['taskstatus']=='stopping') {
-                    location.href = '/crawlermanage/tasks?page='+'{{page}}'
+                    location.href = '/crawlermanage/tasks?page='+page
                   }
                 }
             }, 'json'); 

@@ -39,37 +39,21 @@
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
-              <span class="label label-danger">10</span>
+              <span id='aaa' class="label label-danger">10</span>
             </a>
             <ul class="dropdown-menu">
+
               <li class="header">You have 10 notifications</li>
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                    </a>
-                  </li>
+                  {% for i in info %}
+                    {{i}}
+                  {% endfor %}
                   <li>
                     <a href="#">
                       <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
                       page and may cause design problems
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-red"></i> 5 new members joined
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-user text-red"></i> You changed your username
                     </a>
                   </li>
                 </ul>
@@ -130,9 +114,10 @@
     <section class="sidebar">
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
+      {% block sidebar %}
       <ul class="sidebar-menu">
         <li class="header">主控面板</li>
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>查看任务</span>
             <span class="pull-right-container">
@@ -140,7 +125,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="{%url 'tasks' %}"><i class="fa fa-circle-o"></i>爬虫状态</a></li>
+            <li><a href="{%url 'tasks' %}"><i class="fa fa-circle-o"></i>爬虫状态</a></li>
             <!--<li><a href="{%url 'newsdata'%}"><i class="fa fa-circle-o"></i>数据显示</a></li>-->
           </ul>
         </li>
@@ -151,6 +136,19 @@
               <small class="label pull-right bg-green">new</small>
             </span> -->
           </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>正文测试</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{%url 'extractarticle' %}"><i class="fa fa-circle-o"></i>批量抽取</a></li>
+            <li><a href="{%url 'testarticles' %}"><i class="fa fa-circle-o"></i>批量测试</a></li>
+            <!--<li><a href="{%url 'newsdata'%}"><i class="fa fa-circle-o"></i>数据显示</a></li>-->
+          </ul>
         </li>
         <li>
           <a href="pages/widgets.html">
@@ -164,6 +162,7 @@
           </a>
         </li>
       </ul>
+      {% endblock %}
     </section>
     <!-- /.sidebar -->
   </aside>

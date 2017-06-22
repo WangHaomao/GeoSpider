@@ -1,7 +1,9 @@
 # -*- encoding: utf-8 -*-
 import os
 import re
+import threading
 from collections import Counter
+from threading import Thread
 
 from bs4 import BeautifulSoup
 import requests
@@ -152,11 +154,18 @@ def extract(input_path, output_path):
             output_filename = os.path.join('%s/%s' % (output_path, file))
             writeFile(output_filename, acticle)
 
+def test(standard_path, result_path):
+    pass
+
+
 if __name__ == '__main__':
-    extract('/home/kui/下载/1_20170614100615_ldaon/正文抽取-源数据','/home/kui/下载/1_20170614100615_ldaon/abc')
+    # extract('/home/kui/下载/1_20170614100615_ldaon/正文抽取-源数据','/home/kui/下载/1_20170614100615_ldaon/abc')
     # html = readFile("/home/kui/下载/1_20170614100615_ldaon/正文抽取-源数据/blog_539c5bd20102vox7.html")
     # article = extract_content_by_block(html)
     # print(article)
     # print("============")
     # article2 = extract_content_by_tag(html, article)
-    # print(article2)
+    # print
+    # t = threading.Thread(target=extract, args=('/home/kui/下载/1_20170614100615_ldaon/xxx', '/home/kui/下载/1_20170614100615_ldaon/zzz'))
+    # t.start()
+    pass

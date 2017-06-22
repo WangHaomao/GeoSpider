@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+{% extends "crawlermanage/index.html" %}
+{% block head %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,190 +25,9 @@
   <link rel="stylesheet" href="../../static/plugins/timepicker/bootstrap-timepicker.min.css">
 
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
-
-  <header class="main-header">
-    <!-- Logo -->
-    <a href="index2.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>爬</b>虫</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>分布式爬虫</b>管理</span>
-    </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
-
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <li class="dropdown messages-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-bell-o"></i>
-              <span class="label label-danger">10</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                      page and may cause design problems
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-red"></i> 5 new members joined
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-user text-red"></i> You changed your username
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer"><a href="#">View all</a></li>
-            </ul>
-          </li>
-          <!-- Tasks: style can be found in dropdown.less -->
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-      <!-- /.search form -->
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu">
-        <li class="header">主控面板</li>
-        <li class="active treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>查看任务</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>爬虫状态</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i>数据显示</a></li>
-          </ul>
-        </li>
-        <!-- <li class="treeview">
-          <a href="#">
-            <i class="fa fa-files-o"></i>
-            <span>Layout Options</span>
-            <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-          </ul>
-        </li> -->
-        <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-tasks"></i> <span>布置任务</span>
-            <!-- <span class="pull-right-container">
-              <small class="label pull-right bg-green">new</small>
-            </span> -->
-          </a>
-        </li>
-        <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-book"></i> <span>使用说明</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-share"></i> <span>联系我们</span>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        仪表盘
-        <small>控制面板</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
-        <li class="active">仪表盘</li>
-      </ol>
-    </section>
-
-    <!-- Main content -->
-    <section class="content"> 
-    <div>
+{% endblock %}
+{% block maincontent %}
+<div>
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#task_control" data-toggle="tab">任务参数</a></li>
@@ -238,7 +57,7 @@
                             <td>{{task.taskname}}</td>
                             <th><label>任务类型</label></th>
                             <td>{{task.webtype}}</td>
-                            
+
                           </tr>
                           <tr>
 
@@ -248,7 +67,11 @@
                             <td>
                             <!-- <a href="#" id="end_time" class="editable editable-click editable-empty">自动停止，点击设置</a> -->
                             <!-- <a href="#" id="end_time" data-type="combodate" data-pk="1" data-url="/post" data-value="1984-05-15" data-title="Select date"></a> -->
-                            <a href="#" id="end_time" class="editable editable-click editable-empty" data-original-title="" title="">默认自动停止，点击设置</a>
+                            {% if task.endtime %}
+                              {{task.endtime}}
+                              {% else %}
+                               <a href="#" id="end_time" class="editable editable-click editable-empty" data-original-title="" title="">默认自动停止，点击设置</a>
+                              {% endif %}
                             </td>
                             <th><label>当前状态</label></th>
                             <!-- <td>
@@ -259,19 +82,19 @@
                               <td>
                                 {% if task.status = 'running' %}
                                 <span id="span_{{task.id}}" class="label label-success" >
-                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'running')" style="color: white; text-decoration: none">正在运行</a>
+                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'running')" style="color: white; text-decoration: none">运行</a>
                                 </span>
-                                {% elif task.status = 'waitting'  %}
+                                {% elif task.status = 'pausing'  %}
                                  <span id="span_{{task.id}}" class="label label-warning" >
-                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'waitting')" style="color: white; text-decoration: none">等待运行</a>
+                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'pausing')" style="color: white; text-decoration: none">暂停</a>
                                  </span>
                                 {% elif task.status = 'error' %}
                                 <span id="span_{{task.id}}" class="label label-danger">
-                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">任务故障</a>
+                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">故障</a>
                                 </span>
                                 {% elif task.status = 'stopping' %}
                                 <span id="span_{{task.id}}" class="label label-danger">
-                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">已经结束</a>
+                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">停止</a>
                                 </span>
                                 {% endif %}
                                 </td>
@@ -354,21 +177,8 @@
           </div>
           <!-- /.nav-tabs-custom -->
         </div>
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.8
-    </div>
-    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-    reserved.
-  </footer>
-
-</div>
-
-
+{% endblock %}
+{% block script %}
 <script src="../../static/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
 <script src="../../static/dist/js/app.min.js"></script>
@@ -441,8 +251,8 @@
   $(function(){
     year = new Date().getFullYear();
     $('#end_time').editable({
-        // format: 'YYYY-MM-DD',    
-        // viewformat: 'DD.MM.YYYY',    
+        // format: 'YYYY-MM-DD',
+        // viewformat: 'DD.MM.YYYY',
         // template: 'D / MMMM / YYYY',
 
 
@@ -460,32 +270,33 @@
                 minuteStep: 1
            }
       });
-      $('#status_a').editable({
+      // $('#status_a').editable({
 
-        type: "select",
-        value:1,
-        source: [{ value: 1, text: "正在运行" }, { value: 2, text: "等待运行" }, {value:3,text:"任务结束"}],
-        
-        emptytext: "空文本",       //空值的默认文本
-        mode: "popup",            //编辑框的模式：支持popup和inline两种模式，默认是popup
-        validate: function (value) { //字段验证
-            // if (!$.trim(value)) {
-                // return '不能为空';
-            if(value==1){
-              $('#status_span').attr("class","label label-success")
-              
-            }else if(value==2){
-              $('#status_span').attr("class","label label-warning")
-              
-            }else if(value==3){
-              $('#status_span').attr("class","label label-primary")
-              
-            }else{
-              return '不能为空';
-            }
-        }
+      //   type: "select",
+      //   value:1,
+      //   source: [{ value: 1, text: "正在运行" }, { value: 2, text: "等待运行" }, {value:3,text:"任务结束"}],
 
-      });
+      //   emptytext: "空文本",       //空值的默认文本
+      //   mode: "popup",            //编辑框的模式：支持popup和inline两种模式，默认是popup
+      //   validate: function (value) { //字段验证
+      //       // if (!$.trim(value)) {
+      //           // return '不能为空';
+      //       if(value==1){
+      //         $('#status_span').attr("class","label label-success")
+
+      //       }else if(value==2){
+      //         $('#status_span').attr("class","label label-warning")
+
+      //       }else if(value==3){
+      //         $('#status_span').attr("class","label label-primary")
+
+      //       }else{
+      //         return '不能为空';
+      //       }
+      //   }
+
+      // });
+      
       // $('#comments').editable({
       //   url: '/post',
       //   placement:'right',
@@ -494,6 +305,4 @@
       // });
   });
 </script>
-</script>
-</body>
-</html>
+{% endblock %}

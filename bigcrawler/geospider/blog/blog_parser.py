@@ -1,5 +1,9 @@
 # -*- encoding: utf-8 -*-
+import httplib
 import re
+import socket
+import urllib2
+
 from bs4 import BeautifulSoup
 import requests
 import sys
@@ -8,14 +12,20 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 import time
 def get_html(url):
-    # driver = webdriver.PhantomJS()
-    # driver.get(url)
-    print url
-    obj = requests.get(url)
-    code = get_codetype(obj.text)
-    if code is not None and code != '':
-       obj.encoding = code
-    return obj.text
+    try:
+        obj = requests.get(url)
+        statusCod=obj.status_code
+        if statusCod == 200:
+            code = get_codetype(obj.text)
+            if code is not None and code != '':
+                obj.encoding = code
+            return obj.text
+    except socket.timeout, e:
+        pass
+    except urllib2.URLError,ee:
+        pass
+    except httplib.BadStatusLine:
+        pass
 
 def get_html_after_selenium(url):
     browser = webdriver.PhantomJS()
@@ -80,6 +90,8 @@ def get_title(html_str):
     title = title_node.text
     title = re.sub(r'(-|_)','#', title)
     title = title.split('#')[0]
+    if len(title)< 6:
+        return None
     return title
 
 #获取关键词
@@ -133,25 +145,26 @@ def get_all_url(html_str):
 def is_acricle_page_by_url_and_text(href, text):
     # print("%s %s"%(href, text))
     if href.endswith("index.html") or href.endswith("index.shtml") or href.endswith("index.htm"):
-        print("%s  index结尾"%(href))
+        # print("%s  index结尾"%(href))
         return False
-    if len(text.strip()) <= 2:
+    if len(text.strip()) <= 6:
         # print("%s" %(text))
-        print("%s :标题文本太短"%(href))
+        # print("%s :标题文本太短"%(href))
         return False
     return True
 
 def is_acricle_page_by_allinfo(html,url,title,time,keywords,content,url_num):
-    # if title is None:
-    #     print("标题太短")
-    #     return False
-    # print("url数量：%d"%(url_num))
-    if url_num > 200:
-        print("%s  url太多"%(url))
+    if title is None:
+        # print("标题太短")
+        return False
+    if url_num > 300:
+        # print("%s  url太多"%(url))
         return False
     # if has_special_words(html):
     #     print("%s  有特殊词"%(url))
     #     return False
+    if content==None or len(content)<50:
+        return False
     return True
 
 def has_special_words(html):
@@ -160,19 +173,21 @@ def has_special_words(html):
     # flag3 = re.findall('<a.*?>.*?下一页.*?</a>', html)
     flag3 = re.findall('<iframe.*?>.*?</iframe>', html)
     if len(flag1) > 0:
-        print("阅读")
+        # print("阅读")
         return True
     if len(flag2) > 0:
-        print("查看全文")
+        # print("查看全文")
         return True
     # if len(flag3) > 0:
     #     print("下一页")
     #     return True
     if len(flag3) > 0:
-        print("iframe")
+        # print("iframe")
         return True
     return False
     # flag2 = re.search('阅读全文', html)
 
 if __name__ == "__main__":#http://news.sohu.com/s2014/nanshuibeidiao/
-    pass
+    url = "http://tags.blog.sina.com.cn/"
+    html = get_html(url)
+    print(html)
