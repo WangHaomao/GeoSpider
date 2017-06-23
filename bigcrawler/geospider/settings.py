@@ -54,18 +54,18 @@ DOWNLOADER_MIDDLEWARES = {
 #REDIS_ITEMS_SERIALIZER = 'json.dumps'
 
 # Specify the host and port to use when connecting to Redis (optional).
-REDIS_HOST = '127.0.0.1'
+REDIS_HOST = '192.168.1.114'
 REDIS_PORT = 6379
 SUBSCRIBE = 'crawler'
 
-LOCAL_HOST = '127.0.0.1'
+LOCAL_HOST = '192.168.1.114'
 
 # mongodb
 # MONGODB_HOST = '127.0.0.1'
 # MONGODB_PORT = 27017
 # MONGODB_DBNAME = 'youhuan'
 # MONGODB_DOCNAME = 'test'
-MONGO_URI = 'mongodb://localhost:27017/'
+MONGO_URI = 'mongodb://192.168.1.114:27017/'
 MONGO_DATABASE = 'news'
 MONGO_COLLECTION = 'news'
 

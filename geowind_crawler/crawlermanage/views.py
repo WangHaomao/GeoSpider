@@ -205,7 +205,7 @@ def layout(request):
             status = 'waitting'
         slave_list = []
         if slave == '':
-            slave = '127.0.0.1'
+            slave = get_attr('LOCAL_HOST')
         slave_list = slave.split(',')
         logger.info(starttime)
         task = Task.objects.create(taskname=taskname, starturls=list_url, starttime=starttime, endtime=endtime,

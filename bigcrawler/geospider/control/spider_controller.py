@@ -38,7 +38,7 @@ def init(taskid):
 
 
 def run(taskid):
-    cmdline.execute(("scrapy crawl " + taskid + " --nolog").split())
+    cmdline.execute(("scrapy crawl " + taskid).split())
 
 
 def wait(taskid):

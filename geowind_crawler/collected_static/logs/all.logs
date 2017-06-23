@@ -290,3 +290,12 @@
 2017-06-23 09:08:11,853 [Thread-63:139712171255552] [crawlermanage.views:214] [INFO]- waitting
 2017-06-23 09:52:41,820 [Thread-75:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 17:53
 2017-06-23 09:52:41,822 [Thread-75:139712171255552] [crawlermanage.views:214] [INFO]- waitting
+2017-06-23 10:07:15,496 [Dummy-1:140421990676224] [django.db.backends:89] [DEBUG]- (0.004) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-23 10:07:15,508 [Dummy-1:140421990676224] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-06-23 10:14:08,761 [Thread-7:140421724362496] [crawlermanage.views:210] [INFO]- 2017/06/23 10:14
+2017-06-23 10:23:15,605 [Thread-8:140421724362496] [crawlermanage.views:210] [INFO]- 2017/06/23 10:23
+2017-06-23 10:23:15,608 [Thread-8:140421724362496] [crawlermanage.views:214] [INFO]- running
+2017-06-23 10:24:57,270 [Thread-20:140421724362496] [crawlermanage.views:210] [INFO]- 2017/06/23 10:24
+2017-06-23 10:24:57,272 [Thread-20:140421724362496] [crawlermanage.views:214] [INFO]- running
+2017-06-23 10:25:13,014 [Thread-23:140421724362496] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
+2017-06-23 10:25:23,135 [Thread-27:140421724362496] [crawlermanage.views:95] [INFO]- [<Task: Task object>]

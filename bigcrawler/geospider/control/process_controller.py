@@ -119,7 +119,7 @@ class ProcessController(object):
 
 
 if __name__ == '__main__':
-    p = ProcessController()
+    p = ProcessController('127.0.0.1')
     p.start('5948cbf59c1da929309ad2e0')
     p.sleep('5948cbf59c1da929309ad2e0', 5)
     p.terminate('5948cbf59c1da929309ad2e0')

@@ -33,7 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-REDIS_HOST = '127.0.0.1'
+REDIS_HOST = '192.168.1.114'
 SUBSCRIBE = 'crawler'
 # Application definition
 
@@ -91,7 +91,9 @@ DATABASES = {
     }
 }
 
-MONGODB_HOST = '127.0.0.1'
+LOCAL_HOST = '192.168.1.114'
+
+MONGODB_HOST = '192.168.1.114'
 MONGODB_DBNAME = 'news'
 mongoengine.connect(MONGODB_DBNAME, host=MONGODB_HOST, username='', password='')
 # mongoengine.register_connection('default', 'news')

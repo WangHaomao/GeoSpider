@@ -12530,3 +12530,128 @@ ValueError: The view crawlermanage.views.edittask didn't return an HttpResponse 
 2017-06-23 09:54:54,007 [Thread-95:139712171255552] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
 2017-06-23 09:57:12,916 [Thread-97:139712171255552] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
 2017-06-23 09:57:17,613 [Thread-99:139712171255552] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-23 10:13:40,897 [Thread-6:140421724362496] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-23 10:14:04,255 [Thread-2:140421979588352] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 80, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.114:27017: [Errno 111] Connection refused
+2017-06-23 10:14:06,259 [Thread-3:140421741147904] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 80, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.114:27017: [Errno 111] Connection refused
+2017-06-23 10:14:07,271 [Thread-4:140421732755200] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 80, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.114:27017: [Errno 111] Connection refused
+2017-06-23 10:14:38,830 [Thread-7:140421724362496] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 212, in layout
+    webtype=webtype, describe=describe, slave=slave_list, status=status)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 294, in create
+    return self._document(**kwargs).save(force_insert=True)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 341, in save
+    object_id = self._save_create(doc, force_insert, write_concern)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 395, in _save_create
+    return collection.insert(doc, **write_concern)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 2467, in insert
+    with self._socket_for_writes() as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.114:27017: [Errno 111] Connection refused
+2017-06-23 10:23:16,243 [Thread-11:140421724362496] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-23 10:23:22,025 [Thread-13:140421724362496] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-23 10:23:24,703 [Thread-15:140421732755200] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-23 10:23:26,743 [Thread-17:140421724362496] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-23 10:24:43,839 [Thread-19:140421724362496] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-23 10:24:57,871 [Thread-22:140421724362496] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-23 10:25:13,510 [Thread-26:140421724362496] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-23 10:25:23,538 [Thread-29:140421724362496] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
