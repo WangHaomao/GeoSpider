@@ -56,6 +56,9 @@ DOWNLOADER_MIDDLEWARES = {
 # Specify the host and port to use when connecting to Redis (optional).
 REDIS_HOST = '127.0.0.1'
 REDIS_PORT = 6379
+SUBSCRIBE = 'crawler'
+
+LOCAL_HOST = '127.0.0.1'
 
 # mongodb
 # MONGODB_HOST = '127.0.0.1'

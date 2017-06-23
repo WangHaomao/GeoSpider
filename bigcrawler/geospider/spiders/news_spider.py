@@ -20,15 +20,16 @@ class NewsSpider(RedisSpider):
     #     # follow all links
     #     Rule(LinkExtractor(), callback='parse', follow=True),
     # )
-    allowed_domains = [
-        'news.sohu.com'
-    ]
+    # allowed_domains = [
+    #     'news.sohu.com'
+    # ]
 
     def __init__(self, *args, **kwargs):
         # Dynamically define the allowed domains list.
         domain = kwargs.pop('domain', '')
         print("***********************************************************8")
         #self.allowed_domains = filter(None, domain.split(','))
+        print(self.allowed_domains)
         super(NewsSpider, self).__init__(*args, **kwargs)
 
     def parse(self, response):
@@ -44,14 +45,15 @@ class NewsSpider(RedisSpider):
             item_text = ''.join(a.xpath("./text()").extract()).strip()
             domain = item_href.split('/')[2]
             # print("domain:%s" % (domain))
-            flag = 0
-            for i in self.allowed_domains:
-                if i not in domain:
-                    flag = 1
-                    break
-            if flag == 1:
-                # print("该url不在域名内")
-                continue
+            # flag = 0
+            # for i in self.allowed_domains:
+            #     if i not in domain:
+            #         flag = 1
+            #         break
+            # if flag == 1:
+            #     # print("该url不在域名内")
+            #     continue
+
             # print("'%s'," % (item_href))
             # for k, v in dict.items():
             # 5为一个阈值，当value小于5时为导航页，当value大于5时视为新闻详情页

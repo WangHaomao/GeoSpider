@@ -47,14 +47,6 @@ class BlogSpider(RedisSpider):
             item_text = ''.join(a.xpath("./text()").extract()).strip()
             domain = item_href.split('/')[2]
             #print("domain:%s"%(domain))
-            flag = 0
-            for i in self.allowed_domains:
-                if i not in domain:
-                    flag = 1
-                    break
-            if flag==1:
-                # print("该url不在域名内")
-                continue
             print("'%s'," % (item_href))
             # for k, v in dict.items():
             # 5为一个阈值，当value小于5时为导航页，当value大于5时视为新闻详情页

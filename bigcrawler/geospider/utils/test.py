@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 import redis
 
 '''
@@ -21,8 +22,8 @@ class Message(object):
     def publish(self, subscriber, message):
         self.rc.publish(subscriber, message)
 
+
 if __name__ == '__main__':
     message = Message('127.0.0.1')
     message.subscribe('crawler')
-    message.subscribe('aaa')
-    message.publish('crawler', 'op=stoptask&taskid=592ceac49c1da96d222995d9')
+    message.publish('crawler', 'op=stoptask&taskid=594be4f79c1da93dba43a3d6')

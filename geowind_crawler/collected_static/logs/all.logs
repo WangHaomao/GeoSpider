@@ -230,3 +230,63 @@
 2017-06-22 15:23:15,364 [Thread-126:140638604945152] [crawlermanage.views:194] [INFO]- waitting
 2017-06-22 15:40:39,950 [Thread-133:140638604945152] [crawlermanage.views:190] [INFO]- 2017/06/22 23:41
 2017-06-22 15:40:39,956 [Thread-133:140638604945152] [crawlermanage.views:194] [INFO]- waitting
+2017-06-23 03:05:35,301 [Dummy-1:140488413976320] [django.db.backends:89] [DEBUG]- (0.036) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-23 03:05:35,334 [Dummy-1:140488413976320] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-06-23 03:06:46,399 [Thread-10:140488402888448] [crawlermanage.views:211] [INFO]- 2017/06/23 03:06
+2017-06-23 03:06:46,402 [Thread-10:140488402888448] [crawlermanage.views:215] [INFO]- running
+2017-06-23 03:07:48,858 [Thread-25:140488134305536] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
+2017-06-23 03:17:02,460 [Thread-40:140488167876352] [crawlermanage.views:211] [INFO]- 2017/06/23 03:17
+2017-06-23 03:17:02,462 [Thread-40:140488167876352] [crawlermanage.views:215] [INFO]- running
+2017-06-23 03:18:11,691 [Thread-43:140488167876352] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
+2017-06-23 03:19:54,756 [Thread-48:140488167876352] [crawlermanage.views:211] [INFO]- 2017/06/23 03:19
+2017-06-23 03:19:54,759 [Thread-48:140488167876352] [crawlermanage.views:215] [INFO]- running
+2017-06-23 03:21:50,447 [Thread-79:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
+2017-06-23 03:30:32,049 [Thread-84:140488142698240] [crawlermanage.views:211] [INFO]- 2017/06/23 03:30
+2017-06-23 03:30:32,051 [Thread-84:140488142698240] [crawlermanage.views:215] [INFO]- running
+2017-06-23 03:32:01,036 [Thread-87:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
+2017-06-23 03:36:40,198 [Thread-96:140488142698240] [crawlermanage.views:211] [INFO]- 2017/06/23 03:36
+2017-06-23 03:36:40,200 [Thread-96:140488142698240] [crawlermanage.views:215] [INFO]- running
+2017-06-23 03:36:52,866 [Thread-99:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
+2017-06-23 03:37:27,013 [Thread-108:140488142698240] [crawlermanage.views:211] [INFO]- 2017/06/23 03:37
+2017-06-23 03:37:27,015 [Thread-108:140488142698240] [crawlermanage.views:215] [INFO]- running
+2017-06-23 03:38:31,011 [Thread-111:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
+2017-06-23 03:38:58,500 [Thread-116:140488142698240] [crawlermanage.views:211] [INFO]- 2017/06/23 03:38
+2017-06-23 03:38:58,505 [Thread-116:140488142698240] [crawlermanage.views:215] [INFO]- running
+2017-06-23 03:39:18,266 [Thread-119:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
+2017-06-23 03:39:37,801 [Thread-124:140488142698240] [crawlermanage.views:211] [INFO]- 2017/06/23 03:39
+2017-06-23 03:39:37,802 [Thread-124:140488142698240] [crawlermanage.views:215] [INFO]- running
+2017-06-23 03:48:13,288 [Thread-127:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
+2017-06-23 03:49:04,098 [Thread-132:140488142698240] [crawlermanage.views:211] [INFO]- 2017/06/23 03:49
+2017-06-23 03:49:04,100 [Thread-132:140488142698240] [crawlermanage.views:215] [INFO]- running
+2017-06-23 03:53:40,949 [Thread-135:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
+2017-06-23 03:53:45,597 [Thread-136:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
+2017-06-23 03:53:59,803 [Thread-141:140488142698240] [crawlermanage.views:232] [INFO]- 594c882e9c1da91b7096a676
+2017-06-23 03:53:59,805 [Thread-141:140488142698240] [crawlermanage.views:235] [INFO]- stopping
+2017-06-23 03:54:28,884 [Thread-146:140488159483648] [crawlermanage.views:211] [INFO]- 2017/06/23 03:54
+2017-06-23 03:54:28,886 [Thread-146:140488159483648] [crawlermanage.views:215] [INFO]- running
+2017-06-23 03:58:37,375 [Thread-149:140488159483648] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
+2017-06-23 03:58:54,809 [Thread-154:140488159483648] [crawlermanage.views:211] [INFO]- 2017/06/23 03:58
+2017-06-23 03:58:54,811 [Thread-154:140488159483648] [crawlermanage.views:215] [INFO]- running
+2017-06-23 03:59:27,826 [Thread-161:140488159483648] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
+2017-06-23 08:08:50,929 [Dummy-1:139712190736128] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-23 08:08:50,945 [Dummy-1:139712190736128] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-06-23 08:41:23,552 [Thread-6:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 08:41
+2017-06-23 08:41:23,554 [Thread-6:139712171255552] [crawlermanage.views:214] [INFO]- running
+2017-06-23 08:42:13,610 [Thread-15:139712171255552] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
+2017-06-23 08:46:10,495 [Thread-22:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 08:46
+2017-06-23 08:46:10,498 [Thread-22:139712171255552] [crawlermanage.views:214] [INFO]- running
+2017-06-23 08:46:41,814 [Thread-25:139712171255552] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
+2017-06-23 08:54:10,057 [Thread-26:139712171255552] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
+2017-06-23 08:54:26,059 [Thread-31:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 08:54
+2017-06-23 08:54:26,062 [Thread-31:139712171255552] [crawlermanage.views:214] [INFO]- running
+2017-06-23 08:54:35,428 [Thread-34:139712171255552] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
+2017-06-23 08:54:43,741 [Thread-35:139712171255552] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
+2017-06-23 08:55:41,058 [Thread-40:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 16:56
+2017-06-23 08:55:41,060 [Thread-40:139712171255552] [crawlermanage.views:214] [INFO]- waitting
+2017-06-23 09:02:56,389 [Thread-47:139712171255552] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
+2017-06-23 09:03:38,652 [Thread-52:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 17:04
+2017-06-23 09:03:38,654 [Thread-52:139712171255552] [crawlermanage.views:214] [INFO]- waitting
+2017-06-23 09:08:11,851 [Thread-63:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 17:09
+2017-06-23 09:08:11,853 [Thread-63:139712171255552] [crawlermanage.views:214] [INFO]- waitting
+2017-06-23 09:52:41,820 [Thread-75:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 17:53
+2017-06-23 09:52:41,822 [Thread-75:139712171255552] [crawlermanage.views:214] [INFO]- waitting

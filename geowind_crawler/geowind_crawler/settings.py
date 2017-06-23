@@ -10,7 +10,6 @@ https://docs.djangoproject.com/en/1.8/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import logging
@@ -18,6 +17,7 @@ import django.utils.log
 import logging.handlers
 
 import mongoengine
+from mongoengine import *
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -33,7 +33,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+REDIS_HOST = '127.0.0.1'
+SUBSCRIBE = 'crawler'
 # Application definition
 
 INSTALLED_APPS = (
@@ -90,18 +91,10 @@ DATABASES = {
     }
 }
 
-# MONGODB_DATABASES = {
-#     "default": {
-#         "name": 'p',
-#         "host": '127.0.0.1',
-#         #"password": database_password,
-#         #"username": database_user,
-#         "tz_aware": True, # if you using timezones in django (USE_TZ = True)
-#     },
-# }
-# mongoengine.connect(MONGODB_DATABASES)
-
-mongoengine.register_connection('default', 'news')
+MONGODB_HOST = '127.0.0.1'
+MONGODB_DBNAME = 'news'
+mongoengine.connect(MONGODB_DBNAME, host=MONGODB_HOST, username='', password='')
+# mongoengine.register_connection('default', 'news')
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/

@@ -46,7 +46,7 @@ def is_articel_content_page_blog_and_news(url):
     JUDGE_NUMBER_THRESHOLD 串中数字的个数
     JUDGE_NUMBER_PLUS_CHAR_THRESHOLD 串中数字加大写字符的个数
     """
-    HTM_NUMBER = 15
+    HTM_NUMBER = 20
     JUDGE_NUMBER_THRESHOLD = 8
     JUDGE_NUMBER_PLUS_CHAR_THRESHOLD = 12
     # url_len = len(url)
@@ -90,5 +90,5 @@ if __name__ == '__main__':
     # for url in urls:
     #     if(is_articel_content_page(url)):
     #         print url
-    a = is_articel_content_page_blog_and_news('http://tags.blog.sina.com.cn/印度')
+    a = is_articel_content_page_blog_and_news('http://blog.csdn.net/abcjennifer/article/details/42493493')
     print(a)

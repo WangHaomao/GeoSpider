@@ -1,39 +1,42 @@
 # -*- encoding: utf-8 -*-
 import json
 import logging
-import threading
 import time
 
 from django import forms
-from django.contrib.messages.storage import session
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 
-from crawlermanage.message import Message
 from crawlermanage.models import Task, News
 from crawlermanage.utils.acticle_parser import extract
+from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
-from crawlermanage.utils.thread import ExtractArticle
+from crawlermanage.utils.settings_helper import get_attr
 
 logger = logging.getLogger('crawlermanage.views')
-#mongoengine.register_connection('default', 'p')
+# mongoengine.register_connection('default', 'p')
 
 # Create your views here.
+redis_host = get_attr('REDIS_HOST')
+sub = get_attr('SUBSCRIBE')
+messager = Message(redis_host)
+messager.subscribe(sub)
 
-messager = Message('127.0.0.1')
-messager.subscribe('crawler')
 
 class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField()
 
+
 '''
     登录
 '''
+
+
 def login(request):
     if request.method == 'POST':
         uf = LoginForm(request.POST)
-        if uf.is_valid():  
+        if uf.is_valid():
             username = uf.cleaned_data['username']
             password = uf.cleaned_data['password']
             # user = User.objects.filter(username__exact = username,password__exact = password)  
@@ -43,8 +46,8 @@ def login(request):
             # else:  
             #     err = 'incorrect username or pwd,please input again.'  
             #     return render_to_response('login.html',{'err':err})  
-            if username=='admin' and password=='a':
-                #request.session['username'] = username
+            if username == 'admin' and password == 'a':
+                # request.session['username'] = username
                 return HttpResponseRedirect('/crawlermanage/index')
             else:
                 return render_to_response('crawlermanage/login.html', {'error': '用户名或密码错误'})
@@ -52,58 +55,67 @@ def login(request):
     else:
         return render_to_response('crawlermanage/login.html')
 
+
 def index(request):
     return render(request, 'crawlermanage/index.html')
+
 
 '''
     爬虫任务列表
     p:正在进行、等待运行、出现故障的任务
     p2:结束的任务
 '''
+
+
 def tasks(request):
     page = request.GET.get('page')
     page2 = request.GET.get('page2')
     if page == None:
         page = 1
     if page2 == None:
-    	page2 = 1
+        page2 = 1
 
     list = Task.objects.filter(status__in=['running', 'waitting', 'error', 'pausing'])
     list2 = Task.objects.filter(status='stopping')
-    p = paging(list,page,10)
-    p2 = paging(list2,page2,10)
-    return render(request, 'crawlermanage/tasks.html', {'p':p, 'p2':p2})
+    p = paging(list, page, 10)
+    p2 = paging(list2, page2, 10)
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+
 
 '''
     编辑爬虫状态：暂停/唤醒/结束
 '''
+
+
 def edittask(request):
     if request.method == 'POST':
         op = request.POST.get('op')
         taskid = request.POST.get('taskid')
         task = Task.objects.filter(id=taskid)
         logger.info(task)
-        if op=='running':
+        if op == 'running':
             task.update(status='running')
             msg = 'op=resumetask&taskid=' + taskid
             messager.publish('crawler', msg)
             ret = {'status': 'success', 'taskstatus': 'running'}
             return HttpResponse(json.dumps(ret))
-        elif op=='pausing':
+        elif op == 'pausing':
             task.update(status='pausing')
             msg = 'op=suspendtask&taskid=' + taskid
             messager.publish('crawler', msg)
             ret = {'status': 'success', 'taskstatus': 'pausing'}
             return HttpResponse(json.dumps(ret))
-        elif op=='stopping':
+        elif op == 'stopping':
             task.update(status='stopping')
             msg = 'op=terminatetask&taskid=' + taskid
             messager.publish('crawler', msg)
             ret = {'status': 'success', 'taskstatus': 'stopping'}
             return HttpResponse(json.dumps(ret))
 
+
 def ecommercedata(request):
     return render(request, 'crawlermanage/ecommercedata.html')
+
 
 # def newsdata(request):
 #     # newslist = News.objects.all()
@@ -128,6 +140,8 @@ def ecommercedata(request):
 '''
     新闻列表
 '''
+
+
 def newsdata(request):
     taskid = request.GET.get('taskid')
     list = []
@@ -136,24 +150,30 @@ def newsdata(request):
     page = request.GET.get('page')
     if page == None:
         page = 1
-    p = paging(list,page,10)
-    return render(request,'crawlermanage/newsdata.html',locals())
+    p = paging(list, page, 10)
+    return render(request, 'crawlermanage/newsdata.html', locals())
+
 
 '''
     新闻详细内容
 '''
+
+
 def newsdetail(request):
     id = request.GET.get('id')
-    if id==None:
+    if id == None:
         return
     news = News.objects.get(id=id)
     if news == None:
         return
-    return render(request, 'crawlermanage/newsdetail.html', {'news':news})
+    return render(request, 'crawlermanage/newsdetail.html', {'news': news})
+
 
 '''
     布置爬虫任务
 '''
+
+
 def layout(request):
     # taskname:taskname,
     # starturls:starturls,
@@ -168,9 +188,9 @@ def layout(request):
         webtype = request.POST.get('webtype', '')
         reservationtime = request.POST.get('reservationtime', '')
         slave = request.POST.get('slave', '')
-        #logger.info(taskname+" "+starturls+" "+describe+" "+webtype+" "+reservationtime+" "+slave)
+        # logger.info(taskname+" "+starturls+" "+describe+" "+webtype+" "+reservationtime+" "+slave)
         list_url = starturls.split(',')
-        #status = ''
+        # status = ''
         starttime = ''
         endtime = ''
         if reservationtime == '':
@@ -192,7 +212,7 @@ def layout(request):
                                    webtype=webtype, describe=describe, slave=slave_list, status=status)
         taskid = str(task['id'])
         logger.info(status)
-        msg = 'op=starttask&taskid='+taskid+"&status="+status
+        msg = 'op=starttask&taskid=' + taskid + "&status=" + status
         messager.publish('crawler', msg)
         # logger.info(taskid)
         ret = {'status': 'success'}
@@ -200,20 +220,26 @@ def layout(request):
     else:
         return render_to_response('crawlermanage/layout.html')
 
+
 '''
     爬虫任务详情
 '''
+
+
 def taskdetail(request):
     taskid = request.GET.get('taskid')
     logger.info(taskid)
 
     task = Task.objects.get(id=taskid)
     logger.info(task.status)
-    return render_to_response('crawlermanage/taskdetail.html', {'task':task})
+    return render_to_response('crawlermanage/taskdetail.html', {'task': task})
+
 
 '''
     测试正文
 '''
+
+
 def extractarticle(request):
     if request.method == 'POST':
         original_folder = request.POST.get('original_folder', '')
@@ -223,7 +249,6 @@ def extractarticle(request):
         return HttpResponse(json.dumps(ret))
     else:
         return render_to_response('crawlermanage/extract_article.html')
-
 
 
 def testarticles(request):
@@ -236,9 +261,11 @@ def testarticles(request):
     else:
         return render_to_response('crawlermanage/test_articles.html')
 
+
 '''
     测试结果
 '''
+
+
 def testlist(request):
-    logger.info(request.session.get('info', 'ddddddd'))
     return render_to_response('crawlermanage/test_list.html')
