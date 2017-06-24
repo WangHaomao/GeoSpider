@@ -51,6 +51,11 @@
             </span> -->
           </a>
         </li>
+        <li>
+          <a href="{% url 'processlist' %}">
+            <i class="fa fa-book"></i> <span>进程管理</span>
+          </a>
+        </li>
         <li class="active treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>正文测试</span>
@@ -137,6 +142,10 @@ function done_event(){
 
     var goal_folder = $('#goal_folder').val();
     var original_folder = $('#original_folder').val();
+    if(goal_folder =='' || original_folder=='') {
+      alert('输入不能为空');
+      return;
+    }
     $('#test_loading').css('display','');
     $.post('/crawlermanage/extractarticle/', {original_folder:original_folder, goal_folder:goal_folder}, function(data) {
         // $('#test_pre').css('display','none');

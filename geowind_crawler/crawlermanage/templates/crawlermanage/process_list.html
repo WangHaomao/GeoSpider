@@ -75,7 +75,7 @@
 <div>
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#current_tasks" data-toggle="tab">当前任务</a></li>
+              <li class="active"><a href="#current_tasks" data-toggle="tab">当前进程</a></li>
               <li><a href="#history_tasks" data-toggle="tab">历史任务</a></li>
             </ul>
             <div class="tab-content">
@@ -83,75 +83,47 @@
               	<div class="row">
 			            <div class="col-xs-12">
 			              <div class="box">
-			                <div class="box-header">
-			                  <h3 class="box-title">Responsive Hover Table</h3>
-			                </div>
+			                <!-- <div class="box-header">
+			                  <h3 class="box-title">当前进程</h3>
+			                </div> -->
 			                <!-- /.box-header -->
 			                <div class="box-body table-responsive no-padding">
-			                <!-- 客户端分页 -->
-			                <!-- <table class="table table-hover">
-			                <tr>
-			                  <th>ID</th>
-			                  <th>启动时间</th>
-			                  <th>任务名</th>
-			                  <th>网站类型</th>
-			                  <th>描述</th>
-			                  <th>操作</th>
-			                </tr>
-        							{% for task in tasklist %}
-        							  <tr>
-        			                  <td>{{task.id}}</td>
-        			                  <td>{{task.starttime}}</td>
-        			                  <td>{{task.taskname}}</td>
-        			                  <td><span class="label label-success">正在运行</span></td>
-        			                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-        							  <td><a href="{%url 'newsdata'%}">结果</a><span>-</span><a href="{%url 'taskdetail'%}">管理</a></td>
-        			                </tr>
-        							{% endfor %}
-			                
-  			              </table> -->
-  			              <!-- 客户端分页结束 -->
-  			              <!-- 服务器分页开始 -->
 			                <table class="table">
                             <thead>
                               <tr>
                                 <th>ID</th>
-        				                <th>启动时间</th>
-        				                <th>任务名</th>
-        				                <th>网站类型</th>
+        				                <th>主机</th>
+        				                <th>PID</th>
+        				                <th>任务ID</th>
                                 <th>爬虫状态</th>
         				                <!--<th>描述</th>-->
-        				                <th>操作</th>
+        				                <!-- <th>操作</th> -->
                               </tr>
                             </thead>
                             <tbody>
                               {% for i in p.p_content %}
                               <tr>
                                 <td>{{i.id}}</td>
-                                <td>{{i.starttime}}</td></a></td>
-                                <td>{{i.taskname}}</td>
-                                <td>{{i.webtype}}</td>
+                                <td>{{i.localhost}}</td>
+                                <td>{{i.pid}}</td>
+                                <td>{{i.taskid}}</td>
                                 <td>
                                     {% if i.status = 'running' %}
                                     <span id="span_{{i.id}}" class="label label-success" >
-                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'running')" style="color: white; text-decoration: none">运行</a>
+                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">执行（运行爬虫）</a>
                                     </span>
                                     {% elif i.status = 'pausing'  %}
                                      <span id="span_{{i.id}}" class="label label-warning" >
-                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'pausing')" style="color: white; text-decoration: none">暂停</a>
+                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">挂起（暂停爬虫）</a>
                                      </span>
                                      {% elif i.status = 'waitting'  %}
                                      <span id="span_{{i.id}}" class="label label-warning" >
-                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'waitting')" style="color: white; text-decoration: none">等待</a>
+                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">执行（监控任务）</a>
                                      </span>
-                                    {% elif i.status = 'error' %}
-                                    <span id="span_{{i.id}}" class="label label-danger">
-                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'error')" style="color: white; text-decoration: none">故障</a>
-                                    </span>
                                     {% endif %}
                                 </td>
                                 <!--<td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>-->
-                                <td><a href="{%url 'newsdata'%}?taskid={{i.id}}">结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">管理</a></td>
+                                <!-- <td><a href="{%url 'newsdata'%}?taskid={{i.id}}">结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">管理</a></td> -->
                               </tr>
                               {% endfor %}
                             </tbody>
@@ -195,60 +167,7 @@
                       </div>
                       <!-- /.box-header -->
                       <div class="box-body table-responsive no-padding">
-                      <!-- 服务器分页开始 -->
-                      <table class="table">
-                            <thead>
-                              <tr>
-                                <th>ID</th>
-                                <th>启动时间</th>
-                                <th>任务名</th>
-                                <th>网站类型</th>
-                                <th>爬虫状态</th>
-                                <!--<th>描述</th>-->
-                                <th>操作</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {% for i in p2.p_content %}
-                              <tr>
-                                <td>{{i.id}}</td>
-                                <td>{{i.starttime}}</td>
-                                <td>{{i.taskname}}</td>
-                                <td>{{i.webtype}}</td>
-                                <td>
-                                    {% if i.status = 'stopping' %}
-                                    <span id="span_{{i.id}}" class="label label-danger" >
-                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">停止</a>
-                                    </span>
-                                    {% endif %}
-                                </td>
-                                <!--<td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>-->
-                                <td><a href="{%url 'newsdata'%}?taskid={{i.id}}">结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">管理</a></td>
-                              </tr>
-                              {% endfor %}
-                            </tbody>
-                      </table>
-                      <div>
-                        <div id="pagination_div1">
-                            <ul class="pagination" >
-                            共 <span  class="badge">{{p2.p_count}}</span> 条记录，总 <span  class="badge">{{p2.p_pages}}</span> 页，当前在<span class="badge">{{p2.page}}</span>页
-                            </ul>
-                        </div>
-                        <div id="pagination_div2">
-                            <nav>
-                                <ul class="pagination" >
-                                    <li><a href="{%url 'tasks' %}?page2={{p2.p_previous}}">&laquo;</a></li>
-                                    <li> <a href="{%url 'tasks' %}?page2=1">首页</a></li>
-                                        {% for i in p2.p_range %}
-                                            <li  {% ifequal p2.p_id i %} class="active" {% endifequal %}><a href="{%url 'tasks' %}?page2={{i}}">{{i}}</a></li>
-                                        {% endfor %}
-                                    <li> <a href="{%url 'tasks' %}?page2={{p2.p_pages}}">尾页</a></li>
-                                    <li><a href="{%url 'tasks' %}?page2={{p2.p_next}}">&raquo;</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                      </div>
-                      <!-- 服务器分页结束 -->
+                      
                       </div>
                       <!-- /.box-body -->
                     </div>

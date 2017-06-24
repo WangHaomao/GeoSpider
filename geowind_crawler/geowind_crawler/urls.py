@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^crawlermanage/testarticles/$',views.testarticles, name='testarticles'),
     url(r'^crawlermanage/testlist/$',views.testlist, name='testlist'),
     url(r'^crawlermanage/extractarticle/$',views.extractarticle, name='extractarticle'),
+    url(r'^crawlermanage/processlist/$',views.processlist, name='processlist'),
 
 
     # url(r'^crawlermanage/$','crawlermanage.views.login'),

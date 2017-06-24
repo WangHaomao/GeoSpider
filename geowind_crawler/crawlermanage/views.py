@@ -7,8 +7,8 @@ from django import forms
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 
-from crawlermanage.models import Task, News
-from crawlermanage.utils.acticle_parser import extract
+from crawlermanage.models import Task, News, Process
+from crawlermanage.utils.acticle_parser import extract, test
 from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
 from crawlermanage.utils.settings_helper import get_attr
@@ -212,7 +212,7 @@ def layout(request):
                                    webtype=webtype, describe=describe, slave=slave_list, status=status)
         taskid = str(task['id'])
         logger.info(status)
-        msg = 'op=starttask&taskid=' + taskid #+ "&status=" + status
+        msg = 'op=starttask&taskid=' + taskid  # + "&status=" + status
         messager.publish('crawler', msg)
         # logger.info(taskid)
         ret = {'status': 'success'}
@@ -251,12 +251,18 @@ def extractarticle(request):
         return render_to_response('crawlermanage/extract_article.html')
 
 
+'''多文件测试'''
+
+
 def testarticles(request):
     if request.method == 'POST':
         original_folder = request.POST.get('original_folder', '')
         goal_folder = request.POST.get('goal_folder', '')
-        # test(original_folder, goal_folder)
-        ret = {'isFinished': 'yes'}
+        try:
+            log, score = test(original_folder, goal_folder)
+            ret = {'log': log, 'score': score}
+        except:
+            ret = {'error': 'error'}
         return HttpResponse(json.dumps(ret))
     else:
         return render_to_response('crawlermanage/test_articles.html')
@@ -269,3 +275,12 @@ def testarticles(request):
 
 def testlist(request):
     return render_to_response('crawlermanage/test_list.html')
+
+
+def processlist(request):
+    page = request.GET.get('page')
+    if page == None:
+        page = 1
+    list = Process.objects.filter(status__in=['running', 'waitting', 'pausing'])
+    p = paging(list, page, 10)
+    return render(request, 'crawlermanage/process_list.html', {'p': p})

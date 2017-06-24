@@ -51,6 +51,11 @@
             </span> -->
           </a>
         </li>
+        <li>
+          <a href="{% url 'processlist' %}">
+            <i class="fa fa-book"></i> <span>进程管理</span>
+          </a>
+        </li>
         <li class="active treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>正文测试</span>
@@ -96,7 +101,7 @@
         </div>
 
     </div>
-
+    <span id="finished" style="color: red;display: none">路径输入有误</span>
     <!-- <div id="test_loading" class="row col-center-block" style="display:none;">
 
           <i class="fa fa-spinner fa-pulse fa-3x fa-fw  col-center-block"></i>
@@ -106,18 +111,18 @@
     <div id="test_res">
         <div class="form-group">
           <label>测试日志</label>
-          <textarea class="form-control" rows="10"  disabled=""></textarea>
+          <textarea id="log" class="form-control" rows="10"  disabled=""></textarea>
         </div>
         <div class="form-group">
           <label>准确率</label>
-          <input type="text" class="form-control" value="100%" disabled="">
+          <input id="score" type="text" class="form-control" disabled="">
         </div>
     </div>
   </div>
 
 
   <div class="box-footer">
-    <button type="button" class="btn btn-primary pull-right" id="test_done" onclick="done_event()">抽取</button>
+    <button type="button" class="btn btn-primary pull-right" id="test_done" onclick="done_event()">测试</button>
   </div>
     <div id="test_loading" class="overlay" style="display:none;">
         <i class="fa fa-refresh fa-spin"></i>
@@ -143,18 +148,22 @@ function done_event(){
 
     var goal_folder = $('#goal_folder').val();
     var original_folder = $('#original_folder').val();
+    if(goal_folder =='' || original_folder=='') {
+      alert('输入不能为空');
+      return;
+    }
     $('#test_loading').css('display','');
-    $.post('/crawlermanage/extractarticle/', {original_folder:original_folder, goal_folder:goal_folder}, function(data) {
+    $.post('/crawlermanage/testarticles/', {original_folder:original_folder, goal_folder:goal_folder}, function(data) {
         // $('#test_pre').css('display','none');
         if(data!=null) {
-          if(data['isFinished']=='yes') {
-            //一段时间后
-            // $('#test_pre').css('display','');
-            // $('#test_res').css('display','');
-            $('#test_loading').css('display','none');
+          if(data['error']=='error'){
             $("#finished").css('display','');
+          } else {
+            $("#finished").css('display','none');
+            $('#log').text(data['log'])
+            $('#score').val(data['score'])
           }
-
+          $('#test_loading').css('display','none');
         }
     }, 'json');
     //一段时间后

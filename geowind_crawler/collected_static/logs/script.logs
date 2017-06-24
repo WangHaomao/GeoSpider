@@ -12712,3 +12712,118 @@ ServerSelectionTimeoutError: 192.168.1.114:27017: [Errno 111] Connection refused
 2017-06-24 05:37:42,394 [Thread-40:140553298380544] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
 2017-06-24 05:40:40,240 [Thread-43:140553298380544] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
 2017-06-24 05:40:53,827 [Thread-46:140553298380544] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-24 07:53:01,776 [Thread-3:139700905883392] [django.request:170] [WARNING]- Not Found: /favicon.ico
+2017-06-24 07:53:03,140 [Thread-7:139700889097984] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-24 07:53:10,281 [Thread-9:139700889097984] [django.request:170] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-24 07:53:23,975 [Thread-11:139700889097984] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 12:47:18,400 [Thread-4:140159125206784] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-24 12:47:22,836 [Thread-6:140159108421376] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 12:49:18,941 [Thread-14:140159141992192] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 12:49:24,297 [Thread-15:140159141992192] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/testarticles/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 258, in testarticles
+    log, score = test(original_folder, goal_folder)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/acticle_parser.py", line 182, in test
+    return arr[0], arr[1]
+IndexError: list index out of range
+2017-06-24 12:50:22,184 [Thread-17:140159141992192] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 12:51:29,650 [Thread-2:140362215585536] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/testarticles/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 259, in testarticles
+    log, score = test(original_folder, goal_folder)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/acticle_parser.py", line 182, in test
+    return arr[0], arr[1]
+IndexError: list index out of range
+2017-06-24 12:51:48,894 [Thread-4:140362215585536] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:02:40,707 [Thread-3:139955116431104] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:06:57,466 [Thread-3:139940092438272] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:07:30,631 [Thread-9:139940067260160] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:11:32,303 [Thread-22:139940100830976] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:12:00,375 [Thread-27:139940075652864] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:12:04,727 [Thread-30:139940084045568] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:12:20,766 [Thread-33:139940084045568] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:12:41,118 [Thread-36:139940084045568] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:13:42,758 [Thread-40:139940084045568] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:14:01,011 [Thread-42:139940084045568] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:14:12,370 [Thread-44:139940084045568] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:14:19,033 [Thread-46:139940084045568] [django.request:170] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-24 13:14:20,366 [Thread-47:139940084045568] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/extractarticle/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 247, in extractarticle
+    extract(original_folder, goal_folder)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/acticle_parser.py", line 166, in extract
+    root_dir = os.listdir(input_path)
+OSError: [Errno 2] No such file or directory: ''
+2017-06-24 13:14:23,462 [Thread-49:139940084045568] [django.request:170] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-24 13:27:16,386 [Thread-52:139940084045568] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-24 13:27:42,115 [Thread-55:139940084045568] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-24 13:27:45,480 [Thread-57:139940084045568] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-24 14:03:19,070 [Thread-3:140512988649216] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-24 14:05:42,037 [Thread-5:140512988649216] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-24 14:05:44,001 [Thread-6:140512988649216] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 286, in processlist
+    return render_to_response('crawlermanage/process_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: crawlermanage/process_list.html
+2017-06-24 14:06:55,842 [Thread-2:139959721608960] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 286, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: crawlermanage/process_list.html
+2017-06-24 14:07:00,801 [Thread-4:139959486322432] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-24 14:07:02,842 [Thread-5:139959486322432] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 286, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: crawlermanage/process_list.html
+2017-06-24 14:08:08,050 [Thread-3:140028407703296] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-24 14:08:09,172 [Thread-4:140028407703296] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 286, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: crawlermanage/process_list.html
+2017-06-24 14:09:31,655 [Thread-6:140028416096000] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-24 14:09:32,574 [Thread-8:140028416096000] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-24 14:10:27,426 [Thread-10:140028407703296] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-24 14:10:53,359 [Thread-12:140028416096000] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-24 14:11:05,063 [Thread-14:140028407703296] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-24 14:11:17,724 [Thread-16:140028416096000] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-24 14:11:31,045 [Thread-18:140028407703296] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg

@@ -1,346 +1,3198 @@
-2017-06-21 03:17:13,913 [Dummy-1:140308786820864] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 03:17:13,921 [Dummy-1:140308786820864] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 03:18:01,690 [Thread-4:140308775732992] [crawlermanage.views:232] [INFO]- ['asdfg123']
-2017-06-21 03:18:28,128 [Dummy-1:140709976774400] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 03:18:28,141 [Dummy-1:140709976774400] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 03:18:39,850 [Thread-4:140709965686528] [crawlermanage.views:232] [INFO]- ['asdfg123']
-2017-06-21 03:18:47,172 [Thread-5:140709965686528] [crawlermanage.views:247] [INFO]- 
-2017-06-21 03:20:49,427 [Dummy-1:140285650794240] [django.db.backends:89] [DEBUG]- (0.004) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 03:20:49,438 [Dummy-1:140285650794240] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 03:21:43,633 [Thread-4:140285639706368] [crawlermanage.views:232] [INFO]- ['asdfg123']
-2017-06-21 03:21:51,494 [Thread-5:140285639706368] [crawlermanage.views:247] [INFO]- 
-2017-06-21 03:24:58,294 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 03:24:58,296 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 03:24:58,297 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 03:24:58,298 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
-2017-06-21 03:24:58,337 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
-2017-06-21 03:24:58,427 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
-2017-06-21 03:24:58,487 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s)' - PARAMS = (u'logentry', u'admin'); args=('logentry', 'admin')
-2017-06-21 03:24:58,490 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (8,); args=(8,)
-2017-06-21 03:24:58,491 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s' - PARAMS = (u'admin',); args=('admin',)
-2017-06-21 03:24:58,492 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s)' - PARAMS = (u'permission', u'auth'); args=('permission', 'auth')
-2017-06-21 03:24:58,494 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s)' - PARAMS = (u'group', u'auth'); args=('group', 'auth')
-2017-06-21 03:24:58,495 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s)' - PARAMS = (u'user', u'auth'); args=('user', 'auth')
-2017-06-21 03:24:58,498 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s, %s, %s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (9, 10, 11); args=(9, 10, 11)
-2017-06-21 03:24:58,499 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s' - PARAMS = (u'auth',); args=('auth',)
-2017-06-21 03:24:58,500 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s)' - PARAMS = (u'contenttype', u'contenttypes'); args=('contenttype', 'contenttypes')
-2017-06-21 03:24:58,503 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (12,); args=(12,)
-2017-06-21 03:24:58,504 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s' - PARAMS = (u'contenttypes',); args=('contenttypes',)
-2017-06-21 03:24:58,506 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s)' - PARAMS = (u'session', u'sessions'); args=('session', 'sessions')
-2017-06-21 03:24:58,508 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (13,); args=(13,)
-2017-06-21 03:24:58,509 [MainThread:140106385860352] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s' - PARAMS = (u'sessions',); args=('sessions',)
-2017-06-21 03:25:11,018 [Dummy-1:140601203750656] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 03:25:11,035 [Dummy-1:140601203750656] [django.db.backends:89] [DEBUG]- (0.004) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 03:26:41,723 [Thread-4:140601123141376] [crawlermanage.views:232] [INFO]- ['asdfg123']
-2017-06-21 03:27:39,669 [Thread-5:140601123141376] [crawlermanage.views:247] [INFO]- 
-2017-06-21 03:29:07,875 [Dummy-1:140193585383168] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 03:29:07,896 [Dummy-1:140193585383168] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 03:34:13,044 [Dummy-1:139880698119936] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 03:34:13,064 [Dummy-1:139880698119936] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 03:34:35,426 [Thread-4:139880687032064] [crawlermanage.views:232] [INFO]- ['asdfg123']
-2017-06-21 03:37:12,332 [Dummy-1:140627820672768] [django.db.backends:89] [DEBUG]- (0.002) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 03:37:12,362 [Dummy-1:140627820672768] [django.db.backends:89] [DEBUG]- (0.002) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 03:37:35,081 [Thread-4:140627809584896] [crawlermanage.views:232] [INFO]- ['asdfg123']
-2017-06-21 03:38:06,267 [Dummy-1:140186650748672] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 03:38:06,289 [Dummy-1:140186650748672] [django.db.backends:89] [DEBUG]- (0.003) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 03:38:18,248 [Thread-4:140186639660800] [crawlermanage.views:232] [INFO]- ['asdfg123']
-2017-06-21 03:38:18,792 [Thread-5:140186606688000] [crawlermanage.util.thread:23] [INFO]- ['asdfg123', 'aaaaaaaaa']
-2017-06-21 03:38:36,287 [Thread-6:140186606688000] [crawlermanage.views:247] [INFO]- 
-2017-06-21 03:41:44,252 [Dummy-1:140624586655488] [django.db.backends:89] [DEBUG]- (0.012) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 03:41:44,260 [Dummy-1:140624586655488] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 03:49:16,437 [Thread-4:140624575567616] [crawlermanage.views:232] [INFO]- ['asdfg123']
-2017-06-21 03:49:16,486 [Thread-4:140624575567616] [django.db.backends:89] [DEBUG]- (0.046) QUERY = u'SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = %s LIMIT 1' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5',); args=(u'z5swbkesjmifzt1gld2w08u5px1iaci5',)
-2017-06-21 03:49:16,488 [Thread-4:140624575567616] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
-2017-06-21 03:49:16,491 [Thread-4:140624575567616] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'UPDATE "django_session" SET "session_data" = %s, "expire_date" = %s WHERE "django_session"."session_key" = %s' - PARAMS = (u'YjIzZTlhOGMxOGE0MmVmODhmYTRhZGNkYmVjZmQ2MTQ1YjA2YjJjYjp7ImluZm8iOlsiYXNkZmcxMjMiXX0=', u'2017-07-05 03:49:16.488075', u'z5swbkesjmifzt1gld2w08u5px1iaci5'); args=(u'YjIzZTlhOGMxOGE0MmVmODhmYTRhZGNkYmVjZmQ2MTQ1YjA2YjJjYjp7ImluZm8iOlsiYXNkZmcxMjMiXX0=', u'2017-07-05 03:49:16.488075', u'z5swbkesjmifzt1gld2w08u5px1iaci5')
-2017-06-21 03:49:16,493 [Thread-4:140624575567616] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT %s AS "session_key", %s AS "session_data", %s AS "expire_date"' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'YjIzZTlhOGMxOGE0MmVmODhmYTRhZGNkYmVjZmQ2MTQ1YjA2YjJjYjp7ImluZm8iOlsiYXNkZmcxMjMiXX0=', u'2017-07-05 03:49:16.488075'); args=(u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'YjIzZTlhOGMxOGE0MmVmODhmYTRhZGNkYmVjZmQ2MTQ1YjA2YjJjYjp7ImluZm8iOlsiYXNkZmcxMjMiXX0=', u'2017-07-05 03:49:16.488075')
-2017-06-21 03:49:16,586 [Thread-4:140624575567616] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
-2017-06-21 03:49:16,588 [Thread-4:140624575567616] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'UPDATE "django_session" SET "session_data" = %s, "expire_date" = %s WHERE "django_session"."session_key" = %s' - PARAMS = (u'YjIzZTlhOGMxOGE0MmVmODhmYTRhZGNkYmVjZmQ2MTQ1YjA2YjJjYjp7ImluZm8iOlsiYXNkZmcxMjMiXX0=', u'2017-07-05 03:49:16.586253', u'z5swbkesjmifzt1gld2w08u5px1iaci5'); args=(u'YjIzZTlhOGMxOGE0MmVmODhmYTRhZGNkYmVjZmQ2MTQ1YjA2YjJjYjp7ImluZm8iOlsiYXNkZmcxMjMiXX0=', u'2017-07-05 03:49:16.586253', u'z5swbkesjmifzt1gld2w08u5px1iaci5')
-2017-06-21 03:49:17,059 [Thread-5:140624474883840] [crawlermanage.util.thread:23] [INFO]- ['asdfg123', 'aaaaaaaaa']
-2017-06-21 03:50:48,319 [Thread-6:140624474883840] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:50:48.317172'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:50:48.317172')
-2017-06-21 03:50:48,320 [Thread-6:140624474883840] [crawlermanage.views:248] [INFO]- [u'asdfg123']
-2017-06-21 03:51:48,376 [Thread-8:140624474883840] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:51:48.374923'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:51:48.374923')
-2017-06-21 03:51:48,377 [Thread-8:140624474883840] [crawlermanage.views:248] [INFO]- [u'asdfg123']
-2017-06-21 03:51:58,149 [Thread-12:140624474883840] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:51:58.147693'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:51:58.147693')
-2017-06-21 03:51:58,151 [Thread-12:140624474883840] [crawlermanage.views:248] [INFO]- [u'asdfg123']
-2017-06-21 03:52:04,723 [Thread-14:140624474883840] [crawlermanage.views:65] [INFO]- None
-2017-06-21 03:52:31,079 [Dummy-1:140401817573120] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 03:52:31,111 [Dummy-1:140401817573120] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 03:52:54,796 [Thread-4:140401806485248] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:52:54.793879'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:52:54.793879')
-2017-06-21 03:52:54,797 [Thread-4:140401806485248] [crawlermanage.views:231] [INFO]- ['asdfg123']
-2017-06-21 03:52:54,798 [Thread-4:140401806485248] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
-2017-06-21 03:52:54,800 [Thread-4:140401806485248] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'UPDATE "django_session" SET "session_data" = %s, "expire_date" = %s WHERE "django_session"."session_key" = %s' - PARAMS = (u'YjIzZTlhOGMxOGE0MmVmODhmYTRhZGNkYmVjZmQ2MTQ1YjA2YjJjYjp7ImluZm8iOlsiYXNkZmcxMjMiXX0=', u'2017-07-05 03:52:54.798179', u'z5swbkesjmifzt1gld2w08u5px1iaci5'); args=(u'YjIzZTlhOGMxOGE0MmVmODhmYTRhZGNkYmVjZmQ2MTQ1YjA2YjJjYjp7ImluZm8iOlsiYXNkZmcxMjMiXX0=', u'2017-07-05 03:52:54.798179', 'z5swbkesjmifzt1gld2w08u5px1iaci5')
-2017-06-21 03:52:54,903 [Thread-4:140401806485248] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
-2017-06-21 03:52:54,904 [Thread-4:140401806485248] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'UPDATE "django_session" SET "session_data" = %s, "expire_date" = %s WHERE "django_session"."session_key" = %s' - PARAMS = (u'YjIzZTlhOGMxOGE0MmVmODhmYTRhZGNkYmVjZmQ2MTQ1YjA2YjJjYjp7ImluZm8iOlsiYXNkZmcxMjMiXX0=', u'2017-07-05 03:52:54.903191', u'z5swbkesjmifzt1gld2w08u5px1iaci5'); args=(u'YjIzZTlhOGMxOGE0MmVmODhmYTRhZGNkYmVjZmQ2MTQ1YjA2YjJjYjp7ImluZm8iOlsiYXNkZmcxMjMiXX0=', u'2017-07-05 03:52:54.903191', 'z5swbkesjmifzt1gld2w08u5px1iaci5')
-2017-06-21 03:52:55,262 [Thread-5:140401773512448] [crawlermanage.util.thread:23] [INFO]- ['asdfg123', 'aaaaaaaaa']
-2017-06-21 03:53:07,958 [Thread-6:140401773512448] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:53:07.956325'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:53:07.956325')
-2017-06-21 03:53:07,961 [Thread-6:140401773512448] [crawlermanage.views:247] [INFO]- [u'asdfg123']
-2017-06-21 03:54:21,919 [Thread-10:140401773512448] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:54:21.917624'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:54:21.917624')
-2017-06-21 03:54:21,920 [Thread-10:140401773512448] [crawlermanage.views:247] [INFO]- [u'asdfg123']
-2017-06-21 03:55:57,441 [Thread-19:140401763546880] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:55:57.439413'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 03:55:57.439413')
-2017-06-21 03:55:57,442 [Thread-19:140401763546880] [crawlermanage.views:247] [INFO]- [u'asdfg123']
-2017-06-21 04:10:56,937 [Dummy-1:140515525117696] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 04:10:56,945 [Dummy-1:140515525117696] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 04:20:05,415 [Thread-7:140515514029824] [django.db.backends:89] [DEBUG]- (0.045) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 04:20:05.368915'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 04:20:05.368915')
-2017-06-21 04:20:05,416 [Thread-7:140515514029824] [crawlermanage.views:250] [INFO]- [u'asdfg123']
-2017-06-21 04:20:44,174 [Dummy-1:140495091930880] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 04:20:44,183 [Dummy-1:140495091930880] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 04:40:37,203 [Thread-2:140495080843008] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 04:40:37.200810'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 04:40:37.200810')
-2017-06-21 04:40:37,204 [Thread-2:140495080843008] [crawlermanage.views:247] [INFO]- [u'asdfg123']
-2017-06-21 04:41:01,615 [Thread-7:140495080843008] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 04:41:01.613187'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 04:41:01.613187')
-2017-06-21 04:41:01,616 [Thread-7:140495080843008] [crawlermanage.views:247] [INFO]- [u'asdfg123']
-2017-06-21 04:42:10,629 [Thread-9:140495080843008] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 04:42:10.607463'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 04:42:10.607463')
-2017-06-21 04:42:10,631 [Thread-9:140495080843008] [crawlermanage.views:247] [INFO]- [u'asdfg123']
-2017-06-21 04:57:15,578 [Thread-55:140495080843008] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 04:57:15.576266'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 04:57:15.576266')
-2017-06-21 04:57:15,584 [Thread-55:140495080843008] [crawlermanage.views:247] [INFO]- [u'asdfg123']
-2017-06-21 04:58:55,096 [Dummy-1:140258160318208] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 04:58:55,109 [Dummy-1:140258160318208] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 05:00:20,797 [Dummy-1:140329812539136] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 05:00:20,811 [Dummy-1:140329812539136] [django.db.backends:89] [DEBUG]- (0.005) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 05:01:46,695 [Dummy-1:140587641448192] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 05:01:46,723 [Dummy-1:140587641448192] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 05:02:43,407 [Dummy-1:140697595905792] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 05:02:43,420 [Dummy-1:140697595905792] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 05:19:34,382 [Dummy-1:140301307832064] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 05:19:34,412 [Dummy-1:140301307832064] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 05:26:24,401 [Dummy-1:139993924814592] [django.db.backends:89] [DEBUG]- (0.005) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 05:26:24,414 [Dummy-1:139993924814592] [django.db.backends:89] [DEBUG]- (0.005) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 05:32:50,351 [Dummy-1:139750243845888] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 05:32:50,376 [Dummy-1:139750243845888] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 05:34:04,550 [Dummy-1:139817138943744] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 05:34:04,578 [Dummy-1:139817138943744] [django.db.backends:89] [DEBUG]- (0.004) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 06:17:03,942 [Thread-81:139816987248384] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 06:17:03.939021'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 06:17:03.939021')
-2017-06-21 06:17:03,946 [Thread-81:139816987248384] [crawlermanage.views:232] [INFO]- [u'asdfg123']
-2017-06-21 06:21:35,702 [Thread-111:139816545019648] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 06:21:35.701307'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 06:21:35.701307')
-2017-06-21 06:21:35,704 [Thread-111:139816545019648] [crawlermanage.views:232] [INFO]- [u'asdfg123']
-2017-06-21 06:21:53,629 [Thread-117:139816545019648] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 06:21:53.627345'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 06:21:53.627345')
-2017-06-21 06:21:53,631 [Thread-117:139816545019648] [crawlermanage.views:232] [INFO]- [u'asdfg123']
-2017-06-21 06:28:09,138 [Thread-137:139817004033792] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 06:28:09.137194'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 06:28:09.137194')
-2017-06-21 06:28:09,139 [Thread-137:139817004033792] [crawlermanage.views:232] [INFO]- [u'asdfg123']
-2017-06-21 06:28:12,410 [Thread-141:139817004033792] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 06:28:12.408432'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 06:28:12.408432')
-2017-06-21 06:28:12,413 [Thread-141:139817004033792] [crawlermanage.views:232] [INFO]- [u'asdfg123']
-2017-06-21 06:31:48,937 [Dummy-1:139796108629760] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 06:31:48,944 [Dummy-1:139796108629760] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 06:32:49,085 [Thread-4:139796018099968] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 06:32:49.082820'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 06:32:49.082820')
-2017-06-21 06:32:49,087 [Thread-4:139796018099968] [crawlermanage.views:234] [INFO]- [u'asdfg123']
-2017-06-21 07:00:07,770 [Thread-49:139796018099968] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 07:00:07.767996'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 07:00:07.767996')
-2017-06-21 07:00:07,772 [Thread-49:139796018099968] [crawlermanage.views:234] [INFO]- [u'asdfg123']
-2017-06-21 07:08:53,611 [Dummy-1:140712162752256] [django.db.backends:89] [DEBUG]- (0.008) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 07:08:53,619 [Dummy-1:140712162752256] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 07:09:37,324 [Dummy-1:140004686223104] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 07:09:37,358 [Dummy-1:140004686223104] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 07:10:23,750 [Thread-2:140004675135232] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = %s AND "django_session"."expire_date" > %s)' - PARAMS = (u'z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 07:10:23.747525'); args=('z5swbkesjmifzt1gld2w08u5px1iaci5', u'2017-06-21 07:10:23.747525')
-2017-06-21 07:10:23,751 [Thread-2:140004675135232] [crawlermanage.views:234] [INFO]- [u'asdfg123']
-2017-06-21 07:19:49,041 [Dummy-1:140495752005376] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 07:19:49,054 [Dummy-1:140495752005376] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 07:23:50,790 [Dummy-1:139727865853696] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 07:23:50,805 [Dummy-1:139727865853696] [django.db.backends:89] [DEBUG]- (0.002) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 08:02:35,514 [Dummy-1:140551530399488] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 08:02:35,532 [Dummy-1:140551530399488] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 08:03:43,025 [Thread-9:140551261255424] [crawlermanage.views:206] [INFO]- 5948d1749c1da929309ad2e1
-2017-06-21 08:03:43,049 [Thread-9:140551261255424] [crawlermanage.views:209] [INFO]- stopping
-2017-06-21 08:08:19,037 [Thread-13:140551261255424] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 08:10:34,935 [Thread-14:140551261255424] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 08:10:51,615 [Thread-15:140551261255424] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 08:15:22,440 [Thread-34:140551261255424] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 08:19:58,088 [Thread-43:140551261255424] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 08:20:07,718 [Thread-44:140551261255424] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 08:23:12,160 [Thread-47:140551261255424] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 08:23:55,923 [Dummy-1:140703805527808] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 08:23:55,942 [Dummy-1:140703805527808] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 08:24:05,255 [Thread-6:140703794439936] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 08:24:11,852 [Thread-7:140703794439936] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 08:24:22,085 [Thread-10:140703794439936] [crawlermanage.views:206] [INFO]- 5948cbf59c1da929309ad2e0
-2017-06-21 08:24:22,088 [Thread-10:140703794439936] [crawlermanage.views:209] [INFO]- running
-2017-06-21 08:25:14,106 [Thread-16:140703380264704] [crawlermanage.views:206] [INFO]- 5948cbf59c1da929309ad2e0
-2017-06-21 08:25:14,108 [Thread-16:140703380264704] [crawlermanage.views:209] [INFO]- running
-2017-06-21 08:26:52,998 [Thread-18:140703380264704] [crawlermanage.views:206] [INFO]- 5948cbf59c1da929309ad2e0
-2017-06-21 08:26:53,002 [Thread-18:140703380264704] [crawlermanage.views:209] [INFO]- running
-2017-06-21 08:28:36,853 [Thread-28:140703744157440] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 08:28:43,072 [Thread-31:140703744157440] [crawlermanage.views:206] [INFO]- 5948cbf59c1da929309ad2e0
-2017-06-21 08:28:43,074 [Thread-31:140703744157440] [crawlermanage.views:209] [INFO]- stopping
-2017-06-21 08:30:02,698 [Dummy-1:140302796482304] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 08:30:02,711 [Dummy-1:140302796482304] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 09:47:26,102 [Thread-26:140302547412736] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 09:49:42,157 [Dummy-1:139636533839616] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 09:49:42,170 [Dummy-1:139636533839616] [django.db.backends:89] [DEBUG]- (0.005) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 09:50:12,488 [Thread-6:139636522751744] [crawlermanage.views:193] [INFO]- waitting
-2017-06-21 09:52:12,049 [Dummy-1:139691834009344] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-21 09:52:12,058 [Dummy-1:139691834009344] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-21 09:52:25,995 [Thread-2:139691822921472] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 09:52:30,448 [Thread-5:139691822921472] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 09:53:12,982 [Thread-10:139691822921472] [crawlermanage.views:193] [INFO]- waitting
-2017-06-21 09:54:36,154 [Thread-17:139691822921472] [crawlermanage.views:193] [INFO]- waitting
-2017-06-21 09:59:14,958 [Thread-20:139691822921472] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-21 09:59:31,898 [Thread-23:139691822921472] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 07:30:44,309 [Dummy-1:139747251316480] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-22 07:30:44,333 [Dummy-1:139747251316480] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-22 07:32:47,180 [Thread-12:139747240228608] [crawlermanage.views:193] [INFO]- running
-2017-06-22 07:37:04,126 [Thread-36:139746684692224] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 07:37:18,315 [Thread-37:139746684692224] [crawlermanage.views:207] [INFO]- 594b729f9c1da91bb9d43c3c
-2017-06-22 07:37:18,317 [Thread-37:139746684692224] [crawlermanage.views:210] [INFO]- pausing
-2017-06-22 07:38:12,830 [Thread-53:139746684692224] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 07:39:06,851 [Dummy-1:140522406360832] [django.db.backends:89] [DEBUG]- (0.004) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-22 07:39:06,861 [Dummy-1:140522406360832] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-22 07:48:24,778 [Thread-6:140522395272960] [crawlermanage.views:193] [INFO]- running
-2017-06-22 07:48:42,336 [Thread-9:140522395272960] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 07:49:05,461 [Thread-10:140522395272960] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 09:55:45,026 [Thread-18:140522127615744] [crawlermanage.views:193] [INFO]- running
-2017-06-22 09:56:08,433 [Thread-21:140522127615744] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 13:07:07,735 [Thread-30:140522136008448] [crawlermanage.views:193] [INFO]- running
-2017-06-22 13:08:12,910 [Thread-41:140522127615744] [crawlermanage.views:207] [INFO]- 594bc0fb9c1da9212141ef76
-2017-06-22 13:08:12,913 [Thread-41:140522127615744] [crawlermanage.views:210] [INFO]- running
-2017-06-22 13:08:32,101 [Thread-46:140522127615744] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 13:17:12,219 [Thread-53:140522110830336] [crawlermanage.views:193] [INFO]- running
-2017-06-22 13:17:26,577 [Thread-56:140522110830336] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 13:17:41,480 [Thread-57:140522110830336] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 13:19:40,090 [Dummy-1:140638742038272] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-22 13:19:40,098 [Dummy-1:140638742038272] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-22 13:22:00,410 [Thread-2:140638730950400] [crawlermanage.views:190] [INFO]- 2017/06/22 21:23
-2017-06-22 13:22:00,427 [Thread-2:140638730950400] [crawlermanage.views:194] [INFO]- waitting
-2017-06-22 13:24:38,969 [Thread-7:140638604945152] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 13:24:50,388 [Thread-11:140638596552448] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 13:26:19,863 [Thread-12:140638596552448] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 13:36:05,123 [Thread-19:140638596552448] [crawlermanage.views:190] [INFO]- 2017/06/22 21:37
-2017-06-22 13:36:05,125 [Thread-19:140638596552448] [crawlermanage.views:194] [INFO]- waitting
-2017-06-22 13:42:33,446 [Thread-35:140638730950400] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 13:54:14,463 [Thread-40:140638730950400] [crawlermanage.views:190] [INFO]- 2017/06/22 21:55
-2017-06-22 13:54:14,465 [Thread-40:140638730950400] [crawlermanage.views:194] [INFO]- waitting
-2017-06-22 14:00:33,658 [Thread-54:140638579767040] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 14:09:34,646 [Thread-59:140638579767040] [crawlermanage.views:190] [INFO]- 2017/06/22 22:11
-2017-06-22 14:09:34,648 [Thread-59:140638579767040] [crawlermanage.views:194] [INFO]- waitting
-2017-06-22 14:18:15,723 [Thread-62:140638579767040] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 14:23:24,316 [Thread-67:140638579767040] [crawlermanage.views:190] [INFO]- 2017/06/22 22:24
-2017-06-22 14:23:24,318 [Thread-67:140638579767040] [crawlermanage.views:194] [INFO]- waitting
-2017-06-22 14:29:35,437 [Thread-70:140638579767040] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 14:34:11,258 [Thread-75:140638579767040] [crawlermanage.views:190] [INFO]- 2017/06/22 22:35
-2017-06-22 14:34:11,260 [Thread-75:140638579767040] [crawlermanage.views:194] [INFO]- waitting
-2017-06-22 14:39:33,042 [Thread-78:140638579767040] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 14:47:15,971 [Thread-83:140638579767040] [crawlermanage.views:190] [INFO]- 2017/06/22 22:48
-2017-06-22 14:47:15,974 [Thread-83:140638579767040] [crawlermanage.views:194] [INFO]- waitting
-2017-06-22 15:00:00,158 [Thread-93:140638604945152] [crawlermanage.views:190] [INFO]- 2017/06/22 23:00
-2017-06-22 15:00:00,160 [Thread-93:140638604945152] [crawlermanage.views:194] [INFO]- waitting
-2017-06-22 15:05:22,833 [Thread-105:140638604945152] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 15:07:33,292 [Thread-110:140638604945152] [crawlermanage.views:190] [INFO]- 2017/06/22 23:08
-2017-06-22 15:07:33,295 [Thread-110:140638604945152] [crawlermanage.views:194] [INFO]- waitting
-2017-06-22 15:14:26,658 [Thread-113:140638604945152] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 15:15:55,228 [Thread-118:140638604945152] [crawlermanage.views:190] [INFO]- 2017/06/22 23:16
-2017-06-22 15:15:55,230 [Thread-118:140638604945152] [crawlermanage.views:194] [INFO]- waitting
-2017-06-22 15:21:38,638 [Thread-121:140638604945152] [crawlermanage.views:85] [INFO]- [<Task: Task object>]
-2017-06-22 15:23:15,363 [Thread-126:140638604945152] [crawlermanage.views:190] [INFO]- 2017/06/22 23:24
-2017-06-22 15:23:15,364 [Thread-126:140638604945152] [crawlermanage.views:194] [INFO]- waitting
-2017-06-22 15:40:39,950 [Thread-133:140638604945152] [crawlermanage.views:190] [INFO]- 2017/06/22 23:41
-2017-06-22 15:40:39,956 [Thread-133:140638604945152] [crawlermanage.views:194] [INFO]- waitting
-2017-06-23 03:05:35,301 [Dummy-1:140488413976320] [django.db.backends:89] [DEBUG]- (0.036) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-23 03:05:35,334 [Dummy-1:140488413976320] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-23 03:06:46,399 [Thread-10:140488402888448] [crawlermanage.views:211] [INFO]- 2017/06/23 03:06
-2017-06-23 03:06:46,402 [Thread-10:140488402888448] [crawlermanage.views:215] [INFO]- running
-2017-06-23 03:07:48,858 [Thread-25:140488134305536] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
-2017-06-23 03:17:02,460 [Thread-40:140488167876352] [crawlermanage.views:211] [INFO]- 2017/06/23 03:17
-2017-06-23 03:17:02,462 [Thread-40:140488167876352] [crawlermanage.views:215] [INFO]- running
-2017-06-23 03:18:11,691 [Thread-43:140488167876352] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
-2017-06-23 03:19:54,756 [Thread-48:140488167876352] [crawlermanage.views:211] [INFO]- 2017/06/23 03:19
-2017-06-23 03:19:54,759 [Thread-48:140488167876352] [crawlermanage.views:215] [INFO]- running
-2017-06-23 03:21:50,447 [Thread-79:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
-2017-06-23 03:30:32,049 [Thread-84:140488142698240] [crawlermanage.views:211] [INFO]- 2017/06/23 03:30
-2017-06-23 03:30:32,051 [Thread-84:140488142698240] [crawlermanage.views:215] [INFO]- running
-2017-06-23 03:32:01,036 [Thread-87:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
-2017-06-23 03:36:40,198 [Thread-96:140488142698240] [crawlermanage.views:211] [INFO]- 2017/06/23 03:36
-2017-06-23 03:36:40,200 [Thread-96:140488142698240] [crawlermanage.views:215] [INFO]- running
-2017-06-23 03:36:52,866 [Thread-99:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
-2017-06-23 03:37:27,013 [Thread-108:140488142698240] [crawlermanage.views:211] [INFO]- 2017/06/23 03:37
-2017-06-23 03:37:27,015 [Thread-108:140488142698240] [crawlermanage.views:215] [INFO]- running
-2017-06-23 03:38:31,011 [Thread-111:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
-2017-06-23 03:38:58,500 [Thread-116:140488142698240] [crawlermanage.views:211] [INFO]- 2017/06/23 03:38
-2017-06-23 03:38:58,505 [Thread-116:140488142698240] [crawlermanage.views:215] [INFO]- running
-2017-06-23 03:39:18,266 [Thread-119:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
-2017-06-23 03:39:37,801 [Thread-124:140488142698240] [crawlermanage.views:211] [INFO]- 2017/06/23 03:39
-2017-06-23 03:39:37,802 [Thread-124:140488142698240] [crawlermanage.views:215] [INFO]- running
-2017-06-23 03:48:13,288 [Thread-127:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
-2017-06-23 03:49:04,098 [Thread-132:140488142698240] [crawlermanage.views:211] [INFO]- 2017/06/23 03:49
-2017-06-23 03:49:04,100 [Thread-132:140488142698240] [crawlermanage.views:215] [INFO]- running
-2017-06-23 03:53:40,949 [Thread-135:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
-2017-06-23 03:53:45,597 [Thread-136:140488142698240] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
-2017-06-23 03:53:59,803 [Thread-141:140488142698240] [crawlermanage.views:232] [INFO]- 594c882e9c1da91b7096a676
-2017-06-23 03:53:59,805 [Thread-141:140488142698240] [crawlermanage.views:235] [INFO]- stopping
-2017-06-23 03:54:28,884 [Thread-146:140488159483648] [crawlermanage.views:211] [INFO]- 2017/06/23 03:54
-2017-06-23 03:54:28,886 [Thread-146:140488159483648] [crawlermanage.views:215] [INFO]- running
-2017-06-23 03:58:37,375 [Thread-149:140488159483648] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
-2017-06-23 03:58:54,809 [Thread-154:140488159483648] [crawlermanage.views:211] [INFO]- 2017/06/23 03:58
-2017-06-23 03:58:54,811 [Thread-154:140488159483648] [crawlermanage.views:215] [INFO]- running
-2017-06-23 03:59:27,826 [Thread-161:140488159483648] [crawlermanage.views:96] [INFO]- [<Task: Task object>]
-2017-06-23 08:08:50,929 [Dummy-1:139712190736128] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-23 08:08:50,945 [Dummy-1:139712190736128] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-23 08:41:23,552 [Thread-6:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 08:41
-2017-06-23 08:41:23,554 [Thread-6:139712171255552] [crawlermanage.views:214] [INFO]- running
-2017-06-23 08:42:13,610 [Thread-15:139712171255552] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 08:46:10,495 [Thread-22:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 08:46
-2017-06-23 08:46:10,498 [Thread-22:139712171255552] [crawlermanage.views:214] [INFO]- running
-2017-06-23 08:46:41,814 [Thread-25:139712171255552] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 08:54:10,057 [Thread-26:139712171255552] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 08:54:26,059 [Thread-31:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 08:54
-2017-06-23 08:54:26,062 [Thread-31:139712171255552] [crawlermanage.views:214] [INFO]- running
-2017-06-23 08:54:35,428 [Thread-34:139712171255552] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 08:54:43,741 [Thread-35:139712171255552] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 08:55:41,058 [Thread-40:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 16:56
-2017-06-23 08:55:41,060 [Thread-40:139712171255552] [crawlermanage.views:214] [INFO]- waitting
-2017-06-23 09:02:56,389 [Thread-47:139712171255552] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 09:03:38,652 [Thread-52:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 17:04
-2017-06-23 09:03:38,654 [Thread-52:139712171255552] [crawlermanage.views:214] [INFO]- waitting
-2017-06-23 09:08:11,851 [Thread-63:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 17:09
-2017-06-23 09:08:11,853 [Thread-63:139712171255552] [crawlermanage.views:214] [INFO]- waitting
-2017-06-23 09:52:41,820 [Thread-75:139712171255552] [crawlermanage.views:210] [INFO]- 2017/06/23 17:53
-2017-06-23 09:52:41,822 [Thread-75:139712171255552] [crawlermanage.views:214] [INFO]- waitting
-2017-06-23 10:07:15,496 [Dummy-1:140421990676224] [django.db.backends:89] [DEBUG]- (0.004) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-23 10:07:15,508 [Dummy-1:140421990676224] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-23 10:14:08,761 [Thread-7:140421724362496] [crawlermanage.views:210] [INFO]- 2017/06/23 10:14
-2017-06-23 10:23:15,605 [Thread-8:140421724362496] [crawlermanage.views:210] [INFO]- 2017/06/23 10:23
-2017-06-23 10:23:15,608 [Thread-8:140421724362496] [crawlermanage.views:214] [INFO]- running
-2017-06-23 10:24:57,270 [Thread-20:140421724362496] [crawlermanage.views:210] [INFO]- 2017/06/23 10:24
-2017-06-23 10:24:57,272 [Thread-20:140421724362496] [crawlermanage.views:214] [INFO]- running
-2017-06-23 10:25:13,014 [Thread-23:140421724362496] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 10:25:23,135 [Thread-27:140421724362496] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 11:01:46,171 [Dummy-1:140384750098176] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-23 11:01:46,188 [Dummy-1:140384750098176] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-23 11:04:02,245 [Thread-17:140384705775360] [crawlermanage.views:210] [INFO]- 2017/06/23 19:04
-2017-06-23 11:04:02,249 [Thread-17:140384705775360] [crawlermanage.views:214] [INFO]- waitting
-2017-06-23 11:06:12,206 [Thread-28:140384705775360] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 11:06:27,379 [Thread-29:140384705775360] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 12:37:00,321 [Thread-37:140384478942976] [crawlermanage.views:210] [INFO]- 2017/06/23 12:37
-2017-06-23 12:37:00,323 [Thread-37:140384478942976] [crawlermanage.views:214] [INFO]- running
-2017-06-23 12:41:10,559 [Thread-44:140384739010304] [crawlermanage.views:210] [INFO]- 2017/06/23 12:41
-2017-06-23 12:41:10,566 [Thread-44:140384739010304] [crawlermanage.views:214] [INFO]- running
-2017-06-23 12:41:34,898 [Thread-47:140384739010304] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 12:41:53,130 [Thread-48:140384739010304] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 12:43:53,078 [Thread-51:140384739010304] [crawlermanage.views:210] [INFO]- 2017/06/23 12:43
-2017-06-23 12:43:53,082 [Thread-51:140384739010304] [crawlermanage.views:214] [INFO]- running
-2017-06-23 12:44:55,403 [Thread-70:140384739010304] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 12:46:30,091 [Thread-81:140384739010304] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 12:50:26,672 [Thread-95:140384739010304] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 12:52:18,674 [Thread-96:140384739010304] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 12:52:22,613 [Thread-99:140384739010304] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-23 14:34:03,751 [Dummy-1:140187233646336] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-23 14:34:03,766 [Dummy-1:140187233646336] [django.db.backends:89] [DEBUG]- (0.005) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-24 01:23:32,222 [Thread-10:140186851731200] [crawlermanage.views:210] [INFO]- 2017/06/24 01:23
-2017-06-24 01:23:32,225 [Thread-10:140186851731200] [crawlermanage.views:214] [INFO]- running
-2017-06-24 01:23:54,743 [Thread-13:140186851731200] [crawlermanage.views:231] [INFO]- 594dbf149c1da90335d4c699
-2017-06-24 01:23:54,745 [Thread-13:140186851731200] [crawlermanage.views:234] [INFO]- running
-2017-06-24 01:26:45,664 [Thread-23:140186851731200] [crawlermanage.views:210] [INFO]- 2017/06/24 01:26
-2017-06-24 01:26:45,667 [Thread-23:140186851731200] [crawlermanage.views:214] [INFO]- running
-2017-06-24 01:27:37,608 [Thread-27:140186851731200] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-24 03:32:07,888 [Dummy-1:140553309468416] [django.db.backends:89] [DEBUG]- (0.036) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
-2017-06-24 03:32:08,010 [Dummy-1:140553309468416] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
-2017-06-24 03:39:34,513 [Thread-5:140553298380544] [crawlermanage.views:210] [INFO]- 2017/06/24 03:39
-2017-06-24 03:39:34,516 [Thread-5:140553298380544] [crawlermanage.views:214] [INFO]- running
-2017-06-24 03:40:07,466 [Thread-8:140553298380544] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-24 03:41:52,813 [Thread-13:140553298380544] [crawlermanage.views:210] [INFO]- 2017/06/24 03:41
-2017-06-24 03:41:52,815 [Thread-13:140553298380544] [crawlermanage.views:214] [INFO]- running
-2017-06-24 04:06:57,549 [Thread-22:140553029830400] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-24 04:13:33,414 [Thread-25:140553029830400] [crawlermanage.views:210] [INFO]- 2017/06/24 04:13
-2017-06-24 04:13:33,416 [Thread-25:140553029830400] [crawlermanage.views:214] [INFO]- running
-2017-06-24 04:18:51,842 [Thread-30:140553046615808] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-24 05:37:01,454 [Thread-33:140553298380544] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-24 05:37:42,197 [Thread-38:140553298380544] [crawlermanage.views:210] [INFO]- 2017/06/24 05:37
-2017-06-24 05:37:42,199 [Thread-38:140553298380544] [crawlermanage.views:214] [INFO]- running
-2017-06-24 05:37:46,071 [Thread-41:140553298380544] [crawlermanage.views:95] [INFO]- [<Task: Task object>]
-2017-06-24 05:40:53,606 [Thread-44:140553298380544] [crawlermanage.views:210] [INFO]- 2017/06/24 05:40
-2017-06-24 05:40:53,609 [Thread-44:140553298380544] [crawlermanage.views:214] [INFO]- running
+2017-06-24 12:51:12,046 [Dummy-1:140362433582848] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-24 12:51:12,065 [Dummy-1:140362433582848] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-06-24 13:00:43,009 [Dummy-1:139955133216512] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-24 13:00:43,015 [Dummy-1:139955133216512] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-06-24 13:02:58,811 [Thread-8:139955082860288] [crawlermanage.views:260] [INFO]- ----------对正文抽取的结果进行评分，进行准确度的打分，程序会自动忽略掉所有的空格后进行对比----------
+*************开始测试*************
+BNLTAO3E00014AED.html 测试失败
+blog_539c5bd20102vox7.html 测试失败
+qq_015809.htm 测试失败
+qq_033802.htm 测试失败
+blog_9c4ea27d0102wy0w.html 测试失败
+qq_038802.htm 测试失败
+CLUL6TC200018AOQ.html 测试失败
+qq_011221.htm 测试失败
+qq_003701.htm 测试失败
+CLUV5BTI0001899N.html 测试失败
+BNOL2B7U00014AED.html 测试失败
+qq_003294.htm 测试失败
+CM071TH600018AOP.html 测试失败
+CLUBK136000187VE.html 测试失败
+qq_020263.htm 测试失败
+qq_003661.htm 测试失败
+qq_002841.htm 测试失败
+qq_029160.htm 测试失败
+blog_4bc425eb0102wt8u.html 测试失败
+blog_539c5bd20102w2oc.html 测试失败
+qq_030003.htm 测试失败
+qq_039864.htm 测试失败
+blog_15f20fe440102wxv8.html 测试失败
+qq_043858.htm 测试失败
+qq_020506.htm 测试失败
+qq_037985.htm 测试失败
+blog_694171200102wv0z.html 测试失败
+qq_037271.htm 测试失败
+qq_024582.htm 测试失败
+qq_021526.htm 测试失败
+qq_004546.htm 测试失败
+qq_032417.htm 测试失败
+qq_032568.htm 测试失败
+BNOC54NA00014JB5.html 测试失败
+qq_002299.htm 测试失败
+qq_009569.htm 测试失败
+qq_053873.htm 测试失败
+BNK8B7AQ00014SEH.html 测试失败
+qq_041384.htm 测试失败
+qq_041994.htm 测试失败
+qq_028562.htm 测试失败
+blog_6a5ce6450102wreu.html 测试失败
+blog_1670293f40102xw26.html 测试失败
+blog_6252b0bb0102x1k9.html 测试失败
+blog_13787b4980102wmrx.html 测试失败
+blog_4cd1c1670102wfdk.html 测试失败
+BNOHUKPB0001124J.html 测试失败
+qq_003082.htm 测试失败
+qq_043843.htm 测试失败
+qq_005096.htm 测试失败
+qq_009586.htm 测试失败
+qq_038690.htm 测试失败
+blog_9ec6cf980102wsb7.html 测试失败
+qq_033399.htm 测试失败
+qq_051968.htm 测试失败
+qq_006027.htm 测试失败
+CM1V50OA0001899N.html 测试失败
+blog_4711b54e0102wdfx.html 测试失败
+qq_019745.htm 测试失败
+qq_014884.htm 测试失败
+blog_5b1973430102w87x.html 测试失败
+CLUG9MDN00018AOR.html 测试失败
+qq_006376.htm 测试失败
+qq_053630.htm 测试失败
+blog_4e780db10102wwrx.html 测试失败
+qq_038744.htm 测试失败
+blog_48fd51d80102vn8b.html 测试失败
+qq_003591.htm 测试失败
+BNO53AE80001124J.html 测试失败
+BNO57Q9600014AEE.html 测试失败
+qq_026682.htm 测试失败
+qq_022215.htm 测试失败
+BNOHQJPD0001124J.html 测试失败
+blog_1603de7020102wprq.html 测试失败
+blog_46cf47710102w1ei.html 测试失败
+blog_5b1973430102wsvz.html 测试失败
+qq_026182.htm 测试失败
+qq_009695.htm 测试失败
+blog_7159859d0102xfce.html 测试失败
+blog_ed22e9740102vv1f.html 测试失败
+blog_5b1973430102ws9j.html 测试失败
+blog_6dedbe010102wep6.html 测试失败
+qq_027289.htm 测试失败
+qq_024997.htm 测试失败
+qq_015666.htm 测试失败
+blog_15f079d400102xzdw.html 测试失败
+qq_003600.htm 测试失败
+qq_035860.htm 测试失败
+qq_006715.htm 测试失败
+blog_4aeb7d930102wsna.html 测试失败
+CLVIUFCD000187VI.html 测试失败
+qq_065009.htm 测试失败
+qq_004036.htm 测试失败
+qq_034594.htm 测试失败
+qq_023630.htm 测试失败
+qq_018459.htm 测试失败
+qq_038213.htm 测试失败
+qq_025329.htm 测试失败
+BNO4G2EN00014AEE.html 测试失败
+qq_003910.htm 测试失败
+qq_043607.htm 测试失败
+blog_5b1973430102wrl1.html 测试失败
+BNP6NPCP00014JB6.html 测试失败
+CM0CJ3KF000187VE.html 测试失败
+BNOQ6ABT00014AEE.html 测试失败
+qq_027026.htm 测试失败
+qq_057819.htm 测试失败
+qq_034692.htm 测试失败
+qq_041367.htm 测试失败
+qq_035038.htm 测试失败
+BNO8BPJR00014JB6.html 测试失败
+qq_003041.htm 测试失败
+CM0U437K000187VE.html 测试失败
+qq_036619.htm 测试失败
+blog_16bedcc610102wy0v.html 测试失败
+qq_011128.htm 测试失败
+qq_016940.htm 测试失败
+blog_75b1a75f0102w6zt.html 测试失败
+qq_043369.htm 测试失败
+blog_13657092e0102we5k.html 测试失败
+qq_036730.htm 测试失败
+qq_060380.htm 测试失败
+blog_15f20fe440102wydl.html 测试失败
+qq_035888.htm 测试失败
+CM1VVS8G0001899N.html 测试失败
+BNLCA7K800014Q4P.html 测试失败
+CLTVJIEO00018AOQ.html 测试失败
+qq_039947.htm 测试失败
+qq_058668.htm 测试失败
+qq_004154.htm 测试失败
+qq_024768.htm 测试失败
+qq_020086.htm 测试失败
+qq_025706.htm 测试失败
+blog_4bc425eb0102wtqn.html 测试失败
+BNPBDFVF0001124J.html 测试失败
+BNO6GA2F00014AEE.html 测试失败
+blog_539c5bd20102vxhp.html 测试失败
+qq_012582.htm 测试失败
+blog_1407910a60102wdaq.html 测试失败
+qq_030387.htm 测试失败
+qq_021041.htm 测试失败
+qq_004208.htm 测试失败
+blog_4cd1c1670102vaaf.html 测试失败
+blog_4e326f010102w8z6.html 测试失败
+qq_020987.htm 测试失败
+BNM76V2300014AED.html 测试失败
+qq_003243.htm 测试失败
+qq_062631.htm 测试失败
+blog_48fd51d80102wa51.html 测试失败
+BNMGNQGH0001124J.html 测试失败
+blog_675823360102xscc.html 测试失败
+BNO1J12800014AEE.html 测试失败
+qq_045757.htm 测试失败
+qq_003371.htm 测试失败
+qq_048540.htm 测试失败
+blog_6252b0bb0102x8qh.html 测试失败
+qq_035579.htm 测试失败
+qq_016207.htm 测试失败
+qq_022888.htm 测试失败
+qq_037549.htm 测试失败
+blog_539c5bd20102w17v.html 测试失败
+BNKT2GBI0001124J.html 测试失败
+qq_055280.htm 测试失败
+qq_056385.htm 测试失败
+qq_009371.htm 测试失败
+qq_019858.htm 测试失败
+BNP6EETN00014SEH.html 测试失败
+qq_041680.htm 测试失败
+qq_013140.htm 测试失败
+qq_003501.htm 测试失败
+qq_057654.htm 测试失败
+qq_021510.htm 测试失败
+qq_017717.htm 测试失败
+blog_4cd1c1670102wd5x.html 测试失败
+BNOQEOUQ0001124J.html 测试失败
+qq_044226.htm 测试失败
+blog_1670293f40102xvly.html 测试失败
+qq_023807.htm 测试失败
+CLTVLT1A0001899N.html 测试失败
+blog_a64f61df0102wtlc.html 测试失败
+qq_046106.htm 测试失败
+qq_022455.htm 测试失败
+qq_006894.htm 测试失败
+qq_022935.htm 测试失败
+qq_018532.htm 测试失败
+blog_4b423c430102w5yj.html 测试失败
+CM0AITF300014AEE.html 测试失败
+qq_061274.htm 测试失败
+CM199KO7000187VE.html 测试失败
+blog_4711b54e0102w2uh.html 测试失败
+blog_1670293f40102xskw.html 测试失败
+qq_034408.htm 测试失败
+qq_052881.htm 测试失败
+blog_475b3d560102wdtc.html 测试失败
+qq_011955.htm 测试失败
+qq_031006.htm 测试失败
+qq_044813.htm 测试失败
+qq_007786.htm 测试失败
+CLUDBS3U000187V9.html 测试失败
+blog_48fd51d80102vm4i.html 测试失败
+CLVDF7N800018AOQ.html 测试失败
+qq_023557.htm 测试失败
+qq_019923.htm 测试失败
+qq_032314.htm 测试失败
+blog_4aeb7d930102wuoj.html 测试失败
+blog_5f0f1d570102wghj.html 测试失败
+qq_012808.htm 测试失败
+qq_059430.htm 测试失败
+qq_029938.htm 测试失败
+qq_016062.htm 测试失败
+blog_6321a0f30102wjyl.html 测试失败
+qq_020445.htm 测试失败
+qq_025171.htm 测试失败
+qq_040254.htm 测试失败
+BNMMOSG70001124J.html 测试失败
+qq_039522.htm 测试失败
+qq_030945.htm 测试失败
+qq_037512.htm 测试失败
+qq_016143.htm 测试失败
+blog_48fd51d80102vjb0.html 测试失败
+qq_051041.htm 测试失败
+blog_5b1973430102wv53.html 测试失败
+qq_022096.htm 测试失败
+qq_016218.htm 测试失败
+qq_003437.htm 测试失败
+blog_53402f740102wmfn.html 测试失败
+qq_021525.htm 测试失败
+qq_043039.htm 测试失败
+qq_019353.htm 测试失败
+blog_539c5bd20102vuhg.html 测试失败
+blog_134e1a9990102wb0g.html 测试失败
+qq_040790.htm 测试失败
+qq_035720.htm 测试失败
+CLU02Q6P00018AOQ.html 测试失败
+qq_003070.htm 测试失败
+qq_053841.htm 测试失败
+qq_010608.htm 测试失败
+qq_005555.htm 测试失败
+qq_019709.htm 测试失败
+qq_021401.htm 测试失败
+CM1FTGMJ0001875N.html 测试失败
+CM0EFPPN0001875N.html 测试失败
+blog_5b1973430102w5t5.html 测试失败
+blog_1603de7020102wpu4.html 测试失败
+CLUCUBE700014AEE.html 测试失败
+blog_6252b0bb0102wza5.html 测试失败
+blog_1511613820102wgxo.html 测试失败
+qq_019351.htm 测试失败
+blog_61c5a84e0102vvxk.html 测试失败
+qq_059699.htm 测试失败
+qq_007996.htm 测试失败
+blog_48fd51d80102w4og.html 测试失败
+blog_5b1973430102w807.html 测试失败
+qq_044688.htm 测试失败
+CLU2MOKN00018AOR.html 测试失败
+blog_a5357a3e0102wa7v.html 测试失败
+qq_022946.htm 测试失败
+qq_039957.htm 测试失败
+blog_48f84f6f0102vz4r.html 测试失败
+blog_53ff33bd0102x5og.html 测试失败
+CLUBFIM80001875N.html 测试失败
+blog_1669659fb0102x4ei.html 测试失败
+qq_041870.htm 测试失败
+blog_4b8bd1450102wvtq.html 测试失败
+BNP03E1S0001124J.html 测试失败
+blog_8e9705160102wuio.html 测试失败
+qq_017878.htm 测试失败
+blog_48ba1ffd0102wceh.html 测试失败
+qq_019457.htm 测试失败
+qq_016148.htm 测试失败
+qq_057473.htm 测试失败
+qq_050909.htm 测试失败
+blog_966fb2d30102wmyl.html 测试失败
+qq_023036.htm 测试失败
+qq_029921.htm 测试失败
+qq_040936.htm 测试失败
+qq_023108.htm 测试失败
+qq_019320.htm 测试失败
+qq_008103.htm 测试失败
+qq_024120.htm 测试失败
+blog_48fd51d80102vt0v.html 测试失败
+BNPCVFLC00014SEH.html 测试失败
+blog_a5357a3e0102wk25.html 测试失败
+qq_003311.htm 测试失败
+qq_036443.htm 测试失败
+BNO8ME2000014JB5.html 测试失败
+blog_a5357a3e0102w99b.html 测试失败
+qq_036723.htm 测试失败
+qq_017298.htm 测试失败
+qq_016475.htm 测试失败
+blog_53ff33bd0102whyz.html 测试失败
+CM30EV3800018AOQ.html 测试失败
+qq_040452.htm 测试失败
+blog_48631e860102wbaf.html 测试失败
+qq_044253.htm 测试失败
+qq_025668.htm 测试失败
+blog_486c0f670102w6df.html 测试失败
+blog_5a0151030102wc40.html 测试失败
+qq_033614.htm 测试失败
+qq_021876.htm 测试失败
+qq_030795.htm 测试失败
+qq_016428.htm 测试失败
+qq_050838.htm 测试失败
+CM2VAHB900014AEE.html 测试失败
+BNKL1BUA0001124J.html 测试失败
+qq_004105.htm 测试失败
+qq_047006.htm 测试失败
+qq_025343.htm 测试失败
+blog_1603de7020102wqxh.html 测试失败
+BNPDMT3H0001124J.html 测试失败
+blog_6dedbe010102wulz.html 测试失败
+qq_039402.htm 测试失败
+qq_045314.htm 测试失败
+qq_038683.htm 测试失败
+qq_059452.htm 测试失败
+CM0EN8PR00018AOQ.html 测试失败
+blog_53402f740102xxgh.html 测试失败
+qq_027584.htm 测试失败
+CM10BJ65000187VE.html 测试失败
+qq_004844.htm 测试失败
+qq_055696.htm 测试失败
+qq_038830.htm 测试失败
+BNO9VTUA0001124J.html 测试失败
+blog_4bc425eb0102w74l.html 测试失败
+qq_020744.htm 测试失败
+qq_016976.htm 测试失败
+CLTRQDIC00018AOQ.html 测试失败
+qq_004080.htm 测试失败
+qq_039253.htm 测试失败
+qq_016365.htm 测试失败
+qq_012485.htm 测试失败
+qq_055243.htm 测试失败
+CLUR3V220001875N.html 测试失败
+blog_72e690fc0102vjni.html 测试失败
+qq_006790.htm 测试失败
+qq_049109.htm 测试失败
+qq_038980.htm 测试失败
+qq_002968.htm 测试失败
+blog_5951b3310102xrud.html 测试失败
+CLUSRLH90001899N.html 测试失败
+CM2CGOGN0001899N.html 测试失败
+blog_4aeb7d930102wtab.html 测试失败
+blog_539c5bd20102vjdk.html 测试失败
+blog_5b1973430102w57q.html 测试失败
+qq_054352.htm 测试失败
+qq_041770.htm 测试失败
+qq_049573.htm 测试失败
+qq_039317.htm 测试失败
+blog_5b1973430102wpni.html 测试失败
+qq_003219.htm 测试失败
+blog_1669659fb0102x39h.html 测试失败
+qq_023010.htm 测试失败
+qq_007857.htm 测试失败
+BNOPSSSO0001124J.html 测试失败
+blog_48fd51d80102wv6v.html 测试失败
+qq_029236.htm 测试失败
+qq_040918.htm 测试失败
+blog_694171200102wswp.html 测试失败
+blog_539c5bd20102w1pe.html 测试失败
+CLVM1F9R00018AOP.html 测试失败
+blog_6a55d6840102xjek.html 测试失败
+qq_037837.htm 测试失败
+BNPDADAO00014SEH.html 测试失败
+CM0D1OJS0001875N.html 测试失败
+blog_5b1973430102wc3u.html 测试失败
+qq_006238.htm 测试失败
+qq_040515.htm 测试失败
+qq_008295.htm 测试失败
+qq_040671.htm 测试失败
+CM2ABFD70001899N.html 测试失败
+CM28M2DT00018AOP.html 测试失败
+blog_14c94e76f0102xasb.html 测试失败
+CM05S5TT000187V9.html 测试失败
+qq_039759.htm 测试失败
+qq_009552.htm 测试失败
+qq_055925.htm 测试失败
+qq_037614.htm 测试失败
+qq_038551.htm 测试失败
+blog_46cf47710102vm4p.html 测试失败
+blog_5b1973430102vtqx.html 测试失败
+qq_032574.htm 测试失败
+qq_005931.htm 测试失败
+blog_61e6c0120102yj8h.html 测试失败
+qq_036799.htm 测试失败
+qq_016435.htm 测试失败
+blog_9ec6cf980102w4pg.html 测试失败
+BNO1C6DR00014AEE.html 测试失败
+qq_039723.htm 测试失败
+blog_1515cbfd80102wcel.html 测试失败
+BNKPM9DV00014AED.html 测试失败
+qq_016133.htm 测试失败
+blog_4c8515f50102x965.html 测试失败
+blog_5b1973430102wvm4.html 测试失败
+qq_062884.htm 测试失败
+qq_012109.htm 测试失败
+blog_a5357a3e0102wkcy.html 测试失败
+qq_012083.htm 测试失败
+blog_48fd51d80102vz17.html 测试失败
+qq_035680.htm 测试失败
+qq_019235.htm 测试失败
+qq_037194.htm 测试失败
+qq_020081.htm 测试失败
+blog_7159859d0102wuvj.html 测试失败
+blog_44491d9d0102wbi6.html 测试失败
+qq_009530.htm 测试失败
+qq_046464.htm 测试失败
+qq_036967.htm 测试失败
+qq_039952.htm 测试失败
+qq_047015.htm 测试失败
+qq_007617.htm 测试失败
+qq_055351.htm 测试失败
+CM0FM3KM000187VE.html 测试失败
+CM0G4U14000189FH.html 测试失败
+blog_5b1973430102wt8d.html 测试失败
+blog_6252b0bb0102x0wd.html 测试失败
+qq_030764.htm 测试失败
+qq_030607.htm 测试失败
+qq_035493.htm 测试失败
+CM2TT04G0001899N.html 测试失败
+qq_033323.htm 测试失败
+qq_040968.htm 测试失败
+qq_021556.htm 测试失败
+qq_056523.htm 测试失败
+qq_060495.htm 测试失败
+qq_030749.htm 测试失败
+qq_007787.htm 测试失败
+CLU48D4600018AOQ.html 测试失败
+blog_733bc8b30102wo78.html 测试失败
+blog_5d608f690102w2ro.html 测试失败
+qq_065909.htm 测试失败
+BNMP3U5R0001124J.html 测试失败
+qq_013226.htm 测试失败
+qq_044565.htm 测试失败
+qq_008205.htm 测试失败
+blog_49a351cd0102vl5o.html 测试失败
+qq_028341.htm 测试失败
+blog_52f3dd370102wkoa.html 测试失败
+qq_022841.htm 测试失败
+qq_004558.htm 测试失败
+qq_036576.htm 测试失败
+qq_034365.htm 测试失败
+blog_14cccbb200102xnos.html 测试失败
+qq_041832.htm 测试失败
+qq_003077.htm 测试失败
+BNM5Q4F900014Q4P.html 测试失败
+qq_012955.htm 测试失败
+qq_007725.htm 测试失败
+CLTRG56Q00018AOQ.html 测试失败
+qq_033882.htm 测试失败
+qq_016317.htm 测试失败
+qq_038770.htm 测试失败
+qq_016029.htm 测试失败
+qq_034896.htm 测试失败
+qq_045837.htm 测试失败
+qq_048214.htm 测试失败
+qq_022017.htm 测试失败
+qq_040933.htm 测试失败
+qq_004196.htm 测试失败
+qq_008583.htm 测试失败
+qq_042595.htm 测试失败
+BNL9URN60001124J.html 测试失败
+CM2887NU0001899N.html 测试失败
+CM0E4JKJ000187VE.html 测试失败
+qq_065369.htm 测试失败
+CM17LQGB0001899N.html 测试失败
+qq_039728.htm 测试失败
+qq_046361.htm 测试失败
+qq_008106.htm 测试失败
+CLTTAT8V000187VE.html 测试失败
+qq_037840.htm 测试失败
+blog_1603de7020102wo4y.html 测试失败
+CLV510HV0001875N.html 测试失败
+qq_008465.htm 测试失败
+qq_034787.htm 测试失败
+qq_040078.htm 测试失败
+qq_045000.htm 测试失败
+blog_6a55d6840102wxov.html 测试失败
+blog_66eeadff0102wc2a.html 测试失败
+BNO4VSRK00014AED.html 测试失败
+blog_539c5bd20102vwqq.html 测试失败
+blog_5b1973430102w8ls.html 测试失败
+qq_007066.htm 测试失败
+BNLM91V20001124J.html 测试失败
+qq_005824.htm 测试失败
+blog_5d608f690102wna5.html 测试失败
+qq_018793.htm 测试失败
+qq_037227.htm 测试失败
+BNL07HA10001124J.html 测试失败
+qq_018565.htm 测试失败
+qq_010345.htm 测试失败
+qq_017334.htm 测试失败
+qq_002772.htm 测试失败
+blog_a5357a3e0102vunf.html 测试失败
+blog_6795dd2c0102x5yc.html 测试成功
+blog_59bd45d00102w0dc.html 测试失败
+blog_6252b0bb0102wywa.html 测试失败
+qq_041144.htm 测试失败
+qq_017483.htm 测试失败
+blog_46cf47710102vp75.html 测试失败
+qq_003245.htm 测试失败
+qq_006816.htm 测试失败
+blog_5f236ecd0102vyf0.html 测试失败
+qq_008164.htm 测试失败
+qq_040159.htm 测试失败
+qq_058939.htm 测试失败
+qq_034951.htm 测试失败
+blog_4aeb7d930102wrpu.html 测试失败
+qq_041825.htm 测试失败
+blog_661074dd0102wsxo.html 测试失败
+BNO1J9FO00014JB5.html 测试失败
+qq_018860.htm 测试失败
+qq_019925.htm 测试失败
+qq_006163.htm 测试失败
+qq_003853.htm 测试失败
+qq_031447.htm 测试失败
+qq_055433.htm 测试失败
+qq_012504.htm 测试失败
+qq_038265.htm 测试失败
+qq_003514.htm 测试失败
+CLU0H8TN00018AOQ.html 测试失败
+blog_1407910a60102wa2d.html 测试失败
+qq_005887.htm 测试失败
+qq_018010.htm 测试失败
+qq_035905.htm 测试失败
+blog_58daf6670102wln4.html 测试失败
+qq_024345.htm 测试失败
+qq_006053.htm 测试失败
+qq_007687.htm 测试失败
+CLU3ID4M00018AOQ.html 测试失败
+qq_004053.htm 测试失败
+qq_006737.htm 测试失败
+blog_53ba277e0102w3gn.html 测试失败
+qq_056372.htm 测试失败
+blog_4b2cb00e0102w713.html 测试失败
+blog_4b2cb00e0102wmp7.html 测试失败
+qq_043413.htm 测试失败
+qq_028490.htm 测试失败
+blog_49a351cd0102vlf1.html 测试失败
+qq_039009.htm 测试失败
+qq_023680.htm 测试失败
+blog_5951b3310102xt6e.html 测试失败
+qq_017682.htm 测试失败
+qq_035334.htm 测试失败
+qq_022462.htm 测试失败
+CLUARS8J0001875N.html 测试失败
+qq_018261.htm 测试失败
+blog_475b3d560102wh5w.html 测试失败
+blog_5d608f690102wmsp.html 测试失败
+qq_049484.htm 测试失败
+blog_48fd51d80102wh9i.html 测试失败
+qq_005852.htm 测试失败
+BNO1UG2R00014SEH.html 测试失败
+qq_020092.htm 测试失败
+blog_67f8dabf0102wcc7.html 测试失败
+qq_030086.htm 测试失败
+BNMQIRIT0001124J.html 测试失败
+BNL42SC00001124J.html 测试失败
+qq_006581.htm 测试失败
+qq_035234.htm 测试失败
+qq_017971.htm 测试失败
+BNO4AQ6S00014AEE.html 测试失败
+BNP9TRAV00014SEH.html 测试失败
+qq_038485.htm 测试失败
+CLV95LUL00018AOQ.html 测试失败
+qq_021663.htm 测试失败
+qq_044866.htm 测试失败
+qq_033577.htm 测试失败
+qq_044034.htm 测试失败
+qq_018408.htm 测试失败
+blog_475b3d560102wo6x.html 测试失败
+qq_026239.htm 测试失败
+BNL6FUID0001124J.html 测试失败
+qq_021010.htm 测试失败
+CM0CJ3K3000187VE.html 测试失败
+BNL039CR0001124J.html 测试失败
+qq_005646.htm 测试失败
+BNM2LA6U0001124J.html 测试失败
+CM0U43KH000187VE.html 测试失败
+CM0IH9HO0001875N.html 测试失败
+qq_028784.htm 测试失败
+qq_025449.htm 测试失败
+CM0BT83200014JB5.html 测试失败
+blog_5f0f1d570102w9l3.html 测试失败
+qq_021596.htm 测试失败
+qq_039351.htm 测试失败
+qq_054593.htm 测试失败
+CM0M98Q200018AOQ.html 测试失败
+qq_033214.htm 测试失败
+qq_027561.htm 测试失败
+CLUK0L0E0001899N.html 测试失败
+qq_014528.htm 测试失败
+qq_010400.htm 测试失败
+qq_020067.htm 测试失败
+qq_024352.htm 测试失败
+BNLN94JP0001124J.html 测试失败
+CM30VTED000187VE.html 测试失败
+CM0E7JCM0001875N.html 测试失败
+BNO9F86A0001124J.html 测试失败
+blog_4b2cb00e0102w3vd.html 测试失败
+BNNEJ6UH00014AED.html 测试失败
+blog_5d608f690102wniv.html 测试失败
+qq_020241.htm 测试失败
+BNMKSHD800014AED.html 测试失败
+qq_019333.htm 测试失败
+blog_4cd1c1670102wc4z.html 测试失败
+blog_4c8515f50102w090.html 测试失败
+qq_040990.htm 测试失败
+qq_026630.htm 测试失败
+BNK0GITT0001124J.html 测试失败
+qq_002791.htm 测试失败
+qq_016961.htm 测试失败
+qq_030703.htm 测试失败
+qq_022022.htm 测试失败
+qq_056672.htm 测试失败
+qq_029067.htm 测试失败
+BNM87KQC0001124J.html 测试失败
+qq_020976.htm 测试失败
+qq_033815.htm 测试失败
+qq_006228.htm 测试失败
+blog_726309370102ynz5.html 测试失败
+blog_537f026d0102wpq9.html 测试失败
+CM30ORVG000189FH.html 测试失败
+blog_6252b0bb0102wywb.html 测试失败
+blog_c34a50aa0102vxwu.html 测试失败
+qq_003171.htm 测试失败
+BNP3T3PK00014JB6.html 测试失败
+qq_065317.htm 测试失败
+qq_058189.htm 测试失败
+CM1JRTO40001899N.html 测试失败
+BNPIO9GI00014SEH.html 测试失败
+blog_5b1973430102w2ui.html 测试失败
+BNKSNDM80001124J.html 测试失败
+BNNFBFR400014JB6.html 测试失败
+qq_037984.htm 测试失败
+blog_5343b9460102w580.html 测试失败
+qq_033705.htm 测试失败
+qq_048934.htm 测试失败
+qq_003490.htm 测试失败
+BNOA55IA00014JB5.html 测试失败
+qq_029233.htm 测试失败
+qq_061702.htm 测试失败
+blog_4aeb7d930102wrcq.html 测试失败
+qq_057804.htm 测试失败
+qq_037863.htm 测试失败
+blog_a64f61df0102wwmc.html 测试失败
+qq_013095.htm 测试失败
+qq_032773.htm 测试失败
+BNN7U6EH000146BE.html 测试失败
+CLU433L40001899N.html 测试失败
+qq_047796.htm 测试失败
+qq_020746.htm 测试失败
+qq_042464.htm 测试失败
+blog_a5357a3e0102vvpo.html 测试失败
+blog_48fd51d80102wa7b.html 测试失败
+qq_003119.htm 测试失败
+qq_037089.htm 测试失败
+blog_655eee230102x53l.html 测试失败
+CM0NU3Q9000187VE.html 测试失败
+qq_036672.htm 测试失败
+blog_5b1973430102wuto.html 测试失败
+BNKRBBRU0001124J.html 测试失败
+qq_029420.htm 测试失败
+BNL7P69V0001124J.html 测试失败
+qq_010656.htm 测试失败
+qq_036894.htm 测试失败
+qq_056397.htm 测试失败
+qq_024449.htm 测试失败
+blog_1511613820102wxat.html 测试失败
+qq_050530.htm 测试失败
+qq_035652.htm 测试失败
+qq_016674.htm 测试失败
+qq_044613.htm 测试失败
+CM2IFLPR00018AOP.html 测试失败
+BNNBCMQC00014AED.html 测试失败
+blog_5b1973430102woi5.html 测试失败
+qq_010861.htm 测试失败
+qq_012373.htm 测试失败
+qq_007451.htm 测试失败
+BNPB9RGJ0001124J.html 测试失败
+qq_033936.htm 测试失败
+BNOP5EJ40001124J.html 测试失败
+qq_021415.htm 测试失败
+BNLO204Q0001124J.html 测试失败
+qq_049182.htm 测试失败
+qq_040937.htm 测试失败
+qq_041218.htm 测试失败
+qq_040133.htm 测试失败
+CM0LCGB80001875N.html 测试失败
+qq_005155.htm 测试失败
+blog_9e5389bb0102wnt1.html 测试失败
+BNMQ4KEL00014JB6.html 测试失败
+qq_045880.htm 测试失败
+qq_006054.htm 测试失败
+qq_046893.htm 测试失败
+qq_039310.htm 测试失败
+qq_022833.htm 测试失败
+blog_5b1973430102w1bk.html 测试失败
+qq_028171.htm 测试失败
+blog_61ff32de0102wqxe.html 测试失败
+blog_159478fe40102xt7u.html 测试失败
+qq_014529.htm 测试失败
+qq_022854.htm 测试失败
+qq_014991.htm 测试失败
+blog_61ff32de0102wh38.html 测试失败
+qq_031154.htm 测试失败
+qq_027497.htm 测试失败
+qq_053766.htm 测试失败
+qq_055206.htm 测试失败
+blog_4711b54e0102w1sc.html 测试失败
+BNLPD4KT00014AED.html 测试失败
+qq_063441.htm 测试失败
+blog_6252b0bb0102vql5.html 测试失败
+qq_024956.htm 测试失败
+CLVDDUOE0001875N.html 测试失败
+CLUPHHSU000187VE.html 测试失败
+qq_003415.htm 测试失败
+qq_021602.htm 测试失败
+qq_007000.htm 测试失败
+qq_012959.htm 测试失败
+blog_59bd45d00102wfbw.html 测试失败
+blog_4b2cb00e0102wohe.html 测试失败
+blog_48fd51d80102x001.html 测试失败
+blog_5eba2fb90102w57i.html 测试失败
+blog_4b2cb00e0102w98o.html 测试失败
+qq_037571.htm 测试失败
+qq_024303.htm 测试失败
+blog_166e2f9230102x010.html 测试失败
+blog_53fe981c0102wmyd.html 测试失败
+blog_14cc695940102wdrj.html 测试失败
+blog_6dedbe010102wr0u.html 测试失败
+qq_008941.htm 测试失败
+qq_030734.htm 测试失败
+qq_052935.htm 测试失败
+blog_694171200102wsbe.html 测试失败
+qq_033146.htm 测试失败
+qq_026673.htm 测试失败
+qq_020113.htm 测试失败
+qq_032050.htm 测试失败
+CM1UJRS60001899N.html 测试失败
+qq_055801.htm 测试失败
+blog_5d608f690102wofe.html 测试失败
+qq_022362.htm 测试失败
+qq_026958.htm 测试失败
+qq_026315.htm 测试失败
+blog_5f0f1d570102voip.html 测试失败
+qq_008027.htm 测试失败
+CM0E4JLD000187VE.html 测试失败
+qq_043954.htm 测试失败
+qq_017423.htm 测试失败
+qq_051407.htm 测试失败
+qq_022513.htm 测试失败
+qq_028121.htm 测试失败
+qq_026108.htm 测试失败
+blog_4cd1c1670102wbgd.html 测试失败
+qq_049924.htm 测试失败
+blog_492471c80102wo51.html 测试失败
+BNJV98VM00014JB6.html 测试失败
+blog_4711b54e0102wbzd.html 测试失败
+qq_003866.htm 测试失败
+qq_029689.htm 测试失败
+qq_010340.htm 测试失败
+BNNEGRAQ00014AED.html 测试失败
+blog_51f5d31f0102wpbg.html 测试失败
+blog_a3ccf94a0102w7uw.html 测试失败
+qq_011867.htm 测试失败
+CM0UVJ6E000187VE.html 测试失败
+qq_023151.htm 测试失败
+qq_013579.htm 测试失败
+blog_7377344a0102x11t.html 测试失败
+BNM2TB9K0001124J.html 测试失败
+qq_011846.htm 测试失败
+qq_032412.htm 测试失败
+qq_029678.htm 测试失败
+qq_040841.htm 测试失败
+qq_035971.htm 测试失败
+blog_4711b54e0102wd6s.html 测试失败
+qq_052957.htm 测试失败
+blog_694171200102wv0y.html 测试失败
+BNO187C80001124J.html 测试失败
+qq_020467.htm 测试失败
+qq_005374.htm 测试失败
+qq_025072.htm 测试失败
+qq_032418.htm 测试失败
+CM118H960001899N.html 测试失败
+qq_033989.htm 测试失败
+CLVJ5JDS00018AOP.html 测试失败
+qq_022788.htm 测试失败
+qq_030408.htm 测试失败
+qq_049153.htm 测试失败
+qq_031632.htm 测试失败
+qq_020821.htm 测试失败
+blog_ecf962220102vkov.html 测试失败
+qq_065209.htm 测试失败
+qq_016891.htm 测试失败
+blog_15f20fe440102wz53.html 测试失败
+qq_049518.htm 测试失败
+qq_036764.htm 测试失败
+qq_062438.htm 测试失败
+qq_038613.htm 测试失败
+qq_057444.htm 测试失败
+qq_026337.htm 测试失败
+qq_035323.htm 测试失败
+blog_4b2cb00e0102wjs2.html 测试失败
+CM31OSQQ0001875N.html 测试失败
+CM0PKLNG00018AOR.html 测试失败
+qq_062331.htm 测试失败
+BNLU92JP00014JB5.html 测试失败
+blog_4bdc7dbf0102wma6.html 测试失败
+qq_022869.htm 测试失败
+blog_6a0795df0102wt9n.html 测试失败
+blog_539c5bd20102vwgw.html 测试失败
+qq_034141.htm 测试失败
+qq_062410.htm 测试失败
+blog_6a0795df0102wvsp.html 测试失败
+blog_63af05000102x0h4.html 测试失败
+qq_029658.htm 测试失败
+qq_041370.htm 测试失败
+blog_5b1973430102vki0.html 测试失败
+blog_4b2cb00e0102wozo.html 测试失败
+qq_004238.htm 测试失败
+qq_034566.htm 测试失败
+qq_022014.htm 测试失败
+qq_006985.htm 测试失败
+blog_5b1973430102w4ol.html 测试失败
+CM031RTQ00018AOP.html 测试失败
+blog_53ff33bd0102wdkm.html 测试失败
+qq_022479.htm 测试失败
+blog_4e780db10102wgbq.html 测试失败
+BNKS0EPQ0001124J.html 测试失败
+CLU0BTDB00018AOQ.html 测试失败
+blog_492471c80102wo55.html 测试失败
+BNPA8RAR00014JB6.html 测试失败
+qq_016679.htm 测试失败
+qq_026531.htm 测试失败
+qq_040411.htm 测试失败
+qq_033410.htm 测试失败
+qq_038937.htm 测试失败
+qq_013902.htm 测试失败
+qq_039274.htm 测试失败
+blog_51f5d31f0102wpcl.html 测试失败
+qq_035634.htm 测试失败
+BNLNU3KE0001124J.html 测试失败
+qq_051905.htm 测试失败
+qq_056647.htm 测试失败
+blog_46cf47710102w0s8.html 测试失败
+qq_048264.htm 测试失败
+BNOBD9UJ00014AEE.html 测试失败
+CM234TSO000187VI.html 测试失败
+BNM4G43L0001124J.html 测试失败
+qq_015826.htm 测试失败
+qq_039675.htm 测试失败
+qq_031389.htm 测试失败
+qq_002911.htm 测试失败
+CM31PR5P00014AEE.html 测试失败
+qq_006747.htm 测试失败
+qq_019979.htm 测试失败
+blog_53402f740102xtms.html 测试失败
+qq_044653.htm 测试失败
+qq_003613.htm 测试失败
+qq_022585.htm 测试失败
+blog_a64f61df0102wwkm.html 测试失败
+qq_047139.htm 测试失败
+qq_037505.htm 测试失败
+qq_011832.htm 测试失败
+blog_a1c7b3440102wr4y.html 测试失败
+BNOEI3B200014JB6.html 测试失败
+blog_a5357a3e0102wocg.html 测试失败
+blog_5b1973430102weaj.html 测试失败
+blog_59bd45d00102wqx8.html 测试失败
+blog_5b1973430102wszf.html 测试失败
+qq_006004.htm 测试失败
+blog_eaaf2aff0102x0rx.html 测试失败
+BNKP5DNN00014Q4P.html 测试失败
+qq_037797.htm 测试失败
+qq_037831.htm 测试失败
+qq_047987.htm 测试失败
+BNLQKLD2000146BE.html 测试失败
+qq_007069.htm 测试失败
+qq_017729.htm 测试失败
+CM2DNF8T00018AOP.html 测试失败
+blog_5f236ecd0102vpbn.html 测试失败
+qq_025681.htm 测试失败
+qq_006490.htm 测试失败
+qq_038153.htm 测试失败
+qq_038656.htm 测试失败
+blog_9ec6cf980102xe5w.html 测试失败
+qq_003141.htm 测试失败
+blog_499f915d0102vop6.html 测试失败
+qq_028134.htm 测试失败
+CLVIKE9C0001875N.html 测试失败
+CLUQ85S200018AOQ.html 测试失败
+blog_48fd51d80102vp1t.html 测试失败
+BNKVCPCO0001124J.html 测试失败
+BNPJJHAV0001124J.html 测试失败
+CLVEME5K00018AOQ.html 测试失败
+qq_043065.htm 测试失败
+blog_48ba1ffd0102x49o.html 测试失败
+blog_6a5ce6450102wo8y.html 测试失败
+qq_003552.htm 测试失败
+BNO63VLM00014AEE.html 测试失败
+CLUHILGA0001899N.html 测试失败
+qq_049509.htm 测试失败
+blog_13787b4980102wk5q.html 测试失败
+qq_009859.htm 测试失败
+BNKCUG1D0001124J.html 测试失败
+qq_026989.htm 测试失败
+blog_13787b4980102wncj.html 测试失败
+qq_029030.htm 测试失败
+qq_025724.htm 测试失败
+qq_018564.htm 测试失败
+qq_006229.htm 测试失败
+qq_043208.htm 测试失败
+qq_009851.htm 测试失败
+qq_064164.htm 测试失败
+qq_034069.htm 测试失败
+blog_4b759c4f0102wfcv.html 测试失败
+qq_018809.htm 测试失败
+qq_021233.htm 测试失败
+qq_024570.htm 测试失败
+BNMA38M80001124J.html 测试失败
+qq_010224.htm 测试失败
+qq_027822.htm 测试失败
+blog_48fd51d80102wh4d.html 测试失败
+BNONAVHP0001124J.html 测试失败
+CLV3HA2R0001875N.html 测试失败
+CLTSUGF40001899O.html 测试失败
+qq_031891.htm 测试失败
+blog_46cf47710102vppa.html 测试失败
+blog_4e4b93b90102woew.html 测试失败
+qq_013425.htm 测试失败
+qq_025651.htm 测试失败
+qq_002678.htm 测试失败
+qq_019185.htm 测试失败
+blog_12c804a620102x2qv.html 测试失败
+CM0S88CF00018AOQ.html 测试失败
+qq_021340.htm 测试失败
+CLUTOQ4E0001875N.html 测试失败
+qq_014321.htm 测试失败
+qq_005164.htm 测试失败
+blog_615649a50102wii4.html 测试失败
+blog_4b2cb00e0102w528.html 测试失败
+qq_036400.htm 测试失败
+qq_020075.htm 测试失败
+qq_037172.htm 测试失败
+blog_a5357a3e0102wj0e.html 测试失败
+CM0FRMD40001875N.html 测试失败
+CM1834BU000187VE.html 测试失败
+BNKHK5MD00014AEE.html 测试失败
+blog_48fd51d80102wc38.html 测试失败
+BNMEONJT0001124J.html 测试失败
+BNOJMGDD00014AEE.html 测试失败
+qq_032330.htm 测试失败
+qq_044477.htm 测试失败
+BNOG1VDC0001124J.html 测试失败
+qq_025665.htm 测试失败
+qq_005178.htm 测试失败
+blog_5b1973430102wgz0.html 测试失败
+qq_040942.htm 测试失败
+qq_054851.htm 测试失败
+qq_039823.htm 测试失败
+blog_5f2a67a50102vhan.html 测试失败
+blog_539c5bd20102vsvq.html 测试失败
+qq_050940.htm 测试失败
+qq_058662.htm 测试失败
+qq_019285.htm 测试失败
+qq_036116.htm 测试失败
+blog_539c5bd20102vi66.html 测试失败
+blog_4aeb7d930102wux0.html 测试失败
+qq_032209.htm 测试失败
+blog_a64f61df0102wt21.html 测试失败
+blog_4cd1c1670102wu38.html 测试失败
+blog_15f20fe440102wyzd.html 测试失败
+qq_017213.htm 测试失败
+blog_4b2cb00e0102w4xz.html 测试失败
+qq_013326.htm 测试失败
+blog_48fd51d80102vh0i.html 测试失败
+qq_030389.htm 测试失败
+qq_022622.htm 测试失败
+blog_5b1973430102wutm.html 测试失败
+qq_036053.htm 测试失败
+qq_025703.htm 测试失败
+CLU96C6Q00018AOQ.html 测试失败
+CLUQPENJ00018AOQ.html 测试失败
+qq_017740.htm 测试失败
+qq_038840.htm 测试失败
+blog_539c5bd20102wai4.html 测试失败
+qq_056445.htm 测试失败
+CM0CF7IG00018AOQ.html 测试失败
+blog_5f64d98d0102vpl6.html 测试失败
+qq_050029.htm 测试失败
+qq_007742.htm 测试失败
+qq_059228.htm 测试失败
+qq_042778.htm 测试失败
+qq_005148.htm 测试失败
+blog_6a55d6840102xj3y.html 测试失败
+qq_007424.htm 测试失败
+qq_043611.htm 测试失败
+CM2P8C9L0001875N.html 测试失败
+BNOD94PV00014SEH.html 测试失败
+qq_023861.htm 测试失败
+qq_040520.htm 测试失败
+CLV1HH570001875N.html 测试失败
+blog_49ab39930102vsj8.html 测试失败
+qq_031987.htm 测试失败
+qq_048425.htm 测试失败
+qq_056066.htm 测试失败
+qq_002920.htm 测试失败
+BNLPGQB600014AEE.html 测试失败
+qq_009865.htm 测试失败
+blog_7159859d0102xhls.html 测试失败
+qq_062270.htm 测试失败
+qq_035179.htm 测试失败
+BNLA7GKA0001124J.html 测试失败
+qq_004803.htm 测试失败
+blog_13787b4980102wkyy.html 测试失败
+qq_037373.htm 测试失败
+qq_047392.htm 测试失败
+qq_016997.htm 测试失败
+qq_040682.htm 测试失败
+blog_6252b0bb0102wzjt.html 测试失败
+BNO6IFPK00014JB5.html 测试失败
+qq_042459.htm 测试失败
+CM0R6QCU00018AOQ.html 测试失败
+BNOPER3P00014JB6.html 测试失败
+qq_023780.htm 测试失败
+qq_056064.htm 测试失败
+BNLGALDJ00014AEE.html 测试失败
+qq_020803.htm 测试失败
+qq_023190.htm 测试失败
+BNNR0N2300014AED.html 测试失败
+qq_057082.htm 测试失败
+qq_042489.htm 测试失败
+qq_003823.htm 测试失败
+qq_059556.htm 测试失败
+qq_045134.htm 测试失败
+qq_034415.htm 测试失败
+qq_035642.htm 测试失败
+qq_048175.htm 测试失败
+qq_039167.htm 测试失败
+qq_024364.htm 测试失败
+BNKSFOVB00014AED.html 测试失败
+qq_039180.htm 测试失败
+qq_060008.htm 测试失败
+qq_039231.htm 测试失败
+qq_002641.htm 测试失败
+qq_021473.htm 测试失败
+qq_033477.htm 测试失败
+qq_005550.htm 测试失败
+BNOPGJ8E00014AEE.html 测试失败
+qq_015213.htm 测试失败
+qq_004069.htm 测试失败
+qq_031373.htm 测试失败
+qq_040355.htm 测试失败
+qq_020701.htm 测试失败
+qq_013294.htm 测试失败
+blog_4711b54e0102wgoj.html 测试失败
+blog_547645590102x48s.html 测试失败
+qq_003375.htm 测试失败
+qq_034359.htm 测试失败
+qq_026900.htm 测试失败
+qq_067040.htm 测试失败
+qq_038359.htm 测试失败
+blog_15f20fe440102wvv1.html 测试失败
+qq_021997.htm 测试失败
+qq_045220.htm 测试失败
+qq_021427.htm 测试失败
+qq_004441.htm 测试失败
+qq_006239.htm 测试失败
+qq_005021.htm 测试失败
+blog_4aeb7d930102wuic.html 测试失败
+blog_48ba1ffd0102wisq.html 测试失败
+BNO79LDM00014SEH.html 测试失败
+blog_684ebae30102w8x6.html 测试失败
+qq_039669.htm 测试失败
+blog_5b1973430102w4af.html 测试失败
+qq_032536.htm 测试失败
+qq_051780.htm 测试失败
+blog_4711b54e0102wflo.html 测试失败
+CLVJ26E5000187VI.html 测试失败
+BNM3B1HD0001124J.html 测试失败
+blog_53fe981c0102wpzz.html 测试失败
+qq_032933.htm 测试失败
+qq_004515.htm 测试失败
+blog_7a6b629f0102wkpd.html 测试失败
+blog_4cd1c1670102w5fx.html 测试失败
+qq_045461.htm 测试失败
+qq_024486.htm 测试失败
+CM098PNF00018AOQ.html 测试失败
+CLVJ2DOH000187VI.html 测试失败
+qq_029580.htm 测试失败
+qq_014867.htm 测试失败
+blog_6252b0bb0102x0t8.html 测试失败
+qq_035724.htm 测试失败
+qq_007007.htm 测试失败
+blog_5f0f1d570102w9ip.html 测试失败
+blog_547645590102x1nk.html 测试失败
+CM1834C1000187VE.html 测试失败
+qq_017850.htm 测试失败
+qq_037093.htm 测试失败
+qq_017250.htm 测试失败
+blog_46cf47710102vq1h.html 测试失败
+BNMCVT4H0001124J.html 测试失败
+qq_007597.htm 测试失败
+blog_159478fe40102xv0j.html 测试失败
+blog_15f20fe440102wwou.html 测试失败
+blog_61ff32de0102wvjm.html 测试失败
+blog_539c5bd20102vqtq.html 测试失败
+qq_021153.htm 测试失败
+blog_48fd51d80102vga1.html 测试失败
+qq_022376.htm 测试失败
+blog_6dedbe010102wcty.html 测试失败
+qq_022932.htm 测试失败
+CM28R5GQ0001899N.html 测试失败
+blog_4bc425eb0102wjp3.html 测试失败
+qq_024872.htm 测试失败
+BNKQ113400014Q4P.html 测试失败
+CM2AIOGQ00018AOP.html 测试失败
+qq_019635.htm 测试失败
+blog_4711b54e0102wbcy.html 测试失败
+blog_6252b0bb0102xbqg.html 测试失败
+qq_032789.htm 测试失败
+qq_037583.htm 测试失败
+qq_034125.htm 测试失败
+qq_029642.htm 测试失败
+blog_4aeb7d930102wr1m.html 测试失败
+qq_036510.htm 测试失败
+BNLGOJIO00014JB6.html 测试失败
+qq_012490.htm 测试失败
+qq_020583.htm 测试失败
+blog_46cf47710102vnqn.html 测试失败
+blog_4bc425eb0102wr31.html 测试失败
+blog_aeb7dd380102x93m.html 测试失败
+blog_46cf47710102voiz.html 测试失败
+blog_6a55d6840102w7lk.html 测试失败
+qq_011920.htm 测试失败
+qq_040609.htm 测试失败
+qq_057295.htm 测试失败
+qq_036094.htm 测试失败
+qq_039525.htm 测试失败
+qq_007601.htm 测试失败
+qq_019919.htm 测试失败
+qq_018819.htm 测试失败
+qq_019018.htm 测试失败
+CLVU20GP0001875N.html 测试失败
+blog_615fb6320102wwtw.html 测试失败
+CLV9B5IQ0001875N.html 测试失败
+blog_5d71b5940102wkvc.html 测试失败
+blog_5b1973430102w5b6.html 测试失败
+qq_017002.htm 测试失败
+blog_13787b4980102wlp1.html 测试失败
+qq_042854.htm 测试失败
+qq_049456.htm 测试失败
+blog_9e5389bb0102wwdx.html 测试失败
+blog_15f20fe440102wygk.html 测试失败
+blog_5b1973430102wvyo.html 测试失败
+BNP3SH5K000156PO.html 测试失败
+qq_030679.htm 测试失败
+BNOOFRBO00014JB6.html 测试失败
+blog_14cc695940102wwxu.html 测试失败
+qq_040485.htm 测试失败
+CM2RAEJT000187VI.html 测试失败
+blog_48ba1ffd0102vo9s.html 测试失败
+qq_002998.htm 测试失败
+qq_022783.htm 测试失败
+CLV19RF90001875N.html 测试失败
+BNO74NNL00014SEH.html 测试失败
+qq_043358.htm 测试失败
+qq_044978.htm 测试失败
+qq_004118.htm 测试失败
+CLVAIATA0001875N.html 测试失败
+qq_016547.htm 测试失败
+qq_043734.htm 测试失败
+BNOM3O7H0001124J.html 测试失败
+qq_003756.htm 测试失败
+qq_028303.htm 测试失败
+blog_9ec6cf980102w66k.html 测试失败
+qq_037538.htm 测试失败
+qq_059010.htm 测试失败
+CM0KVJRS00018AOQ.html 测试失败
+qq_035916.htm 测试失败
+BNPDO2AV0001124J.html 测试失败
+qq_004342.htm 测试失败
+blog_46cf47710102w4m4.html 测试失败
+qq_046377.htm 测试失败
+blog_9ec6cf980102xhjr.html 测试失败
+blog_4711b54e0102wbf0.html 测试失败
+qq_006055.htm 测试失败
+qq_061037.htm 测试失败
+qq_019756.htm 测试失败
+blog_5102b21c0102x8hp.html 测试失败
+qq_027452.htm 测试失败
+qq_037886.htm 测试失败
+blog_539c5bd20102w409.html 测试失败
+qq_011421.htm 测试失败
+BNMCDVJ10001124J.html 测试失败
+qq_039251.htm 测试失败
+blog_61e047550102whjm.html 测试失败
+blog_4b2cb00e0102waar.html 测试失败
+blog_655eee230102x5tg.html 测试失败
+CLUUS31Q000187VE.html 测试失败
+qq_005033.htm 测试失败
+blog_a3d444e30102wsp8.html 测试失败
+qq_055760.htm 测试失败
+qq_037845.htm 测试失败
+blog_48fd51d80102vq8i.html 测试失败
+CM0J2IUU00014AEE.html 测试失败
+blog_6252b0bb0102vpje.html 测试失败
+qq_024805.htm 测试失败
+qq_052702.htm 测试失败
+qq_010036.htm 测试失败
+blog_15f3c061f0102x43a.html 测试失败
+qq_036674.htm 测试失败
+qq_033231.htm 测试失败
+qq_028679.htm 测试失败
+BNPJI4DD00014SEH.html 测试失败
+qq_034044.htm 测试失败
+blog_5b1973430102w3n3.html 测试失败
+blog_16bedcc610102wywa.html 测试失败
+qq_013065.htm 测试失败
+qq_027250.htm 测试失败
+blog_4b2cb00e0102vkuz.html 测试失败
+blog_5c937fb10102w91k.html 测试失败
+blog_4b759c4f0102wfvq.html 测试失败
+qq_059487.htm 测试失败
+blog_80f536630102xhzx.html 测试失败
+qq_049671.htm 测试失败
+BNO1RQ5800014JB5.html 测试失败
+qq_032734.htm 测试失败
+qq_007368.htm 测试失败
+qq_026261.htm 测试失败
+qq_038052.htm 测试失败
+qq_002943.htm 测试失败
+qq_023095.htm 测试失败
+CM1MKMBG0001875N.html 测试失败
+qq_042097.htm 测试失败
+CLVIU8N1000187VI.html 测试失败
+CLVPG44600018AOP.html 测试失败
+blog_4b2cb00e0102w8mb.html 测试失败
+qq_005325.htm 测试失败
+blog_6252b0bb0102xaa2.html 测试失败
+blog_5d608f690102wol6.html 测试失败
+qq_017973.htm 测试失败
+blog_5d608f690102wlax.html 测试失败
+blog_15f3c061f0102x3f1.html 测试失败
+qq_041112.htm 测试失败
+blog_9e5389bb0102wtzc.html 测试失败
+blog_4870bbec0102wtlg.html 测试失败
+qq_038597.htm 测试失败
+blog_691a9bd00102xoeq.html 测试失败
+qq_004889.htm 测试失败
+qq_020709.htm 测试失败
+blog_4aeb7d930102wowe.html 测试失败
+blog_15f20fe440102wwx7.html 测试失败
+qq_017482.htm 测试失败
+qq_017272.htm 测试失败
+qq_008880.htm 测试失败
+blog_547645590102wmtx.html 测试失败
+BNKVQ3QS0001124J.html 测试失败
+qq_061328.htm 测试失败
+qq_021205.htm 测试失败
+BNOD530F00014AEE.html 测试失败
+qq_010459.htm 测试失败
+qq_021104.htm 测试失败
+blog_e9bdd00e0102xtgl.html 测试失败
+qq_003911.htm 测试失败
+blog_48fd51d80102w8w3.html 测试失败
+qq_047811.htm 测试失败
+qq_020630.htm 测试失败
+qq_014742.htm 测试失败
+CLTVTEL4000187VE.html 测试失败
+qq_005172.htm 测试失败
+BNOE045Q00014AEE.html 测试失败
+blog_48ba1ffd0102x4ao.html 测试失败
+blog_d6d6719b0102wg4p.html 测试失败
+blog_9b9ef8e50102w1mx.html 测试失败
+blog_6aadcb590102w0zt.html 测试失败
+qq_022283.htm 测试失败
+blog_a5357a3e0102wh7f.html 测试失败
+qq_022075.htm 测试失败
+CLU3QVUR0001899N.html 测试失败
+BNP7TIRU00014AED.html 测试失败
+qq_038890.htm 测试失败
+qq_054515.htm 测试失败
+blog_6252b0bb0102wyrf.html 测试失败
+blog_48ba1ffd0102wlpc.html 测试失败
+qq_003564.htm 测试失败
+BNPC7P7N00014PRF.html 测试失败
+qq_006690.htm 测试失败
+BNOALTOA00014AEE.html 测试失败
+blog_ed22e9740102vpm1.html 测试失败
+qq_067016.htm 测试失败
+CLVIUI6E000187VI.html 测试失败
+qq_044352.htm 测试失败
+qq_012267.htm 测试失败
+blog_3eac66f90102xebh.html 测试失败
+qq_003301.htm 测试失败
+qq_052015.htm 测试失败
+blog_7a6b629f0102wrwa.html 测试失败
+qq_066214.htm 测试失败
+qq_036427.htm 测试失败
+qq_016842.htm 测试失败
+qq_045413.htm 测试失败
+qq_040089.htm 测试失败
+CLU1GGFC0001875N.html 测试失败
+qq_023540.htm 测试失败
+qq_030567.htm 测试失败
+qq_005149.htm 测试失败
+blog_48fd51d80102vl41.html 测试失败
+qq_019682.htm 测试失败
+qq_041152.htm 测试失败
+qq_002701.htm 测试失败
+blog_48fd51d80102wgo5.html 测试失败
+qq_026296.htm 测试失败
+qq_035170.htm 测试失败
+qq_060643.htm 测试失败
+qq_052906.htm 测试失败
+qq_034306.htm 测试失败
+qq_036273.htm 测试失败
+qq_042557.htm 测试失败
+qq_036717.htm 测试失败
+qq_009376.htm 测试失败
+qq_002981.htm 测试失败
+CLV5IISA0001875N.html 测试失败
+qq_049190.htm 测试失败
+blog_6252b0bb0102xbvg.html 测试失败
+qq_060443.htm 测试失败
+blog_a64f61df0102xfhy.html 测试失败
+qq_050129.htm 测试失败
+BNO2GLOR0001124J.html 测试失败
+blog_495b8ba60102wxtd.html 测试失败
+qq_036772.htm 测试失败
+BNN139710001124J.html 测试失败
+qq_021802.htm 测试失败
+blog_5b1973430102wreb.html 测试失败
+qq_041722.htm 测试失败
+qq_020131.htm 测试失败
+qq_033100.htm 测试失败
+blog_13787b4980102wdq8.html 测试失败
+blog_507f25000102xd9j.html 测试失败
+BNN3OF530001124J.html 测试失败
+qq_023184.htm 测试失败
+qq_042001.htm 测试失败
+CLV4LTVD00018AOQ.html 测试失败
+qq_006659.htm 测试失败
+qq_032906.htm 测试失败
+blog_13657092e0102wesl.html 测试失败
+CLV7SD2N0001875N.html 测试失败
+CLU304JD0001899N.html 测试失败
+qq_047992.htm 测试失败
+qq_023812.htm 测试失败
+qq_020809.htm 测试失败
+qq_065735.htm 测试失败
+qq_059848.htm 测试失败
+CLVDMPKN00018AOQ.html 测试失败
+BNNHUE3500014AED.html 测试失败
+BNMIGQ6I000146BE.html 测试失败
+qq_053964.htm 测试失败
+qq_019911.htm 测试失败
+blog_48fd51d80102vo9q.html 测试失败
+blog_48fd51d80102vnpy.html 测试失败
+CM3652BT000187VE.html 测试失败
+BNLNTT170001124J.html 测试失败
+qq_027513.htm 测试失败
+qq_065383.htm 测试失败
+qq_021707.htm 测试失败
+qq_011671.htm 测试失败
+blog_48ba1ffd0102x4cs.html 测试失败
+CLU5639B00018AOQ.html 测试失败
+qq_021409.htm 测试失败
+qq_030432.htm 测试失败
+qq_038521.htm 测试失败
+qq_020614.htm 测试失败
+qq_042837.htm 测试失败
+qq_037673.htm 测试失败
+qq_007153.htm 测试失败
+CLV38EM40001899N.html 测试失败
+qq_041789.htm 测试失败
+qq_018312.htm 测试失败
+qq_055314.htm 测试失败
+qq_026141.htm 测试失败
+qq_011043.htm 测试失败
+blog_4c8515f50102wllz.html 测试失败
+qq_020948.htm 测试失败
+qq_031128.htm 测试失败
+CM08567H0001875N.html 测试失败
+blog_49c1101d0102wlb4.html 测试失败
+qq_037525.htm 测试失败
+qq_004934.htm 测试失败
+qq_058167.htm 测试失败
+blog_48fd51d80102wzeo.html 测试失败
+qq_016615.htm 测试失败
+qq_022504.htm 测试失败
+CLUAOMCP0001899O.html 测试失败
+qq_002875.htm 测试失败
+blog_5f0f1d570102vr1s.html 测试失败
+qq_019014.htm 测试失败
+qq_027143.htm 测试失败
+qq_054692.htm 测试失败
+qq_015320.htm 测试失败
+BNMRJQMQ0001124J.html 测试失败
+qq_040290.htm 测试失败
+qq_004908.htm 测试失败
+blog_3eac66f90102xd9d.html 测试失败
+qq_003718.htm 测试失败
+BNOD4AR200014AEE.html 测试失败
+qq_024022.htm 测试失败
+blog_3c05ae760102x8h9.html 测试失败
+qq_002551.htm 测试失败
+qq_065884.htm 测试失败
+qq_005573.htm 测试失败
+qq_003616.htm 测试失败
+BNOEQIK200014AEE.html 测试失败
+blog_4711b54e0102wgve.html 测试失败
+qq_021027.htm 测试失败
+qq_031677.htm 测试失败
+qq_024791.htm 测试失败
+qq_037262.htm 测试失败
+qq_005477.htm 测试失败
+qq_008060.htm 测试失败
+qq_038162.htm 测试失败
+BNO0U8QT00014AED.html 测试失败
+blog_6a55d6840102x4kc.html 测试失败
+blog_e9bdd00e0102xuef.html 测试失败
+qq_043742.htm 测试失败
+qq_014298.htm 测试失败
+qq_006565.htm 测试失败
+qq_005712.htm 测试失败
+BNMH1UTD000146BE.html 测试失败
+blog_539c5bd20102wgi5.html 测试失败
+blog_ed22e9740102vt8x.html 测试失败
+qq_031801.htm 测试失败
+BNLFD09G00014AED.html 测试失败
+qq_042733.htm 测试失败
+blog_5b1973430102vt81.html 测试失败
+CM0L0JOT000187VE.html 测试失败
+qq_033491.htm 测试失败
+CM2IFRIO00018AOP.html 测试失败
+qq_003210.htm 测试失败
+BNK6GVFN0001124J.html 测试失败
+qq_041729.htm 测试失败
+qq_041044.htm 测试失败
+qq_025424.htm 测试失败
+BNN95HUJ00014JB6.html 测试失败
+qq_032118.htm 测试失败
+qq_057919.htm 测试失败
+BNKD86D80001124J.html 测试失败
+CM0Q5JGB000187VE.html 测试失败
+qq_020771.htm 测试失败
+qq_010612.htm 测试失败
+qq_018748.htm 测试失败
+qq_032234.htm 测试失败
+qq_026491.htm 测试失败
+qq_030845.htm 测试失败
+qq_022147.htm 测试失败
+blog_6252b0bb0102wyv8.html 测试失败
+qq_031301.htm 测试失败
+blog_9cb260660102x1y6.html 测试失败
+qq_042871.htm 测试失败
+blog_75b1a75f0102w8tf.html 测试失败
+qq_031990.htm 测试失败
+qq_014870.htm 测试失败
+qq_039411.htm 测试失败
+qq_023180.htm 测试失败
+CM0C0UNT0001875N.html 测试失败
+CM1TU4EO0001899N.html 测试失败
+CM078RDU00018AOQ.html 测试失败
+blog_a716fd450102wywk.html 测试失败
+qq_042467.htm 测试失败
+blog_4711b54e0102w3nv.html 测试失败
+qq_047612.htm 测试失败
+CM0A0JED000187VE.html 测试失败
+qq_011960.htm 测试失败
+qq_016078.htm 测试失败
+qq_060352.htm 测试失败
+CLTQJ84C0001875N.html 测试失败
+blog_4965d19a0102w4vm.html 测试失败
+qq_034221.htm 测试失败
+qq_034250.htm 测试失败
+qq_003512.htm 测试失败
+qq_019594.htm 测试失败
+blog_48d991530102vryu.html 测试失败
+blog_48ba1ffd0102wk84.html 测试失败
+CM0EOVKF00018AOQ.html 测试失败
+qq_006023.htm 测试失败
+CLTS21UK00018AOQ.html 测试失败
+qq_019232.htm 测试失败
+qq_002880.htm 测试失败
+blog_48ba1ffd0102wisp.html 测试失败
+BNLG17JH0001124J.html 测试失败
+qq_028342.htm 测试失败
+qq_022852.htm 测试失败
+blog_5f0f1d570102voja.html 测试失败
+CM0S7JBL000187VE.html 测试失败
+qq_003752.htm 测试失败
+blog_573dea950102wgfb.html 测试失败
+blog_4711b54e0102wbd2.html 测试失败
+qq_058489.htm 测试失败
+blog_4bc425eb0102wtgf.html 测试失败
+qq_040364.htm 测试失败
+qq_051078.htm 测试失败
+qq_034413.htm 测试失败
+blog_6252b0bb0102xbdv.html 测试失败
+blog_4e298d170102wyuz.html 测试失败
+CM0K0NFJ00014AEE.html 测试失败
+qq_045975.htm 测试失败
+qq_037874.htm 测试失败
+qq_027772.htm 测试失败
+blog_a3d444e30102wt1f.html 测试失败
+qq_064135.htm 测试失败
+qq_004178.htm 测试失败
+qq_017572.htm 测试失败
+qq_006871.htm 测试失败
+qq_040330.htm 测试失败
+CLUTFTDO0001899O.html 测试失败
+qq_037670.htm 测试失败
+qq_003965.htm 测试失败
+qq_002332.htm 测试失败
+qq_034761.htm 测试失败
+blog_a5357a3e0102vssa.html 测试失败
+qq_007607.htm 测试失败
+qq_031885.htm 测试失败
+blog_4711b54e0102w55p.html 测试失败
+qq_021343.htm 测试失败
+blog_53d2ac990102x3t6.html 测试失败
+blog_708567850102wvka.html 测试失败
+BNKMFSR200014AEE.html 测试失败
+CLUOGUAQ00018AOR.html 测试失败
+blog_5d608f690102wo3q.html 测试失败
+qq_018438.htm 测试失败
+qq_032698.htm 测试失败
+qq_048772.htm 测试失败
+blog_13787b4980102w107.html 测试失败
+blog_a5357a3e0102wjda.html 测试失败
+qq_016398.htm 测试失败
+CLUH1ETS0001899O.html 测试失败
+qq_041299.htm 测试失败
+blog_9ec6cf980102wf7a.html 测试失败
+qq_046970.htm 测试失败
+blog_59bd45d00102wbba.html 测试失败
+blog_1304649a30102x1xc.html 测试失败
+blog_492471c80102wo57.html 测试失败
+qq_024160.htm 测试失败
+qq_034411.htm 测试失败
+blog_1407910a60102x7i0.html 测试失败
+blog_a5357a3e0102wbjc.html 测试失败
+blog_5f236ecd0102vyid.html 测试失败
+qq_040866.htm 测试失败
+qq_040200.htm 测试失败
+qq_041869.htm 测试失败
+blog_139b7bbcf0102wj5k.html 测试失败
+blog_46cf47710102vs1d.html 测试失败
+qq_037541.htm 测试失败
+blog_5b1973430102wgz7.html 测试失败
+qq_018466.htm 测试失败
+BNO7QK5V00014AEE.html 测试失败
+blog_48fd51d80102vn3l.html 测试失败
+blog_a3d444e30102wss6.html 测试失败
+qq_038002.htm 测试失败
+blog_1407910a60102wmhm.html 测试失败
+qq_015952.htm 测试失败
+BNOOUPQT0001124J.html 测试失败
+qq_006206.htm 测试失败
+qq_058745.htm 测试失败
+qq_005568.htm 测试失败
+CLUILM1R000187VE.html 测试失败
+qq_034033.htm 测试失败
+blog_539c5bd20102w4sg.html 测试失败
+qq_005876.htm 测试失败
+blog_49ab39930102wiza.html 测试失败
+qq_055380.htm 测试失败
+qq_033880.htm 测试失败
+blog_49ab39930102wofu.html 测试失败
+qq_039531.htm 测试失败
+BNO24L0J00014AEE.html 测试失败
+qq_060497.htm 测试失败
+qq_058487.htm 测试失败
+qq_005870.htm 测试失败
+*************结束测试*************
+
+2017-06-24 13:02:59,152 [Thread-8:139955082860288] [crawlermanage.views:261] [INFO]- 0.06
+2017-06-24 13:03:28,946 [Thread-9:139955082860288] [crawlermanage.views:260] [INFO]- ----------对正文抽取的结果进行评分，进行准确度的打分，程序会自动忽略掉所有的空格后进行对比----------
+*************开始测试*************
+BNLTAO3E00014AED.html 测试成功
+blog_539c5bd20102vox7.html 测试失败
+qq_015809.htm 测试成功
+qq_033802.htm 测试成功
+blog_9c4ea27d0102wy0w.html 测试失败
+qq_038802.htm 测试失败
+CLUL6TC200018AOQ.html 测试失败
+qq_011221.htm 测试失败
+qq_003701.htm 测试失败
+CLUV5BTI0001899N.html 测试成功
+BNOL2B7U00014AED.html 测试成功
+qq_003294.htm 测试成功
+CM071TH600018AOP.html 测试成功
+CLUBK136000187VE.html 测试成功
+qq_020263.htm 测试成功
+qq_003661.htm 测试成功
+qq_002841.htm 测试成功
+qq_029160.htm 测试成功
+blog_4bc425eb0102wt8u.html 测试失败
+blog_539c5bd20102w2oc.html 测试失败
+qq_030003.htm 测试成功
+qq_039864.htm 测试失败
+blog_15f20fe440102wxv8.html 测试失败
+qq_043858.htm 测试成功
+qq_020506.htm 测试成功
+qq_037985.htm 测试成功
+blog_694171200102wv0z.html 测试失败
+qq_037271.htm 测试成功
+qq_024582.htm 测试成功
+qq_021526.htm 测试失败
+qq_004546.htm 测试失败
+qq_032417.htm 测试成功
+qq_032568.htm 测试成功
+BNOC54NA00014JB5.html 测试成功
+qq_002299.htm 测试成功
+qq_009569.htm 测试成功
+qq_053873.htm 测试成功
+BNK8B7AQ00014SEH.html 测试成功
+qq_041384.htm 测试成功
+qq_041994.htm 测试成功
+qq_028562.htm 测试成功
+blog_6a5ce6450102wreu.html 测试失败
+blog_1670293f40102xw26.html 测试失败
+blog_6252b0bb0102x1k9.html 测试失败
+blog_13787b4980102wmrx.html 测试成功
+blog_4cd1c1670102wfdk.html 测试失败
+BNOHUKPB0001124J.html 测试成功
+qq_003082.htm 测试失败
+qq_043843.htm 测试成功
+qq_005096.htm 测试失败
+qq_009586.htm 测试失败
+qq_038690.htm 测试成功
+blog_9ec6cf980102wsb7.html 测试失败
+qq_033399.htm 测试失败
+qq_051968.htm 测试成功
+qq_006027.htm 测试成功
+CM1V50OA0001899N.html 测试成功
+blog_4711b54e0102wdfx.html 测试成功
+qq_019745.htm 测试成功
+qq_014884.htm 测试失败
+blog_5b1973430102w87x.html 测试失败
+CLUG9MDN00018AOR.html 测试成功
+qq_006376.htm 测试失败
+qq_053630.htm 测试失败
+blog_4e780db10102wwrx.html 测试失败
+qq_038744.htm 测试成功
+blog_48fd51d80102vn8b.html 测试成功
+qq_003591.htm 测试成功
+BNO53AE80001124J.html 测试成功
+BNO57Q9600014AEE.html 测试成功
+qq_026682.htm 测试成功
+qq_022215.htm 测试成功
+BNOHQJPD0001124J.html 测试成功
+blog_1603de7020102wprq.html 测试失败
+blog_46cf47710102w1ei.html 测试失败
+blog_5b1973430102wsvz.html 测试失败
+qq_026182.htm 测试成功
+qq_009695.htm 测试失败
+blog_7159859d0102xfce.html 测试失败
+blog_ed22e9740102vv1f.html 测试失败
+blog_5b1973430102ws9j.html 测试失败
+blog_6dedbe010102wep6.html 测试失败
+qq_027289.htm 测试成功
+qq_024997.htm 测试成功
+qq_015666.htm 测试成功
+blog_15f079d400102xzdw.html 测试失败
+qq_003600.htm 测试成功
+qq_035860.htm 测试成功
+qq_006715.htm 测试失败
+blog_4aeb7d930102wsna.html 测试失败
+CLVIUFCD000187VI.html 测试成功
+qq_065009.htm 测试成功
+qq_004036.htm 测试失败
+qq_034594.htm 测试失败
+qq_023630.htm 测试失败
+qq_018459.htm 测试成功
+qq_038213.htm 测试成功
+qq_025329.htm 测试成功
+BNO4G2EN00014AEE.html 测试成功
+qq_003910.htm 测试失败
+qq_043607.htm 测试成功
+blog_5b1973430102wrl1.html 测试失败
+BNP6NPCP00014JB6.html 测试成功
+CM0CJ3KF000187VE.html 测试成功
+BNOQ6ABT00014AEE.html 测试成功
+qq_027026.htm 测试成功
+qq_057819.htm 测试成功
+qq_034692.htm 测试成功
+qq_041367.htm 测试成功
+qq_035038.htm 测试成功
+BNO8BPJR00014JB6.html 测试成功
+qq_003041.htm 测试失败
+CM0U437K000187VE.html 测试成功
+qq_036619.htm 测试失败
+blog_16bedcc610102wy0v.html 测试失败
+qq_011128.htm 测试成功
+qq_016940.htm 测试成功
+blog_75b1a75f0102w6zt.html 测试失败
+qq_043369.htm 测试成功
+blog_13657092e0102we5k.html 测试成功
+qq_036730.htm 测试成功
+qq_060380.htm 测试失败
+blog_15f20fe440102wydl.html 测试失败
+qq_035888.htm 测试失败
+CM1VVS8G0001899N.html 测试成功
+BNLCA7K800014Q4P.html 测试成功
+CLTVJIEO00018AOQ.html 测试成功
+qq_039947.htm 测试成功
+qq_058668.htm 测试成功
+qq_004154.htm 测试失败
+qq_024768.htm 测试失败
+qq_020086.htm 测试失败
+qq_025706.htm 测试成功
+blog_4bc425eb0102wtqn.html 测试失败
+BNPBDFVF0001124J.html 测试失败
+BNO6GA2F00014AEE.html 测试成功
+blog_539c5bd20102vxhp.html 测试失败
+qq_012582.htm 测试成功
+blog_1407910a60102wdaq.html 测试成功
+qq_030387.htm 测试成功
+qq_021041.htm 测试成功
+qq_004208.htm 测试失败
+blog_4cd1c1670102vaaf.html 测试失败
+blog_4e326f010102w8z6.html 测试失败
+qq_020987.htm 测试失败
+BNM76V2300014AED.html 测试成功
+qq_003243.htm 测试失败
+qq_062631.htm 测试成功
+blog_48fd51d80102wa51.html 测试成功
+BNMGNQGH0001124J.html 测试成功
+blog_675823360102xscc.html 测试成功
+BNO1J12800014AEE.html 测试成功
+qq_045757.htm 测试成功
+qq_003371.htm 测试成功
+qq_048540.htm 测试成功
+blog_6252b0bb0102x8qh.html 测试失败
+qq_035579.htm 测试成功
+qq_016207.htm 测试成功
+qq_022888.htm 测试成功
+qq_037549.htm 测试成功
+blog_539c5bd20102w17v.html 测试失败
+BNKT2GBI0001124J.html 测试失败
+qq_055280.htm 测试失败
+qq_056385.htm 测试成功
+qq_009371.htm 测试成功
+qq_019858.htm 测试成功
+BNP6EETN00014SEH.html 测试失败
+qq_041680.htm 测试成功
+qq_013140.htm 测试失败
+qq_003501.htm 测试失败
+qq_057654.htm 测试成功
+qq_021510.htm 测试成功
+qq_017717.htm 测试失败
+blog_4cd1c1670102wd5x.html 测试失败
+BNOQEOUQ0001124J.html 测试成功
+qq_044226.htm 测试成功
+blog_1670293f40102xvly.html 测试失败
+qq_023807.htm 测试成功
+CLTVLT1A0001899N.html 测试成功
+blog_a64f61df0102wtlc.html 测试失败
+qq_046106.htm 测试失败
+qq_022455.htm 测试成功
+qq_006894.htm 测试成功
+qq_022935.htm 测试失败
+qq_018532.htm 测试成功
+blog_4b423c430102w5yj.html 测试失败
+CM0AITF300014AEE.html 测试成功
+qq_061274.htm 测试失败
+CM199KO7000187VE.html 测试成功
+blog_4711b54e0102w2uh.html 测试失败
+blog_1670293f40102xskw.html 测试失败
+qq_034408.htm 测试成功
+qq_052881.htm 测试失败
+blog_475b3d560102wdtc.html 测试失败
+qq_011955.htm 测试失败
+qq_031006.htm 测试成功
+qq_044813.htm 测试成功
+qq_007786.htm 测试失败
+CLUDBS3U000187V9.html 测试成功
+blog_48fd51d80102vm4i.html 测试失败
+CLVDF7N800018AOQ.html 测试成功
+qq_023557.htm 测试成功
+qq_019923.htm 测试成功
+qq_032314.htm 测试成功
+blog_4aeb7d930102wuoj.html 测试失败
+blog_5f0f1d570102wghj.html 测试失败
+qq_012808.htm 测试成功
+qq_059430.htm 测试成功
+qq_029938.htm 测试成功
+qq_016062.htm 测试成功
+blog_6321a0f30102wjyl.html 测试失败
+qq_020445.htm 测试失败
+qq_025171.htm 测试失败
+qq_040254.htm 测试成功
+BNMMOSG70001124J.html 测试成功
+qq_039522.htm 测试失败
+qq_030945.htm 测试失败
+qq_037512.htm 测试成功
+qq_016143.htm 测试成功
+blog_48fd51d80102vjb0.html 测试失败
+qq_051041.htm 测试成功
+blog_5b1973430102wv53.html 测试失败
+qq_022096.htm 测试成功
+qq_016218.htm 测试成功
+qq_003437.htm 测试失败
+blog_53402f740102wmfn.html 测试失败
+qq_021525.htm 测试失败
+qq_043039.htm 测试成功
+qq_019353.htm 测试失败
+blog_539c5bd20102vuhg.html 测试失败
+blog_134e1a9990102wb0g.html 测试失败
+qq_040790.htm 测试失败
+qq_035720.htm 测试失败
+CLU02Q6P00018AOQ.html 测试失败
+qq_003070.htm 测试失败
+qq_053841.htm 测试成功
+qq_010608.htm 测试成功
+qq_005555.htm 测试成功
+qq_019709.htm 测试成功
+qq_021401.htm 测试成功
+CM1FTGMJ0001875N.html 测试失败
+CM0EFPPN0001875N.html 测试成功
+blog_5b1973430102w5t5.html 测试失败
+blog_1603de7020102wpu4.html 测试失败
+CLUCUBE700014AEE.html 测试失败
+blog_6252b0bb0102wza5.html 测试失败
+blog_1511613820102wgxo.html 测试失败
+qq_019351.htm 测试成功
+blog_61c5a84e0102vvxk.html 测试失败
+qq_059699.htm 测试成功
+qq_007996.htm 测试失败
+blog_48fd51d80102w4og.html 测试成功
+blog_5b1973430102w807.html 测试失败
+qq_044688.htm 测试成功
+CLU2MOKN00018AOR.html 测试成功
+blog_a5357a3e0102wa7v.html 测试失败
+qq_022946.htm 测试成功
+qq_039957.htm 测试失败
+blog_48f84f6f0102vz4r.html 测试成功
+blog_53ff33bd0102x5og.html 测试失败
+CLUBFIM80001875N.html 测试成功
+blog_1669659fb0102x4ei.html 测试失败
+qq_041870.htm 测试成功
+blog_4b8bd1450102wvtq.html 测试失败
+BNP03E1S0001124J.html 测试失败
+blog_8e9705160102wuio.html 测试失败
+qq_017878.htm 测试成功
+blog_48ba1ffd0102wceh.html 测试失败
+qq_019457.htm 测试成功
+qq_016148.htm 测试失败
+qq_057473.htm 测试成功
+qq_050909.htm 测试成功
+blog_966fb2d30102wmyl.html 测试失败
+qq_023036.htm 测试成功
+qq_029921.htm 测试成功
+qq_040936.htm 测试成功
+qq_023108.htm 测试失败
+qq_019320.htm 测试成功
+qq_008103.htm 测试失败
+qq_024120.htm 测试失败
+blog_48fd51d80102vt0v.html 测试成功
+BNPCVFLC00014SEH.html 测试成功
+blog_a5357a3e0102wk25.html 测试失败
+qq_003311.htm 测试失败
+qq_036443.htm 测试失败
+BNO8ME2000014JB5.html 测试成功
+blog_a5357a3e0102w99b.html 测试失败
+qq_036723.htm 测试成功
+qq_017298.htm 测试成功
+qq_016475.htm 测试成功
+blog_53ff33bd0102whyz.html 测试成功
+CM30EV3800018AOQ.html 测试成功
+qq_040452.htm 测试成功
+blog_48631e860102wbaf.html 测试成功
+qq_044253.htm 测试成功
+qq_025668.htm 测试成功
+blog_486c0f670102w6df.html 测试失败
+blog_5a0151030102wc40.html 测试成功
+qq_033614.htm 测试失败
+qq_021876.htm 测试成功
+qq_030795.htm 测试成功
+qq_016428.htm 测试失败
+qq_050838.htm 测试成功
+CM2VAHB900014AEE.html 测试成功
+BNKL1BUA0001124J.html 测试失败
+qq_004105.htm 测试成功
+qq_047006.htm 测试成功
+qq_025343.htm 测试成功
+blog_1603de7020102wqxh.html 测试失败
+BNPDMT3H0001124J.html 测试失败
+blog_6dedbe010102wulz.html 测试失败
+qq_039402.htm 测试失败
+qq_045314.htm 测试成功
+qq_038683.htm 测试成功
+qq_059452.htm 测试成功
+CM0EN8PR00018AOQ.html 测试成功
+blog_53402f740102xxgh.html 测试成功
+qq_027584.htm 测试成功
+CM10BJ65000187VE.html 测试成功
+qq_004844.htm 测试失败
+qq_055696.htm 测试成功
+qq_038830.htm 测试成功
+BNO9VTUA0001124J.html 测试失败
+blog_4bc425eb0102w74l.html 测试失败
+qq_020744.htm 测试成功
+qq_016976.htm 测试成功
+CLTRQDIC00018AOQ.html 测试成功
+qq_004080.htm 测试失败
+qq_039253.htm 测试失败
+qq_016365.htm 测试成功
+qq_012485.htm 测试失败
+qq_055243.htm 测试失败
+CLUR3V220001875N.html 测试成功
+blog_72e690fc0102vjni.html 测试失败
+qq_006790.htm 测试失败
+qq_049109.htm 测试失败
+qq_038980.htm 测试失败
+qq_002968.htm 测试失败
+blog_5951b3310102xrud.html 测试失败
+CLUSRLH90001899N.html 测试成功
+CM2CGOGN0001899N.html 测试成功
+blog_4aeb7d930102wtab.html 测试成功
+blog_539c5bd20102vjdk.html 测试失败
+blog_5b1973430102w57q.html 测试失败
+qq_054352.htm 测试失败
+qq_041770.htm 测试成功
+qq_049573.htm 测试成功
+qq_039317.htm 测试失败
+blog_5b1973430102wpni.html 测试失败
+qq_003219.htm 测试成功
+blog_1669659fb0102x39h.html 测试失败
+qq_023010.htm 测试成功
+qq_007857.htm 测试失败
+BNOPSSSO0001124J.html 测试成功
+blog_48fd51d80102wv6v.html 测试成功
+qq_029236.htm 测试成功
+qq_040918.htm 测试失败
+blog_694171200102wswp.html 测试失败
+blog_539c5bd20102w1pe.html 测试失败
+CLVM1F9R00018AOP.html 测试成功
+blog_6a55d6840102xjek.html 测试失败
+qq_037837.htm 测试成功
+BNPDADAO00014SEH.html 测试失败
+CM0D1OJS0001875N.html 测试成功
+blog_5b1973430102wc3u.html 测试失败
+qq_006238.htm 测试成功
+qq_040515.htm 测试成功
+qq_008295.htm 测试成功
+qq_040671.htm 测试失败
+CM2ABFD70001899N.html 测试成功
+CM28M2DT00018AOP.html 测试成功
+blog_14c94e76f0102xasb.html 测试失败
+CM05S5TT000187V9.html 测试成功
+qq_039759.htm 测试成功
+qq_009552.htm 测试成功
+qq_055925.htm 测试成功
+qq_037614.htm 测试成功
+qq_038551.htm 测试失败
+blog_46cf47710102vm4p.html 测试成功
+blog_5b1973430102vtqx.html 测试失败
+qq_032574.htm 测试失败
+qq_005931.htm 测试成功
+blog_61e6c0120102yj8h.html 测试失败
+qq_036799.htm 测试成功
+qq_016435.htm 测试成功
+blog_9ec6cf980102w4pg.html 测试失败
+BNO1C6DR00014AEE.html 测试成功
+qq_039723.htm 测试成功
+blog_1515cbfd80102wcel.html 测试失败
+BNKPM9DV00014AED.html 测试成功
+qq_016133.htm 测试成功
+blog_4c8515f50102x965.html 测试失败
+blog_5b1973430102wvm4.html 测试失败
+qq_062884.htm 测试成功
+qq_012109.htm 测试成功
+blog_a5357a3e0102wkcy.html 测试失败
+qq_012083.htm 测试成功
+blog_48fd51d80102vz17.html 测试成功
+qq_035680.htm 测试失败
+qq_019235.htm 测试成功
+qq_037194.htm 测试失败
+qq_020081.htm 测试失败
+blog_7159859d0102wuvj.html 测试失败
+blog_44491d9d0102wbi6.html 测试失败
+qq_009530.htm 测试失败
+qq_046464.htm 测试失败
+qq_036967.htm 测试成功
+qq_039952.htm 测试成功
+qq_047015.htm 测试失败
+qq_007617.htm 测试成功
+qq_055351.htm 测试成功
+CM0FM3KM000187VE.html 测试成功
+CM0G4U14000189FH.html 测试成功
+blog_5b1973430102wt8d.html 测试失败
+blog_6252b0bb0102x0wd.html 测试失败
+qq_030764.htm 测试成功
+qq_030607.htm 测试成功
+qq_035493.htm 测试成功
+CM2TT04G0001899N.html 测试成功
+qq_033323.htm 测试失败
+qq_040968.htm 测试成功
+qq_021556.htm 测试成功
+qq_056523.htm 测试成功
+qq_060495.htm 测试成功
+qq_030749.htm 测试成功
+qq_007787.htm 测试失败
+CLU48D4600018AOQ.html 测试失败
+blog_733bc8b30102wo78.html 测试失败
+blog_5d608f690102w2ro.html 测试失败
+qq_065909.htm 测试失败
+BNMP3U5R0001124J.html 测试失败
+qq_013226.htm 测试失败
+qq_044565.htm 测试成功
+qq_008205.htm 测试成功
+blog_49a351cd0102vl5o.html 测试成功
+qq_028341.htm 测试失败
+blog_52f3dd370102wkoa.html 测试成功
+qq_022841.htm 测试失败
+qq_004558.htm 测试成功
+qq_036576.htm 测试成功
+qq_034365.htm 测试失败
+blog_14cccbb200102xnos.html 测试失败
+qq_041832.htm 测试成功
+qq_003077.htm 测试成功
+BNM5Q4F900014Q4P.html 测试成功
+qq_012955.htm 测试失败
+qq_007725.htm 测试成功
+CLTRG56Q00018AOQ.html 测试失败
+qq_033882.htm 测试成功
+qq_016317.htm 测试失败
+qq_038770.htm 测试成功
+qq_016029.htm 测试失败
+qq_034896.htm 测试成功
+qq_045837.htm 测试失败
+qq_048214.htm 测试成功
+qq_022017.htm 测试失败
+qq_040933.htm 测试成功
+qq_004196.htm 测试成功
+qq_008583.htm 测试成功
+qq_042595.htm 测试成功
+BNL9URN60001124J.html 测试成功
+CM2887NU0001899N.html 测试成功
+CM0E4JKJ000187VE.html 测试成功
+qq_065369.htm 测试成功
+CM17LQGB0001899N.html 测试成功
+qq_039728.htm 测试成功
+qq_046361.htm 测试失败
+qq_008106.htm 测试成功
+CLTTAT8V000187VE.html 测试成功
+qq_037840.htm 测试成功
+blog_1603de7020102wo4y.html 测试失败
+CLV510HV0001875N.html 测试成功
+qq_008465.htm 测试成功
+qq_034787.htm 测试失败
+qq_040078.htm 测试成功
+qq_045000.htm 测试成功
+blog_6a55d6840102wxov.html 测试失败
+blog_66eeadff0102wc2a.html 测试失败
+BNO4VSRK00014AED.html 测试成功
+blog_539c5bd20102vwqq.html 测试失败
+blog_5b1973430102w8ls.html 测试失败
+qq_007066.htm 测试成功
+BNLM91V20001124J.html 测试失败
+qq_005824.htm 测试失败
+blog_5d608f690102wna5.html 测试失败
+qq_018793.htm 测试成功
+qq_037227.htm 测试成功
+BNL07HA10001124J.html 测试成功
+qq_018565.htm 测试成功
+qq_010345.htm 测试成功
+qq_017334.htm 测试成功
+qq_002772.htm 测试失败
+blog_a5357a3e0102vunf.html 测试失败
+blog_6795dd2c0102x5yc.html 测试失败
+blog_59bd45d00102w0dc.html 测试失败
+blog_6252b0bb0102wywa.html 测试失败
+qq_041144.htm 测试成功
+qq_017483.htm 测试成功
+blog_46cf47710102vp75.html 测试成功
+qq_003245.htm 测试失败
+qq_006816.htm 测试失败
+blog_5f236ecd0102vyf0.html 测试成功
+qq_008164.htm 测试失败
+qq_040159.htm 测试失败
+qq_058939.htm 测试成功
+qq_034951.htm 测试成功
+blog_4aeb7d930102wrpu.html 测试成功
+qq_041825.htm 测试失败
+blog_661074dd0102wsxo.html 测试失败
+BNO1J9FO00014JB5.html 测试成功
+qq_018860.htm 测试成功
+qq_019925.htm 测试成功
+qq_006163.htm 测试成功
+qq_003853.htm 测试成功
+qq_031447.htm 测试失败
+qq_055433.htm 测试成功
+qq_012504.htm 测试成功
+qq_038265.htm 测试失败
+qq_003514.htm 测试成功
+CLU0H8TN00018AOQ.html 测试成功
+blog_1407910a60102wa2d.html 测试失败
+qq_005887.htm 测试成功
+qq_018010.htm 测试成功
+qq_035905.htm 测试成功
+blog_58daf6670102wln4.html 测试失败
+qq_024345.htm 测试成功
+qq_006053.htm 测试失败
+qq_007687.htm 测试失败
+CLU3ID4M00018AOQ.html 测试成功
+qq_004053.htm 测试成功
+qq_006737.htm 测试成功
+blog_53ba277e0102w3gn.html 测试失败
+qq_056372.htm 测试成功
+blog_4b2cb00e0102w713.html 测试失败
+blog_4b2cb00e0102wmp7.html 测试失败
+qq_043413.htm 测试成功
+qq_028490.htm 测试失败
+blog_49a351cd0102vlf1.html 测试成功
+qq_039009.htm 测试失败
+qq_023680.htm 测试成功
+blog_5951b3310102xt6e.html 测试失败
+qq_017682.htm 测试成功
+qq_035334.htm 测试失败
+qq_022462.htm 测试成功
+CLUARS8J0001875N.html 测试成功
+qq_018261.htm 测试成功
+blog_475b3d560102wh5w.html 测试成功
+blog_5d608f690102wmsp.html 测试失败
+qq_049484.htm 测试成功
+blog_48fd51d80102wh9i.html 测试成功
+qq_005852.htm 测试成功
+BNO1UG2R00014SEH.html 测试成功
+qq_020092.htm 测试失败
+blog_67f8dabf0102wcc7.html 测试失败
+qq_030086.htm 测试成功
+BNMQIRIT0001124J.html 测试成功
+BNL42SC00001124J.html 测试失败
+qq_006581.htm 测试成功
+qq_035234.htm 测试失败
+qq_017971.htm 测试成功
+BNO4AQ6S00014AEE.html 测试成功
+BNP9TRAV00014SEH.html 测试成功
+qq_038485.htm 测试失败
+CLV95LUL00018AOQ.html 测试成功
+qq_021663.htm 测试成功
+qq_044866.htm 测试失败
+qq_033577.htm 测试成功
+qq_044034.htm 测试失败
+qq_018408.htm 测试失败
+blog_475b3d560102wo6x.html 测试失败
+qq_026239.htm 测试成功
+BNL6FUID0001124J.html 测试成功
+qq_021010.htm 测试失败
+CM0CJ3K3000187VE.html 测试成功
+BNL039CR0001124J.html 测试成功
+qq_005646.htm 测试成功
+BNM2LA6U0001124J.html 测试成功
+CM0U43KH000187VE.html 测试成功
+CM0IH9HO0001875N.html 测试成功
+qq_028784.htm 测试失败
+qq_025449.htm 测试成功
+CM0BT83200014JB5.html 测试成功
+blog_5f0f1d570102w9l3.html 测试失败
+qq_021596.htm 测试成功
+qq_039351.htm 测试成功
+qq_054593.htm 测试成功
+CM0M98Q200018AOQ.html 测试成功
+qq_033214.htm 测试成功
+qq_027561.htm 测试成功
+CLUK0L0E0001899N.html 测试失败
+qq_014528.htm 测试成功
+qq_010400.htm 测试成功
+qq_020067.htm 测试成功
+qq_024352.htm 测试成功
+BNLN94JP0001124J.html 测试成功
+CM30VTED000187VE.html 测试成功
+CM0E7JCM0001875N.html 测试成功
+BNO9F86A0001124J.html 测试失败
+blog_4b2cb00e0102w3vd.html 测试失败
+BNNEJ6UH00014AED.html 测试失败
+blog_5d608f690102wniv.html 测试失败
+qq_020241.htm 测试成功
+BNMKSHD800014AED.html 测试成功
+qq_019333.htm 测试成功
+blog_4cd1c1670102wc4z.html 测试失败
+blog_4c8515f50102w090.html 测试失败
+qq_040990.htm 测试成功
+qq_026630.htm 测试失败
+BNK0GITT0001124J.html 测试成功
+qq_002791.htm 测试成功
+qq_016961.htm 测试成功
+qq_030703.htm 测试失败
+qq_022022.htm 测试成功
+qq_056672.htm 测试成功
+qq_029067.htm 测试成功
+BNM87KQC0001124J.html 测试成功
+qq_020976.htm 测试成功
+qq_033815.htm 测试成功
+qq_006228.htm 测试失败
+blog_726309370102ynz5.html 测试失败
+blog_537f026d0102wpq9.html 测试失败
+CM30ORVG000189FH.html 测试失败
+blog_6252b0bb0102wywb.html 测试失败
+blog_c34a50aa0102vxwu.html 测试成功
+qq_003171.htm 测试失败
+BNP3T3PK00014JB6.html 测试成功
+qq_065317.htm 测试成功
+qq_058189.htm 测试失败
+CM1JRTO40001899N.html 测试失败
+BNPIO9GI00014SEH.html 测试成功
+blog_5b1973430102w2ui.html 测试成功
+BNKSNDM80001124J.html 测试成功
+BNNFBFR400014JB6.html 测试成功
+qq_037984.htm 测试失败
+blog_5343b9460102w580.html 测试失败
+qq_033705.htm 测试成功
+qq_048934.htm 测试成功
+qq_003490.htm 测试失败
+BNOA55IA00014JB5.html 测试成功
+qq_029233.htm 测试成功
+qq_061702.htm 测试成功
+blog_4aeb7d930102wrcq.html 测试失败
+qq_057804.htm 测试成功
+qq_037863.htm 测试成功
+blog_a64f61df0102wwmc.html 测试失败
+qq_013095.htm 测试失败
+qq_032773.htm 测试成功
+BNN7U6EH000146BE.html 测试成功
+CLU433L40001899N.html 测试成功
+qq_047796.htm 测试成功
+qq_020746.htm 测试成功
+qq_042464.htm 测试成功
+blog_a5357a3e0102vvpo.html 测试失败
+blog_48fd51d80102wa7b.html 测试成功
+qq_003119.htm 测试成功
+qq_037089.htm 测试失败
+blog_655eee230102x53l.html 测试失败
+CM0NU3Q9000187VE.html 测试成功
+qq_036672.htm 测试失败
+blog_5b1973430102wuto.html 测试失败
+BNKRBBRU0001124J.html 测试失败
+qq_029420.htm 测试失败
+BNL7P69V0001124J.html 测试成功
+qq_010656.htm 测试成功
+qq_036894.htm 测试失败
+qq_056397.htm 测试成功
+qq_024449.htm 测试成功
+blog_1511613820102wxat.html 测试失败
+qq_050530.htm 测试成功
+qq_035652.htm 测试成功
+qq_016674.htm 测试失败
+qq_044613.htm 测试失败
+CM2IFLPR00018AOP.html 测试成功
+BNNBCMQC00014AED.html 测试失败
+blog_5b1973430102woi5.html 测试失败
+qq_010861.htm 测试失败
+qq_012373.htm 测试成功
+qq_007451.htm 测试成功
+BNPB9RGJ0001124J.html 测试成功
+qq_033936.htm 测试成功
+BNOP5EJ40001124J.html 测试成功
+qq_021415.htm 测试成功
+BNLO204Q0001124J.html 测试成功
+qq_049182.htm 测试成功
+qq_040937.htm 测试成功
+qq_041218.htm 测试成功
+qq_040133.htm 测试成功
+CM0LCGB80001875N.html 测试失败
+qq_005155.htm 测试成功
+blog_9e5389bb0102wnt1.html 测试失败
+BNMQ4KEL00014JB6.html 测试成功
+qq_045880.htm 测试成功
+qq_006054.htm 测试失败
+qq_046893.htm 测试成功
+qq_039310.htm 测试成功
+qq_022833.htm 测试失败
+blog_5b1973430102w1bk.html 测试失败
+qq_028171.htm 测试成功
+blog_61ff32de0102wqxe.html 测试失败
+blog_159478fe40102xt7u.html 测试失败
+qq_014529.htm 测试成功
+qq_022854.htm 测试失败
+qq_014991.htm 测试成功
+blog_61ff32de0102wh38.html 测试成功
+qq_031154.htm 测试失败
+qq_027497.htm 测试失败
+qq_053766.htm 测试失败
+qq_055206.htm 测试成功
+blog_4711b54e0102w1sc.html 测试失败
+BNLPD4KT00014AED.html 测试成功
+qq_063441.htm 测试成功
+blog_6252b0bb0102vql5.html 测试失败
+qq_024956.htm 测试失败
+CLVDDUOE0001875N.html 测试成功
+CLUPHHSU000187VE.html 测试成功
+qq_003415.htm 测试成功
+qq_021602.htm 测试失败
+qq_007000.htm 测试失败
+qq_012959.htm 测试失败
+blog_59bd45d00102wfbw.html 测试失败
+blog_4b2cb00e0102wohe.html 测试失败
+blog_48fd51d80102x001.html 测试成功
+blog_5eba2fb90102w57i.html 测试失败
+blog_4b2cb00e0102w98o.html 测试失败
+qq_037571.htm 测试成功
+qq_024303.htm 测试成功
+blog_166e2f9230102x010.html 测试失败
+blog_53fe981c0102wmyd.html 测试失败
+blog_14cc695940102wdrj.html 测试失败
+blog_6dedbe010102wr0u.html 测试失败
+qq_008941.htm 测试成功
+qq_030734.htm 测试失败
+qq_052935.htm 测试成功
+blog_694171200102wsbe.html 测试失败
+qq_033146.htm 测试成功
+qq_026673.htm 测试成功
+qq_020113.htm 测试成功
+qq_032050.htm 测试失败
+CM1UJRS60001899N.html 测试成功
+qq_055801.htm 测试成功
+blog_5d608f690102wofe.html 测试失败
+qq_022362.htm 测试成功
+qq_026958.htm 测试失败
+qq_026315.htm 测试失败
+blog_5f0f1d570102voip.html 测试失败
+qq_008027.htm 测试成功
+CM0E4JLD000187VE.html 测试成功
+qq_043954.htm 测试成功
+qq_017423.htm 测试失败
+qq_051407.htm 测试成功
+qq_022513.htm 测试成功
+qq_028121.htm 测试成功
+qq_026108.htm 测试成功
+blog_4cd1c1670102wbgd.html 测试失败
+qq_049924.htm 测试成功
+blog_492471c80102wo51.html 测试失败
+BNJV98VM00014JB6.html 测试失败
+blog_4711b54e0102wbzd.html 测试成功
+qq_003866.htm 测试失败
+qq_029689.htm 测试成功
+qq_010340.htm 测试成功
+BNNEGRAQ00014AED.html 测试成功
+blog_51f5d31f0102wpbg.html 测试失败
+blog_a3ccf94a0102w7uw.html 测试失败
+qq_011867.htm 测试成功
+CM0UVJ6E000187VE.html 测试成功
+qq_023151.htm 测试成功
+qq_013579.htm 测试失败
+blog_7377344a0102x11t.html 测试失败
+BNM2TB9K0001124J.html 测试成功
+qq_011846.htm 测试成功
+qq_032412.htm 测试成功
+qq_029678.htm 测试成功
+qq_040841.htm 测试失败
+qq_035971.htm 测试成功
+blog_4711b54e0102wd6s.html 测试成功
+qq_052957.htm 测试失败
+blog_694171200102wv0y.html 测试失败
+BNO187C80001124J.html 测试失败
+qq_020467.htm 测试失败
+qq_005374.htm 测试失败
+qq_025072.htm 测试成功
+qq_032418.htm 测试成功
+CM118H960001899N.html 测试成功
+qq_033989.htm 测试成功
+CLVJ5JDS00018AOP.html 测试成功
+qq_022788.htm 测试成功
+qq_030408.htm 测试成功
+qq_049153.htm 测试失败
+qq_031632.htm 测试成功
+qq_020821.htm 测试成功
+blog_ecf962220102vkov.html 测试失败
+qq_065209.htm 测试成功
+qq_016891.htm 测试成功
+blog_15f20fe440102wz53.html 测试失败
+qq_049518.htm 测试成功
+qq_036764.htm 测试成功
+qq_062438.htm 测试成功
+qq_038613.htm 测试成功
+qq_057444.htm 测试失败
+qq_026337.htm 测试成功
+qq_035323.htm 测试成功
+blog_4b2cb00e0102wjs2.html 测试失败
+CM31OSQQ0001875N.html 测试失败
+CM0PKLNG00018AOR.html 测试成功
+qq_062331.htm 测试成功
+BNLU92JP00014JB5.html 测试成功
+blog_4bdc7dbf0102wma6.html 测试失败
+qq_022869.htm 测试成功
+blog_6a0795df0102wt9n.html 测试失败
+blog_539c5bd20102vwgw.html 测试失败
+qq_034141.htm 测试成功
+qq_062410.htm 测试成功
+blog_6a0795df0102wvsp.html 测试失败
+blog_63af05000102x0h4.html 测试失败
+qq_029658.htm 测试成功
+qq_041370.htm 测试成功
+blog_5b1973430102vki0.html 测试失败
+blog_4b2cb00e0102wozo.html 测试失败
+qq_004238.htm 测试失败
+qq_034566.htm 测试成功
+qq_022014.htm 测试成功
+qq_006985.htm 测试失败
+blog_5b1973430102w4ol.html 测试失败
+CM031RTQ00018AOP.html 测试成功
+blog_53ff33bd0102wdkm.html 测试成功
+qq_022479.htm 测试成功
+blog_4e780db10102wgbq.html 测试失败
+BNKS0EPQ0001124J.html 测试成功
+CLU0BTDB00018AOQ.html 测试成功
+blog_492471c80102wo55.html 测试失败
+BNPA8RAR00014JB6.html 测试成功
+qq_016679.htm 测试成功
+qq_026531.htm 测试成功
+qq_040411.htm 测试失败
+qq_033410.htm 测试成功
+qq_038937.htm 测试失败
+qq_013902.htm 测试成功
+qq_039274.htm 测试成功
+blog_51f5d31f0102wpcl.html 测试失败
+qq_035634.htm 测试成功
+BNLNU3KE0001124J.html 测试成功
+qq_051905.htm 测试成功
+qq_056647.htm 测试成功
+blog_46cf47710102w0s8.html 测试成功
+qq_048264.htm 测试失败
+BNOBD9UJ00014AEE.html 测试成功
+CM234TSO000187VI.html 测试成功
+BNM4G43L0001124J.html 测试成功
+qq_015826.htm 测试成功
+qq_039675.htm 测试成功
+qq_031389.htm 测试成功
+qq_002911.htm 测试成功
+CM31PR5P00014AEE.html 测试成功
+qq_006747.htm 测试失败
+qq_019979.htm 测试成功
+blog_53402f740102xtms.html 测试失败
+qq_044653.htm 测试成功
+qq_003613.htm 测试失败
+qq_022585.htm 测试失败
+blog_a64f61df0102wwkm.html 测试失败
+qq_047139.htm 测试成功
+qq_037505.htm 测试失败
+qq_011832.htm 测试失败
+blog_a1c7b3440102wr4y.html 测试失败
+BNOEI3B200014JB6.html 测试失败
+blog_a5357a3e0102wocg.html 测试失败
+blog_5b1973430102weaj.html 测试失败
+blog_59bd45d00102wqx8.html 测试失败
+blog_5b1973430102wszf.html 测试失败
+qq_006004.htm 测试成功
+blog_eaaf2aff0102x0rx.html 测试失败
+BNKP5DNN00014Q4P.html 测试失败
+qq_037797.htm 测试失败
+qq_037831.htm 测试成功
+qq_047987.htm 测试成功
+BNLQKLD2000146BE.html 测试成功
+qq_007069.htm 测试成功
+qq_017729.htm 测试成功
+CM2DNF8T00018AOP.html 测试成功
+blog_5f236ecd0102vpbn.html 测试成功
+qq_025681.htm 测试成功
+qq_006490.htm 测试失败
+qq_038153.htm 测试成功
+qq_038656.htm 测试成功
+blog_9ec6cf980102xe5w.html 测试成功
+qq_003141.htm 测试失败
+blog_499f915d0102vop6.html 测试失败
+qq_028134.htm 测试成功
+CLVIKE9C0001875N.html 测试成功
+CLUQ85S200018AOQ.html 测试成功
+blog_48fd51d80102vp1t.html 测试失败
+BNKVCPCO0001124J.html 测试成功
+BNPJJHAV0001124J.html 测试失败
+CLVEME5K00018AOQ.html 测试成功
+qq_043065.htm 测试成功
+blog_48ba1ffd0102x49o.html 测试失败
+blog_6a5ce6450102wo8y.html 测试失败
+qq_003552.htm 测试成功
+BNO63VLM00014AEE.html 测试成功
+CLUHILGA0001899N.html 测试失败
+qq_049509.htm 测试成功
+blog_13787b4980102wk5q.html 测试失败
+qq_009859.htm 测试失败
+BNKCUG1D0001124J.html 测试失败
+qq_026989.htm 测试成功
+blog_13787b4980102wncj.html 测试失败
+qq_029030.htm 测试成功
+qq_025724.htm 测试成功
+qq_018564.htm 测试失败
+qq_006229.htm 测试失败
+qq_043208.htm 测试成功
+qq_009851.htm 测试成功
+qq_064164.htm 测试失败
+qq_034069.htm 测试成功
+blog_4b759c4f0102wfcv.html 测试成功
+qq_018809.htm 测试成功
+qq_021233.htm 测试成功
+qq_024570.htm 测试失败
+BNMA38M80001124J.html 测试成功
+qq_010224.htm 测试成功
+qq_027822.htm 测试成功
+blog_48fd51d80102wh4d.html 测试失败
+BNONAVHP0001124J.html 测试成功
+CLV3HA2R0001875N.html 测试成功
+CLTSUGF40001899O.html 测试成功
+qq_031891.htm 测试成功
+blog_46cf47710102vppa.html 测试成功
+blog_4e4b93b90102woew.html 测试失败
+qq_013425.htm 测试失败
+qq_025651.htm 测试成功
+qq_002678.htm 测试失败
+qq_019185.htm 测试成功
+blog_12c804a620102x2qv.html 测试失败
+CM0S88CF00018AOQ.html 测试成功
+qq_021340.htm 测试失败
+CLUTOQ4E0001875N.html 测试成功
+qq_014321.htm 测试成功
+qq_005164.htm 测试失败
+blog_615649a50102wii4.html 测试成功
+blog_4b2cb00e0102w528.html 测试失败
+qq_036400.htm 测试成功
+qq_020075.htm 测试成功
+qq_037172.htm 测试失败
+blog_a5357a3e0102wj0e.html 测试失败
+CM0FRMD40001875N.html 测试成功
+CM1834BU000187VE.html 测试失败
+BNKHK5MD00014AEE.html 测试成功
+blog_48fd51d80102wc38.html 测试成功
+BNMEONJT0001124J.html 测试成功
+BNOJMGDD00014AEE.html 测试成功
+qq_032330.htm 测试成功
+qq_044477.htm 测试失败
+BNOG1VDC0001124J.html 测试成功
+qq_025665.htm 测试成功
+qq_005178.htm 测试失败
+blog_5b1973430102wgz0.html 测试失败
+qq_040942.htm 测试失败
+qq_054851.htm 测试成功
+qq_039823.htm 测试成功
+blog_5f2a67a50102vhan.html 测试失败
+blog_539c5bd20102vsvq.html 测试失败
+qq_050940.htm 测试成功
+qq_058662.htm 测试成功
+qq_019285.htm 测试成功
+qq_036116.htm 测试失败
+blog_539c5bd20102vi66.html 测试失败
+blog_4aeb7d930102wux0.html 测试失败
+qq_032209.htm 测试成功
+blog_a64f61df0102wt21.html 测试失败
+blog_4cd1c1670102wu38.html 测试失败
+blog_15f20fe440102wyzd.html 测试失败
+qq_017213.htm 测试成功
+blog_4b2cb00e0102w4xz.html 测试失败
+qq_013326.htm 测试成功
+blog_48fd51d80102vh0i.html 测试失败
+qq_030389.htm 测试成功
+qq_022622.htm 测试成功
+blog_5b1973430102wutm.html 测试失败
+qq_036053.htm 测试成功
+qq_025703.htm 测试成功
+CLU96C6Q00018AOQ.html 测试失败
+CLUQPENJ00018AOQ.html 测试成功
+qq_017740.htm 测试失败
+qq_038840.htm 测试失败
+blog_539c5bd20102wai4.html 测试失败
+qq_056445.htm 测试成功
+CM0CF7IG00018AOQ.html 测试成功
+blog_5f64d98d0102vpl6.html 测试失败
+qq_050029.htm 测试成功
+qq_007742.htm 测试失败
+qq_059228.htm 测试成功
+qq_042778.htm 测试失败
+qq_005148.htm 测试成功
+blog_6a55d6840102xj3y.html 测试失败
+qq_007424.htm 测试失败
+qq_043611.htm 测试失败
+CM2P8C9L0001875N.html 测试失败
+BNOD94PV00014SEH.html 测试成功
+qq_023861.htm 测试成功
+qq_040520.htm 测试成功
+CLV1HH570001875N.html 测试成功
+blog_49ab39930102vsj8.html 测试失败
+qq_031987.htm 测试失败
+qq_048425.htm 测试成功
+qq_056066.htm 测试失败
+qq_002920.htm 测试成功
+BNLPGQB600014AEE.html 测试成功
+qq_009865.htm 测试失败
+blog_7159859d0102xhls.html 测试失败
+qq_062270.htm 测试成功
+qq_035179.htm 测试成功
+BNLA7GKA0001124J.html 测试失败
+qq_004803.htm 测试成功
+blog_13787b4980102wkyy.html 测试失败
+qq_037373.htm 测试失败
+qq_047392.htm 测试失败
+qq_016997.htm 测试成功
+qq_040682.htm 测试成功
+blog_6252b0bb0102wzjt.html 测试失败
+BNO6IFPK00014JB5.html 测试成功
+qq_042459.htm 测试成功
+CM0R6QCU00018AOQ.html 测试成功
+BNOPER3P00014JB6.html 测试成功
+qq_023780.htm 测试失败
+qq_056064.htm 测试成功
+BNLGALDJ00014AEE.html 测试成功
+qq_020803.htm 测试成功
+qq_023190.htm 测试成功
+BNNR0N2300014AED.html 测试成功
+qq_057082.htm 测试成功
+qq_042489.htm 测试成功
+qq_003823.htm 测试失败
+qq_059556.htm 测试失败
+qq_045134.htm 测试成功
+qq_034415.htm 测试成功
+qq_035642.htm 测试失败
+qq_048175.htm 测试失败
+qq_039167.htm 测试成功
+qq_024364.htm 测试失败
+BNKSFOVB00014AED.html 测试成功
+qq_039180.htm 测试成功
+qq_060008.htm 测试成功
+qq_039231.htm 测试失败
+qq_002641.htm 测试成功
+qq_021473.htm 测试失败
+qq_033477.htm 测试成功
+qq_005550.htm 测试失败
+BNOPGJ8E00014AEE.html 测试成功
+qq_015213.htm 测试成功
+qq_004069.htm 测试失败
+qq_031373.htm 测试成功
+qq_040355.htm 测试成功
+qq_020701.htm 测试成功
+qq_013294.htm 测试失败
+blog_4711b54e0102wgoj.html 测试失败
+blog_547645590102x48s.html 测试失败
+qq_003375.htm 测试失败
+qq_034359.htm 测试成功
+qq_026900.htm 测试成功
+qq_067040.htm 测试成功
+qq_038359.htm 测试成功
+blog_15f20fe440102wvv1.html 测试失败
+qq_021997.htm 测试成功
+qq_045220.htm 测试成功
+qq_021427.htm 测试失败
+qq_004441.htm 测试失败
+qq_006239.htm 测试成功
+qq_005021.htm 测试成功
+blog_4aeb7d930102wuic.html 测试失败
+blog_48ba1ffd0102wisq.html 测试成功
+BNO79LDM00014SEH.html 测试成功
+blog_684ebae30102w8x6.html 测试失败
+qq_039669.htm 测试成功
+blog_5b1973430102w4af.html 测试失败
+qq_032536.htm 测试成功
+qq_051780.htm 测试成功
+blog_4711b54e0102wflo.html 测试成功
+CLVJ26E5000187VI.html 测试成功
+BNM3B1HD0001124J.html 测试成功
+blog_53fe981c0102wpzz.html 测试失败
+qq_032933.htm 测试成功
+qq_004515.htm 测试成功
+blog_7a6b629f0102wkpd.html 测试失败
+blog_4cd1c1670102w5fx.html 测试失败
+qq_045461.htm 测试成功
+qq_024486.htm 测试失败
+CM098PNF00018AOQ.html 测试成功
+CLVJ2DOH000187VI.html 测试成功
+qq_029580.htm 测试成功
+qq_014867.htm 测试失败
+blog_6252b0bb0102x0t8.html 测试失败
+qq_035724.htm 测试成功
+qq_007007.htm 测试成功
+blog_5f0f1d570102w9ip.html 测试失败
+blog_547645590102x1nk.html 测试失败
+CM1834C1000187VE.html 测试成功
+qq_017850.htm 测试成功
+qq_037093.htm 测试成功
+qq_017250.htm 测试失败
+blog_46cf47710102vq1h.html 测试成功
+BNMCVT4H0001124J.html 测试成功
+qq_007597.htm 测试失败
+blog_159478fe40102xv0j.html 测试失败
+blog_15f20fe440102wwou.html 测试失败
+blog_61ff32de0102wvjm.html 测试失败
+blog_539c5bd20102vqtq.html 测试失败
+qq_021153.htm 测试成功
+blog_48fd51d80102vga1.html 测试失败
+qq_022376.htm 测试成功
+blog_6dedbe010102wcty.html 测试失败
+qq_022932.htm 测试成功
+CM28R5GQ0001899N.html 测试失败
+blog_4bc425eb0102wjp3.html 测试失败
+qq_024872.htm 测试失败
+BNKQ113400014Q4P.html 测试成功
+CM2AIOGQ00018AOP.html 测试成功
+qq_019635.htm 测试成功
+blog_4711b54e0102wbcy.html 测试成功
+blog_6252b0bb0102xbqg.html 测试失败
+qq_032789.htm 测试成功
+qq_037583.htm 测试成功
+qq_034125.htm 测试成功
+qq_029642.htm 测试成功
+blog_4aeb7d930102wr1m.html 测试成功
+qq_036510.htm 测试成功
+BNLGOJIO00014JB6.html 测试成功
+qq_012490.htm 测试成功
+qq_020583.htm 测试成功
+blog_46cf47710102vnqn.html 测试成功
+blog_4bc425eb0102wr31.html 测试失败
+blog_aeb7dd380102x93m.html 测试失败
+blog_46cf47710102voiz.html 测试成功
+blog_6a55d6840102w7lk.html 测试成功
+qq_011920.htm 测试成功
+qq_040609.htm 测试失败
+qq_057295.htm 测试成功
+qq_036094.htm 测试成功
+qq_039525.htm 测试成功
+qq_007601.htm 测试失败
+qq_019919.htm 测试失败
+qq_018819.htm 测试成功
+qq_019018.htm 测试失败
+CLVU20GP0001875N.html 测试成功
+blog_615fb6320102wwtw.html 测试失败
+CLV9B5IQ0001875N.html 测试成功
+blog_5d71b5940102wkvc.html 测试失败
+blog_5b1973430102w5b6.html 测试失败
+qq_017002.htm 测试失败
+blog_13787b4980102wlp1.html 测试失败
+qq_042854.htm 测试失败
+qq_049456.htm 测试失败
+blog_9e5389bb0102wwdx.html 测试失败
+blog_15f20fe440102wygk.html 测试失败
+blog_5b1973430102wvyo.html 测试失败
+BNP3SH5K000156PO.html 测试成功
+qq_030679.htm 测试成功
+BNOOFRBO00014JB6.html 测试成功
+blog_14cc695940102wwxu.html 测试成功
+qq_040485.htm 测试失败
+CM2RAEJT000187VI.html 测试成功
+blog_48ba1ffd0102vo9s.html 测试失败
+qq_002998.htm 测试成功
+qq_022783.htm 测试失败
+CLV19RF90001875N.html 测试成功
+BNO74NNL00014SEH.html 测试成功
+qq_043358.htm 测试成功
+qq_044978.htm 测试失败
+qq_004118.htm 测试成功
+CLVAIATA0001875N.html 测试成功
+qq_016547.htm 测试失败
+qq_043734.htm 测试成功
+BNOM3O7H0001124J.html 测试失败
+qq_003756.htm 测试成功
+qq_028303.htm 测试失败
+blog_9ec6cf980102w66k.html 测试失败
+qq_037538.htm 测试失败
+qq_059010.htm 测试成功
+CM0KVJRS00018AOQ.html 测试成功
+qq_035916.htm 测试失败
+BNPDO2AV0001124J.html 测试失败
+qq_004342.htm 测试失败
+blog_46cf47710102w4m4.html 测试失败
+qq_046377.htm 测试失败
+blog_9ec6cf980102xhjr.html 测试失败
+blog_4711b54e0102wbf0.html 测试成功
+qq_006055.htm 测试成功
+qq_061037.htm 测试成功
+qq_019756.htm 测试失败
+blog_5102b21c0102x8hp.html 测试失败
+qq_027452.htm 测试成功
+qq_037886.htm 测试失败
+blog_539c5bd20102w409.html 测试失败
+qq_011421.htm 测试成功
+BNMCDVJ10001124J.html 测试失败
+qq_039251.htm 测试成功
+blog_61e047550102whjm.html 测试失败
+blog_4b2cb00e0102waar.html 测试失败
+blog_655eee230102x5tg.html 测试失败
+CLUUS31Q000187VE.html 测试成功
+qq_005033.htm 测试成功
+blog_a3d444e30102wsp8.html 测试失败
+qq_055760.htm 测试成功
+qq_037845.htm 测试成功
+blog_48fd51d80102vq8i.html 测试失败
+CM0J2IUU00014AEE.html 测试成功
+blog_6252b0bb0102vpje.html 测试失败
+qq_024805.htm 测试成功
+qq_052702.htm 测试成功
+qq_010036.htm 测试成功
+blog_15f3c061f0102x43a.html 测试失败
+qq_036674.htm 测试成功
+qq_033231.htm 测试成功
+qq_028679.htm 测试成功
+BNPJI4DD00014SEH.html 测试失败
+qq_034044.htm 测试成功
+blog_5b1973430102w3n3.html 测试成功
+blog_16bedcc610102wywa.html 测试失败
+qq_013065.htm 测试失败
+qq_027250.htm 测试失败
+blog_4b2cb00e0102vkuz.html 测试失败
+blog_5c937fb10102w91k.html 测试失败
+blog_4b759c4f0102wfvq.html 测试成功
+qq_059487.htm 测试失败
+blog_80f536630102xhzx.html 测试失败
+qq_049671.htm 测试成功
+BNO1RQ5800014JB5.html 测试成功
+qq_032734.htm 测试成功
+qq_007368.htm 测试成功
+qq_026261.htm 测试成功
+qq_038052.htm 测试成功
+qq_002943.htm 测试失败
+qq_023095.htm 测试成功
+CM1MKMBG0001875N.html 测试成功
+qq_042097.htm 测试失败
+CLVIU8N1000187VI.html 测试失败
+CLVPG44600018AOP.html 测试失败
+blog_4b2cb00e0102w8mb.html 测试失败
+qq_005325.htm 测试成功
+blog_6252b0bb0102xaa2.html 测试失败
+blog_5d608f690102wol6.html 测试失败
+qq_017973.htm 测试成功
+blog_5d608f690102wlax.html 测试失败
+blog_15f3c061f0102x3f1.html 测试成功
+qq_041112.htm 测试成功
+blog_9e5389bb0102wtzc.html 测试失败
+blog_4870bbec0102wtlg.html 测试失败
+qq_038597.htm 测试成功
+blog_691a9bd00102xoeq.html 测试失败
+qq_004889.htm 测试成功
+qq_020709.htm 测试成功
+blog_4aeb7d930102wowe.html 测试失败
+blog_15f20fe440102wwx7.html 测试失败
+qq_017482.htm 测试成功
+qq_017272.htm 测试成功
+qq_008880.htm 测试失败
+blog_547645590102wmtx.html 测试成功
+BNKVQ3QS0001124J.html 测试失败
+qq_061328.htm 测试成功
+qq_021205.htm 测试成功
+BNOD530F00014AEE.html 测试成功
+qq_010459.htm 测试失败
+qq_021104.htm 测试成功
+blog_e9bdd00e0102xtgl.html 测试失败
+qq_003911.htm 测试失败
+blog_48fd51d80102w8w3.html 测试成功
+qq_047811.htm 测试成功
+qq_020630.htm 测试成功
+qq_014742.htm 测试失败
+CLTVTEL4000187VE.html 测试成功
+qq_005172.htm 测试失败
+BNOE045Q00014AEE.html 测试成功
+blog_48ba1ffd0102x4ao.html 测试成功
+blog_d6d6719b0102wg4p.html 测试成功
+blog_9b9ef8e50102w1mx.html 测试成功
+blog_6aadcb590102w0zt.html 测试成功
+qq_022283.htm 测试成功
+blog_a5357a3e0102wh7f.html 测试失败
+qq_022075.htm 测试成功
+CLU3QVUR0001899N.html 测试成功
+BNP7TIRU00014AED.html 测试成功
+qq_038890.htm 测试成功
+qq_054515.htm 测试失败
+blog_6252b0bb0102wyrf.html 测试失败
+blog_48ba1ffd0102wlpc.html 测试成功
+qq_003564.htm 测试成功
+BNPC7P7N00014PRF.html 测试失败
+qq_006690.htm 测试成功
+BNOALTOA00014AEE.html 测试成功
+blog_ed22e9740102vpm1.html 测试失败
+qq_067016.htm 测试成功
+CLVIUI6E000187VI.html 测试成功
+qq_044352.htm 测试成功
+qq_012267.htm 测试失败
+blog_3eac66f90102xebh.html 测试成功
+qq_003301.htm 测试成功
+qq_052015.htm 测试成功
+blog_7a6b629f0102wrwa.html 测试失败
+qq_066214.htm 测试失败
+qq_036427.htm 测试成功
+qq_016842.htm 测试失败
+qq_045413.htm 测试成功
+qq_040089.htm 测试成功
+CLU1GGFC0001875N.html 测试成功
+qq_023540.htm 测试成功
+qq_030567.htm 测试成功
+qq_005149.htm 测试失败
+blog_48fd51d80102vl41.html 测试失败
+qq_019682.htm 测试成功
+qq_041152.htm 测试成功
+qq_002701.htm 测试失败
+blog_48fd51d80102wgo5.html 测试失败
+qq_026296.htm 测试成功
+qq_035170.htm 测试成功
+qq_060643.htm 测试成功
+qq_052906.htm 测试成功
+qq_034306.htm 测试失败
+qq_036273.htm 测试成功
+qq_042557.htm 测试成功
+qq_036717.htm 测试失败
+qq_009376.htm 测试成功
+qq_002981.htm 测试成功
+CLV5IISA0001875N.html 测试成功
+qq_049190.htm 测试成功
+blog_6252b0bb0102xbvg.html 测试失败
+qq_060443.htm 测试成功
+blog_a64f61df0102xfhy.html 测试失败
+qq_050129.htm 测试成功
+BNO2GLOR0001124J.html 测试成功
+blog_495b8ba60102wxtd.html 测试成功
+qq_036772.htm 测试失败
+BNN139710001124J.html 测试成功
+qq_021802.htm 测试成功
+blog_5b1973430102wreb.html 测试失败
+qq_041722.htm 测试成功
+qq_020131.htm 测试失败
+qq_033100.htm 测试成功
+blog_13787b4980102wdq8.html 测试失败
+blog_507f25000102xd9j.html 测试失败
+BNN3OF530001124J.html 测试失败
+qq_023184.htm 测试成功
+qq_042001.htm 测试成功
+CLV4LTVD00018AOQ.html 测试成功
+qq_006659.htm 测试失败
+qq_032906.htm 测试成功
+blog_13657092e0102wesl.html 测试失败
+CLV7SD2N0001875N.html 测试失败
+CLU304JD0001899N.html 测试成功
+qq_047992.htm 测试成功
+qq_023812.htm 测试成功
+qq_020809.htm 测试失败
+qq_065735.htm 测试成功
+qq_059848.htm 测试失败
+CLVDMPKN00018AOQ.html 测试成功
+BNNHUE3500014AED.html 测试成功
+BNMIGQ6I000146BE.html 测试成功
+qq_053964.htm 测试失败
+qq_019911.htm 测试成功
+blog_48fd51d80102vo9q.html 测试失败
+blog_48fd51d80102vnpy.html 测试失败
+CM3652BT000187VE.html 测试成功
+BNLNTT170001124J.html 测试成功
+qq_027513.htm 测试成功
+qq_065383.htm 测试成功
+qq_021707.htm 测试成功
+qq_011671.htm 测试失败
+blog_48ba1ffd0102x4cs.html 测试成功
+CLU5639B00018AOQ.html 测试成功
+qq_021409.htm 测试成功
+qq_030432.htm 测试成功
+qq_038521.htm 测试失败
+qq_020614.htm 测试成功
+qq_042837.htm 测试成功
+qq_037673.htm 测试成功
+qq_007153.htm 测试失败
+CLV38EM40001899N.html 测试成功
+qq_041789.htm 测试成功
+qq_018312.htm 测试成功
+qq_055314.htm 测试成功
+qq_026141.htm 测试成功
+qq_011043.htm 测试失败
+blog_4c8515f50102wllz.html 测试失败
+qq_020948.htm 测试成功
+qq_031128.htm 测试失败
+CM08567H0001875N.html 测试成功
+blog_49c1101d0102wlb4.html 测试失败
+qq_037525.htm 测试成功
+qq_004934.htm 测试失败
+qq_058167.htm 测试成功
+blog_48fd51d80102wzeo.html 测试失败
+qq_016615.htm 测试成功
+qq_022504.htm 测试成功
+CLUAOMCP0001899O.html 测试成功
+qq_002875.htm 测试成功
+blog_5f0f1d570102vr1s.html 测试失败
+qq_019014.htm 测试成功
+qq_027143.htm 测试失败
+qq_054692.htm 测试成功
+qq_015320.htm 测试成功
+BNMRJQMQ0001124J.html 测试失败
+qq_040290.htm 测试成功
+qq_004908.htm 测试成功
+blog_3eac66f90102xd9d.html 测试成功
+qq_003718.htm 测试成功
+BNOD4AR200014AEE.html 测试成功
+qq_024022.htm 测试成功
+blog_3c05ae760102x8h9.html 测试成功
+qq_002551.htm 测试失败
+qq_065884.htm 测试失败
+qq_005573.htm 测试成功
+qq_003616.htm 测试失败
+BNOEQIK200014AEE.html 测试成功
+blog_4711b54e0102wgve.html 测试失败
+qq_021027.htm 测试失败
+qq_031677.htm 测试成功
+qq_024791.htm 测试成功
+qq_037262.htm 测试失败
+qq_005477.htm 测试成功
+qq_008060.htm 测试失败
+qq_038162.htm 测试成功
+BNO0U8QT00014AED.html 测试成功
+blog_6a55d6840102x4kc.html 测试失败
+blog_e9bdd00e0102xuef.html 测试失败
+qq_043742.htm 测试成功
+qq_014298.htm 测试成功
+qq_006565.htm 测试失败
+qq_005712.htm 测试成功
+BNMH1UTD000146BE.html 测试成功
+blog_539c5bd20102wgi5.html 测试失败
+blog_ed22e9740102vt8x.html 测试失败
+qq_031801.htm 测试成功
+BNLFD09G00014AED.html 测试失败
+qq_042733.htm 测试成功
+blog_5b1973430102vt81.html 测试失败
+CM0L0JOT000187VE.html 测试成功
+qq_033491.htm 测试成功
+CM2IFRIO00018AOP.html 测试成功
+qq_003210.htm 测试失败
+BNK6GVFN0001124J.html 测试失败
+qq_041729.htm 测试成功
+qq_041044.htm 测试成功
+qq_025424.htm 测试失败
+BNN95HUJ00014JB6.html 测试失败
+qq_032118.htm 测试失败
+qq_057919.htm 测试成功
+BNKD86D80001124J.html 测试成功
+CM0Q5JGB000187VE.html 测试成功
+qq_020771.htm 测试成功
+qq_010612.htm 测试成功
+qq_018748.htm 测试成功
+qq_032234.htm 测试失败
+qq_026491.htm 测试失败
+qq_030845.htm 测试成功
+qq_022147.htm 测试成功
+blog_6252b0bb0102wyv8.html 测试失败
+qq_031301.htm 测试失败
+blog_9cb260660102x1y6.html 测试失败
+qq_042871.htm 测试失败
+blog_75b1a75f0102w8tf.html 测试失败
+qq_031990.htm 测试失败
+qq_014870.htm 测试成功
+qq_039411.htm 测试成功
+qq_023180.htm 测试成功
+CM0C0UNT0001875N.html 测试成功
+CM1TU4EO0001899N.html 测试成功
+CM078RDU00018AOQ.html 测试成功
+blog_a716fd450102wywk.html 测试失败
+qq_042467.htm 测试成功
+blog_4711b54e0102w3nv.html 测试失败
+qq_047612.htm 测试成功
+CM0A0JED000187VE.html 测试成功
+qq_011960.htm 测试失败
+qq_016078.htm 测试失败
+qq_060352.htm 测试成功
+CLTQJ84C0001875N.html 测试成功
+blog_4965d19a0102w4vm.html 测试失败
+qq_034221.htm 测试成功
+qq_034250.htm 测试成功
+qq_003512.htm 测试失败
+qq_019594.htm 测试成功
+blog_48d991530102vryu.html 测试失败
+blog_48ba1ffd0102wk84.html 测试失败
+CM0EOVKF00018AOQ.html 测试成功
+qq_006023.htm 测试失败
+CLTS21UK00018AOQ.html 测试成功
+qq_019232.htm 测试成功
+qq_002880.htm 测试失败
+blog_48ba1ffd0102wisp.html 测试失败
+BNLG17JH0001124J.html 测试成功
+qq_028342.htm 测试成功
+qq_022852.htm 测试成功
+blog_5f0f1d570102voja.html 测试成功
+CM0S7JBL000187VE.html 测试成功
+qq_003752.htm 测试失败
+blog_573dea950102wgfb.html 测试失败
+blog_4711b54e0102wbd2.html 测试成功
+qq_058489.htm 测试失败
+blog_4bc425eb0102wtgf.html 测试失败
+qq_040364.htm 测试失败
+qq_051078.htm 测试失败
+qq_034413.htm 测试失败
+blog_6252b0bb0102xbdv.html 测试失败
+blog_4e298d170102wyuz.html 测试失败
+CM0K0NFJ00014AEE.html 测试成功
+qq_045975.htm 测试成功
+qq_037874.htm 测试成功
+qq_027772.htm 测试成功
+blog_a3d444e30102wt1f.html 测试失败
+qq_064135.htm 测试成功
+qq_004178.htm 测试成功
+qq_017572.htm 测试失败
+qq_006871.htm 测试成功
+qq_040330.htm 测试成功
+CLUTFTDO0001899O.html 测试成功
+qq_037670.htm 测试失败
+qq_003965.htm 测试失败
+qq_002332.htm 测试成功
+qq_034761.htm 测试成功
+blog_a5357a3e0102vssa.html 测试失败
+qq_007607.htm 测试失败
+qq_031885.htm 测试成功
+blog_4711b54e0102w55p.html 测试失败
+qq_021343.htm 测试成功
+blog_53d2ac990102x3t6.html 测试失败
+blog_708567850102wvka.html 测试失败
+BNKMFSR200014AEE.html 测试成功
+CLUOGUAQ00018AOR.html 测试成功
+blog_5d608f690102wo3q.html 测试失败
+qq_018438.htm 测试成功
+qq_032698.htm 测试成功
+qq_048772.htm 测试成功
+blog_13787b4980102w107.html 测试失败
+blog_a5357a3e0102wjda.html 测试失败
+qq_016398.htm 测试成功
+CLUH1ETS0001899O.html 测试成功
+qq_041299.htm 测试成功
+blog_9ec6cf980102wf7a.html 测试失败
+qq_046970.htm 测试成功
+blog_59bd45d00102wbba.html 测试失败
+blog_1304649a30102x1xc.html 测试失败
+blog_492471c80102wo57.html 测试成功
+qq_024160.htm 测试失败
+qq_034411.htm 测试成功
+blog_1407910a60102x7i0.html 测试失败
+blog_a5357a3e0102wbjc.html 测试失败
+blog_5f236ecd0102vyid.html 测试成功
+qq_040866.htm 测试成功
+qq_040200.htm 测试失败
+qq_041869.htm 测试失败
+blog_139b7bbcf0102wj5k.html 测试失败
+blog_46cf47710102vs1d.html 测试失败
+qq_037541.htm 测试失败
+blog_5b1973430102wgz7.html 测试失败
+qq_018466.htm 测试成功
+BNO7QK5V00014AEE.html 测试成功
+blog_48fd51d80102vn3l.html 测试失败
+blog_a3d444e30102wss6.html 测试失败
+qq_038002.htm 测试失败
+blog_1407910a60102wmhm.html 测试成功
+qq_015952.htm 测试成功
+BNOOUPQT0001124J.html 测试成功
+qq_006206.htm 测试失败
+qq_058745.htm 测试成功
+qq_005568.htm 测试失败
+CLUILM1R000187VE.html 测试成功
+qq_034033.htm 测试成功
+blog_539c5bd20102w4sg.html 测试失败
+qq_005876.htm 测试失败
+blog_49ab39930102wiza.html 测试失败
+qq_055380.htm 测试成功
+qq_033880.htm 测试成功
+blog_49ab39930102wofu.html 测试失败
+qq_039531.htm 测试成功
+BNO24L0J00014AEE.html 测试成功
+qq_060497.htm 测试失败
+qq_058487.htm 测试成功
+qq_005870.htm 测试失败
+*************结束测试*************
+
+2017-06-24 13:03:29,128 [Thread-9:139955082860288] [crawlermanage.views:261] [INFO]- 57.58
+2017-06-24 13:04:40,453 [Dummy-1:139940319303424] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-24 13:04:40,473 [Dummy-1:139940319303424] [django.db.backends:89] [DEBUG]- (0.005) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-06-24 13:39:18,007 [Dummy-1:140259855398656] [django.db.backends:89] [DEBUG]- (0.014) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-24 13:39:18,019 [Dummy-1:140259855398656] [django.db.backends:89] [DEBUG]- (0.003) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-06-24 13:44:52,434 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-24 13:44:52,436 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-06-24 13:44:52,438 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-24 13:44:52,439 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+2017-06-24 13:44:52,476 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+2017-06-24 13:44:52,535 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'BEGIN' - PARAMS = (); args=None
+2017-06-24 13:44:52,588 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.001) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s)' - PARAMS = (u'logentry', u'admin'); args=('logentry', 'admin')
+2017-06-24 13:44:52,590 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (8,); args=(8,)
+2017-06-24 13:44:52,591 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s' - PARAMS = (u'admin',); args=('admin',)
+2017-06-24 13:44:52,593 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s)' - PARAMS = (u'permission', u'auth'); args=('permission', 'auth')
+2017-06-24 13:44:52,594 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s)' - PARAMS = (u'group', u'auth'); args=('group', 'auth')
+2017-06-24 13:44:52,595 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s)' - PARAMS = (u'user', u'auth'); args=('user', 'auth')
+2017-06-24 13:44:52,598 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s, %s, %s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (9, 10, 11); args=(9, 10, 11)
+2017-06-24 13:44:52,599 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s' - PARAMS = (u'auth',); args=('auth',)
+2017-06-24 13:44:52,601 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s)' - PARAMS = (u'contenttype', u'contenttypes'); args=('contenttype', 'contenttypes')
+2017-06-24 13:44:52,603 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (12,); args=(12,)
+2017-06-24 13:44:52,604 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s' - PARAMS = (u'contenttypes',); args=('contenttypes',)
+2017-06-24 13:44:52,606 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = %s AND "django_content_type"."app_label" = %s)' - PARAMS = (u'session', u'sessions'); args=('session', 'sessions')
+2017-06-24 13:44:52,608 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ( "auth_permission"."content_type_id" = "django_content_type"."id" ) WHERE "auth_permission"."content_type_id" IN (%s) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC' - PARAMS = (13,); args=(13,)
+2017-06-24 13:44:52,609 [MainThread:140515656775424] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = %s' - PARAMS = (u'sessions',); args=('sessions',)
+2017-06-24 13:45:09,254 [Dummy-1:140512999737088] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-24 13:45:09,261 [Dummy-1:140512999737088] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-06-24 14:06:50,545 [Dummy-1:139959732696832] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-24 14:06:50,560 [Dummy-1:139959732696832] [django.db.backends:89] [DEBUG]- (0.000) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()
+2017-06-24 14:07:35,340 [Dummy-1:140028633577216] [django.db.backends:89] [DEBUG]- (0.001) QUERY = "\n            SELECT name, type FROM sqlite_master\n            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'\n            ORDER BY name" - PARAMS = (); args=None
+2017-06-24 14:07:35,352 [Dummy-1:140028633577216] [django.db.backends:89] [DEBUG]- (0.002) QUERY = u'SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"' - PARAMS = (); args=()

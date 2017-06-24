@@ -47,9 +47,6 @@
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
-                  {% for i in info %}
-                    {{i}}
-                  {% endfor %}
                   <li>
                     <a href="#">
                       <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
@@ -135,6 +132,11 @@
             <!-- <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
             </span> -->
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'processlist' %}">
+            <i class="fa fa-book"></i> <span>进程管理</span>
           </a>
         </li>
         <li class="treeview">

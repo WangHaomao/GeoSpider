@@ -99,7 +99,7 @@ def get_img(html_str):
 
 #获取时间
 def get_time_by_html(html_str):
-    time_str = re.search(ur'\d{4}(-|\u5E74)(0{0,1}[1-9]|1[0-2])(-|\u6708)(0{0,1}[1-9]|[1-2][0-9]|3[0-1])\u65E5{0,1}', html_str)
+    time_str = re.search(ur'\d{4}(-|\u5E74)\d{1,2}(-|\u6708)\d{1,2}\u65E5{0,1}', html_str)
     if time_str is not None:
         return time_str.group(0)
     return None
@@ -169,4 +169,7 @@ if __name__ == "__main__":#http://news.sohu.com/s2014/nanshuibeidiao/
     # url = url.replace('%3A',':')
     # print url
     # html = get_html(url)
-    url = 'http://blog.sina.com.cn/s/blog_4d3048200102x6nb.html'
+    url = 'http://news.qq.com/a/20170624/015461.htm'
+    html = get_html(url)
+    time = get_time_by_html(html)
+    print(time)

@@ -15,22 +15,52 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawlermanage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="217" column="35" lean-forward="true" selection-start-line="217" selection-start-column="35" selection-end-line="217" selection-end-column="35" />
-              <folding>
-                <element signature="e#26#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="425">
+              <caret line="267" column="12" lean-forward="false" selection-start-line="267" selection-start-column="12" selection-end-line="267" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="message.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/utils/message.py">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawlermanage/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+            <state relative-caret-position="385">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_articles.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_articles.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="104" column="3" lean-forward="true" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
               <folding>
-                <element signature="e#26#38#0" expanded="true" />
+                <marker date="1498313111561" expanded="true" signature="2191:2785" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="2214:2417" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="2324:2402" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="2454:2771" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="2798:2924" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="2838:2910" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="2938:3065" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="2978:3051" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="3146:4668" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="3185:3231" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="3280:4389" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="3306:3694" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="3339:3496" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="3529:3682" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="3727:3751" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="3775:4029" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="4055:4380" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="4088:4218" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="4251:4369" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="4418:4538" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="4590:4603" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="4604:4661" ph="..." />
+                <marker date="1498313111561" expanded="true" signature="5277:6182" ph="..." />
               </folding>
             </state>
           </provider>
@@ -39,21 +69,95 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geowind_crawler/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1740">
-              <caret line="93" column="10" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="10" />
+            <state relative-caret-position="120">
+              <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="extract_article.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_article.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="151" column="24" lean-forward="true" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="24" />
               <folding>
-                <element signature="e#410#419#0" expanded="true" />
+                <marker date="1498313032100" expanded="true" signature="2191:2785" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="2214:2417" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="2324:2402" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="2454:2771" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="2798:2924" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="2838:2910" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="2938:3065" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="2978:3051" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="3146:4460" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="3185:3231" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="3280:4181" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="3306:3690" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="3339:3493" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="3526:3678" ph="..." />
+                <marker date="1498313032100" expanded="false" signature="3725:3749" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="4210:4330" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="4382:4395" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="4396:4453" ph="..." />
+                <marker date="1498313032100" expanded="true" signature="5069:5949" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/layout.html">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geowind_crawler/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2560">
-              <caret line="128" column="54" lean-forward="false" selection-start-line="128" selection-start-column="54" selection-end-line="128" selection-end-column="54" />
+            <state relative-caret-position="420">
+              <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tasks.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/tasks.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-251">
+              <caret line="312" column="5" lean-forward="false" selection-start-line="312" selection-start-column="5" selection-end-line="312" selection-end-column="5" />
+              <folding>
+                <marker date="1498313099685" expanded="true" signature="10511:11421" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="10511:11501" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="10511:11532" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="10511:12918" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="10511:12987" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="10511:13047" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="10511:13070" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="10511:13120" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="10511:13173" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="10511:13225" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="10511:13277" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="10663:11106" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="10819:11020" ph="..." />
+                <marker date="1498313099685" expanded="false" signature="10934:10969" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="11560:12850" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="11611:11896" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="11663:11865" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="11947:12821" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="11981:12790" ph="..." />
+                <marker date="1498313099685" expanded="true" signature="12037:12755" ph="..." />
+                <marker date="1498313099685" expanded="false" signature="12131:12138" ph="«" />
+                <marker date="1498313099685" expanded="false" signature="12702:12709" ph="»" />
+                <marker date="1498313099685" expanded="true" signature="13829:16177" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="acticle_parser.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawlermanage/utils/acticle_parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="189" column="59" lean-forward="false" selection-start-line="189" selection-start-column="15" selection-end-line="189" selection-end-column="59" />
+              <folding>
+                <element signature="e#26#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,6 +194,11 @@
       <find>pausing</find>
       <find>waitting</find>
       <find>messager</find>
+      <find>&lt;p</find>
+      <find>&lt;p&gt;</find>
+      <find>get_tag_text</find>
+      <find>print</find>
+      <find>finished</find>
     </findStrings>
     <replaceStrings>
       <replace>pausing</replace>
@@ -115,25 +224,26 @@
         <option value="$PROJECT_DIR$/geowind_crawler/server.py" />
         <option value="$PROJECT_DIR$/geowind_crawler/client.py" />
         <option value="$PROJECT_DIR$/geowind_crawler/message.py" />
-        <option value="$PROJECT_DIR$/crawlermanage/models.py" />
         <option value="$PROJECT_DIR$/crawlermanage/page.py" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/taskdetails.html" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_list.html" />
-        <option value="$PROJECT_DIR$/collected_static/logs/all.logs" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/thread.py" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_article.html" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/index.html" />
-        <option value="$PROJECT_DIR$/geowind_crawler/urls.py" />
-        <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_articles.html" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_article.html" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/tasks.html" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/taskdetail.html" />
-        <option value="$PROJECT_DIR$/crawlermanage/utils/acticle_parser.py" />
         <option value="$PROJECT_DIR$/crawlermanage/message.py" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/settings_helper.py" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/newsdetail.html" />
-        <option value="$PROJECT_DIR$/geowind_crawler/settings.py" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/layout.html" />
+        <option value="$PROJECT_DIR$/crawlermanage/utils/aaa.py" />
+        <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_articles.html" />
+        <option value="$PROJECT_DIR$/collected_static/logs/all.logs" />
+        <option value="$PROJECT_DIR$/geowind_crawler/settings.py" />
+        <option value="$PROJECT_DIR$/crawlermanage/utils/acticle_parser.py" />
+        <option value="$PROJECT_DIR$/geowind_crawler/urls.py" />
+        <option value="$PROJECT_DIR$/crawlermanage/models.py" />
         <option value="$PROJECT_DIR$/crawlermanage/views.py" />
       </list>
     </option>
@@ -159,7 +269,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -250,17 +360,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="collected_static" />
+              <option name="myItemId" value="crawlermanage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,43 +404,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.settings_helper">
-    <configuration default="false" name="client" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/geowind_crawler" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="geowind_crawler" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/geowind_crawler/client.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="message" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/geowind_crawler" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="geowind_crawler" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/geowind_crawler/message.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.acticle_parser">
     <configuration default="false" name="message (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -380,6 +454,39 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="geowind_crawler" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawlermanage/utils/settings_helper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in acticle_parser.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="geowind_crawler" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/crawlermanage/utils/acticle_parser.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="aaa" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawlermanage/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="geowind_crawler" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawlermanage/utils/aaa.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -450,19 +557,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.client" />
-      <item index="1" class="java.lang.String" itemvalue="Python.message" />
-      <item index="2" class="java.lang.String" itemvalue="Python.message (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.acticle_parser" />
-      <item index="4" class="java.lang.String" itemvalue="Python.settings_helper" />
+      <item index="0" class="java.lang.String" itemvalue="Python.message (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.acticle_parser" />
+      <item index="2" class="java.lang.String" itemvalue="Python.settings_helper" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in acticle_parser.py" />
+      <item index="4" class="java.lang.String" itemvalue="Python.aaa" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.settings_helper" />
-        <item index="1" class="java.lang.String" itemvalue="Python.message (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.acticle_parser" />
-        <item index="3" class="java.lang.String" itemvalue="Python.message" />
-        <item index="4" class="java.lang.String" itemvalue="Python.client" />
+        <item index="0" class="java.lang.String" itemvalue="Python.acticle_parser" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in acticle_parser.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python.aaa" />
+        <item index="3" class="java.lang.String" itemvalue="Python.settings_helper" />
+        <item index="4" class="java.lang.String" itemvalue="Python.message (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -482,6 +589,38 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_in_acticle_parser_py - 2017.06.24 at 17h 13m 24s.xml">
+      <configuration name="Unittests in acticle_parser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_acticle_parser_py - 2017.06.24 at 17h 38m 39s.xml">
+      <configuration name="Unittests in acticle_parser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_acticle_parser_py - 2017.06.24 at 18h 04m 14s.xml">
+      <configuration name="Unittests in acticle_parser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_acticle_parser_py - 2017.06.24 at 18h 05m 22s.xml">
+      <configuration name="Unittests in acticle_parser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_acticle_parser_py - 2017.06.24 at 18h 08m 30s.xml">
+      <configuration name="Unittests in acticle_parser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_acticle_parser_py - 2017.06.24 at 18h 49m 25s.xml">
+      <configuration name="Unittests in acticle_parser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_acticle_parser_py - 2017.06.24 at 18h 49m 29s.xml">
+      <configuration name="Unittests in acticle_parser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_acticle_parser_py - 2017.06.24 at 18h 49m 32s.xml">
+      <configuration name="Unittests in acticle_parser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_acticle_parser_py - 2017.06.24 at 18h 54m 22s.xml">
+      <configuration name="Unittests in acticle_parser.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_acticle_parser_py - 2017.06.24 at 18h 56m 16s.xml">
+      <configuration name="Unittests in acticle_parser.py" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -492,17 +631,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-6" width="1535" height="906" extended-state="7" />
+    <frame x="65" y="-6" width="1535" height="906" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23978567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24313463" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39258313" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28388748" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28388748" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39897698" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -520,15 +659,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bigcrawler/example/news/article_parser.py" />
-    <entry file="file://$PROJECT_DIR$/bigcrawler/example/news/test2.py" />
-    <entry file="file://$PROJECT_DIR$/bigcrawler/example/news/test3.py" />
-    <entry file="file://$PROJECT_DIR$/bigcrawler/example/mongodb_pipelines.py" />
     <entry file="file://$PROJECT_DIR$/bigcrawler/example/mongo_pipelines.py" />
     <entry file="file://$PROJECT_DIR$/bigcrawler/example/middlewares2.py" />
     <entry file="file://$PROJECT_DIR$/bigcrawler/example/middlewares.py" />
@@ -570,13 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="40" lean-forward="false" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -643,13 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/ecommercedata.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -658,20 +779,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_article.html" />
-    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_articles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1027">
-          <caret line="101" column="31" lean-forward="false" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -693,39 +800,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/tasks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="307" column="23" lean-forward="true" selection-start-line="307" selection-start-column="23" selection-end-line="307" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/collected_static/logs/all.logs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="165" column="93" lean-forward="false" selection-start-line="165" selection-start-column="85" selection-end-line="165" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2017.1/system/python_stubs/-644831441/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
           <caret line="749" column="12" lean-forward="true" selection-start-line="749" selection-start-column="12" selection-end-line="749" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/acticle_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3240">
-          <caret line="170" column="4" lean-forward="false" selection-start-line="170" selection-start-column="4" selection-end-line="170" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -757,26 +836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-          <folding>
-            <element signature="e#26#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="93" column="10" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="10" />
-          <folding>
-            <element signature="e#410#419#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/utils/settings_helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -796,19 +855,200 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="2" column="36" lean-forward="false" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
           <folding>
-            <element signature="e#22#31#0" expanded="true" />
+            <element signature="e#26#38#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="1014" column="0" lean-forward="false" selection-start-line="1014" selection-start-column="0" selection-end-line="1014" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../env/lib/python2.7/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="142" column="26" lean-forward="false" selection-start-line="142" selection-start-column="20" selection-end-line="142" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/aaa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="135" column="34" lean-forward="false" selection-start-line="135" selection-start-column="34" selection-end-line="135" selection-end-column="34" />
+          <folding>
+            <element signature="e#41#50#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../env/lib/python2.7/site-packages/bs4/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="218" column="0" lean-forward="false" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/collected_static/logs/all.logs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/tasks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-251">
+          <caret line="312" column="5" lean-forward="false" selection-start-line="312" selection-start-column="5" selection-end-line="312" selection-end-column="5" />
+          <folding>
+            <marker date="1498313099685" expanded="true" signature="10511:11421" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="10511:11501" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="10511:11532" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="10511:12918" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="10511:12987" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="10511:13047" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="10511:13070" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="10511:13120" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="10511:13173" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="10511:13225" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="10511:13277" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="10663:11106" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="10819:11020" ph="..." />
+            <marker date="1498313099685" expanded="false" signature="10934:10969" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="11560:12850" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="11611:11896" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="11663:11865" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="11947:12821" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="11981:12790" ph="..." />
+            <marker date="1498313099685" expanded="true" signature="12037:12755" ph="..." />
+            <marker date="1498313099685" expanded="false" signature="12131:12138" ph="«" />
+            <marker date="1498313099685" expanded="false" signature="12702:12709" ph="»" />
+            <marker date="1498313099685" expanded="true" signature="13829:16177" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="151" column="24" lean-forward="true" selection-start-line="151" selection-start-column="24" selection-end-line="151" selection-end-column="24" />
+          <folding>
+            <marker date="1498313032100" expanded="true" signature="2191:2785" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="2214:2417" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="2324:2402" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="2454:2771" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="2798:2924" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="2838:2910" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="2938:3065" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="2978:3051" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="3146:4460" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="3185:3231" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="3280:4181" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="3306:3690" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="3339:3493" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="3526:3678" ph="..." />
+            <marker date="1498313032100" expanded="false" signature="3725:3749" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="4210:4330" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="4382:4395" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="4396:4453" ph="..." />
+            <marker date="1498313032100" expanded="true" signature="5069:5949" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/acticle_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="189" column="59" lean-forward="false" selection-start-line="189" selection-start-column="15" selection-end-line="189" selection-end-column="59" />
+          <folding>
+            <element signature="e#26#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_articles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="104" column="3" lean-forward="true" selection-start-line="104" selection-start-column="3" selection-end-line="104" selection-end-column="3" />
+          <folding>
+            <marker date="1498313111561" expanded="true" signature="2191:2785" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="2214:2417" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="2324:2402" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="2454:2771" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="2798:2924" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="2838:2910" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="2938:3065" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="2978:3051" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="3146:4668" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="3185:3231" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="3280:4389" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="3306:3694" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="3339:3496" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="3529:3682" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="3727:3751" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="3775:4029" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="4055:4380" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="4088:4218" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="4251:4369" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="4418:4538" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="4590:4603" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="4604:4661" ph="..." />
+            <marker date="1498313111561" expanded="true" signature="5277:6182" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="217" column="35" lean-forward="true" selection-start-line="217" selection-start-column="35" selection-end-line="217" selection-end-column="35" />
-          <folding>
-            <element signature="e#26#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="425">
+          <caret line="267" column="12" lean-forward="false" selection-start-line="267" selection-start-column="12" selection-end-line="267" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

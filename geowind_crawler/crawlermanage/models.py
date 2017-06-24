@@ -23,3 +23,10 @@ class News(Document):
     time = StringField(max_length=20)
     keywords = StringField(max_length=30)
     taskid = StringField(max_length=30, required=True)
+
+class Process(Document):
+    localhost = StringField(max_length=30, required=True)
+    pid = StringField(max_length=30, required=True)
+    taskid = StringField(max_length=30, required=True)
+    status = StringField(max_length=30, required=True)
+

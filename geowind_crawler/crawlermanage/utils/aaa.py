@@ -1,18 +1,14 @@
-# -*- encoding: utf-8 -*-
+# coding=utf-8
+# -*- encoding :utf-8 -*-
 import os
 import re
-import threading
 from collections import Counter
 
 from bs4 import BeautifulSoup
-import requests
 import sys
-
-from crawlermanage.utils.settings_helper import get_attr
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
-authorset = {'责任编辑', '作者'}
 
 '''
     过滤无用的标签
@@ -24,12 +20,10 @@ authorset = {'责任编辑', '作者'}
 def filter_tags(html_str, flag):
     html_str = re.sub('(?is)<!DOCTYPE.*?>', '', html_str)
     html_str = re.sub('(?is)<!--.*?-->', '', html_str)  # remove html comment
-    html_str = re.sub('(?is)<head.*?>.*?</head>', '', html_str)  # remove html head
     html_str = re.sub('(?is)<script.*?>.*?</script>', '', html_str)  # remove javascript
     html_str = re.sub('(?is)<style.*?>.*?</style>', '', html_str)  # remove css
     html_str = re.sub('(?is)<a[\t|\n|\r|\f].*?>.*?</a>', '', html_str)  # remove a
     html_str = re.sub('(?is)<li[^nk].*?>.*?</li>', '', html_str)  # remove li
-    # html_str = re.sub('(?is)<span .*?>.*?</span>', '', html_str)  # remove li
     html_str = re.sub('&.{2,5};|&#.{2,5};', '', html_str)  # remove special char
     if flag:
         html_str = re.sub('(?is)<.*?>', '', html_str)  # remove tag
@@ -103,11 +97,15 @@ def extract_content_by_tag(html, article):
     lines = filter_tags(html, False)
     soup = BeautifulSoup(lines, 'lxml')
     p_list = soup.find_all('p')
+    print(p_list)
     p_in_article = []
     for p in p_list:
+        print(p)
         if p.text.strip() in article:
             p_in_article.append(p.parent)
-    tuple = Counter(p_in_article).most_common(1)[0]
+            print(p.parent)
+    tuple = Counter(p_in_article).most_common(1)
+    print(tuple)
     article_soup = BeautifulSoup(str(tuple[0]), 'xml')
     return article_soup.text
 
@@ -119,8 +117,8 @@ def extract_content_by_tag(html, article):
 '''
 
 
-def get_tag_text(text):
-    text = re.sub("\\s+", '', text)
+def get_tag_text(node):
+    text = re.sub("\\s+", '', node.text)
     return text
 
 
@@ -135,7 +133,8 @@ def readFile(filepath):
     with open(filepath, 'r') as fopen:
         content = fopen.read()
         fopen.close()
-    return content.decode('utf-8')
+    content = get_tag_text(content)
+    return content
 
 
 '''
@@ -146,10 +145,6 @@ def readFile(filepath):
 
 
 def writeFile(filepath, content):
-    # print(filepath)
-    # is_exist = os.path.exists(filepath)
-    # if is_exist is False:
-    #     os.mknod(filepath)
     with open(filepath, 'w') as fopen:
         fopen.write(content)
         fopen.close()
@@ -165,7 +160,6 @@ def writeFile(filepath, content):
 def extract(input_path, output_path):
     root_dir = os.listdir(input_path)
     for file in root_dir:
-        # print(file)
         path = os.path.join('%s/%s' % (input_path, file))
         if os.path.isfile(path):
             html = readFile(path)
@@ -178,15 +172,11 @@ def extract(input_path, output_path):
             writeFile(output_filename, acticle)
 
 
-def test(standard_path, result_path):
-    base_dir = get_attr('BASE_DIR')
-    jar = base_dir + "/crawlermanage/static/main-conent-extract-score.jar"
-    text = os.popen('java -jar ' + jar + ' ' + standard_path + ' ' + result_path).read()
-    arr = text.split(u'最终准确率：')
-    return arr[0], arr[1]
-
-
 if __name__ == '__main__':
-    # extract('/home/kui/下载/1_20170614100615_ldaon/正文抽取-源数据', '/home/kui/下载/1_20170614100615_ldaon/compare3')
-    # print(get_attr('BASE_DIR'))
-    print(test('/home/kui/下载/1_20170614100615_ldon/right', '/home/kui/下载/1_20170614100615_ldaon/compare3'))
+    # extract('/home/kui/下载/1_20170614100615_ldaon/正文抽取-源数据', '/home/kui/下载/1_20170614100615_ldaon/ccc')
+    html = readFile(ur"/home/kui/下载/1_20170614100615_ldaon/正文抽取-源数据/qq_038002.htm")
+    article = extract_content_by_block(html)
+    print(article)
+    print("============")
+    article2 = extract_content_by_tag(html, article)
+    print(article2)
