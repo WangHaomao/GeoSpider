@@ -23,8 +23,8 @@ class TaskDao(object):
         self.db = db
 
     '''根据taskid查找Task'''
-    def find_by_id(self, taskid):
-        return self.db.task.find_one({'_id': ObjectId(taskid)})
+    def find_by_id(self, id):
+        return self.db.task.find_one({'_id': ObjectId(id)})
 
     '''根据状态status查找Task'''
     def find_by_localhost_and_status(self, localhost, status):
@@ -70,6 +70,13 @@ class ProcessDao(object):
             process_list.append(i)
         return process_list
 
+    def find_by_localhost(self, localhost):
+        cursor = self.db.process.find({'localhost': localhost})
+        process_list = []
+        for i in cursor:
+            process_list.append(i)
+        return process_list
+
     '''
         新增一个进程
         pid:进程号
@@ -93,10 +100,34 @@ class ProcessDao(object):
 
             # self.db.process.save(task)
 
+class NewsDao(object):
+    def __init__(self, db):
+        self.db = db
+
+    def find_urls_by_taksid(self, taskid):
+        cursor = self.db.news.find({'taskid': taskid})
+        url_list = []
+        for i in cursor:
+            url_list.append(i['url'])
+        return url_list
+
+class URLDao(object):
+    def __init__(self, db):
+        self.db = db
+
+    def insert_url(self, taskid, url):
+        self.db.urls.insert_one({'taskid':taskid, 'url':url})
+
+    def delete_url(self, taskid, url):
+        self.db.urls.remove({'taskid':taskid, 'url':url})
 
 if __name__ == '__main__':
     db = connect_mongodb()
-    pro = ProcessDao(db)
+    # pro = ProcessDao(db)
     td = TaskDao(db)
-    task = td.find_by_localhost_and_status('127.0.0.1','running')
-    print(task)
+    # task = td.find_by_localhost_and_status('127.0.0.1','running')
+    # print(task)
+    newsdao = NewsDao(db)
+    list = newsdao.find_urls_by_taksid('594d0c669c1da962bd4b1457')
+    for i in list:
+        print i

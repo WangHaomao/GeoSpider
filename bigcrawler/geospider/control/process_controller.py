@@ -19,8 +19,8 @@ class ProcessController(object):
         开始一个进程，开始任务
     '''
 
-    def start(self, taskid):
-        init(taskid)
+    def start(self, taskid, is_restart):
+        init(taskid, is_restart)
         p = Process(name=taskid, target=run, args=(taskid,))
         p.start()
         print(p.pid)
@@ -99,8 +99,8 @@ class ProcessController(object):
         开启一个进程，等待任务启动
     '''
 
-    def wait(self, taskid):
-        init(taskid)
+    def wait(self, taskid, is_restart):
+        init(taskid, is_restart)
         p = Process(name=taskid, target=wait, args=(taskid,))
         p.start()
         print(p.pid)

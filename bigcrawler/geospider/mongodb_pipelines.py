@@ -15,9 +15,10 @@ class MongoDBPipeline(object):
     def process_item(self, item, spider):
         # print("++++++++++++++++++++++++++++++++")
         classname = str(type(spider))
+        print(classname)
         if classname == "<class 'geospider.spiders.blog_spider.BlogSpider'>":
             self.col='blog'
-        elif classname == "<class 'geospider.spiders.blog_spider.NewsSpider'>":
+        elif classname == "<class 'geospider.spiders.blog_spider.NewsSpider'>" or classname=="<class 'geospider.spiders.blog_spider.NewsSpiderRecover'>":
             self.col='news'
         connection = pymongo.MongoClient(self.url)
         db = connection[self.db]

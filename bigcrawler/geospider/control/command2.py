@@ -21,8 +21,8 @@ def start():
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     # r.sadd("myspider:start_urls", 'http://news.qq.com/')
     r.lpush("aaa:start_urls", "http://news.qq.com/")
-    r.lpush("aaa:start_urls", "http://news.sohu.com/")
-    b.allowed_domains=["news.qq.com","news.sohu.com"]
+    # r.lpush("aaa:start_urls", "http://news.sohu.com/")
+    b.allowed_domains=["news.qq.com"]
     cmdline.execute("scrapy crawl aaa".split())
 
     # process = CrawlerProcess(get_project_settings())

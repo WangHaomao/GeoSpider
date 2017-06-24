@@ -212,7 +212,7 @@ def layout(request):
                                    webtype=webtype, describe=describe, slave=slave_list, status=status)
         taskid = str(task['id'])
         logger.info(status)
-        msg = 'op=starttask&taskid=' + taskid + "&status=" + status
+        msg = 'op=starttask&taskid=' + taskid #+ "&status=" + status
         messager.publish('crawler', msg)
         # logger.info(taskid)
         ret = {'status': 'success'}

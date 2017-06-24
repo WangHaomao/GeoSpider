@@ -11,20 +11,24 @@ from bson import ObjectId
 from scrapy import cmdline
 import pymongo
 from geospider.spiders.news_spider import NewsSpider
+from geospider.spiders.news_spider_recover import NewsSpiderRecover
 from geospider.utils.mongodb_helper import connect_mongodb, TaskDao, ProcessDao
 from geospider.utils.redis_helper import connect_redis, URLDao
 from geospider.utils.settings_helper import get_attr
 from geospider.utils.time_util import compare_time
 
 
-def init(taskid):
+def init(taskid, is_restart):
     mongodb = connect_mongodb()
     taskdao = TaskDao(mongodb)
     task = taskdao.find_by_id(taskid)
 
     temp = None
     if "news" == task['webtype']:
-        temp = deepcopy(NewsSpider)
+        if is_restart:
+            temp = deepcopy(NewsSpiderRecover)
+        else:
+            temp = deepcopy(NewsSpider)
         temp.name = taskid
         temp.redis_key = taskid + ":start_urls"
 
