@@ -21,24 +21,14 @@
 {% block sidebar %}
       <ul class="sidebar-menu">
         <li class="header">主控面板</li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>查看任务</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+        <li>
+          <a href="{% url 'tasks' %}">
+            <i class="fa fa-dashboard"></i> <span>爬虫状态</span>
           </a>
-          <ul class="treeview-menu">
-            <li c><a href="{%url 'tasks' %}"><i class="fa fa-circle-o"></i>爬虫状态</a></li>
-            <!--<li><a href="{%url 'newsdata'%}"><i class="fa fa-circle-o"></i>数据显示</a></li>-->
-          </ul>
         </li>
         <li class="active">
           <a href="{%url 'layout'%}">
             <i class="fa fa-tasks"></i> <span>布置任务</span>
-            <!-- <span class="pull-right-container">
-              <small class="label pull-right bg-green">new</small>
-            </span> -->
           </a>
         </li>
           <li>
@@ -63,6 +53,11 @@
             <li><a href="{%url 'testarticles' %}"><i class="fa fa-circle-o"></i>测试结果</a></li>
             <!--<li><a href="{%url 'newsdata'%}"><i class="fa fa-circle-o"></i>数据显示</a></li>-->
           </ul>
+        </li>
+        <li>
+          <a href="{% url 'charts' %}">
+            <i class="fa fa-book"></i> <span>数据统计</span>
+          </a>
         </li>
         <li>
           <a href="pages/widgets.html">

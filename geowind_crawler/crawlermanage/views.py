@@ -7,8 +7,9 @@ from django import forms
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 
-from crawlermanage.models import Task, News, Process, Machine
+from crawlermanage.models import Task, News, Process, Machine, User
 from crawlermanage.utils.acticle_parser import extract, test
+from crawlermanage.utils.echarts import create_chart1, create_chart2
 from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
 from crawlermanage.utils.settings_helper import get_attr
@@ -35,16 +36,13 @@ class LoginForm(forms.Form):
 
 def login(request):
     if request.method == 'POST':
-        uf = LoginForm(request.POST)
-        if uf.is_valid():
-            username = uf.cleaned_data['username']
-            password = uf.cleaned_data['password']
-            if username == 'admin' and password == 'a':
-                # request.session['username'] = username
-                return HttpResponseRedirect('/crawlermanage/index')
-            else:
-                return render_to_response('crawlermanage/login.html', {'error': '用户名或密码错误'})
-
+        username = request.POST.get('username', '')
+        password = request.POST.get('password', '')
+        user = User.objects.filter(username=username, password=password)
+        if (username=='admin' and password=='a') or (len(user) !=0):
+            return HttpResponseRedirect('/crawlermanage/index')
+        else:
+            return render_to_response('crawlermanage/login.html', {'error': '用户名或密码错误'})
     else:
         return render_to_response('crawlermanage/login.html')
 
@@ -310,3 +308,10 @@ def addip(request):
     else:
         ret = {"status": "error"}
         return HttpResponse(json.dumps(ret))
+
+def charts(request):
+    chart1_run, chart1_pause, chart1_wait, chart1_error = create_chart1()
+    chart1 = {'run':chart1_run, 'pause':chart1_pause, 'wait':chart1_wait, 'error':chart1_error}
+    chart2_ecommerce, chart2_news, chart2_blog = create_chart2()
+    chart2 = {'ecommerce':chart2_ecommerce, 'news':chart2_news, 'blog':chart2_blog}
+    return render(request, 'crawlermanage/charts.html', {'chart1':chart1, 'chart2':chart2})

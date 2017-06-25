@@ -6,6 +6,10 @@ from mongoengine import Document, StringField, DateTimeField, connect, ListField
 
 # Create your models here.
 
+class User(Document):
+    username = StringField(max_length=30, required=True)
+    password = StringField(max_length=30, required=True)
+
 class Task(Document):
     taskname = StringField(max_length=30, required=True)
     starturls = ListField(required=True)

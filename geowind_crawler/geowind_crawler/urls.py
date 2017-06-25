@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^crawlermanage/machinelist/$', views.machinelist, name='machinelist'),
     url(r'^crawlermanage/deleteip/$', views.deleteip, name='deleteip'),
     url(r'^crawlermanage/addip/$', views.addip, name='addip'),
+    url(r'^crawlermanage/charts/$', views.charts, name='charts'),
 
 
     # url(r'^crawlermanage/$','crawlermanage.views.login'),
