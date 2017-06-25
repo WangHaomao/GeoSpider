@@ -23,23 +23,6 @@ class ExampleLoader(ItemLoader):
     default_output_processor = TakeFirst()
     description_out = Join()
 
-class Profile(Item):
-    # 提取头像地址
-    header_url = Field()
-    # 提取相册图片地址
-    pic_urls = Field()
-
-    username = Field()
-    # 提取内心独白
-    monologue = Field()
-    age = Field()
-    # youyuan
-    source = Field()
-    source_url = Field()
-
-    crawled = Field()
-    spider = Field()
-
 class Cloth(Item):
     title = Field()
     link = Field()
@@ -52,7 +35,7 @@ class News(Item):
     title = Field()
     keywords = Field()
     time = Field()
-    acticle = Field()
+    article = Field()
     url = Field()
     taskid = Field()
 
@@ -60,7 +43,7 @@ class Blog(Item):
     title = Field()
     keywords = Field()
     time = Field()
-    acticle = Field()
+    article = Field()
     url = Field()
     taskid = Field()
 

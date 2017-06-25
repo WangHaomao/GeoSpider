@@ -7,7 +7,7 @@ from django import forms
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 
-from crawlermanage.models import Task, News, Process
+from crawlermanage.models import Task, News, Process, Machine
 from crawlermanage.utils.acticle_parser import extract, test
 from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
@@ -39,13 +39,6 @@ def login(request):
         if uf.is_valid():
             username = uf.cleaned_data['username']
             password = uf.cleaned_data['password']
-            # user = User.objects.filter(username__exact = username,password__exact = password)  
-            # if user:  
-            #     request.session['username'] = username  
-            #     return HttpResponseRedirect('/blog/index')  
-            # else:  
-            #     err = 'incorrect username or pwd,please input again.'  
-            #     return render_to_response('login.html',{'err':err})  
             if username == 'admin' and password == 'a':
                 # request.session['username'] = username
                 return HttpResponseRedirect('/crawlermanage/index')
@@ -77,6 +70,7 @@ def tasks(request):
 
     list = Task.objects.filter(status__in=['running', 'waitting', 'error', 'pausing'])
     list2 = Task.objects.filter(status='stopping')
+
     p = paging(list, page, 10)
     p2 = paging(list2, page2, 10)
     return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
@@ -181,6 +175,7 @@ def layout(request):
     # webtype:webtype,
     # reservationtime:reservationtime,
     # slave:slave
+    ips = Machine.objects.all()
     if request.method == 'POST':
         taskname = request.POST.get('taskname', '')
         starturls = request.POST.get('starturls', '')
@@ -218,7 +213,7 @@ def layout(request):
         ret = {'status': 'success'}
         return HttpResponse(json.dumps(ret))
     else:
-        return render_to_response('crawlermanage/layout.html')
+        return render_to_response('crawlermanage/layout.html', {'ips':ips})
 
 
 '''
@@ -284,3 +279,34 @@ def processlist(request):
     list = Process.objects.filter(status__in=['running', 'waitting', 'pausing'])
     p = paging(list, page, 10)
     return render(request, 'crawlermanage/process_list.html', {'p': p})
+
+def machinelist(request):
+    page = request.GET.get('page')
+    if page == None:
+        page = 1
+    list = Machine.objects.all()
+    p = paging(list, page, 10)
+    return render(request, 'crawlermanage/machine_list.html', {'p': p})
+
+'''删除ip'''
+def deleteip(request):
+    ip = request.GET.get('ip')
+    if ip!= None:
+        Machine.objects.filter(ip=ip).delete()
+    return HttpResponseRedirect('/crawlermanage/machinelist')
+
+'''增加ip'''
+def addip(request):
+    if request.method == 'POST':
+        ip = request.POST.get('ip', '').strip()
+        machine = Machine.objects.filter(ip=ip)
+        if len(machine) == 0:
+            machine = Machine(ip=ip)
+            machine.save()
+            ret = {"status":"success"}
+        else:
+            ret = {"status":"error"}
+        return HttpResponse(json.dumps(ret))
+    else:
+        ret = {"status": "error"}
+        return HttpResponse(json.dumps(ret))

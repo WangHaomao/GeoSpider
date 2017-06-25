@@ -56,7 +56,14 @@
                             <th><label>任务名</label></th>
                             <td>{{task.taskname}}</td>
                             <th><label>任务类型</label></th>
-                            <td>{{task.webtype}}</td>
+                            <td>{% if task.webtype = 'news' %}
+                                新闻
+                                {% elif task.webtype = 'blog' %}
+                                博客
+                                {% elif task.webtype = 'ecommerce' %}
+                                电商
+                                {% endif %}
+                            </td>
 
                           </tr>
                           <tr>
@@ -69,9 +76,10 @@
                             <!-- <a href="#" id="end_time" data-type="combodate" data-pk="1" data-url="/post" data-value="1984-05-15" data-title="Select date"></a> -->
                             {% if task.endtime %}
                               {{task.endtime}}
-                              {% else %}
-                               <a href="#" id="end_time" class="editable editable-click editable-empty" data-original-title="" title="">默认自动停止，点击设置</a>
+                              <!-- <a href="#" id="end_time" class="editable editable-click editable-empty" data-original-title="" title="">默认自动停止，点击设置</a> -->
                               {% endif %}
+
+                               
                             </td>
                             <th><label>当前状态</label></th>
                             <!-- <td>
@@ -107,6 +115,15 @@
                               <a style="display: block;" target="_blank"> http://www.jd.com</a> -->
                               {% for url in task.starturls %}
                                 <a href="{{url}}" style="display: block;" target="_blank">{{url}}</a>
+                              {% endfor %}
+
+                            </td>
+                          </tr>
+                          <tr>
+                            <th><label>主机</label></th>
+                            <td colspan="6">
+                              {% for ip in task.slave %}
+                                <a href="{{ip}}" style="display: block;" target="_blank">{{ip}}</a>
                               {% endfor %}
 
                             </td>

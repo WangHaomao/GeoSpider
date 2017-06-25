@@ -18,6 +18,65 @@
 
 </head>
 {% endblock %}
+{% block sidebar %}
+      <ul class="sidebar-menu">
+        <li class="header">主控面板</li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>查看任务</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li c><a href="{%url 'tasks' %}"><i class="fa fa-circle-o"></i>爬虫状态</a></li>
+            <!--<li><a href="{%url 'newsdata'%}"><i class="fa fa-circle-o"></i>数据显示</a></li>-->
+          </ul>
+        </li>
+        <li class="active">
+          <a href="{%url 'layout'%}">
+            <i class="fa fa-tasks"></i> <span>布置任务</span>
+            <!-- <span class="pull-right-container">
+              <small class="label pull-right bg-green">new</small>
+            </span> -->
+          </a>
+        </li>
+          <li>
+          <a href="{% url 'machinelist' %}">
+            <i class="fa fa-book"></i> <span>主机管理</span>
+          </a>
+        </li>
+        <li>
+          <a href="{% url 'processlist' %}">
+            <i class="fa fa-book"></i> <span>进程管理</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>正文测试</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{%url 'extractarticle' %}"><i class="fa fa-circle-o"></i>批量抽取</a></li>
+            <li><a href="{%url 'testarticles' %}"><i class="fa fa-circle-o"></i>测试结果</a></li>
+            <!--<li><a href="{%url 'newsdata'%}"><i class="fa fa-circle-o"></i>数据显示</a></li>-->
+          </ul>
+        </li>
+        <li>
+          <a href="pages/widgets.html">
+            <i class="fa fa-book"></i> <span>使用说明</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="pages/widgets.html">
+            <i class="fa fa-share"></i> <span>联系我们</span>
+          </a>
+        </li>
+      </ul>
+{% endblock %}
 {% block maincontent %}
 <div class="box box-primary">
           <div class="box-header with-border">
@@ -53,7 +112,7 @@
               <div class="form-group">
                 <label>网站类型</label>
                 <select class="form-control" id="webtype">
-                  <option value="ecommerce">电商网站</option>
+                  <option value="ecommerce">电商</option>
                   <option value="news">新闻</option>
                   <option value="blog">博客</option>
                 </select>
@@ -109,7 +168,7 @@
                           </div>
                       </td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                       <th><label>优先抓取（视网站类型变化）</label></th>
                       <td>
                         <div class="form-group">
@@ -120,15 +179,15 @@
                           </select>
                         </div>
                       </td>
-                    </tr>
+                    </tr> -->
                     <tr>
                       <th><label>分布式主机</label></th>
                       <td>
                         <div class="form-group">
                           <select class="form-control select2" multiple="multiple" data-placeholder="以下主机可用" id="slave" style="width: 100%;">
-                            <option value="192.168.1.114">192.168.1.114</option>
-                            <option value="192.168.1.130">192.168.1.130</option>
-                            <option>代号666</option>
+                          {% for i in ips %}
+                          <option value="{{i.ip}}">{{i.ip}}</option>
+                          {% endfor %}
                           </select>
                         </div>
                       </td>

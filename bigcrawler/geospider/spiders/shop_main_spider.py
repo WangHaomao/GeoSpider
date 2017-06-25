@@ -11,7 +11,7 @@ class ShopSpider(RedisSpider):
     """Spider that reads urls from redis queue (myspider:start_urls)."""
     name = 'shopspider'
     redis_key = 'myspider:start_urls'
-    # allowed_domains = ['news.qq.com']
+    # allowed_domains = ['news_and_blog.qq.com']
 
     def __init__(self, *args, **kwargs):
         # Dynamically define the allowed domains list.

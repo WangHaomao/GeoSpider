@@ -4,7 +4,7 @@ from collections import Counter
 
 from bs4 import BeautifulSoup
 
-from geospider.news.news_parser import filter_tags, get_html
+from geospider.news_and_blog.article_parser import filter_tags, get_html
 
 authorset = {'责任编辑', '作者'}
 
@@ -76,11 +76,11 @@ def extract_content_by_tag(html_str, article):
             p_in_article.append(p.parent)
     tuple = Counter(p_in_article).most_common(1)[0]
     article_soup = BeautifulSoup(str(tuple[0]), 'xml')
-    return article_soup.text
+    return remove_space(article_soup.text)
     # print(tuple[0])
     # return remove_space_from_text(article_soup.text)
 
-def remove_space_from_text(text):
+def remove_space(text):
     return re.sub("\\s+", '', text)
 
 '''
@@ -97,7 +97,7 @@ def extract_content(html_str):
     return article
 
 if __name__ == '__main__':
-    url = 'http://news.qq.com/a/20170126/018592.htm'
+    url = 'http://news_and_blog.qq.com/a/20170126/018592.htm'
     html = get_html(url)
     a  = extract_content(html)
     print(a)

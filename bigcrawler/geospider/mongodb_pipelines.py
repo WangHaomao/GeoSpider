@@ -19,7 +19,7 @@ class MongoDBPipeline(object):
         if classname == "<class 'geospider.spiders.blog_spider.BlogSpider'>":
             self.col='blog'
         elif classname == "<class 'geospider.spiders.blog_spider.NewsSpider'>" or classname=="<class 'geospider.spiders.blog_spider.NewsSpiderRecover'>":
-            self.col='news'
+            self.col='news_and_blog'
         connection = pymongo.MongoClient(self.url)
         db = connection[self.db]
         self.collection = db[self.col]

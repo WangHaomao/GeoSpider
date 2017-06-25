@@ -1,15 +1,14 @@
 # -*- encoding: utf-8 -*-
 import os
 
-import redis
 from copy import deepcopy
 
 import time
 
 import signal
-from bson import ObjectId
 from scrapy import cmdline
-import pymongo
+from geospider.spiders.blog_spider import BlogSpider
+from geospider.spiders.blog_spider_recover import BlogSpiderRecover
 from geospider.spiders.news_spider import NewsSpider
 from geospider.spiders.news_spider_recover import NewsSpiderRecover
 from geospider.utils.mongodb_helper import connect_mongodb, TaskDao, ProcessDao
@@ -29,6 +28,13 @@ def init(taskid, is_restart):
             temp = deepcopy(NewsSpiderRecover)
         else:
             temp = deepcopy(NewsSpider)
+        temp.name = taskid
+        temp.redis_key = taskid + ":start_urls"
+    elif "blog" == task['webtype']:
+        if is_restart:
+            temp = deepcopy(BlogSpiderRecover)
+        else:
+            temp = deepcopy(BlogSpider)
         temp.name = taskid
         temp.redis_key = taskid + ":start_urls"
 

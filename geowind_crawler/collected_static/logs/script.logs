@@ -12827,3 +12827,803 @@ TemplateDoesNotExist: crawlermanage/process_list.html
 2017-06-24 14:11:05,063 [Thread-14:140028407703296] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
 2017-06-24 14:11:17,724 [Thread-16:140028416096000] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
 2017-06-24 14:11:31,045 [Thread-18:140028407703296] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 03:37:41,793 [Thread-2:140451888764672] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 4, in <module>
+    from crawlermanage import views
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 23, in <module>
+    messager.subscribe(sub)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/message.py", line 20, in subscribe
+    self.ps.subscribe(channel)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2229, in subscribe
+    ret_val = self.execute_command('SUBSCRIBE', *iterkeys(new_channels))
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2161, in execute_command
+    self._execute(connection, connection.send_command, *args)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2172, in _execute
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+ConnectionError: Error 110 connecting to 192.168.1.114:6379. Connection timed out.
+2017-06-25 03:41:56,257 [Thread-4:140451671701248] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 4, in <module>
+    from crawlermanage import views
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 23, in <module>
+    messager.subscribe(sub)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/message.py", line 20, in subscribe
+    self.ps.subscribe(channel)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2229, in subscribe
+    ret_val = self.execute_command('SUBSCRIBE', *iterkeys(new_channels))
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2161, in execute_command
+    self._execute(connection, connection.send_command, *args)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2172, in _execute
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+ConnectionError: Error 110 connecting to 192.168.1.114:6379. Connection timed out.
+2017-06-25 03:47:34,991 [Thread-5:140451888764672] [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 4, in <module>
+    from crawlermanage import views
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 23, in <module>
+    messager.subscribe(sub)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/message.py", line 20, in subscribe
+    self.ps.subscribe(channel)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2229, in subscribe
+    ret_val = self.execute_command('SUBSCRIBE', *iterkeys(new_channels))
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2161, in execute_command
+    self._execute(connection, connection.send_command, *args)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2172, in _execute
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+ConnectionError: Error 110 connecting to 192.168.1.114:6379. Connection timed out.
+2017-06-25 03:50:26,163 [Thread-10:140451888764672] [django.request:170] [WARNING]- Not Found: /favicon.ico
+2017-06-25 03:50:28,203 [Thread-20:140451888764672] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 03:50:35,348 [Thread-28:140451888764672] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 03:50:37,942 [Thread-30:140451888764672] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 03:53:04,155 [Thread-32:140451671701248] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 03:53:07,027 [Thread-34:140451635656448] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 03:53:09,476 [Thread-35:140451627263744] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/mechinelist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 294, in mechinelist
+    return render(request, 'crawlermanage/mechine_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: crawlermanage/mechine_list.html
+2017-06-25 03:54:30,585 [Thread-37:140451618871040] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/mechinelist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 294, in mechinelist
+    return render(request, 'crawlermanage/mechine_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 46, in get_template
+    raise TemplateDoesNotExist(template_name)
+TemplateDoesNotExist: crawlermanage/mechine_list.html
+2017-06-25 03:57:37,312 [Thread-2:140395481028352] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 286, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 74, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 209, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 79, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 507, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 493, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 579, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 496, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'mechinelist' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-06-25 03:58:49,037 [Thread-9:140395031820032] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 03:58:51,635 [Thread-11:140395455850240] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 03:58:54,136 [Thread-13:140395455850240] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 03:59:31,590 [Thread-3:140045059094272] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 03:59:34,980 [Thread-5:140045059094272] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 03:59:38,741 [Thread-7:140045059094272] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 03:59:40,278 [Thread-9:140045059094272] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:00:03,755 [Thread-11:140045059094272] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:00:07,290 [Thread-13:140045059094272] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:00:09,292 [Thread-15:140045059094272] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:13:39,832 [Thread-3:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:13:44,634 [Thread-5:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 04:13:46,443 [Thread-7:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:15:38,678 [Thread-9:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:15:50,133 [Thread-13:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:16:58,755 [Thread-15:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:17:25,971 [Thread-17:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:17:33,986 [Thread-19:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:17:45,205 [Thread-21:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:18:14,035 [Thread-23:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:18:23,204 [Thread-25:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:18:25,992 [Thread-27:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:18:45,848 [Thread-32:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 04:19:10,229 [Thread-34:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 04:19:14,241 [Thread-36:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:20:02,709 [Thread-38:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:20:14,711 [Thread-40:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 04:20:18,658 [Thread-42:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-25 04:20:23,895 [Thread-44:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-25 04:20:27,108 [Thread-46:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 04:20:35,173 [Thread-48:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:21:17,673 [Thread-50:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:22:55,589 [Thread-52:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 04:22:59,742 [Thread-54:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 04:27:13,776 [Thread-56:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 04:27:15,673 [Thread-58:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 04:27:17,468 [Thread-60:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 04:27:22,554 [Thread-62:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 04:27:26,127 [Thread-64:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 04:27:28,226 [Thread-66:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:28:06,175 [Thread-68:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:28:33,524 [Thread-70:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:30:05,202 [Thread-72:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:32:25,963 [Thread-74:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:33:14,850 [Thread-76:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:34:55,020 [Thread-78:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:35:29,713 [Thread-80:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:37:45,603 [Thread-82:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:38:07,583 [Thread-84:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:40:28,829 [Thread-86:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:41:01,545 [Thread-88:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:41:08,926 [Thread-90:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 04:41:18,472 [Thread-92:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:41:29,289 [Thread-94:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 04:41:31,371 [Thread-96:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 04:41:43,987 [Thread-98:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:42:03,582 [Thread-100:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:44:55,092 [Thread-102:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:45:04,876 [Thread-104:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:45:25,639 [Thread-106:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 04:46:36,630 [Thread-108:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:02:05,170 [Thread-110:140677539170048] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:02:41,375 [Thread-112:140677773993728] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:10:45,495 [Thread-3:139973923698432] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:10:55,649 [Thread-6:139973923698432] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:11:33,350 [Thread-8:139974134167296] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:11:38,249 [Thread-11:139974134167296] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:11:56,328 [Thread-13:139973923698432] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:13:59,480 [Thread-16:139974134167296] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:14:09,631 [Thread-20:139974134167296] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:15:34,401 [Thread-23:139973923698432] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:16:05,470 [Thread-26:139974134167296] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:17:15,361 [Thread-3:139668158928640] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:18:27,269 [Thread-6:139668167321344] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:18:55,592 [Thread-3:140620939441920] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:19:49,450 [Thread-3:139714110068480] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:21:11,635 [Thread-5:139714110068480] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:22:14,486 [Thread-3:140018091349760] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:25:48,385 [Thread-3:140581141280512] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:26:14,755 [Thread-5:140581141280512] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:58:24,801 [Thread-7:140580906686208] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:59:01,451 [Thread-9:140581141280512] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 05:59:15,617 [Thread-11:140580906686208] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 06:00:16,057 [Thread-13:140581141280512] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 06:02:09,147 [Thread-15:140580906686208] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 06:02:37,978 [Thread-18:140580906686208] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 06:02:41,559 [Thread-20:140581141280512] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 06:02:44,825 [Thread-22:140580906686208] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 06:05:00,885 [Thread-3:140682517800704] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 06:05:08,481 [Thread-6:140682517800704] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 06:06:22,631 [Thread-3:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 06:06:36,192 [Thread-6:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 06:07:02,122 [Thread-8:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 06:07:13,331 [Thread-11:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 06:07:23,592 [Thread-13:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 06:07:35,017 [Thread-15:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 07:05:09,802 [Thread-17:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 07:05:11,418 [Thread-19:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:07:36,561 [Thread-21:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:08:12,133 [Thread-23:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:08:53,456 [Thread-25:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:09:11,860 [Thread-27:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:15:44,605 [Thread-29:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:16:00,729 [Thread-31:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:24:37,214 [Thread-33:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:25:36,881 [Thread-35:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:25:48,006 [Thread-37:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 07:31:26,328 [Thread-39:140478134421248] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 53, in index
+    return render(request, 'crawlermanage/index.html')
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 339, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 395, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s'" % command)
+TemplateSyntaxError: Invalid block tag: 'endblock'
+2017-06-25 07:32:42,907 [Thread-41:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:33:51,095 [Thread-43:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:34:02,747 [Thread-45:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:34:12,689 [Thread-47:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:37:14,807 [Thread-49:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:39:11,512 [Thread-51:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 07:39:53,543 [Thread-53:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:40:15,457 [Thread-55:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:40:24,700 [Thread-57:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 07:46:07,358 [Thread-59:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:46:43,481 [Thread-61:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:51:31,177 [Thread-63:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:51:46,408 [Thread-65:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-25 07:52:16,135 [Thread-67:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 07:52:18,829 [Thread-69:140478126028544] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 07:53:46,256 [Thread-71:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 07:53:48,739 [Thread-73:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 07:53:50,677 [Thread-75:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 07:53:52,162 [Thread-77:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 07:53:54,274 [Thread-79:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-25 07:53:55,668 [Thread-81:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-25 07:53:57,331 [Thread-83:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-25 07:53:59,282 [Thread-84:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/extractarticle/pages/widgets.html
+2017-06-25 07:56:09,407 [Thread-88:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 07:56:12,896 [Thread-90:140478134421248] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 07:59:15,368 [Thread-2:140045158618880] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 215, in layout
+    return render_to_response('crawlermanage/layout.html')
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 317, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 423, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 639, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '% for i in ips %' from '% for i in ips %'
+2017-06-25 07:59:37,026 [Thread-5:140045158618880] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 08:00:59,892 [Thread-3:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 08:01:27,958 [Thread-5:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 08:01:29,431 [Thread-7:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 08:28:38,242 [Thread-9:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 08:28:41,450 [Thread-11:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 08:28:44,332 [Thread-13:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 08:28:47,851 [Thread-15:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 08:28:51,241 [Thread-17:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 08:28:52,162 [Thread-19:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 08:28:53,450 [Thread-21:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 08:28:55,490 [Thread-23:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-25 08:30:42,218 [Thread-25:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-25 08:31:00,534 [Thread-27:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-25 08:33:24,502 [Thread-37:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 08:33:26,310 [Thread-39:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-25 08:35:27,874 [Thread-41:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-25 08:35:53,269 [Thread-43:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-25 08:36:09,741 [Thread-45:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-25 08:36:28,306 [Thread-47:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-25 08:36:44,841 [Thread-49:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-25 08:37:04,588 [Thread-51:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-25 08:37:37,385 [Thread-52:140201115399936] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/taskdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 230, in taskdetail
+    return render_to_response('crawlermanage/taskdetail.html', {'task': task})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 339, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 394, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'else', expected 'endblock'
+2017-06-25 08:38:00,562 [Thread-55:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-25 08:39:57,589 [Thread-56:140201115399936] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/taskdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 230, in taskdetail
+    return render_to_response('crawlermanage/taskdetail.html', {'task': task})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 1009, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 941, in __init__
+    super(TemplateIfParser, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 168, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 179, in translate_token
+    return self.create_var(token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 944, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 423, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 639, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '=='news'' from 'task.webtype=='news''
+2017-06-25 08:40:21,294 [Thread-58:140201123792640] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/taskdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 230, in taskdetail
+    return render_to_response('crawlermanage/taskdetail.html', {'task': task})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 1009, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 941, in __init__
+    super(TemplateIfParser, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 168, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 179, in translate_token
+    return self.create_var(token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 944, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 423, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 639, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '==news' from 'task.webtype==news'
+2017-06-25 08:40:41,187 [Thread-60:140201123792640] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/taskdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 230, in taskdetail
+    return render_to_response('crawlermanage/taskdetail.html', {'task': task})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 1009, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 941, in __init__
+    super(TemplateIfParser, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 168, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 179, in translate_token
+    return self.create_var(token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 944, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 423, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 639, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '='news'' from 'task.webtype='news''
+2017-06-25 08:41:13,490 [Thread-62:140201115399936] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/taskdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 230, in taskdetail
+    return render_to_response('crawlermanage/taskdetail.html', {'task': task})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 1009, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 941, in __init__
+    super(TemplateIfParser, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 168, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 179, in translate_token
+    return self.create_var(token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 944, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 423, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 639, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '=news' from 'task.webtype=news'
+2017-06-25 08:41:25,165 [Thread-64:140201123792640] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/taskdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 230, in taskdetail
+    return render_to_response('crawlermanage/taskdetail.html', {'task': task})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 1009, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 941, in __init__
+    super(TemplateIfParser, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 168, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 179, in translate_token
+    return self.create_var(token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 944, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 423, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 639, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '==news' from 'task.webtype==news'
+2017-06-25 08:42:19,644 [Thread-66:140201115399936] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/taskdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 230, in taskdetail
+    return render_to_response('crawlermanage/taskdetail.html', {'task': task})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 98, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 35, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 30, in get_template
+    return Template(self.engine.get_template(template_name, dirs))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 261, in compile_string
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 210, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 184, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 1009, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 941, in __init__
+    super(TemplateIfParser, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 168, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/smartif.py", line 179, in translate_token
+    return self.create_var(token)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 944, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 423, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 639, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '='news'' from 'task.webtype='news''
+2017-06-25 08:42:52,121 [Thread-69:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-25 08:43:11,437 [Thread-71:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 08:43:25,784 [Thread-73:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 08:43:29,709 [Thread-75:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 08:44:04,141 [Thread-77:140201115399936] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 08:44:46,837 [Thread-79:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 08:44:58,127 [Thread-81:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 08:45:00,891 [Thread-83:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 08:45:03,302 [Thread-85:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 08:45:07,749 [Thread-87:140201123792640] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-25 09:15:38,478 [Thread-3:140360245667584] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-25 09:15:40,093 [Thread-5:140360245667584] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 09:15:56,170 [Thread-8:140360245667584] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 09:16:10,549 [Thread-10:140360245667584] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 09:16:13,482 [Thread-12:140360245667584] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 09:22:15,199 [Thread-3:140290969732864] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 09:22:18,697 [Thread-5:140290969732864] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 09:22:20,048 [Thread-7:140290969732864] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 09:22:35,233 [Thread-10:140290969732864] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 09:26:02,018 [Thread-12:140290969732864] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 09:26:15,002 [Thread-15:140290969732864] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 09:30:13,851 [Thread-19:140290969732864] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 09:30:43,426 [Thread-21:140290978125568] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 09:30:45,579 [Thread-23:140290978125568] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 09:31:20,475 [Thread-26:140290978125568] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 09:32:04,799 [Thread-30:140290978125568] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 09:32:23,583 [Thread-32:140290969732864] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 09:32:29,491 [Thread-34:140290969732864] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 09:32:47,835 [Thread-36:140290978125568] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 09:32:51,482 [Thread-38:140290978125568] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 09:32:55,576 [Thread-40:140290978125568] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 09:32:59,656 [Thread-42:140290978125568] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 09:33:04,036 [Thread-44:140290978125568] [django.request:170] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-25 09:33:18,070 [Thread-48:140290969732864] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 09:33:32,147 [Thread-50:140290978125568] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 09:33:59,131 [Thread-53:140290978125568] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:05:25,274 [Thread-4:140405156865792] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:05:28,155 [Thread-6:140405156865792] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 10:05:40,105 [Thread-8:140405156865792] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 10:05:47,873 [Thread-10:140405156865792] [django.request:170] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-25 10:21:16,931 [Thread-3:139836818118400] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 10:21:21,647 [Thread-5:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 10:21:24,009 [Thread-7:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 10:21:37,869 [Thread-10:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:21:39,887 [Thread-12:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 10:22:05,104 [Thread-14:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 10:22:08,319 [Thread-16:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-25 10:22:10,100 [Thread-18:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 10:22:18,807 [Thread-20:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 10:22:35,005 [Thread-22:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 10:22:38,246 [Thread-24:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:22:43,202 [Thread-27:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:23:12,720 [Thread-29:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 10:23:46,505 [Thread-32:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:23:49,770 [Thread-34:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-25 10:26:13,463 [Thread-36:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 10:26:16,617 [Thread-38:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:26:24,019 [Thread-41:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:31:19,855 [Thread-43:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 10:31:38,076 [Thread-46:139836785669888] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:32:31,904 [Thread-48:139836818118400] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:32:50,398 [Thread-52:139836818118400] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:32:54,477 [Thread-54:139836818118400] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:32:57,565 [Thread-56:139836818118400] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-25 10:33:31,211 [Thread-59:139836818118400] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-25 10:36:40,133 [Thread-62:139836818118400] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg

@@ -4,7 +4,7 @@ from collections import Counter
 
 from bs4 import BeautifulSoup, Comment
 import requests
-from geospider.news.news_parser import *
+from geospider.news_and_blog.article_parser import *
 import os
 authorset = {'责任编辑', '作者'}
 

@@ -1,34 +1,32 @@
 # -*- encoding: utf-8 -*-
 from scrapy_redis.spiders import RedisSpider
 from scrapy.http import Request
-
 from geospider.news_and_blog.article_parser import *
-from geospider.items import News
-import sys
-
-from geospider.utils.mongodb_helper import connect_mongodb, NewsDao
-
-reload(sys)
-sys.setdefaultencoding("utf-8")
+from geospider.items import Blog
 from geospider.news_and_blog.extract_content import extract_content
+from geospider.utils.mongodb_helper import connect_mongodb, NewsDao, BlogDao
 from geospider.utils.url_util import is_articel_content_page_blog_and_news
 
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
-class NewsSpiderRecover(RedisSpider):
+
+class BlogSpiderRecover(RedisSpider):
     """Spider that reads urls from redis queue (myspider:start_urls)."""
-    name = 'news_recover'
-    redis_key = 'news_recover:start_urls'
+    name = 'blog_recover'
+    redis_key = 'blog_recover:start_urls'
 
     def __init__(self, *args, **kwargs):
         # Dynamically define the allowed domains list.
         domain = kwargs.pop('domain', '')
         print("***********************************************************8")
-        #self.allowed_domains = filter(None, domain.split(','))
+        # self.allowed_domains = filter(None, domain.split(','))
         db = connect_mongodb()
-        newsdao = NewsDao(db)
+        blogdao = BlogDao(db)
         taskid = self.redis_key.split(':')[0]
-        self.url_list_download = newsdao.find_urls_by_taksid(taskid)
-        super(NewsSpiderRecover, self).__init__(*args, **kwargs)
+        self.url_list_download = blogdao.find_urls_by_taksid(taskid)
+        super(BlogSpiderRecover, self).__init__(*args, **kwargs)
 
     def parse(self, response):
         yield Request(url=response.url, callback=self.parse_page)
@@ -45,7 +43,6 @@ class NewsSpiderRecover(RedisSpider):
             else:
                 yield Request(url=item_href, callback=self.parse_page)
 
-
     def parse_acticle(self, response):
         html = get_html(response.url)
         article = extract_content(html)
@@ -54,10 +51,10 @@ class NewsSpiderRecover(RedisSpider):
         keywords = get_keywords(html)
         url_num = len(get_all_url(html))
 
-        flag = is_acricle_page_by_allinfo(html,title,keywords,article,url_num)
+        flag = is_acricle_page_by_allinfo(html, title, keywords, article, url_num)
 
         if flag:
-            item = News()
+            item = Blog()
             item['url'] = str(response.url)
             item['title'] = str(title)
             item['time'] = str(time)

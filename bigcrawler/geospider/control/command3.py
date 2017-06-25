@@ -7,7 +7,7 @@ from geospider.spiders.blog_spider import BlogSpider
 from geospider.spiders.news_spider import NewsSpider
 import pymongo
 client = pymongo.MongoClient('mongodb://localhost:27017')
-db_name = 'news'
+db_name = 'news_and_blog'
 db = client[db_name]
 
 

@@ -94,7 +94,7 @@ DATABASES = {
 LOCAL_HOST = '192.168.1.114'
 
 MONGODB_HOST = '192.168.1.114'
-MONGODB_DBNAME = 'news'
+MONGODB_DBNAME = 'geospider'
 mongoengine.connect(MONGODB_DBNAME, host=MONGODB_HOST, username='', password='')
 # mongoengine.register_connection('default', 'news')
 

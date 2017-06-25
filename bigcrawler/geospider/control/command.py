@@ -7,7 +7,7 @@ from geospider.control.process_controller import ProcessController
 from geospider.spiders.news_spider import NewsSpider
 import pymongo
 client = pymongo.MongoClient('mongodb://localhost:27017')
-db_name = 'news'
+db_name = 'news_and_blog'
 db = client[db_name]
 
 
@@ -20,7 +20,7 @@ def start():
     b.redis_key = "aaa:start_urls"
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     # r.sadd("myspider:start_urls", 'http://news.qq.com/')
-    r.lpush("aaa:start_urls", 'http://news.sohu.com/')
+    r.lpush("aaa:start_urls", 'http://news_and_blog.sohu.com/')
 
     cmdline.execute("scrapy crawl aaa".split())
 

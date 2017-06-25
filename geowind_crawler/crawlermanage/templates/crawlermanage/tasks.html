@@ -40,6 +40,11 @@
             </span> -->
           </a>
         </li>
+          <li>
+          <a href="{% url 'machinelist' %}">
+            <i class="fa fa-book"></i> <span>主机管理</span>
+          </a>
+        </li>
         <li>
           <a href="{% url 'processlist' %}">
             <i class="fa fa-book"></i> <span>进程管理</span>
@@ -83,9 +88,9 @@
               	<div class="row">
 			            <div class="col-xs-12">
 			              <div class="box">
-			                <div class="box-header">
+			                <!-- <div class="box-header">
 			                  <h3 class="box-title">Responsive Hover Table</h3>
-			                </div>
+			                </div> -->
 			                <!-- /.box-header -->
 			                <div class="box-body table-responsive no-padding">
 			                <!-- 客户端分页 -->
@@ -130,7 +135,13 @@
                                 <td>{{i.id}}</td>
                                 <td>{{i.starttime}}</td></a></td>
                                 <td>{{i.taskname}}</td>
-                                <td>{{i.webtype}}</td>
+                                <td>{% if i.webtype = 'news' %}
+                                新闻
+                                {% elif i.webtype = 'blog' %}
+                                博客
+                                {% elif i.webtype = 'ecommerce' %}
+                                电商
+                                {% endif %}</td>
                                 <td>
                                     {% if i.status = 'running' %}
                                     <span id="span_{{i.id}}" class="label label-success" >
@@ -151,7 +162,7 @@
                                     {% endif %}
                                 </td>
                                 <!--<td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>-->
-                                <td><a href="{%url 'newsdata'%}?taskid={{i.id}}">结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">管理</a></td>
+                                <td><a href="{%url 'newsdata'%}?taskid={{i.id}}">结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">详情</a></td>
                               </tr>
                               {% endfor %}
                             </tbody>
@@ -190,9 +201,9 @@
                 <div class="row">
                   <div class="col-xs-12">
                     <div class="box">
-                      <div class="box-header">
+                      <!-- <div class="box-header">
                         <h3 class="box-title">Responsive Hover Table</h3>
-                      </div>
+                      </div> -->
                       <!-- /.box-header -->
                       <div class="box-body table-responsive no-padding">
                       <!-- 服务器分页开始 -->

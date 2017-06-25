@@ -169,7 +169,7 @@ if __name__ == "__main__":#http://news.sohu.com/s2014/nanshuibeidiao/
     # url = url.replace('%3A',':')
     # print url
     # html = get_html(url)
-    url = 'http://news.qq.com/a/20170624/015461.htm'
+    url = 'http://news_and_blog.qq.com/a/20170624/015461.htm'
     html = get_html(url)
     time = get_time_by_html(html)
     print(time)

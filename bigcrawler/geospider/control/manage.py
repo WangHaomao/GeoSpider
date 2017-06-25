@@ -81,6 +81,7 @@ def start():
     try:
         run(process, listener, taskdao)
     except:
+        print('---------------------------异常------------------------')
         process_list = processdao.find_by_localhost(localhost)
         command_list = []
         for p in process_list:

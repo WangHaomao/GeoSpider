@@ -50,13 +50,14 @@
 		            <div class="box-header with-border ">
                         <br />
 		              	<h3 class="box-title">{{news.title}}</h3>
-		              	<h5>{{news.time}}</h5>
+		              	<h5>日期：{{news.time}}</h5>
+		              	<h5>关键词：{{news.keywords}}</h5>
 		            </div>
 		            <!-- /.box-header -->
 		            <!-- form start -->
 		              <div id="content" class="box-body" runat="server">
 							{% autoescape off %}
-							{{news.acticle}}
+							{{news.article}}
 							{% endautoescape %}
 
 					  </div>

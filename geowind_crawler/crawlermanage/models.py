@@ -19,7 +19,15 @@ class Task(Document):
 class News(Document):
     title = StringField(max_length=30, required=True)
     url = StringField(max_length=200, required=True)
-    acticle = StringField(max_length=2000)
+    article = StringField(max_length=2000)
+    time = StringField(max_length=20)
+    keywords = StringField(max_length=30)
+    taskid = StringField(max_length=30, required=True)
+
+class Blog(Document):
+    title = StringField(max_length=30, required=True)
+    url = StringField(max_length=200, required=True)
+    article = StringField(max_length=2000)
     time = StringField(max_length=20)
     keywords = StringField(max_length=30)
     taskid = StringField(max_length=30, required=True)
@@ -30,3 +38,5 @@ class Process(Document):
     taskid = StringField(max_length=30, required=True)
     status = StringField(max_length=30, required=True)
 
+class Machine(Document):
+    ip = StringField(max_length=30, required=True)

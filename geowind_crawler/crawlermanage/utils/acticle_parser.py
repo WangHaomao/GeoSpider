@@ -109,7 +109,7 @@ def extract_content_by_tag(html, article):
             p_in_article.append(p.parent)
     tuple = Counter(p_in_article).most_common(1)[0]
     article_soup = BeautifulSoup(str(tuple[0]), 'xml')
-    return article_soup.text
+    return remove_space(article_soup.text)
 
 
 '''
@@ -119,7 +119,7 @@ def extract_content_by_tag(html, article):
 '''
 
 
-def get_tag_text(text):
+def remove_space(text):
     text = re.sub("\\s+", '', text)
     return text
 
@@ -187,6 +187,6 @@ def test(standard_path, result_path):
 
 
 if __name__ == '__main__':
-    # extract('/home/kui/下载/1_20170614100615_ldaon/正文抽取-源数据', '/home/kui/下载/1_20170614100615_ldaon/compare3')
+    extract('/home/kui/下载/1_20170614100615_ldaon/正文抽取-源数据', '/home/kui/下载/1_20170614100615_ldaon/compare3')
     # print(get_attr('BASE_DIR'))
-    print(test('/home/kui/下载/1_20170614100615_ldon/right', '/home/kui/下载/1_20170614100615_ldaon/compare3'))
+    # print(test('/home/kui/下载/1_20170614100615_ldon/right', '/home/kui/下载/1_20170614100615_ldaon/compare3'))

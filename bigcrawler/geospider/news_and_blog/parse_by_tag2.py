@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-from geospider.news.news_parser import *
+from geospider.news_and_blog.article_parser import *
 from bs4 import BeautifulSoup
 
 def get_article_node(lines):
@@ -78,7 +78,7 @@ def get_tag_text(node):
     return text
 
 if __name__ == '__main__':
-    url = "http://news.qq.com/a/20170619/019941.htm"
+    url = "http://news_and_blog.qq.com/a/20170619/019941.htm"
     html = get_html(url)
     lines = filter_tags(html, False)
     article_node = get_article_node(lines)

@@ -66,7 +66,7 @@ LOCAL_HOST = '192.168.1.114'
 # MONGODB_DBNAME = 'youhuan'
 # MONGODB_DOCNAME = 'test'
 MONGO_URI = 'mongodb://192.168.1.114:27017/'
-MONGO_DATABASE = 'news'
+MONGO_DATABASE = 'geospider'
 MONGO_COLLECTION = 'news'
 
 # Specify the full Redis URL for connecting (optional).

@@ -10,7 +10,8 @@ from geospider.utils.settings_helper import get_attr
 def connect_mongodb():
     mongo_url = get_attr('MONGO_URI')
     client = MongoClient(mongo_url)
-    db = client.news  # 'examples' here is the database name.it will be created if it does not exist.
+    dbname = get_attr('MONGO_DATABASE')
+    db = client[dbname]  # 'examples' here is the database name.it will be created if it does not exist.
     # 如果 examples不存在，那么就会新建它
     return db
 
@@ -111,6 +112,17 @@ class NewsDao(object):
             url_list.append(i['url'])
         return url_list
 
+class BlogDao(object):
+    def __init__(self, db):
+        self.db = db
+
+    def find_urls_by_taksid(self, taskid):
+        cursor = self.db.blog.find({'taskid': taskid})
+        url_list = []
+        for i in cursor:
+            url_list.append(i['url'])
+        return url_list
+
 class URLDao(object):
     def __init__(self, db):
         self.db = db
@@ -128,6 +140,6 @@ if __name__ == '__main__':
     # task = td.find_by_localhost_and_status('127.0.0.1','running')
     # print(task)
     newsdao = NewsDao(db)
-    list = newsdao.find_urls_by_taksid('594d0c669c1da962bd4b1457')
+    list = newsdao.find_urls_by_taksid('aaa')
     for i in list:
-        print i
+        print(i)

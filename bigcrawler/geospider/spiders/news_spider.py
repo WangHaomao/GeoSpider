@@ -2,14 +2,13 @@
 from scrapy_redis.spiders import RedisSpider
 from scrapy.http import Request
 
-from geospider.news.news_parser import *
+from geospider.news_and_blog.article_parser import *
 from geospider.items import News
 import sys
-# reload(sys)
-# sys.setdefaultencoding("utf-8")
-from geospider.news.extract_content import extract_content
-from geospider.utils.mongodb_helper import URLDao, connect_mongodb
-from geospider.utils.url_util import is_articel_content_page, is_articel_content_page_blog_and_news
+reload(sys)
+sys.setdefaultencoding("utf-8")
+from geospider.news_and_blog.extract_content import extract_content
+from geospider.utils.url_util import is_articel_content_page_blog_and_news
 
 
 class NewsSpider(RedisSpider):
@@ -22,7 +21,7 @@ class NewsSpider(RedisSpider):
     #     Rule(LinkExtractor(), callback='parse', follow=True),
     # )
     # allowed_domains = [
-    #     'news.sohu.com'
+    #     'news_and_blog.sohu.com'
     # ]
 
     def __init__(self, *args, **kwargs):
@@ -89,7 +88,7 @@ class NewsSpider(RedisSpider):
             item['title'] = str(title)
             item['time'] = str(time)
             item['keywords'] = str(keywords)
-            item['acticle'] = str(article)
+            item['article'] = str(article)
             item['taskid'] = str(self.name)
             yield item
         # yield Request(url=response.url, callback=self.parse_page)

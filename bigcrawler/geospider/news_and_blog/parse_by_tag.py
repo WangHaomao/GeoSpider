@@ -148,5 +148,5 @@ def getcodetype(html):
 
 
 if __name__ == '__main__':
-    text  =getcontentfromweb('http://news.qq.com/a/20170619/002792.htm')
+    text  =getcontentfromweb('http://news_and_blog.qq.com/a/20170619/002792.htm')
     parser(text)
