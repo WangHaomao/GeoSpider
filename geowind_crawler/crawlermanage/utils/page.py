@@ -42,9 +42,9 @@ class paging():
         不属于以上2个规则的，则取当前页的前5和后4，共9页的列表
         '''
         if self.page < 5:
-            p_list = self.p.page_range[0:9]
+            p_list = list(self.p.page_range)[0:9]
         elif int(int(self.p.num_pages) - self.page) < 5:
-            p_list = self.p.page_range[-9:]
+            p_list = list(self.p.page_range)[-9:]
         else:
-            p_list = self.p.page_range[self.page-5:self.page+4]
+            p_list = list(self.p.page_range)[self.page-5:self.page+4]
         return p_list

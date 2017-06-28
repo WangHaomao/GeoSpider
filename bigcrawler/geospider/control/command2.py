@@ -1,7 +1,9 @@
 #-*- encoding: utf-8 -*-
 import redis
 from copy import deepcopy
-from scrapy import cmdline, crawler
+
+import sys
+from scrapy import cmdline
 
 from geospider.spiders.blog_spider import BlogSpider
 from geospider.spiders.news_spider import NewsSpider
@@ -9,7 +11,6 @@ import pymongo
 client = pymongo.MongoClient('mongodb://localhost:27017')
 db_name = 'geospider'
 db = client[db_name]
-
 
 def start():
     #conn_table = db['task']
@@ -33,5 +34,10 @@ def pause():
     cmdline.execute("".split())
 
 if __name__ == '__main__':
+    import os
+
+    sys.path.append('/opt/graphite/webapp/')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "graphite.local_settings")
+
     start()
 

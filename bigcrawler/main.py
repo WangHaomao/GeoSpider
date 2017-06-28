@@ -7,8 +7,8 @@ import redis
 from geospider.spiders.news_spider import NewsSpider
 
 r = redis.Redis(host='127.0.0.1', port=6379, db=0)
-r.lpush('blog:start_urls', 'http://blog.sina.com.cn/')   #添加
-cmdline.execute("scrapy crawl blog --nolog".split())
+r.lpush('news:start_urls', 'http://news.qq.cn/')   #添加
+cmdline.execute("scrapy crawl news".split())
 
 
 # redis-cli lpush myspider:start_urls http://google.com

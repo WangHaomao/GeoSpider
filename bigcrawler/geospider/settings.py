@@ -54,18 +54,23 @@ DOWNLOADER_MIDDLEWARES = {
 #REDIS_ITEMS_SERIALIZER = 'json.dumps'
 
 # Specify the host and port to use when connecting to Redis (optional).
-REDIS_HOST = '192.168.1.114'
+REDIS_HOST = '192.168.1.104'
 REDIS_PORT = 6379
 SUBSCRIBE = 'crawler'
 
-LOCAL_HOST = '192.168.1.114'
+LOCAL_HOST = '192.168.1.104'
+
+# STATS_CLASS = 'scrapygraphite.GraphiteStatsCollector'
+STATS_CLASS = 'geospider.statscol.graphite.RedisGraphiteStatsCollector'
+GRAPHITE_HOST = '123.207.230.48'
+GRAPHITE_PORT = 2003
 
 # mongodb
 # MONGODB_HOST = '127.0.0.1'
 # MONGODB_PORT = 27017
 # MONGODB_DBNAME = 'youhuan'
 # MONGODB_DOCNAME = 'test'
-MONGO_URI = 'mongodb://192.168.1.114:27017/'
+MONGO_URI = 'mongodb://192.168.1.104/'
 MONGO_DATABASE = 'geospider'
 MONGO_COLLECTION = 'news'
 

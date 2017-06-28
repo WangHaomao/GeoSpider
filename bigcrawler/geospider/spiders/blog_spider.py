@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
-from scrapy_redis.spiders import RedisSpider
 from scrapy.http import Request
+from scrapy_redis.spiders import RedisSpider
+
 from geospider.news_and_blog.article_parser import *
 from geospider.items import Blog
 from geospider.news_and_blog.extract_content import extract_content
 from geospider.utils.url_util import is_articel_content_page_blog_and_news
-
 import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")

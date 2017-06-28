@@ -14,6 +14,10 @@ from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
 from crawlermanage.utils.settings_helper import get_attr
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 logger = logging.getLogger('crawlermanage.views')
 # mongoengine.register_connection('default', 'p')
 

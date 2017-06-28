@@ -1,4 +1,6 @@
 # -*- encoding: utf-8 -*-
+import mongoengine
+
 from crawlermanage.models import Task
 '''
     创建当前任务状态表，返回4个数组
@@ -8,7 +10,7 @@ from crawlermanage.models import Task
     故障[...]
 '''
 
-
+# mongoengine.register_connection('default', 'geospider')
 
 def create_chart1():
     run_news = Task.objects.filter(webtype='news', status='running').count()
@@ -38,3 +40,4 @@ def create_chart2():
     news = Task.objects.filter(webtype='news', status='stopping').count()
     blog = Task.objects.filter(webtype='blog', status='stopping').count()
     return ecommerce, news, blog
+

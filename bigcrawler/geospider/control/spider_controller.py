@@ -6,6 +6,8 @@ from copy import deepcopy
 import time
 
 import signal
+
+import sys
 from scrapy import cmdline
 from geospider.spiders.blog_spider import BlogSpider
 from geospider.spiders.blog_spider_recover import BlogSpiderRecover
@@ -48,6 +50,8 @@ def init(taskid, is_restart):
 
 
 def run(taskid):
+    sys.path.append('/opt/graphite/webapp/')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "graphite.local_settings")
     cmdline.execute(("scrapy crawl " + taskid).split())
 
 

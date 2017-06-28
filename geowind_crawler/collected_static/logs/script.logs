@@ -14134,3 +14134,1530 @@ TemplateSyntaxError: Could not parse the remainder: '['run']' from 'chart1['run'
 2017-06-25 14:42:42,041 [Thread-49:140587053254400] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
 2017-06-25 14:47:03,053 [Thread-51:140587053254400] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
 2017-06-25 14:47:16,445 [Thread-54:140587053254400] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 01:05:17,990 [Thread-61:140587053254400] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/charts/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 313, in charts
+    chart1_run, chart1_pause, chart1_wait, chart1_error = create_chart1()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/echarts.py", line 14, in create_chart1
+    run_news = Task.objects.filter(webtype='news', status='running').count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.114:27017: timed out
+2017-06-26 01:13:41,391 [Thread-2:139949353461504] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 4, in <module>
+    from crawlermanage import views
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 24, in <module>
+    messager.subscribe(sub)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/message.py", line 20, in subscribe
+    self.ps.subscribe(channel)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2229, in subscribe
+    ret_val = self.execute_command('SUBSCRIBE', *iterkeys(new_channels))
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2161, in execute_command
+    self._execute(connection, connection.send_command, *args)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2172, in _execute
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+ConnectionError: Error 110 connecting to 192.168.1.114:6379. Connection timed out.
+2017-06-26 01:25:50,170 [Thread-2:139862293784320] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 4, in <module>
+    from crawlermanage import views
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 24, in <module>
+    messager.subscribe(sub)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/message.py", line 20, in subscribe
+    self.ps.subscribe(channel)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2229, in subscribe
+    ret_val = self.execute_command('SUBSCRIBE', *iterkeys(new_channels))
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2161, in execute_command
+    self._execute(connection, connection.send_command, *args)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2172, in _execute
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+ConnectionError: Error 110 connecting to 192.168.1.114:6379. Connection timed out.
+2017-06-26 01:30:04,634 [Thread-4:139862044829440] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 4, in <module>
+    from crawlermanage import views
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 24, in <module>
+    messager.subscribe(sub)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/message.py", line 20, in subscribe
+    self.ps.subscribe(channel)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2229, in subscribe
+    ret_val = self.execute_command('SUBSCRIBE', *iterkeys(new_channels))
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2161, in execute_command
+    self._execute(connection, connection.send_command, *args)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2172, in _execute
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+ConnectionError: Error 110 connecting to 192.168.1.114:6379. Connection timed out.
+2017-06-26 01:34:19,098 [Thread-3:139862053222144] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 4, in <module>
+    from crawlermanage import views
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 24, in <module>
+    messager.subscribe(sub)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/message.py", line 20, in subscribe
+    self.ps.subscribe(channel)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2229, in subscribe
+    ret_val = self.execute_command('SUBSCRIBE', *iterkeys(new_channels))
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2161, in execute_command
+    self._execute(connection, connection.send_command, *args)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2172, in _execute
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+ConnectionError: Error 110 connecting to 192.168.1.114:6379. Connection timed out.
+2017-06-26 01:38:33,562 [Thread-5:139862036436736] [django.request:256] [ERROR]- Internal Server Error: /crawlermanage/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 4, in <module>
+    from crawlermanage import views
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 24, in <module>
+    messager.subscribe(sub)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/message.py", line 20, in subscribe
+    self.ps.subscribe(channel)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2229, in subscribe
+    ret_val = self.execute_command('SUBSCRIBE', *iterkeys(new_channels))
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2161, in execute_command
+    self._execute(connection, connection.send_command, *args)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2172, in _execute
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+ConnectionError: Error 110 connecting to 192.168.1.114:6379. Connection timed out.
+2017-06-26 01:42:49,434 [Thread-6:139862036436736] [django.request:256] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 647, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 522, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 366, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 402, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 396, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/kui/work/python/project/geowind_crawler/geowind_crawler/urls.py", line 4, in <module>
+    from crawlermanage import views
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 24, in <module>
+    messager.subscribe(sub)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/message.py", line 20, in subscribe
+    self.ps.subscribe(channel)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2229, in subscribe
+    ret_val = self.execute_command('SUBSCRIBE', *iterkeys(new_channels))
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2161, in execute_command
+    self._execute(connection, connection.send_command, *args)
+  File "/usr/local/lib/python2.7/dist-packages/redis/client.py", line 2172, in _execute
+    connection.connect()
+  File "/usr/local/lib/python2.7/dist-packages/redis/connection.py", line 442, in connect
+    raise ConnectionError(self._error_message(e))
+ConnectionError: Error 110 connecting to 192.168.1.114:6379. Connection timed out.
+2017-06-26 01:51:04,168 [Thread-3:140382331459328] [django.request:170] [WARNING]- Not Found: /favicon.ico
+2017-06-26 01:51:05,637 [Thread-7:140382331459328] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-26 01:51:08,459 [Thread-10:140382331459328] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:16:42,670 [Thread-12:140382339852032] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:19:43,147 [Thread-19:140382292715264] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:19:43,979 [Thread-20:140382301107968] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/a.json
+2017-06-26 02:19:47,957 [Thread-22:140382331459328] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:19:49,405 [Thread-23:140382331459328] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/a.json
+2017-06-26 02:24:18,634 [Thread-25:140382339852032] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:24:19,622 [Thread-26:140382301107968] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/a.json
+2017-06-26 02:25:55,779 [Thread-30:140381870089984] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:25:56,471 [Thread-31:140381870089984] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/a.json
+2017-06-26 02:27:21,217 [Thread-3:140554010547968] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:27:48,981 [Thread-5:140554010547968] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:28:45,592 [Thread-3:139975307306752] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:29:02,782 [Thread-5:139975307306752] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:29:31,617 [Thread-3:140676336203520] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:29:34,506 [Thread-5:140676336203520] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:30:10,212 [Thread-7:140676336203520] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:32:39,634 [Thread-10:140676336203520] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:32:47,275 [Thread-3:140635975870208] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:32:48,156 [Thread-4:140635975870208] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/{&quot;name&quot;:&quot;如何学习D3&quot;,&quot;children&quot;:[{ &quot;name&quot;:&quot;预备知识&quot; , &quot;children&quot;:[{&quot;name&quot;:&quot;HTML &amp; CSS&quot; },{&quot;name&quot;:&quot;JavaScript&quot; },{&quot;name&quot;:&quot;DOM&quot; },{&quot;name&quot;:&quot;SVG&quot; }]},{&quot;name&quot;:&quot;安装&quot; , &quot;children&quot;:[{&quot;name&quot;:&quot;记事本软件&quot;,&quot;children&quot;:[{&quot;name&quot;:&quot;Notepad++&quot;},{&quot;name&quot;:&quot;EditPlus&quot;},{&quot;name&quot;:&quot;Sublime Text&quot;}]},{&quot;name&quot;:&quot;服务器软件&quot;,&quot;children&quot;:[{&quot;name&quot;:&quot;Apache Http Server&quot;},{&quot;name&quot;:&quot;Tomcat&quot;}]},{&quot;name&quot;:&quot;下载D3.js&quot;}]}]}
+2017-06-26 02:32:49,330 [Thread-7:140635975870208] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:32:49,990 [Thread-8:140635975870208] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/{&quot;name&quot;:&quot;如何学习D3&quot;,&quot;children&quot;:[{ &quot;name&quot;:&quot;预备知识&quot; , &quot;children&quot;:[{&quot;name&quot;:&quot;HTML &amp; CSS&quot; },{&quot;name&quot;:&quot;JavaScript&quot; },{&quot;name&quot;:&quot;DOM&quot; },{&quot;name&quot;:&quot;SVG&quot; }]},{&quot;name&quot;:&quot;安装&quot; , &quot;children&quot;:[{&quot;name&quot;:&quot;记事本软件&quot;,&quot;children&quot;:[{&quot;name&quot;:&quot;Notepad++&quot;},{&quot;name&quot;:&quot;EditPlus&quot;},{&quot;name&quot;:&quot;Sublime Text&quot;}]},{&quot;name&quot;:&quot;服务器软件&quot;,&quot;children&quot;:[{&quot;name&quot;:&quot;Apache Http Server&quot;},{&quot;name&quot;:&quot;Tomcat&quot;}]},{&quot;name&quot;:&quot;下载D3.js&quot;}]}]}
+2017-06-26 02:33:26,442 [Thread-3:139830690469632] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:33:27,157 [Thread-4:139830690469632] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/{&
+2017-06-26 02:33:41,370 [Thread-6:139830690469632] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:36:16,863 [Thread-3:140295023900416] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:36:17,608 [Thread-4:140295023900416] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/[object Object]
+2017-06-26 02:36:57,127 [Thread-6:140294990665472] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 02:37:00,862 [Thread-8:140294704068352] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:37:01,638 [Thread-9:140294695675648] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/[object Object]
+2017-06-26 02:40:25,460 [Thread-12:140294687282944] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 02:41:25,939 [Thread-14:140294695675648] [django.request:170] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 02:41:27,755 [Thread-18:140294990665472] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:41:28,383 [Thread-19:140294990665472] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/[object Object]
+2017-06-26 02:41:39,702 [Thread-21:140294990665472] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:41:40,757 [Thread-22:140294990665472] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/[object Object]
+2017-06-26 02:48:14,907 [Thread-24:140294990665472] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:48:15,707 [Thread-25:140294990665472] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/[object Object]
+2017-06-26 02:49:48,314 [Thread-27:140294990665472] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 02:49:49,834 [Thread-28:140294990665472] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/[object Object]
+2017-06-26 03:01:05,618 [Thread-30:140294990665472] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 03:01:06,949 [Thread-31:140294990665472] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/[object Object]
+2017-06-26 03:04:25,202 [Thread-33:140294990665472] [django.request:170] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 07:45:58,250 [Thread-6:140515190224640] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-26 07:46:01,668 [Thread-7:140515181831936] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/machinelist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 287, in machinelist
+    return render(request, 'crawlermanage/machine_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 07:46:10,946 [Thread-8:140515181831936] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 279, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 07:48:11,735 [Thread-14:140515215402752] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/machinelist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 287, in machinelist
+    return render(request, 'crawlermanage/machine_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 07:50:28,385 [Thread-2:139726552430336] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/machinelist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 287, in machinelist
+    return render(request, 'crawlermanage/machine_list.html', locals())
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 07:51:04,890 [Thread-2:140331287774976] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/machinelist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 287, in machinelist
+    return render(request, 'crawlermanage/machine_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 07:51:07,238 [Thread-3:140331077072640] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/machinelist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 287, in machinelist
+    return render(request, 'crawlermanage/machine_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 07:51:11,598 [Thread-7:140331043501824] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-26 07:51:13,472 [Thread-8:140331287774976] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 74, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 07:51:25,653 [Thread-10:140331077072640] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 74, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 07:51:31,097 [Thread-16:140331287774976] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-26 07:51:32,868 [Thread-18:140331287774976] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 07:51:34,419 [Thread-19:140331287774976] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/machinelist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 287, in machinelist
+    return render(request, 'crawlermanage/machine_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 07:57:42,620 [Thread-2:139711882352384] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 74, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 07:57:46,618 [Thread-5:139711653865216] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 07:58:02,811 [Thread-9:139711882352384] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 74, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:07:54,264 [Thread-4:140223255152384] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-06-26 08:07:54,605 [Thread-7:140222822082304] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-26 08:07:56,802 [Thread-9:140222822082304] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 08:07:57,671 [Thread-10:140222822082304] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/machinelist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 287, in machinelist
+    return render(request, 'crawlermanage/machine_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:08:33,614 [Thread-18:140223246759680] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 08:08:40,082 [Thread-19:140222813689600] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 74, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:08:43,267 [Thread-20:140223255152384] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 279, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:08:56,738 [Thread-3:140184396388096] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-26 08:08:57,722 [Thread-4:140184387995392] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 74, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:10:01,258 [Thread-2:140330875746048] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 74, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:20:29,334 [Thread-3:140307503003392] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-06-26 08:20:30,219 [Thread-7:140307503003392] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-26 08:20:31,989 [Thread-9:140307503003392] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 08:20:32,982 [Thread-10:140307503003392] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:21:35,563 [Thread-11:140307503003392] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:21:50,510 [Thread-17:140307467335424] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:22:23,264 [Thread-24:140307503003392] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 08:23:28,262 [Thread-29:140307467335424] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:27:21,751 [Thread-3:139773093324544] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 08:27:23,642 [Thread-5:139773084931840] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 08:27:25,317 [Thread-6:139773084931840] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/machinelist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 291, in machinelist
+    return render(request, 'crawlermanage/machine_list.html', {'p': p})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = list(self.p.page_range[0:9])
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:27:28,267 [Thread-7:139773084931840] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = list(self.p.page_range[0:9])
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:39:53,424 [Thread-2:140544885913344] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, True)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 709, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 913, in _resolve_lookup
+    current = current()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 45, in p_range
+    p_list = self.p.page_range[0:9]
+TypeError: sequence index must be integer, not 'slice'
+2017-06-26 08:42:46,156 [Thread-3:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 08:42:49,642 [Thread-5:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 08:42:56,187 [Thread-7:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-26 08:42:59,168 [Thread-9:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-26 08:43:48,849 [Thread-12:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-26 08:44:45,876 [Thread-14:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 08:44:46,917 [Thread-16:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-26 08:44:47,610 [Thread-18:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-26 08:45:15,339 [Thread-20:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 08:45:26,253 [Thread-21:139797121623808] [django.request:182] [WARNING]- Not Found: /
+2017-06-26 08:46:07,775 [Thread-25:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 08:56:05,380 [Thread-29:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 08:56:29,773 [Thread-31:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 08:56:42,566 [Thread-34:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:04:27,750 [Thread-36:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:04:30,358 [Thread-38:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:04:31,020 [Thread-40:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:05:02,951 [Thread-42:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:05:22,497 [Thread-44:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:05:25,782 [Thread-46:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:05:48,697 [Thread-48:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:06:41,588 [Thread-50:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:06:47,063 [Thread-52:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:06:47,799 [Thread-54:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:07:09,940 [Thread-56:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:07:35,487 [Thread-58:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:08:38,083 [Thread-60:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:09:14,429 [Thread-62:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:09:30,891 [Thread-64:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:11:40,595 [Thread-66:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 09:11:42,176 [Thread-68:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:11:45,062 [Thread-70:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 09:12:03,494 [Thread-72:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 09:12:05,534 [Thread-74:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:12:07,825 [Thread-76:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 09:12:08,794 [Thread-78:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-26 09:12:10,020 [Thread-80:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 09:12:55,810 [Thread-82:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:12:58,781 [Thread-84:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-26 09:13:02,290 [Thread-86:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-26 09:13:04,812 [Thread-88:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-26 09:13:12,661 [Thread-90:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-26 09:13:27,528 [Thread-92:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-26 09:13:30,881 [Thread-94:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-26 09:13:32,847 [Thread-96:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 09:16:10,634 [Thread-98:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 09:16:12,762 [Thread-99:139797121623808] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/pages/widgets.html
+2017-06-26 09:16:17,246 [Thread-101:139797112182528] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 09:19:46,371 [Thread-3:139732547409664] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 09:19:48,830 [Thread-5:139732547409664] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:22:23,832 [Thread-8:139732547409664] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-26 09:22:57,714 [Thread-10:139732547409664] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-26 09:22:59,645 [Thread-12:139732547409664] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:23:28,480 [Thread-15:139732547409664] [django.request:182] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-26 09:23:30,632 [Thread-17:139732547409664] [django.request:182] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-26 09:23:33,995 [Thread-19:139732547409664] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-26 09:25:59,717 [Thread-21:139732547409664] [django.request:182] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-26 09:26:02,703 [Thread-23:139732547409664] [django.request:182] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-26 14:47:55,349 [Thread-24:139732547409664] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 282, in processlist
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 10.204.106.19:27017: timed out
+2017-06-26 14:47:58,399 [Thread-25:139732331788032] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/charts/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 317, in charts
+    chart1_run, chart1_pause, chart1_wait, chart1_error = create_chart1()
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/utils/echarts.py", line 16, in create_chart1
+    run_news = Task.objects.filter(webtype='news', status='running').count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 10.204.106.19:27017: timed out
+2017-06-26 14:48:56,921 [Thread-26:139732323395328] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/project/geowind_crawler/crawlermanage/views.py", line 218, in layout
+    return render_to_response('crawlermanage/layout.html', {'ips':ips})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 168, in render
+    len_values = len(values)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 1114, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 1036, in _refresh
+    self.__collation))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 873, in __send_message
+    **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 888, in _send_message_with_response
+    server = topology.select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 10.204.106.19:27017: timed out
+2017-06-27 09:13:47,599 [Thread-29:139732331788032] [django.request:182] [WARNING]- Not Found: /CLodopfuncs.js
+2017-06-27 09:13:55,444 [Thread-30:139732331788032] [django.request:182] [WARNING]- Not Found: /CLodopfuncs.js
+2017-06-27 09:18:33,782 [Thread-33:139732323395328] [django.request:182] [WARNING]- Not Found: /CLodopfuncs.js
+2017-06-27 15:03:04,825 [Thread-3:139624856139520] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-06-27 15:03:05,818 [Thread-7:139624856139520] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-27 15:03:50,943 [Thread-9:139624856139520] [django.request:182] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-27 15:03:53,038 [Thread-13:139624846960384] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg

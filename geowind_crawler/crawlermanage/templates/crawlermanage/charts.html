@@ -81,7 +81,7 @@
           <!-- AREA CHART -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">当前任务</h3>
+              <h3 class="box-title">当前任务数量统计</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -100,7 +100,7 @@
           <!-- DONUT CHART -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">历史任务</h3>
+              <h3 class="box-title">各类型爬虫任务数量所占比例</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -129,7 +129,7 @@
               </div>
             </div>
             <div class="box-body chart-responsive">
-              <div class="chart" id="line-chart" style="height: 300px;"></div>
+              <div class="chart" id="chart3" style="height: 300px;">d3.layout.tree</div>
             </div>
             <!-- /.box-body -->
           </div>
@@ -165,6 +165,7 @@
 <!-- Bootstrap 3.3.6 -->
 <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
 <script src="../../static/plugins/echarts/echarts.common.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../../static/dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
@@ -173,7 +174,8 @@
   $(function() {
     createchart1()
     createchart2()
-  // alert("{{chart1.run}}")
+    // createchart3()
+  
   })
   function createchart1() {
     var dom = document.getElementById("chart1");
@@ -267,10 +269,10 @@
     var app = {};
     
     option = {
-        title : {
-            text: '各类型爬虫任务数量所占比例',
-            x:'center'
-        },
+        // title : {
+        //     text: '各类型爬虫任务数量所占比例',
+        //     x:'center'
+        // },
         tooltip : {
             trigger: 'item',
             formatter: "{a} <br/>{b} : {c} ({d}%)"
@@ -305,5 +307,66 @@
         myChart.setOption(option, true);
       }
   }
+  // function createchart3() {
+  //   //图像区域大小
+  //   var R = 600;
+
+  //   //定义一个Tree对象,定义旋转角度和最大半径
+  //   var tree = d3.layout.tree()
+  //       .size([360,R/2-120])
+  //       .separation(function(a,b) { return a.parent == b.parent ? 1 : 2;});
+
+  //   //定义布局方向
+  //   var diagonal = d3.svg.diagonal()  
+  //       .projection(function(d) { 
+  //           var r = d.y, a = (d.x-90) / 180 * Math.PI;
+  //             return [r * Math.cos(a), r * Math.sin(a)];
+  //    }); 
+
+  //   //新建画布，移动到圆心位置
+  //   var svg = d3.select("#chart3").append("svg")
+  //       .attr("width", R)
+  //       .attr("height", R)
+  //       .append("g")
+  //       .attr("transform", function(d){ return "translate("+R/2+"," + R/2 + ")";});
+
+  //       //根据JSON数据生成树
+  //       d3.json({"name":"如何学习D3","children":[{ "name":"预备知识" , "children":[{"name":"HTML & CSS" },{"name":"JavaScript" },{"name":"DOM" },{"name":"SVG" }]},{"name":"安装" , "children":[{"name":"记事本软件","children":[{"name":"Notepad++"},{"name":"EditPlus"},{"name":"Sublime Text"}]},{"name":"服务器软件","children":[{"name":"Apache Http Server"},{"name":"Tomcat"}]},{"name":"下载D3.js"}]}]}, function(error, data) {
+      
+  //     //根据数据生成nodes集合
+  //     var nodes = tree.nodes(data);
+      
+  //     //获取node集合的关系集合
+  //     var links = tree.links(nodes);
+      
+  //     //为关系集合设置贝塞尔曲线连接
+  //     var link=svg.selectAll(".link")
+  //         .data(links)
+  //         .enter()
+  //         .append("path")
+  //         .attr("class", "link")
+  //         .attr("d",diagonal);
+      
+  //     //根据node集合生成节点
+  //     var node = svg.selectAll(".node")
+  //         .data(nodes)
+  //         .enter()
+  //         .append("g")
+  //         .attr("class", "node")
+  //         .attr("transform",function(d){return "rotate(" + (d.x-90) + ")translate(" + d.y + ")"; });
+      
+  //     //为节点添加圆形标记,如果有子节点为红色，否则绿色
+  //     node.append("circle")      
+  //         .attr("fill",function(d){return d.children==null?"#0F0":"#F00";})
+  //         .attr("r", 5);
+      
+  //     //为节点添加说明文字
+  //     node.append("text")
+  //       .attr("dy", ".4em")
+  //       .text(function(d){return d.name;})
+  //       .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+  //       .attr("transform", function(d) { return d.x < 180 ? "translate(8)" : "rotate(180)translate(-8)"; });
+  //   });    
+  // }
 </script>
 {% endblock %}
