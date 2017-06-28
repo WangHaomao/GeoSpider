@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 import re
 
-
+'''判断是否为博客或新闻的详情页'''
 def is_articel_content_page(url):
     # url_len = len(url)
     if "photo" in url:

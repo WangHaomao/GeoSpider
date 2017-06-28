@@ -111,19 +111,21 @@
                                 <td>{{i.pid}}</td>
                                 <td>{{i.taskid}}</td>
                                 <td>
-                                    {% if i.status = 'running' %}
+                                    {% ifequal i.status 'running' %}
                                     <span id="span_{{i.id}}" class="label label-success" >
                                         <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">执行（运行爬虫）</a>
                                     </span>
-                                    {% elif i.status = 'pausing'  %}
+                                    {%endifequal%}
+                                    {% ifequal i.status 'pausing'  %}
                                      <span id="span_{{i.id}}" class="label label-warning" >
                                         <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">挂起（暂停爬虫）</a>
                                      </span>
-                                     {% elif i.status = 'waitting'  %}
+                                    {%endifequal%}
+                                     {% ifequal i.status 'waitting'  %}
                                      <span id="span_{{i.id}}" class="label label-warning" >
                                         <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">执行（监控任务）</a>
                                      </span>
-                                    {% endif %}
+                                    {% endifequal %}
                                 </td>
                                 <!--<td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>-->
                                 <!-- <td><a href="{%url 'newsdata'%}?taskid={{i.id}}">结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">管理</a></td> -->

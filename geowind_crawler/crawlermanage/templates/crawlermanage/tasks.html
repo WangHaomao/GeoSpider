@@ -133,34 +133,49 @@
                                 <td>{{i.id}}</td>
                                 <td>{{i.starttime}}</td></a></td>
                                 <td>{{i.taskname}}</td>
-                                <td>{% if i.webtype = 'news' %}
+                                <td>{% ifequal i.webtype 'news' %}
                                 新闻
-                                {% elif i.webtype = 'blog' %}
+                                    {%endifequal%}
+                                {% ifequal i.webtype 'blog' %}
                                 博客
-                                {% elif i.webtype = 'ecommerce' %}
+                                    {%endifequal%}
+                                {% ifequal i.webtype 'ecommerce' %}
                                 电商
-                                {% endif %}</td>
+                                {% endifequal %}</td>
                                 <td>
-                                    {% if i.status = 'running' %}
+                                    {% ifequal i.status 'running' %}
                                     <span id="span_{{i.id}}" class="label label-success" >
                                         <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'running')" style="color: white; text-decoration: none">运行</a>
                                     </span>
-                                    {% elif i.status = 'pausing'  %}
+                                    {%endifequal%}
+                                    {% ifequal i.status 'pausing'  %}
                                      <span id="span_{{i.id}}" class="label label-warning" >
                                         <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'pausing')" style="color: white; text-decoration: none">暂停</a>
                                      </span>
-                                     {% elif i.status = 'waitting'  %}
+                                    {%endifequal%}
+                                     {% ifequal i.status 'waitting'  %}
                                      <span id="span_{{i.id}}" class="label label-warning" >
                                         <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'waitting')" style="color: white; text-decoration: none">等待</a>
                                      </span>
-                                    {% elif i.status = 'error' %}
+                                    {% endifequal %}
+                                    {% ifequal i.status 'error' %}
                                     <span id="span_{{i.id}}" class="label label-danger">
                                         <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'error')" style="color: white; text-decoration: none">故障</a>
                                     </span>
-                                    {% endif %}
+                                    {% endifequal %}
                                 </td>
                                 <!--<td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>-->
-                                <td><a href="{%url 'newsdata'%}?taskid={{i.id}}">结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">详情</a></td>
+                                <td>
+                                    {%ifequal i.webtype 'ecommerce'%}
+                                    <a href="{%url 'ecommercedata'%}?taskid={{i.id}}">
+                                    {%endifequal%}
+                                    {%ifequal i.webtype 'news'%}
+                                    <a href="{%url 'newsdata'%}?taskid={{i.id}}">
+                                    {%endifequal%}
+                                    {%ifequal i.webtype 'blog'%}
+                                    <a href="{%url 'newsdata'%}?taskid={{i.id}}">
+                                    {%endifequal%}
+                                    结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">详情</a></td>
                               </tr>
                               {% endfor %}
                             </tbody>
@@ -212,7 +227,7 @@
                                 <th>启动时间</th>
                                 <th>任务名</th>
                                 <th>网站类型</th>
-                                <th>爬虫状态</th>
+                                <th>爬虫状态dd</th>
                                 <!--<th>描述</th>-->
                                 <th>操作</th>
                               </tr>
@@ -223,16 +238,37 @@
                                 <td>{{i.id}}</td>
                                 <td>{{i.starttime}}</td>
                                 <td>{{i.taskname}}</td>
-                                <td>{{i.webtype}}</td>
+                                <td>{% ifequal i.webtype 'news' %}
+                                新闻
+                                    {%endifequal%}
+                                {% ifequal i.webtype 'blog' %}
+                                博客
+                                    {%endifequal%}
+                                {% ifequal i.webtype 'ecommerce' %}
+                                电商
+                                {% endifequal %}</td>
                                 <td>
-                                    {% if i.status = 'stopping' %}
+                                    {% ifequal i.status 'stopping' %}
                                     <span id="span_{{i.id}}" class="label label-danger" >
                                         <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">停止</a>
                                     </span>
-                                    {% endif %}
+                                    {% endifequal %}
                                 </td>
                                 <!--<td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>-->
-                                <td><a href="{%url 'newsdata'%}?taskid={{i.id}}">结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">管理</a></td>
+                                <td>
+
+                                    {%ifequal i.webtype 'ecommerce'%}
+                                    <a href="{%url 'ecommercedata'%}?taskid={{i.id}}">
+                                    {%endifequal%}
+                                    {%ifequal i.webtype 'news'%}
+                                    <a href="{%url 'newsdata'%}?taskid={{i.id}}">
+                                    {%endifequal%}
+                                    {%ifequal i.webtype 'blog'%}
+                                    <a href="{%url 'newsdata'%}?taskid={{i.id}}">
+                                    {%endifequal%}
+
+
+                                        {{i.webtype}}结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">管理</a></td>
                               </tr>
                               {% endfor %}
                             </tbody>
