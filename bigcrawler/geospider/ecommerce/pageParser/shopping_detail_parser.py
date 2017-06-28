@@ -92,20 +92,30 @@ def _get_price_by_keyword(soup,keyword):
     print max_appear_price
     return max_appear_price
 
-def _get_store_by_key(soup,keyword):
+def _get_store_by_key(soup,keyword,url):
+
+    def not_empty(s):
+        return s and s.strip()
+
+    # json_key_list = list(filter(not_empty, max_path_str.split('/')))
+
+
     res_comment_degree_list = []
     reg_with_keyword = u"%s" % keyword
 
     tag_symbol_list = soup.find_all("a", text=re.compile(keyword))
     res_list = []
+    description = []
     for tag in tag_symbol_list:
         try:
-            res_list.append(tag['href'])
+            stroe_url = tag['href']
+            res_list.append(url_sifter(parent_url=url,url=stroe_url))
             print len(tag.parent.parent.parent.contents)
 
-            for dd in  tag.parent.parent.parent.parent.contents:
-                if dd.name !=None:
-                    store_m =  (dd.text.replace(" ",""))
+            for inner_stroe_tag in  tag.parent.parent.parent.parent.contents:
+                if inner_stroe_tag.name !=None:
+                    store_m =  (inner_stroe_tag.text.replace(" ",""))
+
                     for iii in store_m.split('\n'):
                         if(iii ==''):continue
                         print iii
@@ -179,7 +189,7 @@ def get_store(soup,url):
 
     store_keys = [u'旗舰店',u'进入店',u'店铺',u'进店',u'店']
     for keyword in store_keys:
-        res_url = _get_store_by_key(soup, keyword)
+        res_url = _get_store_by_key(soup, keyword,url)
         if(res_url !=None and res_url !=[]):
             test_url =  url_sifter(url,res_url)
             print get_soup_by_request(test_url).find('title').text
@@ -207,12 +217,12 @@ def shopping_item_parser(url):
 
 
 if __name__ == '__main__':
-    url = "https://detail.tmall.com/item.htm?spm=a230r.1.14.14.AT6RIa&id=544429684821&cm_id=140105335569ed55e27b&abbucket=20"
+    # url = "https://detail.tmall.com/item.htm?spm=a230r.1.14.14.AT6RIa&id=544429684821&cm_id=140105335569ed55e27b&abbucket=20"
     # url = "https://item.taobao.com/item.htm?spm=a230r.1.14.97.oI9e6K&id=545728190154&ns=1&abbucket=20#detail"
     # url = "https://item.jd.com/11225370508.html"
-    # url = "http://item.meilishuo.com/detail/1kaosga?acm=3.ms.2_4_1kaosga.0.24476-25176.94mOaqibAUDJd.t_0-lc_3&ptp=1.9Hyayb.classsearch_mls_1kaosga_2017%E6%96%B0%E6%AC%BE%E6%AC%A2%E4%B9%90%E9%A2%82%E7%8E%8B%E5%AD%90%E6%96%87%E6%9B%B2%E7%AD%B1%E7%BB%A1%E5%90%8C%E6%AC%BE%E5%8C%85%E6%97%B6%E5%B0%9A%E5%B0%8F%E6%96%B9%E5%8C%85%E5%8D%95%E8%82%A9%E6%96%9C%E6%8C%8E%E5%B0%8F%E5%8C%85%E5%8C%85_10057053_pop.1.mNWwi"
+    url = "http://item.meilishuo.com/detail/1kaosga?acm=3.ms.2_4_1kaosga.0.24476-25176.94mOaqibAUDJd.t_0-lc_3&ptp=1.9Hyayb.classsearch_mls_1kaosga_2017%E6%96%B0%E6%AC%BE%E6%AC%A2%E4%B9%90%E9%A2%82%E7%8E%8B%E5%AD%90%E6%96%87%E6%9B%B2%E7%AD%B1%E7%BB%A1%E5%90%8C%E6%AC%BE%E5%8C%85%E6%97%B6%E5%B0%9A%E5%B0%8F%E6%96%B9%E5%8C%85%E5%8D%95%E8%82%A9%E6%96%9C%E6%8C%8E%E5%B0%8F%E5%8C%85%E5%8C%85_10057053_pop.1.mNWwi"
     # url = "http://shop.mogujie.com/detail/18jws1w?acm=3.ms.1_4_18jws1w.43.1185-22922.wGTRPqnDRVaKO.t_0-lc_4&ptp=1.eW5XD._b_4bce2add492e4c56_2.1.DijfM"
     # get_comments(url)
     # get_price(url)
-    get_store(url)
+    get_store(get_soup_by_request(url),url)
     # get_title(url)

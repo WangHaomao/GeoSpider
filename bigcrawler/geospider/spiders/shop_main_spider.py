@@ -5,25 +5,26 @@ from scrapy.http import request
 from bs4 import BeautifulSoup
 from geospider.ecommerce.spiderUtils.parser_util import get_html_with_request
 from geospider.items import ECommerceSiteCrawlerItem
-from geospider.ecommerce.pageParser.shopping_itemsList_parser import analysis_method_selector,analysis_goods_list
+from geospider.ecommerce.pageParser.shopping_itemsList_parser import analysis_method_selector, analysis_goods_list
 from geospider.ecommerce.pageParser.shopping_navigation_parser import get_nav
 from geospider.ecommerce.pageParser.selenium_batch_parser import \
-    get_pageKeyDic,get_next_urlList_by_firstpage_url,get_all_page_number,get_all_page_urls
+    get_pageKeyDic, get_next_urlList_by_firstpage_url, get_all_page_number, get_all_page_urls
 from geospider.ecommerce.pageParser.shopping_detail_parser import *
-from urllib2 import quote,unquote
+from urllib2 import quote, unquote
+
 
 class ShopMainSpider(scrapy.Spider):
     name = "shopspider"
     # allowed_domains = ["https://www.baidu.com"]
     start_urls = [
-                    'https://www.taobao.com/',
-                    # "http://www.dangdang.com/",
-                    # "http://www.vip.com/",
-                    # "http://www.vancl.com/",
-                    # "http://www.yhd.com/",
-                    # "https://www.amazon.cn/",
-                    # "http://www.meilishuo.com/",
-                 ]
+        'https://www.taobao.com/',
+        # "http://www.dangdang.com/",
+        # "http://www.vip.com/",
+        # "http://www.vancl.com/",
+        # "http://www.yhd.com/",
+        # "https://www.amazon.cn/",
+        # "http://www.meilishuo.com/",
+    ]
 
     def parse(self, response):
         number, mylist = get_nav(response.url, 0)
@@ -129,36 +130,32 @@ class ShopMainSpider(scrapy.Spider):
                                         allnumber)
                 """
                 每一个商品列表的分页信息
-                
+
                 """
                 for each_goods_list_url in res:
-                    yield Request(callback=self.goods_list_parse,url=each_goods_list_url)
+                    yield Request(callback=self.goods_list_parse, url=each_goods_list_url)
 
 
-                # print "----------$$$$$$$$$------------"
+                    # print "----------$$$$$$$$$------------"
 
+    def goods_list_parse(self, response):
+        soup = BeautifulSoup(response.text, 'lxml')
+        analysis_method = analysis_method_selector(soup)
 
+        goods_detail_url_list = analysis_goods_list(analysis_method, response.url, soup)
+        for each_detail_url in goods_detail_url_list:
+            yield Request(callback=self.goods_detail_parse, url=each_detail_url, meta={'pic_url': ''})
 
-    def goods_list_parse(self,response):
-        soup = BeautifulSoup(response.text,'lxml')
-        analysis_method =  analysis_method_selector(soup)
+    def goods_detail_parse(self, response):
 
-        goods_detail_url_list = analysis_goods_list(analysis_method,response.url,soup)
-
-
-        # pass
-        # item = ECommerceSiteCrawlerItem()
-        # print  (response.xpath("//a"))
-        #
-        # item['url']  = response.url
-        #
-        # yield item
-    def goods_detail_parse(self,response):
-
-        soup = BeautifulSoup(response.text,'lxml')
+        soup = BeautifulSoup(response.text, 'lxml')
         item = ECommerceSiteCrawlerItem()
+
         item['price'] = get_price(soup)
         item['title'] = get_title(soup)
-        item['stroe_url'] = get_store(soup,response.url)
-
+        item['stroe_url'] = get_store(soup, response.url)
+        # item['pic_url'] =
         yield item
+
+    def stroe_detail_parse(self, respinse):
+        pass
