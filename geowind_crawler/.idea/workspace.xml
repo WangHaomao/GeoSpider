@@ -12,106 +12,22 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="e#26#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geowind_crawler/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="acticle_parser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/utils/acticle_parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="echarts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/utils/echarts.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawlermanage/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="257">
+              <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newsdetail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/newsdetail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="62" column="28" lean-forward="true" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="process_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/process_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="37" column="49" lean-forward="false" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="taskdetail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/taskdetail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2120">
-              <caret line="106" column="43" lean-forward="true" selection-start-line="106" selection-start-column="43" selection-end-line="106" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_articles.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_articles.html">
+      <file leaf-file-name="ecommercedata.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/ecommercedata.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="85" column="11" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="85" selection-end-column="11" />
+              <caret line="73" column="40" lean-forward="true" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_single.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_single.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="198" column="4" lean-forward="false" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
-              <folding>
-                <marker date="1498660776786" expanded="true" signature="6625:6681" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -193,11 +109,9 @@
         <option value="$PROJECT_DIR$/crawlermanage/utils/aaa.py" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/newsdetail.html" />
         <option value="$PROJECT_DIR$/crawlermanage/tests.py" />
-        <option value="$PROJECT_DIR$/crawlermanage/models.py" />
         <option value="$PROJECT_DIR$/collected_static/logs/all.logs" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/page.py" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/echarts.py" />
-        <option value="$PROJECT_DIR$/geowind_crawler/settings.py" />
         <option value="$PROJECT_DIR$/geowind_crawler/urls.py" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_list.html" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/charts.html" />
@@ -212,6 +126,8 @@
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_single.html" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/acticle_parser.py" />
         <option value="$PROJECT_DIR$/crawlermanage/views.py" />
+        <option value="$PROJECT_DIR$/crawlermanage/models.py" />
+        <option value="$PROJECT_DIR$/geowind_crawler/settings.py" />
       </list>
     </option>
   </component>
@@ -293,6 +209,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -717,28 +655,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-          <folding>
-            <element signature="e#410#419#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/charts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/ecommercedata.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1180">
-          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -818,7 +738,7 @@
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_articles.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="85" column="11" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="85" selection-end-column="11" />
+          <caret line="85" column="11" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="85" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -836,7 +756,7 @@
     <entry file="file://$PROJECT_DIR$/geowind_crawler/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
-          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+          <caret line="38" column="1" lean-forward="false" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -844,7 +764,7 @@
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/newsdetail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="820">
-          <caret line="62" column="28" lean-forward="true" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+          <caret line="62" column="28" lean-forward="false" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -860,7 +780,7 @@
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/taskdetail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2120">
-          <caret line="106" column="43" lean-forward="true" selection-start-line="106" selection-start-column="43" selection-end-line="106" selection-end-column="43" />
+          <caret line="106" column="43" lean-forward="false" selection-start-line="106" selection-start-column="43" selection-end-line="106" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -878,7 +798,7 @@
     <entry file="file://$PROJECT_DIR$/crawlermanage/utils/acticle_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
-          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -891,10 +811,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1820">
+          <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+          <folding>
+            <element signature="e#410#419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="257">
+          <caret line="53" column="18" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/ecommercedata.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="73" column="40" lean-forward="true" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
           <folding />
         </state>
       </provider>

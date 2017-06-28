@@ -92,33 +92,52 @@ def _get_price_by_keyword(soup,keyword):
     print max_appear_price
     return max_appear_price
 
-def _get_store_by_key(soup,keyword):
-    res_comment_degree_list = []
-    reg_with_keyword = u"%s" % keyword
+def _get_store_by_key(soup,keyword,url):
+
+    def not_empty(s):
+        return s and s.strip()
+
+    # json_key_list = list(filter(not_empty, max_path_str.split('/')))
 
     tag_symbol_list = soup.find_all("a", text=re.compile(keyword))
-    res_list = []
+    res_stroe_dict = {}
+    stroe_comments = []
     for tag in tag_symbol_list:
         try:
-            res_list.append(tag['href'])
-            print len(tag.parent.parent.parent.contents)
+            stroe_url = tag['href']
+            res_stroe_dict['store_url'] = stroe_url
 
-            for dd in  tag.parent.parent.parent.parent.contents:
-                if dd.name !=None:
-                    store_m =  (dd.text.replace(" ",""))
-                    for iii in store_m.split('\n'):
-                        if(iii ==''):continue
-                        print iii
-                    # break
-                    print ""
+            # tag_contents
+            if('tmall' in url):
+                tag_contents = tag.parent.parent.parent.parent.parent.contents
+            else:
+                tag_contents = tag.parent.parent.parent.parent.contents
+
+            for inner_stroe_tag in  tag_contents:
+                if inner_stroe_tag.name !=None:
+
+
+                    store_m =  (inner_stroe_tag.text.replace(" ",""))
+                    store_m_list =  (list(filter(not_empty, store_m.split('\n'))))
+                    store_m_len = len(store_m_list)
+                    # print '\n'.join(store_m_list)
+                    index = 0
+                    for index in range(0,store_m_len):
+                        message = store_m_list[index]
+                        if(index == 0):
+                            print "店铺名：%s"%message
+                            res_stroe_dict['name'] = message
+                        else:
+                            re_res = re.search('\d+\.\d+',str(message))
+                            if(re_res != None and re.search('\d+\.\d+',str(store_m_list[index-1]))==None):
+                                print ("%s：%s"%(store_m_list[index-1],store_m_list[index]))
+                                stroe_comments.append("%s:%s"%(store_m_list[index-1],store_m_list[index]))
+            res_stroe_dict['comment_degree'] = ';'.join(stroe_comments)
+            # print  res_stroe_dict['comment_degree']
         except:
             pass
 
-    if(len(res_list) > 0) :
-        print res_list[0]
-        return res_list[0]
-
-    return None
+    return res_stroe_dict
     #     print res_price_list
     #     if (len(price_text_list) != 0):
     #         res_price_list = res_price_list + re.findall(reg_without_keyword, "".join(price_text_list))
@@ -179,11 +198,15 @@ def get_store(soup,url):
 
     store_keys = [u'旗舰店',u'进入店',u'店铺',u'进店',u'店']
     for keyword in store_keys:
-        res_url = _get_store_by_key(soup, keyword)
-        if(res_url !=None and res_url !=[]):
-            test_url =  url_sifter(url,res_url)
-            print get_soup_by_request(test_url).find('title').text
-            return url_sifter(url,res_url)
+        res_dict = _get_store_by_key(soup, keyword,url)
+        if(res_dict !=None and res_dict!={} and res_dict.has_key('store_url')):
+            print res_dict
+            return res_dict
+        # print res_url
+        # if(res_url !=None and res_url !=[]):
+        #     test_url =  url_sifter(url,res_url)
+        #     print get_soup_by_request(test_url).find('title').text
+        #     return url_sifter(url,res_url)
 
 
 def get_title(url):
@@ -207,12 +230,12 @@ def shopping_item_parser(url):
 
 
 if __name__ == '__main__':
-    url = "https://detail.tmall.com/item.htm?spm=a230r.1.14.14.AT6RIa&id=544429684821&cm_id=140105335569ed55e27b&abbucket=20"
+    # url = "https://detail.tmall.com/item.htm?spm=a230r.1.14.14.AT6RIa&id=544429684821&cm_id=140105335569ed55e27b&abbucket=20"
     # url = "https://item.taobao.com/item.htm?spm=a230r.1.14.97.oI9e6K&id=545728190154&ns=1&abbucket=20#detail"
     # url = "https://item.jd.com/11225370508.html"
     # url = "http://item.meilishuo.com/detail/1kaosga?acm=3.ms.2_4_1kaosga.0.24476-25176.94mOaqibAUDJd.t_0-lc_3&ptp=1.9Hyayb.classsearch_mls_1kaosga_2017%E6%96%B0%E6%AC%BE%E6%AC%A2%E4%B9%90%E9%A2%82%E7%8E%8B%E5%AD%90%E6%96%87%E6%9B%B2%E7%AD%B1%E7%BB%A1%E5%90%8C%E6%AC%BE%E5%8C%85%E6%97%B6%E5%B0%9A%E5%B0%8F%E6%96%B9%E5%8C%85%E5%8D%95%E8%82%A9%E6%96%9C%E6%8C%8E%E5%B0%8F%E5%8C%85%E5%8C%85_10057053_pop.1.mNWwi"
-    # url = "http://shop.mogujie.com/detail/18jws1w?acm=3.ms.1_4_18jws1w.43.1185-22922.wGTRPqnDRVaKO.t_0-lc_4&ptp=1.eW5XD._b_4bce2add492e4c56_2.1.DijfM"
+    url = "http://shop.mogujie.com/detail/18jws1w?acm=3.ms.1_4_18jws1w.43.1185-22922.wGTRPqnDRVaKO.t_0-lc_4&ptp=1.eW5XD._b_4bce2add492e4c56_2.1.DijfM"
     # get_comments(url)
     # get_price(url)
-    get_store(url)
+    get_store(get_soup_by_request(url),url)
     # get_title(url)

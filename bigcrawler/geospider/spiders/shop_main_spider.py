@@ -1,29 +1,42 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy.http import Request
-from scrapy.http import request
-from bs4 import BeautifulSoup
+from scrapy_redis.spiders import RedisSpider
+
 from geospider.ecommerce.spiderUtils.parser_util import get_html_with_request
-from geospider.items import ECommerceSiteCrawlerItem
-from geospider.ecommerce.pageParser.shopping_itemsList_parser import analysis_method_selector,analysis_goods_list
+from geospider.ecommerce.pageParser.shopping_itemsList_parser import analysis_method_selector, analysis_goods_list
 from geospider.ecommerce.pageParser.shopping_navigation_parser import get_nav
 from geospider.ecommerce.pageParser.selenium_batch_parser import \
-    get_pageKeyDic,get_next_urlList_by_firstpage_url,get_all_page_number,get_all_page_urls
+    get_pageKeyDic, get_next_urlList_by_firstpage_url, get_all_page_number, get_all_page_urls
 from geospider.ecommerce.pageParser.shopping_detail_parser import *
-from urllib2 import quote,unquote
+from urllib2 import quote, unquote
+from geospider.items import Goods,Stores,Ecommerce
 
-class ShopMainSpider(scrapy.Spider):
+class ShopMainSpider(RedisSpider):
     name = "shopspider"
     # allowed_domains = ["https://www.baidu.com"]
+
+    redis_key = 'ecommerce:start_urls'
+
     start_urls = [
-                    'https://www.taobao.com/',
-                    # "http://www.dangdang.com/",
-                    # "http://www.vip.com/",
-                    # "http://www.vancl.com/",
-                    # "http://www.yhd.com/",
-                    # "https://www.amazon.cn/",
-                    # "http://www.meilishuo.com/",
-                 ]
+        'https://www.taobao.com/',
+        # "http://www.dangdang.com/",
+        # "http://www.vip.com/",
+        # "http://www.vancl.com/",
+        # "http://www.yhd.com/",
+        # "https://www.amazon.cn/",
+        # "http://www.meilishuo.com/",
+    ]
+
+    def __init__(self, *args, **kwargs):
+        # Dynamically define the allowed domains list.
+        domain = kwargs.pop('domain', '')
+        print("***********************************************************8")
+        #self.allowed_domains = filter(None, domain.split(','))
+        # db = connect_mongodb()
+        # self.urldao = URLDao(db)
+        # self.taskid = self.redis_key.split(':')[0]
+        super(ShopMainSpider, self).__init__(*args, **kwargs)
 
     def parse(self, response):
         number, mylist = get_nav(response.url, 0)
@@ -129,36 +142,83 @@ class ShopMainSpider(scrapy.Spider):
                                         allnumber)
                 """
                 每一个商品列表的分页信息
-                
+
                 """
                 for each_goods_list_url in res:
-                    yield Request(callback=self.goods_list_parse,url=each_goods_list_url)
+                    yield Request(callback=self.goods_list_parse, url=each_goods_list_url)
 
 
-                # print "----------$$$$$$$$$------------"
+                    # print "----------$$$$$$$$$------------"
+
+
+    def goods_list_parse(self, response):
+        soup = BeautifulSoup(response.text, 'lxml')
+        analysis_method = analysis_method_selector(soup)
+
+        analysis_res = analysis_goods_list(analysis_method, response.url, soup)
+
+
+        if(analysis_method == 'JSON'):
+            for each_item in analysis_res:
+                each_detail_url = each_item['detail_url']
+                item = Goods()
+
+                item['title'] = each_item['title']
+                item['price'] = each_item['price']
+                item['pic_url'] = each_item['pic_url']
+                item['detail_url'] = each_item['detail_url']
+                item['taskid'] = str(self.name)
+
+                # yield item
+
+                yield Request(callback=self.goods_detail_parse, url=each_detail_url, meta={'method': 'JSON','item':item},)
+
+        else:
+            try:
+                for each_detail_url in analysis_res:
+                    yield Request(callback=self.goods_detail_parse, url=each_detail_url, meta={'method': 'OTHER'})
+            except:
+                pass
 
 
 
-    def goods_list_parse(self,response):
-        soup = BeautifulSoup(response.text,'lxml')
-        analysis_method =  analysis_method_selector(soup)
+    def goods_detail_parse(self, response):
+        method =  response.meta['method']
+        item = response.meta['item']
+        print '------------------------------------------------------------------------------'
+        soup = BeautifulSoup(response.url,'lxml')
+        res_stroe_dic = get_store(soup, response.url)
 
-        goods_detail_url_list = analysis_goods_list(analysis_method,response.url,soup)
+        item['comment_degree'] = res_stroe_dic['comment_degree']
+
+        if(method != 'JSON'):
+            item['price'] = get_price(soup)
+            item['detail_url'] = response.url
+
+            # yield item
+
+        store_item = Stores()
+        store_item['name'] = res_stroe_dic['name']
+        store_item['store_url'] = res_stroe_dic['store_url']
+        store_item['comment_degree'] = res_stroe_dic['comment_degree']
+        store_item['taskid'] = str(self.name)
+
+        # yield store_item
+        res_item = Ecommerce()
+        res_item['goods'] = item
+        res_item['stores'] = store_item
 
 
-        # pass
+        yield res_item
+        # soup = BeautifulSoup(response.text, 'lxml')
+        # print  get_title(soup)
         # item = ECommerceSiteCrawlerItem()
-        # print  (response.xpath("//a"))
         #
-        # item['url']  = response.url
-        #
-        # yield item
-    def goods_detail_parse(self,response):
+        # item['price'] = get_price(soup)
+        # item['title'] = get_title(soup)
+        # item['stroe_url'] = get_store(soup, response.url)
+        # # item['pic_url'] =
 
-        soup = BeautifulSoup(response.text,'lxml')
-        item = ECommerceSiteCrawlerItem()
-        item['price'] = get_price(soup)
-        item['title'] = get_title(soup)
-        item['stroe_url'] = get_store(soup,response.url)
 
-        yield item
+    def stroe_detail_parse(self, respinse):
+        pass

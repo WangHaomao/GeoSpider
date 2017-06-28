@@ -23,14 +23,6 @@ class ExampleLoader(ItemLoader):
     default_output_processor = TakeFirst()
     description_out = Join()
 
-class Cloth(Item):
-    title = Field()
-    link = Field()
-    price = Field()
-    comment = Field()
-    original_price = Field()
-    referer = Field()
-
 class News(Item):
     title = Field()
     keywords = Field()
@@ -49,6 +41,31 @@ class Blog(Item):
 
 # class ShopItem(Item):
 #     navbar = Field()
+
+
+class Goods(Item):
+    title = Field()
+    price = Field()
+    comment = Field()
+    comment_degree = Field()
+
+
+    detail_url = Field()
+    pic_url = Field()
+    taskid = Field()
+
+
+
+class Stores(Item):
+    name = Field()
+    store_url = Field()
+    comment_degree = Field()
+    description = Field()       #店铺描述
+    taskid = Field()
+
+class Ecommerce(Item):
+    goods = Field()
+    stores = Field()
 
 class ECommerceSiteCrawlerItem(Item):
     pass

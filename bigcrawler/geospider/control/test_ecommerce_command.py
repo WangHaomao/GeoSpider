@@ -1,28 +1,33 @@
 #-*- encoding: utf-8 -*-
 import redis
 from copy import deepcopy
-from scrapy import cmdline, crawler
+
+import sys
+from scrapy import cmdline
 
 from geospider.spiders.blog_spider import BlogSpider
 from geospider.spiders.news_spider import NewsSpider
 import pymongo
-client = pymongo.MongoClient('mongodb://localhost:27017')
-db_name = 'news_and_blog'
-db = client[db_name]
 
+from geospider.spiders.shop_main_spider import ShopMainSpider
+
+client = pymongo.MongoClient('mongodb://localhost:27017')
+db_name = 'geospider'
+db = client[db_name]
 
 def start():
     #conn_table = db['task']
     #print conn_table.find_one({'_id': ObjectId('591eb2df9c1da9154b001832')}).get('starturls')
 
-    b = deepcopy(BlogSpider)
-    b.name='bbb'
-    b.redis_key = "bbb:start_urls"
+    b = deepcopy(ShopMainSpider)
+    b.name='5953322595a1551602965038'
+    b.redis_key = "5953322595a1551602965038:start_urls"
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     # r.sadd("myspider:start_urls", 'http://news.qq.com/')
-    r.lpush("bbb:start_urls", "http://blog.sina.com.cn/")
-    b.allowed_domains=["blog.sina.com.cn"]
-    cmdline.execute("scrapy crawl bbb".split())
+    r.lpush("5953322595a1551602965038:start_urls", "https://www.taobao.com/")
+    # r.lpush("aaa:start_urls", "http://news.sohu.com/")
+    b.allowed_domains=["taobao.com"]
+    cmdline.execute("scrapy crawl 5953322595a1551602965038".split())
 
     # process = CrawlerProcess(get_project_settings())
     # process.crawl(news_spider)
@@ -32,5 +37,10 @@ def pause():
     cmdline.execute("".split())
 
 if __name__ == '__main__':
+    import os
+
+    # sys.path.append('/opt/graphite/webapp/')
+    # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "graphite.local_settings")
+
     start()
 
