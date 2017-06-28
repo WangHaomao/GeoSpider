@@ -23,9 +23,11 @@
     <!-- Logo -->
     <a href="{%url 'index' %}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>爬</b>虫</span>
+      <!--<span class="logo-mini"><img src="../../static/imgs/logo_shape_only_shadow.png" height="50px" width="50px"></span>-->
+
+      <span class="logo-mini"><img src="../../static/imgs/logo.png" height="50px" width="50px"></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>分布式爬虫</b>管理</span>
+      <span class="logo-lg"><img src="../../static/imgs/logo.png" height="45px" width="45px" style="margin-top:-5px;"><b>分布式爬虫</b>后台</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -37,50 +39,7 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <li class="dropdown messages-menu">
-           <a target="blank" href="http://localhost:8085/graphite/">Graphite监控</a>
-          </li>
-          <!-- Tasks: style can be found in dropdown.less -->
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
+           <a target="blank" href="http://123.207.230.48:8085/">Graphite监控</a>
           </li>
         </ul>
       </div>
@@ -110,7 +69,7 @@
         </li>
         <li>
           <a href="{% url 'machinelist' %}">
-            <i class="fa fa-book"></i> <span>主机管理</span>
+            <i class="fa fa-book"></i> <span>从机管理</span>
           </a>
         </li>
         <li>
@@ -128,7 +87,8 @@
           <ul class="treeview-menu">
             <li><a href="{%url 'extractarticle' %}"><i class="fa fa-circle-o"></i>批量抽取</a></li>
             <li><a href="{%url 'testarticles' %}"><i class="fa fa-circle-o"></i>批量测试</a></li>
-            <!--<li><a href="{%url 'newsdata'%}"><i class="fa fa-circle-o"></i>数据显示</a></li>-->
+            <li><a href="{%url 'testsingle' %}"><i class="fa fa-circle-o"></i>单例测试</a ></li>
+
           </ul>
         </li>
         <li>
@@ -137,7 +97,7 @@
           </a>
         </li>
         <li>
-          <a href="pages/widgets.html">
+          <a href="{% url 'introduce'%}">
             <i class="fa fa-book"></i> <span>使用说明</span>
           </a>
         </li>
@@ -163,6 +123,7 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li class="active">仪表盘</li>
         <li class="active">仪表盘</li>
       </ol>
     </section>
@@ -199,6 +160,11 @@
         <h2 class="page-header"><a href="#article_test"># 正文测试</a></h2>
         <p><b>批量抽取</b>：输入新闻或博客源数据路径和存储路径，从源数据中提取正文存储到指定路径。</p>
         <p><b>批量测试</b>：输入标准结果路径和待测试正文路径，测试正文抽取的准确率。</p>
+        <p><b>单例测试</b>：输入标准结果文件路径和待测试文件路径，对比正文抽取结果</p>
+      </section>
+      <section id="graphite" style="margin-top: 40px;">
+        <h2 class="page-header"><a href="#graphite"># Graphite监控</a></h2>
+        <p><b>Graphite</b>对所有爬虫任务进行监控</p>
       </section>
       {% endblock %}
     </section>

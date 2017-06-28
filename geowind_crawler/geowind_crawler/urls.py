@@ -27,7 +27,8 @@ urlpatterns = [
     url(r'^crawlermanage/deleteip/$', views.deleteip, name='deleteip'),
     url(r'^crawlermanage/addip/$', views.addip, name='addip'),
     url(r'^crawlermanage/charts/$', views.charts, name='charts'),
-
+    url(r'^crawlermanage/testsingle/$', views.testsingle, name='testsingle'),
+    url(r'^crawlermanage/introduce/$', views.introduce, name='introduce'),
 
     # url(r'^crawlermanage/$','crawlermanage.views.login'),
     # url(r'^crawlermanage/login/$','crawlermanage.views.login'),
@@ -35,5 +36,4 @@ urlpatterns = [
     # url(r'^crawlermanage/tasks/$','crawlermanage.views.tasks'),
     # url(r'^crawlermanage/taskdata/$','crawlermanage.views.taskdata'),
     # url(r'^crawlermanage/layout/$','crawlermanage.views.layout'),
-
 ]

@@ -2,7 +2,532 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0507b542-f882-4b2a-8b32-f74f1da8ac34" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/example-youyuan.zip" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/imgs/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/imgs/logo_metal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/imgs/logo_shape_only_shadow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/mergely/LICENSE.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/mergely/lib/codemirror.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/mergely/lib/codemirror.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/mergely/lib/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/mergely/lib/mergely.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/mergely/lib/mergely.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/mergely/lib/mergely.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/mergely/lib/searchcursor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/test_single.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bigcrawler/geospider/blog/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bigcrawler/geospider/blog/extract_content.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bigcrawler/geospider/blog/ghostdriver.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bigcrawler/geospider/e-commerce/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bigcrawler/geospider/e-commerce/claw_nav.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bigcrawler/geospider/e-commerce/nav_selector.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bigcrawler/geospider/middlewares2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/bootstrap/js/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/avatar.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/avatar04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/avatar2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/avatar3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/avatar5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/boxed-bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/boxed-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/credit/american-express.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/credit/cirrus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/credit/mastercard.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/credit/mestro.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/credit/paypal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/credit/paypal2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/credit/visa.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/default-50x50.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/photo1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/photo2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/photo3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/photo4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/user1-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/user2-160x160.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/user3-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/user4-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/user5-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/user6-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/user7-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/dist/img/user8-128x128.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/CHANGES.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/adapters/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/build-config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/ckeditor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/contents.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/af.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/bn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/bs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/cy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/en-au.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/en-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/eo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/eu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/fo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/gl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/gu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/hi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/is.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/ka.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/km.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/ku.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/mk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/mn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/ms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/nb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/no.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/si.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/sq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/sr-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/tt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/ug.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/lang/zh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/about/dialogs/about.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/about/dialogs/logo_ckeditor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/clipboard/dialogs/paste.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/dialog/dialogDefinition.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/icons_hidpi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/image/dialogs/image.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/image/images/noimage.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/link/dialogs/anchor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/link/dialogs/link.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/link/images/anchor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/link/images/hidpi/anchor.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/magicline/images/hidpi/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/magicline/images/icon-rtl.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/magicline/images/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/pastefromword/filter/default.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/scayt/CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/scayt/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/scayt/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/scayt/dialogs/options.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/scayt/dialogs/toolbar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/af.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/cy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/eo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/eu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/gl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/km.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/ku.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/nb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/no.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/si.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/sq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/tt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/ug.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/lang/zh.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/specialchar/dialogs/specialchar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/table/dialogs/table.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/tabletools/dialogs/tableCell.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/wsc/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/wsc/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/wsc/dialogs/ciframe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/wsc/dialogs/wsc.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/wsc/dialogs/wsc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/plugins/wsc/dialogs/wsc_ie.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/css/samples.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/img/github-top.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/img/header-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/img/header-separator.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/img/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/img/navigation-tip.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/js/sample.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/js/sf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/ajax.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/api.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/appendto.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/assets/inlineall/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/assets/posteddata.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/assets/sample.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/assets/uilanguages/languages.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/datafiltering.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/dialog/assets/my_dialog.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/dialog/dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/divreplace.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/enterkey/enterkey.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.fla" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/htmlwriter/outputforflash.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/htmlwriter/outputhtml.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/inlineall.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/inlinebycode.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/inlinetextarea.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/jquery.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/magicline/magicline.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/readonly.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/replacebyclass.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/replacebycode.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/sample.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/sample.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/sample_posteddata.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/tabindex.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/toolbar/toolbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/uicolor.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/uilanguages.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/wysiwygarea/fullpage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/old/xhtmlstyle.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/css/fontello.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/font/config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/font/fontello.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/font/fontello.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/font/fontello.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/font/fontello.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/dialog_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/dialog_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/dialog_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/dialog_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/editor.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/editor_gecko.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/editor_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/editor_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/editor_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/editor_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/icons_hidpi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/images/arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/images/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/images/hidpi/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/images/hidpi/lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/images/hidpi/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/images/hidpi/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/images/lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/images/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/images/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/images/spinner.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/skins/moono/readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/styles.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/colorpicker/bootstrap-colorpicker.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/colorpicker/bootstrap-colorpicker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/colorpicker/bootstrap-colorpicker.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/colorpicker/bootstrap-colorpicker.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/colorpicker/img/alpha-horizontal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/colorpicker/img/alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/colorpicker/img/hue-horizontal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/colorpicker/img/hue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/colorpicker/img/saturation.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/d3/d3.v3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/d3/default.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/d3/navigator.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/fastclick/fastclick.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/fastclick/fastclick.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/fullcalendar/fullcalendar.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/fullcalendar/fullcalendar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/fullcalendar/fullcalendar.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/fullcalendar/fullcalendar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/fullcalendar/fullcalendar.print.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/input-mask/jquery.inputmask.date.extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/input-mask/jquery.inputmask.extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/input-mask/jquery.inputmask.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/input-mask/jquery.inputmask.numeric.extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/input-mask/jquery.inputmask.phone.extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/input-mask/jquery.inputmask.regex.extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/input-mask/phone-codes/phone-be.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/input-mask/phone-codes/phone-codes.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/input-mask/phone-codes/readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ionslider/img/sprite-skin-flat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ionslider/img/sprite-skin-nice.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ionslider/ion.rangeSlider.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ionslider/ion.rangeSlider.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ionslider/ion.rangeSlider.skinFlat.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ionslider/ion.rangeSlider.skinNice.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/jQueryUI/jquery-ui.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/jQueryUI/jquery-ui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/jvectormap/jquery-jvectormap-1.2.2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/jvectormap/jquery-jvectormap-usa-en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/knob/jquery.knob.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/morris/morris.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/morris/morris.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/morris/morris.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/pace/pace.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/pace/pace.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/pace/pace.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/pace/pace.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/slimScroll/jquery.slimscroll.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/slimScroll/jquery.slimscroll.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/sparkline/jquery.sparkline.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/sparkline/jquery.sparkline.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/timepicker/bootstrap-timepicker.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/timepicker/bootstrap-timepicker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/timepicker/bootstrap-timepicker.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/timepicker/bootstrap-timepicker.min.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/bigcrawler/geospider/blog/blog_parser.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/blog_parser.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/mergely/lib/codemirror.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/crawls/somespider-1/spider.state" afterPath="$PROJECT_DIR$/bigcrawler/crawls/somespider-1/spider.state" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/main-conent-extract-score.jar" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/main-conent-extract-score.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/db.sqlite3" afterPath="$PROJECT_DIR$/geowind_crawler/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitgnore" afterPath="$PROJECT_DIR$/.gitgnore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/project.iml" afterPath="$PROJECT_DIR$/.idea/project.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/.idea/bigcrawler.iml" afterPath="$PROJECT_DIR$/bigcrawler/.idea/bigcrawler.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/.idea/misc.xml" afterPath="$PROJECT_DIR$/bigcrawler/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/.idea/modules.xml" afterPath="$PROJECT_DIR$/bigcrawler/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/.idea/workspace.xml" afterPath="$PROJECT_DIR$/bigcrawler/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/Dockerfile" afterPath="$PROJECT_DIR$/bigcrawler/Dockerfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/README.rst" afterPath="$PROJECT_DIR$/bigcrawler/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/datafile/ip.txt" afterPath="$PROJECT_DIR$/bigcrawler/datafile/ip.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/docker-compose.yml" afterPath="$PROJECT_DIR$/bigcrawler/docker-compose.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/e-commerce.txt" afterPath="$PROJECT_DIR$/bigcrawler/e-commerce.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/__init__.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/control/__init__.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/control/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/control/command.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/control/command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/control/command2.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/control/command2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/control/command3.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/control/command3.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/control/ghostdriver.log" afterPath="$PROJECT_DIR$/bigcrawler/geospider/control/ghostdriver.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/control/manage.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/control/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/control/message_analyze.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/control/message_analyze.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/control/message_listener.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/control/message_listener.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/control/process_controller.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/control/process_controller.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/control/spider_controller.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/control/spider_controller.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/items.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/items.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/middlewares.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/middlewares.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/mongo_pipelines.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/mongo_pipelines.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/mongodb_pipelines.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/mongodb_pipelines.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/__init__.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/article_parser.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/article_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/extract_content.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/extract_content.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/parse_by_tag.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/parse_by_tag.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/parse_by_tag2.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/parse_by_tag2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/pipelines.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/pipelines.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/proxy/__init__.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/proxy/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/proxy/claw_ip.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/proxy/claw_ip.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/proxy/entities.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/proxy/entities.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/proxy/ip.txt" afterPath="$PROJECT_DIR$/bigcrawler/geospider/proxy/ip.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/proxy/proxy_util.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/proxy/proxy_util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/settings.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/spiders/__init__.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/spiders/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/spiders/blog_spider.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/spiders/blog_spider.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/spiders/blog_spider_recover.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/spiders/blog_spider_recover.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/spiders/dmoz.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/spiders/dmoz.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/spiders/mycrawler_redis.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/spiders/mycrawler_redis.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/spiders/myspider_redis.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/spiders/myspider_redis.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/spiders/news_spider.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/spiders/news_spider.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/spiders/news_spider_recover.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/spiders/news_spider_recover.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/spiders/shop_main_spider.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/spiders/shop_main_spider.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/statscol/__init__.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/statscol/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/statscol/graphite.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/statscol/graphite.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/utils/__init__.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/utils/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/utils/mongodb_helper.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/utils/mongodb_helper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/utils/redis_helper.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/utils/redis_helper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/utils/settings_helper.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/utils/settings_helper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/utils/test.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/utils/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/utils/time_util.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/utils/time_util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/utils/url_cluster.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/utils/url_cluster.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/geospider/utils/url_util.py" afterPath="$PROJECT_DIR$/bigcrawler/geospider/utils/url_util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/ghostdriver.log" afterPath="$PROJECT_DIR$/bigcrawler/ghostdriver.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/log.txt" afterPath="$PROJECT_DIR$/bigcrawler/log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/main.py" afterPath="$PROJECT_DIR$/bigcrawler/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/process_items.py" afterPath="$PROJECT_DIR$/bigcrawler/process_items.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/requirements.txt" afterPath="$PROJECT_DIR$/bigcrawler/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bigcrawler/scrapy.cfg" afterPath="$PROJECT_DIR$/bigcrawler/scrapy.cfg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/.idea/geowind_crawler.iml" afterPath="$PROJECT_DIR$/geowind_crawler/.idea/geowind_crawler.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/.idea/misc.xml" afterPath="$PROJECT_DIR$/geowind_crawler/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/.idea/modules.xml" afterPath="$PROJECT_DIR$/geowind_crawler/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/.idea/workspace.xml" afterPath="$PROJECT_DIR$/geowind_crawler/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/collected_static/logs/all.logs" afterPath="$PROJECT_DIR$/geowind_crawler/collected_static/logs/all.logs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/collected_static/logs/script.logs" afterPath="$PROJECT_DIR$/geowind_crawler/collected_static/logs/script.logs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/__init__.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/admin.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/migrations/0002_delete_task.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/migrations/0002_delete_task.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/migrations/__init__.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/migrations/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/models.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/echarts/echarts.common.min.js" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/echarts/echarts.common.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/charts.html" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/charts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/extract_article.html" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/extract_article.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/index.html" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/layout.html" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/machine_list.html" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/machine_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/process_list.html" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/process_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/taskdetail.html" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/taskdetail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/tasks.html" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/tasks.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/test_articles.html" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/test_articles.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/test_list.html" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/test_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/tests.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/__init__.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/acticle_parser.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/acticle_parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/echarts.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/echarts.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/message.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/message.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/page.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/page.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/settings_helper.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/settings_helper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/thread.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/utils/thread.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/crawlermanage/views.py" afterPath="$PROJECT_DIR$/geowind_crawler/crawlermanage/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/geowind_crawler/__init__.py" afterPath="$PROJECT_DIR$/geowind_crawler/geowind_crawler/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/geowind_crawler/client.py" afterPath="$PROJECT_DIR$/geowind_crawler/geowind_crawler/client.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/geowind_crawler/settings.py" afterPath="$PROJECT_DIR$/geowind_crawler/geowind_crawler/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/geowind_crawler/urls.py" afterPath="$PROJECT_DIR$/geowind_crawler/geowind_crawler/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geowind_crawler/geowind_crawler/wsgi.py" afterPath="$PROJECT_DIR$/geowind_crawler/geowind_crawler/wsgi.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,16 +539,22 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/views.py">
+      <file leaf-file-name="test_single.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/test_single.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="e#26#35#0" expanded="true" />
-                <marker date="1495626043000" expanded="true" signature="3118:3184" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="3118:3257" ph="..." />
-              </folding>
+            <state relative-caret-position="490">
+              <caret line="131" column="21" lean-forward="false" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery-2.2.3.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/jQuery/jquery-2.2.3.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17850">
+              <caret line="1" column="1135" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -31,58 +562,19 @@
       <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2109">
-              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="82" column="17" lean-forward="false" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/index.html">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3078">
-              <caret line="162" column="26" lean-forward="false" selection-start-line="162" selection-start-column="26" selection-end-line="162" selection-end-column="26" />
-              <folding>
-                <marker date="1495626043000" expanded="true" signature="5733:5749" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="5733:5763" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="5733:7085" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="5733:7100" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="5733:7134" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="5733:7963" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="5733:8379" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="5793:6511" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="5816:6049" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="5946:6034" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="6086:6497" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="6524:6793" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="6562:6779" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="6638:6762" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="6806:6932" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="6846:6918" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="6946:7073" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="6986:7059" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="7217:7676" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="7296:7520" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="7307:7359" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="7389:7505" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="7577:7643" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="7736:7955" ph="..." />
-                <marker date="1495626043000" expanded="true" signature="7775:7813" ph="..." />
-                <marker date="1495626043000" expanded="false" signature="7837:7843" ph="©" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/geowind_crawler/geowind_crawler/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="349">
+              <caret line="56" column="8" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,6 +585,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -111,15 +604,23 @@
       <list>
         <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/models.py" />
         <option value="$PROJECT_DIR$/geowind_crawler/__init__.py" />
-        <option value="$PROJECT_DIR$/geowind_crawler/geowind_crawler/settings.py" />
         <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/login.html" />
         <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/tasks2.html" />
         <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/taskdata2.html" />
-        <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/views.py" />
-        <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/layout.html" />
         <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/layout2.html" />
+        <option value="$PROJECT_DIR$/geowind_crawler/geowind_crawler/settings.py" />
         <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/index.html" />
+        <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/charts.html" />
+        <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/extract_article.html" />
+        <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/layout.html" />
+        <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/machine_list.html" />
+        <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/process_list.html" />
+        <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/tasks.html" />
+        <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/test_articles.html" />
+        <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/test_list.html" />
+        <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/views.py" />
         <option value="$PROJECT_DIR$/geowind_crawler/geowind_crawler/urls.py" />
+        <option value="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/test_single.html" />
       </list>
     </option>
   </component>
@@ -142,7 +643,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -179,26 +679,215 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bigcrawler" />
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mergely" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mergely" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imgs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins" />
+      <recent name="$PROJECT_DIR$/geowind_crawler/crawlermanage/static/imgs" />
+      <recent name="$PROJECT_DIR$/bigcrawler/geospider/news_and_blog" />
       <recent name="$PROJECT_DIR$/geowind_crawler/crawlermanage" />
       <recent name="$PROJECT_DIR$/geowind_crawler" />
-      <recent name="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage" />
-      <recent name="$PROJECT_DIR$/geowind_crawler/crawlermanage/templates" />
-      <recent name="$PROJECT_DIR$/geowind_crawler/crawlermanage/static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -294,15 +983,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26319444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26680973" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -314,6 +1004,26 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26680973" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -325,77 +1035,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#26#35#0" expanded="true" />
-            <marker date="1495626043000" expanded="true" signature="3118:3184" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="3118:3257" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2109">
-          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3078">
-          <caret line="162" column="26" lean-forward="false" selection-start-line="162" selection-start-column="26" selection-end-line="162" selection-end-column="26" />
-          <folding>
-            <marker date="1495626043000" expanded="true" signature="5733:5749" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:5763" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7085" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7100" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7134" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7963" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:8379" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5793:6511" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5816:6049" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5946:6034" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6086:6497" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6524:6793" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6562:6779" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6638:6762" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6806:6932" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6846:6918" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6946:7073" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6986:7059" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7217:7676" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7296:7520" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7307:7359" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7389:7505" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7577:7643" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7736:7955" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7775:7813" ph="..." />
-            <marker date="1495626043000" expanded="false" signature="7837:7843" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/geowind_crawler/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/views.py">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#26#35#0" expanded="true" />
-            <marker date="1495626043000" expanded="true" signature="3118:3184" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="3118:3257" ph="..." />
+            <element signature="e#26#37#0" expanded="true" />
+            <marker date="1498634333000" expanded="true" signature="26:33" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -413,32 +1057,8 @@
         <state relative-caret-position="3240">
           <caret line="162" column="52" lean-forward="false" selection-start-line="162" selection-start-column="52" selection-end-line="162" selection-end-column="52" />
           <folding>
-            <marker date="1495626043000" expanded="true" signature="5733:5749" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:5763" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7085" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7100" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7134" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7963" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:8379" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5793:6511" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5816:6049" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5946:6034" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6086:6497" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6524:6793" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6562:6779" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6638:6762" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6806:6932" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6846:6918" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6946:7073" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6986:7059" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7217:7676" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7296:7520" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7307:7359" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7389:7505" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7577:7643" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7736:7955" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7775:7813" ph="..." />
-            <marker date="1495626043000" expanded="false" signature="7837:7843" ph="©" />
+            <element signature="n#style#0;n#img#0;n#span#1;n#a#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1498633751000" expanded="true" signature="6422:6454" ph="..." />
           </folding>
         </state>
       </provider>
@@ -448,72 +1068,7 @@
         <state relative-caret-position="280">
           <caret line="15" column="62" lean-forward="false" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#26#35#0" expanded="true" />
-            <marker date="1495626043000" expanded="true" signature="3118:3184" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="3118:3257" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2220">
-          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3240">
-          <caret line="162" column="52" lean-forward="false" selection-start-line="162" selection-start-column="52" selection-end-line="162" selection-end-column="52" />
-          <folding>
-            <marker date="1495626043000" expanded="true" signature="5733:5749" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:5763" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7085" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7100" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7134" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7963" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:8379" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5793:6511" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5816:6049" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5946:6034" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6086:6497" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6524:6793" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6562:6779" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6638:6762" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6806:6932" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6846:6918" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6946:7073" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6986:7059" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7217:7676" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7296:7520" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7307:7359" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7389:7505" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7577:7643" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7736:7955" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7775:7813" ph="..." />
-            <marker date="1495626043000" expanded="false" signature="7837:7843" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/geowind_crawler/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="15" column="62" lean-forward="false" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -523,9 +1078,8 @@
         <state relative-caret-position="240">
           <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
           <folding>
-            <element signature="e#26#35#0" expanded="true" />
-            <marker date="1495626043000" expanded="true" signature="3118:3184" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="3118:3257" ph="..." />
+            <element signature="e#26#37#0" expanded="true" />
+            <marker date="1498634333000" expanded="true" signature="26:33" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -549,7 +1103,7 @@
         <state relative-caret-position="200">
           <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -559,9 +1113,8 @@
         <state relative-caret-position="260">
           <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
           <folding>
-            <element signature="e#26#35#0" expanded="true" />
-            <marker date="1495626043000" expanded="true" signature="3118:3184" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="3118:3257" ph="..." />
+            <element signature="e#26#37#0" expanded="true" />
+            <marker date="1498634333000" expanded="true" signature="26:33" ph="import ..." />
           </folding>
         </state>
       </provider>
@@ -585,7 +1138,7 @@
         <state relative-caret-position="200">
           <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="42" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -608,24 +1161,10 @@
     <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/__init__.py" />
     <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/__init__.py" />
     <entry file="file://$PROJECT_DIR$/../env/lib/python2.7/site-packages/django/forms/forms.py" />
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="56" column="8" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/geowind_crawler/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="59" column="50" lean-forward="false" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -637,13 +1176,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/tasks3.html" />
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/tasks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/taskdata.html" />
     <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/taskdata.html" />
     <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/layout.html">
@@ -655,41 +1187,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/geowind_crawlermanage2/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3078">
-          <caret line="162" column="26" lean-forward="false" selection-start-line="162" selection-start-column="26" selection-end-line="162" selection-end-column="26" />
-          <folding>
-            <marker date="1495626043000" expanded="true" signature="5733:5749" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:5763" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7085" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7100" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7134" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:7963" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5733:8379" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5793:6511" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5816:6049" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="5946:6034" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6086:6497" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6524:6793" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6562:6779" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6638:6762" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6806:6932" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6846:6918" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6946:7073" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="6986:7059" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7217:7676" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7296:7520" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7307:7359" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7389:7505" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7577:7643" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7736:7955" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="7775:7813" ph="..." />
-            <marker date="1495626043000" expanded="false" signature="7837:7843" ph="©" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -698,33 +1195,198 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/geowind_crawler/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/layout.html">
+    <entry file="file://$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/blog_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2109">
-          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/parse_by_tag.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bigcrawler/geospider/news_and_blog/parse_by_tag2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-667">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/static/imgs/logo_metal.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/geowind_crawler/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2415">
+          <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/charts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="49" column="89" lean-forward="false" selection-start-line="49" selection-start-column="89" selection-end-line="49" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/ecommercedata.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9323">
+          <caret line="496" column="39" lean-forward="false" selection-start-line="496" selection-start-column="39" selection-end-line="496" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/extract_article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="66" column="12" lean-forward="false" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="89" column="12" lean-forward="true" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="91" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#span#1;n#a#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1498633751000" expanded="true" signature="6422:6454" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/machine_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="55" column="91" lean-forward="false" selection-start-line="55" selection-start-column="91" selection-end-line="55" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/newsdata.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1344">
+          <caret line="13" column="56" lean-forward="true" selection-start-line="13" selection-start-column="56" selection-end-line="13" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/newsdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/process_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="55" column="88" lean-forward="false" selection-start-line="55" selection-start-column="88" selection-end-line="55" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/taskdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4639">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="333">
+          <caret line="323" column="30" lean-forward="false" selection-start-line="323" selection-start-column="30" selection-end-line="323" selection-end-column="30" />
           <folding>
-            <element signature="e#26#35#0" expanded="true" />
-            <marker date="1495626043000" expanded="true" signature="3118:3184" ph="..." />
-            <marker date="1495626043000" expanded="true" signature="3118:3257" ph="..." />
+            <element signature="e#26#37#0" expanded="true" />
+            <marker date="1498634333000" expanded="true" signature="26:33" ph="import ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/geowind_crawler/geowind_crawler/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="513">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/test_articles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="66" column="89" lean-forward="false" selection-start-line="66" selection-start-column="89" selection-end-line="66" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/test_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="64" column="12" lean-forward="false" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/tasks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="55" column="89" lean-forward="false" selection-start-line="55" selection-start-column="89" selection-end-line="55" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="56" column="8" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="82" column="17" lean-forward="false" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/jQuery/jquery-2.2.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17850">
+          <caret line="1" column="1135" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/static/plugins/mergely-3.4.4/doc/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/crawlermanage/templates/crawlermanage/test_single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="131" column="21" lean-forward="false" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

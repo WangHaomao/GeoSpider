@@ -50,5 +50,7 @@ class Blog(Item):
 # class ShopItem(Item):
 #     navbar = Field()
 
+class ECommerceSiteCrawlerItem(Item):
+    pass
 
 

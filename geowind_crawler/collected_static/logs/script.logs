@@ -15661,3 +15661,1264 @@ ServerSelectionTimeoutError: 10.204.106.19:27017: timed out
 2017-06-27 15:03:05,818 [Thread-7:139624856139520] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
 2017-06-27 15:03:50,943 [Thread-9:139624856139520] [django.request:182] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
 2017-06-27 15:03:53,038 [Thread-13:139624846960384] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-28 04:27:29,851 [Thread-3:140465160582912] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-06-28 04:27:31,006 [Thread-7:140465127012096] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-28 04:28:20,115 [Thread-13:140465160582912] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-28 04:28:22,119 [Thread-17:140464615319296] [django.request:182] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
+2017-06-28 04:28:44,725 [Thread-21:140464615319296] [django.request:182] [WARNING]- Not Found: /crawlermanage/newsdata/dist/img/user2-160x160.jpg
+2017-06-28 04:28:49,687 [Thread-25:140465118619392] [django.request:182] [WARNING]- Not Found: /crawlermanage/taskdetail/dist/img/user2-160x160.jpg
+2017-06-28 04:28:54,358 [Thread-29:140465152190208] [django.request:182] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-28 04:29:13,844 [Thread-31:140465152190208] [django.request:182] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-28 04:29:23,230 [Thread-33:140465152190208] [django.request:182] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-28 04:29:40,960 [Thread-35:140465152190208] [django.request:182] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-28 04:30:04,467 [Thread-37:140465152190208] [django.request:182] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-28 04:30:23,283 [Thread-40:140465152190208] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:30:37,531 [Thread-42:140465160582912] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:31:04,513 [Thread-48:140464623712000] [django.request:182] [WARNING]- Not Found: /crawlermanage/processlist/dist/img/user2-160x160.jpg
+2017-06-28 04:31:13,759 [Thread-50:140464623712000] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:31:47,399 [Thread-52:140464623712000] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:33:03,626 [Thread-54:140464623712000] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:36:02,542 [Thread-56:140465143797504] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:36:26,899 [Thread-62:140465152190208] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:36:45,195 [Thread-67:140465118619392] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:38:22,161 [Thread-70:140465118619392] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:38:26,745 [Thread-72:140465118619392] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:38:30,625 [Thread-74:140465118619392] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:39:04,272 [Thread-76:140465118619392] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:39:08,275 [Thread-78:140465118619392] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:39:12,714 [Thread-80:140465118619392] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 04:40:17,653 [Thread-82:140465118619392] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 06:00:14,684 [Thread-2:123145497522176] [django.request:152] [WARNING]- Not Found: /
+2017-06-28 06:00:14,832 [Thread-3:123145501728768] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-06-28 06:00:21,470 [Thread-4:123145497522176] [django.request:152] [WARNING]- Not Found: /login
+2017-06-28 06:00:41,947 [Thread-22:123145505935360] [django.request:152] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-28 06:00:59,029 [Thread-24:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/index/pages/widgets.html
+2017-06-28 06:01:01,643 [Thread-25:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/index/pages/widgets.html
+2017-06-28 06:01:03,956 [Thread-28:123145510141952] [django.request:152] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 06:01:10,478 [Thread-37:123145514348544] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-28 06:01:11,665 [Thread-39:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-28 06:01:13,508 [Thread-40:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:01:19,242 [Thread-41:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:01:22,159 [Thread-45:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-28 06:01:23,944 [Thread-48:123145501728768] [django.request:152] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-28 06:01:25,142 [Thread-49:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:01:31,113 [Thread-50:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:01:42,070 [Thread-52:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:02:14,216 [Thread-53:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:02:18,725 [Thread-55:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-28 06:02:20,305 [Thread-56:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:02:26,829 [Thread-58:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-28 06:02:28,154 [Thread-59:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:05:07,456 [Thread-62:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-28 06:05:09,617 [Thread-63:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:05:12,722 [Thread-64:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '='running'' from 'i.status='running''
+2017-06-28 06:05:27,742 [Thread-65:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '='running'' from '='running''
+2017-06-28 06:05:33,926 [Thread-66:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=='running'' from '=='running''
+2017-06-28 06:05:42,935 [Thread-67:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:18:18,633 [Thread-73:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
+2017-06-28 06:18:19,950 [Thread-74:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:18:22,332 [Thread-76:123145501728768] [django.request:152] [WARNING]- Not Found: /crawlermanage/layout/dist/img/user2-160x160.jpg
+2017-06-28 06:18:23,370 [Thread-78:123145510141952] [django.request:152] [WARNING]- Not Found: /crawlermanage/machinelist/dist/img/user2-160x160.jpg
+2017-06-28 06:18:24,843 [Thread-79:123145514348544] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:18:28,404 [Thread-81:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-28 06:18:29,754 [Thread-83:123145505935360] [django.request:152] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-28 06:18:30,750 [Thread-85:123145514348544] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-28 06:18:31,907 [Thread-87:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-28 06:18:32,859 [Thread-89:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-28 06:18:37,722 [Thread-91:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 06:18:49,391 [Thread-92:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/charts/pages/widgets.html
+2017-06-28 06:18:53,621 [Thread-93:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/charts/pages/widgets.html
+2017-06-28 06:18:58,021 [Thread-94:123145501728768] [django.request:152] [WARNING]- Not Found: /crawlermanage/charts/pages/widgets.html
+2017-06-28 06:26:06,693 [Thread-101:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/charts/pages/widgets.html
+2017-06-28 06:28:05,839 [Thread-107:123145501728768] [django.request:152] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 06:28:14,726 [Thread-109:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-28 06:28:16,310 [Thread-111:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-28 06:28:17,221 [Thread-113:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-28 06:28:18,082 [Thread-115:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-28 06:28:18,768 [Thread-117:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-28 06:28:19,226 [Thread-119:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-28 06:28:19,644 [Thread-121:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-28 06:28:20,052 [Thread-123:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-28 06:28:20,754 [Thread-125:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-28 06:28:21,500 [Thread-127:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-28 06:28:21,922 [Thread-129:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-28 06:28:22,520 [Thread-131:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-28 06:28:23,029 [Thread-133:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/testarticles/dist/img/user2-160x160.jpg
+2017-06-28 06:28:23,539 [Thread-135:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractarticle/dist/img/user2-160x160.jpg
+2017-06-28 06:28:24,003 [Thread-137:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/charts/dist/img/user2-160x160.jpg
+2017-06-28 06:28:24,520 [Thread-138:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/charts/pages/widgets.html
+2017-06-28 06:30:57,239 [Thread-149:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:31:03,415 [Thread-150:123145497522176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 06:37:22,464 [Thread-152:123145497522176] [django.request:152] [WARNING]- Not Found: /weibo/map
+2017-06-28 06:37:22,700 [Thread-153:123145497522176] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-06-28 06:37:27,286 [Thread-154:123145497522176] [django.request:152] [WARNING]- Not Found: /login
+2017-06-28 06:45:58,210 [Thread-223:123145497522176] [django.request:152] [WARNING]- Not Found: /crawlermanage/index/pages/widgets.html
+2017-06-28 07:09:17,229 [Thread-2:123145371668480] [django.request:152] [WARNING]- Not Found: /crawlermanage/singletext
+2017-06-28 07:09:23,204 [Thread-4:123145380081664] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 324, in test_single
+    return render(request, 'crawlermanage/test_single.html')
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'testarticle' not found. 'testarticle' is not a valid view function or pattern name.
+2017-06-28 07:11:00,368 [Thread-10:123145375875072] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 324, in test_single
+    return render(request, 'crawlermanage/test_single.html')
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'testarticle' not found. 'testarticle' is not a valid view function or pattern name.
+2017-06-28 07:11:07,490 [Thread-15:123145375875072] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 324, in test_single
+    return render(request, 'crawlermanage/test_single.html')
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'testarticle' not found. 'testarticle' is not a valid view function or pattern name.
+2017-06-28 07:11:26,835 [Thread-17:123145371668480] [django.request:152] [WARNING]- Not Found: /gen204
+2017-06-28 07:11:38,759 [Thread-18:123145371668480] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 324, in test_single
+    return render(request, 'crawlermanage/test_single.html')
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'testarticle' not found. 'testarticle' is not a valid view function or pattern name.
+2017-06-28 07:11:48,779 [Thread-24:123145371668480] [django.request:152] [WARNING]- Not Found: /gen204
+2017-06-28 07:16:43,735 [Thread-31:123145371668480] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 324, in test_single
+    return render(request, 'crawlermanage/test_single.html')
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'testarticle' not found. 'testarticle' is not a valid view function or pattern name.
+2017-06-28 07:17:03,086 [Thread-37:123145371668480] [django.request:152] [WARNING]- Not Found: /gen204
+2017-06-28 07:17:04,432 [Thread-38:123145371668480] [django.request:152] [WARNING]- Not Found: /gen204
+2017-06-28 07:17:05,123 [Thread-39:123145371668480] [django.request:152] [WARNING]- Not Found: /gen204
+2017-06-28 07:17:58,682 [Thread-2:123145539977216] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 324, in testsingle
+    return render(request, 'crawlermanage/test_single.html')
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'testarticle' not found. 'testarticle' is not a valid view function or pattern name.
+2017-06-28 07:18:54,488 [Thread-2:123145446416384] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 324, in testsingle
+    return render_to_response('crawlermanage/test_single.html')
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: <WSGIRequest: GET '/crawlermanage/testsingle/'>
+2017-06-28 07:18:57,552 [Thread-2:123145360044032] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 324, in testsingle
+    return render_to_response('crawlermanage/test_single.html')
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'testarticle' not found. 'testarticle' is not a valid view function or pattern name.
+2017-06-28 07:20:18,865 [Thread-2:123145572220928] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 324, in testsingle
+    return render_to_response('crawlermanage/test_single.html')
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'testarticle' not found. 'testarticle' is not a valid view function or pattern name.
+2017-06-28 07:20:56,905 [Thread-9:123145572220928] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 07:21:03,687 [Thread-12:123145580634112] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 324, in testsingle
+    return render_to_response('crawlermanage/test_single.html')
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'testarticle' not found. 'testarticle' is not a valid view function or pattern name.
+2017-06-28 07:21:14,481 [Thread-18:123145580634112] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 324, in testsingle
+    return render_to_response('crawlermanage/test_single.html')
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'testarticle' not found. 'testarticle' is not a valid view function or pattern name.
+2017-06-28 07:21:23,093 [Thread-19:123145572220928] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 324, in testsingle
+    return render_to_response('crawlermanage/test_single.html')
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'testarticle' not found. 'testarticle' is not a valid view function or pattern name.
+2017-06-28 08:04:34,103 [Thread-32:123145572220928] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/haomao/Documents/Workspace/Git/project/geowind_crawler/crawlermanage/views.py", line 283, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p})
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-06-28 09:48:46,227 [Thread-8:123145578610688] [django.request:152] [WARNING]- Not Found: /
+2017-06-28 09:48:46,378 [Thread-9:123145582817280] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-06-28 09:48:54,981 [Thread-14:123145578610688] [django.request:152] [WARNING]- Not Found: /crawlermanage/testsingle/static/plugins/mergely/lib/mergely.js
+2017-06-28 09:48:55,458 [Thread-15:123145578610688] [django.request:152] [WARNING]- Not Found: /crawlermanage/testsingle/static/plugins/mergely/lib/mergely.js
+2017-06-28 10:31:05,444 [Thread-18:140411230545664] [django.request:182] [WARNING]- Not Found: /crawlermanage/charts/pages/widgets.html
+2017-06-28 11:31:51,187 [Thread-8:140078707250944] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/pages/widgets.html
+2017-06-28 11:34:45,361 [Thread-15:140078724036352] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/pages/widgets.html
+2017-06-28 11:35:20,964 [Thread-20:140078715643648] [django.request:182] [WARNING]- Not Found: /crawlermanage/index/pages/widgets.html
+2017-06-28 12:21:21,185 [Thread-3:140464017561344] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/testsingle/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 337, in testsingle
+    standard = readFile(standard)
+UnboundLocalError: local variable 'standard' referenced before assignment

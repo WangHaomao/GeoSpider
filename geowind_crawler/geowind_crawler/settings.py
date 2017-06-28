@@ -33,7 +33,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-REDIS_HOST = '192.168.1.103'
+REDIS_HOST = '192.168.1.114'
+LOCAL_HOST = '192.168.1.114'
+MONGODB_HOST = '192.168.1.114'
+
 SUBSCRIBE = 'crawler'
 # Application definition
 
@@ -91,9 +94,7 @@ DATABASES = {
     }
 }
 
-LOCAL_HOST = '192.168.1.103'
 
-MONGODB_HOST = '192.168.1.103'
 MONGODB_DBNAME = 'geospider'
 mongoengine.connect(MONGODB_DBNAME, host=MONGODB_HOST, username='', password='')
 # mongoengine.register_connection('default', 'news')

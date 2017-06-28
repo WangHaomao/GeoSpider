@@ -29,7 +29,7 @@
         </li>
         <li>
           <a href="{% url 'machinelist' %}">
-            <i class="fa fa-book"></i> <span>主机管理</span>
+            <i class="fa fa-book"></i> <span>从机管理</span>
           </a>
         </li>
         <li>
@@ -47,7 +47,7 @@
           <ul class="treeview-menu">
             <li class="active"><a href="{%url 'extractarticle' %}"><i class="fa fa-circle-o"></i>批量抽取</a></li>
             <li><a href="{%url 'testarticles' %}"><i class="fa fa-circle-o"></i>批量测试</a></li>
-            <!--<li><a href="{%url 'newsdata'%}"><i class="fa fa-circle-o"></i>数据显示</a></li>-->
+          <li><a href="{%url 'testsingle' %}"><i class="fa fa-circle-o"></i>单例测试</a ></li>
           </ul>
         </li>
         <li class="active">
@@ -56,7 +56,7 @@
           </a>
         </li>
         <li>
-          <a href="pages/widgets.html">
+          <a href="{% url 'introduce'%}">
             <i class="fa fa-book"></i> <span>使用说明</span>
           </a>
         </li>
@@ -70,12 +70,7 @@
 {% endblock %}
 {% block maincontent %}
 <section class="content">
-      <div class="callout callout-warning">
-        <h4>Warning!</h4>
 
-        <p><b>Morris.js</b> charts are no longer maintained by its author. We would recommend using any of the other
-          charts that come with the template.</p>
-      </div>
       <div class="row">
         <div class="col-md-6">
           <!-- AREA CHART -->
@@ -100,7 +95,7 @@
           <!-- DONUT CHART -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">各类型爬虫任务数量所占比例</h3>
+              <h3 class="box-title">各类型历史爬虫任务数量所占比例</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -165,7 +160,7 @@
 <!-- Bootstrap 3.3.6 -->
 <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
 <script src="../../static/plugins/echarts/echarts.common.min.js"></script>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
 <!-- AdminLTE App -->
 <script src="../../static/dist/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->

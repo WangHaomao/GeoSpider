@@ -33,7 +33,7 @@
         </li>
           <li>
           <a href="{% url 'machinelist' %}">
-            <i class="fa fa-book"></i> <span>主机管理</span>
+            <i class="fa fa-book"></i> <span>从机管理</span>
           </a>
         </li>
         <li>
@@ -50,8 +50,8 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{%url 'extractarticle' %}"><i class="fa fa-circle-o"></i>批量抽取</a></li>
-            <li><a href="{%url 'testarticles' %}"><i class="fa fa-circle-o"></i>测试结果</a></li>
-            <!--<li><a href="{%url 'newsdata'%}"><i class="fa fa-circle-o"></i>数据显示</a></li>-->
+            <li><a href="{%url 'testarticles' %}"><i class="fa fa-circle-o"></i>批量测试</a></li>
+            <li><a href="{%url 'testsingle' %}"><i class="fa fa-circle-o"></i>单例测试</a ></li>
           </ul>
         </li>
         <li>
@@ -60,7 +60,7 @@
           </a>
         </li>
         <li>
-          <a href="pages/widgets.html">
+          <a href="{% url 'introduce'%}">
             <i class="fa fa-book"></i> <span>使用说明</span>
           </a>
         </li>

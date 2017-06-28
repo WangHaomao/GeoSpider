@@ -186,6 +186,15 @@ def test(standard_path, result_path):
     return arr[0], arr[1]
 
 
+def extract_content(html_str):
+    article_temp = extract_content_by_block(html_str)
+    try:
+        article = extract_content_by_tag(html_str, article_temp)
+    except:
+        article = article_temp
+    return article
+
+
 if __name__ == '__main__':
     extract('/home/kui/下载/1_20170614100615_ldaon/正文抽取-源数据', '/home/kui/下载/1_20170614100615_ldaon/compare3')
     # print(get_attr('BASE_DIR'))

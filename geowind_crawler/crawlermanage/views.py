@@ -8,13 +8,14 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 
 from crawlermanage.models import Task, News, Process, Machine, User
-from crawlermanage.utils.acticle_parser import extract, test
+from crawlermanage.utils.acticle_parser import extract, test, readFile, extract_content
 from crawlermanage.utils.echarts import create_chart1, create_chart2
 from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
 from crawlermanage.utils.settings_helper import get_attr
 
 import sys
+
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -43,7 +44,7 @@ def login(request):
         username = request.POST.get('username', '')
         password = request.POST.get('password', '')
         user = User.objects.filter(username=username, password=password)
-        if (username=='admin' and password=='a') or (len(user) !=0):
+        if (username == 'admin' and password == 'a') or (len(user) != 0):
             return HttpResponseRedirect('/crawlermanage/index')
         else:
             return render_to_response('crawlermanage/login.html', {'error': '用户名或密码错误'})
@@ -215,7 +216,7 @@ def layout(request):
         ret = {'status': 'success'}
         return HttpResponse(json.dumps(ret))
     else:
-        return render_to_response('crawlermanage/layout.html', {'ips':ips})
+        return render_to_response('crawlermanage/layout.html', {'ips': ips})
 
 
 '''
@@ -282,6 +283,7 @@ def processlist(request):
     p = paging(list, page, 10)
     return render(request, 'crawlermanage/process_list.html', {'p': p})
 
+
 def machinelist(request):
     page = request.GET.get('page')
     if page == None:
@@ -290,14 +292,20 @@ def machinelist(request):
     p = paging(list, page, 10)
     return render(request, 'crawlermanage/machine_list.html', {'p': p})
 
+
 '''删除ip'''
+
+
 def deleteip(request):
     ip = request.GET.get('ip')
-    if ip!= None:
+    if ip != None:
         Machine.objects.filter(ip=ip).delete()
     return HttpResponseRedirect('/crawlermanage/machinelist')
 
+
 '''增加ip'''
+
+
 def addip(request):
     if request.method == 'POST':
         ip = request.POST.get('ip', '').strip()
@@ -305,17 +313,40 @@ def addip(request):
         if len(machine) == 0:
             machine = Machine(ip=ip)
             machine.save()
-            ret = {"status":"success"}
+            ret = {"status": "success"}
         else:
-            ret = {"status":"error"}
+            ret = {"status": "error"}
         return HttpResponse(json.dumps(ret))
     else:
         ret = {"status": "error"}
         return HttpResponse(json.dumps(ret))
 
+'''数据统计——报表'''
 def charts(request):
     chart1_run, chart1_pause, chart1_wait, chart1_error = create_chart1()
-    chart1 = {'run':chart1_run, 'pause':chart1_pause, 'wait':chart1_wait, 'error':chart1_error}
+    chart1 = {'run': chart1_run, 'pause': chart1_pause, 'wait': chart1_wait, 'error': chart1_error}
     chart2_ecommerce, chart2_news, chart2_blog = create_chart2()
-    chart2 = {'ecommerce':chart2_ecommerce, 'news':chart2_news, 'blog':chart2_blog}
-    return render(request, 'crawlermanage/charts.html', {'chart1':chart1, 'chart2':chart2})
+    chart2 = {'ecommerce': chart2_ecommerce, 'news': chart2_news, 'blog': chart2_blog}
+    return render(request, 'crawlermanage/charts.html', {'chart1': chart1, 'chart2': chart2})
+
+'''单例测试'''
+def testsingle(request):
+    if request.method == 'POST':
+        standard_file = request.POST.get('standard_file', '')
+        test_file = request.POST.get('test_file', '')
+        try:
+            standard = readFile(standard_file)
+            html_str = readFile(test_file)
+            test = extract_content(html_str)
+            ret = {'standard': standard, 'test':test}
+        except:
+            ret = {'error': 'error'}
+        return HttpResponse(json.dumps(ret))
+    else:
+        return render_to_response('crawlermanage/test_single.html')
+
+
+
+'''使用说明'''
+def introduce(request):
+    return render_to_response('crawlermanage/introduce.html')
