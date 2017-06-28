@@ -45,16 +45,22 @@ class Process(Document):
 class Machine(Document):
     ip = StringField(max_length=30, required=True)
 
-class ShopGoods(Document):
+
+class Goods(Document):
     title = StringField(max_length=100,required=True)
     price = StringField(max_length=100,required=True)
-    picture_url = StringField(max_length=100,required=True)
-    goods_url = StringField(max_length=100,required=True)
+    pic_url = StringField(max_length=100,required=True)
+    detail_url = StringField(max_length=100,required=True)
     comments_number = StringField(max_length=10,required=True)
-    comment_degree = StringField(max_length=10,required=True)
+    comment_degree = StringField(max_length=100,required=True)
     comments = ListField()
     description = StringField(max_length=200,required=True)
+    taskid = StringField(max_length=30, required=True)
 
-class ShopStore(Document):
+class Stores(Document):
     name = StringField(max_length=100,required=True)
-    stroe_url = StringField(max_length=100,required=True)
+    store_url = StringField(max_length=100,required=True)
+    description = StringField(max_length=300,required=True)
+    comment_degree = StringField(max_length=10, required=True)
+    taskid = StringField(max_length=30, required=True)
+

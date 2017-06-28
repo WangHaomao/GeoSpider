@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^crawlermanage/charts/$', views.charts, name='charts'),
     url(r'^crawlermanage/testsingle/$', views.testsingle, name='testsingle'),
     url(r'^crawlermanage/introduce/$', views.introduce, name='introduce'),
+    url(r'^crawlermanage/ecommercedata/$', views.ecommercedata, name='ecommercedata'),
 
     # url(r'^crawlermanage/$','crawlermanage.views.login'),
     # url(r'^crawlermanage/login/$','crawlermanage.views.login'),

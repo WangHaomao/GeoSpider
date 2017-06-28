@@ -13,6 +13,7 @@ from geospider.spiders.blog_spider import BlogSpider
 from geospider.spiders.blog_spider_recover import BlogSpiderRecover
 from geospider.spiders.news_spider import NewsSpider
 from geospider.spiders.news_spider_recover import NewsSpiderRecover
+from geospider.spiders.shop_main_spider import ShopMainSpider
 from geospider.utils.mongodb_helper import connect_mongodb, TaskDao, ProcessDao
 from geospider.utils.redis_helper import connect_redis, URLDao
 from geospider.utils.settings_helper import get_attr
@@ -30,28 +31,33 @@ def init(taskid, is_restart):
             temp = deepcopy(NewsSpiderRecover)
         else:
             temp = deepcopy(NewsSpider)
-        temp.name = taskid
-        temp.redis_key = taskid + ":start_urls"
+
     elif "blog" == task['webtype']:
         if is_restart:
             temp = deepcopy(BlogSpiderRecover)
         else:
             temp = deepcopy(BlogSpider)
-        temp.name = taskid
-        temp.redis_key = taskid + ":start_urls"
+    elif "ecommerce" == task['webtype']:
+        temp = deepcopy(ShopMainSpider)
+    temp.name = taskid
+    temp.redis_key = taskid + ":start_urls"
 
     redis = connect_redis()
     url_manager = URLDao(redis)
     allowed_domains = []
-    for url in task['starturls']:
-        url_manager.insert_url(taskid, url)
-        allowed_domains.append(url.split('/')[2])
-    temp.allowed_domains = allowed_domains
+    if task['webtype']=='news' or task['webtype']=='blog':
+        for url in task['starturls']:
+            url_manager.insert_url(taskid, url)
+            allowed_domains.append(url.split('/')[2])
+        temp.allowed_domains = allowed_domains
+    elif task['webtype']=='ecommerce':
+        for url in task['starturls']:
+            url_manager.insert_url(taskid, url)
 
 
 def run(taskid):
-    sys.path.append('/opt/graphite/webapp/')
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "graphite.local_settings")
+    # sys.path.append('/opt/graphite/webapp/')
+    # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "graphite.local_settings")
     cmdline.execute(("scrapy crawl " + taskid).split())
 
 

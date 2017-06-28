@@ -7,7 +7,7 @@ from django import forms
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 
-from crawlermanage.models import Task, News, Process, Machine, User
+from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores
 from crawlermanage.utils.acticle_parser import extract, test, readFile, extract_content
 from crawlermanage.utils.echarts import create_chart1, create_chart2
 from crawlermanage.utils.message import Message
@@ -27,11 +27,6 @@ redis_host = get_attr('REDIS_HOST')
 sub = get_attr('SUBSCRIBE')
 messager = Message(redis_host)
 messager.subscribe(sub)
-
-
-class LoginForm(forms.Form):
-    username = forms.CharField()
-    password = forms.CharField()
 
 
 '''
@@ -350,3 +345,19 @@ def testsingle(request):
 '''使用说明'''
 def introduce(request):
     return render_to_response('crawlermanage/introduce.html')
+
+
+def ecommercedata(request):
+    taskid = request.GET.get('taskid')
+    if taskid != None:
+        goodslist = Goods.objects.filter(taskid=taskid)
+        shoplist = Stores.objects.filter(taskid=taskid)
+    page = request.GET.get('page')
+    page2 = request.GET.get('page2')
+    if page == None:
+        page = 1
+    if page2 == None:
+        page2 = 1
+    p = paging(goodslist, page, 10)
+    p2 = paging(shoplist, page2, 10)
+    return render(request, 'crawlermanage/ecommercedata.html', {'p': p, 'p2': p2})
