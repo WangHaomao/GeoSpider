@@ -187,6 +187,25 @@
                         </div>
                       </td>
                     </tr>
+                  <tr>
+                      <th><label>进程数量</label></th>
+                      <td>
+                        <div class="form-group">
+                          <select class="form-control select2 js-example-basic-single" name="processnum" id="processnum" style="width: 100%;">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
                 </div>
@@ -266,6 +285,7 @@
     webtype = $('#webtype').val()
     reservationtime = $('#reservationtime').val()
     slave = $('#slave').val()
+    processnum = $('#processnum').val()
     if(taskname=='' || starturls=='') {
       alert('请完善信息...')
       return
@@ -279,7 +299,8 @@
       describe:describe,
       webtype:webtype,
       reservationtime:reservationtime,
-      slave:slave
+      slave:slave,
+      processnum:processnum
     }, function(data) {
       if(data!=null){
         if (data['status']=='success') {

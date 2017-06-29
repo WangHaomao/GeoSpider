@@ -18442,3 +18442,26 @@ Traceback (most recent call last):
   File "/Users/haomao/pythonVir/envt1/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
     self._error_message(selector))
 ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-06-28 22:02:27,803 [Thread-4:140224843740928] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/newsdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 158, in newsdetail
+    news = News.objects.get(id=id)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: News matching query does not exist.
+2017-06-28 22:02:53,403 [Thread-13:140224834823936] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/newsdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 158, in newsdetail
+    news = News.objects.get(id=id)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: News matching query does not exist.
+2017-06-29 05:23:11,597 [Thread-3:140698379147008] [django.request:182] [WARNING]- Not Found: /favicon.ico

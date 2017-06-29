@@ -30,6 +30,10 @@ urlpatterns = [
     url(r'^crawlermanage/testsingle/$', views.testsingle, name='testsingle'),
     url(r'^crawlermanage/introduce/$', views.introduce, name='introduce'),
     url(r'^crawlermanage/ecommercedata/$', views.ecommercedata, name='ecommercedata'),
+    url(r'^crawlermanage/blogdata/$', views.blogdata, name='blogdata'),
+    url(r'^crawlermanage/blogdetail/$', views.blogdetail, name='blogdetail'),
+
+
 
     # url(r'^crawlermanage/$','crawlermanage.views.login'),
     # url(r'^crawlermanage/login/$','crawlermanage.views.login'),
