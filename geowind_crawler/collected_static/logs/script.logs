@@ -20524,3 +20524,43 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 203, in __getitem__
     raise AttributeError('Provide a slice or an integer index')
 AttributeError: Provide a slice or an integer index
+2017-06-30 06:23:53,235 [Thread-3:140343107540736] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-06-30 08:37:02,626 [Thread-6:140241923397376] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-06-30 08:44:29,592 [Thread-3:140689660421888] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/taskdetail/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 224, in taskdetail
+    task = Task.objects.get(id=taskid)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 273, in get
+    result = queryset.next()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1547, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1590, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 89, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/transform.py", line 98, in query
+    value = field.prepare_query_value(op, value)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 465, in prepare_query_value
+    return self.to_mongo(value)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 461, in to_mongo
+    self.error(six.text_type(e))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 159, in error
+    raise ValidationError(message, errors=errors, field_name=field_name)
+ValidationError: u'None' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2017-06-30 08:44:30,338 [Thread-4:140689660421888] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-06-30 08:45:36,389 [Thread-38:140689650456320] [django.request:182] [WARNING]- Not Found: /
+2017-06-30 08:45:36,735 [Thread-39:140689438406400] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-06-30 09:30:16,946 [Thread-17:140529098954496] [django.request:182] [WARNING]- Not Found: /
+2017-06-30 09:30:17,220 [Thread-19:140529107347200] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-06-30 09:32:02,038 [Thread-58:140529089251072] [django.request:182] [WARNING]- Not Found: /crawlermanage/introduce/pages/widgets.html
+2017-06-30 10:02:39,165 [Thread-3:140524634560256] [django.request:182] [WARNING]- Not Found: /favicon.ico

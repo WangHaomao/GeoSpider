@@ -20,7 +20,7 @@ class MongoDBPipeline(object):
 
         myitem = deepcopy(item)
         url_key = 'url'
-        if classname == "<class 'geospider.spiders.blog_spider.BlogSpider'>":
+        if classname == "<class 'geospider.spiders.blog_spider.BlogSpider'>" or "<class 'geospider.spiders.blog_spider.BlogSpiderRecover'>":
             self.col='blog'
         elif classname == "<class 'geospider.spiders.blog_spider.NewsSpider'>" or classname=="<class 'geospider.spiders.blog_spider.NewsSpiderRecover'>":
             self.col='news_and_blog'

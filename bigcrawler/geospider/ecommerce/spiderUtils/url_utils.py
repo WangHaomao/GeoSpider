@@ -120,23 +120,14 @@ def urls_clustering(urls):
 
     return clusters
 
+def get_domain(url):
+    domain = url.split('/')[2]
+    if domain.startswith('www'):
+        return get_url_domain(url)
+    return domain
 
 if __name__ == '__main__':
-    # url1 = 'https://list.jd.com/list.html?cat=1713,4855,4859'
-    # url2 = 'https://list.html?cat=1713,4855,4859&page=2&sort=sort_rank_asc&trans=1&JL=6_0_0'
-    #
-    # url3 = 'https://list.html?cat=1713,4855,4859&page=3&sort=sort_rank_asc&trans=1&JL=6_0_0'
-    #
-    # # print url2.replace(url1,'')
-    #
-    # url4 = '/list.html?cat=1713,4855,4859&page=3&sort=sort_rank_asc&trans=1&JL=6_0_0'
-    #
-    # url_list =[
-    #     'http://www.meilishuo.com/search/catalog/10057049?action=clothing&mt=12.14354.r130395.18023&acm=3.mce.2_10_182ya.14354.0.3qAQTqnVhLSOR.m_188509-pos_0&page=3',
-    #     'http://www.meilishuo.com/?acm=3.mce.2_10_182ya.14354.0.3qAQTqnVhLSOR.m_188509-pos_0&mt=12.14354.r130395.18023&action=clothing&page=2&cpc_offset=0',
-    #     'http://www.meilishuo.com/?acm=3.mce.2_10_182ya.14354.0.3qAQTqnVhLSOR.m_188509-pos_0&mt=12.14354.r130395.18023&action=clothing&page=3&cpc_offset=0']
-    # print url_sifter(url1, url4)
-    pass
-
-
+    print(get_partial_url('http://news.qq.com/gsdfgsd/fdsf/sdfsd/sdf'))
+    print(get_url_domain('http://www.people.com.cn/'))
+    print(get_domain('http://www.xinhuanet.com/'))
     # print x.bit_length()

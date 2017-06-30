@@ -9,6 +9,8 @@ import signal
 
 import sys
 from scrapy import cmdline
+
+from geospider.ecommerce.spiderUtils.url_utils import get_domain
 from geospider.spiders.blog_spider import BlogSpider
 from geospider.spiders.blog_spider_recover import BlogSpiderRecover
 from geospider.spiders.news_spider import NewsSpider
@@ -48,7 +50,7 @@ def init(taskid, is_restart):
     if task['webtype']=='news' or task['webtype']=='blog':
         for url in task['starturls']:
             url_manager.insert_url(taskid, url)
-            allowed_domains.append(url.split('/')[2])
+            allowed_domains.append(get_domain(url))
         temp.allowed_domains = allowed_domains
     elif task['webtype']=='ecommerce':
         for url in task['starturls']:
