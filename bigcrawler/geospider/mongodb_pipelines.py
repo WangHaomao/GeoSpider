@@ -5,7 +5,7 @@ from copy import deepcopy
 from scrapy.conf import settings
 from scrapy.exceptions import DropItem
 from scrapy.settings import Settings
-from geospider.items import Goods,Stores
+from geospider.items import Goods,Stores,Ecommerce
 class MongoDBPipeline(object):
     def __init__(self):
         self.url = settings['MONGO_URI']
@@ -24,7 +24,7 @@ class MongoDBPipeline(object):
             self.col='blog'
         elif classname == "<class 'geospider.spiders.blog_spider.NewsSpider'>" or classname=="<class 'geospider.spiders.blog_spider.NewsSpiderRecover'>":
             self.col='news_and_blog'
-        else:
+        elif isinstance(item,Ecommerce):
             myitem = item['goods']
             self.col = 'goods'
             url_key = 'detail_url'

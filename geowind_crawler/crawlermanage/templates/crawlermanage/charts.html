@@ -115,7 +115,7 @@
           <!-- LINE CHART -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Line Chart</h3>
+              <h3 class="box-title">最近一周各类型爬虫任务发布数量统计</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -124,7 +124,7 @@
               </div>
             </div>
             <div class="box-body chart-responsive">
-              <div class="chart" id="chart3" style="height: 300px;">d3.layout.tree</div>
+              <div class="chart" id="chart3" style="height: 300px;"></div>
             </div>
             <!-- /.box-body -->
           </div>
@@ -134,7 +134,7 @@
           <!-- BAR CHART -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Bar Chart</h3>
+              <h3 class="box-title">每台主机运行的任务进程数量雷达图</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -143,7 +143,7 @@
               </div>
             </div>
             <div class="box-body chart-responsive">
-              <div class="chart" id="bar-chart" style="height: 300px;"></div>
+              <div class="chart" id="chart4" style="height: 300px;"></div>
             </div>
             <!-- /.box-body -->
           </div>
@@ -159,7 +159,7 @@
 <script src="../../static/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="../../static/bootstrap/js/bootstrap.min.js"></script>
-<script src="../../static/plugins/echarts/echarts.common.min.js"></script>
+<script src="../../static/plugins/echarts/echarts.min.js"></script>
 <!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
 <!-- AdminLTE App -->
 <script src="../../static/dist/js/app.min.js"></script>
@@ -169,7 +169,8 @@
   $(function() {
     createchart1()
     createchart2()
-    // createchart3()
+    createchart3()
+    createchart4()
   
   })
   function createchart1() {
@@ -302,66 +303,97 @@
         myChart.setOption(option, true);
       }
   }
-  // function createchart3() {
-  //   //图像区域大小
-  //   var R = 600;
 
-  //   //定义一个Tree对象,定义旋转角度和最大半径
-  //   var tree = d3.layout.tree()
-  //       .size([360,R/2-120])
-  //       .separation(function(a,b) { return a.parent == b.parent ? 1 : 2;});
+  function createchart3() {
 
-  //   //定义布局方向
-  //   var diagonal = d3.svg.diagonal()  
-  //       .projection(function(d) { 
-  //           var r = d.y, a = (d.x-90) / 180 * Math.PI;
-  //             return [r * Math.cos(a), r * Math.sin(a)];
-  //    }); 
+    var dom = document.getElementById("chart3");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = {
+        // title: {
+        //     text: 'Step Line'
+        // },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['电商','新闻','博客']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name:'电商',
+                type:'line',
+                step: 'start',
+                data:{{chart3.ecommerce|safe}}
+            },
+            {
+                name:'新闻',
+                type:'line',
+                step: 'middle',
+                data:{{chart3.news|safe}}
+            },
+            {
+                name:'博客',
+                type:'line',
+                step: 'end',
+                data:{{chart3.blog|safe}}
+            }
+        ]
+    };
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+      }
 
-  //   //新建画布，移动到圆心位置
-  //   var svg = d3.select("#chart3").append("svg")
-  //       .attr("width", R)
-  //       .attr("height", R)
-  //       .append("g")
-  //       .attr("transform", function(d){ return "translate("+R/2+"," + R/2 + ")";});
-
-  //       //根据JSON数据生成树
-  //       d3.json({"name":"如何学习D3","children":[{ "name":"预备知识" , "children":[{"name":"HTML & CSS" },{"name":"JavaScript" },{"name":"DOM" },{"name":"SVG" }]},{"name":"安装" , "children":[{"name":"记事本软件","children":[{"name":"Notepad++"},{"name":"EditPlus"},{"name":"Sublime Text"}]},{"name":"服务器软件","children":[{"name":"Apache Http Server"},{"name":"Tomcat"}]},{"name":"下载D3.js"}]}]}, function(error, data) {
-      
-  //     //根据数据生成nodes集合
-  //     var nodes = tree.nodes(data);
-      
-  //     //获取node集合的关系集合
-  //     var links = tree.links(nodes);
-      
-  //     //为关系集合设置贝塞尔曲线连接
-  //     var link=svg.selectAll(".link")
-  //         .data(links)
-  //         .enter()
-  //         .append("path")
-  //         .attr("class", "link")
-  //         .attr("d",diagonal);
-      
-  //     //根据node集合生成节点
-  //     var node = svg.selectAll(".node")
-  //         .data(nodes)
-  //         .enter()
-  //         .append("g")
-  //         .attr("class", "node")
-  //         .attr("transform",function(d){return "rotate(" + (d.x-90) + ")translate(" + d.y + ")"; });
-      
-  //     //为节点添加圆形标记,如果有子节点为红色，否则绿色
-  //     node.append("circle")      
-  //         .attr("fill",function(d){return d.children==null?"#0F0":"#F00";})
-  //         .attr("r", 5);
-      
-  //     //为节点添加说明文字
-  //     node.append("text")
-  //       .attr("dy", ".4em")
-  //       .text(function(d){return d.name;})
-  //       .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
-  //       .attr("transform", function(d) { return d.x < 180 ? "translate(8)" : "rotate(180)translate(-8)"; });
-  //   });    
-  // }
+  }
+  function createchart4() {
+    var dom = document.getElementById("chart4");
+    var myChart = echarts.init(dom);
+    var app = {};
+    option = {
+        // title: {
+        //     text: '基础雷达图'
+        // },
+        tooltip: {},
+        legend: {
+            data: ['任务进程数量']
+        },
+        radar: {
+            // shape: 'circle',
+            indicator: {{chart4_ips|safe}}
+        },
+        series: [{
+            // name: '预算 vs 开销（Budget vs spending）',
+            type: 'radar',
+            // areaStyle: {normal: {}},
+            data : [
+                {
+                    value : {{chart4_processnum|safe}},
+                    name : '任务进程数量'
+                }
+            ]
+        }]
+    };
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+      }
+  }
 </script>
 {% endblock %}

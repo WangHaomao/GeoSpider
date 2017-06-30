@@ -7,9 +7,9 @@ from django import forms
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 
-from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores
+from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores, Blog
 from crawlermanage.utils.acticle_parser import extract, test, readFile, extract_content
-from crawlermanage.utils.echarts import create_chart1, create_chart2
+from crawlermanage.utils.echarts import create_chart1, create_chart2, create_chart3, create_chart4
 from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
 from crawlermanage.utils.settings_helper import get_attr
@@ -181,6 +181,11 @@ def layout(request):
         webtype = request.POST.get('webtype', '')
         reservationtime = request.POST.get('reservationtime', '')
         slave = request.POST.get('slave', '')
+        processnum = request.POST.get('processnum', '')
+        logger.info(processnum)
+        if processnum == '':
+            processnum = 1
+        processnum = int(processnum)
         # logger.info(taskname+" "+starturls+" "+describe+" "+webtype+" "+reservationtime+" "+slave)
         list_url = starturls.split(',')
         # status = ''
@@ -202,7 +207,7 @@ def layout(request):
         slave_list = slave.split(',')
         logger.info(starttime)
         task = Task.objects.create(taskname=taskname, starturls=list_url, starttime=starttime, endtime=endtime,
-                                   webtype=webtype, describe=describe, slave=slave_list, status=status)
+                                   webtype=webtype, describe=describe, slave=slave_list, status=status, processnum=processnum)
         taskid = str(task['id'])
         logger.info(status)
         msg = 'op=starttask&taskid=' + taskid  # + "&status=" + status
@@ -322,7 +327,11 @@ def charts(request):
     chart1 = {'run': chart1_run, 'pause': chart1_pause, 'wait': chart1_wait, 'error': chart1_error}
     chart2_ecommerce, chart2_news, chart2_blog = create_chart2()
     chart2 = {'ecommerce': chart2_ecommerce, 'news': chart2_news, 'blog': chart2_blog}
-    return render(request, 'crawlermanage/charts.html', {'chart1': chart1, 'chart2': chart2})
+    chart3_ecommerce, chart3_news, chart3_blog = create_chart3()
+    chart3 = {'ecommerce':chart3_ecommerce, 'news':chart3_news, 'blog':chart3_blog}
+    chart4_ip, chart4_num = create_chart4()
+    chart4 = {'ips':chart4_ip, 'processnum':chart4_num}
+    return render(request, 'crawlermanage/charts.html', {'chart1': chart1, 'chart2': chart2, 'chart3':chart3, 'chart4_ips':str(chart4['ips']).replace("\"",""),'chart4_processnum':chart4['processnum']})
 
 '''单例测试'''
 def testsingle(request):
@@ -361,3 +370,24 @@ def ecommercedata(request):
     p = paging(goodslist, page, 10)
     p2 = paging(shoplist, page2, 10)
     return render(request, 'crawlermanage/ecommercedata.html', {'p': p, 'p2': p2})
+
+def blogdata(request):
+    taskid = request.GET.get('taskid')
+    list = []
+    if taskid != None:
+        list = Blog.objects.filter(taskid=taskid)
+    page = request.GET.get('page')
+    if page == None:
+        page = 1
+    p = paging(list, page, 10)
+    return render(request, 'crawlermanage/blogdata.html', locals())
+
+
+def blogdetail(request):
+    id = request.GET.get('id')
+    if id == None:
+        return
+    blog = Blog.objects.get(id=id)
+    if blog == None:
+        return
+    return render(request, 'crawlermanage/blogdetail.html', {'blog': blog})

@@ -104,7 +104,6 @@ def scaner():
     print(localhost)
     while (True):
         task_list = taskdao.find_by_localhost_and_status(localhost, 'running')
-        print(task_list)
         for t in task_list:
             starttime = t['starttime']
             endtime = t['endtime']
@@ -118,9 +117,12 @@ def scaner():
                         if p['taskid'] == taskid and p['status'] != 'stopping':
                             print("杀死进程%s" % (p['pid']))
                             # p.terminate()
-                            os.kill(p['pid'], signal.SIGKILL)
-                            delete(taskid, False)
-                            t['status'] = 'stopping'
-                            taskdao.save(t)
+                            try:
+                                os.kill(p['pid'], signal.SIGKILL)
+                            except:
+                                continue
+                    delete(taskid, False)
+                    t['status'] = 'stopping'
+                    taskdao.save(t)
                     processdao.delete_by_localhost_and_taskid(localhost, taskid)
         time.sleep(30)

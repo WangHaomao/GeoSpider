@@ -14,7 +14,7 @@ ITEM_PIPELINES = {
 }
 
 DOWNLOADER_MIDDLEWARES = {
-      'geospider.middlewares.RotateUserAgentMiddleware':123
+      #'geospider.middlewares.RotateUserAgentMiddleware':123
 }
 
 REDIS_HOST = '192.168.1.115'

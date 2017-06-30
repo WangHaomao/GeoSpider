@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 import os
-from multiprocessing import Process,Manager
+from multiprocessing import Process
 import time
 import psutil
 import signal
@@ -20,12 +20,15 @@ class ProcessController(object):
     '''
 
     def start(self, taskid, is_restart):
-        init(taskid, is_restart)
-        p = Process(name=taskid, target=run, args=(taskid,))
-        p.start()
-        print(p.pid)
-        self.processdao.insert_process(self.localhost, p.pid, taskid, 'running')
-        # self.process_list.append(p)
+        processnum = self.taskdao.find_by_id(taskid)['processnum']
+        print(processnum)
+        for i in range(0, processnum):
+            init(taskid, is_restart)
+            p = Process(name=taskid, target=run, args=(taskid,))
+            p.start()
+            print(p.pid)
+            self.processdao.insert_process(self.localhost, p.pid, taskid, 'running')
+            # self.process_list.append(p)
 
     '''
         唤醒一个阻塞的进程，将暂停状态的任务重新启动
@@ -56,7 +59,7 @@ class ProcessController(object):
                     os.kill(p['pid'], signal.SIGKILL)
                 except:
                     continue
-                delete(taskid, True)
+        delete(taskid, True)
         self.processdao.delete_by_localhost_and_taskid(self.localhost, taskid)
 
     '''
@@ -100,11 +103,13 @@ class ProcessController(object):
     '''
 
     def wait(self, taskid, is_restart):
-        init(taskid, is_restart)
-        p = Process(name=taskid, target=wait, args=(taskid,))
-        p.start()
-        print(p.pid)
-        self.processdao.insert_process(self.localhost, p.pid, taskid, 'waitting')
+        processnum = self.taskdao.find_by_id(taskid)['processnum']
+        for i in range(0, processnum):
+            init(taskid, is_restart)
+            p = Process(name=taskid, target=wait, args=(taskid,))
+            p.start()
+            print(p.pid)
+            self.processdao.insert_process(self.localhost, p.pid, taskid, 'waitting')
 
     '''
         扫描所有进程，将到时间的进程杀死
