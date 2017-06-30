@@ -23,8 +23,21 @@ import time
 
 if __name__ == '__main__':
 
-    url = "https://www.taobao.com/"
+    # url = 'https://www.taobao.com/'
+    # url = 'https://www.tmall.com/'
+    # 当当
     # url = "http://www.dangdang.com/"
+    # 唯品会
+    # url = "http://www.vip.com/"
+    # 凡客诚品
+    # url = "http://www.vancl.com/"
+    # 一号店
+    # url = "http://www.yhd.com/"
+    # 亚马逊
+    # url = "https://www.amazon.cn/"
+    # 美丽说
+    url = "http://www.meilishuo.com/"
+    # url = 'http://www.mogujie.com'
     # url = "https://www.jd.com/"
 
     number, mylist = get_nav(url,0)
@@ -53,13 +66,14 @@ if __name__ == '__main__':
 
     res_url_list = []
     if(goal_url_len != -1):
+        print '----------------------------------方法一'
         """
             对url进行一遍简化
         """
         goal_url_spilted = goal_url.split('&')
         key_index = 0
         simple_url = ""
-        # print goal_url_spilted
+        print goal_url_spilted
         while key_index < len(goal_url_spilted):
             if(goal_key in goal_url_spilted[key_index]):
                 # [:]左闭右开
@@ -84,23 +98,27 @@ if __name__ == '__main__':
                 res_url_list.append(item_list_url)
     else:
         # 假设所有url类型都相同，且默认为商品列表页面，进行解析
+        print '----------------------------------方法二'
         for tlist in mylist:
-            # print item_list_url
-            if tlist[1]!= None and tlist[1]!='' and ('list' in tlist[1] or 'search' in tlist[1]):
+            print tlist[1]
+            if (tlist[1]!= None and tlist[1]!='' and ('list' in tlist[1] or 'search' in tlist[1] or 'category' in tlist[1])):
                 res_url_list.append(tlist[1])
+        print len(res_url_list)
 
 
 
 
     if(len(res_url_list)>1):
-
+        print '#########################################'
         pageDict = None
         # test_url = res_url_list[0]
         demo_url = None
+
         for test_url in res_url_list:
 
             page_list = get_next_urlList_by_firstpage_url(test_url)
-
+            # print 'url = %s' % test_url
+            print page_list
             if(page_list == None):continue
 
             pageDict = get_pageKeyDic(page_list)
@@ -121,11 +139,13 @@ if __name__ == '__main__':
         attached_2 = page_list[2].replace(demo_url, '')
 
 
+        print attached_1
+
         for goods_list_url in res_url_list:
             next_url1 =  goods_list_url + attached_1
             next_url2 =  goods_list_url + attached_2
 
-            # print next_url2
+            print next_url2
             allnumber = get_all_page_number(goods_list_url)
             print allnumber
             # next_all_url_list = get_all_page_urls(pageKeyDic,page_list,allnumber)

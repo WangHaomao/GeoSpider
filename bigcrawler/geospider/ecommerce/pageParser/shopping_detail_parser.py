@@ -237,5 +237,11 @@ if __name__ == '__main__':
     url = "http://shop.mogujie.com/detail/18jws1w?acm=3.ms.1_4_18jws1w.43.1185-22922.wGTRPqnDRVaKO.t_0-lc_4&ptp=1.eW5XD._b_4bce2add492e4c56_2.1.DijfM"
     # get_comments(url)
     # get_price(url)
-    get_store(get_soup_by_request(url),url)
-    # get_title(url)
+    # get_store(get_soup_by_request(url),url)
+    get_title(url)
+
+
+
+
+
+

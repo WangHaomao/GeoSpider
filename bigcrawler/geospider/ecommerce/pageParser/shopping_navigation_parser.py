@@ -8,14 +8,15 @@ sys.setdefaultencoding('utf8')
 from geospider.ecommerce.spiderUtils import log_util
 from geospider.ecommerce.spiderUtils.parser_util import get_soup_by_html_source,\
     get_soup_by_selenium_without_script,get_soup_by_request_without_script
-
+import os
 #计算得分
 """
 给出一定的关键词，计算某个组建的关键词得分，得分高的作为navbar，存在一定失败率
 """
 def get_nav_by_keyword_scoring(container,indexURL):
     # featureDict = load_keyword_file('e-commerce.txt')
-    featureDict = load_keyword_file('../e-commerce.txt')
+    FILEPATH = project_dir = os.path.dirname(os.path.abspath(__file__))
+    featureDict = load_keyword_file('%s/../../../e-commerce.txt'%FILEPATH)
     scoreList = []
     javascript_num_list =[]
     index = 0
@@ -108,7 +109,7 @@ def get_allCategory_from_Key(soup):
     keyword = [u"全部商品分类",u"商品分类",u"全部分类",u"分类",]
     for label_i in range(0, 4):
         a_key = soup.find_all(True, text=re.compile(keyword[label_i]))
-        print a_key
+        # print a_key
         # print soup.prettify()
         # print a_key
         for a in a_key:
@@ -185,9 +186,9 @@ def get_categoryList_method_in_index_url(url):
         这里实际上是进入下一页页面，一般写callback
         """
         allCategory_page_url = url_sifter(url, allCategory_page_url)
-        print (allCategory_page_url)
+        # print (allCategory_page_url)
         url_list = category_page_parser(allCategory_page_url)
-        print (len(url_list))
+        # print (len(url_list))
 
     else:
         pass
@@ -196,12 +197,12 @@ def get_categoryList_method_in_index_url(url):
 def get_aTag_url_integration(original_data,domain):
     tmp_soup = get_soup_by_html_source(str(original_data))
     a_list = tmp_soup.find_all("a")
-    print (a_list)
+    # print (a_list)
     a_url_res = []
     for tag in a_list:
         a_url_res.append([tag.text,url_sifter(domain,tag.get("href"))])
 
-    print (a_url_res)
+    # print (a_url_res)
     return a_url_res
 
 """
@@ -242,7 +243,7 @@ def get_nav_in_url(soup, url,parser_method):
         if nav == None:
             return -1, None
         else:
-            print ("解析方法：%d,%d"%(parser_method,way_number))
+            # print ("解析方法：%d,%d"%(parser_method,way_number))
             return way_number, get_aTag_url_integration(nav, url)
 
 """
@@ -322,8 +323,9 @@ if __name__ == '__main__':
     # 美丽说
     # url = "http://www.meilishuo.com/"
 
-    url = "https://www.jd.com/"
-
+    # url = "https://www.jd.com/"
+    # url = 'http://www.meilishuo.com/'
+    url = 'http://www.mogujie.com'
     method,mylist = get_nav(url,0)
 
     # print (number)

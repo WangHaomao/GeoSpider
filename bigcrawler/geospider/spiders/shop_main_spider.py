@@ -98,7 +98,8 @@ class ShopMainSpider(RedisSpider):
             # 假设所有url类型都相同，且默认为商品列表页面，进行解析
             for tlist in mylist:
                 # print item_list_url
-                if tlist[1] != None and tlist[1] != '' and ('list' in tlist[1] or 'search' in tlist[1]):
+                if (tlist[1] != None and tlist[1] != '' and (
+                            'list' in tlist[1] or 'search' in tlist[1] or 'category' in tlist[1])):
                     res_url_list.append(tlist[1])
 
         if (len(res_url_list) > 1):

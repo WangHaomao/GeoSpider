@@ -185,7 +185,7 @@ def get_next_urlList_by_firstpage_url(url):
                             number_to_url_dic['attrs_dic3'] = descendant.attrs
                             is_find_page3_url = True
                             # print (elem.get("href"))
-                            # print ("-----------------------------")
+                            print ("-----------------------------")
 
                 find_parent_times += 1
 
@@ -201,14 +201,17 @@ def get_next_urlList_by_firstpage_url(url):
         if(url_2.lower() == url_3.lower()):
             url_2 = get_url_by_attrs_dic(driver, number_to_url_dic["attrs_dic2"])
             url_3 = get_url_by_attrs_dic(driver, number_to_url_dic["attrs_dic3"])
+
+            print "debug:%s"%url_2
+
             # 出现解析问题，这个url可以跳过
             if (url_2.lower() == url_3.lower()):
                 return None
 
-            page_url_list = [url, url_2, url_3]
+            page_url_list = [url, url_sifter(url,url_2), url_sifter(url,url_3)]
             break
         else:
-            page_url_list = [url, url_2, url_3]
+            page_url_list = [url, url_sifter(url,url_2), url_sifter(url,url_3)]
             break
             # break
 
@@ -264,14 +267,6 @@ def get_pageKeyDic(page_urls):
 
     """-------------------------返回值-----------------------------"""
     pageKeyDic = {}
-    # try:
-    #     re_str = "\?\w+=%s|&\w+=%s|/\w+=%s"%(searchKeyword,searchKeyword,searchKeyword)
-    #     print (re_str)
-    #     print (url_2)
-    #     searchKeywordKey = re.findall(re_str,url_2)[0].split("=")[0][1:]
-    #
-    # except:
-    #     searchKeywordKey = "SEARCHKEYERROR"
 
     """-----------------------------------------------------------"""
 
@@ -326,6 +321,83 @@ def get_pageKeyDic(page_urls):
 
     # return pageKeyDic,searchKeywordKey
     return pageKeyDic
+
+"""
+get_pageKeyDic_method_2
+应对翻页信息重新优化
+返回值类型：dict
+
+直接替换，例如
+http://category.dangdang.com/pg2-cp01.05.12.00.00.00.html
+http://category.dangdang.com/pg3-cp01.05.12.00.00.00.html
+
+其中pg3就是翻页信息，我们将原字符串url先用/分割，寻找url2,url3异同的地方
+
+a-s1-v4-p4-price-d0-f0-m1-rt0-pid-mid0-k零食/
+a-s1-v4-p4-price-d0-f0-m1-rt0-pid-mid0-k%E4%BC%91%E9%97%B2%E9%9B%B6%E9%A3%9F/
+
+例如：
+http://search.jumei.com/?filter=0-11-1&search=%E9%9D%A2%E8%86%9C
+返回{'filter': ['0-11-2', {2: 1}]},'search'
+               value[0]  value[1]
+       key          value
+"""
+
+def _get_unsame_partstr(list1,list2):
+    list_len = len(list1)
+    for index in  range(list_len):
+        if(list1[index] != list2[index]):
+            return list1[index] , list2[index]
+
+    return None,None
+
+def get_pageKeyDic_method_2(page_urls):
+    url_2 = page_urls[1]
+    url_3 = page_urls[2]
+    # 获取倒数第二个元素
+    url_2_pieces = str(url_2).split("/")
+    url_3_pieces = str(url_3).split("/")
+    pieces_2_len = len(url_2_pieces)
+    pieces_3_len = len(url_3_pieces)
+
+    """-------------------------返回值-----------------------------"""
+    pageKeyDic = {}
+
+    """-----------------------------------------------------------"""
+
+    if pieces_2_len != pieces_3_len:
+        raise Exception("解析分页URL碎片时，第二页和第一页URL参数不相等")
+
+
+
+
+
+    segment_str_2 ,segment_str_3 = _get_unsame_partstr(url_2_pieces,url_3_pieces)
+    segment_str_2_splited = segment_str_2.split('-')
+    segment_str_3_splited = segment_str_3.split('-')
+
+    res_unsame_2 ,res_unsame_3  = _get_unsame_partstr(segment_str_2_splited,segment_str_3_splited)
+
+    if(res_unsame_2.isdigit()):
+        pass
+    else:
+        index  = 0
+        res_unsmae_len = len(res_unsame_2)
+
+        while(index < res_unsmae_len):
+            if(res_unsame_2[index].isdigit()):
+
+                print res_unsame_2[0:index]
+                print res_unsame_2[index:]
+
+                print res_unsame_3[index:]
+            index+=1
+    # return pageKeyDic,searchKeywordKey
+    return pageKeyDic
+
+
+
+
 
 # 必须是第二页之后,返回下一页的url
 def get_next_page_by_pageKeyDic_pageUrls_currentPageUrl(pageKeyDic,page_urls,current_page_url):
@@ -464,23 +536,18 @@ if __name__ == '__main__':
     # res = get_all_page_urls({'s': ['60', 60]},[u'https://s.taobao.com/list?q=%E7%BE%BD%E7%BB%92%E6%9C%8D',
     #  u'https://s.taobao.com/list?q=%E7%BE%BD%E7%BB%92%E6%9C%8D&bcoffset=12&s=60',
     #  u'https://s.taobao.com/list?q=%E7%BE%BD%E7%BB%92%E6%9C%8D&bcoffset=12&s=120'],100)
-    res = get_all_page_urls({'s': ['60', 60]}, [u'https://s.taobao.com/list?q=手机',
-                                                u'https://s.taobao.com/list?q=手机&bcoffset=12&s=60',
-                                                u'https://s.taobao.com/list?q=手机&bcoffset=12&s=120'],
-                            100)
-    for x in res:
-        print str(x)
+    # res = get_all_page_urls({'s': ['60', 60]}, [u'https://s.taobao.com/list?q=手机',
+    #                                             u'https://s.taobao.com/list?q=手机&bcoffset=12&s=60',
+    #                                             u'https://s.taobao.com/list?q=手机&bcoffset=12&s=120'],
+    #                         100)
+    # for x in res:
+    #     print str(x)
+    # url = 'https://list.jd.com/list.html?cat=1713,4855,4859'
+    # page_list =  get_next_urlList_by_firstpage_url(url)
+    # print page_list
+    # print get_pageKeyDic(page_list)
 
+    page_list = ['http://search.yhd.com/c0-0-0/b/a-s1-v4-p2-price-d0-f0-m1-rt0-pid-mid0-k%E9%9B%B6%E9%A3%9F/','http://search.yhd.com/c0-0-0/b/a-s1-v4-p2-price-d0-f0-m1-rt0-pid-mid0-k%E9%9B%B6%E9%A3%9F/','http://search.yhd.com/c0-0-0/b/a-s1-v4-p3-price-d0-f0-m1-rt0-pid-mid0-k%E4%BC%91%E9%97%B2%E9%9B%B6%E9%A3%9F/?cp=0']
+    get_pageKeyDic_method_2(page_list)
 
-
-    # print get_all_page_number(url)
-    # for x in url_list:
-    #     print get_url_domain(x)
-
-    # pages_analysis(['http://search.jumei.com/?filter=0-11-1&search=%E9%9D%A2%E8%86%9C&from=search_toplist_%E9%9D%A2%E8%86%9C_word_pos_3&cat=', 'http://search.jumei.com/?filter=0-11-2&search=%E9%9D%A2%E8%86%9C&bid=4', 'http://search.jumei.com/?filter=0-11-3&search=%E9%9D%A2%E8%86%9C&bid=4'])
-
-        # url_2_splited = str(url_2).strip("?")[1].split("&")
-        # print url_2_splited
-
-    # print (get_next_urlList_by_firstpage_url(url_list[4]))
     print (ctime())

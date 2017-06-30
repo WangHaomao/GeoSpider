@@ -17,17 +17,17 @@ DOWNLOADER_MIDDLEWARES = {
       'geospider.middlewares.RotateUserAgentMiddleware':123
 }
 
-REDIS_HOST = '192.168.1.108'
+REDIS_HOST = '192.168.1.115'
 REDIS_PORT = 6379
 SUBSCRIBE = 'crawler'
 
-LOCAL_HOST = '192.168.1.108'
+LOCAL_HOST = '192.168.1.115'
 
 # STATS_CLASS = 'scrapygraphite.GraphiteStatsCollector'
 STATS_CLASS = 'geospider.statscol.graphite.RedisGraphiteStatsCollector'
 GRAPHITE_HOST = '123.207.230.48'
 GRAPHITE_PORT = 2003
-MONGO_URI = 'mongodb://192.168.1.108/'
+MONGO_URI = 'mongodb://192.168.1.115/'
 MONGO_DATABASE = 'geospider'
 MONGO_COLLECTION = 'news'
 ROBOTSTXT_OBEY = False

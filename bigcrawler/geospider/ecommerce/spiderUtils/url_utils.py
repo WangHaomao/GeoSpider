@@ -7,6 +7,55 @@ from cluster import HierarchicalClustering
 # class URLUtils:
     # def __init__(self):
     #     pass
+"""
+原始的url_sifter，做备份
+"""
+# def url_sifter(parent_url, url):
+#     # print parent_url
+#     # print url
+#     if url is None or len(url) == 0:
+#         return None
+#
+#     cu_url = str(url)
+#     cuURL_len = len(cu_url)
+#     pa_url = str(parent_url)
+#     paURL_len = len(pa_url)
+#     #  去除双引号
+#     cu_url   = cu_url.replace('"',"")
+#     #  去掉开头的／或//
+#     if (cu_url.startswith("/")):
+#         if (cu_url.startswith("//")):
+#             index = 2
+#             for ind in range(2, cuURL_len):
+#                 if (cu_url[ind] is not '/'):
+#                     index = ind
+#                     break
+#
+#             cu_url = cu_url[index:cuURL_len]
+#         else:
+#             cu_url = cu_url[1:cuURL_len]
+#
+#     pa_part = pa_url.split('.')
+#     part_len = len(pa_part)
+#     domain = ""
+#     if part_len == 2:
+#         domain = pa_part[0]
+#     elif part_len == 3:
+#         domain = pa_part[1]
+#     # domain = get_url_domain(pa_url)
+#     # print domain
+#     if domain not in cu_url:
+#         print '6666'
+#         cu_url = pa_url + ('' if pa_url[paURL_len - 1] == '/' else '/') + cu_url
+#
+#     if "https://" not in cu_url and "http://" not in cu_url:
+#         http_str_header = pa_url.split("//")
+#         cu_url = http_str_header[0] + "//" + cu_url
+#
+#     return cu_url
+
+
+
 
 #通过上下文信息，拼接一些非法的url,例如//xxx.com等等
 # "xxxx"
@@ -35,16 +84,12 @@ def url_sifter(parent_url, url):
         else:
             cu_url = cu_url[1:cuURL_len]
 
-    pa_part = pa_url.split('.')
-    part_len = len(pa_part)
-    domain = ""
-    if part_len == 2:
-        domain = pa_part[0]
-    elif part_len == 3:
-        domain = pa_part[1]
 
+    domain = get_url_domain(pa_url)
+    # print domain
     if domain not in cu_url:
-        cu_url = pa_url + ('' if pa_url[paURL_len - 1] == '/' else '/') + cu_url
+        pre_url  =  get_partial_url(pa_url)
+        cu_url = pre_url + ('' if pa_url[paURL_len - 1] == '/' else '/') + cu_url
 
     if "https://" not in cu_url and "http://" not in cu_url:
         http_str_header = pa_url.split("//")
@@ -77,5 +122,21 @@ def urls_clustering(urls):
 
 
 if __name__ == '__main__':
-    print (url_sifter("https://www.taobao.com/","//www.taobao.com/tbhome/page/market-list"))
-    print (get_partial_url("https://www.taobao.com/jj.ww"))
+    # url1 = 'https://list.jd.com/list.html?cat=1713,4855,4859'
+    # url2 = 'https://list.html?cat=1713,4855,4859&page=2&sort=sort_rank_asc&trans=1&JL=6_0_0'
+    #
+    # url3 = 'https://list.html?cat=1713,4855,4859&page=3&sort=sort_rank_asc&trans=1&JL=6_0_0'
+    #
+    # # print url2.replace(url1,'')
+    #
+    # url4 = '/list.html?cat=1713,4855,4859&page=3&sort=sort_rank_asc&trans=1&JL=6_0_0'
+    #
+    # url_list =[
+    #     'http://www.meilishuo.com/search/catalog/10057049?action=clothing&mt=12.14354.r130395.18023&acm=3.mce.2_10_182ya.14354.0.3qAQTqnVhLSOR.m_188509-pos_0&page=3',
+    #     'http://www.meilishuo.com/?acm=3.mce.2_10_182ya.14354.0.3qAQTqnVhLSOR.m_188509-pos_0&mt=12.14354.r130395.18023&action=clothing&page=2&cpc_offset=0',
+    #     'http://www.meilishuo.com/?acm=3.mce.2_10_182ya.14354.0.3qAQTqnVhLSOR.m_188509-pos_0&mt=12.14354.r130395.18023&action=clothing&page=3&cpc_offset=0']
+    # print url_sifter(url1, url4)
+    pass
+
+
+    # print x.bit_length()

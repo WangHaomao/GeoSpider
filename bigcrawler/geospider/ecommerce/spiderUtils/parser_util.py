@@ -62,8 +62,8 @@ def get_soup_by_selenium_with_sleep(url):
     # driver = webdriver.PhantomJS()
     dcap = dict(DesiredCapabilities.PHANTOMJS)
     dcap["phantomjs.page.settings.userAgent"] = (random.choice(user_agent_list))
-    driver = webdriver.PhantomJS(desired_capabilities=dcap,executable_path="/usr/local/bin/phantomjs")
-
+    # driver = webdriver.PhantomJS(desired_capabilities=dcap,executable_path="/usr/local/bin/phantomjs")
+    driver = webdriver.PhantomJS(desired_capabilities=dcap)
     driver.get(url)
     time.sleep(5)
     soup = BeautifulSoup(driver.page_source, "lxml")
@@ -81,7 +81,8 @@ def get_soup_by_selenium(url):
     return soup
 
 def get_soup_by_selenium_without_script(url):
-    driver = webdriver.PhantomJS('/usr/local/bin/phantomjs')
+    # driver = webdriver.PhantomJS('/usr/local/bin/phantomjs')
+    driver = webdriver.PhantomJS()
     driver.get(url)
 
     soup = BeautifulSoup(driver.page_source, "lxml")
@@ -133,7 +134,8 @@ def get_xpath_doc_by_request_by_html_source(html_source):
 def get_webdriver():
     dcap = dict(DesiredCapabilities.PHANTOMJS)
     dcap["phantomjs.page.settings.userAgent"] = (random.choice(user_agent_list))
-    driver = webdriver.PhantomJS(desired_capabilities=dcap,executable_path="/usr/local/bin/phantomjs")
+    # driver = webdriver.PhantomJS(desired_capabilities=dcap,executable_path="/usr/local/bin/phantomjs")
+    driver = webdriver.PhantomJS(desired_capabilities=dcap)
     # 设置时长
     driver.set_page_load_timeout(120)
     driver.set_script_timeout(120)
