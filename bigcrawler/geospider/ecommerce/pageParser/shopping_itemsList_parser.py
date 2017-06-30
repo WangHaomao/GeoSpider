@@ -394,11 +394,12 @@ if __name__ == '__main__':
     # goods_list_tag = get_goods_list_tag_from_soup(soup)
     # goods_list_method_selector(url)
 
-    url = "https://s.taobao.com/list?q=%E7%BE%BD%E7%BB%92%E6%9C%8D&bcoffset=12&s=4560"
+    # url = "https://s.taobao.com/list?q=%E7%BE%BD%E7%BB%92%E6%9C%8D&bcoffset=12&s=4560"
     # url = "https://s.taobao.com/list?q=%E6%8B%BE%E8%B4%A7"
+    url = 'http://www.meilishuo.com/search/catalog/10057053?action=bags&mt=12.14354.r130506.18023&acm=3.mce.2_10_182yi.14354.0.2PccHqnV8sR9h.m_188513-pos_4?acm=3.mce.2_10_182ya.14354.0.2PccHqnV8sR9h.m_188509-pos_0&mt=12.14354.r130395.18023&action=clothing&page=94&cpc_offset=0'
     #
     soup = get_soup_by_request(url)
-    print analysis_json_data(url,soup)
+    print analysis_by_tag(get_goods_list_tag_by_soup(soup),url)
 
     # goods_list_tag = analysis_by_tag(get_goods_list_tag_by_soup(get_soup_by_request(url)), url)
 
