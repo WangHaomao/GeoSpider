@@ -32,7 +32,9 @@ urlpatterns = [
     url(r'^crawlermanage/ecommercedata/$', views.ecommercedata, name='ecommercedata'),
     url(r'^crawlermanage/blogdata/$', views.blogdata, name='blogdata'),
     url(r'^crawlermanage/blogdetail/$', views.blogdetail, name='blogdetail'),
-
+    url(r'^crawlermanage/extractsinger/$', views.extractsinger, name='extractsinger'),
+    url(r'^crawlermanage/extractmultiple/$', views.extractmultiple, name='extractmultiple'),
+    url(r'^crawlermanage/temparticle/$', views.temparticle, name='temparticle'),
 
 
     # url(r'^crawlermanage/$','crawlermanage.views.login'),

@@ -5,7 +5,7 @@ import time
 
 import logging
 
-from crawlermanage.utils.acticle_parser import extract
+from crawlermanage.utils.article_parser import extract
 logger = logging.getLogger('crawlermanage.util.thread')
 
 class ExtractArticle(threading.Thread): #The timer class is derived from the class threading.Thread

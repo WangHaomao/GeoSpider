@@ -3,12 +3,11 @@ import json
 import logging
 import time
 
-from django import forms
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 
-from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores, Blog
-from crawlermanage.utils.acticle_parser import extract, test, readFile, extract_content
+from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores, Blog, TempArticle
+from crawlermanage.utils.article_parser import extract, test, readFile, extract_content, get_article_data
 from crawlermanage.utils.echarts import create_chart1, create_chart2, create_chart3, create_chart4
 from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
@@ -27,7 +26,6 @@ redis_host = get_attr('REDIS_HOST')
 sub = get_attr('SUBSCRIBE')
 messager = Message(redis_host)
 messager.subscribe(sub)
-
 
 '''
     登录
@@ -167,12 +165,6 @@ def newsdetail(request):
 
 
 def layout(request):
-    # taskname:taskname,
-    # starturls:starturls,
-    # describe:describe,
-    # webtype:webtype,
-    # reservationtime:reservationtime,
-    # slave:slave
     ips = Machine.objects.all()
     if request.method == 'POST':
         taskname = request.POST.get('taskname', '')
@@ -207,7 +199,8 @@ def layout(request):
         slave_list = slave.split(',')
         logger.info(starttime)
         task = Task.objects.create(taskname=taskname, starturls=list_url, starttime=starttime, endtime=endtime,
-                                   webtype=webtype, describe=describe, slave=slave_list, status=status, processnum=processnum)
+                                   webtype=webtype, describe=describe, slave=slave_list, status=status,
+                                   processnum=processnum)
         taskid = str(task['id'])
         logger.info(status)
         msg = 'op=starttask&taskid=' + taskid  # + "&status=" + status
@@ -321,19 +314,27 @@ def addip(request):
         ret = {"status": "error"}
         return HttpResponse(json.dumps(ret))
 
+
 '''数据统计——报表'''
+
+
 def charts(request):
     chart1_run, chart1_pause, chart1_wait, chart1_error = create_chart1()
     chart1 = {'run': chart1_run, 'pause': chart1_pause, 'wait': chart1_wait, 'error': chart1_error}
     chart2_ecommerce, chart2_news, chart2_blog = create_chart2()
     chart2 = {'ecommerce': chart2_ecommerce, 'news': chart2_news, 'blog': chart2_blog}
     chart3_ecommerce, chart3_news, chart3_blog = create_chart3()
-    chart3 = {'ecommerce':chart3_ecommerce, 'news':chart3_news, 'blog':chart3_blog}
+    chart3 = {'ecommerce': chart3_ecommerce, 'news': chart3_news, 'blog': chart3_blog}
     chart4_ip, chart4_num = create_chart4()
-    chart4 = {'ips':chart4_ip, 'processnum':chart4_num}
-    return render(request, 'crawlermanage/charts.html', {'chart1': chart1, 'chart2': chart2, 'chart3':chart3, 'chart4_ips':str(chart4['ips']).replace("\"",""),'chart4_processnum':chart4['processnum']})
+    chart4 = {'ips': chart4_ip, 'processnum': chart4_num}
+    return render(request, 'crawlermanage/charts.html', {'chart1': chart1, 'chart2': chart2, 'chart3': chart3,
+                                                         'chart4_ips': str(chart4['ips']).replace("\"", ""),
+                                                         'chart4_processnum': chart4['processnum']})
+
 
 '''单例测试'''
+
+
 def testsingle(request):
     if request.method == 'POST':
         standard_file = request.POST.get('standard_file', '')
@@ -342,7 +343,7 @@ def testsingle(request):
             standard = readFile(standard_file)
             html_str = readFile(test_file)
             test = extract_content(html_str)
-            ret = {'standard': standard, 'test':test}
+            ret = {'standard': standard, 'test': test}
         except:
             ret = {'error': 'error'}
         return HttpResponse(json.dumps(ret))
@@ -350,8 +351,9 @@ def testsingle(request):
         return render_to_response('crawlermanage/test_single.html')
 
 
-
 '''使用说明'''
+
+
 def introduce(request):
     return render_to_response('crawlermanage/introduce.html')
 
@@ -370,6 +372,7 @@ def ecommercedata(request):
     p = paging(goodslist, page, 10)
     p2 = paging(shoplist, page2, 10)
     return render(request, 'crawlermanage/ecommercedata.html', {'p': p, 'p2': p2})
+
 
 def blogdata(request):
     taskid = request.GET.get('taskid')
@@ -391,3 +394,40 @@ def blogdetail(request):
     if blog == None:
         return
     return render(request, 'crawlermanage/blogdetail.html', {'blog': blog})
+
+
+def extractsinger(request):
+    if request.method == 'POST':
+        test_url = request.POST.get('test_url', '')
+        title, atime, keywords, content = get_article_data(test_url)
+        ret = {'title': title, 'time': atime, 'keywords': keywords, 'content': content}
+        return HttpResponse(json.dumps(ret))
+    return render_to_response('crawlermanage/extract_singer.html')
+
+
+def extractmultiple(request):
+    if request.method == 'POST':
+        starturls = request.POST.get('starturls', '')
+        webtype = request.POST.get('webtype', '')
+        list_url = starturls.split(',')
+        if webtype == 'article':
+            TempArticle.objects.delete()
+            list_id = []
+            for url in list_url:
+                url = str(url)
+                title, atime, keywords, content = get_article_data(url)
+                temp_article = TempArticle.objects.create(url=url, title=title, time=atime, keywords=keywords,
+                                                          article=content)
+                list_id.append(str(temp_article['id']))
+            ret = {'webtype': webtype, 'urls': list_url, 'ids': (list_id)}
+            return HttpResponse(json.dumps(ret))
+        else:
+            return render_to_response('crawlermanage/extract_multiple.html')
+    else:
+        return render_to_response('crawlermanage/extract_multiple.html')
+
+
+def temparticle(request):
+    id = request.GET.get('id', '')
+    news = TempArticle.objects.get(id=id)
+    return render(request, 'crawlermanage/newsdetail.html', {'news': news})

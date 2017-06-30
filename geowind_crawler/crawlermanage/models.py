@@ -1,8 +1,7 @@
 import datetime
 
 import mongoengine
-from django.db import models
-from mongoengine import Document, StringField, DateTimeField, connect, ListField
+from mongoengine import Document, StringField, ListField
 
 # Create your models here.
 
@@ -65,3 +64,9 @@ class Stores(Document):
     comment_degree = StringField(max_length=10, required=True)
     taskid = StringField(max_length=30, required=True)
 
+class TempArticle(Document):
+    url = StringField(max_length=200, required=True)
+    title = StringField(max_length=100)
+    time = StringField(max_length=20)
+    keywords = StringField(max_length=100)
+    article = StringField(max_length=50000)

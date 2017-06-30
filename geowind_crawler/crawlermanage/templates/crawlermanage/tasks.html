@@ -43,6 +43,18 @@
             <i class="fa fa-book"></i> <span>进程管理</span>
           </a>
         </li>
+          <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>自动结构化</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{%url 'extractsinger' %}"><i class="fa fa-circle-o"></i>正文抽取</a></li>
+            <li><a href="{%url 'extractmultiple' %}"><i class="fa fa-circle-o"></i>批量抽取</a></li>
+          </ul>
+        </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>正文测试</span>
@@ -119,13 +131,12 @@
                             <thead>
                               <tr>
                                 <th>ID</th>
-        				                <th>启动时间</th>
-        				                <th>任务名</th>
-        				                <th>网站类型</th>
-                                  <th>进程数量</th>
+                                <th>启动时间</th>
+                                <th>任务名</th>
+                                <th>网站类型</th>
+                                <th>进程数量</th>
                                 <th>爬虫状态</th>
-        				                <!--<th>描述</th>-->
-        				                <th>操作</th>
+                                <th>操作</th>
                               </tr>
                             </thead>
                             <tbody>

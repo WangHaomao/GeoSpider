@@ -43,6 +43,18 @@
         </li>
         <li class="treeview">
           <a href="#">
+            <i class="fa fa-dashboard"></i> <span>自动结构化</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{%url 'extractsinger' %}"><i class="fa fa-circle-o"></i>正文抽取</a></li>
+            <li><a href="{%url 'extractmultiple' %}"><i class="fa fa-circle-o"></i>批量抽取</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
             <i class="fa fa-dashboard"></i> <span>正文测试</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
