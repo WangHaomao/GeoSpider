@@ -4,7 +4,7 @@ import os
 import redis
 
 
-class MessageListener(object):
+class Messager(object):
     channels = []
 
     def __init__(self, host):
@@ -19,3 +19,15 @@ class MessageListener(object):
         for item in self.ps.listen():
             if item['type'] == 'message':
                 return item['data']
+
+    def publish(self, subscriber, message):
+        self.rc.publish(subscriber, message)
+
+
+# if __name__ == '__main__':
+#     listener = Messager('127.0.0.1')
+#     listener.subscribe('crawler')
+#     msg = listener.listen()
+#     print(msg)
+#     if msg =='is_start':
+#         listener.publish('crawler', 'master:is_start')

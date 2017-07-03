@@ -87,6 +87,73 @@
       </ul>
 {% endblock %}
 {% block maincontent %}
+
+
+<!--<div class="box">-->
+
+    <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+
+            <span class="info-box-icon bg-green"><i class="fa fa-play"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">运行</span>
+              <span class="info-box-number">{{running_count}}</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-aqua"><i class="fa fa-pause"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">暂停</span>
+              <span class="info-box-number">{{pausing_count}}</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+
+        <!-- fix for small devices only -->
+        <div class="clearfix visible-sm-block"></div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-stop"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">停止</span>
+              <span class="info-box-number">{{stopping_count}}</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+
+            <span class="info-box-icon bg-red"><i class="fa fa-warning"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">故障</span>
+              <span class="info-box-number">{{error_count}}</span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+      </div>
+
+
+
+<!--</div>-->
+
+
+
 <div>
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
@@ -95,9 +162,11 @@
             </ul>
             <div class="tab-content">
               <div class="active tab-pane" id="current_tasks">
-              	<div class="row">
+
+
+                  <div class="row">
 			            <div class="col-xs-12">
-			              <div class="box">
+			              <div class="box" style="border-top:0px;">
 			                <!-- <div class="box-header">
 			                  <h3 class="box-title">Responsive Hover Table</h3>
 			                </div> -->
@@ -162,7 +231,7 @@
                                     </span>
                                     {%endifequal%}
                                     {% ifequal i.status 'pausing'  %}
-                                     <span id="span_{{i.id}}" class="label label-warning" >
+                                     <span id="span_{{i.id}}" class="label label-primary" >
                                         <a href="#" id="status_{{i.id}}" class="editable editable-click" onclick="changeStatus('{{i.id}}', 'pausing')" style="color: white; text-decoration: none">暂停</a>
                                      </span>
                                     {%endifequal%}
@@ -226,7 +295,7 @@
               <div class="tab-pane" id="history_tasks">
                 <div class="row">
                   <div class="col-xs-12">
-                    <div class="box">
+                    <div class="box" style="border-top:0px;">
                       <!-- <div class="box-header">
                         <h3 class="box-title">Responsive Hover Table</h3>
                       </div> -->
@@ -264,7 +333,7 @@
                                   <td>{{i.processnum}}</td>
                                 <td>
                                     {% ifequal i.status 'stopping' %}
-                                    <span id="span_{{i.id}}" class="label label-danger" >
+                                    <span id="span_{{i.id}}" class="label label-warning" >
                                         <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">停止</a>
                                     </span>
                                     {% endifequal %}
@@ -384,10 +453,10 @@
               $('#span_'+id).attr("class","label label-success")
 
             }else if(value=='pausing'){
-              $('#span_'+id).attr("class","label label-warning")
+              $('#span_'+id).attr("class","label label-primary")
 
             }else if(value=='stopping'){
-              $('#span_'+id).attr("class","label label-primary")
+              $('#span_'+id).attr("class","label label-warning")
 
             }else{
               return '不能为空';

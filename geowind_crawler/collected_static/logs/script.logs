@@ -20564,3 +20564,1191 @@ ValidationError: u'None' is not a valid ObjectId, it must be a 12-byte input or 
 2017-06-30 09:30:17,220 [Thread-19:140529107347200] [django.request:182] [WARNING]- Not Found: /favicon.ico
 2017-06-30 09:32:02,038 [Thread-58:140529089251072] [django.request:182] [WARNING]- Not Found: /crawlermanage/introduce/pages/widgets.html
 2017-06-30 10:02:39,165 [Thread-3:140524634560256] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-07-02 13:40:20,267 [Thread-4:139951500945152] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-07-02 14:38:16,312 [Thread-25:139736846849792] [django.request:182] [WARNING]- Not Found: /crawlermanage/taskdetail/192.168.1.115
+2017-07-02 14:52:29,924 [Thread-2:139781052823296] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 194, in layout
+    list_url = list(filter(not_empty, urls.split('/')))
+AttributeError: 'list' object has no attribute 'split'
+2017-07-02 14:52:35,483 [Thread-3:139781052823296] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 194, in layout
+    list_url = list(filter(not_empty, urls.split('/')))
+AttributeError: 'list' object has no attribute 'split'
+2017-07-02 14:53:45,800 [Thread-2:140667534165760] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 194, in layout
+    list_url = list(filter(not_empty, urls.split('/')))
+AttributeError: 'list' object has no attribute 'split'
+2017-07-02 14:54:43,079 [Thread-3:140667534165760] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 194, in layout
+    # list_url = list(filter(not_empty, urls.split('/')))
+AttributeError: 'list' object has no attribute 'split'
+2017-07-03 00:24:43,940 [Thread-4:139865725875968] [django.request:182] [WARNING]- Not Found: /
+2017-07-03 00:25:02,737 [Thread-7:139865725875968] [django.request:182] [WARNING]- Not Found: /
+2017-07-03 00:37:24,847 [Thread-12:139865691256576] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:37:38,842 [Thread-15:139865708041984] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:37:56,350 [Thread-18:139865716434688] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:37:56,866 [Thread-19:139865699649280] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:37:57,373 [Thread-20:139865341556480] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:37:57,877 [Thread-21:139865333163776] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:37:58,378 [Thread-22:139865324771072] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:24,915 [Thread-23:139865316378368] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:26,920 [Thread-24:139865307985664] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:44,949 [Thread-26:139865291200256] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:45,893 [Thread-27:139864938903296] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:46,401 [Thread-28:139864930510592] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:46,925 [Thread-29:139864922117888] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:47,398 [Thread-30:139864913725184] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:47,916 [Thread-31:139864905332480] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:48,394 [Thread-32:139864896939776] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:49,395 [Thread-33:139864888547072] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:49,902 [Thread-34:139864334923520] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:50,004 [Thread-35:139864326530816] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:50,505 [Thread-36:139864318138112] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:51,505 [Thread-37:139864309745408] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:52,006 [Thread-38:139864301352704] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:52,505 [Thread-39:139864292960000] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:53,011 [Thread-40:139864284567296] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:53,511 [Thread-41:139863798052608] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:54,016 [Thread-42:139863789659904] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:54,520 [Thread-43:139863781267200] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:55,012 [Thread-45:139863764481792] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:55,016 [Thread-44:139863772874496] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:55,430 [Thread-46:139863756089088] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:55,945 [Thread-47:139863747696384] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:56,411 [Thread-48:139865691256576] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:38:57,917 [Thread-25:139865299592960] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 224, in layout
+    return render_to_response('crawlermanage/layout.html', {'ips': ips})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 39, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 168, in render
+    len_values = len(values)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 1114, in next
+    if len(self.__data) or self._refresh():
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 1036, in _refresh
+    self.__collation))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 873, in __send_message
+    **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 888, in _send_message_with_response
+    server = topology.select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 00:39:45,465 [Thread-49:139865324771072] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 70, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 192.168.1.108:27017: timed out

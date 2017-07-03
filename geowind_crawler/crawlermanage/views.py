@@ -69,7 +69,14 @@ def tasks(request):
 
     p = paging(list, page, 10)
     p2 = paging(list2, page2, 10)
-    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2})
+
+    running_count = Task.objects.filter(status='running').count()
+    pausing_count = Task.objects.filter(status='pausing').count()
+    stopping_count = Task.objects.filter(status='stopping').count()
+    error_count = Task.objects.filter(status='error').count()
+
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2, 'running_count': running_count,
+        'pausing_count':pausing_count, 'stopping_count':stopping_count, 'error_count':error_count})
 
 
 '''
@@ -165,6 +172,14 @@ def newsdetail(request):
 
 
 def layout(request):
+    messager = Message('127.0.0.1')
+    messager.subscribe('crawler')
+    msg = 'is_start'
+    messager.publish('crawler', msg)
+    receive = messager.listen()
+
+
+
     ips = Machine.objects.all()
     if request.method == 'POST':
         taskname = request.POST.get('taskname', '')
@@ -179,7 +194,12 @@ def layout(request):
             processnum = 1
         processnum = int(processnum)
         # logger.info(taskname+" "+starturls+" "+describe+" "+webtype+" "+reservationtime+" "+slave)
-        list_url = starturls.split(',')
+        list_url = starturls.split('\n')
+        # logger.info(urls)
+        # def not_empty(s):
+        #     return s and s.strip()
+        #
+        # list_url = list(filter(not_empty, urls.split('/')))
         # status = ''
         starttime = ''
         endtime = ''

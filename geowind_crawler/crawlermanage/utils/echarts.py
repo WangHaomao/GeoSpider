@@ -84,7 +84,7 @@ def create_chart4():
     process_num = []
     for m in machine_list:
         ip = m['ip']
-        data = "{name:'%s', max:%d}"%(ip, 50)
+        data = "{name:'%s', max:%d}"%(ip, 30)
         ip_list.append(str(data))
         num = Process.objects.filter(localhost=ip).count()
         process_num.append(num)

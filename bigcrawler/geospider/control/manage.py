@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 from geospider.control.message_analyze import Analyze
-from geospider.control.message_listener import MessageListener
+from geospider.control.message_listener import Messager
 from geospider.control.process_controller import ProcessController
 from geospider.utils.mongodb_helper import connect_mongodb, TaskDao, ProcessDao
 from geospider.utils.settings_helper import get_attr
@@ -49,7 +49,7 @@ def init():
     redis_host = get_attr('REDIS_HOST')
     sub = get_attr('SUBSCRIBE')
     localhost = get_attr('LOCAL_HOST')
-    listener = MessageListener(redis_host)
+    listener = Messager(redis_host)
     listener.subscribe(sub)
     db = connect_mongodb()
     taskdao = TaskDao(db)

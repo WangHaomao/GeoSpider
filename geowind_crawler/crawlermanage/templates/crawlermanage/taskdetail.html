@@ -93,7 +93,7 @@
                                     <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'running')" style="color: white; text-decoration: none">运行</a>
                                 </span>
                                 {% elif task.status = 'pausing'  %}
-                                 <span id="span_{{task.id}}" class="label label-warning" >
+                                 <span id="span_{{task.id}}" class="label label-primary" >
                                     <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'pausing')" style="color: white; text-decoration: none">暂停</a>
                                  </span>
                                 {% elif task.status = 'error' %}
@@ -101,7 +101,7 @@
                                     <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">故障</a>
                                 </span>
                                 {% elif task.status = 'stopping' %}
-                                <span id="span_{{task.id}}" class="label label-danger">
+                                <span id="span_{{task.id}}" class="label label-warning">
                                     <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">停止</a>
                                 </span>
                                 {% endif %}
@@ -123,7 +123,7 @@
                             <th><label>主机</label></th>
                             <td colspan="6">
                               {% for ip in task.slave %}
-                                <a href="{{ip}}" style="display: block;" target="_blank">{{ip}}</a>
+                                <a style="display: block;">{{ip}}</a>
                               {% endfor %}
 
                             </td>

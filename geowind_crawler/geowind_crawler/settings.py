@@ -33,11 +33,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-REDIS_HOST = '192.168.1.115'
+REDIS_HOST = '127.0.0.1'
 
-LOCAL_HOST = '192.168.1.115'
+LOCAL_HOST = '127.0.0.1'
 
-MONGODB_HOST = '192.168.1.115'
+MONGODB_HOST = '127.0.0.1'
 
 SUBSCRIBE = 'crawler'
 # Application definition
