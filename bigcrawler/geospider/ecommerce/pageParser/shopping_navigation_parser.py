@@ -323,17 +323,28 @@ if __name__ == '__main__':
     # 美丽说
     # url = "http://www.meilishuo.com/"
 
-    # url = "https://www.jd.com/"
+    url = "https://www.jd.com/"
     # url = 'http://www.meilishuo.com/'
-    url = 'http://www.mogujie.com'
-    method,mylist = get_nav(url,0)
+    # url = 'http://www.mogujie.com'
 
-    # print (number)
-    urls = []
-    for xxlist in mylist:
-        print ("%s:%s"%(xxlist[0],xxlist[1]))
-    #     if(xxlist[1] != None and xxlist[1]!=''):
-    #         urls.append(xxlist[1])
-    # print time.ctime()
-    # urls_clustering(urls)
-    # print time.ctime()
+    # url ='https://www.tmall.com/'
+
+
+    # method,mylist = get_nav(url,0)
+    #
+    # urls = []
+    # for xxlist in mylist:
+    #     print ("%s:%s"%(xxlist[0],xxlist[1]))
+
+    soup = get_soup_by_request_without_script(url)
+    # print soup.prettify()
+    # print soup.prettify()
+    for a in soup.find_all('a'):
+        try:
+            next_url = a['href']
+            soup1 = get_soup_by_request_without_script(url)
+            for xx in soup1.find_all('a'):
+                if('search' in xx['href']):
+                    print xx
+        except:
+            print 'error'
