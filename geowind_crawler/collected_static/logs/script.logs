@@ -22044,3 +22044,379 @@ Traceback (most recent call last):
 TemplateSyntaxError: Could not parse the remainder: '[0].id' from 'i[0].id'
 2017-07-03 12:41:36,669 [Thread-5:139919431300864] [django.request:182] [WARNING]- Not Found: /crawlermanage/editprocess/
 2017-07-03 12:41:41,994 [Thread-8:139919414515456] [django.request:182] [WARNING]- Not Found: /crawlermanage/editprocess/
+2017-07-04 10:28:47,158 [Thread-3:140237191771904] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-04 10:33:07,123 [Thread-35:140237166069504] [django.request:152] [WARNING]- Not Found: /crawlermanage/introduce/pages/widgets.html
+2017-07-04 15:43:16,870 [Thread-15:139906328286976] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 475, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 15:45:53,704 [Thread-2:139793212872448] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 478, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 15:46:48,455 [Thread-4:139793266636544] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 478, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 15:51:50,347 [Thread-2:139709155645184] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 478, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 16:07:27,369 [Thread-3:140138309936896] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 478, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 16:10:54,525 [Thread-6:140138309936896] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 478, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 16:14:20,191 [Thread-4:140540150966016] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 481, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 16:15:09,553 [Thread-5:140540150966016] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 481, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 16:16:23,386 [Thread-4:140465764562688] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 483, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 16:17:20,549 [Thread-3:140509028235008] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 483, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 16:18:19,688 [Thread-3:140262357595904] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 484, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 16:19:19,244 [Thread-3:139998380582656] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 483, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 16:20:45,189 [Thread-2:140365064201984] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 481, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 16:21:17,274 [Thread-3:140460841301760] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 481, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 16:23:05,781 [Thread-3:139981944272640] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 479, in extractmultiple
+    logger.info(goods_dict['url']+goods_dict['title']+goods_dict['pic_url']+goods_dict['detail_url']+goods_dict['comment_degree'])
+KeyError: 'url'
+2017-07-04 16:32:33,041 [Thread-4:139878989014784] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 479, in extractmultiple
+    logger.info(goods_dict['url']+goods_dict['title']+goods_dict['pic_url']+goods_dict['detail_url']+goods_dict['comment_degree'])
+KeyError: 'url'
+2017-07-04 16:34:36,381 [Thread-3:139863529617152] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 479, in extractmultiple
+    logger.info("message:"+goods_dict['url']+goods_dict['title']+goods_dict['pic_url']+goods_dict['detail_url']+goods_dict['comment_degree'])
+KeyError: 'url'
+2017-07-04 16:37:59,484 [Thread-3:140472334341888] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 488, in extractmultiple
+    comment_degree = 'comment_degree')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 294, in create
+    return self._document(**kwargs).save(force_insert=True)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 77, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The fields "set(['url'])" do not exist on the document "TempGoods"
+2017-07-04 16:41:53,237 [Thread-3:140429153560320] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 488, in extractmultiple
+    comment_degree = 'comment_degree')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 294, in create
+    return self._document(**kwargs).save(force_insert=True)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 77, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The fields "set(['url'])" do not exist on the document "TempGoods"
+2017-07-04 16:45:16,224 [Thread-3:139984567564032] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 488, in extractmultiple
+    comment_degree = 'comment_degree')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 294, in create
+    return self._document(**kwargs).save(force_insert=True)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 77, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The fields "set(['url'])" do not exist on the document "TempGoods"
+2017-07-04 16:45:58,487 [Thread-5:139984567564032] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 488, in extractmultiple
+    comment_degree = 'comment_degree')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 294, in create
+    return self._document(**kwargs).save(force_insert=True)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 77, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The fields "set(['url'])" do not exist on the document "TempGoods"
+2017-07-04 16:46:50,622 [Thread-3:140286718113536] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 488, in extractmultiple
+    comment_degree = 'comment_degree')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 294, in create
+    return self._document(**kwargs).save(force_insert=True)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 77, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The fields "set(['url'])" do not exist on the document "TempGoods"
+2017-07-04 16:48:49,810 [Thread-4:140320740136704] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 482, in extractmultiple
+    temp_goods = TempGoods.objects.create(url=goods_dict['url'],title=goods_dict['title'],
+KeyError: 'url'
+2017-07-04 16:49:11,399 [Thread-3:140449759901440] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 488, in extractmultiple
+    comment_degree = 'comment_degree')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 294, in create
+    return self._document(**kwargs).save(force_insert=True)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 77, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The fields "set(['url'])" do not exist on the document "TempGoods"
+2017-07-04 16:50:23,435 [Thread-3:140711248787200] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 486, in extractmultiple
+    temp_goods = TempGoods.objects.create(title='title',pic_url='pic_url',detail_url='detail_url',comment_degree = 'comment_degree')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 294, in create
+    return self._document(**kwargs).save(force_insert=True)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/document.py", line 323, in save
+    self.validate(clean=clean)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 402, in validate
+    raise ValidationError(message, errors=errors)
+ValidationError: ValidationError (TempGoods:None) (Field is required: ['price'])
+2017-07-04 17:53:52,215 [Thread-34:139913832593152] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 479, in extractmultiple
+    goods_dict = get_goods_dict(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce_parser.py", line 338, in get_goods_dict
+    res_dict['title'] = soup.find("title").text
+AttributeError: 'NoneType' object has no attribute 'text'
+2017-07-04 18:39:52,145 [Thread-12:139975332984576] [django.request:152] [WARNING]- Not Found: /imp/dasp3
+2017-07-04 18:39:55,113 [Thread-13:139975332984576] [django.request:152] [WARNING]- Not Found: /imp/dasp3
+2017-07-04 18:45:22,039 [Thread-8:140292262971136] [django.request:152] [WARNING]- Not Found: /imp/dasp3
+2017-07-04 19:18:58,755 [Thread-10:140292262971136] [django.request:152] [WARNING]- Not Found: /imp/dasp3

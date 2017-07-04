@@ -6,13 +6,13 @@ import time
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 
-from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores, Blog, TempArticle
+from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores, Blog, TempArticle,TempGoods
 from crawlermanage.utils.article_parser import extract, test, readFile, extract_content, get_article_data
 from crawlermanage.utils.echarts import create_chart1, create_chart2, create_chart3, create_chart4
 from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
 from crawlermanage.utils.settings_helper import get_attr
-
+from crawlermanage.utils.ecommerce_parser import get_goods_dict
 import sys
 
 reload(sys)
@@ -452,6 +452,7 @@ def extractmultiple(request):
         starturls = request.POST.get('starturls', '')
         webtype = request.POST.get('webtype', '')
         list_url = starturls.split('\n')
+
         if webtype == 'article':
             TempArticle.objects.delete()
             list_id = []
@@ -464,7 +465,35 @@ def extractmultiple(request):
             ret = {'webtype': webtype, 'urls': list_url, 'ids': (list_id)}
             return HttpResponse(json.dumps(ret))
         else:
-            return render_to_response('crawlermanage/extract_multiple.html')
+
+
+            title_list = []
+            price_list = []
+            pic_url_list = []
+            url_list=[]
+            comment_list = []
+
+
+            for url in list_url:
+                url = str(url)
+                goods_dict = get_goods_dict(url)
+
+                # temp_goods = TempGoods.objects.create(title=goods_dict['title'],price=goods_dict['price'],
+                #                                       pic_url=goods_dict['pic_url'],detail_url=goods_dict['detail_url'],
+                #                                       comment_degree = goods_dict['comment_degree'])
+                title_list.append(goods_dict['title'])
+                price_list.append(goods_dict['price'])
+                pic_url_list.append(goods_dict['pic_url'])
+                url_list.append(goods_dict['detail_url'])
+                comment_list.append(goods_dict['comment_degree'])
+
+            ret = {'webtype': webtype,
+                   'title': title_list,'price':price_list,'pic_url':pic_url_list,'urls':url_list,'comment':comment_list}
+
+
+            return HttpResponse(json.dumps(ret))
+
+            # return render_to_response('crawlermanage/extract_multiple.html')
     else:
         return render_to_response('crawlermanage/extract_multiple.html')
 
