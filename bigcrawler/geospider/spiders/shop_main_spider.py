@@ -7,9 +7,10 @@ from geospider.ecommerce.spiderUtils.parser_util import get_html_with_request
 from geospider.ecommerce.pageParser.shopping_itemsList_parser import analysis_method_selector, analysis_goods_list
 from geospider.ecommerce.pageParser.shopping_navigation_parser import get_nav
 from geospider.ecommerce.pageParser.selenium_batch_parser import \
-    get_pageKeyDic, get_next_urlList_by_firstpage_url, get_all_page_number, get_all_page_urls
+    get_pageKeyDic, get_next_urlList_by_firstpage_url, get_all_page_number, \
+    get_all_page_urls,get_pageKeyList,get_all_page_urls_by_pageKeyList,get_pageUrls_and_all_pageNumber
 from geospider.ecommerce.pageParser.shopping_detail_parser import *
-from urllib2 import quote, unquote
+from urllib2 import quote
 from geospider.items import Goods,Stores,Ecommerce
 
 class ShopMainSpider(RedisSpider):
@@ -102,54 +103,77 @@ class ShopMainSpider(RedisSpider):
                             'list' in tlist[1] or 'search' in tlist[1] or 'category' in tlist[1])):
                     res_url_list.append(tlist[1])
 
+
+
         if (len(res_url_list) > 1):
 
             pageDict = None
-            # test_url = res_url_list[0]
             demo_url = None
+            get_dict_attemps = 0
+            pageKey_method = 0
             for test_url in res_url_list:
 
                 page_list = get_next_urlList_by_firstpage_url(test_url)
 
-                if (page_list == None): continue
+                if (page_list == None):
+                    # get_dict_attemps += 1
+                    continue
 
                 pageDict = get_pageKeyDic(page_list)
 
-                if (pageDict == None or len(pageDict) == 0): continue
+                if (pageDict == None or len(pageDict) == 0):
+                    get_dict_attemps += 1
+                    if(get_dict_attemps >=2):
+                        pageKey_method = 1
+                        break
+                    continue
 
                 demo_url = test_url
                 break
 
-            if (pageDict == None or page_list == None):
-                raise Exception("页面解析异常")
 
-            print pageDict
+            #pageKey_method = 0 使用pageKetDict解析翻页信息
 
-            print page_list
+            if(pageKey_method == 0):
+                if (pageDict == None or page_list == None):
+                    raise Exception("页面解析异常")
 
-            attached_1 = page_list[1].replace(demo_url, '')
-            attached_2 = page_list[2].replace(demo_url, '')
+                print pageDict
+                print page_list
 
-            for goods_list_url in res_url_list:
-                next_url1 = goods_list_url + attached_1
-                next_url2 = goods_list_url + attached_2
+                attached_1 = page_list[1].replace(demo_url, '')
+                attached_2 = page_list[2].replace(demo_url, '')
 
-                # print next_url2
-                allnumber = get_all_page_number(goods_list_url)
-                print allnumber
-                # next_all_url_list = get_all_page_urls(pageKeyDic,page_list,allnumber)
+                for goods_list_url in res_url_list:
+                    next_url1 = goods_list_url + attached_1
+                    next_url2 = goods_list_url + attached_2
 
-                res = get_all_page_urls(pageDict, [goods_list_url, next_url1, next_url2],
-                                        allnumber)
-                """
-                每一个商品列表的分页信息
+                    # print next_url2
+                    allnumber = get_all_page_number(goods_list_url)
+                    print allnumber
+                    # next_all_url_list = get_all_page_urls(pageKeyDic,page_list,allnumber)
 
-                """
-                for each_goods_list_url in res:
-                    yield Request(callback=self.goods_list_parse, url=each_goods_list_url)
+                    res = get_all_page_urls(pageDict, [goods_list_url, next_url1, next_url2],
+                                            allnumber)
+                    """
+                    每一个商品列表的分页信息
+    
+                    """
+                    for each_goods_list_url in res:
+                        yield Request(callback=self.goods_list_parse, url=each_goods_list_url)
 
+            #pageKey_method = 1 使用 pageKeyList解析翻页信息
+            else:
+                for test_url in res_url_list:
+                    allnumber, page_list = get_pageUrls_and_all_pageNumber(test_url)
+                    pageKeyList = get_pageKeyList(page_list)
+                    res_url_list = []
+                    if (pageKeyList != None and len(page_list) != 0):
+                        goods_list_url = get_all_page_urls_by_pageKeyList(pageKeyList,page_list,allnumber)
 
-                    # print "----------$$$$$$$$$------------"
+                        for each_goods_list_url in goods_list_url:
+                            yield Request(callback=self.goods_list_parse, url=each_goods_list_url)
+
 
 
     def goods_list_parse(self, response):
@@ -173,52 +197,51 @@ class ShopMainSpider(RedisSpider):
                 # yield item
 
                 yield Request(callback=self.goods_detail_parse, url=each_detail_url, meta={'method': 'JSON','item':item},)
-
         else:
             try:
                 for each_detail_url in analysis_res:
                     yield Request(callback=self.goods_detail_parse, url=each_detail_url, meta={'method': 'OTHER'})
+
             except:
+
                 pass
 
 
 
     def goods_detail_parse(self, response):
-        method =  response.meta['method']
-        item = response.meta['item']
-        print '------------------------------------------------------------------------------'
+        method = response.meta['method']
         soup = BeautifulSoup(response.url,'lxml')
-        res_stroe_dic = get_store(soup, response.url)
-
-        item['comment_degree'] = res_stroe_dic['comment_degree']
-
+        """
+            如果上一个页面是用JSON解析的，那么这里就不需要再解析价格这些东西了
+        """
         if(method != 'JSON'):
-            item['price'] = get_price(soup)
-            item['detail_url'] = response.url
+            goods_item = Goods()
+            goods_item['price'] = get_price(soup)
+            goods_item['pic_url'] = get_pic_url(soup)
+            goods_item['detail_url'] = response.url
+            goods_item['taskid'] = str(self.name)
+        else:
 
+            goods_item = response.meta['item']
             # yield item
+        res_stroe_dic = get_store(soup, response.url)
+        # 商品的评论采用店铺的评论
+        goods_item['comment_degree'] = res_stroe_dic['comment_degree']
 
+        # 构建店铺表
         store_item = Stores()
         store_item['name'] = res_stroe_dic['name']
         store_item['store_url'] = res_stroe_dic['store_url']
         store_item['comment_degree'] = res_stroe_dic['comment_degree']
         store_item['taskid'] = str(self.name)
 
-        # yield store_item
+        # 将两个表合起来
         res_item = Ecommerce()
-        res_item['goods'] = item
+        res_item['goods'] = goods_item
         res_item['stores'] = store_item
 
 
         yield res_item
-        # soup = BeautifulSoup(response.text, 'lxml')
-        # print  get_title(soup)
-        # item = ECommerceSiteCrawlerItem()
-        #
-        # item['price'] = get_price(soup)
-        # item['title'] = get_title(soup)
-        # item['stroe_url'] = get_store(soup, response.url)
-        # # item['pic_url'] =
 
 
     def stroe_detail_parse(self, respinse):

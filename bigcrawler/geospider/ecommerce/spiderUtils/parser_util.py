@@ -106,13 +106,13 @@ def get_soup_by_request(url):
 def get_soup_by_request_without_script(url):
     headers = {'content-type': 'application/json',
                'User-Agent': random.choice(user_agent_list)}
-    resp = requests.get(url, headers=headers)
+    resp = requests.get(url, headers=headers,timeout=10)
 
 
     soup = BeautifulSoup(resp.text, "lxml")
     [script.extract() for script in soup.findAll('script')]
     page_coding = getcodetype(resp.text)
-    print (page_coding)
+    # print (page_coding)
     if page_coding != None and page_coding != "":
         soup.encode(page_coding)
     return soup

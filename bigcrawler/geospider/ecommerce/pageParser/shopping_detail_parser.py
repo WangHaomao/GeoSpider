@@ -4,7 +4,7 @@ import requests
 import re
 from lxml import etree
 from selenium import webdriver
-from geospider.ecommerce.spiderUtils.parser_util import get_soup_by_request,get_soup_by_selenium,get_webdriver
+from geospider.ecommerce.spiderUtils.parser_util import get_soup_by_request,get_soup_by_selenium,get_webdriver,get_soup_by_html_source
 from geospider.ecommerce.spiderUtils.url_utils import url_sifter
 import sys
 from lxml.html import fromstring
@@ -52,13 +52,10 @@ def _get_price_by_keyword(soup,keyword):
 
     ttt = u'%s'%keyword
     tag_symbol_list = soup.find_all(True, text=re.compile(ttt))
-
+    # print '%s,%s'%(keyword,str(tag_symbol_list))
 
 
     for tag in tag_symbol_list:
-        tag_tmp= tag
-        price_text_list = []
-        attemps = 0
         for s_tag in tag.parent.contents:
             # print (s_tag)
             try:
@@ -66,15 +63,13 @@ def _get_price_by_keyword(soup,keyword):
                 res_price_list.append(one_price)
             except:
                 print "shopping_detail_parser.py  error"
-        # while(len(price_text_list) ==0 and attemps < 2):
-        #     price_text_list = re.findall(reg_with_keyword,tag_tmp.text)
-        #     tag_tmp = tag_tmp.parent
-        #     attemps += 1
-        #
-        # print res_price_list
-        # if(len(price_text_list)!=0):
-        #     res_price_list  = res_price_list + re.findall(reg_digit_keyword,"".join(price_text_list))
-        # break
+
+    # for tag in tag_symbol_list:
+    #     ss = str(tag.parent.parent)
+    #     # print ss
+    #     soup_tmp = get_soup_by_html_source(ss)
+    #     print soup.find_all('img')
+
 
     price_dic = {}
     max_appear_price = "-1"
@@ -208,7 +203,10 @@ def get_store(soup,url):
         #     print get_soup_by_request(test_url).find('title').text
         #     return url_sifter(url,res_url)
 
-
+def get_pic_url(url):
+    soup = get_soup_by_request(url)
+    for im in soup.find_all('img'):
+        print im
 def get_title(url):
     soup = get_soup_by_request(url)
     tag_script = soup.find("title")
@@ -234,14 +232,13 @@ if __name__ == '__main__':
     # url = "https://item.taobao.com/item.htm?spm=a230r.1.14.97.oI9e6K&id=545728190154&ns=1&abbucket=20#detail"
     # url = "https://item.jd.com/11225370508.html"
     # url = "http://item.meilishuo.com/detail/1kaosga?acm=3.ms.2_4_1kaosga.0.24476-25176.94mOaqibAUDJd.t_0-lc_3&ptp=1.9Hyayb.classsearch_mls_1kaosga_2017%E6%96%B0%E6%AC%BE%E6%AC%A2%E4%B9%90%E9%A2%82%E7%8E%8B%E5%AD%90%E6%96%87%E6%9B%B2%E7%AD%B1%E7%BB%A1%E5%90%8C%E6%AC%BE%E5%8C%85%E6%97%B6%E5%B0%9A%E5%B0%8F%E6%96%B9%E5%8C%85%E5%8D%95%E8%82%A9%E6%96%9C%E6%8C%8E%E5%B0%8F%E5%8C%85%E5%8C%85_10057053_pop.1.mNWwi"
-    url = "http://shop.mogujie.com/detail/18jws1w?acm=3.ms.1_4_18jws1w.43.1185-22922.wGTRPqnDRVaKO.t_0-lc_4&ptp=1.eW5XD._b_4bce2add492e4c56_2.1.DijfM"
+    # url = "http://shop.mogujie.com/detail/18jws1w?acm=3.ms.1_4_18jws1w.43.1185-22922.wGTRPqnDRVaKO.t_0-lc_4&ptp=1.eW5XD._b_4bce2add492e4c56_2.1.DijfM"
+    url = 'http://product.dangdang.com/22828480.html'
     # get_comments(url)
-    # get_price(url)
+
+
+    get_price(get_soup_by_request((url)))
     # get_store(get_soup_by_request(url),url)
-    get_title(url)
-
-
-
-
-
+    # get_title(url)
+    # get_pic_url(url)
 
