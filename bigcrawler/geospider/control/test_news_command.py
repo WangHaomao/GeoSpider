@@ -21,9 +21,9 @@ def start():
     b.redis_key = "aaa:start_urls"
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     # r.sadd("myspider:start_urls", 'http://news.qq.com/')
-    r.lpush("aaa:start_urls", "http://news.qq.com/")
+    r.lpush("aaa:start_urls", "http://www.thepaper.cn/")
     # r.lpush("aaa:start_urls", "http://news.sohu.com/")
-    b.allowed_domains=["news.qq.com"]
+    b.allowed_domains=["thepaper.cn"]
     cmdline.execute("scrapy crawl aaa".split())
 
     # process = CrawlerProcess(get_project_settings())
@@ -36,8 +36,8 @@ def pause():
 if __name__ == '__main__':
     import os
 
-    sys.path.append('/opt/graphite/webapp/')
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "graphite.local_settings")
+    # sys.path.append('/opt/graphite/webapp/')
+    # os.environ.setdefault("DJANGO_SETTINGS_MODULE", "graphite.local_settings")
 
     start()
 

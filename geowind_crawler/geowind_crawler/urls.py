@@ -35,6 +35,7 @@ urlpatterns = [
     url(r'^crawlermanage/extractsinger/$', views.extractsinger, name='extractsinger'),
     url(r'^crawlermanage/extractmultiple/$', views.extractmultiple, name='extractmultiple'),
     url(r'^crawlermanage/temparticle/$', views.temparticle, name='temparticle'),
+    url(r'^crawlermanage/editprocess/$', views.editprocess, name='editprocess'),
 
 
     # url(r'^crawlermanage/$','crawlermanage.views.login'),

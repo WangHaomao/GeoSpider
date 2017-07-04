@@ -40,12 +40,26 @@ class TaskDao(object):
     def save(self, task):
         self.db.task.save(task)
 
+    def update_processnum(self, taskid):
+        task = self.find_by_id(taskid)
+        print(task['processnum'])
+        task['processnum'] -= 1
+        print(task['processnum'])
+        self.db.task.save(task)
+
+
+
 '''
     进程数据访问层
 '''
 class ProcessDao(object):
     def __init__(self, db):
         self.db = db
+
+    '''根据processid查找Process'''
+
+    def find_by_id(self, id):
+        return self.db.process.find_one({'_id': ObjectId(id)})
 
     '''查找所有'''
     def find_all(self):
@@ -71,6 +85,13 @@ class ProcessDao(object):
             process_list.append(i)
         return process_list
 
+    def find_by_localhost_and_pid(self, localhost, pid):
+        cursor = self.db.process.find({'localhost':localhost, 'pid': pid})
+        process_list = []
+        for i in cursor:
+            process_list.append(i)
+        return process_list
+
     def find_by_localhost(self, localhost):
         cursor = self.db.process.find({'localhost': localhost})
         process_list = []
@@ -91,6 +112,11 @@ class ProcessDao(object):
     def delete_by_localhost_and_taskid(self, localhost, taskid):
         self.db.process.remove({'localhost':localhost, "taskid": taskid})
 
+    '''删除一个进程'''
+
+    def delete_by_localhost_and_pid(self, localhost, pid):
+        self.db.process.remove({'localhost': localhost, "pid": pid})
+
     '''更新进程状态'''
     def update_status_by_localhost_and_taskid(self, localhost, taskid, status):
         task_list = self.find_by_localhost_and_taskid(localhost, taskid)
@@ -100,6 +126,12 @@ class ProcessDao(object):
             # task['status']=status
 
             # self.db.process.save(task)
+
+    def update_status_by_localhost_and_pid(self, localhost, pid, status):
+        task_list = self.find_by_localhost_and_pid(localhost, pid)
+        for task in task_list:
+            task['status'] = status
+            self.db.process.save(task)
 
 class NewsDao(object):
     def __init__(self, db):
@@ -135,11 +167,14 @@ class URLDao(object):
 
 if __name__ == '__main__':
     db = connect_mongodb()
-    # pro = ProcessDao(db)
+    pro = ProcessDao(db)
     td = TaskDao(db)
     # task = td.find_by_localhost_and_status('127.0.0.1','running')
     # print(task)
     newsdao = NewsDao(db)
-    list = newsdao.find_urls_by_taksid('aaa')
-    for i in list:
-        print(i)
+    # list = newsdao.find_urls_by_taksid('aaa')
+    # for i in list:
+    #     print(i)
+    process_list = pro.find_by_localhost_and_pid('127.0.0.1', 8871)
+    print(process_list[0]['taskid'])
+    td.update_processnum('595a541b9c1da91ae4d1c148')

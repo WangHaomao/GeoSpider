@@ -110,34 +110,32 @@
         				                <th>主机</th>
         				                <th>PID</th>
         				                <th>任务ID</th>
+                                  <th>任务名</th>
                                 <th>爬虫状态</th>
         				                <!--<th>描述</th>-->
         				                <!-- <th>操作</th> -->
                               </tr>
                             </thead>
                             <tbody>
-                              {% for i in p.p_content %}
+                              {% for i in pc_name %}
                               <tr>
-                                <td>{{i.id}}</td>
-                                <td>{{i.localhost}}</td>
-                                <td>{{i.pid}}</td>
-                                <td>{{i.taskid}}</td>
+                                <td>{{i.0.id}}</td>
+                                <td>{{i.0.localhost}}</td>
+                                <td>{{i.0.pid}}</td>
+                                <td>{{i.0.taskid}}</td>
+                                  <td>{{i.1}}</td>
                                 <td>
-                                    {% ifequal i.status 'running' %}
-                                    <span id="span_{{i.id}}" class="label label-success" >
-                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">执行（运行爬虫）</a>
+
+                                 {% ifequal i.0.status 'running' %}
+                                    <span id="span_{{i.0.id}}" class="label label-success" >
+                                        <a href="#" id="status_{{i.0.id}}" class="editable editable-click" onclick="changeStatus('{{i.0.id}}', 'running')" style="color: white; text-decoration: none">执行</a>
                                     </span>
                                     {%endifequal%}
-                                    {% ifequal i.status 'pausing'  %}
-                                     <span id="span_{{i.id}}" class="label label-warning" >
-                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">挂起（暂停爬虫）</a>
+                                    {% ifequal i.0.status 'pausing'  %}
+                                     <span id="span_{{i.0.id}}" class="label label-warning" >
+                                        <a href="#" id="status_{{i.0.id}}" class="editable editable-click" onclick="changeStatus('{{i.0.id}}', 'pausing')" style="color: white; text-decoration: none">挂起</a>
                                      </span>
                                     {%endifequal%}
-                                     {% ifequal i.status 'waitting'  %}
-                                     <span id="span_{{i.id}}" class="label label-warning" >
-                                        <a href="#" id="status_{{i.id}}" class="editable editable-click" style="color: white; text-decoration: none">执行（监控任务）</a>
-                                     </span>
-                                    {% endifequal %}
                                 </td>
                                 <!--<td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>-->
                                 <!-- <td><a href="{%url 'newsdata'%}?taskid={{i.id}}">结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">管理</a></td> -->
@@ -281,6 +279,48 @@
                   }
                   if (data['status']=='success' && data['taskstatus']=='stopping') {
                     location.href = '/crawlermanage/tasks?page='+page
+                  }
+                }
+            }, 'json'); 
+        }
+    });
+  }
+
+
+
+  function changeStatus(id, status) {
+    $('#status_'+id).editable({
+        type: "select",
+        value: status,
+        source: [{ value: 'running', text: "执行" }, { value: 'pausing', text: "挂起" }, {value:'stopping',text:"停止"}],
+        emptytext: "空文本",       //空值的默认文本
+        mode: "popup",            //编辑框的模式：支持popup和inline两种模式，默认是popup
+        validate: function (value) { //字段验证
+            if(value=='running'){
+              $('#span_'+id).attr("class","label label-success")
+
+            }else if(value=='pausing'){
+              $('#span_'+id).attr("class","label label-warning")
+
+            }else if(value=='stopping'){
+              $('#span_'+id).attr("class","label label-danger")
+
+            }else{
+              return '不能为空';
+            }
+        },
+        url: function (params) { 
+            return $.post('/crawlermanage/editprocess/', { 
+                op: params.value,
+                processid: id,
+            }, function(data) {
+                if(data!=null) {
+                  page = "{{page}}"
+                  if(page==''){
+                    page = 1
+                  }
+                  if (data['status']=='success' && data['process_status']=='stopping') {
+                    location.href = '/crawlermanage/processlist?page='+page
                   }
                 }
             }, 'json'); 

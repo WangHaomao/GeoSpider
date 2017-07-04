@@ -21752,3 +21752,295 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
     self._error_message(selector))
 ServerSelectionTimeoutError: 192.168.1.108:27017: timed out
+2017-07-03 09:34:20,838 [Thread-6:140188252624640] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-07-03 09:59:52,934 [Thread-2:140033578116864] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 299, in processlist
+    name = Task.objects.get('id')['taskname']
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 270, in get
+    queryset = queryset.filter(*q_objs, **query)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 230, in filter
+    return self.__call__(*q_objs, **query)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 112, in __call__
+    raise InvalidQueryError(msg)
+InvalidQueryError: Not a query object: id. Did you intend to use key=value?
+2017-07-03 10:00:38,398 [Thread-3:140033578116864] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 299, in processlist
+    name = Task.objects.get(id='id')['taskname']
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 270, in get
+    queryset = queryset.filter(*q_objs, **query)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 230, in filter
+    return self.__call__(*q_objs, **query)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 112, in __call__
+    raise InvalidQueryError(msg)
+InvalidQueryError: Not a query object: id. Did you intend to use key=value?
+2017-07-03 10:00:44,179 [Thread-2:140068130219776] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 299, in processlist
+    name = Task.objects.get(id='id')['taskname']
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 273, in get
+    result = queryset.next()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1547, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1590, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 89, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/transform.py", line 98, in query
+    value = field.prepare_query_value(op, value)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 465, in prepare_query_value
+    return self.to_mongo(value)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 461, in to_mongo
+    self.error(six.text_type(e))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 159, in error
+    raise ValidationError(message, errors=errors, field_name=field_name)
+ValidationError: u'id' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2017-07-03 10:00:58,581 [Thread-6:140068113434368] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 299, in processlist
+    name = Task.objects.get(id=p.id)['taskname']
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 273, in get
+    result = queryset.next()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1547, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 1590, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 89, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/transform.py", line 98, in query
+    value = field.prepare_query_value(op, value)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 465, in prepare_query_value
+    return self.to_mongo(value)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 461, in to_mongo
+    self.error(six.text_type(e))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/fields.py", line 159, in error
+    raise ValidationError(message, errors=errors, field_name=field_name)
+ValidationError: u'id' is not a valid ObjectId, it must be a 12-byte input or a 24-character hex string
+2017-07-03 10:01:03,304 [Thread-2:140297467291392] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 299, in processlist
+    name = Task.objects.get(id=p.id)['taskname']
+AttributeError: paging instance has no attribute 'id'
+2017-07-03 10:01:29,162 [Thread-2:140203614131968] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 299, in processlist
+    name = Task.objects.get(id=i.id)['taskname']
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-07-03 10:01:37,439 [Thread-3:140203614131968] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 299, in processlist
+    name = Task.objects.get(id=i.id)['taskname']
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-07-03 10:01:58,438 [Thread-5:140203604166400] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 299, in processlist
+    logger.info(i.id)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-07-03 10:02:05,999 [Thread-2:140510578231040] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 300, in processlist
+    name = Task.objects.get(id=i.id)['taskname']
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-07-03 10:02:18,674 [Thread-4:140510569838336] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 300, in processlist
+    name = Task.objects.get(id=str(i.id))['taskname']
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-07-03 10:02:21,591 [Thread-2:139765696489216] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 300, in processlist
+    name = Task.objects.get(id=str(i.id))['taskname']
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-07-03 11:36:53,210 [Thread-2:139958570505984] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 300, in processlist
+    name = Task.objects.get(id=str(i.id))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-07-03 11:37:01,209 [Thread-3:139958354441984] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 300, in processlist
+    name = Task.objects.get(id=str(i.id))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-07-03 11:39:07,607 [Thread-5:139958570505984] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 300, in processlist
+    name = Task.objects.get(id=str(i.id))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-07-03 11:39:17,058 [Thread-6:139958354441984] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 300, in processlist
+    name = Task.objects.get(id=str(i.id))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-07-03 11:39:50,006 [Thread-8:139958570505984] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 300, in processlist
+    # name = Task.objects.get(id=str(i.id))
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-07-03 11:40:57,451 [Thread-3:139699164100352] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 299, in processlist
+    logger.info(i.taskid)
+AttributeError: 'Process' object has no attribute 'task'
+2017-07-03 11:42:56,468 [Thread-8:139682105534208] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 302, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p, 'tasknames':tasknames})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'for' statements should use the format 'for x in y': for i in p.p_content, tasknames
+2017-07-03 11:51:46,618 [Thread-2:140442869036800] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 303, in processlist
+    return render(request, 'crawlermanage/process_list.html', {'p': p, 'pc_name':pc_name})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '[0].id' from 'i[0].id'
+2017-07-03 12:41:36,669 [Thread-5:139919431300864] [django.request:182] [WARNING]- Not Found: /crawlermanage/editprocess/
+2017-07-03 12:41:41,994 [Thread-8:139919414515456] [django.request:182] [WARNING]- Not Found: /crawlermanage/editprocess/

@@ -15,13 +15,14 @@ class ProcessController(object):
         self.processdao = ProcessDao(mongodb)
         self.taskdao = TaskDao(mongodb)
         self.localhost = localhost
+
     '''
         开始一个进程，开始任务
     '''
 
-    def start(self, taskid, is_restart):
+    def start_task(self, taskid, is_restart):
         processnum = self.taskdao.find_by_id(taskid)['processnum']
-        print(processnum)
+        # print(processnum)
         for i in range(0, processnum):
             init(taskid, is_restart)
             p = Process(name=taskid, target=run, args=(taskid,))
@@ -31,10 +32,10 @@ class ProcessController(object):
             # self.process_list.append(p)
 
     '''
-        唤醒一个阻塞的进程，将暂停状态的任务重新启动
+        唤醒一个暂停的任务，将暂停状态的任务重新启动
     '''
 
-    def resume(self, taskid):
+    def resume_task(self, taskid):
         process_list = self.processdao.find_by_localhost_and_taskid(self.localhost, taskid)
         for p in process_list:
             if p['taskid'] == taskid:
@@ -46,10 +47,23 @@ class ProcessController(object):
         self.processdao.update_status_by_localhost_and_taskid(self.localhost, taskid, 'running')
 
     '''
+        唤醒一个阻塞的进程，将暂停状态的任务重新启动
+    '''
+
+    def resume_process(self, pid):
+        try:
+            print("唤醒进程%s" % (pid))
+            ps = psutil.Process(pid)
+            ps.resume()
+            self.processdao.update_status_by_localhost_and_pid(self.localhost, pid, 'running')
+        except:
+            pass
+
+    '''
         杀死一个进程，终止任务
     '''
 
-    def terminate(self, taskid):
+    def terminate_task(self, taskid):
         process_list = self.processdao.find_by_localhost_and_taskid(self.localhost, taskid)
         for p in process_list:
             if p['taskid'] == taskid and p['status'] != 'stopping':
@@ -62,11 +76,24 @@ class ProcessController(object):
         delete(taskid, True)
         self.processdao.delete_by_localhost_and_taskid(self.localhost, taskid)
 
+    def terminate_process(self, pid):
+        try:
+            print("杀死进程%s" % (pid))
+            # p.terminate()
+            os.kill(pid, signal.SIGKILL)
+            process_list = self.processdao.find_by_localhost_and_pid(self.localhost, pid)
+            self.processdao.delete_by_localhost_and_pid(self.localhost, pid)
+            if len(process_list) > 0:
+                taskid = process_list[0]['taskid']
+            self.taskdao.update_processnum(taskid)
+        except:
+            pass
+
     '''
         暂停进程，暂停任务
     '''
 
-    def suspend(self, taskid):
+    def suspend_task(self, taskid):
         process_list = self.processdao.find_by_localhost_and_taskid(self.localhost, taskid)
         for p in process_list:
             if p['taskid'] == taskid and p['status'] != 'stopping':
@@ -76,6 +103,15 @@ class ProcessController(object):
                 except:
                     continue
         self.processdao.update_status_by_localhost_and_taskid(self.localhost, taskid, 'pausing')
+
+    def suspend_process(self, pid):
+        try:
+            print("挂起进程%s" % (pid))
+            ps = psutil.Process(pid)
+            ps.suspend()
+            self.processdao.update_status_by_localhost_and_pid(self.localhost, pid, 'pausing')
+        except:
+            pass
 
     '''
         休眠
@@ -102,7 +138,7 @@ class ProcessController(object):
         开启一个进程，等待任务启动
     '''
 
-    def wait(self, taskid, is_restart):
+    def wait_task(self, taskid, is_restart):
         processnum = self.taskdao.find_by_id(taskid)['processnum']
         for i in range(0, processnum):
             init(taskid, is_restart)
@@ -115,7 +151,7 @@ class ProcessController(object):
         扫描所有进程，将到时间的进程杀死
     '''
 
-    def scan(self):
+    def scan_task(self):
         # scanner = self.processdao.find_by_status('scanner')
         # if len(scanner) == 0:
         p = Process(name='spider_scaner', target=scaner)
@@ -123,8 +159,3 @@ class ProcessController(object):
         self.processdao.insert_process(self.localhost, p.pid, '', 'scanner')
 
 
-if __name__ == '__main__':
-    p = ProcessController('127.0.0.1')
-    p.start('5948cbf59c1da929309ad2e0')
-    p.sleep('5948cbf59c1da929309ad2e0', 5)
-    p.terminate('5948cbf59c1da929309ad2e0')

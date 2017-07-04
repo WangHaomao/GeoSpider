@@ -50,6 +50,7 @@ def init(taskid, is_restart):
     if task['webtype']=='news' or task['webtype']=='blog':
         for url in task['starturls']:
             url_manager.insert_url(taskid, url)
+            print(get_domain(url))
             allowed_domains.append(get_domain(url))
         temp.allowed_domains = allowed_domains
     elif task['webtype']=='ecommerce':

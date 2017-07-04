@@ -76,7 +76,8 @@ def tasks(request):
     error_count = Task.objects.filter(status='error').count()
 
     return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2, 'running_count': running_count,
-        'pausing_count':pausing_count, 'stopping_count':stopping_count, 'error_count':error_count})
+                                                        'pausing_count': pausing_count,
+                                                        'stopping_count': stopping_count, 'error_count': error_count})
 
 
 '''
@@ -107,6 +108,29 @@ def edittask(request):
             msg = 'op=terminatetask&taskid=' + taskid
             messager.publish('crawler', msg)
             ret = {'status': 'success', 'taskstatus': 'stopping'}
+            return HttpResponse(json.dumps(ret))
+
+
+def editprocess(request):
+    if request.method == 'POST':
+        op = request.POST.get('op')
+        processid = request.POST.get('processid')
+        # process = Process.objects.filter(id=processid)
+        logger.info(processid)
+        if op == 'running':
+            msg = 'op=resumeprocess&processid=' + processid
+            messager.publish('crawler', msg)
+            ret = {'status': 'success', 'process_status': 'running'}
+            return HttpResponse(json.dumps(ret))
+        elif op == 'pausing':
+            msg = 'op=suspendprocess&processid=' + processid
+            messager.publish('crawler', msg)
+            ret = {'status': 'success', 'process_status': 'pausing'}
+            return HttpResponse(json.dumps(ret))
+        elif op == 'stopping':
+            msg = 'op=terminateprocess&processid=' + processid
+            messager.publish('crawler', msg)
+            ret = {'status': 'success', 'process_status': 'stopping'}
             return HttpResponse(json.dumps(ret))
 
 
@@ -172,14 +196,6 @@ def newsdetail(request):
 
 
 def layout(request):
-    messager = Message('127.0.0.1')
-    messager.subscribe('crawler')
-    msg = 'is_start'
-    messager.publish('crawler', msg)
-    receive = messager.listen()
-
-
-
     ips = Machine.objects.all()
     if request.method == 'POST':
         taskname = request.POST.get('taskname', '')
@@ -292,9 +308,15 @@ def processlist(request):
     page = request.GET.get('page')
     if page == None:
         page = 1
-    list = Process.objects.filter(status__in=['running', 'waitting', 'pausing'])
+    list = Process.objects.filter(status__in=['running', 'pausing'])
     p = paging(list, page, 10)
-    return render(request, 'crawlermanage/process_list.html', {'p': p})
+    tasknames = []
+    for i in p.p_content:
+        logger.info(i.taskid)
+        name = Task.objects.get(id=i.taskid)['taskname']
+        tasknames.append(name)
+    pc_name = zip(p.p_content, tasknames)
+    return render(request, 'crawlermanage/process_list.html', {'p': p, 'pc_name': pc_name})
 
 
 def machinelist(request):
@@ -429,7 +451,7 @@ def extractmultiple(request):
     if request.method == 'POST':
         starturls = request.POST.get('starturls', '')
         webtype = request.POST.get('webtype', '')
-        list_url = starturls.split(',')
+        list_url = starturls.split('\n')
         if webtype == 'article':
             TempArticle.objects.delete()
             list_id = []

@@ -15,29 +15,43 @@ from geospider.utils.settings_helper import get_attr
 '''
 
 
-def execute(command, process, taskdao):
+def execute(command, process, taskdao, processdao):
+    print(command)
     params = Analyze(command)
     localhost = get_attr('LOCAL_HOST')
     op = params.get('op')
-    taskid = params.get('taskid')
-    task = taskdao.find_by_id(taskid)
-    slave = task['slave']
-    print(slave)
-    if localhost in slave:
-        print(op)
-        if op == 'starttask':
-            status = taskdao.find_by_id(taskid)['status']
-            # status = params.get('status')
-            if status == 'running':
-                process.start(taskid, False)
-            elif status == 'waitting':
-                process.wait(taskid, False)
-        elif op == 'suspendtask':
-            process.suspend(taskid)
-        elif op == 'resumetask':
-            process.resume(taskid)
-        elif op == 'terminatetask':
-            process.terminate(taskid)
+    if op == 'starttask' or op == 'suspendtask' or op == 'resumetask' or op == 'terminatetask':
+        taskid = params.get('taskid')
+        task = taskdao.find_by_id(taskid)
+        slave = task['slave']
+        print(slave)
+        if localhost in slave:
+            print(op)
+            if op == 'starttask':
+                status = taskdao.find_by_id(taskid)['status']
+                # status = params.get('status')
+                if status == 'running':
+                    process.start_task(taskid, False)
+                elif status == 'waitting':
+                    process.wait_task(taskid, False)
+            elif op == 'suspendtask':
+                process.suspend_task(taskid)
+            elif op == 'resumetask':
+                process.resume_task(taskid)
+            elif op == 'terminatetask':
+                process.terminate_task(taskid)
+    elif op == 'suspendprocess' or op == 'resumeprocess' or op == 'terminateprocess':
+        processid = params.get('processid')
+        pro = processdao.find_by_id(processid)
+        ip = pro['localhost']
+        pid = int(pro['pid'])
+        if ip == localhost:
+            if op == 'suspendprocess':
+                process.suspend_process(pid)
+            elif op == 'resumeprocess':
+                process.resume_process(pid)
+            elif op == 'terminateprocess':
+                process.terminate_process(pid)
 
 
 '''
@@ -63,11 +77,11 @@ def init():
 '''
 
 
-def run(process, listener, taskdao):
-    process.scan()
+def run(process, listener, taskdao, processdao):
+    process.scan_task()
     while (True):
         msg = listener.listen()
-        execute(msg, process, taskdao)
+        execute(msg, process, taskdao, processdao)
 
 
 '''
@@ -78,33 +92,33 @@ def run(process, listener, taskdao):
 
 def start():
     localhost, listener, taskdao, processdao, process = init()
-    try:
-        run(process, listener, taskdao)
-    except:
-        print('---------------------------异常------------------------')
-        process_list = processdao.find_by_localhost(localhost)
-        command_list = []
-        for p in process_list:
-            if p['taskid'] == '':
-                processdao.delete_by_localhost_and_taskid(localhost, '')
-                continue
-            if p['taskid'] == 'pausing':
-                temp_task = taskdao.find_by_id(p['taskid'])
-                temp_task['status'] = 'running'
-                taskdao.save(temp_task)
-            command_list.append('op=starttask&taskid=' + p['taskid'])
-            processdao.delete_by_localhost_and_taskid(localhost, p['taskid'])
-        for command in command_list:
-            params = Analyze(command)
-            op = params.get('op')
-            taskid = params.get('taskid')
-            if op == 'starttask':
-                status = taskdao.find_by_id(taskid)['status']
-                if status == 'running':
-                    process.start(taskid, True)
-                elif status == 'waitting':
-                    process.wait(taskid, True)
-        start()
+    # try:
+    run(process, listener, taskdao, processdao)
+    # except:
+    #     print('---------------------------异常------------------------')
+    #     process_list = processdao.find_by_localhost(localhost)
+    #     command_list = []
+    #     for p in process_list:
+    #         if p['taskid'] == '':
+    #             processdao.delete_by_localhost_and_taskid(localhost, '')
+    #             continue
+    #         if p['taskid'] == 'pausing':
+    #             temp_task = taskdao.find_by_id(p['taskid'])
+    #             temp_task['status'] = 'running'
+    #             taskdao.save(temp_task)
+    #         command_list.append('op=starttask&taskid=' + p['taskid'])
+    #         processdao.delete_by_localhost_and_taskid(localhost, p['taskid'])
+    #     for command in command_list:
+    #         params = Analyze(command)
+    #         op = params.get('op')
+    #         taskid = params.get('taskid')
+    #         if op == 'starttask':
+    #             status = taskdao.find_by_id(taskid)['status']
+    #             if status == 'running':
+    #                 process.start_task(taskid, True)
+    #             elif status == 'waitting':
+    #                 process.wait_task(taskid, True)
+    #     start()
 
 
 if __name__ == '__main__':
