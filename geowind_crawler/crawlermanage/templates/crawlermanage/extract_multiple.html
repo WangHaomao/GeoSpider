@@ -167,6 +167,28 @@ http://www.bootstrap.com"></textarea>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal -->
 </div>
+<div class="modal fade" id="newsModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content" style="border-radius:6px;">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="newsModalTitle"></h4>
+                <h6 class="modal-title" id="newsModalTime"></h6>
+                <h6 class="modal-title" id="newsModalKeywords"></h6>
+                <h6 class="modal-title" >正文链接：<a id="newsModalLink" target="_blank"></a></h6>
+			</div>
+			<div class="modal-body">
+				<p id="newsModalArticle"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				<!--<button type="button" class="btn btn-primary">提交更改</button>-->
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
 {% endblock %}
 {% block script %}
 <script src="../../static/plugins/jQuery/jquery-2.2.3.min.js"></script>
@@ -185,6 +207,18 @@ http://www.bootstrap.com"></textarea>
 
     $('#myModalLink').attr('href',url);
     $("#myModalPic").attr('src',pic_url);
+    //$('#myModalPic').src(pic_url);
+   }
+   function set_news_model(title,time,keywords,url,article){
+    console.log(title)
+    $('#newsModalTitle').html(title);
+    $('#newsModalTime').html('时间：'+time);
+    $('#newsModalKeywords').html('关键词：'+keywords);
+    $('#newsModalLink').html(url);
+    $('#newsModalArticle').html(article);
+
+    $('#newsModalLink').attr('href',url);
+    //$("#newsModalPic").attr('src',pic_url);
     //$('#myModalPic').src(pic_url);
    }
 
@@ -207,17 +241,18 @@ http://www.bootstrap.com"></textarea>
         $('#urls').html('')
         //alert(data['webtype'])
         if(data['webtype']=='article') {
-          //alert(data['urls'])
-          urls = data['urls'].toString()
-          var url_list = urls.split(',')
-          var url_list_len = url_list.length
-          
-          id_list = data['ids'].toString().split(',')
-          id_len = id_list.length;
+          $('#urls').html('')
+          var title_list = data['title'].toString().split(',');
+          var time_list = data['time'].toString().split(',');
+          var keywords_list = data['keywords'].toString().split(',');
+          var url_list = data['urls'].toString().split(',');
+          var article_list = data['article'].toString().split(',');
 
+          var url_list_len = url_list.length;
           for(var i=0; i<url_list_len; i++) {
-            console.log(url_list[i]+"")
-            $('#urls').append("<li><a style='cursor:pointer;' target='blank' href='{%url 'temparticle'%}?id="+id_list[i]+"'>"+url_list[i]+"<a></li>")
+            //console.log(url_list[i]+"")
+            //$('#urls').append("<li><a style='cursor:pointer;' target='blank' href='{%url 'temparticle'%}?id="+id_list[i]+"'>"+url_list[i]+"<a></li>")
+             $('#urls').append('<li><a href="#" data-toggle="modal" data-target="#newsModal" onclick="set_news_model(\''+title_list[i]+'\',\''+time_list[i]+'\',\''+keywords_list[i]+'\',\''+url_list[i]+'\',\''+article_list[i]+'\')">'+url_list[i]+'</a></li>');
           }
 
           $('#test_loading').css('display','none');
@@ -239,7 +274,7 @@ http://www.bootstrap.com"></textarea>
 
           for(var i=0; i<url_list_len; i++) {
 
-            $('#urls').append('<a href="#" data-toggle="modal" data-target="#myModal" onclick="set_goods_model(\''+title_list[i]+'\',\''+price_list[i]+'\',\''+comment_list[i]+'\',\''+url_list[i]+'\',\''+pic_url_list[i]+'\')">'+url_list[i]+'</a>');
+            $('#urls').append('<li><a href="#" data-toggle="modal" data-target="#myModal" onclick="set_goods_model(\''+title_list[i]+'\',\''+price_list[i]+'\',\''+comment_list[i]+'\',\''+url_list[i]+'\',\''+pic_url_list[i]+'\')">'+url_list[i]+'</a></li>');
 
           }
 

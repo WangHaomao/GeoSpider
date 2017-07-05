@@ -27,6 +27,7 @@
 				</button>
 				<h4 class="modal-title" id="myModalLabel"></h4>
                 <h6 class="modal-title" id="myModalTime"></h6>
+                <h6 class="modal-title" id="myModalKeywords"></h6>
 			</div>
 			<div class="modal-body">
 				<p id="myModalArticle"></p>
@@ -63,9 +64,9 @@
                     <td>{{i.id}}</td>
 
                     <td>
-                    <a href="#" data-toggle="modal" data-target="#myModal" onclick="setModel('{{i.title}}','{{i.time}}','{{i.article}}')">{{i.title}}</a>
+                    <a href="#" data-toggle="modal" data-target="#myModal" onclick="setModel('{{i.title}}','{{i.time}}','{{i.keywords}}','{{i.article}}')">{{i.title}}</a>
                     </td>
-                    <!--<td><a href="{%url 'blogdetail' %}?id={{i.id}}" target="_blank">{{i.title}}</a></td>-->
+
                     <td><a href={{i.url}} target="_blank">{{i.url}}</a></td>
                     <td>{{i.keywords}}</td>
                     <td>{{i.time}}</td>
@@ -114,10 +115,10 @@
 <script>
 
 
-  function setModel(title,time,article){
-
+  function setModel(title,time,keywords,article){
     $('#myModalLabel').html('标题：'+title);
     $('#myModalTime').html('发布日期：'+time);
+    $('#myModalKeywords').html('关键词：'+keywords);
     $('#myModalArticle').html(article);
 
   }

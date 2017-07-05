@@ -168,17 +168,22 @@
       </section>
       <section id="process_manage" style="margin-top: 40px;">
         <h2 class="page-header"><a href="#process_manage"># 进程管理</a></h2>
-        <p>展示所有主机中运行爬虫的进程信息。</p>
+        <p>展示所有主机中运行爬虫的进程信息。可以控制进程的状态：唤醒进程、挂起进程、终止进程。</p>
+      </section>
+      <section id="auto_extract" style="margin-top: 40px;">
+        <h2 class="page-header"><a href="#auto_extract"># 正文测试</a></h2>
+        <p><b>正文抽取</b>：输入一个URL，抽取页面数据。</p>
+        <p><b>批量抽取</b>：输入一批URL集合，选择页面类型，抽取页面数据</p>
       </section>
       <section id="article_test" style="margin-top: 40px;">
         <h2 class="page-header"><a href="#article_test"># 正文测试</a></h2>
         <p><b>批量抽取</b>：输入新闻或博客源数据路径和存储路径，从源数据中提取正文存储到指定路径。</p>
         <p><b>批量测试</b>：输入标准结果路径和待测试正文路径，测试正文抽取的准确率。</p>
-        <p><b>单例测试</b>：输入标准结果文件路径和待测试文件路径，对比正文抽取结果</p>
+        <p><b>单例测试</b>：输入标准结果文件路径和待测试文件路径，对比正文抽取结果。</p>
       </section>
       <section id="graphite" style="margin-top: 40px;">
         <h2 class="page-header"><a href="#graphite"># Graphite监控</a></h2>
-        <p><b>Graphite</b>对所有爬虫任务进行监控</p>
+        <p><b>Graphite</b>对所有爬虫任务进行监控。</p>
       </section>
       {% endblock %}
     </section>

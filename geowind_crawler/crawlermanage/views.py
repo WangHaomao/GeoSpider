@@ -180,14 +180,14 @@ def newsdata(request):
 '''
 
 
-def newsdetail(request):
-    id = request.GET.get('id')
-    if id == None:
-        return
-    news = News.objects.get(id=id)
-    if news == None:
-        return
-    return render(request, 'crawlermanage/newsdetail.html', {'news': news})
+# def newsdetail(request):
+#     id = request.GET.get('id')
+#     if id == None:
+#         return
+#     news = News.objects.get(id=id)
+#     if news == None:
+#         return
+#     return render(request, 'crawlermanage/newsdetail.html', {'news': news})
 
 
 '''
@@ -428,14 +428,14 @@ def blogdata(request):
     return render(request, 'crawlermanage/blogdata.html', locals())
 
 
-def blogdetail(request):
-    id = request.GET.get('id')
-    if id == None:
-        return
-    blog = Blog.objects.get(id=id)
-    if blog == None:
-        return
-    return render(request, 'crawlermanage/blogdetail.html', {'blog': blog})
+# def blogdetail(request):
+#     id = request.GET.get('id')
+#     if id == None:
+#         return
+#     blog = Blog.objects.get(id=id)
+#     if blog == None:
+#         return
+#     return render(request, 'crawlermanage/blogdetail.html', {'blog': blog})
 
 
 def extractsinger(request):
@@ -453,16 +453,29 @@ def extractmultiple(request):
         webtype = request.POST.get('webtype', '')
         list_url = starturls.split('\n')
 
+        logger.info(list_url)
         if webtype == 'article':
             TempArticle.objects.delete()
-            list_id = []
+            # list_id = []
+            title_list = []
+            time_list = []
+            keywords_list = []
+            article_list = []
+            url_list = []
             for url in list_url:
                 url = str(url)
                 title, atime, keywords, content = get_article_data(url)
-                temp_article = TempArticle.objects.create(url=url, title=title, time=atime, keywords=keywords,
-                                                          article=content)
-                list_id.append(str(temp_article['id']))
-            ret = {'webtype': webtype, 'urls': list_url, 'ids': (list_id)}
+                # temp_article = TempArticle.objects.create(url=url, title=title, time=atime, keywords=keywords,
+                #                                           article=content)
+                title_list.append(title)
+                time_list.append(atime)
+                keywords_list.append(keywords)
+                url_list.append(url)
+                article_list.append(content)
+                # list_id.append(str(temp_article['id']))
+            # ret = {'webtype': webtype, 'urls': list_url, 'ids': (list_id)}
+            ret = {'webtype': webtype,
+                   'title': title_list, 'time': time_list, 'keywords': keywords_list,'urls':url_list, 'article': article_list}
             return HttpResponse(json.dumps(ret))
         else:
 
