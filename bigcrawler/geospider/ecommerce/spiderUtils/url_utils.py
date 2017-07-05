@@ -97,6 +97,37 @@ def url_sifter(parent_url, url):
 
     return cu_url
 
+
+def pic_url_sifter(parent_url,pic_url):
+
+    if pic_url is None or len(pic_url) == 0:
+        return None
+
+    cu_url = str(pic_url)
+    cuURL_len = len(cu_url)
+    pa_url = str(parent_url)
+    cu_url   = cu_url.replace('"',"")
+    #  去掉开头的／或//
+    if (cu_url.startswith("/")):
+        if (cu_url.startswith("//")):
+            index = 2
+            for ind in range(2, cuURL_len):
+                if (cu_url[ind] is not '/'):
+                    index = ind
+                    break
+
+            cu_url = cu_url[index:cuURL_len]
+        else:
+            cu_url = cu_url[1:cuURL_len]
+
+    if "https://" not in cu_url and "http://" not in cu_url:
+        http_str_header = pa_url.split("//")
+        cu_url = http_str_header[0] + "//" + cu_url
+
+    return cu_url
+
+
+
 def get_url_domain(url):
     res_url = re.search("\.[0-9a-zA-Z]{2,14}\.(com.cn|com|cn|net|org|wang|cc)",url).group()
     return res_url[1:]

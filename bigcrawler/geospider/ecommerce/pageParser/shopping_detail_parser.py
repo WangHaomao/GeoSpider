@@ -1,15 +1,15 @@
 # -*-encoding:utf-8 -*-
-from bs4 import BeautifulSoup
-import requests
+
 import re
-from lxml import etree
-from selenium import webdriver
+import requests
 from geospider.ecommerce.spiderUtils.parser_util import get_soup_by_request,get_soup_by_selenium,get_webdriver,get_soup_by_html_source
-from geospider.ecommerce.spiderUtils.url_utils import url_sifter
+from geospider.ecommerce.spiderUtils.url_utils import pic_url_sifter
+
 import sys
-from lxml.html import fromstring
+
 reload(sys)
 sys.setdefaultencoding('utf8')
+
 
 def _get_price_in_script(soup):
     # print soup.prettify()
@@ -37,7 +37,7 @@ def _get_price_by_class(soup,class_name):
             tag_tmp = tag_tmp.parent
             attemps += 1
 
-        print res_price_list
+        # print res_price_list
         if (len(price_text_list) != 0):
             res_price_list = res_price_list + price_text_list
 
@@ -62,7 +62,8 @@ def _get_price_by_keyword(soup,keyword):
                 one_price =  re.search(reg_digit_keyword,str(s_tag)).group()
                 res_price_list.append(one_price)
             except:
-                print "shopping_detail_parser.py  error"
+                # print "shopping_detail_parser.py  error"
+                pass
 
     # for tag in tag_symbol_list:
     #     ss = str(tag.parent.parent)
@@ -84,7 +85,7 @@ def _get_price_by_keyword(soup,keyword):
             max_appear_price_num = price_dic[each_price]
             max_appear_price = each_price
 
-    print max_appear_price
+    # print max_appear_price
     return max_appear_price
 
 def _get_store_by_key(soup,keyword,url):
@@ -120,12 +121,12 @@ def _get_store_by_key(soup,keyword,url):
                     for index in range(0,store_m_len):
                         message = store_m_list[index]
                         if(index == 0):
-                            print "店铺名：%s"%message
+                            # print "店铺名：%s"%message
                             res_stroe_dict['name'] = message
                         else:
                             re_res = re.search('\d+\.\d+',str(message))
                             if(re_res != None and re.search('\d+\.\d+',str(store_m_list[index-1]))==None):
-                                print ("%s：%s"%(store_m_list[index-1],store_m_list[index]))
+                                # print ("%s：%s"%(store_m_list[index-1],store_m_list[index]))
                                 stroe_comments.append("%s:%s"%(store_m_list[index-1],store_m_list[index]))
             res_stroe_dict['comment_degree'] = ';'.join(stroe_comments)
             # print  res_stroe_dict['comment_degree']
@@ -156,7 +157,7 @@ def get_price(soup):
     _get_price_in_script(soup)
 
     res = _get_price_in_script(soup)
-    print res
+    return res
 # def _get_comments_by_keyword(soup,keyword):
 
 
@@ -181,7 +182,7 @@ def get_comments(soup):
     # driver.get(url)
     xxx = driver.find_element_by_xpath('//*[contains(text(),"%s")]' % key)
 
-    print  xxx.text
+    # print  xxx.text
     # print  xxx.tag
     driver.close()
 
@@ -195,38 +196,84 @@ def get_store(soup,url):
     for keyword in store_keys:
         res_dict = _get_store_by_key(soup, keyword,url)
         if(res_dict !=None and res_dict!={} and res_dict.has_key('store_url')):
-            print res_dict
+            # print res_dict
             return res_dict
         # print res_url
         # if(res_url !=None and res_url !=[]):
         #     test_url =  url_sifter(url,res_url)
         #     print get_soup_by_request(test_url).find('title').text
         #     return url_sifter(url,res_url)
+    return None
 
-def get_pic_url(url):
-    soup = get_soup_by_request(url)
-    for im in soup.find_all('img'):
-        print im
+def get_pic_url(soup,url):
+    img_list = soup.find_all('img')
+    regular = r'\d{3,}x\d{3,}'
+    max_pic_size = -1
+    max_pic_url= ""
+    img_url_set = set()
+    for im in img_list:
+        try:
+            pic_url = pic_url_sifter(url, im['src'])
+            if (pic_url != None and ('jpg' in pic_url or 'png' in pic_url or 'jpeg' in pic_url)):
+                img_url_set.add(pic_url)
+                re_res =  re.search(regular,pic_url).group()
+                re_res_splited = re_res.split('x')
+                pic_size = max(int(re_res_splited[0]),int(re_res_splited[1]))
+
+                if(pic_size > max_pic_size):
+                    max_pic_size = pic_size
+                    max_pic_url = pic_url
+        except:
+            pass
+
+    print max_pic_url
+    if(max_pic_size != -1):
+        return max_pic_url
+
+
+    max_len = -1
+    res_pic_url = ""
+    pic_set = set()
+    for pic_url in img_url_set:
+        try:
+            if(pic_url in pic_set):
+                continue
+            else:pic_set.add(pic_url)
+
+            pic_len = len(requests.get(pic_url).text)
+            if(pic_len > max_len):
+                max_len = pic_len
+                res_pic_url = pic_url
+        except:
+            pass
+
+    return res_pic_url
+
+
 def get_title(url):
     soup = get_soup_by_request(url)
     tag_script = soup.find("title")
-    print tag_script.text
+    return tag_script.text
 
 def get_comment_degree(url):
     key = u"好评"
 
+def get_goods_dict(url):
+    soup = get_soup_by_request(url)
+    res_dict = {}
 
-def shopping_item_parser(url):
+    res_dict['title'] = soup.find("title").text
+    res_dict['price'] = get_price(soup)
+    res_dict['pic_url'] = get_pic_url(soup,url)
+    res_dict['detail_url'] = url
 
-    # soup = get_soup_by_request(url)
-    soup = get_soup_by_selenium(url)
-    # [script.extract() for script in soup.findAll('script')]
-    # print soup.prettify()
-    # 价格
-    get_price(url)
+    store_dict =  get_store(soup,url)
+    if(store_dict !=None and store_dict.has_key('comment_degree') and 'dangdang.com' not in url):
+        res_dict['comment_degree'] = store_dict['comment_degree']
+    else:
+        res_dict['comment_degree'] = ""
 
-
-
+    return res_dict
 if __name__ == '__main__':
     # url = "https://detail.tmall.com/item.htm?spm=a230r.1.14.14.AT6RIa&id=544429684821&cm_id=140105335569ed55e27b&abbucket=20"
     # url = "https://item.taobao.com/item.htm?spm=a230r.1.14.97.oI9e6K&id=545728190154&ns=1&abbucket=20#detail"

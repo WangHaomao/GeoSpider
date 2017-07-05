@@ -8,6 +8,10 @@ sys.setdefaultencoding('utf8')
 from geospider.ecommerce.spiderUtils import log_util
 from geospider.ecommerce.spiderUtils.parser_util import get_soup_by_html_source,\
     get_soup_by_selenium_without_script,get_soup_by_request_without_script
+
+from geospider.ecommerce.spiderUtils.url_utils import url_sifter
+from urllib2 import quote,unquote
+
 import os
 #计算得分
 """
@@ -265,6 +269,7 @@ get_deep 表示当前对某个网页进行了几次获取nav了，即获取nav�
 默认：一般以非大页面类获取的nav都有子目录，所有以进行一次获取nav
 
 """
+
 def mylist_set(_list):
 
     url_set = set()
@@ -305,8 +310,65 @@ def get_nav(url,get_deep):
     else:
         return method,mylist_set(nav)
 
-from geospider.ecommerce.spiderUtils.url_utils import urls_clustering
-import time
+
+def deep_search_get_searchUrl_and_keyword_in_soup(soup,url):
+    res_url = None
+    res_key = None
+    res_method = ""
+    for a in soup.find_all('a'):
+        try:
+            next_url = a.get('href')
+            # and quote(a.text) in next_url
+            http_code_key = quote(a.text.encode('utf-8'))
+            origianl_key = a.text
+            if (next_url != None and 'javascript' not in next_url and http_code_key != None
+                and http_code_key != '' and origianl_key != None and origianl_key != ''):
+                # and http_code_key != None
+                # and http_code_key != '' and origianl_key != None
+                if ('search' in next_url):
+
+                    if (origianl_key in next_url ):
+                        res_url = next_url
+                        res_key = origianl_key
+                        res_method = "ORIGINALKEY"
+                        break
+                    if(http_code_key in next_url):
+                        res_url = next_url
+                        res_key = http_code_key
+                        res_method = "HTTPENCODEKEY"
+                        break
+
+                    re_str = '(%[\w\d]{2,4}\d*)+'
+                    # print next_url
+                    if (re.search(re_str, next_url)):
+                        res_key =  re.search(re_str, next_url).group()
+                        res_url =  next_url
+                        res_method = "REGULARHTTP"
+
+                        break
+        except:
+            pass
+
+    # print res_url
+    return [url_sifter(parent_url=url,url=res_url),res_key,res_method]
+
+def get_searchUrl_and_keyword(p_soup,url):
+    # soup = get_soup_by_request_without_script(url)
+    res_list = deep_search_get_searchUrl_and_keyword_in_soup(p_soup,url)
+    if(res_list[0] == None):
+        soup = get_soup_by_selenium_without_script(url)
+        res_list = deep_search_get_searchUrl_and_keyword_in_soup(soup,url)
+
+    return res_list
+
+"""
+
+1、原串中本来就含有key
+
+2、正则http编码的字符串
+
+"""
+
 if __name__ == '__main__':
 
     # url = 'https://www.taobao.com/'
@@ -322,29 +384,14 @@ if __name__ == '__main__':
     # url = "https://www.amazon.cn/"
     # 美丽说
     # url = "http://www.meilishuo.com/"
-
-    url = "https://www.jd.com/"
-    # url = 'http://www.meilishuo.com/'
+    #
+    # url = "https://www.jd.com/"
     # url = 'http://www.mogujie.com'
 
     # url ='https://www.tmall.com/'
 
 
-    # method,mylist = get_nav(url,0)
-    #
-    # urls = []
-    # for xxlist in mylist:
-    #     print ("%s:%s"%(xxlist[0],xxlist[1]))
+    # deep_search_get_searchUrl_and_keyword(url)
 
-    soup = get_soup_by_request_without_script(url)
-    # print soup.prettify()
-    # print soup.prettify()
-    for a in soup.find_all('a'):
-        try:
-            next_url = a['href']
-            soup1 = get_soup_by_request_without_script(url)
-            for xx in soup1.find_all('a'):
-                if('search' in xx['href']):
-                    print xx
-        except:
-            print 'error'
+
+    pass
