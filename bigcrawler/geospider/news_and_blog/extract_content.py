@@ -81,7 +81,9 @@ def extract_content_by_tag(html_str, article):
     # return remove_space_from_text(article_soup.text)
 
 def remove_space(text):
-    return re.sub("\\s+", '', text)
+    text = re.sub("[\t\r\f]", '', text)
+    # text=text.replace('　','')
+    return text
 
 '''
     抽取正文

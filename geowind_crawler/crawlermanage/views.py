@@ -211,12 +211,6 @@ def layout(request):
         processnum = int(processnum)
         # logger.info(taskname+" "+starturls+" "+describe+" "+webtype+" "+reservationtime+" "+slave)
         list_url = starturls.split('\n')
-        # logger.info(urls)
-        # def not_empty(s):
-        #     return s and s.strip()
-        #
-        # list_url = list(filter(not_empty, urls.split('/')))
-        # status = ''
         starttime = ''
         endtime = ''
         if reservationtime == '':
