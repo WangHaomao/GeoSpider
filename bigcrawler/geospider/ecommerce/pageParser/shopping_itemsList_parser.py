@@ -4,7 +4,7 @@ import json
 import sys
 import pprint
 from lxml import etree
-from geospider.ecommerce.spiderUtils.url_utils import urls_clustering, url_sifter, get_url_domain
+from geospider.ecommerce.spiderUtils.url_utils import urls_clustering, url_sifter, pic_url_sifter
 from geospider. \
     ecommerce.spiderUtils. \
     parser_util \
@@ -79,8 +79,7 @@ def analysis_by_tag(goods_list_tag, url):
                     try:
                         detail_url = url_sifter(url=inner_tag['href'], parent_url=url)
                         if ('javascript' not in detail_url and 'list' not in detail_url and 'search' not in detail_url
-                            and detail_url not in current_url_list and ' ' not in detail_url):
-
+                            and detail_url not in current_url_list and ' ' not in detail_url and 'cart' not in detail_url):
                             current_url_list_len = len(current_url_list)
 
                             check_flag = True
@@ -100,7 +99,7 @@ def analysis_by_tag(goods_list_tag, url):
 
     res_detail_urls_list = urls_clustering(list(detail_url_set))
 
-    pprint.pprint(res_detail_urls_list)
+    # pprint.pprint(res_detail_urls_list)
 
     res_max_len = -1
     res_max_list = []
@@ -311,7 +310,7 @@ def analysis_json_data(url, soup):
             # elif("comment" in key):
             #     print value
             elif ((("img" in key) or ('pic' in key )or (".jpg" in value) or ('.png' in value) and res_goods_dic.has_key('pic_url') is False)):
-                res_goods_dic['pic_url'] = value
+                res_goods_dic['pic_url'] = pic_url_sifter(url,value)
                 print value
                 # pic_urls_list.append(url_sifter(url, value))
         res_goods_dic_list.append(res_goods_dic)
@@ -334,12 +333,6 @@ def debug_script_html_len(url):
 
 
 def analysis_method_selector(soup):
-    # try:
-    #     soup = get_soup_by_request(url)
-    # except:
-    #
-    #     return 'selenium'
-
     tag_script_list = soup.find_all('script')
     max_script_len = -1
 
@@ -396,8 +389,10 @@ if __name__ == '__main__':
 
     # url = "https://s.taobao.com/list?q=%E7%BE%BD%E7%BB%92%E6%9C%8D&bcoffset=12&s=4560"
     # url = "https://s.taobao.com/list?q=%E6%8B%BE%E8%B4%A7"
-    url = 'http://www.meilishuo.com/search/catalog/10057053?action=bags&mt=12.14354.r130506.18023&acm=3.mce.2_10_182yi.14354.0.2PccHqnV8sR9h.m_188513-pos_4?acm=3.mce.2_10_182ya.14354.0.2PccHqnV8sR9h.m_188509-pos_0&mt=12.14354.r130395.18023&action=clothing&page=94&cpc_offset=0'
-    #
+    # url = 'http://www.meilishuo.com/search/catalog/10057053?action=bags&mt=12.14354.r130506.18023&acm=3.mce.2_10_182yi.14354.0.2PccHqnV8sR9h.m_188513-pos_4?acm=3.mce.2_10_182ya.14354.0.2PccHqnV8sR9h.m_188509-pos_0&mt=12.14354.r130395.18023&action=clothing&page=94&cpc_offset=0'
+
+    # url = "https://search.jd.com/Search?keyword=%E7%94%B5%E5%AD%90%E4%B9%A6&enc=utf-8&spm=1.1.5"
+    url = 'http://www.meilishuo.com/search/goods/?page=1&searchKey=%E8%BF%9E%E8%A1%A3%E8%A3%99'
     soup = get_soup_by_request(url)
     print analysis_by_tag(get_goods_list_tag_by_soup(soup),url)
 

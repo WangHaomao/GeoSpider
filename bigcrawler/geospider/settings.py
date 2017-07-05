@@ -36,3 +36,6 @@ ROBOTSTXT_OBEY = False
 COOKIES_ENABLED = False
 
 LOG_LEVEL= 'DEBUG'
+import logging
+logging.getLogger('cluster.matrix').setLevel(logging.WARNING)
+logging.getLogger('chardet.charsetprober').setLevel(logging.WARNING)

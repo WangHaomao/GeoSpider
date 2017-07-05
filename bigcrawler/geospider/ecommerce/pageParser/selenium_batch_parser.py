@@ -140,8 +140,8 @@ def get_all_page_number(url):
 
 
 def get_next_urlList_by_firstpage_url(url):
-    # driver = webdriver.PhantomJS('/usr/local/bin/phantomjs')
-    driver = get_webdriver()
+    driver = webdriver.PhantomJS()
+    # driver = get_webdriver()
     attemps = 0
 
     ATTEMPS_TIMES = 3  # 失败尝试3次
@@ -150,6 +150,7 @@ def get_next_urlList_by_firstpage_url(url):
     while (attemps < ATTEMPS_TIMES):
         driver.get(url)
         time.sleep(3)
+        print driver.current_url
         # print(driver.page_source)
         soup = get_soup_by_html_source(driver.page_source)
         is_find_page3_url = False
@@ -262,7 +263,8 @@ def get_pageUrls_and_all_pageNumber(url):
                         if (descendant.name != None and descendant.name == 'a'):
                             if descendant.text == '3':
                                 is_find_number = True
-                            if (is_find_number and descendant.text.isdigit()):
+                            elif (is_find_number and descendant.text.isdigit()):
+
                                 # print descendant.text
                                 all_page_numer = max(int(descendant.text), all_page_numer)
                         if (is_find_number and descendant.name != None):
@@ -605,11 +607,12 @@ def get_nextpage_info(url):
 
 if __name__ == '__main__':
     print (ctime())
-    url = "https://s.taobao.com/list?q=%E7%BE%BD%E7%BB%92%E6%9C%8D"
 
-    page_list = ['http://category.dangdang.com/cp03.01.00.00.00.00.html',
-                 'http://category.dangdang.com/pg2-cp03.01.00.00.00.00.html',
-                 'http://category.dangdang.com/pg3-cp03.01.00.00.00.00.html']
-    mylist = get_pageKeyList(page_list)
-    print get_all_page_urls_by_pageKeyList(mylist,page_list,20)
+
+    url = 'http://s.vancl.com/search?k=T%E6%81%A4&orig=3'
+
+    sss = get_next_urlList_by_firstpage_url(url)
+    print sss
+    # pplist =  get_pageKeyList(sss)
+    # get_all_page_urls_by_pageKeyList(pplist,sss,100)
     print (ctime())

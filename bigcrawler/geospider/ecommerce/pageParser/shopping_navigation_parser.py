@@ -383,7 +383,7 @@ if __name__ == '__main__':
     # 亚马逊
     # url = "https://www.amazon.cn/"
     # 美丽说
-    # url = "http://www.meilishuo.com/"
+    url = "http://www.meilishuo.com/"
     #
     # url = "https://www.jd.com/"
     # url = 'http://www.mogujie.com'
@@ -391,7 +391,7 @@ if __name__ == '__main__':
     # url ='https://www.tmall.com/'
 
 
-    # deep_search_get_searchUrl_and_keyword(url)
+    print get_searchUrl_and_keyword(get_soup_by_request_without_script(url),url)
 
 
     pass
