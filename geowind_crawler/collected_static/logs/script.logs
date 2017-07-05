@@ -22470,3 +22470,57 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
     (lookup_view_s, args, kwargs, len(patterns), patterns))
 NoReverseMatch: Reverse for 'blogdetail' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-07-05 14:03:41,622 [Thread-2:140124084250368] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 243, in layout
+    processnum=processnum, keywords=keyword_list)
+UnboundLocalError: local variable 'keyword_list' referenced before assignment
+2017-07-05 14:04:20,892 [Thread-4:140124204353280] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 243, in layout
+    webtype=webtype, describe=describe, slave=slave_list, status=status,
+UnboundLocalError: local variable 'keyword_list' referenced before assignment
+2017-07-05 14:04:28,563 [Thread-2:140397528278784] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 244, in layout
+    processnum=processnum, keywords=keyword_list)
+UnboundLocalError: local variable 'keyword_list' referenced before assignment
+2017-07-05 14:05:18,768 [Thread-2:140435445307136] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 235, in layout
+    processnum=processnum, keywords=keyword_list)
+UnboundLocalError: local variable 'keyword_list' referenced before assignment
+2017-07-05 14:10:57,836 [Thread-9:139726932526848] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 234, in layout
+    processnum=processnum, keywords=keyword_list)
+UnboundLocalError: local variable 'keyword_list' referenced before assignment
+2017-07-05 14:11:39,667 [Thread-11:139726932526848] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 234, in layout
+    webtype=webtype, describe=describe, slave=slave_list, status=status,
+UnboundLocalError: local variable 'keyword_list' referenced before assignment

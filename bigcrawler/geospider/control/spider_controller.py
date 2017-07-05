@@ -15,6 +15,7 @@ from geospider.spiders.blog_spider import BlogSpider
 from geospider.spiders.blog_spider_recover import BlogSpiderRecover
 from geospider.spiders.news_spider import NewsSpider
 from geospider.spiders.news_spider_recover import NewsSpiderRecover
+from geospider.spiders.shop_keyword_spider import ShopKeywordSpider
 from geospider.spiders.shop_main_spider import ShopMainSpider
 from geospider.utils.mongodb_helper import connect_mongodb, TaskDao, ProcessDao
 from geospider.utils.redis_helper import connect_redis, URLDao
@@ -26,14 +27,17 @@ def init(taskid, is_restart):
     mongodb = connect_mongodb()
     taskdao = TaskDao(mongodb)
     task = taskdao.find_by_id(taskid)
-
     temp = None
     if "news" == task['webtype']:
-        if is_restart:
-            temp = deepcopy(NewsSpiderRecover)
+        keywords = task['keywords']
+        if len(keywords)==0:
+            if is_restart:
+                temp = deepcopy(NewsSpiderRecover)
+            else:
+                temp = deepcopy(NewsSpider)
         else:
-            temp = deepcopy(NewsSpider)
-
+            temp = deepcopy(ShopKeywordSpider)
+            temp.keywords = keywords
     elif "blog" == task['webtype']:
         if is_restart:
             temp = deepcopy(BlogSpiderRecover)
@@ -43,6 +47,7 @@ def init(taskid, is_restart):
         temp = deepcopy(ShopMainSpider)
     temp.name = taskid
     temp.redis_key = taskid + ":start_urls"
+
 
     redis = connect_redis()
     url_manager = URLDao(redis)

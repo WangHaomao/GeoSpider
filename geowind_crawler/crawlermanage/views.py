@@ -180,14 +180,14 @@ def newsdata(request):
 '''
 
 
-# def newsdetail(request):
-#     id = request.GET.get('id')
-#     if id == None:
-#         return
-#     news = News.objects.get(id=id)
-#     if news == None:
-#         return
-#     return render(request, 'crawlermanage/newsdetail.html', {'news': news})
+def newsdetail(request):
+    id = request.GET.get('id')
+    if id == None:
+        return
+    news = News.objects.get(id=id)
+    if news == None:
+        return
+    return render(request, 'crawlermanage/newsdetail.html', {'news': news})
 
 
 '''
@@ -205,11 +205,14 @@ def layout(request):
         reservationtime = request.POST.get('reservationtime', '')
         slave = request.POST.get('slave', '')
         processnum = request.POST.get('processnum', '')
-        logger.info(processnum)
+        keywords = request.POST.get('keywords', '')
+        keyword_list = []
+        if keywords!='':
+            keyword_list = keywords.split(',')
+        logger.info(keywords)
         if processnum == '':
             processnum = 1
         processnum = int(processnum)
-        # logger.info(taskname+" "+starturls+" "+describe+" "+webtype+" "+reservationtime+" "+slave)
         list_url = starturls.split('\n')
         starttime = ''
         endtime = ''
@@ -220,22 +223,20 @@ def layout(request):
             temp = reservationtime.split('-')
             starttime = temp[0].strip()
             endtime = temp[1].strip()
-            # logger.info(starttime)
-            # logger.info(endtime)
             status = 'waitting'
         slave_list = []
         if slave == '':
             slave = get_attr('LOCAL_HOST')
         slave_list = slave.split(',')
-        logger.info(starttime)
+        if webtype =='ecommerce_keywords':
+            webtype = 'ecommerce'
         task = Task.objects.create(taskname=taskname, starturls=list_url, starttime=starttime, endtime=endtime,
                                    webtype=webtype, describe=describe, slave=slave_list, status=status,
-                                   processnum=processnum)
+                                   processnum=processnum, keywords=keyword_list)
         taskid = str(task['id'])
         logger.info(status)
         msg = 'op=starttask&taskid=' + taskid  # + "&status=" + status
         messager.publish('crawler', msg)
-        # logger.info(taskid)
         ret = {'status': 'success'}
         return HttpResponse(json.dumps(ret))
     else:
@@ -422,14 +423,14 @@ def blogdata(request):
     return render(request, 'crawlermanage/blogdata.html', locals())
 
 
-# def blogdetail(request):
-#     id = request.GET.get('id')
-#     if id == None:
-#         return
-#     blog = Blog.objects.get(id=id)
-#     if blog == None:
-#         return
-#     return render(request, 'crawlermanage/blogdetail.html', {'blog': blog})
+def blogdetail(request):
+    id = request.GET.get('id')
+    if id == None:
+        return
+    blog = Blog.objects.get(id=id)
+    if blog == None:
+        return
+    return render(request, 'crawlermanage/blogdetail.html', {'blog': blog})
 
 
 def extractsinger(request):
@@ -447,7 +448,7 @@ def extractmultiple(request):
         webtype = request.POST.get('webtype', '')
         list_url = starturls.split('\n')
 
-        logger.info(list_url)
+        logger.info(li)
         if webtype == 'article':
             TempArticle.objects.delete()
             # list_id = []

@@ -17,11 +17,13 @@ from geospider.items import Goods,Stores,Ecommerce
 from bs4 import BeautifulSoup
 
 
-class ShopMainSpider(RedisSpider):
+class ShopKeywordSpider(RedisSpider):
     name = "shopspider"
     # allowed_domains = ["https://www.baidu.com"]
 
     redis_key = 'ecommerce:start_urls'
+
+    keywords = []
 
     start_urls = [
         'https://www.taobao.com/',
@@ -37,15 +39,16 @@ class ShopMainSpider(RedisSpider):
         # Dynamically define the allowed domains list.
         domain = kwargs.pop('domain', '')
         print("***********************************************************8")
+        print(self.keywords)
         #self.allowed_domains = filter(None, domain.split(','))
         # db = connect_mongodb()
         # self.urldao = URLDao(db)
         # self.taskid = self.redis_key.split(':')[0]
-        super(ShopMainSpider, self).__init__(*args, **kwargs)
+        super(ShopKeywordSpider, self).__init__(*args, **kwargs)
 
     def parse(self, response):
 
-        GOAL_KEYWORD_list = []
+        GOAL_KEYWORD_list = self.keywords
         searchUrl_and_keyword = get_searchUrl_and_keyword(get_soup_by_html_source(response.text),response.url)
 
 
@@ -59,11 +62,14 @@ class ShopMainSpider(RedisSpider):
 
 
 
+
+
         goal_url_spilted = goal_url.split('&')
         key_index = 0
         simple_url = ""
 
         res_url_list = []
+        res_key_list = []
 
         while key_index < len(goal_url_spilted):
             if (goal_key in goal_url_spilted[key_index]):
@@ -87,6 +93,7 @@ class ShopMainSpider(RedisSpider):
                 item_list_url = simple_url.replace(goal_key, searchKeywordValue)
                 # print item_list_url
                 res_url_list.append(item_list_url)
+                res_key_list.append(quote(keyword.encode('utf-8')))
 
 
         if (len(res_url_list) > 1):
