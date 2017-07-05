@@ -22524,3 +22524,4 @@ Traceback (most recent call last):
   File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 234, in layout
     webtype=webtype, describe=describe, slave=slave_list, status=status,
 UnboundLocalError: local variable 'keyword_list' referenced before assignment
+2017-07-05 14:55:04,602 [Thread-3:140494930716416] [django.request:182] [WARNING]- Not Found: /favicon.ico

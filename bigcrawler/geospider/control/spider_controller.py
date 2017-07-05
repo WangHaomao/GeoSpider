@@ -29,22 +29,22 @@ def init(taskid, is_restart):
     task = taskdao.find_by_id(taskid)
     temp = None
     if "news" == task['webtype']:
-        keywords = task['keywords']
-        if len(keywords)==0:
-            if is_restart:
-                temp = deepcopy(NewsSpiderRecover)
-            else:
-                temp = deepcopy(NewsSpider)
+        if is_restart:
+            temp = deepcopy(NewsSpiderRecover)
         else:
-            temp = deepcopy(ShopKeywordSpider)
-            temp.keywords = keywords
+            temp = deepcopy(NewsSpider)
     elif "blog" == task['webtype']:
         if is_restart:
             temp = deepcopy(BlogSpiderRecover)
         else:
             temp = deepcopy(BlogSpider)
     elif "ecommerce" == task['webtype']:
-        temp = deepcopy(ShopMainSpider)
+        keywords = task['keywords']
+        if len(keywords)==0:
+            temp = deepcopy(ShopMainSpider)
+        else:
+            temp = deepcopy(ShopKeywordSpider)
+            temp.keywords = keywords
     temp.name = taskid
     temp.redis_key = taskid + ":start_urls"
 
