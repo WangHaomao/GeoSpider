@@ -27,173 +27,138 @@
 </head>
 {% endblock %}
 {% block maincontent %}
-<div>
-          <div class="nav-tabs-custom">
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#task_control" data-toggle="tab">任务参数</a></li>
-              <li><a href="#task_data" data-toggle="tab">任务数据</a></li>
-            </ul>
-              <div class="tab-content">
-              <div class="active tab-pane" id="task_control">
-              	<div style="width: 100%">
-                  <div class="box box-primary box-solid">
-                    <div class="box-header with-border">
-                      <h3 class="box-title">基本信息</h3>
+<div class="col-md-12">
+             
+      <div class="box box-primary box-solid">
+        <div class="box-header with-border">
+          <h3 class="box-title">基本信息</h3>
 
-                      <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                        </button>
-                      </div>
-                      <!-- /.box-tools -->
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body" style="display: block;">
-                      <table class="table table-bordered table-striped">
-                        <tbody>
-                          <tr>
-                            <th><label>任务ID</label></th>
-                            <td>{{task.id}}</td>
-                            <th><label>任务名</label></th>
-                            <td>{{task.taskname}}</td>
-                            <th><label>任务类型</label></th>
-                            <td>{% if task.webtype = 'news' %}
-                                新闻
-                                {% elif task.webtype = 'blog' %}
-                                博客
-                                {% elif task.webtype = 'ecommerce' %}
-                                电商
-                                {% endif %}
-                            </td>
-
-                          </tr>
-                          <tr>
-
-                            <th><label>开始时间</label></th>
-                            <td>{{task.starttime}}</td>
-                            <th><label>结束时间</label></th>
-                            <td>
-                            <!-- <a href="#" id="end_time" class="editable editable-click editable-empty">自动停止，点击设置</a> -->
-                            <!-- <a href="#" id="end_time" data-type="combodate" data-pk="1" data-url="/post" data-value="1984-05-15" data-title="Select date"></a> -->
-                            {% if task.endtime %}
-                              {{task.endtime}}
-                              <!-- <a href="#" id="end_time" class="editable editable-click editable-empty" data-original-title="" title="">默认自动停止，点击设置</a> -->
-                              {% endif %}
-
-                               
-                            </td>
-                            <th><label>当前状态</label></th>
-                            <!-- <td>
-                              <span class="label label-success" id="status_span">
-                                <a href="#" id="status_a" class="editable editable-click" style="color: white; ">正在运行</a>
-                              </span>
-                            </td> -->
-                              <td>
-                                {% if task.status = 'running' %}
-                                <span id="span_{{task.id}}" class="label label-success" >
-                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'running')" style="color: white; text-decoration: none">运行</a>
-                                </span>
-                                {% elif task.status = 'pausing'  %}
-                                 <span id="span_{{task.id}}" class="label label-primary" >
-                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'pausing')" style="color: white; text-decoration: none">暂停</a>
-                                 </span>
-                                {% elif task.status = 'error' %}
-                                <span id="span_{{task.id}}" class="label label-danger">
-                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">故障</a>
-                                </span>
-                                {% elif task.status = 'stopping' %}
-                                <span id="span_{{task.id}}" class="label label-warning">
-                                    <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">停止</a>
-                                </span>
-                                {% endif %}
-                                </td>
-                          </tr>
-                          <tr>
-                            <th><label>目标URL</label></th>
-                            <td colspan="6">
-                            <!-- 你自己修改一下。。。。 -->
-                              <!-- <a href="https://www.taobao.com" style="display: block;" target="_blank"> https://www.taobao.com</a>
-                              <a style="display: block;" target="_blank"> http://www.jd.com</a> -->
-                              {% for url in task.starturls %}
-                                <a href="{{url}}" style="display: block;" target="_blank">{{url}}</a>
-                              {% endfor %}
-
-                            </td>
-                          </tr>
-                          <tr>
-                            <th><label>主机</label></th>
-                            <td colspan="6">
-                              {% for ip in task.slave %}
-                                <a style="display: block;">{{ip}}</a>
-                              {% endfor %}
-
-                            </td>
-                          </tr>
-                          <tr>
-                            <th><label>任务描述</label></th>
-                            <td colspan="6">
-                              <textarea class="form-control" rows="3" placeholder="">{{task.describe}}</textarea>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th><label>查看日志</label></th>
-                            <td colspan="6">
-                              <a href="">任务编号.log</a>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <!-- /.box-body -->
-                  </div>
-                  <!-- /.box -->
-
-                <div style="width: 100%">
-                  <div class="box box-primary collapsed-box box-solid">
-                    <div class="box-header with-border">
-                      <h3 class="box-title">分布式参数</h3>
-
-                      <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
-                        </button>
-                      </div>
-                      <!-- /.box-tools -->
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                      The body of the box
-                    </div>
-                    <!-- /.box-body -->
-                  </div>
-                  <!-- /.box -->
-                </div>
-              <!-- /.tab-pane -->
-              </div>
-              </div>
-              <div class="tab-pane" id="task_data">
-                <div class="nav-tabs-custom">
-                  <ul class="nav nav-tabs">
-                    <li class="active"><a href="#data_table1" data-toggle="tab">表1</a></li>
-                    <li><a href="#data_table2" data-toggle="tab">表2</a></li>
-                  </ul>
-                  <div class="tab-content">
-                    <div class="active tab-pane" id="data_table1">
-
-                          <h1>你把数据放到这里来</h1>
-                    </div>
-                    <div class="tab-pane" id="data_table2">
-                      <h1>表2</h1>
-                    </div>
-                    <!-- /.tab-pane -->
-                  </div>
-                  <!-- /.tab-content -->
-                </div>
-              </div>
-              <!-- /.tab-pane -->
-            </div>
-            <!-- /.tab-content -->
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
           </div>
-          <!-- /.nav-tabs-custom -->
+          <!-- /.box-tools -->
         </div>
+        <!-- /.box-header -->
+        <div class="box-body" style="display: block;">
+          <table class="table table-bordered table-striped">
+            <tbody>
+              <tr>
+                <th><label>任务ID</label></th>
+                <td>{{task.id}}</td>
+                <th><label>任务名</label></th>
+                <td>{{task.taskname}}</td>
+                <th><label>任务类型</label></th>
+                <td>{% if task.webtype = 'news' %}
+                    新闻
+                    {% elif task.webtype = 'blog' %}
+                    博客
+                    {% elif task.webtype = 'ecommerce' %}
+                    电商
+                    {% endif %}
+                </td>
+
+              </tr>
+              <tr>
+
+                <th><label>开始时间</label></th>
+                <td>{{task.starttime}}</td>
+                <th><label>结束时间</label></th>
+                <td>
+                <!-- <a href="#" id="end_time" class="editable editable-click editable-empty">自动停止，点击设置</a> -->
+                <!-- <a href="#" id="end_time" data-type="combodate" data-pk="1" data-url="/post" data-value="1984-05-15" data-title="Select date"></a> -->
+                {% if task.endtime %}
+                  {{task.endtime}}
+                  <!-- <a href="#" id="end_time" class="editable editable-click editable-empty" data-original-title="" title="">默认自动停止，点击设置</a> -->
+                  {% endif %}
+
+                   
+                </td>
+                <th><label>当前状态</label></th>
+                <!-- <td>
+                  <span class="label label-success" id="status_span">
+                    <a href="#" id="status_a" class="editable editable-click" style="color: white; ">正在运行</a>
+                  </span>
+                </td> -->
+                  <td>
+                    {% if task.status = 'running' %}
+                    <span id="span_{{task.id}}" class="label label-success" >
+                        <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'running')" style="color: white; text-decoration: none">运行</a>
+                    </span>
+                    {% elif task.status = 'pausing'  %}
+                     <span id="span_{{task.id}}" class="label label-primary" >
+                        <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'pausing')" style="color: white; text-decoration: none">暂停</a>
+                     </span>
+                    {% elif task.status = 'error' %}
+                    <span id="span_{{task.id}}" class="label label-danger">
+                        <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">故障</a>
+                    </span>
+                    {% elif task.status = 'stopping' %}
+                    <span id="span_{{task.id}}" class="label label-warning">
+                        <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">停止</a>
+                    </span>
+                    {% endif %}
+                    </td>
+              </tr>
+              <tr>
+                <th><label>目标URL</label></th>
+                <td colspan="6">
+                <!-- 你自己修改一下。。。。 -->
+                  <!-- <a href="https://www.taobao.com" style="display: block;" target="_blank"> https://www.taobao.com</a>
+                  <a style="display: block;" target="_blank"> http://www.jd.com</a> -->
+                  {% for url in task.starturls %}
+                    <a href="{{url}}" style="display: block;" target="_blank">{{url}}</a>
+                  {% endfor %}
+
+                </td>
+              </tr>
+              <tr>
+                <th><label>主机</label></th>
+                <td colspan="6">
+                  {% for ip in task.slave %}
+                    <a style="display: block;">{{ip}}</a>
+                  {% endfor %}
+
+                </td>
+              </tr>
+              <tr>
+                <th><label>任务描述</label></th>
+                <td colspan="6">
+                  <textarea class="form-control" rows="3" placeholder="">{{task.describe}}</textarea>
+                </td>
+              </tr>
+              <tr>
+                <th><label>查看日志</label></th>
+                <td colspan="6">
+                  <a href="">任务编号.log</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+      <div class="box box-primary collapsed-box box-solid">
+        <div class="box-header with-border">
+          <h3 class="box-title">分布式参数</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
+            </button>
+          </div>
+          <!-- /.box-tools -->
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+          The body of the box
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+  <!-- /.tab-pane -->
+</div>
+          
 {% endblock %}
 {% block script %}
 <script src="../../static/plugins/jQuery/jquery-2.2.3.min.js"></script>

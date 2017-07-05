@@ -12,74 +12,27 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/models.py">
+      <file leaf-file-name="extract_multiple.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1235">
-              <caret line="68" column="39" lean-forward="false" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blogdata.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2242">
-              <caret line="118" column="41" lean-forward="false" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newsdetail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/newsdetail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1843">
-              <caret line="97" column="80" lean-forward="false" selection-start-line="97" selection-start-column="80" selection-end-line="97" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geowind_crawler/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="57" column="49" lean-forward="false" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ecommerce_parser.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce_parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="356">
+              <caret line="254" column="255" lean-forward="false" selection-start-line="254" selection-start-column="255" selection-end-line="254" selection-end-column="255" />
               <folding>
-                <element signature="e#25#34#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+                <marker date="1499251286492" expanded="true" signature="10977:11025" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="machine_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/machine_list.html">
+      <file leaf-file-name="blogdata.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1729">
-              <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="extract_multiple.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4560">
-              <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="220">
+              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,10 +40,20 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawlermanage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9025">
-              <caret line="489" column="12" lean-forward="false" selection-start-line="489" selection-start-column="12" selection-end-line="490" selection-end-column="120" />
+            <state relative-caret-position="193">
+              <caret line="190" column="0" lean-forward="true" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geowind_crawler/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding>
-                <element signature="e#26#37#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,27 +74,38 @@
       <find>print</find>
       <find>log</find>
       <find>prin</find>
+      <find>model</find>
+      <find>setModel</find>
+      <find>myModalTime</find>
+      <find>myModalKeywords</find>
+      <find>blogdeta</find>
+      <find>newsdetail</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/crawlermanage/utils/parser_util.py" />
-        <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/machine_list.html" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_singer.html" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_single.html" />
         <option value="$PROJECT_DIR$/geowind_crawler/settings.py" />
-        <option value="$PROJECT_DIR$/crawlermanage/models.py" />
-        <option value="$PROJECT_DIR$/crawlermanage/views.py" />
-        <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce_parser.py" />
+        <option value="$PROJECT_DIR$/crawlermanage/models.py" />
+        <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/newsdata.html" />
+        <option value="$PROJECT_DIR$/crawlermanage/utils/article_parser.py" />
+        <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html" />
+        <option value="$PROJECT_DIR$/crawlermanage/views.py" />
+        <option value="$PROJECT_DIR$/geowind_crawler/urls.py" />
+        <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="65" />
+    <option name="y" value="-6" />
+    <option name="width" value="1535" />
+    <option name="height" value="906" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -149,6 +123,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -203,43 +178,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geowind_crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geowind_crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crawlermanage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geowind_crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="geowind_crawler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="crawlermanage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -256,19 +199,14 @@
               <option name="myItemId" value="collected_static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bigcrawler" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -287,7 +225,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ecommerce_parser">
+  <component name="RunManager" selected="Python.article_parser">
     <configuration default="false" name="ecommerce_parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -301,6 +239,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="geowind_crawler" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawlermanage/utils/ecommerce_parser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="article_parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawlermanage/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="geowind_crawler" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawlermanage/utils/article_parser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -370,12 +326,14 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.ecommerce_parser" />
+      <item index="1" class="java.lang.String" itemvalue="Python.article_parser" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.ecommerce_parser" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.article_parser" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ecommerce_parser" />
       </list>
     </recent_temporary>
   </component>
@@ -393,17 +351,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="65" y="-6" width="1535" height="906" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14834578" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19022103" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33716077" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33631712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286445" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -446,6 +404,126 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/crawlermanage/models.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="102" column="14" lean-forward="true" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/newsdetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1940">
+          <caret line="97" column="80" lean-forward="false" selection-start-line="97" selection-start-column="80" selection-end-line="97" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="57" column="49" lean-forward="false" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
+          <folding>
+            <marker date="1499245119317" expanded="true" signature="1132:1334" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1365:1887" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1943:2447" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1949:2444" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2121:2437" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2157:2426" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2506:2580" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2595:2721" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2612:2719" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2835:2964" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3060:3160" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3325:5708" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3401:3554" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3423:3547" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3573:3578" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3598:4948" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3623:3755" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3778:4086" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4108:4229" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4260:4586" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4617:4941" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4967:5706" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4987:5104" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5138:5253" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5293:5408" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5438:5553" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5576:5699" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/machine_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1820">
+          <caret line="91" column="19" lean-forward="true" selection-start-line="91" selection-start-column="19" selection-end-line="91" selection-end-column="19" />
+          <folding>
+            <marker date="1499245119309" expanded="true" signature="3581:5262" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3607:4037" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3619:3715" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3630:3702" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3727:4028" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3771:3996" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4043:5230" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4070:4256" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4098:4249" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4316:5223" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4340:5202" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4352:5193" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4363:5180" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4376:4962" ph="..." />
+            <marker date="1499245119309" expanded="false" signature="4416:4431" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4432:4947" ph="..." />
+            <marker date="1499245119309" expanded="false" signature="4499:4506" ph="«" />
+            <marker date="1499245119309" expanded="false" signature="4918:4925" ph="»" />
+            <marker date="1499245119309" expanded="true" signature="4975:5168" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5123:5154" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5418:6296" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5463:6266" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5495:6233" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5528:5716" ph="..." />
+            <marker date="1499245119309" expanded="false" signature="5639:5646" ph="×" />
+            <marker date="1499245119309" expanded="true" signature="5747:6011" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5781:5998" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5885:5982" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="6044:6222" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="6864:8047" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3540">
+          <caret line="177" column="0" lean-forward="false" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <marker date="1499251286492" expanded="true" signature="10977:11025" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9220">
+          <caret line="475" column="0" lean-forward="true" selection-start-line="475" selection-start-column="0" selection-end-line="475" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/models.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1235">
           <caret line="68" column="39" lean-forward="false" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
           <folding />
@@ -456,7 +534,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2242">
           <caret line="118" column="41" lean-forward="false" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -472,7 +552,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" column="49" lean-forward="false" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
-          <folding />
+          <folding>
+            <marker date="1499245119317" expanded="true" signature="1132:1334" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1365:1887" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1943:2447" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1949:2444" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2121:2437" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2157:2426" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2506:2580" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2595:2721" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2612:2719" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2835:2964" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3060:3160" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3325:5708" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3401:3554" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3423:3547" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3573:3578" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3598:4948" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3623:3755" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3778:4086" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4108:4229" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4260:4586" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4617:4941" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4967:5706" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4987:5104" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5138:5253" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5293:5408" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5438:5553" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5576:5699" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -480,7 +588,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1729">
           <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
-          <folding />
+          <folding>
+            <marker date="1499245119309" expanded="true" signature="3581:5262" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3607:4037" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3619:3715" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3630:3702" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3727:4028" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3771:3996" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4043:5230" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4070:4256" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4098:4249" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4316:5223" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4340:5202" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4352:5193" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4363:5180" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4376:4962" ph="..." />
+            <marker date="1499245119309" expanded="false" signature="4416:4431" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4432:4947" ph="..." />
+            <marker date="1499245119309" expanded="false" signature="4499:4506" ph="«" />
+            <marker date="1499245119309" expanded="false" signature="4918:4925" ph="»" />
+            <marker date="1499245119309" expanded="true" signature="4975:5168" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5123:5154" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5418:6296" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5463:6266" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5495:6233" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5528:5716" ph="..." />
+            <marker date="1499245119309" expanded="false" signature="5639:5646" ph="×" />
+            <marker date="1499245119309" expanded="true" signature="5747:6011" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5781:5998" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5885:5982" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="6044:6222" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="6864:8047" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -488,7 +627,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4560">
           <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <marker date="1499251286492" expanded="true" signature="10977:11025" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -496,22 +638,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9025">
           <caret line="489" column="12" lean-forward="false" selection-start-line="489" selection-start-column="12" selection-end-line="490" selection-end-column="120" />
-          <folding>
-            <element signature="e#26#37#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="e#25#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce_parser.py" />
     <entry file="file://$PROJECT_DIR$/crawlermanage/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -524,7 +655,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2242">
           <caret line="118" column="41" lean-forward="false" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -540,25 +673,75 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" column="49" lean-forward="false" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6308">
-          <caret line="334" column="35" lean-forward="false" selection-start-line="334" selection-start-column="35" selection-end-line="334" selection-end-column="35" />
           <folding>
-            <element signature="e#25#34#0" expanded="true" />
+            <marker date="1499245119317" expanded="true" signature="1132:1334" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1365:1887" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1943:2447" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1949:2444" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2121:2437" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2157:2426" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2506:2580" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2595:2721" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2612:2719" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2835:2964" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3060:3160" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3325:5708" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3401:3554" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3423:3547" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3573:3578" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3598:4948" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3623:3755" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3778:4086" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4108:4229" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4260:4586" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4617:4941" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4967:5706" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4987:5104" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5138:5253" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5293:5408" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5438:5553" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5576:5699" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce_parser.py" />
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/machine_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1729">
           <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
-          <folding />
+          <folding>
+            <marker date="1499245119309" expanded="true" signature="3581:5262" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3607:4037" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3619:3715" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3630:3702" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3727:4028" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3771:3996" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4043:5230" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4070:4256" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4098:4249" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4316:5223" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4340:5202" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4352:5193" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4363:5180" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4376:4962" ph="..." />
+            <marker date="1499245119309" expanded="false" signature="4416:4431" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4432:4947" ph="..." />
+            <marker date="1499245119309" expanded="false" signature="4499:4506" ph="«" />
+            <marker date="1499245119309" expanded="false" signature="4918:4925" ph="»" />
+            <marker date="1499245119309" expanded="true" signature="4975:5168" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5123:5154" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5418:6296" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5463:6266" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5495:6233" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5528:5716" ph="..." />
+            <marker date="1499245119309" expanded="false" signature="5639:5646" ph="×" />
+            <marker date="1499245119309" expanded="true" signature="5747:6011" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5781:5998" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5885:5982" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="6044:6222" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="6864:8047" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -566,7 +749,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4560">
           <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <marker date="1499251286492" expanded="true" signature="10977:11025" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -574,24 +760,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9025">
           <caret line="489" column="12" lean-forward="false" selection-start-line="489" selection-start-column="12" selection-end-line="490" selection-end-column="120" />
-          <folding>
-            <element signature="e#26#37#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/parser_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/parser_util.py" />
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -599,7 +779,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1501">
           <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1499245119317" expanded="true" signature="1132:1334" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1365:1887" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1943:2447" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1949:2444" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2121:2437" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2157:2426" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2506:2580" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2595:2721" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2612:2719" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2835:2964" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3060:3160" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3325:5708" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3401:3554" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3423:3547" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3573:3578" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3598:4948" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3623:3755" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3778:4086" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4108:4229" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4260:4586" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4617:4941" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4967:5706" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4987:5104" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5138:5253" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5293:5408" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5438:5553" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5576:5699" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -610,18 +818,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/parser_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/parser_util.py" />
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -629,20 +833,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1501">
           <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5339">
-          <caret line="283" column="20" lean-forward="true" selection-start-line="283" selection-start-column="20" selection-end-line="283" selection-end-column="20" />
           <folding>
-            <element signature="e#25#34#0" expanded="true" />
+            <marker date="1499245119317" expanded="true" signature="1132:1334" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1365:1887" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1943:2447" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1949:2444" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2121:2437" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2157:2426" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2506:2580" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2595:2721" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2612:2719" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2835:2964" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3060:3160" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3325:5708" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3401:3554" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3423:3547" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3573:3578" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3598:4948" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3623:3755" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3778:4086" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4108:4229" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4260:4586" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4617:4941" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4967:5706" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4987:5104" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5138:5253" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5293:5408" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5438:5553" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5576:5699" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce_parser.py" />
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/tasks.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -650,13 +873,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/parser_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/parser_util.py" />
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/tasks.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -699,14 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/machine_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1729">
-          <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdetail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -714,62 +923,158 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4560">
-          <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2242">
-          <caret line="118" column="41" lean-forward="false" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1235">
-          <caret line="68" column="39" lean-forward="false" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+        <state relative-caret-position="-633">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/views.py">
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/article_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9025">
-          <caret line="489" column="12" lean-forward="false" selection-start-line="489" selection-start-column="12" selection-end-line="490" selection-end-column="120" />
-          <folding>
-            <element signature="e#26#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="49" lean-forward="false" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
+        <state relative-caret-position="93">
+          <caret line="197" column="30" lean-forward="true" selection-start-line="197" selection-start-column="30" selection-end-line="197" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/newsdetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1843">
+        <state relative-caret-position="424">
           <caret line="97" column="80" lean-forward="false" selection-start-line="97" selection-start-column="80" selection-end-line="97" selection-end-column="80" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/machine_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1820">
+          <caret line="91" column="19" lean-forward="false" selection-start-line="91" selection-start-column="19" selection-end-line="91" selection-end-column="19" />
+          <folding>
+            <marker date="1499245119309" expanded="true" signature="3581:5262" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3607:4037" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3619:3715" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3630:3702" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3727:4028" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="3771:3996" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4043:5230" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4070:4256" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4098:4249" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4316:5223" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4340:5202" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4352:5193" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4363:5180" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4376:4962" ph="..." />
+            <marker date="1499245119309" expanded="false" signature="4416:4431" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="4432:4947" ph="..." />
+            <marker date="1499245119309" expanded="false" signature="4499:4506" ph="«" />
+            <marker date="1499245119309" expanded="false" signature="4918:4925" ph="»" />
+            <marker date="1499245119309" expanded="true" signature="4975:5168" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5123:5154" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5418:6296" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5463:6266" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5495:6233" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5528:5716" ph="..." />
+            <marker date="1499245119309" expanded="false" signature="5639:5646" ph="×" />
+            <marker date="1499245119309" expanded="true" signature="5747:6011" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5781:5998" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="5885:5982" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="6044:6222" ph="..." />
+            <marker date="1499245119309" expanded="true" signature="6864:8047" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="57" column="49" lean-forward="false" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
+          <folding>
+            <marker date="1499245119317" expanded="true" signature="1132:1334" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1365:1887" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1943:2447" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="1949:2444" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2121:2437" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2157:2426" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2506:2580" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2595:2721" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2612:2719" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="2835:2964" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3060:3160" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3325:5708" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3401:3554" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3423:3547" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3573:3578" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3598:4948" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3623:3755" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="3778:4086" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4108:4229" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4260:4586" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4617:4941" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4967:5706" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="4987:5104" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5138:5253" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5293:5408" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5438:5553" ph="..." />
+            <marker date="1499245119317" expanded="true" signature="5576:5699" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/newsdata.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce_parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="164">
+          <caret line="333" column="4" lean-forward="false" selection-start-line="333" selection-start-column="4" selection-end-line="333" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="254" column="255" lean-forward="false" selection-start-line="254" selection-start-column="255" selection-end-line="254" selection-end-column="255" />
           <folding>
-            <element signature="e#25#34#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
+            <marker date="1499251286492" expanded="true" signature="10977:11025" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="190" column="0" lean-forward="true" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

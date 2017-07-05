@@ -18,6 +18,27 @@
 </head>
 {% endblock %}
 {% block maincontent %}
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content" style="border-radius:6px;">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel"></h4>
+                <h6 class="modal-title" id="myModalTime"></h6>
+                <h6 class="modal-title" id="myModalKeywords"></h6>
+			</div>
+			<div class="modal-body">
+				<p id="myModalArticle"></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				<!--<button type="button" class="btn btn-primary">提交更改</button>-->
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
 <section class="content">
       <div class="row">
         <div class="box">
@@ -103,7 +124,10 @@
                   {% for i in p.p_content %}
                   <tr>
                     <td>{{i.id}}</td>
-                    <td><a href="{%url 'newsdetail' %}?id={{i.id}}" target="_blank">{{i.title}}</a></td>
+                    <td>
+                    <a href="#" data-toggle="modal" data-target="#myModal" onclick="setModel('{{i.title}}','{{i.time}}','{{i.keywords}}','{{i.article}}')">{{i.title}}</a>
+                    </td>
+                    <!--<td><a href="{%url 'blogdetail' %}?id={{i.id}}" target="_blank">{{i.title}}</a></td>-->
                     <td><a href={{i.url}} target="_blank">{{i.url}}</a></td>
                     <td>{{i.keywords}}</td>
                     <td>{{i.time}}</td>
@@ -150,6 +174,13 @@
 <script src="../../static/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../../static/plugins/datatables/dataTables.bootstrap.min.js"></script>
 <script>
+  function setModel(title,time,keywords,article){
+    $('#myModalLabel').html('标题：'+title);
+    $('#myModalTime').html('发布日期：'+time);
+    $('#myModalKeywords').html('关键词：'+keywords);
+    $('#myModalArticle').html(article);
+
+  }
   $(function () {
     // $("#example1").DataTable();
     $('#example1').DataTable({
