@@ -22470,3 +22470,4 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
     (lookup_view_s, args, kwargs, len(patterns), patterns))
 NoReverseMatch: Reverse for 'blogdetail' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-07-05 21:26:26,028 [Thread-6:139886322054912] [django.request:152] [WARNING]- Not Found: /favicon.ico
