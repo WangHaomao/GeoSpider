@@ -258,6 +258,18 @@ def get_title(url):
 def get_comment_degree(url):
     key = u"好评"
 
+def get_goods_dict_without_stroe(url):
+    soup = get_soup_by_request(url)
+    res_dict = {}
+
+    res_dict['title'] = soup.find("title").text
+    res_dict['price'] = get_price(soup)
+    res_dict['pic_url'] = get_pic_url(soup, url)
+    res_dict['detail_url'] = url
+
+    return res_dict
+
+
 def get_goods_dict(url):
     soup = get_soup_by_request(url)
     res_dict = {}
@@ -280,11 +292,11 @@ if __name__ == '__main__':
     # url = "https://item.jd.com/11225370508.html"
     # url = "http://item.meilishuo.com/detail/1kaosga?acm=3.ms.2_4_1kaosga.0.24476-25176.94mOaqibAUDJd.t_0-lc_3&ptp=1.9Hyayb.classsearch_mls_1kaosga_2017%E6%96%B0%E6%AC%BE%E6%AC%A2%E4%B9%90%E9%A2%82%E7%8E%8B%E5%AD%90%E6%96%87%E6%9B%B2%E7%AD%B1%E7%BB%A1%E5%90%8C%E6%AC%BE%E5%8C%85%E6%97%B6%E5%B0%9A%E5%B0%8F%E6%96%B9%E5%8C%85%E5%8D%95%E8%82%A9%E6%96%9C%E6%8C%8E%E5%B0%8F%E5%8C%85%E5%8C%85_10057053_pop.1.mNWwi"
     # url = "http://shop.mogujie.com/detail/18jws1w?acm=3.ms.1_4_18jws1w.43.1185-22922.wGTRPqnDRVaKO.t_0-lc_4&ptp=1.eW5XD._b_4bce2add492e4c56_2.1.DijfM"
-    url = 'http://product.dangdang.com/22828480.html'
+    url = 'http://product.dangdang.com/23512622.html'
     # get_comments(url)
 
 
-    get_price(get_soup_by_request((url)))
+    print get_price(get_soup_by_request((url)))
     # get_store(get_soup_by_request(url),url)
     # get_title(url)
     # get_pic_url(url)

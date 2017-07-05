@@ -44,81 +44,54 @@ class ShopMainSpider(RedisSpider):
         super(ShopMainSpider, self).__init__(*args, **kwargs)
 
     def parse(self, response):
-        searchUrl_and_keyword = get_searchUrl_and_keyword(get_soup_by_html_source(response.text),response.url)
-        number, mylist = get_nav(response.url, 0)
-        # 第一遍遍历
-        goal_url = ""
-        goal_key = ""
-        goal_url_len = -1
-        all_meets_url_number = 0  # 统计有多少个关键字在url中
-        for tlist in mylist:
-            # pass
-            o_url = tlist[1]
-            o_key = tlist[0]
-            if ((o_key != None and o_url != None and o_key in o_url)
-                and ("search" in o_url or 'list' in o_url)):
-                if goal_url_len == -1 or len(tlist[1]) < goal_url_len:
-                    goal_url = tlist[1]
-                    goal_key = tlist[0]
-                    goal_url_len = len(tlist[1])
 
-                all_meets_url_number += 1
-        print goal_url
-        # 用一下查询到的关键字
-        if(goal_url_len == -1 and searchUrl_and_keyword[0] != None):
-            goal_url = searchUrl_and_keyword[0]
-            goal_key = searchUrl_and_keyword[1]
-            goal_url_len = len(goal_url)
+        GOAL_KEYWORD_list = []
+        searchUrl_and_keyword = get_searchUrl_and_keyword(get_soup_by_html_source(response.text),response.url)
+
+
+        if(searchUrl_and_keyword[0] == None):
+            raise Exception('查询搜索URL失败')
+
+        # 第一遍遍历
+        goal_url = searchUrl_and_keyword[0]
+        goal_key = searchUrl_and_keyword[1]
+        goal_url_len = len(goal_url)
+
+
+
+        goal_url_spilted = goal_url.split('&')
+        key_index = 0
+        simple_url = ""
 
         res_url_list = []
-        res_key_list = []
-        if (goal_url_len != -1):
-            """
-                对url进行一遍简化
-            """
-            goal_url_spilted = goal_url.split('&')
-            key_index = 0
-            simple_url = ""
-            # print goal_url_spilted
-            while key_index < len(goal_url_spilted):
-                if (goal_key in goal_url_spilted[key_index]):
-                    # [:]左闭右开
-                    simple_url = ('&'.join(goal_url_spilted[:key_index + 1]))
 
-                    key_index += 1
-                    break
+        while key_index < len(goal_url_spilted):
+            if (goal_key in goal_url_spilted[key_index]):
+                # [:]左闭右开
+                simple_url = ('&'.join(goal_url_spilted[:key_index + 1]))
+
                 key_index += 1
-            # print goal_url
-            original_html_len = len(get_html_with_request(goal_url))
+                break
+            key_index += 1
+        # print goal_url
+        original_html_len = len(get_html_with_request(goal_url))
 
-            while (key_index < len(goal_url_spilted)):
-                if (original_html_len <= len(get_html_with_request(simple_url))):
-                    break
-                simple_url = simple_url + "&" + goal_url_spilted[key_index]
-                key_index += 1
-            for tlist in mylist:
-                if tlist[0] != None and tlist[0] != '':
-                    searchKeywordValue = quote(tlist[0].encode('utf8'))
-                    item_list_url = simple_url.replace(goal_key, searchKeywordValue)
-                    # print item_list_url
-                    res_url_list.append(item_list_url)
-                    res_key_list.append(quote(tlist[0].encode('utf-8')))
-
-
-
-        else:
-            # 假设所有url类型都相同，且默认为商品列表页面，进行解析
-            for tlist in mylist:
-                if (tlist[1] != None and tlist[1] != '' and (
-                            'list' in tlist[1] or 'search' in tlist[1] or 'category' in tlist[1])):
-                    res_url_list.append(tlist[1])
-
+        while (key_index < len(goal_url_spilted)):
+            if (original_html_len <= len(get_html_with_request(simple_url))):
+                break
+            simple_url = simple_url + "&" + goal_url_spilted[key_index]
+            key_index += 1
+        for keyword in GOAL_KEYWORD_list:
+            if keyword != None and keyword != '':
+                searchKeywordValue = quote(keyword.encode('utf8'))
+                item_list_url = simple_url.replace(goal_key, searchKeywordValue)
+                # print item_list_url
+                res_url_list.append(item_list_url)
 
 
         if (len(res_url_list) > 1):
 
             pageDict = None
-            page_list = []
             demo_url = None
             demo_key = None
             get_dict_attemps = 0
@@ -132,7 +105,9 @@ class ShopMainSpider(RedisSpider):
 
                 page_list = get_next_urlList_by_firstpage_url(test_url)
 
-                if (page_list == None):continue
+                if (page_list == None):
+                    # get_dict_attemps += 1
+                    continue
 
                 pageDict = get_pageKeyDic(page_list)
 
@@ -219,10 +194,7 @@ class ShopMainSpider(RedisSpider):
 
                         if(pageKeyList == None or pageKeyList == []): continue
                         demo_url = test_url
-
                         demo_key = res_key_list[index]
-                        # if('%' not in demo_key):
-                        #     demo_key = quote(res_key_list[index].encode('utf-8'))
                         break
 
                     for index in range(0, res_url_list_len):
@@ -231,8 +203,6 @@ class ShopMainSpider(RedisSpider):
 
                         next_url1 = page_list[1].replace(demo_key, res_key_list[index])
                         next_url2 = page_list[2].replace(demo_key, res_key_list[index])
-
-                        print ('---------------------%s------------%s')%(page_list[1],demo_key)
 
 
                         # print next_url2
@@ -255,7 +225,6 @@ class ShopMainSpider(RedisSpider):
 
                             for each_goods_list_url in goods_list_url:
                                 yield Request(callback=self.goods_list_parse, url=each_goods_list_url)
-
 
 
 
