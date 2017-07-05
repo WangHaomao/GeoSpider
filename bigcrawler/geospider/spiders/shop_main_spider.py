@@ -5,13 +5,17 @@ from scrapy_redis.spiders import RedisSpider
 
 from geospider.ecommerce.spiderUtils.parser_util import get_html_with_request
 from geospider.ecommerce.pageParser.shopping_itemsList_parser import analysis_method_selector, analysis_goods_list
-from geospider.ecommerce.pageParser.shopping_navigation_parser import get_nav
+from geospider.ecommerce.pageParser.shopping_navigation_parser import get_nav,get_searchUrl_and_keyword
+
 from geospider.ecommerce.pageParser.selenium_batch_parser import \
     get_pageKeyDic, get_next_urlList_by_firstpage_url, get_all_page_number, \
     get_all_page_urls,get_pageKeyList,get_all_page_urls_by_pageKeyList,get_pageUrls_and_all_pageNumber
+
 from geospider.ecommerce.pageParser.shopping_detail_parser import *
 from urllib2 import quote
 from geospider.items import Goods,Stores,Ecommerce
+from bs4 import BeautifulSoup
+
 
 class ShopMainSpider(RedisSpider):
     name = "shopspider"
@@ -40,6 +44,13 @@ class ShopMainSpider(RedisSpider):
         super(ShopMainSpider, self).__init__(*args, **kwargs)
 
     def parse(self, response):
+
+        # get_searchUrl_and_keyword(response.url)
+
+        searchUrl_and_keyword = get_searchUrl_and_keyword(get_soup_by_html_source(response.text),response.url)
+
+
+
         number, mylist = get_nav(response.url, 0)
         searchKeywordValue = None
         page_list = []
@@ -63,6 +74,11 @@ class ShopMainSpider(RedisSpider):
 
                 all_meets_url_number += 1
         print goal_url
+        # 用一下查询到的关键字
+        if(goal_url_len == -1 and searchUrl_and_keyword[0] != None):
+            goal_url = searchUrl_and_keyword[0]
+            goal_key = searchUrl_and_keyword[1]
+            goal_url_len = len(goal_url)
 
         res_url_list = []
         if (goal_url_len != -1):
@@ -217,7 +233,7 @@ class ShopMainSpider(RedisSpider):
         if(method != 'JSON'):
             goods_item = Goods()
             goods_item['price'] = get_price(soup)
-            goods_item['pic_url'] = get_pic_url(soup)
+            goods_item['pic_url'] = get_pic_url(soup,url)
             goods_item['detail_url'] = response.url
             goods_item['taskid'] = str(self.name)
         else:

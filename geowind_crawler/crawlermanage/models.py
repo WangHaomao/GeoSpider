@@ -70,3 +70,10 @@ class TempArticle(Document):
     time = StringField(max_length=20)
     keywords = StringField(max_length=100)
     article = StringField(max_length=50000)
+
+class TempGoods(Document):
+    title = StringField(max_length=200, required=True)
+    price = StringField(max_length=100, required=True)
+    pic_url = StringField(max_length=500, required=True)
+    detail_url = StringField(max_length=500, required=True)
+    comment_degree = StringField(max_length=20000, required=True)
