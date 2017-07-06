@@ -143,14 +143,13 @@
     <!-- Main content -->
     <section class="content">
       {% block maincontent %}
-
-
-         <div class="box">
-           <section id="introduction">
-            <div class="col-lg-12">
-              <h1 class="content-max-width">Intallation</h1>
-            </div>
-
+      <div class="box box-primary">
+          <div class="box-header with-border">
+            <h2 class="box-title">使用说明</h2>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+              <section id="introduction">
             <h2 class="page-header"><a href="#introduction"># 介绍</a></h2>
             <p>
               <b>分布式爬虫</b>是一个能够对电商、新闻、博客类网站进程自动结构化和信息抽取的爬虫。输入电商首页，能够自动分析导航栏、商品分页、商品详情页等；输入新闻、博客首页，能够自动获取文章标题、发布时间、正文、关键词等信息。
@@ -176,7 +175,7 @@
             <p>展示所有主机中运行爬虫的进程信息。可以控制进程的状态：唤醒进程、挂起进程、终止进程。</p>
           </section>
           <section id="auto_extract" style="margin-top: 40px;">
-            <h2 class="page-header"><a href="#auto_extract"># 正文测试</a></h2>
+            <h2 class="page-header"><a href="#auto_extract"># 自动结构</a></h2>
             <p><b>正文抽取</b>：输入一个URL，抽取页面数据。</p>
             <p><b>批量抽取</b>：输入一批URL集合，选择页面类型，抽取页面数据</p>
           </section>
@@ -190,10 +189,11 @@
             <h2 class="page-header"><a href="#graphite"># Graphite监控</a></h2>
             <p><b>Graphite</b>对所有爬虫任务进行监控。</p>
           </section>
-
-
-
           </div>
+          <!-- /.box-body -->
+        </div>
+        <div class="box-body">
+        </div>
       {% endblock %}
     </section>
 

@@ -13,5 +13,5 @@ from geospider.spiders.news_spider import NewsSpider
 # redis-cli lpush myspider:start_urls http://google.com
 
 from scrapy import cmdline
-cmdline.execute("scrapy crawl shopspider".split())
+cmdline.execute("scrapy crawl shoptestspider".split())
 

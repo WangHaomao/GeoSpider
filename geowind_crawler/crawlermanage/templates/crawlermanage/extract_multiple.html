@@ -112,7 +112,9 @@ http://www.bootstrap.com"></textarea>
                 <label>网站类型</label>
                 <select class="form-control" id="webtype">
                   <option value="article">新闻/博客</option>
-                  <option value="ecommerce">电商</option>
+                  <option value="ecommerce_nav">电商(导航栏)</option>
+                  <option value="ecommerce_list">电商(商品列表)</option>
+                  <option value="ecommerce_detail">电商(商品页)</option>
                 </select>
               </div>
 
@@ -257,7 +259,7 @@ http://www.bootstrap.com"></textarea>
 
           $('#test_loading').css('display','none');
             
-        }else{
+        }else if(data['webtype']=='ecommerce_detail'){
           //ret = {'webtype': webtype,'title': title_list,'price':price_list,'pic_url':pic_url_list,'urls':url_list,'comment':comment_list}
           //function set_goods_model(title,price,comment,url,pic_url)
 
@@ -277,10 +279,13 @@ http://www.bootstrap.com"></textarea>
             $('#urls').append('<li><a href="#" data-toggle="modal" data-target="#myModal" onclick="set_goods_model(\''+title_list[i]+'\',\''+price_list[i]+'\',\''+comment_list[i]+'\',\''+url_list[i]+'\',\''+pic_url_list[i]+'\')">'+url_list[i]+'</a></li>');
 
           }
-
-
-
           $('#test_loading').css('display','none');
+
+        }else if(data['webtype']=='ecommerce_nav'){
+          console.log('detail')
+
+        }else{
+          console.log('detail')
 
         }
       }

@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 
 
 class ShopKeywordSpider(RedisSpider):
-    name = "shopspider"
+    name = "shopkeywordspider"
     # allowed_domains = ["https://www.baidu.com"]
 
     redis_key = 'ecommerce:start_urls'
@@ -48,7 +48,8 @@ class ShopKeywordSpider(RedisSpider):
 
     def parse(self, response):
 
-        GOAL_KEYWORD_list = self.keywords
+        # GOAL_KEYWORD_list = self.keywords
+        GOAL_KEYWORD_list = [u'衣服']
         searchUrl_and_keyword = get_searchUrl_and_keyword(get_soup_by_html_source(response.text),response.url)
 
 

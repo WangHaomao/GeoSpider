@@ -22695,3 +22695,18 @@ Traceback (most recent call last):
 UnboundLocalError: local variable 'keyword_list' referenced before assignment
 2017-07-05 14:55:04,602 [Thread-3:140494930716416] [django.request:182] [WARNING]- Not Found: /favicon.ico
 >>>>>>> 34480fcccb598f21106d270af7bb8f14c1024f15
+2017-07-06 09:50:49,280 [Thread-17:140019231143680] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-06 10:29:33,309 [Thread-62:140019273107200] [django.request:152] [WARNING]- Not Found: /crawlermanage/introduce/pages/widgets.html
+2017-07-06 10:35:46,603 [Thread-4:140047137298176] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view crawlermanage.views.extractmultiple didn't return an HttpResponse object. It returned None instead.
+2017-07-06 10:51:17,236 [Thread-2:140413444683520] [django.request:152] [WARNING]- Not Found: /CLodopfuncs.js
+2017-07-06 11:07:24,700 [Thread-3:140413444683520] [django.request:152] [WARNING]- Not Found: /CLodopfuncs.js
+2017-07-06 11:07:40,709 [Thread-6:140413436028672] [django.request:152] [WARNING]- Not Found: /CLodopfuncs.js
+2017-07-06 11:10:09,824 [Thread-4:140177322272512] [django.request:152] [WARNING]- Not Found: /crawlermanage/tasks/pages/widgets.html

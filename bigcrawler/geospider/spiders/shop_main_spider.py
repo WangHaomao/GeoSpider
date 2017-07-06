@@ -115,7 +115,7 @@ class ShopMainSpider(RedisSpider):
 
 
 
-        if (len(res_url_list) > 1):
+        if (len(res_url_list) > 0):
 
             pageDict = None
             page_list = []

@@ -1,57 +1,15 @@
 # -*-encoding:utf-8 -*-
 
 import re
+import requests
+from crawlermanage.utils.ecommerce.spiderUtils.parser_util import get_soup_by_request,get_soup_by_selenium,get_webdriver,get_soup_by_html_source
+from crawlermanage.utils.ecommerce.spiderUtils.url_utils import pic_url_sifter
+
 import sys
-from parser_util import get_webdriver,get_soup_by_request,get_soup_by_selenium
 
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-
-def url_sifter(parent_url, url):
-    # print parent_url
-    # print url
-    if url is None or len(url) == 0:
-        return None
-
-    cu_url = str(url)
-    cuURL_len = len(cu_url)
-    pa_url = str(parent_url)
-    paURL_len = len(pa_url)
-    #  去除双引号
-    cu_url   = cu_url.replace('"',"")
-    #  去掉开头的／或//
-    if (cu_url.startswith("/")):
-        if (cu_url.startswith("//")):
-            index = 2
-            for ind in range(2, cuURL_len):
-                if (cu_url[ind] is not '/'):
-                    index = ind
-                    break
-
-            cu_url = cu_url[index:cuURL_len]
-        else:
-            cu_url = cu_url[1:cuURL_len]
-
-
-    domain = get_url_domain(pa_url)
-    # print domain
-    if domain not in cu_url:
-        pre_url  =  get_partial_url(pa_url)
-        cu_url = pre_url + ('' if pa_url[paURL_len - 1] == '/' else '/') + cu_url
-
-    if "https://" not in cu_url and "http://" not in cu_url:
-        http_str_header = pa_url.split("//")
-        cu_url = http_str_header[0] + "//" + cu_url
-
-    return cu_url
-
-def get_url_domain(url):
-    res_url = re.search("\.[0-9a-zA-Z]{2,14}\.(com.cn|com|cn|net|org|wang|cc)",url).group()
-    return res_url[1:]
-def get_partial_url(url):
-    res_url = re.search(".+\.(com.cn|com|cn|net|org|wang|cc)", url).group()
-    return res_url
 
 def _get_price_in_script(soup):
     # print soup.prettify()
@@ -245,40 +203,9 @@ def get_store(soup,url):
         #     test_url =  url_sifter(url,res_url)
         #     print get_soup_by_request(test_url).find('title').text
         #     return url_sifter(url,res_url)
-import requests
-
-def pic_url_sifter(parent_url,pic_url):
-
-    if pic_url is None or len(pic_url) == 0:
-        return None
-
-    cu_url = str(pic_url)
-    cuURL_len = len(cu_url)
-    pa_url = str(parent_url)
-    cu_url   = cu_url.replace('"',"")
-    #  去掉开头的／或//
-    if (cu_url.startswith("/")):
-        if (cu_url.startswith("//")):
-            index = 2
-            for ind in range(2, cuURL_len):
-                if (cu_url[ind] is not '/'):
-                    index = ind
-                    break
-
-            cu_url = cu_url[index:cuURL_len]
-        else:
-            cu_url = cu_url[1:cuURL_len]
-
-    if "https://" not in cu_url and "http://" not in cu_url:
-        http_str_header = pa_url.split("//")
-        cu_url = http_str_header[0] + "//" + cu_url
-
-    return cu_url
-
+    return None
 
 def get_pic_url(soup,url):
-
-
     img_list = soup.find_all('img')
     regular = r'\d{3,}x\d{3,}'
     max_pic_size = -1
@@ -331,6 +258,18 @@ def get_title(url):
 def get_comment_degree(url):
     key = u"好评"
 
+def get_goods_dict_without_stroe(url):
+    soup = get_soup_by_request(url)
+    res_dict = {}
+
+    res_dict['title'] = soup.find("title").text
+    res_dict['price'] = get_price(soup)
+    res_dict['pic_url'] = get_pic_url(soup, url)
+    res_dict['detail_url'] = url
+
+    return res_dict
+
+
 def get_goods_dict(url):
     soup = get_soup_by_request(url)
     res_dict = {}
@@ -347,20 +286,18 @@ def get_goods_dict(url):
         res_dict['comment_degree'] = ""
 
     return res_dict
-
 if __name__ == '__main__':
     # url = "https://detail.tmall.com/item.htm?spm=a230r.1.14.14.AT6RIa&id=544429684821&cm_id=140105335569ed55e27b&abbucket=20"
     # url = "https://item.taobao.com/item.htm?spm=a230r.1.14.97.oI9e6K&id=545728190154&ns=1&abbucket=20#detail"
-    url = "https://item.jd.com/11225370508.html"
+    # url = "https://item.jd.com/11225370508.html"
     # url = "http://item.meilishuo.com/detail/1kaosga?acm=3.ms.2_4_1kaosga.0.24476-25176.94mOaqibAUDJd.t_0-lc_3&ptp=1.9Hyayb.classsearch_mls_1kaosga_2017%E6%96%B0%E6%AC%BE%E6%AC%A2%E4%B9%90%E9%A2%82%E7%8E%8B%E5%AD%90%E6%96%87%E6%9B%B2%E7%AD%B1%E7%BB%A1%E5%90%8C%E6%AC%BE%E5%8C%85%E6%97%B6%E5%B0%9A%E5%B0%8F%E6%96%B9%E5%8C%85%E5%8D%95%E8%82%A9%E6%96%9C%E6%8C%8E%E5%B0%8F%E5%8C%85%E5%8C%85_10057053_pop.1.mNWwi"
     # url = "http://shop.mogujie.com/detail/18jws1w?acm=3.ms.1_4_18jws1w.43.1185-22922.wGTRPqnDRVaKO.t_0-lc_4&ptp=1.eW5XD._b_4bce2add492e4c56_2.1.DijfM"
-    # url = 'http://product.dangdang.com/22828480.html'
+    url = 'http://product.dangdang.com/23512622.html'
     # get_comments(url)
-    # url = 'https://item.jd.com/1039840.html'
-    url = "http://product.dangdang.com/22828480.html"
-    # get_goods_dict(url)
-    dicxx =  get_goods_dict(url)
-    for k,v in dicxx.items():
-        print "%s:%s"%(k,v)
 
-    # print dicxx['comment_degree']
+
+    print get_price(get_soup_by_request((url)))
+    # get_store(get_soup_by_request(url),url)
+    # get_title(url)
+    # get_pic_url(url)
+
