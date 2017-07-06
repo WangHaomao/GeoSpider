@@ -122,7 +122,7 @@ def extract_content_by_tag(html, article):
 
 
 def remove_space(text):
-    text = re.sub("[\t\r\f]", '', text)
+    text = re.sub("[\t\r\n\f]", '', text)
     # text=text.replace('　','')
     return text
 
@@ -208,9 +208,9 @@ def get_article_data(url):
     return str(title), str(atime), str(keywords), str(content)
 
 if __name__ == '__main__':
-    # extract('/home/kui/下载/1_20170614100615_ldaon/正文抽取-源数据', '/home/kui/下载/1_20170614100615_ldaon/bbb')
+    extract('/home/kui/下载/1_20170614100615_ldaon/正文抽取-源数据', '/home/kui/下载/1_20170614100615_ldaon/bbb')
     # print(get_attr('BASE_DIR'))
-    print(test(ur'/home/kui/work/zhongruanbei/right', ur'/home/kui/work/zhongruanbei/test'))
+    # print(test(ur'/home/kui/work/zhongruanbei/right', ur'/home/kui/work/zhongruanbei/test'))
     # test('/home/kui/下载/1_20170614100615_ldon/right', '/home/kui/下载/1_20170614100615_ldaon/compare3')
 #     html = readFile('/home/kui/下载/1_20170614100615_ldaon/正文抽取-源数据/blog_a3d444e30102wss6.html')
 #     text = extract_content(html)
