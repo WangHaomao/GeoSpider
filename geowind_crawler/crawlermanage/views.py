@@ -503,10 +503,10 @@ def extractmultiple(request):
 
             nav_list = []
             for url in list_url:
-                shop_nav = get_nav(url,0)
+                methon,shop_nav = get_nav(url,0)
                 nav_list.append(shop_nav)
 
-            ret = {'webtype': webtype,'nav_list':nav_list}
+            ret = {'webtype': webtype,'nav_list':nav_list,'urls':list_url}
 
             return HttpResponse(json.dumps(ret))
         else:
@@ -514,6 +514,7 @@ def extractmultiple(request):
             for url in list_url:
                 goods_list = get_goods_list(url)
                 res_goods_list.append(goods_list)
+
             ret = {'webtype': webtype, 'res_goods_list': res_goods_list,'urls':list_url}
 
             return HttpResponse(json.dumps(ret))

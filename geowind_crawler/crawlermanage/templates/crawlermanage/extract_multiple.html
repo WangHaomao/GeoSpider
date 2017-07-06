@@ -191,6 +191,64 @@ http://www.bootstrap.com"></textarea>
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal -->
 </div>
+<div class="modal fade" id="listModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog" style="width:80%">
+		<div class="modal-content" style="border-radius:6px;">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+			</div>
+			<div class="modal-body">
+
+                <div class="row col-md-12" id='modal_list'>
+                    <!--<div class="col-md-3">-->
+                      <!--<div class="box box-default box-solid">-->
+                        <!--<div class="box-header with-border">-->
+                          <!--<h6 class="box-title"></h6>-->
+                          <!--<div class="box-tools pull-right">-->
+                            <!--<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>-->
+                            <!--</button>-->
+                          <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="box-body">-->
+                            <!--<img src="https://img.alicdn.com/imgextra/i2/1621790841/TB2GfCdnpXXXXabXpXXXXXXXXXX_!!1621790841.jpg_430x430q90.jpg"-->
+                                <!--height="220px" width="220px"-->
+                                <!--&gt;-->
+                            <!--<p>商品名</p>-->
+                            <!--<p>价格</p>-->
+                            <!--<p>链接</p>-->
+                        <!--</div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+
+<div class="modal fade" id="navModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" style="border-radius:6px;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+      	    &times;
+        </button>
+        <h4 class="modal-title" id="navModal_index_url">www.taobao.com</h4>
+      </div>
+      <div class="modal-body" id="navModal_url_list">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
 {% block script %}
 <script src="../../static/plugins/jQuery/jquery-2.2.3.min.js"></script>
@@ -220,9 +278,74 @@ http://www.bootstrap.com"></textarea>
     $('#newsModalArticle').html(article);
 
     $('#newsModalLink').attr('href',url);
-    //$("#newsModalPic").attr('src',pic_url);
-    //$('#myModalPic').src(pic_url);
    }
+
+   function set_list_model(goods_list_str){
+
+    $('#modal_list').html('');
+
+    goods_list = goods_list_str.split('###');
+    list_len = goods_list_str.length;
+    console.log(list_len);
+
+    for(var i = 0;i<list_len;i++){
+
+        if(goods_list[i] == undefined) continue;
+
+        tmp_list = goods_list[i].split('##');
+        title = tmp_list[0];
+        price = tmp_list[1];
+        url = tmp_list[2];
+        pic_url = tmp_list[3];
+
+        goods_box_str = '<div class="col-md-3">\
+                      <div class="box box-default box-solid">\
+                        <div class="box-header with-border">\
+                          <h6 class="box-title">'+title+'</h6>\
+                          <div class="box-tools pull-right">\
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>\
+                            </button></div></div>\
+                        <div class="box-body">\
+                            <img src="'+pic_url+'"height="220px" width="220px">\
+                            <p>商品名：'+ title+'</p>\
+                            <p>价格：'+price+'</p>\
+                            <p>链接：'+url+'</p>\
+                        </div></div></div>'
+        $('#modal_list').append(goods_box_str);
+    }
+
+   }
+
+   function set_nav_model(nav_list_str,index_url){
+
+        $('#navModal_index_url').html(index_url);
+
+
+
+        nav_list_str = nav_list_str.replace('\n','');
+
+        $('#navModal_url_list').html('');
+        nav_list = nav_list_str.split('###');
+        list_len = nav_list.length;
+        console.log(list_len);
+
+        for(var i = 0;i<list_len;i++){
+
+            if(nav_list[i] == undefined) continue;
+
+            tmp_list = nav_list[i].split('##');
+
+            key = tmp_list[0]
+            url = tmp_list[1]
+            nav_line_str = '<p class="modal-title" >'+key+'：<a target="_blank" href="'+url+'">'+url+'</a ></p >'
+
+            $('#navModal_url_list').append(nav_line_str);
+        }
+
+
+   }
+
+
 
 
 
@@ -282,11 +405,51 @@ http://www.bootstrap.com"></textarea>
           $('#test_loading').css('display','none');
 
         }else if(data['webtype']=='ecommerce_nav'){
-          console.log('detail')
+            $('#urls').html('');
+          nav_list = data['nav_list'];
+           url_list = data['urls'];
+            url_list_len = url_list.length;
+           for(var i = 0 ;i<url_list_len;i++){
+                nav_list_len = nav_list[i].length;
+
+                var go_str = '' ;
+
+                for(var j =0;j<nav_list_len;j++){
+                    //console.log(nav_list[i][j][1]);
+                    key = nav_list[i][j][0];
+                    url = nav_list[i][j][1];
+                    go_str += key+'##' +url;
+                    if(j != nav_list_len-1)
+                        go_str +='###';
+                }
+                $('#urls').append('<li><a href="#" data-toggle="modal" data-target="#navModal" onclick="set_nav_model(\''+go_str+'\',\''+url_list[i]+'\')">'+url_list[i]+'</a></li>');
+
+           }
+           $('#test_loading').css('display','none');
 
         }else{
-          console.log('detail')
-            console.log(data['res_goods_list'])
+
+            $('#urls').html('');
+            res_goods_list = data['res_goods_list'];
+            url_list = data['urls'];
+            url_list_len = url_list.length;
+            for(var i = 0 ;i<url_list_len;i++){
+                res_goods_list_len = res_goods_list[i].length;
+
+                var go_str = '' ;
+
+                for(var j =0;j<res_goods_list_len;j++){
+                    var ob_ = res_goods_list[i][j];
+                    go_str += ob_.title+'##'+ ob_.price + '##' + ob_.detail_url+'##'+ob_.pic_url;
+
+                    if(j != res_goods_list_len-1)
+                        go_str +='###';
+
+                }
+                $('#urls').append('<li><a href="#" data-toggle="modal" data-target="#listModal" onclick="set_list_model(\''+go_str+'\')">'+url_list[i]+'</a></li>');
+            }
+
+            $('#test_loading').css('display','none');
         }
       }
     }, 'json')
