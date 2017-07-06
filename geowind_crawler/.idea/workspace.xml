@@ -15,17 +15,25 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawlermanage/views.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="468">
               <caret line="513" column="48" lean-forward="true" selection-start-line="513" selection-start-column="48" selection-end-line="513" selection-end-column="48" />
               <folding>
                 <element signature="e#26#37#0" expanded="true" />
                 <element signature="e#14556#15639#0" expanded="false" />
                 <marker date="1499364216503" expanded="true" signature="15589:15639" ph="..." />
+=======
+            <state relative-caret-position="-40">
+              <caret line="83" column="90" lean-forward="false" selection-start-line="83" selection-start-column="90" selection-end-line="83" selection-end-column="90" />
+              <folding>
+                <element signature="e#26#37#0" expanded="true" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="shopping_detail_parser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_detail_parser.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,6 +64,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
               <caret line="11" column="74" lean-forward="false" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+=======
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geowind_crawler/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
               <folding />
             </state>
           </provider>
@@ -64,44 +79,49 @@
       <file leaf-file-name="introduce.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/introduce.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="804">
               <caret line="177" column="75" lean-forward="true" selection-start-line="177" selection-start-column="75" selection-end-line="177" selection-end-column="75" />
+=======
+            <state relative-caret-position="460">
+              <caret line="176" column="44" lean-forward="false" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
               <folding>
-                <element signature="n#style#0;n#section#1;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#2;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#3;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#4;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#section#5;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#6;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#section#7;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#8146#8152#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myunit_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/myunit_test.py">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geowind_crawler/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="940">
+              <caret line="57" column="49" lean-forward="false" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parser_util.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py">
+      <file leaf-file-name="tasks.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/tasks.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-3277">
               <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding>
                 <element signature="e#22#37#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="256">
+              <caret line="311" column="35" lean-forward="false" selection-start-line="311" selection-start-column="35" selection-end-line="311" selection-end-column="35" />
+              <folding />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="extract_multiple.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -116,21 +136,29 @@
       </file>
       <file leaf-file-name="readConfigTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/readConfigTest.py">
+=======
+      <file leaf-file-name="test_articles.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_articles.html">
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="114" column="139" lean-forward="false" selection-start-line="114" selection-start-column="139" selection-end-line="114" selection-end-column="139" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="url_utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/url_utils.py">
+      <file leaf-file-name="process_list.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/process_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-532">
-              <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+            <state relative-caret-position="268">
+              <caret line="96" column="45" lean-forward="false" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
               <folding>
-                <element signature="e#15#24#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#span#1;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#5578#5585#1" expanded="true" />
+                <element signature="e#6021#6028#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -156,8 +184,12 @@
       <find>newsdetail</find>
       <find>box</find>
       <find>webtype</find>
+<<<<<<< HEAD
       <find>print</find>
       <find>prin</find>
+=======
+      <find>tasks</find>
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -172,7 +204,6 @@
         <option value="$PROJECT_DIR$/crawlermanage/models.py" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/newsdata.html" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/article_parser.py" />
-        <option value="$PROJECT_DIR$/geowind_crawler/urls.py" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/index.html" />
         <option value="$PROJECT_DIR$/collected_static/logs/all.logs" />
@@ -183,16 +214,26 @@
         <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/url_utils.py" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/introduce.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html" />
         <option value="$PROJECT_DIR$/crawlermanage/views.py" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py" />
+=======
+        <option value="$PROJECT_DIR$/geowind_crawler/urls.py" />
+        <option value="$PROJECT_DIR$/crawlermanage/views.py" />
+        <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/tasks.html" />
+        <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_articles.html" />
+        <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/process_list.html" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="65" />
+    <option name="y" value="-6" />
+    <option name="width" value="1535" />
+    <option name="height" value="906" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -209,6 +250,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -362,12 +404,11 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bigcrawler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -535,18 +576,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
+=======
+    <frame x="65" y="-6" width="1535" height="906" extended-state="7" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19637139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19892833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29123172" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21503131" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33631712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32736573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -555,6 +608,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29123172" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -588,30 +642,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/crawlermanage/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1499331473534" expanded="true" signature="280:694" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="744:1029" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1052:1337" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1363:1583" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1609:1660" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1685:2176" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2201:2490" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2520:2738" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2242">
           <caret line="118" column="41" lean-forward="false" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
-          <folding>
-            <marker date="1499289704748" expanded="true" signature="5056:5357" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -619,7 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1843">
           <caret line="97" column="80" lean-forward="false" selection-start-line="97" selection-start-column="80" selection-end-line="97" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -627,35 +660,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" column="49" lean-forward="false" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
-          <folding>
-            <marker date="1499331473534" expanded="true" signature="1127:1329" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1360:1882" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1938:2442" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1944:2439" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2116:2432" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2152:2421" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2501:2575" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2590:2716" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2607:2714" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2830:2959" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3055:3155" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3320:5703" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3396:3549" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3418:3542" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3568:3573" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3593:4943" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3618:3750" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3773:4081" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4103:4224" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4255:4581" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4612:4936" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4962:5701" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4982:5099" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5133:5248" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5288:5403" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5433:5548" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5571:5694" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -664,7 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1729">
           <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,9 +676,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4560">
           <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
+<<<<<<< HEAD
           <folding>
             <marker date="1499363150907" expanded="true" signature="11088:11386" ph="..." />
           </folding>
+=======
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
         </state>
       </provider>
     </entry>
@@ -684,8 +691,11 @@
           <caret line="489" column="12" lean-forward="false" selection-start-line="489" selection-start-column="12" selection-end-line="490" selection-end-column="120" />
           <folding>
             <element signature="e#26#37#0" expanded="true" />
+<<<<<<< HEAD
             <element signature="e#14556#15639#0" expanded="false" />
             <marker date="1499364216503" expanded="true" signature="15589:15639" ph="..." />
+=======
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
           </folding>
         </state>
       </provider>
@@ -695,9 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding>
-            <marker date="1499289704748" expanded="true" signature="5056:5357" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -705,35 +712,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1501">
           <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding>
-            <marker date="1499331473534" expanded="true" signature="1127:1329" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1360:1882" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1938:2442" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1944:2439" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2116:2432" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2152:2421" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2501:2575" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2590:2716" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2607:2714" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2830:2959" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3055:3155" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3320:5703" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3396:3549" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3418:3542" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3568:3573" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3593:4943" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3618:3750" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3773:4081" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4103:4224" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4255:4581" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4612:4936" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4962:5701" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4982:5099" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5133:5248" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5288:5403" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5433:5548" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5571:5694" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -749,9 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding>
-            <marker date="1499289704748" expanded="true" signature="5056:5357" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -759,35 +735,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1501">
           <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding>
-            <marker date="1499331473534" expanded="true" signature="1127:1329" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1360:1882" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1938:2442" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1944:2439" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2116:2432" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2152:2421" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2501:2575" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2590:2716" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2607:2714" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2830:2959" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3055:3155" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3320:5703" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3396:3549" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3418:3542" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3568:3573" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3593:4943" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3618:3750" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3773:4081" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4103:4224" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4255:4581" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4612:4936" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4962:5701" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4982:5099" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5133:5248" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5288:5403" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5433:5548" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5571:5694" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -796,13 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/tasks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -827,13 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_articles.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2109">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_single.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -852,16 +786,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1235">
           <caret line="69" column="39" lean-forward="false" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
-          <folding>
-            <marker date="1499331473534" expanded="true" signature="280:694" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="744:1029" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1052:1337" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1363:1583" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1609:1660" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1685:2176" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2201:2490" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2520:2738" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -876,7 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1843">
           <caret line="97" column="80" lean-forward="false" selection-start-line="97" selection-start-column="80" selection-end-line="97" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,43 +808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1729">
           <caret line="91" column="29" lean-forward="false" selection-start-line="91" selection-start-column="29" selection-end-line="91" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="49" lean-forward="false" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
-          <folding>
-            <marker date="1499331473534" expanded="true" signature="1127:1329" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1360:1882" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1938:2442" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="1944:2439" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2116:2432" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2152:2421" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2501:2575" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2590:2716" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2607:2714" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="2830:2959" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3055:3155" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3320:5703" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3396:3549" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3418:3542" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3568:3573" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3593:4943" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3618:3750" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="3773:4081" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4103:4224" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4255:4581" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4612:4936" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4962:5701" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="4982:5099" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5133:5248" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5288:5403" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5433:5548" ph="..." />
-            <marker date="1499331473534" expanded="true" signature="5571:5694" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -931,20 +818,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/geowind_crawler/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2242">
           <caret line="118" column="41" lean-forward="false" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="41" />
-          <folding>
-            <marker date="1499289704748" expanded="true" signature="5056:5357" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -959,7 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2508">
           <caret line="132" column="36" lean-forward="false" selection-start-line="132" selection-start-column="36" selection-end-line="132" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -967,10 +843,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
           <caret line="246" column="14" lean-forward="false" selection-start-line="246" selection-start-column="14" selection-end-line="246" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/shop.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1000,14 +876,23 @@
         <state relative-caret-position="377">
           <caret line="345" column="61" lean-forward="true" selection-start-line="345" selection-start-column="61" selection-end-line="345" selection-end-column="61" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="261" column="51" lean-forward="false" selection-start-line="261" selection-start-column="35" selection-end-line="261" selection-end-column="51" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/shop.log" />
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/logger.conf" />
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/parser_util.py" />
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/ecommerce_parser.py" />
     <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/category_page_parser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1015,30 +900,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/readConfigTest.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+=======
+        <state relative-caret-position="95">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="34" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/url_utils.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-532">
           <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
           <folding>
             <element signature="e#15#24#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="167">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/introduce.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="804">
           <caret line="177" column="75" lean-forward="true" selection-start-line="177" selection-start-column="75" selection-end-line="177" selection-end-column="75" />
           <folding>
@@ -1051,11 +946,16 @@
             <element signature="n#style#0;n#section#7;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#8146#8152#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="152">
+          <caret line="11" column="74" lean-forward="false" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2001">
           <caret line="288" column="44" lean-forward="false" selection-start-line="288" selection-start-column="44" selection-end-line="288" selection-end-column="44" />
           <folding>
@@ -1073,16 +973,25 @@
             <element signature="e#14556#15639#0" expanded="false" />
             <marker date="1499364216503" expanded="true" signature="15589:15639" ph="..." />
           </folding>
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-3277">
           <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
             <element signature="e#22#37#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
         </state>
       </provider>
     </entry>
@@ -1090,12 +999,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_detail_parser.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-5058">
           <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="34" />
           <folding />
@@ -1119,6 +1028,75 @@
             <element signature="e#1185#5747#0" expanded="false" />
             <element signature="e#5791#8208#0" expanded="false" />
             <element signature="e#8256#8482#0" expanded="false" />
+=======
+        <state relative-caret-position="-532">
+          <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/introduce.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="176" column="44" lean-forward="false" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#section#5;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="940">
+          <caret line="57" column="49" lean-forward="false" selection-start-line="57" selection-start-column="49" selection-end-line="57" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geowind_crawler/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="83" column="90" lean-forward="false" selection-start-line="83" selection-start-column="90" selection-end-line="83" selection-end-column="90" />
+          <folding>
+            <element signature="e#26#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/tasks.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="311" column="35" lean-forward="false" selection-start-line="311" selection-start-column="35" selection-end-line="311" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/test_articles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="114" column="139" lean-forward="false" selection-start-line="114" selection-start-column="139" selection-end-line="114" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/process_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="96" column="45" lean-forward="false" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#1;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#5578#5585#1" expanded="true" />
+            <element signature="e#6021#6028#1" expanded="true" />
+>>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
           </folding>
         </state>
       </provider>

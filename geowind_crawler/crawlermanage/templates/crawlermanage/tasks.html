@@ -157,11 +157,24 @@
 <div>
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#current_tasks" data-toggle="tab">当前任务</a></li>
-              <li><a href="#history_tasks" data-toggle="tab">历史任务</a></li>
+                {% ifequal status 'currenttask' %}
+                <li class="active"><a href="#current_tasks" data-toggle="tab">当前任务</a></li>
+                <li><a href="#history_tasks" data-toggle="tab">历史任务</a></li>
+                {% endifequal %}
+                {% ifequal status 'historytask' %}
+                <li><a href="#current_tasks" data-toggle="tab">当前任务</a></li>
+                <li class="active"><a href="#history_tasks" data-toggle="tab">历史任务</a></li>
+                {% endifequal %}
+
             </ul>
             <div class="tab-content">
-              <div class="active tab-pane" id="current_tasks">
+                {% ifequal status 'currenttask' %}
+                <div class="active tab-pane" id="current_tasks">
+                {% endifequal %}
+                {% ifequal status 'historytask' %}
+                <div class="tab-pane" id="current_tasks">
+                {% endifequal %}
+
 
 
                   <div class="row">
@@ -292,7 +305,13 @@
 			          <!-- row -->
               </div>
               <!-- /.tab-pane -->
-              <div class="tab-pane" id="history_tasks">
+              {% ifequal status 'currenttask' %}
+                <div class="tab-pane" id="history_tasks">
+                {% endifequal %}
+                {% ifequal status 'historytask' %}
+                <div class="active tab-pane" id="history_tasks">
+                {% endifequal %}
+              <!--<div class="tab-pane" id="history_tasks">-->
                 <div class="row">
                   <div class="col-xs-12">
                     <div class="box" style="border-top:0px;">

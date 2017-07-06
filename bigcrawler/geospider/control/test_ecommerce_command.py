@@ -15,13 +15,13 @@ def start():
 
     b = deepcopy(ShopKeywordSpider)
     b.name='aaa'
-    b.keywords = ['aaa']
+    b.keywords = ['手机']
     b.redis_key = "aaa:start_urls"
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     # r.sadd("myspider:start_urls", 'http://news.qq.com/')
-    r.lpush("aaa:start_urls", "http://www.dangdang.com/")
+    r.lpush("aaa:start_urls", "https://www.taobao.com/")
     # r.lpush("aaa:start_urls", "http://news.sohu.com/")
-    b.allowed_domains=["dangdang.com"]
+    b.allowed_domains=["taobao.com"]
     cmdline.execute("scrapy crawl aaa".split())
 
     # process = CrawlerProcess(get_project_settings())
