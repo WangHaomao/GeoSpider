@@ -17,12 +17,13 @@ from geospider.items import Goods, Stores, Ecommerce
 from bs4 import BeautifulSoup
 
 
-class ShopKeywordSpider(Spider):
+class ShopKeywordSpider(RedisSpider):
     name = "shoptestspider"
     # allowed_domains = ["https://www.baidu.com"]
     start_urls = [
         'https://www.taobao.com/',
     ]
+    redis_key = 'ecommerce:start_urls'
     def parse(self, response):
 
         # GOAL_KEYWORD_list = self.keywords

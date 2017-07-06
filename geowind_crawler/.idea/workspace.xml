@@ -15,23 +15,13 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawlermanage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="502" column="0" lean-forward="false" selection-start-line="502" selection-start-column="0" selection-end-line="502" selection-end-column="0" />
+            <state relative-caret-position="468">
+              <caret line="513" column="48" lean-forward="true" selection-start-line="513" selection-start-column="48" selection-end-line="513" selection-end-column="48" />
               <folding>
                 <element signature="e#26#37#0" expanded="true" />
-                <element signature="e#14375#15458#0" expanded="false" />
-                <marker date="1499339391711" expanded="true" signature="15408:15458" ph="..." />
+                <element signature="e#14556#15639#0" expanded="false" />
+                <marker date="1499364216503" expanded="true" signature="15589:15639" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="selenium_batch_parser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/selenium_batch_parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -39,19 +29,24 @@
       <file leaf-file-name="shopping_detail_parser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_detail_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
+            <state relative-caret-position="-5058">
               <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shopping_itemsList_parser.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shopping_itemsList_parser.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="105">
+              <caret line="363" column="0" lean-forward="true" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
+              <folding>
+                <element signature="e#23#32#0" expanded="true" />
+                <element signature="e#1185#5747#0" expanded="false" />
+                <element signature="e#5791#8208#0" expanded="false" />
+                <element signature="e#8256#8482#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="introduce.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="introduce.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/introduce.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
+            <state relative-caret-position="804">
               <caret line="177" column="75" lean-forward="true" selection-start-line="177" selection-start-column="75" selection-end-line="177" selection-end-column="75" />
               <folding>
                 <element signature="n#style#0;n#section#1;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -98,10 +93,22 @@
       <file leaf-file-name="parser_util.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-3277">
+              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding>
                 <element signature="e#22#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="extract_multiple.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2001">
+              <caret line="288" column="44" lean-forward="false" selection-start-line="288" selection-start-column="44" selection-end-line="288" selection-end-column="44" />
+              <folding>
+                <marker date="1499363150907" expanded="true" signature="11088:11386" ph="..." />
               </folding>
             </state>
           </provider>
@@ -140,9 +147,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>print</find>
       <find>log</find>
-      <find>prin</find>
       <find>model</find>
       <find>setModel</find>
       <find>myModalTime</find>
@@ -151,6 +156,8 @@
       <find>newsdetail</find>
       <find>box</find>
       <find>webtype</find>
+      <find>print</find>
+      <find>prin</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -169,16 +176,17 @@
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/blogdata.html" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/index.html" />
         <option value="$PROJECT_DIR$/collected_static/logs/all.logs" />
-        <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/ecommerce_parser.py" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/category_page_parser.py" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/selenium_batch_parser.py" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_detail_parser.py" />
-        <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py" />
         <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/url_utils.py" />
-        <option value="$PROJECT_DIR$/crawlermanage/views.py" />
         <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/introduce.html" />
+        <option value="$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html" />
+        <option value="$PROJECT_DIR$/crawlermanage/views.py" />
+        <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py" />
+        <option value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py" />
       </list>
     </option>
   </component>
@@ -223,7 +231,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemId" value="crawlermanage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -238,6 +246,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ecommerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ecommerce" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pageParser" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -273,7 +333,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="crawlermanage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geowind_crawler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="collected_static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="logs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,7 +389,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.article_parser">
+  <component name="RunManager" selected="Python.shopping_itemsList_parser">
     <configuration default="false" name="ecommerce_parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -339,6 +421,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="geowind_crawler" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawlermanage/utils/article_parser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="shopping_itemsList_parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="geowind_crawler" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -408,14 +508,16 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.ecommerce_parser" />
       <item index="1" class="java.lang.String" itemvalue="Python.article_parser" />
+      <item index="2" class="java.lang.String" itemvalue="Python.shopping_itemsList_parser" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.article_parser" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ecommerce_parser" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.shopping_itemsList_parser" />
+        <item index="1" class="java.lang.String" itemvalue="Python.article_parser" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ecommerce_parser" />
       </list>
     </recent_temporary>
   </component>
@@ -434,16 +536,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19637139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29123172" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33631712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21503131" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32776618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776618" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -461,13 +564,13 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33716077" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3361169" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14551422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776618" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19637139" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29153925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29123172" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -480,7 +583,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -570,7 +673,7 @@
         <state relative-caret-position="4560">
           <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
           <folding>
-            <marker date="1499337311958" expanded="true" signature="11088:11339" ph="..." />
+            <marker date="1499363150907" expanded="true" signature="11088:11386" ph="..." />
           </folding>
         </state>
       </provider>
@@ -581,8 +684,8 @@
           <caret line="489" column="12" lean-forward="false" selection-start-line="489" selection-start-column="12" selection-end-line="490" selection-end-column="120" />
           <folding>
             <element signature="e#26#37#0" expanded="true" />
-            <element signature="e#14375#15458#0" expanded="false" />
-            <marker date="1499339391711" expanded="true" signature="15408:15458" ph="..." />
+            <element signature="e#14556#15639#0" expanded="false" />
+            <marker date="1499364216503" expanded="true" signature="15589:15639" ph="..." />
           </folding>
         </state>
       </provider>
@@ -868,16 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="261" column="51" lean-forward="false" selection-start-line="261" selection-start-column="35" selection-end-line="261" selection-end-column="51" />
-          <folding>
-            <marker date="1499337311958" expanded="true" signature="11088:11339" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/shop.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -926,48 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_detail_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="11" column="74" lean-forward="false" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/myunit_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#22#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/readConfigTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -986,21 +1037,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawlermanage/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="502" column="0" lean-forward="false" selection-start-line="502" selection-start-column="0" selection-end-line="502" selection-end-column="0" />
-          <folding>
-            <element signature="e#26#37#0" expanded="true" />
-            <element signature="e#14375#15458#0" expanded="false" />
-            <marker date="1499339391711" expanded="true" signature="15408:15458" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/introduce.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
+        <state relative-caret-position="804">
           <caret line="177" column="75" lean-forward="true" selection-start-line="177" selection-start-column="75" selection-end-line="177" selection-end-column="75" />
           <folding>
             <element signature="n#style#0;n#section#1;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1011,6 +1050,75 @@
             <element signature="n#style#0;n#section#6;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#section#7;n#div#1;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#8146#8152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/templates/crawlermanage/extract_multiple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2001">
+          <caret line="288" column="44" lean-forward="false" selection-start-line="288" selection-start-column="44" selection-end-line="288" selection-end-column="44" />
+          <folding>
+            <marker date="1499363150907" expanded="true" signature="11088:11386" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="513" column="48" lean-forward="true" selection-start-line="513" selection-start-column="48" selection-end-line="513" selection-end-column="48" />
+          <folding>
+            <element signature="e#26#37#0" expanded="true" />
+            <element signature="e#14556#15639#0" expanded="false" />
+            <marker date="1499364216503" expanded="true" signature="15589:15639" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3277">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="e#22#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/spiderUtils/myunit_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_detail_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5058">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" column="74" lean-forward="false" selection-start-line="11" selection-start-column="74" selection-end-line="11" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="363" column="0" lean-forward="true" selection-start-line="363" selection-start-column="0" selection-end-line="363" selection-end-column="0" />
+          <folding>
+            <element signature="e#23#32#0" expanded="true" />
+            <element signature="e#1185#5747#0" expanded="false" />
+            <element signature="e#5791#8208#0" expanded="false" />
+            <element signature="e#8256#8482#0" expanded="false" />
           </folding>
         </state>
       </provider>

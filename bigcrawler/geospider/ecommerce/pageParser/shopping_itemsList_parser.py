@@ -44,6 +44,119 @@ def is_single_tag(tag):
 
     return True
 
+def analysis_by_tag_return_goods_message(goods_list_tag, url):
+
+    # print goods_list_tag.name
+    # print goods_list_tag['class']
+    pic_size_regular = r'\d{2,}x\d{2,}'
+
+    res_goods_list = []
+    for each_tag in goods_list_tag.contents:
+        res_pic_url = ''
+        res_price = ''
+        res_detail_url = ''
+        res_title = ''
+        max_title_len = -1
+        max_pic_size = -1
+        res_goods_dict = {}
+        if (each_tag.name != None):
+
+            for inner_tag in each_tag.descendants:
+
+                """
+                商品列表页面本身含有一定的信息，此处暂时不做抓取（在商品详细页面抓取）
+
+                以下注释信息是对商品信息的抓取
+                """
+                if(inner_tag.name!=None and is_single_tag(inner_tag)):
+                    # print inner_tag
+                    is_in_some_attri = False
+
+                    tag_text =  inner_tag.text.replace('\n',"")
+
+
+                    #url
+                    if(res_detail_url == ''):
+                        try:
+                            detail_url = url_sifter(url=inner_tag['href'], parent_url=url)
+                            if ('javascript' not in detail_url and 'list' not in detail_url and 'search' not in detail_url
+                                and detail_url and ' ' not in detail_url and 'cart' not in detail_url):
+
+                                res_detail_url = detail_url
+                                is_in_some_attri = True
+                        except:
+                            pass
+
+
+                    #价格
+                    regular_str = '\d+\.+\d+'
+                    re_res = re.search(regular_str,tag_text)
+                    if(re_res and res_price== ''):
+                        res_price =  re_res.group()
+
+
+                    #搜索图片
+                    if(inner_tag.name == 'img'):
+                        try:
+                            pic_url = inner_tag['src']
+                            if ('jpg' in pic_url or 'png' in pic_url or 'jpeg' in pic_url):
+                                if(res_pic_url == ''):
+                                    res_pic_url = pic_url
+                                else:
+                                    re_res = re.search(pic_size_regular, pic_url).group()
+                                    re_res_splited = re_res.split('x')
+                                    pic_size = max(int(re_res_splited[0]), int(re_res_splited[1]))
+
+                                    if (pic_size > max_pic_size):
+                                        max_pic_size = pic_size
+                                        res_pic_url = pic_url
+                                is_in_some_attri = True
+                        except:
+                            pass
+
+                    tag_style = inner_tag.get('style')
+                    if(tag_style):
+                        regular_str = r'url\w*\(\S+\)'
+                        re_res = re.search(regular_str,str(tag_style))
+                        if(re_res):
+                            pic_url = re_res.group().split('(')[1].split(')')[0]
+                            if('jpg' in pic_url or 'png' in pic_url or 'jpeg' in pic_url):
+                                if (res_pic_url == ''):
+                                    res_pic_url = pic_url
+                                else:
+                                    re_res = re.search(pic_size_regular, pic_url).group()
+                                    re_res_splited = re_res.split('x')
+                                    pic_size = max(int(re_res_splited[0]), int(re_res_splited[1]))
+
+                                    if (pic_size > max_pic_size):
+                                        max_pic_size = pic_size
+                                        res_pic_url = pic_url
+                                is_in_some_attri = True
+
+                    if(is_in_some_attri == False and inner_tag.name!=None):
+                        tag_text = inner_tag.text.replace('\n', "").replace(' ','')
+                        # print tag_text
+                        if(len(tag_text) > max_title_len):
+                            max_title_len = len(tag_text)
+                            res_title = tag_text
+
+                            print res_title
+
+
+            print "-----------------------one goods-----------------------"
+            res_goods_dict['title'] = res_title
+            res_goods_dict['price'] = res_price
+            res_goods_dict['pic_url'] = res_pic_url
+            res_goods_dict['detail_url'] = res_detail_url
+
+            res_goods_list.append(res_goods_dict)
+
+
+    return res_goods_list
+
+
+
+
 
 def analysis_by_tag(goods_list_tag, url):
     detail_url_set = set()
@@ -53,28 +166,6 @@ def analysis_by_tag(goods_list_tag, url):
 
             current_url_list = []
             for inner_tag in each_tag.descendants:
-
-                """
-                商品列表页面本身含有一定的信息，此处暂时不做抓取（在商品详细页面抓取）
-
-                以下注释信息是对商品信息的抓取
-                """
-                # if(inner_tag.name!=None and is_single_tag(inner_tag)):
-                #     # print inner_tag
-                #     tag_text =  inner_tag.text.replace('\n',"")
-                #     if(message_len < len(tag_text)):
-                #         message_len = len(tag_text)
-                #         message = tag_text
-                #
-                #
-                #     if(u'¥' in tag_text):
-                #         print tag_text
-                #
-                #     elif(u'评价' in tag_text or u'评论' in tag_text):
-                #         re_comment_res = re.search(u'\d+\+{0,1}人{0,1}评价|\d+\+{0,1}人{0,1}评论|\d+条评论', tag_text)
-                #         if re_comment_res !=None:
-                #             print re_comment_res.group()
-
                 if (inner_tag.name != None and inner_tag.name == 'a'):
                     try:
                         detail_url = url_sifter(url=inner_tag['href'], parent_url=url)
@@ -373,10 +464,9 @@ if __name__ == '__main__':
     # url = "https://s.taobao.com/search?initiative_id=tbindexz_20170509&ie=utf8&spm=a21bo.50862.201856-taobao-item.2&sourceId=tb.index&search_type=item&ssid=s5-e&commend=all&imgfile=&q=%E6%89%8B%E6%9C%BA&suggest=0_1&_input_charset=utf-8&wq=shouji&suggest_query=shouji&source=suggest"
     # url = "http://list.mogujie.com/s?q=%E6%89%8B%E6%9C%BA%E5%A3%B3%E8%8B%B9%E6%9E%9C6&from=querytip0&ptp=1._mf1_1239_15261.0.0.5u1T9Y"
     # url = "http://search.dangdang.com/?key=%CA%E9"
-    # url = "http://search.suning.com/%E6%89%8B%E6%9C%BA/"
+    url = "http://search.suning.com/%E6%89%8B%E6%9C%BA/"
     #
-    url = "http://search.yhd.com/c0-0/k%25E9%259B%25B6%25E9%25A3%259F/?tp=1.1.12.0.3.Ljm`JdW-10-4v5ud"
-    # url = "http://www.meilishuo.com/search/goods/?page=1&searchKey=%E8%A3%99%E5%AD%90%E5%A4%8F&acm=3.mce.1_4_.17721.33742-33692.3Va85qjefPdEZ.mid_17721-lc_201"
+    # url = "http://search.yhd.com/c0-0/k%25E9%259B%25B6%25E9%25A3%259F/?tp=1.1.12.0.3.Ljm`JdW-10-4v5ud"
     # url = "http://search.gome.com.cn/search?question=%E6%89%8B%E6%9C%BA"
     # url = "http://search.jumei.com/?referer=yiqifa_cps__ODg5MjEzfDAwczliN2JmZGVjN2EzOWQ2M2I5"
     # url = "https://www.vmall.com/search?keyword=%E6%89%8B%E6%9C%BA"
@@ -386,22 +476,35 @@ if __name__ == '__main__':
     # 已经获得
     # goods_list_tag = get_goods_list_tag_from_soup(soup)
     # goods_list_method_selector(url)
-
-    # url = "https://s.taobao.com/list?q=%E7%BE%BD%E7%BB%92%E6%9C%8D&bcoffset=12&s=4560"
-    # url = "https://s.taobao.com/list?q=%E6%8B%BE%E8%B4%A7"
-    # url = 'http://www.meilishuo.com/search/catalog/10057053?action=bags&mt=12.14354.r130506.18023&acm=3.mce.2_10_182yi.14354.0.2PccHqnV8sR9h.m_188513-pos_4?acm=3.mce.2_10_182ya.14354.0.2PccHqnV8sR9h.m_188509-pos_0&mt=12.14354.r130395.18023&action=clothing&page=94&cpc_offset=0'
-
     # url = "https://search.jd.com/Search?keyword=%E7%94%B5%E5%AD%90%E4%B9%A6&enc=utf-8&spm=1.1.5"
-    url = 'http://www.meilishuo.com/search/goods/?page=1&searchKey=%E8%BF%9E%E8%A1%A3%E8%A3%99'
+    # url = 'http://www.meilishuo.com/search/goods/?page=1&searchKey=%E8%BF%9E%E8%A1%A3%E8%A3%99'
     soup = get_soup_by_request(url)
-    print analysis_by_tag(get_goods_list_tag_by_soup(soup),url)
+    # print analysis_by_tag(get_goods_list_tag_by_soup(soup),url)
 
-    # goods_list_tag = analysis_by_tag(get_goods_list_tag_by_soup(get_soup_by_request(url)), url)
+    analysis_by_tag_return_goods_message(get_goods_list_tag_by_soup(soup),url)
 
-    # debug_script_html_len(url)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    pass
+
+
     '''
         暂时不考虑没attribute的标签
     '''
+
     # print goods_list_tag
     # print goods_list_tag.name
     # print goods_list_tag.attrs

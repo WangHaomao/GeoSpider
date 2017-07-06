@@ -12,6 +12,8 @@ from crawlermanage.utils.article_parser import extract, test, readFile, extract_
 from crawlermanage.utils.echarts import create_chart1, create_chart2, create_chart3, create_chart4
 from crawlermanage.utils.ecommerce.pageParser.shopping_detail_parser  import get_goods_dict
 from crawlermanage.utils.ecommerce.pageParser.shopping_navigation_parser  import get_nav
+from crawlermanage.utils.ecommerce.pageParser.shopping_itemsList_parser  import get_goods_list
+from crawlermanage.utils.ecommerce.spiderUtils.parser_util import get_soup_by_request
 from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
 from crawlermanage.utils.settings_helper import get_attr
@@ -503,9 +505,13 @@ def extractmultiple(request):
 
             return HttpResponse(json.dumps(ret))
         else:
-            pass
+            res_goods_list = []
+            for url in list_url:
+                goods_list = get_goods_list(url)
+                res_goods_list.append(goods_list)
+            ret = {'webtype': webtype, 'res_goods_list': res_goods_list,'urls':list_url}
 
-            # return render_to_response('crawlermanage/extract_multiple.html')
+            return HttpResponse(json.dumps(ret))
     else:
         return render_to_response('crawlermanage/extract_multiple.html')
 

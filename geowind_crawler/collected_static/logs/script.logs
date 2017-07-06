@@ -22710,3 +22710,20 @@ ValueError: The view crawlermanage.views.extractmultiple didn't return an HttpRe
 2017-07-06 11:07:24,700 [Thread-3:140413444683520] [django.request:152] [WARNING]- Not Found: /CLodopfuncs.js
 2017-07-06 11:07:40,709 [Thread-6:140413436028672] [django.request:152] [WARNING]- Not Found: /CLodopfuncs.js
 2017-07-06 11:10:09,824 [Thread-4:140177322272512] [django.request:152] [WARNING]- Not Found: /crawlermanage/tasks/pages/widgets.html
+2017-07-06 16:03:53,841 [Thread-17:140171626411776] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-06 17:44:23,410 [Thread-13:139847868716800] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-06 17:56:05,380 [Thread-3:140202574702336] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 510, in extractmultiple
+    goods_list = get_goods_list(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py", line 453, in get_goods_list
+    return analysis_by_tag_return_goods_message(get_goods_list_tag_by_soup(soup), url)
+NameError: global name 'soup' is not defined
