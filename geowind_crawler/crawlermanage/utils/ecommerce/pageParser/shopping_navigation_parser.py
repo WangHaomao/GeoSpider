@@ -22,7 +22,7 @@ import os
 def get_nav_by_keyword_scoring(container,indexURL):
     # featureDict = load_keyword_file('e-commerce.txt')
     FILEPATH = project_dir = os.path.dirname(os.path.abspath(__file__))
-    featureDict = load_keyword_file('%s/../../../e-commerce.txt'%FILEPATH)
+    featureDict = load_keyword_file('%s/e-commerce.txt'%FILEPATH)
     scoreList = []
     javascript_num_list =[]
     index = 0
@@ -371,7 +371,7 @@ def get_searchUrl_and_keyword(p_soup,url):
 
 if __name__ == '__main__':
 
-    # url = 'https://www.taobao.com/'
+    url = 'https://www.taobao.com/'
     # 当当
     # url = "http://www.dangdang.com/"
     # 唯品会
@@ -383,7 +383,7 @@ if __name__ == '__main__':
     # 亚马逊
     # url = "https://www.amazon.cn/"
     # 美丽说
-    url = "http://www.meilishuo.com/"
+    # url = "http://www.meilishuo.com/"
     #
     # url = "https://www.jd.com/"
     # url = 'http://www.mogujie.com'
@@ -391,7 +391,7 @@ if __name__ == '__main__':
     # url ='https://www.tmall.com/'
 
 
-    print get_searchUrl_and_keyword(get_soup_by_request_without_script(url),url)
-
+    # print get_searchUrl_and_keyword(get_soup_by_request_without_script(url),url)
+    print get_nav(url,0)
 
     pass

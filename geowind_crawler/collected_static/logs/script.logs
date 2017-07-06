@@ -22809,3 +22809,124 @@ Traceback (most recent call last):
     (lookup_view_s, args, kwargs, len(patterns), patterns))
 NoReverseMatch: Reverse for 'historytasks' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
 >>>>>>> 6a077dfdba7e313fa7293014804ba688ba7bb8f8
+2017-07-06 19:44:10,767 [Thread-12:140064483428096] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-06 20:04:14,705 [Thread-34:140064467314432] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-06 20:32:13,987 [Thread-61:140064369661696] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-06 20:32:18,631 [Thread-62:140064483428096] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-06 21:21:06,974 [Thread-111:140064369661696] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 515, in extractmultiple
+    goods_list = get_goods_list(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py", line 358, in get_goods_list
+    return analysis_by_tag_return_goods_message(get_goods_list_tag_by_soup(soup), url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py", line 120, in analysis_by_tag_return_goods_message
+    re_res = re.search(pic_size_regular, pic_url).group()
+AttributeError: 'NoneType' object has no attribute 'group'
+2017-07-06 21:21:35,969 [Thread-113:140064386447104] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 515, in extractmultiple
+    goods_list = get_goods_list(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py", line 358, in get_goods_list
+    return analysis_by_tag_return_goods_message(get_goods_list_tag_by_soup(soup), url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py", line 120, in analysis_by_tag_return_goods_message
+    re_res = re.search(pic_size_regular, pic_url).group()
+AttributeError: 'NoneType' object has no attribute 'group'
+2017-07-06 21:22:23,476 [Thread-120:140064344225536] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-06 21:28:33,049 [Thread-130:140064378054400] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-06 21:31:09,960 [Thread-133:140064378054400] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-06 21:32:57,451 [Thread-134:140064378054400] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-06 21:36:19,373 [Thread-138:140064378054400] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-06 21:36:56,293 [Thread-139:140064378054400] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 515, in extractmultiple
+    goods_list = get_goods_list(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py", line 358, in get_goods_list
+    return analysis_by_tag_return_goods_message(get_goods_list_tag_by_soup(soup), url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py", line 120, in analysis_by_tag_return_goods_message
+    re_res = re.search(pic_size_regular, pic_url).group()
+AttributeError: 'NoneType' object has no attribute 'group'
+2017-07-06 21:40:17,340 [Thread-4:140459668760320] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/images/model/guan/url_none.png
+2017-07-06 21:50:15,655 [Thread-7:140459668760320] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 506, in extractmultiple
+    shop_nav = get_nav(url,0)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 288, in get_nav
+    method,nav = get_aTag_nav_by_request(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 260, in get_aTag_nav_by_request
+    return get_nav_in_url(soup,url,1)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 239, in get_nav_in_url
+    nav = get_nav_by_class_nav(soup,url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 161, in get_nav_by_class_nav
+    navUl = get_nav_by_keyword_scoring(all_element, url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 25, in get_nav_by_keyword_scoring
+    featureDict = load_keyword_file('%s/../../../e-commerce.txt'%FILEPATH)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 100, in load_keyword_file
+    fr = open(fileName, 'r')
+IOError: [Errno 2] No such file or directory: '/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/../../../e-commerce.txt'
+2017-07-06 22:03:36,474 [Thread-13:139797323454208] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 506, in extractmultiple
+    shop_nav = get_nav(url,0)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 288, in get_nav
+    method,nav = get_aTag_nav_by_request(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 260, in get_aTag_nav_by_request
+    return get_nav_in_url(soup,url,1)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 236, in get_nav_in_url
+    a_url_list = category_page_parser(allCategory_page_url, url,parser_method)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/category_page_parser.py", line 25, in category_page_parser
+    soup = get_soup_by_request(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py", line 98, in get_soup_by_request
+    req_text = get_request_text(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py", line 20, in get_request_text
+    return requests.get(url, timeout=15, headers=header).text
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 513, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 623, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+SSLError: ("bad handshake: SysCallError(-1, 'Unexpected EOF')",)

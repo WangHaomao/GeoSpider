@@ -96,13 +96,15 @@ def analysis_by_tag_return_goods_message(goods_list_tag, url):
                                 if (res_pic_url == ''):
                                     res_pic_url = pic_url
                                 else:
-                                    re_res = re.search(pic_size_regular, pic_url).group()
-                                    re_res_splited = re_res.split('x')
-                                    pic_size = max(int(re_res_splited[0]), int(re_res_splited[1]))
+                                    re_res = re.search(pic_size_regular, pic_url)
+                                    if (re_res):
+                                        re_res = re_res.group()
+                                        re_res_splited = re_res.split('x')
+                                        pic_size = max(int(re_res_splited[0]), int(re_res_splited[1]))
 
-                                    if (pic_size > max_pic_size):
-                                        max_pic_size = pic_size
-                                        res_pic_url = pic_url
+                                        if (pic_size > max_pic_size):
+                                            max_pic_size = pic_size
+                                            res_pic_url = pic_url
                                 is_in_some_attri = True
                         except:
                             pass
@@ -117,13 +119,15 @@ def analysis_by_tag_return_goods_message(goods_list_tag, url):
                                 if (res_pic_url == ''):
                                     res_pic_url = pic_url
                                 else:
-                                    re_res = re.search(pic_size_regular, pic_url).group()
-                                    re_res_splited = re_res.split('x')
-                                    pic_size = max(int(re_res_splited[0]), int(re_res_splited[1]))
+                                    re_res = re.search(pic_size_regular, pic_url)
+                                    if(re_res):
+                                        re_res = re_res.group()
+                                        re_res_splited = re_res.split('x')
+                                        pic_size = max(int(re_res_splited[0]), int(re_res_splited[1]))
 
-                                    if (pic_size > max_pic_size):
-                                        max_pic_size = pic_size
-                                        res_pic_url = pic_url
+                                        if (pic_size > max_pic_size):
+                                            max_pic_size = pic_size
+                                            res_pic_url = pic_url
                                 is_in_some_attri = True
 
                     if (is_in_some_attri == False and inner_tag.name != None):
@@ -385,3 +389,5 @@ if __name__ == '__main__':
     # url = 'http://www.meilishuo.com/search/goods/?page=1&searchKey=%E8%BF%9E%E8%A1%A3%E8%A3%99'
     # url ='http://search.suning.com/%E6%89%8B%E6%9C%BA/'
     # print get_goods_list(url)
+    url = 'http://search.dangdang.com/?key=%CA%E9%B3%E6%C5%A3%BD%F2%D3%A2%BA%BA%CB%AB%D3%EF%B6%C1%CE%EF&act=input'
+    print get_goods_list(url)
