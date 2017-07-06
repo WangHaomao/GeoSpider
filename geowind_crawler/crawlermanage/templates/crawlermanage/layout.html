@@ -119,11 +119,20 @@ http://www.bootstrap.com"></textarea>
               <!-- select -->
               <div class="form-group">
                 <label>网站类型</label>
-                <select class="form-control" id="webtype">
-                  <option value="ecommerce">电商</option>
+                <select class="form-control" id="webtype" onchange="webtypeChange()">
+                  <option value="ecommerce">电商（全网）</option>
+                  <option value="ecommerce_keywords">电商（关键字）</option>
                   <option value="news">新闻</option>
                   <option value="blog">博客</option>
                 </select>
+              </div>
+
+              <div class="form-group" id="ecommerce_keywords" style="display: none">
+                <label>关键字（有多个用英文符“,”分割，如下）</label>
+                <textarea id="keywords" class="form-control" rows="3" placeholder="手机,笔记本,iphone"></textarea>
+                <!-- {% if error2 %}
+                  <p style="color: red;">{{error2}}</p>
+                {% endif %} -->
               </div>
 
               <!-- radio -->
@@ -322,6 +331,16 @@ http://www.bootstrap.com"></textarea>
         
       }
     }, 'json')
+  });
+
+  $("#webtype").click(function(){
+     webtype = $(this).val();
+     if(webtype == 'ecommerce_keywords') {
+        $("#ecommerce_keywords").fadeIn('slow');
+        $('#ecommerce_keywords').css('display', '');
+     } else {
+        $("#ecommerce_keywords").fadeOut("slow");
+     }
   });
 </script>
 {% endblock %}

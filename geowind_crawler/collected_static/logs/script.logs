@@ -22471,3 +22471,169 @@ Traceback (most recent call last):
     (lookup_view_s, args, kwargs, len(patterns), patterns))
 NoReverseMatch: Reverse for 'blogdetail' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
 2017-07-05 21:26:26,028 [Thread-6:139886322054912] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-05 22:08:25,444 [Thread-7:140613256660736] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-05 22:15:54,632 [Thread-14:140613265053440] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 80, in tasks
+    'stopping_count': stopping_count, 'error_count': error_count})
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1473, in next
+    only_fields=self.only_fields)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 729, in _from_son
+    obj = cls(__auto_convert=False, _created=created, __only_fields=only_fields, **data)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 77, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The fields "set(['keywords'])" do not exist on the document "Task"
+2017-07-05 22:17:07,591 [Thread-18:140613238040320] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 80, in tasks
+    'stopping_count': stopping_count, 'error_count': error_count})
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1473, in next
+    only_fields=self.only_fields)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 729, in _from_son
+    obj = cls(__auto_convert=False, _created=created, __only_fields=only_fields, **data)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 77, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The fields "set(['keywords'])" do not exist on the document "Task"
+2017-07-05 22:18:20,256 [Thread-26:140613256660736] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 80, in tasks
+    'stopping_count': stopping_count, 'error_count': error_count})
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 49, in __len__
+    list(self._iter_results())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 97, in _iter_results
+    self._populate_cache()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 116, in _populate_cache
+    self._result_cache.append(self.next())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1473, in next
+    only_fields=self.only_fields)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 729, in _from_son
+    obj = cls(__auto_convert=False, _created=created, __only_fields=only_fields, **data)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/base/document.py", line 77, in __init__
+    raise FieldDoesNotExist(msg)
+FieldDoesNotExist: The fields "set(['keywords'])" do not exist on the document "Task"

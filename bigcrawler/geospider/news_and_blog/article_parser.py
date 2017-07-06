@@ -31,7 +31,7 @@ def filter_tags(html_str, flag):
     html_str = re.sub('(?is)<style.*?>.*?</style>', '', html_str) #remove css
     html_str = re.sub('(?is)<a[\t|\n|\r|\f].*?>.*?</a>', '', html_str)  # remove a
     html_str = re.sub('(?is)<li[^nk].*?>.*?</li>', '', html_str)  # remove li
-    html_str = re.sub('&.{2,5};|&#.{2,5};', '', html_str) #remove special char
+    #html_str = re.sub('&.{2,5};|&#.{2,5};', '', html_str) #remove special char
     if flag:
         html_str = re.sub('(?is)<.*?>', '', html_str) #remove tag
     return html_str

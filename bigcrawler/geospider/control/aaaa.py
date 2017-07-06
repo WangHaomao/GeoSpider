@@ -19,9 +19,9 @@ def start():
     b.redis_key = "5953322595a1551602965038:start_urls"
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     # r.sadd("myspider:start_urls", 'http://news.qq.com/')
-    r.lpush("5953322595a1551602965038:start_urls", "http://www.vancl.com/")
+    r.lpush("5953322595a1551602965038:start_urls", "https://www.taobao.com/")
     # r.lpush("aaa:start_urls", "http://news.sohu.com/")
-    b.allowed_domains=["vancl.com"]
+    b.allowed_domains=["taobao.com"]
     cmdline.execute("scrapy crawl 5953322595a1551602965038".split())
 
     # process = CrawlerProcess(get_project_settings())
