@@ -308,6 +308,7 @@ http://www.bootstrap.com"></textarea>
     reservationtime = $('#reservationtime').val()
     slave = $('#slave').val()
     processnum = $('#processnum').val()
+    keywords = $('#keywords').val()
     if(taskname=='' || starturls=='') {
       alert('请完善信息...')
       return
@@ -322,7 +323,8 @@ http://www.bootstrap.com"></textarea>
       webtype:webtype,
       reservationtime:reservationtime,
       slave:slave,
-      processnum:processnum
+      processnum:processnum,
+      keywords:keywords
     }, function(data) {
       if(data!=null){
         if (data['status']=='success') {

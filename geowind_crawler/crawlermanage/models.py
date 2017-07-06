@@ -19,6 +19,7 @@ class Task(Document):
     slave = ListField(required=True)
     status = StringField(max_length=10)
     processnum = mongoengine.IntField()
+    keywords = ListField()
 
 class News(Document):
     title = StringField(max_length=30, required=True)
