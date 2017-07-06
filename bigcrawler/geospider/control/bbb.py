@@ -19,7 +19,7 @@ def start():
     b.redis_key = "sss:start_urls"
     r = redis.Redis(host='127.0.0.1', port=6379, db=0)
     # r.sadd("myspider:start_urls", 'http://news.qq.com/')
-    r.lpush("sss:start_urls", "http://www.dangdang.com/")
+    r.lpush("sss:start_urls", "https://www.taobao.com/")
     # r.lpush("aaa:start_urls", "http://news.sohu.com/")
     # b.allowed_domains=["dangdang.com"]
     cmdline.execute("scrapy crawl sss".split())

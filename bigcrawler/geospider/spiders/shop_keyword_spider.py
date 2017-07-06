@@ -21,7 +21,7 @@ class ShopKeywordSpider(RedisSpider):
     name = "shopkeywordspider"
     # allowed_domains = ["https://www.baidu.com"]
 
-    redis_key = 'ecommerce:start_urls'
+    # redis_key = 'ecommerce:start_urls'
 
     keywords = []
 
@@ -38,7 +38,7 @@ class ShopKeywordSpider(RedisSpider):
     def __init__(self, *args, **kwargs):
         # Dynamically define the allowed domains list.
         domain = kwargs.pop('domain', '')
-        print("***********************************************************8")
+        print("***********************************************************")
         print(self.keywords)
         #self.allowed_domains = filter(None, domain.split(','))
         # db = connect_mongodb()
@@ -47,9 +47,8 @@ class ShopKeywordSpider(RedisSpider):
         super(ShopKeywordSpider, self).__init__(*args, **kwargs)
 
     def parse(self, response):
-
         # GOAL_KEYWORD_list = self.keywords
-        GOAL_KEYWORD_list = [u'衣服']
+        GOAL_KEYWORD_list = self.keywords
         searchUrl_and_keyword = get_searchUrl_and_keyword(get_soup_by_html_source(response.text),response.url)
 
 
@@ -96,8 +95,7 @@ class ShopKeywordSpider(RedisSpider):
                 res_url_list.append(item_list_url)
                 res_key_list.append(quote(keyword.encode('utf-8')))
 
-
-        if (len(res_url_list) > 1):
+        if (len(res_url_list) >= 1):
 
             pageDict = None
             demo_url = None
@@ -132,7 +130,6 @@ class ShopKeywordSpider(RedisSpider):
 
 
             #pageKey_method = 0 使用pageKetDict解析翻页信息
-
             if(pageKey_method == 0):
                 if (pageDict == None or page_list == None):
                     raise Exception("页面解析异常")
@@ -183,6 +180,7 @@ class ShopKeywordSpider(RedisSpider):
     
                     """
                     for each_goods_list_url in res:
+                        print each_goods_list_url
                         yield Request(callback=self.goods_list_parse, url=each_goods_list_url)
 
             #pageKey_method = 1 使用 pageKeyList解析翻页信息
@@ -221,6 +219,7 @@ class ShopKeywordSpider(RedisSpider):
                         res = get_all_page_urls_by_pageKeyList(pageKeyList, [goods_list_url, next_url1, next_url2],
                                                 allnumber)
                         for each_goods_list_url in res:
+                            print(each_goods_list_url)
                             yield Request(callback=self.goods_list_parse, url=each_goods_list_url)
                 else:
 
@@ -232,6 +231,7 @@ class ShopKeywordSpider(RedisSpider):
                             goods_list_url = get_all_page_urls_by_pageKeyList(pageKeyList,page_list,allnumber)
 
                             for each_goods_list_url in goods_list_url:
+                                print(each_goods_list_url)
                                 yield Request(callback=self.goods_list_parse, url=each_goods_list_url)
 
 
@@ -312,7 +312,6 @@ class ShopKeywordSpider(RedisSpider):
         res_item = Ecommerce()
         res_item['goods'] = goods_item
         res_item['stores'] = store_item
-
 
         yield res_item
 

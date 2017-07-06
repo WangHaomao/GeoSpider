@@ -60,10 +60,15 @@ def index(request):
 def tasks(request):
     page = request.GET.get('page')
     page2 = request.GET.get('page2')
+    webpage = 'currenttask'
     if page == None:
         page = 1
+    else:
+        webpage = 'currenttask'
     if page2 == None:
         page2 = 1
+    else:
+        webpage = 'historytask'
 
     list = Task.objects.filter(status__in=['running', 'waitting', 'error', 'pausing'])
     list2 = Task.objects.filter(status='stopping')
@@ -76,7 +81,7 @@ def tasks(request):
     stopping_count = Task.objects.filter(status='stopping').count()
     error_count = Task.objects.filter(status='error').count()
 
-    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2, 'running_count': running_count,
+    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2, 'status':webpage,'running_count': running_count,
                                                         'pausing_count': pausing_count,
                                                         'stopping_count': stopping_count, 'error_count': error_count})
 

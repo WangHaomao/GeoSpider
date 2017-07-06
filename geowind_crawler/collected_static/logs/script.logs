@@ -22710,3 +22710,82 @@ ValueError: The view crawlermanage.views.extractmultiple didn't return an HttpRe
 2017-07-06 11:07:24,700 [Thread-3:140413444683520] [django.request:152] [WARNING]- Not Found: /CLodopfuncs.js
 2017-07-06 11:07:40,709 [Thread-6:140413436028672] [django.request:152] [WARNING]- Not Found: /CLodopfuncs.js
 2017-07-06 11:10:09,824 [Thread-4:140177322272512] [django.request:152] [WARNING]- Not Found: /crawlermanage/tasks/pages/widgets.html
+2017-07-06 08:01:40,921 [Thread-3:140147802765056] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-07-06 08:02:22,149 [Thread-8:140147777586944] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 71, in tasks
+    p = paging(list, page, 10)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/usr/local/lib/python2.7/dist-packages/django/core/paginator.py", line 72, in _get_count
+    self._count = self.object_list.count()
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/usr/local/lib/python2.7/dist-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-06 08:13:06,892 [Thread-21:140147777586944] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 81, in tasks
+    'stopping_count': stopping_count, 'error_count': error_count})
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'historytasks' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
