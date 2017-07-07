@@ -23633,3 +23633,7 @@ ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
 2017-07-07 09:48:18,474 [Thread-3:140599700641536] [django.request:152] [WARNING]- Not Found: /favicon.ico
 =======
 >>>>>>> 38dab6bf7af2ff009f3973e93b4d556bbbff056a
+2017-07-07 09:54:36,262 [Thread-2:139988837775104] [django.request:152] [WARNING]- Not Found: /
+2017-07-07 09:54:36,619 [Thread-3:139988687648512] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-07 09:56:59,083 [Thread-96:139988687648512] [django.request:152] [WARNING]- Not Found: /crawlermanage/charts/pages/widgets.html
+2017-07-07 09:57:11,888 [Thread-108:139988662470400] [django.request:152] [WARNING]- Not Found: /crawlermanage/introduce/pages/widgets.html
