@@ -77,6 +77,14 @@ class ProcessDao(object):
             process_list.append(i)
         return process_list
 
+    def find_by_localhost_and_status(self, localhost, status):
+        cursor = self.db.process.find({'localhost':localhost, 'status': status})
+        process_list = []
+        for i in cursor:
+            process_list.append(i)
+        return process_list
+
+
     '''根据本机ip和任务id查找进程'''
     def find_by_localhost_and_taskid(self, localhost, taskid):
         cursor = self.db.process.find({'localhost':localhost, 'taskid': taskid})
@@ -111,6 +119,9 @@ class ProcessDao(object):
     '''删除一个进程'''
     def delete_by_localhost_and_taskid(self, localhost, taskid):
         self.db.process.remove({'localhost':localhost, "taskid": taskid})
+
+    def delete_by_localhost_and_status(self, localhost, status):
+        self.db.process.remove({'localhost':localhost, "status": status})
 
     '''删除一个进程'''
 

@@ -303,7 +303,7 @@ class ShopMainSpider(RedisSpider):
             goods_item['price'] = goods_dict['price']
             goods_item['pic_url'] = goods_dict['pic_url']
             goods_item['detail_url'] = goods_dict['detail_url']
-
+            goods_item['title'] = goods_dict['title']
             goods_item['taskid'] = str(self.name)
         else:
 
