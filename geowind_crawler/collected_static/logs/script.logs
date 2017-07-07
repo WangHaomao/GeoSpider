@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2017-05-25 09:11:36,165 [Thread-6:140165799896832] [django.request:170] [WARNING]- Not Found: /favicon.ico
 2017-05-25 09:11:52,107 [Thread-16:140165586614016] [django.request:170] [WARNING]- Not Found: /crawlermanage/index/dist/img/user2-160x160.jpg
 2017-05-25 09:11:53,850 [Thread-22:140165799896832] [django.request:170] [WARNING]- Not Found: /crawlermanage/tasks/dist/img/user2-160x160.jpg
@@ -23630,3 +23631,5 @@ ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
 2017-07-07 09:46:00,700 [Thread-54:140530581497600] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
 2017-07-07 09:48:18,284 [Thread-2:140599709034240] [django.request:152] [WARNING]- Not Found: /
 2017-07-07 09:48:18,474 [Thread-3:140599700641536] [django.request:152] [WARNING]- Not Found: /favicon.ico
+=======
+>>>>>>> 38dab6bf7af2ff009f3973e93b4d556bbbff056a
