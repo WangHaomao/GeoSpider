@@ -1,0 +1,52 @@
+2017-07-06 14:25:54,323 [Thread-5:139636183348992] [django.request:182] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-06 14:26:59,655 [Thread-8:139636183348992] [django.request:182] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-07 01:27:42,549 [Thread-3:140199736633088] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-07-07 01:35:30,920 [Thread-56:140199718799104] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/newsdata/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 183, in newsdata
+    return render(request, 'crawlermanage/newsdata.html', locals())
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 220, in render
+    nodelist.append(node.render_annotated(context))
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'blogdetail' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []

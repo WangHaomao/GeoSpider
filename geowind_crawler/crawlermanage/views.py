@@ -10,9 +10,9 @@ from django.shortcuts import render, render_to_response
 from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores, Blog, TempArticle
 from crawlermanage.utils.article_parser import extract, test, readFile, extract_content, get_article_data
 from crawlermanage.utils.echarts import create_chart1, create_chart2, create_chart3, create_chart4
-from crawlermanage.utils.ecommerce.pageParser.shopping_detail_parser  import get_goods_dict
-from crawlermanage.utils.ecommerce.pageParser.shopping_navigation_parser  import get_nav
-from crawlermanage.utils.ecommerce.pageParser.shopping_itemsList_parser  import get_goods_list
+from crawlermanage.utils.ecommerce.pageParser.shopping_detail_parser import get_goods_dict
+from crawlermanage.utils.ecommerce.pageParser.shopping_navigation_parser import get_nav
+from crawlermanage.utils.ecommerce.pageParser.shopping_itemsList_parser import get_goods_list
 from crawlermanage.utils.ecommerce.spiderUtils.parser_util import get_soup_by_request
 from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
@@ -83,9 +83,10 @@ def tasks(request):
     stopping_count = Task.objects.filter(status='stopping').count()
     error_count = Task.objects.filter(status='error').count()
 
-    return render(request, 'crawlermanage/tasks.html', {'p': p, 'p2': p2, 'status':webpage,'running_count': running_count,
-                                                        'pausing_count': pausing_count,
-                                                        'stopping_count': stopping_count, 'error_count': error_count})
+    return render(request, 'crawlermanage/tasks.html',
+                  {'p': p, 'p2': p2, 'status': webpage, 'running_count': running_count,
+                   'pausing_count': pausing_count,
+                   'stopping_count': stopping_count, 'error_count': error_count})
 
 
 '''
@@ -183,19 +184,19 @@ def newsdata(request):
     return render(request, 'crawlermanage/newsdata.html', locals())
 
 
-'''
-    新闻详细内容
-'''
-
-
-def newsdetail(request):
-    id = request.GET.get('id')
-    if id == None:
-        return
-    news = News.objects.get(id=id)
-    if news == None:
-        return
-    return render(request, 'crawlermanage/newsdetail.html', {'news': news})
+# '''
+#     新闻详细内容
+# '''
+#
+#
+# def newsdetail(request):
+#     id = request.GET.get('id')
+#     if id == None:
+#         return
+#     news = News.objects.get(id=id)
+#     if news == None:
+#         return
+#     return render(request, 'crawlermanage/newsdetail.html', {'news': news})
 
 
 '''
@@ -215,7 +216,7 @@ def layout(request):
         processnum = request.POST.get('processnum', '')
         keywords = request.POST.get('keywords', '')
         keyword_list = []
-        if keywords!='':
+        if keywords != '':
             keyword_list = keywords.split(',')
         logger.info(keywords)
         if processnum == '':
@@ -236,7 +237,7 @@ def layout(request):
         if slave == '':
             slave = get_attr('LOCAL_HOST')
         slave_list = slave.split(',')
-        if webtype =='ecommerce_keywords':
+        if webtype == 'ecommerce_keywords':
             webtype = 'ecommerce'
         task = Task.objects.create(taskname=taskname, starturls=list_url, starttime=starttime, endtime=endtime,
                                    webtype=webtype, describe=describe, slave=slave_list, status=status,
@@ -410,13 +411,18 @@ def ecommercedata(request):
         shoplist = Stores.objects.filter(taskid=taskid)
     page = request.GET.get('page')
     page2 = request.GET.get('page2')
+    webpage = 'goods'
     if page == None:
         page = 1
+    else:
+        webpage = 'goods'
     if page2 == None:
         page2 = 1
+    else:
+        webpage = 'stores'
     p = paging(goodslist, page, 10)
     p2 = paging(shoplist, page2, 10)
-    return render(request, 'crawlermanage/ecommercedata.html', {'p': p, 'p2': p2})
+    return render(request, 'crawlermanage/ecommercedata.html', {'p': p, 'p2': p2, 'status': webpage})
 
 
 def blogdata(request):
@@ -478,13 +484,14 @@ def extractmultiple(request):
                 # list_id.append(str(temp_article['id']))
             # ret = {'webtype': webtype, 'urls': list_url, 'ids': (list_id)}
             ret = {'webtype': webtype,
-                   'title': title_list, 'time': time_list, 'keywords': keywords_list,'urls':url_list, 'article': article_list}
+                   'title': title_list, 'time': time_list, 'keywords': keywords_list, 'urls': url_list,
+                   'article': article_list}
             return HttpResponse(json.dumps(ret))
-        elif(webtype == 'ecommerce_detail'):
+        elif (webtype == 'ecommerce_detail'):
             title_list = []
             price_list = []
             pic_url_list = []
-            url_list=[]
+            url_list = []
             comment_list = []
             for url in list_url:
                 url = str(url)
@@ -496,17 +503,18 @@ def extractmultiple(request):
                 comment_list.append(goods_dict['comment_degree'])
 
             ret = {'webtype': webtype,
-                   'title': title_list,'price':price_list,'pic_url':pic_url_list,'urls':url_list,'comment':comment_list}
+                   'title': title_list, 'price': price_list, 'pic_url': pic_url_list, 'urls': url_list,
+                   'comment': comment_list}
             return HttpResponse(json.dumps(ret))
 
         elif (webtype == 'ecommerce_nav'):
 
             nav_list = []
             for url in list_url:
-                methon,shop_nav = get_nav(url,0)
+                methon, shop_nav = get_nav(url, 0)
                 nav_list.append(shop_nav)
 
-            ret = {'webtype': webtype,'nav_list':nav_list,'urls':list_url}
+            ret = {'webtype': webtype, 'nav_list': nav_list, 'urls': list_url}
 
             return HttpResponse(json.dumps(ret))
         else:
@@ -515,7 +523,7 @@ def extractmultiple(request):
                 goods_list = get_goods_list(url)
                 res_goods_list.append(goods_list)
 
-            ret = {'webtype': webtype, 'res_goods_list': res_goods_list,'urls':list_url}
+            ret = {'webtype': webtype, 'res_goods_list': res_goods_list, 'urls': list_url}
 
             return HttpResponse(json.dumps(ret))
     else:

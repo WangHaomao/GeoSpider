@@ -21,14 +21,26 @@
 <div>
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#shopgoods" data-toggle="tab">商品信息</a></li>
-              <li><a href="#shopstore" data-toggle="tab">店铺信息</a></li>
+              {% ifequal status 'goods' %}
+                <li class="active"><a href="#shopgoods" data-toggle="tab">商品信息</a></li>
+                <li><a href="#shopstore" data-toggle="tab">店铺信息</a></li>
+              {% endifequal %}
+              {% ifequal status 'stores' %}
+                <li><a href="#shopgoods" data-toggle="tab">商品信息</a></li>
+                <li class="active"><a href="#shopstore" data-toggle="tab">店铺信息</a></li>
+              {% endifequal %}
             </ul>
             <div class="tab-content">
-              <div class="active tab-pane" id="shopgoods">
+              {% ifequal status 'goods' %}
+                <div class="active tab-pane" id="shopgoods">
+              {% endifequal %}
+              {% ifequal status 'stores' %}
+                <div class="tab-pane" id="shopgoods">
+              {% endifequal %}
+
               	<div class="row">
 			            <div class="col-xs-12">
-			              <div class="box">
+			              <div class="box" style="border-top:0px;">
 
 			                <div class="box-body table-responsive no-padding">
 			                <table class="table">
@@ -86,10 +98,16 @@
 			          <!-- row -->
               </div>
               <!-- /.tab-pane -->
-              <div class="tab-pane" id="shopstore">
+              {% ifequal status 'goods' %}
+                <div class="tab-pane" id="shopstore">
+              {% endifequal %}
+              {% ifequal status 'stores' %}
+                <div class="active tab-pane" id="shopgoods">
+              {% endifequal %}
+
                 <div class="row">
                   <div class="col-xs-12">
-                    <div class="box">
+                    <div class="box" style="border-top:0px;">
                       <!-- <div class="box-header">
                         <h3 class="box-title">Responsive Hover Table</h3>
                       </div> -->
