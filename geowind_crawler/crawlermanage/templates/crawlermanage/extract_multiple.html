@@ -294,8 +294,15 @@ http://www.bootstrap.com"></textarea>
 
         tmp_list = goods_list[i].split('##');
         title = tmp_list[0];
+        if(title!=undefined && title.length > 16){
+            title = title.substring(0,16) + '...';
+        }
         price = tmp_list[1];
-        url = tmp_list[2];
+        url = tmp_list[2].replace('\n','');
+        real_url = url
+        if(url!=undefined && url.length > 40){
+            url = url.substring(0,40) + '...';
+        }
         pic_url = tmp_list[3];
 
         goods_box_str = '<div class="col-md-3">\
@@ -309,8 +316,8 @@ http://www.bootstrap.com"></textarea>
                             <img src="'+pic_url+'"height="220px" width="220px">\
                             <p>商品名：'+ title+'</p>\
                             <p>价格：'+price+'</p>\
-                            <p>链接：'+url+'</p>\
-                        </div></div></div>'
+                            <p>链接：<a href="'+real_url+'" target="_blank">'+url+'</a></p></div></div></div>'
+
         $('#modal_list').append(goods_box_str);
     }
 
@@ -434,6 +441,8 @@ http://www.bootstrap.com"></textarea>
             url_list = data['urls'];
             url_list_len = url_list.length;
             for(var i = 0 ;i<url_list_len;i++){
+
+                if(res_goods_list[i] == null) continue;
                 res_goods_list_len = res_goods_list[i].length;
 
                 var go_str = '' ;

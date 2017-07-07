@@ -1,26 +1,5 @@
-[INFO  - 2017-07-06T22:00:47.665Z] GhostDriver - Main - running on port 57563
-[INFO  - 2017-07-06T22:00:48.609Z] Session [91a22ab0-6296-11e7-95e6-a935a51d3a3f] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0 )","webSecurityEnabled":true}
-[INFO  - 2017-07-06T22:00:48.609Z] Session [91a22ab0-6296-11e7-95e6-a935a51d3a3f] - page.customHeaders:  - {}
-[INFO  - 2017-07-06T22:00:48.609Z] Session [91a22ab0-6296-11e7-95e6-a935a51d3a3f] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"},"phantomjs.page.settings.userAgent":"Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0 )"}
-[INFO  - 2017-07-06T22:00:48.609Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 91a22ab0-6296-11e7-95e6-a935a51d3a3f
-[ERROR - 2017-07-06T22:00:49.408Z] Session [91a22ab0-6296-11e7-95e6-a935a51d3a3f] - page.onError - msg: TypeError: null is not an object (evaluating 'this.get("input").val')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-06T22:00:49.408Z] Session [91a22ab0-6296-11e7-95e6-a935a51d3a3f] - page.onError - stack:
-  parse (https://g.alicdn.com/kg/??combobox/0.0.2/index-min.js,search-suggest/6.0.12/mods/local-query-min.js,search-suggest/6.0.12/mods/menu-min.js,search-suggest/6.0.12/tpl/cloud-min.js,search-suggest/6.0.12/mods/bts-min.js:2)
-  i (https://g.alicdn.com/kg/??xtemplate/4.1.4/runtime-min.js,component/0.0.2/control-min.js,menu/0.0.3/index-min.js,search-suggest/6.0.12/mods/storage-min.js,search-suggest/6.0.12/mods/utils-min.js:2)
-  decorateDom (https://g.alicdn.com/kg/??xtemplate/4.1.4/runtime-min.js,component/0.0.2/control-min.js,menu/0.0.3/index-min.js,search-suggest/6.0.12/mods/storage-min.js,search-suggest/6.0.12/mods/utils-min.js:2)
-  (anonymous function) (https://g.alicdn.com/kissy/k/6.2.3/??base-min.js,attribute-min.js:1)
-  create (https://g.alicdn.com/kg/??xtemplate/4.1.4/runtime-min.js,component/0.0.2/control-min.js,menu/0.0.3/index-min.js,search-suggest/6.0.12/mods/storage-min.js,search-suggest/6.0.12/mods/utils-min.js:2)
-  render (https://g.alicdn.com/kg/??xtemplate/4.1.4/runtime-min.js,component/0.0.2/control-min.js,menu/0.0.3/index-min.js,search-suggest/6.0.12/mods/storage-min.js,search-suggest/6.0.12/mods/utils-min.js:2)
-  _initCombo (https://g.alicdn.com/kg/??search-suggest/6.0.12/index-min.js,search-suggest/6.0.12/plugin/history-min.js,search-suggest/6.0.12/plugin/cloud-min.js,search-suggest/6.0.12/plugin/tab-min.js,search-suggest/6.0.12/plugin/history-magic-min.js:1)
-  initializer (https://g.alicdn.com/kg/??search-suggest/6.0.12/index-min.js,search-suggest/6.0.12/plugin/history-min.js,search-suggest/6.0.12/plugin/cloud-min.js,search-suggest/6.0.12/plugin/tab-min.js,search-suggest/6.0.12/plugin/history-magic-min.js:1)
-  (anonymous function) (https://g.alicdn.com/kissy/k/6.2.3/??base-min.js,attribute-min.js:1)
-  constructor (https://g.alicdn.com/kissy/k/6.2.3/??base-min.js,attribute-min.js:1)
-  callSuper (https://g.alicdn.com/kissy/k/6.2.3/??base-min.js,attribute-min.js:1)
-  (anonymous function) (https://g.alicdn.com/kissy/k/6.2.3/??base-min.js,attribute-min.js:1)
-  (anonymous function) (https://g.alicdn.com/tb-mod/??tb-top/0.0.4/index.js,tb-home-header/0.0.17/index.js,home-category-tab/0.0.4/index.js,home-hot-recommend/0.0.13/index.js,home-category-list/0.0.13/index.js,home-category-nav/0.2.0/index.js,global-spacing/0.0.1/index.js:1)
-  m (https://g.alicdn.com/??kissy/k/6.2.3/seed-min.js,tms/tb-init/6.0.1/index-min.js:5)
-  e (https://g.alicdn.com/??kissy/k/6.2.3/seed-min.js,tms/tb-init/6.0.1/index-min.js:5)
-
-  phantomjs://platform/console++.js:263 in error
+[INFO  - 2017-07-07T09:45:04.066Z] GhostDriver - Main - running on port 52643
+[INFO  - 2017-07-07T09:45:05.009Z] Session [f46942c0-62f8-11e7-9bbd-ab85e1c9b20d] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-07-07T09:45:05.010Z] Session [f46942c0-62f8-11e7-9bbd-ab85e1c9b20d] - page.customHeaders:  - {}
+[INFO  - 2017-07-07T09:45:05.010Z] Session [f46942c0-62f8-11e7-9bbd-ab85e1c9b20d] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-07-07T09:45:05.010Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: f46942c0-62f8-11e7-9bbd-ab85e1c9b20d

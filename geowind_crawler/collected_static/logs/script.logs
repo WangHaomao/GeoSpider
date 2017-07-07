@@ -22930,3 +22930,703 @@ Traceback (most recent call last):
   File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/adapters.py", line 514, in send
     raise SSLError(e, request=request)
 SSLError: ("bad handshake: SysCallError(-1, 'Unexpected EOF')",)
+2017-07-07 09:12:37,755 [Thread-12:139767003629312] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-07 09:12:47,621 [Thread-2:139767020414720] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/blogdata/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 430, in blogdata
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:13:00,024 [Thread-29:139767012022016] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-07 09:15:01,849 [Thread-31:139767020414720] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 315, in processlist
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:15:03,853 [Thread-32:139767012022016] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 315, in processlist
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:15:05,358 [Thread-33:139766986843904] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 315, in processlist
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:15:07,872 [Thread-34:139767003629312] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 315, in processlist
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:15:16,883 [Thread-35:139766995236608] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 315, in processlist
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:15:24,898 [Thread-36:139766610786048] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:15:25,899 [Thread-37:139766602393344] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/machinelist/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 330, in machinelist
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:15:26,914 [Thread-38:139766594000640] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 315, in processlist
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:15:28,420 [Thread-39:139766585607936] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/charts/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 367, in charts
+    chart1_run, chart1_pause, chart1_wait, chart1_error = create_chart1()
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/echarts.py", line 21, in create_chart1
+    run_news = Task.objects.filter(webtype='news', status='running').count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:16:29,635 [Thread-42:139766585607936] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:16:30,127 [Thread-43:139766594000640] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:16:32,119 [Thread-44:139766602393344] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/machinelist/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 330, in machinelist
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:16:33,641 [Thread-45:139766995236608] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 315, in processlist
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:16:37,650 [Thread-48:139767020414720] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/machinelist/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 330, in machinelist
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:16:39,134 [Thread-49:139767012022016] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/processlist/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 315, in processlist
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 19, in __init__
+    self.p_count = self.p.count                                 #数据库共多少条记录
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 79, in count
+    return self.object_list.count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:16:40,141 [Thread-50:139767003629312] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/charts/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 367, in charts
+    chart1_run, chart1_pause, chart1_wait, chart1_error = create_chart1()
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/echarts.py", line 21, in create_chart1
+    run_news = Task.objects.filter(webtype='news', status='running').count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:16:43,643 [Thread-53:139766986843904] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/charts/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 367, in charts
+    chart1_run, chart1_pause, chart1_wait, chart1_error = create_chart1()
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/echarts.py", line 21, in create_chart1
+    run_news = Task.objects.filter(webtype='news', status='running').count()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/queryset.py", line 131, in count
+    return super(QuerySet, self).count(with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 390, in count
+    return self._cursor.count(with_limit_and_skip=with_limit_and_skip)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/cursor.py", line 711, in count
+    return self.__collection._count(cmd, self.__collation)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/collection.py", line 1304, in _count
+    with self._socket_for_reads() as (sock_info, slave_ok):
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 859, in _socket_for_reads
+    with self._get_socket(read_preference) as sock_info:
+  File "/usr/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/mongo_client.py", line 823, in _get_socket
+    server = self._get_topology().select_server(selector)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 214, in select_server
+    address))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/pymongo/topology.py", line 189, in select_servers
+    self._error_message(selector))
+ServerSelectionTimeoutError: 127.0.0.1:27017: [Errno 111] Connection refused
+2017-07-07 09:18:40,167 [Thread-85:139766146262784] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-07 09:25:56,928 [Thread-8:140530834982656] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-07 09:27:23,889 [Thread-10:140530834982656] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-07 09:38:36,780 [Thread-46:140530581497600] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-07 09:45:22,217 [Thread-53:140530581497600] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-07 09:46:00,700 [Thread-54:140530581497600] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-07 09:48:18,284 [Thread-2:140599709034240] [django.request:152] [WARNING]- Not Found: /
+2017-07-07 09:48:18,474 [Thread-3:140599700641536] [django.request:152] [WARNING]- Not Found: /favicon.ico

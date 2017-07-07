@@ -93,6 +93,8 @@ def analysis_by_tag_return_goods_message(goods_list_tag, url):
                         try:
                             pic_url = inner_tag['src']
                             if ('jpg' in pic_url or 'png' in pic_url or 'jpeg' in pic_url):
+
+                                print pic_url
                                 if (res_pic_url == ''):
                                     res_pic_url = pic_url
                                 else:
@@ -359,6 +361,7 @@ def get_goods_list(url):
         soup = get_soup_by_request(url)
         return analysis_json_data(url,soup)
     else:
+        soup = get_soup_by_selenium_without_script(url)
         return analysis_by_tag_return_goods_message(get_goods_list_tag_by_soup(soup), url)
 
 
@@ -369,7 +372,7 @@ def get_goods_list(url):
 
 
 if __name__ == '__main__':
-    # url = "https://list.jd.com/list.html?cat=1620,1621,1626"
+    url = "https://list.jd.com/list.html?cat=1620,1621,1626"
     # url = "https://s.taobao.com/search?initiative_id=tbindexz_20170509&ie=utf8&spm=a21bo.50862.201856-taobao-item.2&sourceId=tb.index&search_type=item&ssid=s5-e&commend=all&imgfile=&q=%E6%89%8B%E6%9C%BA&suggest=0_1&_input_charset=utf-8&wq=shouji&suggest_query=shouji&source=suggest"
     # url = "http://list.mogujie.com/s?q=%E6%89%8B%E6%9C%BA%E5%A3%B3%E8%8B%B9%E6%9E%9C6&from=querytip0&ptp=1._mf1_1239_15261.0.0.5u1T9Y"
     # url = "http://search.dangdang.com/?key=%CA%E9"
@@ -381,7 +384,7 @@ if __name__ == '__main__':
     # url = "http://search.jumei.com/?referer=yiqifa_cps__ODg5MjEzfDAwczliN2JmZGVjN2EzOWQ2M2I5"
     # url = "https://www.vmall.com/search?keyword=%E6%89%8B%E6%9C%BA"
 
-    url = "https://s.taobao.com/search?q=%E8%A1%A3%E6%9C%8D&imgfile=&ie=utf8"
+    # url = "https://s.taobao.com/search?q=%E8%A1%A3%E6%9C%8D&imgfile=&ie=utf8"
     # url = "https://s.taobao.com/list?q=%E6%8B%BE%E8%B4%A7"
     # url = 'http://www.meilishuo.com/search/catalog/10057053?action=bags&mt=12.14354.r130506.18023&acm=3.mce.2_10_182yi.14354.0.2PccHqnV8sR9h.m_188513-pos_4?acm=3.mce.2_10_182ya.14354.0.2PccHqnV8sR9h.m_188509-pos_0&mt=12.14354.r130395.18023&action=clothing&page=94&cpc_offset=0'
 
@@ -389,5 +392,10 @@ if __name__ == '__main__':
     # url = 'http://www.meilishuo.com/search/goods/?page=1&searchKey=%E8%BF%9E%E8%A1%A3%E8%A3%99'
     # url ='http://search.suning.com/%E6%89%8B%E6%9C%BA/'
     # print get_goods_list(url)
-    url = 'http://search.dangdang.com/?key=%CA%E9%B3%E6%C5%A3%BD%F2%D3%A2%BA%BA%CB%AB%D3%EF%B6%C1%CE%EF&act=input'
-    print get_goods_list(url)
+    # url = 'http://search.dangdang.com/?key=%CA%E9%B3%E6%C5%A3%BD%F2%D3%A2%BA%BA%CB%AB%D3%EF%B6%C1%CE%EF&act=input'
+    res  = get_goods_list(url)
+    for each in res:
+        print type(each)
+        for key,value in each.items():
+            print key,value
+        print '------------------------'
