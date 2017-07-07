@@ -37,7 +37,7 @@ REDIS_HOST = '127.0.0.1'
 
 LOCAL_HOST = '127.0.0.1'
 
-MONGODB_HOST = '127 .0.0.1'
+MONGODB_HOST = '192.168.1.113'
 
 SUBSCRIBE = 'crawler'
 # Application definition

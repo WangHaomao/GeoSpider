@@ -19,6 +19,37 @@
 {% endblock %}
 {% block maincontent %}
 <div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content" style="border-radius:6px;">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title">电商详细页面</h4>
+
+			</div>
+			<div class="modal-body">
+              <h4 class="modal-title" id="myModalTitle">商品名</h4>
+              <h4 class="modal-title" id="myModalPrice">价格</h4>
+              <h4 class="modal-title" id="myModalComment">评价</h4>
+              <h4 class="modal-title" >商品链接：<a id="myModalLink" target="_blank"></a></h4>
+
+              <br>
+              <h4 class="modal-title" >商品图片:</h4>
+              <img id = "myModalPic" src="" class="col-center-block">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				<!--<button type="button" class="btn btn-primary">提交更改</button>-->
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+
+
           <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
               {% ifequal status 'goods' %}
@@ -47,19 +78,16 @@
                             <thead>
                               <tr>
                                 <th>ID</th>
-        				                <th>商品名称</th>
-        				                <th>商品价格</th>
-                                        <th>商品URL</th>
-        				                <!--<th>图片URL</th>-->
-
-
+                                <th>商品名称</th>
+                                <th>商品价格</th>
+                                <th>商品URL</th>
                               </tr>
                             </thead>
                             <tbody>
                               {% for i in p.p_content %}
                               <tr>
                                 <td>{{i.id}}</td>
-                                <td>{{i.title}}</td></a></td>
+                                <td><a href="#" data-toggle="modal" data-target="#myModal" onclick="setModal('{{i.title}}','{{i.price}}','{{i.comment_degree}}','{{i.detail_url}}','{{i.pic_url}}')">{{i.title}}</a></td>
                                 <td>{{i.price}}</td>
                                   <td><a target="href" href="{{i.detail_url}}">{{i.detail_url}}</a></td>
                                   <!--<td><a target="href" href="{{i.pic_url}}">{{i.pic_url}}</a></td>-->
@@ -180,6 +208,18 @@
 <script src="../../static/plugins/datatables/dataTables.bootstrap.min.js"></script>
 <script src="../../static/plugins/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 <script>
+    function setModal(title,price,comment,url,pic_url){
+        $('#myModalTitle').html('商品名：'+title);
+        $('#myModalPrice').html('价格：¥'+price);
+        $('#myModalComment').html('评价：'+comment);
+        $('#myModalLink').html(url);
+
+        $('#myModalLink').attr('href',url);
+        $("#myModalPic").attr('src',pic_url);
+        //$('#myModalPic').src(pic_url);
+   }
+
+
   $(function () {
     // $("#example1").DataTable();
     $('#example1').DataTable({
@@ -191,29 +231,6 @@
       "autoWidth": false
     });
 
-    // $('.editable').editable({
-    //     type: "select",
-    //     source: [{ value: 1, text: "正在运行" }, { value: 2, text: "等待运行" }, {value:3,text:"任务结束"}],
-
-    //     emptytext: "空文本",       //空值的默认文本
-    //     mode: "popup",            //编辑框的模式：支持popup和inline两种模式，默认是popup
-    //     validate: function (value) { //字段验证
-    //         if(value==1){
-    //           $('#status_span').attr("class","label label-success")
-
-    //         }else if(value==2){
-    //           $('#status_span').attr("class","label label-warning")
-
-    //         }else if(value==3){
-    //           $('#status_span').attr("class","label label-primary")
-
-    //         }else{
-    //           return '不能为空';
-    //         }
-    //     }
-
-
-    // });
 
   });
 
