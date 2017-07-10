@@ -126,6 +126,11 @@
                     <a href="#" id="status_{{i.0.id}}" class="editable editable-click" onclick="changeStatus('{{i.0.id}}', 'pausing')" style="color: white; text-decoration: none">挂起</a>
                  </span>
                 {%endifequal%}
+                {% ifequal i.0.status 'stopping'  %}
+                 <span id="span_{{i.0.id}}" class="label label-danger" >
+                    <a href="#" id="status_{{i.0.id}}" class="editable editable-click" style="color: white; text-decoration: none">停止</a>
+                 </span>
+                {%endifequal%}
             </td>
             <!--<td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>-->
             <!-- <td><a href="{%url 'newsdata'%}?taskid={{i.id}}">结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">管理</a></td> -->
@@ -142,13 +147,13 @@
     <div id="pagination_div2">
         <nav>
             <ul class="pagination" >
-                <li><a href="{%url 'tasks' %}?page={{p.p_previous}}">&laquo;</a></li>
-                <li> <a href="{%url 'tasks' %}?page=1">首页</a></li>
+                <li><a href="{%url 'processlist' %}?page={{p.p_previous}}">&laquo;</a></li>
+                <li> <a href="{%url 'processlist' %}?page=1">首页</a></li>
                     {% for i in p.p_range %}
-                        <li  {% ifequal p.p_id i %} class="active" {% endifequal %}><a href="{%url 'tasks' %}?page={{i}}">{{i}}</a></li>
+                        <li  {% ifequal p.p_id i %} class="active" {% endifequal %}><a href="{%url 'processlist' %}?page={{i}}">{{i}}</a></li>
                     {% endfor %}
-                <li> <a href="{%url 'tasks' %}?page={{p.p_pages}}">尾页</a></li>
-                <li><a href="{%url 'tasks' %}?page={{p.p_next}}">&raquo;</a></li>
+                <li> <a href="{%url 'processlist' %}?page={{p.p_pages}}">尾页</a></li>
+                <li><a href="{%url 'processlist' %}?page={{p.p_next}}">&raquo;</a></li>
             </ul>
         </nav>
     </div>
@@ -283,9 +288,12 @@
                   if(page==''){
                     page = 1
                   }
-                  if (data['status']=='success' && data['process_status']=='stopping') {
-                    location.href = '/crawlermanage/processlist?page='+page
-                  }
+                  //if (data['status']=='success' && data['process_status']=='stopping') {
+                  //  location.href = '/crawlermanage/processlist?page='+page
+                  //}
+                  //setTimeout(function () {
+                  //  location.href = '/crawlermanage/processlist?page='+page
+                  //}, 2000);
                 }
             }, 'json'); 
         }

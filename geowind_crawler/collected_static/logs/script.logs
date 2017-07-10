@@ -99,3 +99,353 @@ Traceback (most recent call last):
   File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
     raise self.error(token, e)
 TemplateSyntaxError: Invalid block tag on line 90: 'enifequal', expected 'else' or 'endifequal'. Did you forget to register or load this tag?
+2017-07-07 12:39:11,734 [Thread-358:140360587564800] [django.request:152] [WARNING]- Not Found: /crawlermanage/tasks/pages/widgets.html
+2017-07-07 13:05:29,482 [Thread-378:140360578909952] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-07 13:09:26,177 [Thread-381:140360578909952] [django.request:152] [WARNING]- Not Found: /imp/dasp3
+2017-07-07 13:29:05,783 [Thread-25:140241688065792] [django.request:152] [WARNING]- Not Found: /crawlermanage/admin
+2017-07-07 13:51:45,315 [Thread-152:140241679673088] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-07 14:25:41,700 [Thread-383:140241654494976] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 476, in extractmultiple
+    title, atime, keywords, content = get_article_data(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/article_parser.py", line 203, in get_article_data
+    html = get_html(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/article_parser_util.py", line 14, in get_html
+    obj = requests.get(url)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 499, in request
+    prep = self.prepare_request(req)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 431, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 303, in prepare
+    self.prepare_url(url, params)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 377, in prepare_url
+    raise MissingSchema(error)
+MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2017-07-07 14:26:10,510 [Thread-385:140241654494976] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 476, in extractmultiple
+    title, atime, keywords, content = get_article_data(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/article_parser.py", line 203, in get_article_data
+    html = get_html(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/article_parser_util.py", line 14, in get_html
+    obj = requests.get(url)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 499, in request
+    prep = self.prepare_request(req)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 431, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 303, in prepare
+    self.prepare_url(url, params)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 377, in prepare_url
+    raise MissingSchema(error)
+MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2017-07-07 14:26:53,049 [Thread-386:140241654494976] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 514, in extractmultiple
+    methon, shop_nav = get_nav(url, 0)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 288, in get_nav
+    method,nav = get_aTag_nav_by_request(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 258, in get_aTag_nav_by_request
+    soup = get_soup_by_request_without_script(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py", line 109, in get_soup_by_request_without_script
+    resp = requests.get(url, headers=headers,timeout=10)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 499, in request
+    prep = self.prepare_request(req)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 431, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 303, in prepare
+    self.prepare_url(url, params)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 377, in prepare_url
+    raise MissingSchema(error)
+MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2017-07-07 14:27:10,630 [Thread-388:140241786357504] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 514, in extractmultiple
+    methon, shop_nav = get_nav(url, 0)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 288, in get_nav
+    method,nav = get_aTag_nav_by_request(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 258, in get_aTag_nav_by_request
+    soup = get_soup_by_request_without_script(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py", line 109, in get_soup_by_request_without_script
+    resp = requests.get(url, headers=headers,timeout=10)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 499, in request
+    prep = self.prepare_request(req)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 431, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 303, in prepare
+    self.prepare_url(url, params)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 377, in prepare_url
+    raise MissingSchema(error)
+MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2017-07-07 14:28:14,704 [Thread-390:140241786357504] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 514, in extractmultiple
+    methon, shop_nav = get_nav(url, 0)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 288, in get_nav
+    method,nav = get_aTag_nav_by_request(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 258, in get_aTag_nav_by_request
+    soup = get_soup_by_request_without_script(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py", line 109, in get_soup_by_request_without_script
+    resp = requests.get(url, headers=headers,timeout=10)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 499, in request
+    prep = self.prepare_request(req)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 431, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 303, in prepare
+    self.prepare_url(url, params)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 377, in prepare_url
+    raise MissingSchema(error)
+MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2017-07-07 14:28:38,951 [Thread-407:140241285412608] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-07 14:29:23,527 [Thread-408:140241285412608] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 523, in extractmultiple
+    goods_list = get_goods_list(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py", line 340, in get_goods_list
+    soup = get_soup_by_request(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py", line 98, in get_soup_by_request
+    req_text = get_request_text(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py", line 20, in get_request_text
+    return requests.get(url, timeout=15, headers=header).text
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 499, in request
+    prep = self.prepare_request(req)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 431, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 303, in prepare
+    self.prepare_url(url, params)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 377, in prepare_url
+    raise MissingSchema(error)
+MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2017-07-07 14:29:53,448 [Thread-410:140241285412608] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 514, in extractmultiple
+    methon, shop_nav = get_nav(url, 0)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 288, in get_nav
+    method,nav = get_aTag_nav_by_request(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 258, in get_aTag_nav_by_request
+    soup = get_soup_by_request_without_script(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py", line 109, in get_soup_by_request_without_script
+    resp = requests.get(url, headers=headers,timeout=10)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 499, in request
+    prep = self.prepare_request(req)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 431, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 303, in prepare
+    self.prepare_url(url, params)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 377, in prepare_url
+    raise MissingSchema(error)
+MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2017-07-07 14:32:26,225 [Thread-7:139756381038336] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 514, in extractmultiple
+    methon, shop_nav = get_nav(url, 0)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 288, in get_nav
+    method,nav = get_aTag_nav_by_request(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 258, in get_aTag_nav_by_request
+    soup = get_soup_by_request_without_script(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py", line 109, in get_soup_by_request_without_script
+    resp = requests.get(url, headers=headers,timeout=10)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 499, in request
+    prep = self.prepare_request(req)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 431, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 303, in prepare
+    self.prepare_url(url, params)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 377, in prepare_url
+    raise MissingSchema(error)
+MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2017-07-07 14:34:31,408 [Thread-13:139756381038336] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 514, in extractmultiple
+    methon, shop_nav = get_nav(url, 0)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 288, in get_nav
+    method,nav = get_aTag_nav_by_request(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_navigation_parser.py", line 258, in get_aTag_nav_by_request
+    soup = get_soup_by_request_without_script(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py", line 109, in get_soup_by_request_without_script
+    resp = requests.get(url, headers=headers,timeout=10)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 499, in request
+    prep = self.prepare_request(req)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 431, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 303, in prepare
+    self.prepare_url(url, params)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 377, in prepare_url
+    raise MissingSchema(error)
+MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2017-07-07 14:35:43,762 [Thread-17:139756381038336] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-07 14:51:12,019 [Thread-112:139756185376512] [django.request:152] [WARNING]- Not Found: /
+2017-07-07 14:51:12,023 [Thread-113:139755752781568] [django.request:152] [WARNING]- Not Found: /
+2017-07-07 14:51:18,811 [Thread-114:139755752781568] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-07 15:09:05,565 [Thread-197:139756185376512] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-07 15:56:54,473 [Thread-3:140465584420608] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-07 16:36:47,150 [Thread-272:140465584420608] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 523, in extractmultiple
+    goods_list = get_goods_list(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py", line 340, in get_goods_list
+    soup = get_soup_by_request(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py", line 98, in get_soup_by_request
+    req_text = get_request_text(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/spiderUtils/parser_util.py", line 20, in get_request_text
+    return requests.get(url, timeout=15, headers=header).text
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 499, in request
+    prep = self.prepare_request(req)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/sessions.py", line 431, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 303, in prepare
+    self.prepare_url(url, params)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/requests/models.py", line 377, in prepare_url
+    raise MissingSchema(error)
+MissingSchema: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2017-07-07 16:38:44,904 [Thread-276:140465584420608] [django.request:152] [WARNING]- Not Found: /imp/dasp3
+2017-07-07 17:06:04,413 [Thread-378:140465574979328] [django.request:152] [WARNING]- Not Found: /imp/dasp3
+2017-07-07 17:14:14,651 [Thread-432:140465584420608] [django.request:152] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-07-07 17:15:04,161 [Thread-434:140465584420608] [django.request:152] [WARNING]- Not Found: /imp/dasp3
+2017-07-07 17:23:06,622 [Thread-438:140465584420608] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-07 17:40:58,363 [Thread-477:140465311553280] [django.request:152] [WARNING]- Not Found: /crawlermanage/introduce/pages/widgets.html
+2017-07-07 17:41:01,916 [Thread-478:140465311553280] [django.request:152] [WARNING]- Not Found: /crawlermanage/introduce/pages/widgets.html
+2017-07-07 17:41:05,131 [Thread-479:140465329661696] [django.request:152] [WARNING]- Not Found: /crawlermanage/introduce/pages/widgets.html
+2017-07-07 17:41:10,365 [Thread-480:140465584678656] [django.request:152] [WARNING]- Not Found: /crawlermanage/introduce/pages/widgets.html
+2017-07-07 17:41:17,473 [Thread-485:140465574979328] [django.request:152] [WARNING]- Not Found: /crawlermanage/introduce/pages/widgets.html
+2017-07-07 17:42:32,978 [Thread-496:140465361909504] [django.request:152] [WARNING]- Not Found: /crawlermanage/charts/pages/widgets.html
+2017-07-07 17:43:28,891 [Thread-536:140465574979328] [django.request:152] [WARNING]- Not Found: /crawlermanage/introduce/pages/widgets.html
+2017-07-08 08:44:30,390 [Thread-6:139649318123264] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-08 09:46:07,061 [Thread-532:139649276159744] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 78, in tasks
+    p = paging(list, page, 10)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/page.py", line 21, in __init__
+    self.p_content = self.p.page(self.page).object_list         #第N页的内容列表
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 57, in page
+    number = self.validate_number(number)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/paginator.py", line 50, in validate_number
+    raise EmptyPage(_('That page contains no results'))
+EmptyPage: That page contains no results

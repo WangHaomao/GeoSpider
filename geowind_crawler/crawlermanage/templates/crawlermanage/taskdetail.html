@@ -121,7 +121,7 @@
                 <th><label>主机</label></th>
                 <td colspan="6">
                   {% for ip in task.slave %}
-                    <a style="display: block;">{{ip}}</a>
+                    <a href="{%url 'processlist'%}" style="display: block;">{{ip}}</a>
                   {% endfor %}
 
                 </td>
