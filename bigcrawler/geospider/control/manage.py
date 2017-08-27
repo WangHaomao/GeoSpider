@@ -92,33 +92,33 @@ def run(process, listener, taskdao, processdao):
 
 def start():
     localhost, listener, taskdao, processdao, process = init()
-    # try:
-    run(process, listener, taskdao, processdao)
-    # except:
-    #     print('---------------------------异常------------------------')
-    #     process_list = processdao.find_by_localhost(localhost)
-    #     command_list = []
-    #     for p in process_list:
-    #         if p['taskid'] == '':
-    #             processdao.delete_by_localhost_and_taskid(localhost, '')
-    #             continue
-    #         if p['taskid'] == 'pausing':
-    #             temp_task = taskdao.find_by_id(p['taskid'])
-    #             temp_task['status'] = 'running'
-    #             taskdao.save(temp_task)
-    #         command_list.append('op=starttask&taskid=' + p['taskid'])
-    #         processdao.delete_by_localhost_and_taskid(localhost, p['taskid'])
-    #     for command in command_list:
-    #         params = Analyze(command)
-    #         op = params.get('op')
-    #         taskid = params.get('taskid')
-    #         if op == 'starttask':
-    #             status = taskdao.find_by_id(taskid)['status']
-    #             if status == 'running':
-    #                 process.start_task(taskid, True)
-    #             elif status == 'waitting':
-    #                 process.wait_task(taskid, True)
-    #     start()
+    try:
+        run(process, listener, taskdao, processdao)
+    except:
+        print('---------------------------异常------------------------')
+        process_list = processdao.find_by_localhost(localhost)
+        command_list = []
+        for p in process_list:
+            if p['taskid'] == '':
+                processdao.delete_by_localhost_and_taskid(localhost, '')
+                continue
+            if p['taskid'] == 'pausing':
+                temp_task = taskdao.find_by_id(p['taskid'])
+                temp_task['status'] = 'running'
+                taskdao.save(temp_task)
+            command_list.append('op=starttask&taskid=' + p['taskid'])
+            processdao.delete_by_localhost_and_taskid(localhost, p['taskid'])
+        for command in command_list:
+            params = Analyze(command)
+            op = params.get('op')
+            taskid = params.get('taskid')
+            if op == 'starttask':
+                status = taskdao.find_by_id(taskid)['status']
+                if status == 'running':
+                    process.start_task(taskid, True)
+                elif status == 'waitting':
+                    process.wait_task(taskid, True)
+        start()
 
 
 if __name__ == '__main__':

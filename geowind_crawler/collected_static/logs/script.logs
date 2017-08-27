@@ -1,0 +1,103 @@
+2017-07-07 10:52:56,609 [Thread-7:140360587564800] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-07-07 11:03:06,602 [Thread-85:140360569992960] [django.request:152] [WARNING]- Not Found: /imp/dasp3
+2017-07-07 11:03:55,264 [Thread-100:140360578909952] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/taskdetail/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 266, in taskdetail
+    return render_to_response('crawlermanage/taskdetail.html', {'task': task})
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Could not parse the remainder: '=' from '='
+2017-07-07 11:07:06,615 [Thread-101:140360578909952] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/taskdetail/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 266, in taskdetail
+    return render_to_response('crawlermanage/taskdetail.html', {'task': task})
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid block tag on line 90: 'enifequal', expected 'else' or 'endifequal'. Did you forget to register or load this tag?
+2017-07-07 11:07:08,178 [Thread-102:140360578909952] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/taskdetail/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 266, in taskdetail
+    return render_to_response('crawlermanage/taskdetail.html', {'task': task})
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 21, in render_to_response
+    content = loader.render_to_string(template_name, context, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 515, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid block tag on line 90: 'enifequal', expected 'else' or 'endifequal'. Did you forget to register or load this tag?
+2017-08-27 11:17:59,115 [Thread-6:139820043073280] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-08-27 11:19:20,754 [Thread-23:139820261390080] [django.request:182] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined

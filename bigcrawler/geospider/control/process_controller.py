@@ -152,8 +152,7 @@ class ProcessController(object):
     '''
 
     def scan_task(self):
-        # scanner = self.processdao.find_by_status('scanner')
-        # if len(scanner) == 0:
+        self.processdao.delete_by_localhost_and_status(self.localhost, 'scanner')
         p = Process(name='spider_scaner', target=scaner)
         p.start()
         self.processdao.insert_process(self.localhost, p.pid, '', 'scanner')

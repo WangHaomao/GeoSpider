@@ -49,13 +49,15 @@
                 <th><label>任务名</label></th>
                 <td>{{task.taskname}}</td>
                 <th><label>任务类型</label></th>
-                <td>{% if task.webtype = 'news' %}
+                <td>{% ifequal task.webtype 'news' %}
                     新闻
-                    {% elif task.webtype = 'blog' %}
+                    {% endifequal %}
+                    {% ifequal task.webtype 'blog' %}
                     博客
-                    {% elif task.webtype = 'ecommerce' %}
+                    {% endifequal %}
+                    {% ifequal task.webtype 'ecommerce' %}
                     电商
-                    {% endif %}
+                    {% endifequal %}
                 </td>
 
               </tr>
@@ -81,23 +83,26 @@
                   </span>
                 </td> -->
                   <td>
-                    {% if task.status = 'running' %}
+                    {% ifequal task.status 'running' %}
                     <span id="span_{{task.id}}" class="label label-success" >
                         <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'running')" style="color: white; text-decoration: none">运行</a>
                     </span>
-                    {% elif task.status = 'pausing'  %}
+                    {% endifequal %}
+                    {% ifequal task.status 'pausing'  %}
                      <span id="span_{{task.id}}" class="label label-primary" >
                         <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'pausing')" style="color: white; text-decoration: none">暂停</a>
                      </span>
-                    {% elif task.status = 'error' %}
+                    {% endifequal %}
+                    {% ifequal task.status 'error' %}
                     <span id="span_{{task.id}}" class="label label-danger">
                         <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">故障</a>
                     </span>
-                    {% elif task.status = 'stopping' %}
+                    {% endifequal %}
+                    {% ifequal task.status 'stopping' %}
                     <span id="span_{{task.id}}" class="label label-warning">
                         <a href="#" id="status_{{task.id}}" class="editable editable-click" onclick="changeStatus('{{task.id}}', 'error')" style="color: white; text-decoration: none">停止</a>
                     </span>
-                    {% endif %}
+                    {% endifequal %}
                     </td>
               </tr>
               <tr>
