@@ -272,6 +272,7 @@ def get_goods_dict_without_stroe(url):
 
 def get_goods_dict(url):
     soup = get_soup_by_request(url)
+
     res_dict = {}
 
     res_dict['title'] = soup.find("title").text
