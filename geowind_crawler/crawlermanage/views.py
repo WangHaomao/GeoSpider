@@ -7,7 +7,7 @@ import time
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 
-from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores, Blog, TempArticle
+from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores, Blog, TempArticle, Proxy
 from crawlermanage.utils.article_parser import extract, test, readFile, extract_content, get_article_data
 from crawlermanage.utils.echarts import create_chart1, create_chart2, create_chart3, create_chart4
 from crawlermanage.utils.ecommerce.pageParser.shopping_detail_parser import get_goods_dict
@@ -534,3 +534,23 @@ def temparticle(request):
     id = request.GET.get('id', '')
     news = TempArticle.objects.get(id=id)
     return render(request, 'crawlermanage/newsdetail.html', {'news': news})
+
+def settings(request):
+    return render_to_response('crawlermanage/settings.html')
+
+def setproxy(request):
+    proxy = request.POST.get('proxy')
+    status = request.POST.get('status')
+    proxy_str = proxy.replace('\n', '#')
+    logger.info(type(status))
+    logger.info(proxy_str)
+    if status is False:
+        status = '0'
+    else:
+        status = '1'
+    proxy_str = status+'#'+proxy_str
+    p = Proxy.objects.create(proxy=proxy_str)
+
+
+
+

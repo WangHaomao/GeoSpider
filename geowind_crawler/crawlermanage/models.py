@@ -78,3 +78,6 @@ class TempGoods(Document):
     pic_url = StringField(max_length=500, required=True)
     detail_url = StringField(max_length=500, required=True)
     comment_degree = StringField(max_length=20000, required=True)
+
+class Proxy(Document):
+    proxy = StringField(max_length=5000)

@@ -1,0 +1,47 @@
+2017-08-27 11:53:55,970 [Thread-3:140664899454720] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-08-27 11:57:59,887 [Thread-5:139754929452800] [django.request:182] [WARNING]- Not Found: /crawlermanage/extractmultiple/undefined
+2017-08-27 12:43:21,050 [Thread-55:140190332999424] [django.request:182] [WARNING]- Not Found: /crawlermanage/settings/bootstrap-switch.js
+2017-08-27 12:44:45,486 [Thread-59:140190341392128] [django.request:182] [WARNING]- Not Found: /crawlermanage/settings/bootstrap-switch.js
+2017-08-27 12:44:48,313 [Thread-62:140190341392128] [django.request:182] [WARNING]- Not Found: /crawlermanage/settings/bootstrap-switch.js
+2017-08-27 12:44:53,301 [Thread-66:140190341392128] [django.request:182] [WARNING]- Not Found: /crawlermanage/settings/bootstrap-switch.js
+2017-08-27 12:45:07,449 [Thread-70:140190316214016] [django.request:182] [WARNING]- Not Found: /crawlermanage/settings/bootstrap-switch.js
+2017-08-27 12:48:09,532 [Thread-74:140190316214016] [django.request:182] [WARNING]- Not Found: /crawlermanage/settings/bootstrap-switch.js
+2017-08-27 14:14:52,451 [Thread-7:139882475321088] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/setproxy/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.setproxy didn't return an HttpResponse object. It returned None instead.
+2017-08-27 14:16:55,151 [Thread-2:139708695152384] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/setproxy/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.setproxy didn't return an HttpResponse object. It returned None instead.
+2017-08-27 14:26:15,540 [Thread-3:140635499521792] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/setproxy/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 544, in setproxy
+    logger.info(proxy_str)
+UnboundLocalError: local variable 'proxy_str' referenced before assignment
+2017-08-27 14:26:38,487 [Thread-2:139879501526784] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/setproxy/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.setproxy didn't return an HttpResponse object. It returned None instead.
+2017-08-27 14:27:12,877 [Thread-2:139945785546496] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/setproxy/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.setproxy didn't return an HttpResponse object. It returned None instead.
+2017-08-27 14:27:46,429 [Thread-2:140005982459648] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/setproxy/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.setproxy didn't return an HttpResponse object. It returned None instead.
+2017-08-27 14:36:22,581 [Thread-8:140456495146752] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/setproxy/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.setproxy didn't return an HttpResponse object. It returned None instead.

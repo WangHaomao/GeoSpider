@@ -1,0 +1,111 @@
+2017-08-27 14:15:28,771 [Dummy-1:140685584279296] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-08-27 14:15:28,774 [Dummy-1:140685584279296] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-08-27 14:16:49,927 [Dummy-1:139708937410304] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-08-27 14:16:49,933 [Dummy-1:139708937410304] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-08-27 14:16:55,151 [Thread-2:139708695152384] [crawlermanage.views:544] [INFO]- vdfgdf#iouyi#iuo
+2017-08-27 14:17:39,004 [Dummy-1:140592043480832] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-08-27 14:17:39,007 [Dummy-1:140592043480832] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-08-27 14:23:19,218 [Thread-2:140591795009280] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/settings.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n      <div class="box bo\'>, <IfNode>, <TextNode: u\' -->\\n                  <b\'>]>}]'
+2017-08-27 14:23:39,280 [Thread-8:140591753045760] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/settings.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n      <div class="box bo\'>, <IfNode>, <TextNode: u\' -->\\n                  <b\'>]>}]'
+2017-08-27 14:25:44,590 [Dummy-1:140611592124160] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-08-27 14:25:44,601 [Dummy-1:140611592124160] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-08-27 14:26:05,717 [Dummy-1:140635538626304] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-08-27 14:26:05,720 [Dummy-1:140635538626304] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-08-27 14:26:07,997 [Thread-2:140635499521792] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/settings.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n      <div class="box bo\'>, <IfNode>, <TextNode: u\' -->\\n                  <b\'>]>}]'
+2017-08-27 14:26:36,837 [Dummy-1:139879747544832] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-08-27 14:26:36,839 [Dummy-1:139879747544832] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-08-27 14:26:38,482 [Thread-2:139879501526784] [crawlermanage.views:545] [INFO]- ggdf#dfg
+2017-08-27 14:26:38,482 [Thread-2:139879501526784] [crawlermanage.views:550] [INFO]- ggdf#dfg
+2017-08-27 14:26:38,486 [Thread-2:139879501526784] [crawlermanage.views:551] [INFO]- ggdf#dfg
+2017-08-27 14:27:06,823 [Dummy-1:139946027779840] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-08-27 14:27:06,829 [Dummy-1:139946027779840] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-08-27 14:27:12,876 [Thread-2:139945785546496] [crawlermanage.views:545] [INFO]- true
+2017-08-27 14:27:12,877 [Thread-2:139945785546496] [crawlermanage.views:546] [INFO]- ggdf#dfg
+2017-08-27 14:27:12,877 [Thread-2:139945785546496] [crawlermanage.views:551] [INFO]- 1
+2017-08-27 14:27:43,031 [Dummy-1:140006224520960] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-08-27 14:27:43,033 [Dummy-1:140006224520960] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-08-27 14:27:46,428 [Thread-2:140005982459648] [crawlermanage.views:545] [INFO]- <type 'unicode'>
+2017-08-27 14:27:46,429 [Thread-2:140005982459648] [crawlermanage.views:546] [INFO]- ggdf#dfg
+2017-08-27 14:27:46,429 [Thread-2:140005982459648] [crawlermanage.views:551] [INFO]- 1
+2017-08-27 14:34:40,105 [Dummy-1:140531396769536] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-08-27 14:34:40,108 [Dummy-1:140531396769536] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-08-27 14:34:41,181 [Thread-2:140531356092160] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/settings.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n      <div class="box bo\'>, <IfNode>, <TextNode: u\' -->\\n                  <b\'>]>}]'
+2017-08-27 14:35:22,165 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-08-27 14:35:22,169 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-08-27 14:35:22,170 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-08-27 14:35:22,173 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-08-27 14:35:22,252 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'logentry' AND "django_content_type"."app_label" = 'admin'); args=('logentry', 'admin')
+2017-08-27 14:35:22,260 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (1) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(1,)
+2017-08-27 14:35:22,262 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'admin'; args=('admin',)
+2017-08-27 14:35:22,263 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'permission' AND "django_content_type"."app_label" = 'auth'); args=('permission', 'auth')
+2017-08-27 14:35:22,267 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'group' AND "django_content_type"."app_label" = 'auth'); args=('group', 'auth')
+2017-08-27 14:35:22,269 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'user' AND "django_content_type"."app_label" = 'auth'); args=('user', 'auth')
+2017-08-27 14:35:22,274 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (2, 3, 4) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(2, 3, 4)
+2017-08-27 14:35:22,276 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'auth'; args=('auth',)
+2017-08-27 14:35:22,277 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'contenttype' AND "django_content_type"."app_label" = 'contenttypes'); args=('contenttype', 'contenttypes')
+2017-08-27 14:35:22,280 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (5) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(5,)
+2017-08-27 14:35:22,281 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'contenttypes'; args=('contenttypes',)
+2017-08-27 14:35:22,282 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE ("django_content_type"."model" = 'session' AND "django_content_type"."app_label" = 'sessions'); args=('session', 'sessions')
+2017-08-27 14:35:22,290 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "auth_permission"."content_type_id", "auth_permission"."codename" FROM "auth_permission" INNER JOIN "django_content_type" ON ("auth_permission"."content_type_id" = "django_content_type"."id") WHERE "auth_permission"."content_type_id" IN (6) ORDER BY "django_content_type"."app_label" ASC, "django_content_type"."model" ASC, "auth_permission"."codename" ASC; args=(6,)
+2017-08-27 14:35:22,291 [MainThread:140229015828224] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_content_type" WHERE "django_content_type"."app_label" = 'sessions'; args=('sessions',)
+2017-08-27 14:35:30,177 [Dummy-1:140456988780288] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-08-27 14:35:30,180 [Dummy-1:140456988780288] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-08-27 14:35:37,471 [Thread-2:140456746583808] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/settings.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n      <div class="box bo\'>, <IfNode>, <TextNode: u\' -->\\n                  <b\'>]>}]'
+2017-08-27 14:36:22,534 [Thread-8:140456495146752] [crawlermanage.views:545] [INFO]- <type 'unicode'>
+2017-08-27 14:36:22,534 [Thread-8:140456495146752] [crawlermanage.views:546] [INFO]- http://119.125.53.23:8080#http://192.168.1.110:80
