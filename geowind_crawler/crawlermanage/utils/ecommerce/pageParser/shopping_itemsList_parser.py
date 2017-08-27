@@ -90,26 +90,49 @@ def analysis_by_tag_return_goods_message(goods_list_tag, url):
 
                     # 搜索图片
                     if (inner_tag.name == 'img'):
-                        try:
-                            pic_url = inner_tag['src']
-                            if ('jpg' in pic_url or 'png' in pic_url or 'jpeg' in pic_url):
 
-                                print pic_url
+                        # print inner_tag
+                        # try:
+                        for attr_k,attr_v in inner_tag.attrs.items():
+
+                            if isinstance(attr_k,str) is False: continue
+                            attr_inner = str(attr_k)
+                            if(attr_inner == 'class' or attr_inner == 'height'or attr_inner == 'width'):continue
+
+                            pic_url = attr_v
+                            # print pic_url
+                            if (('jpg' in pic_url or 'jpeg' in pic_url)and 'none' not in pic_url):
+
+                                # print pic_url
                                 if (res_pic_url == ''):
-                                    res_pic_url = pic_url
-                                else:
-                                    re_res = re.search(pic_size_regular, pic_url)
-                                    if (re_res):
-                                        re_res = re_res.group()
-                                        re_res_splited = re_res.split('x')
-                                        pic_size = max(int(re_res_splited[0]), int(re_res_splited[1]))
-
-                                        if (pic_size > max_pic_size):
+                                    res_pic_url = pic_url_sifter(url,pic_url)
+                                    try:
+                                        re_res = re.search(pic_size_regular, pic_url)
+                                        if (re_res):
+                                            re_res = re_res.group()
+                                            re_res_splited = re_res.split('x')
+                                            pic_size = max(int(re_res_splited[0]), int(re_res_splited[1]))
                                             max_pic_size = pic_size
-                                            res_pic_url = pic_url
+                                    except:
+                                        pass
+                                else:
+                                    try:
+                                        re_res = re.search(pic_size_regular, pic_url)
+                                        if (re_res):
+                                            re_res = re_res.group()
+                                            re_res_splited = re_res.split('x')
+                                            pic_size = max(int(re_res_splited[0]), int(re_res_splited[1]))
+
+                                            if (pic_size > max_pic_size):
+                                                max_pic_size = pic_size
+                                                res_pic_url = pic_url_sifter(url,pic_url)
+                                    except:
+                                        pass
+
                                 is_in_some_attri = True
-                        except:
-                            pass
+                        # except:
+                        #     print 'error'
+                        #     pass
 
                     tag_style = inner_tag.get('style')
                     if (tag_style):
@@ -117,7 +140,7 @@ def analysis_by_tag_return_goods_message(goods_list_tag, url):
                         re_res = re.search(regular_str, str(tag_style))
                         if (re_res):
                             pic_url = re_res.group().split('(')[1].split(')')[0]
-                            if ('jpg' in pic_url or 'png' in pic_url or 'jpeg' in pic_url):
+                            if ('jpg' in pic_url or 'jpeg' in pic_url):
                                 if (res_pic_url == ''):
                                     res_pic_url = pic_url
                                 else:
@@ -134,6 +157,8 @@ def analysis_by_tag_return_goods_message(goods_list_tag, url):
 
                     if (is_in_some_attri == False and inner_tag.name != None):
                         tag_text = inner_tag.text.replace('\n', "").replace(' ', '')
+                        is_tag_in_text = re.search('<\w+[^>]*>', str(tag_text))
+                        if(is_tag_in_text):continue
                         # print tag_text
                         if (len(tag_text) > max_title_len):
                             max_title_len = len(tag_text)
@@ -351,17 +376,18 @@ def get_goods_list(url):
 
     [script.extract() for script in soup.findAll('script')]
     html_without_script_len = len(str(soup.prettify()))
-
+    # WEBDRIVER
     if (html_without_script_len < 10000 and max_script_len < 10000):
         soup = get_soup_by_selenium_without_script(url)
-        analysis_by_tag_return_goods_message(get_goods_list_tag_by_soup(soup), url)
+        return analysis_by_tag_return_goods_message(get_goods_list_tag_by_soup(soup), url)
         # return 'WEBDRIVER'
-    # 大了很多
+    # json
     elif (max_script_len > html_without_script_len):
         soup = get_soup_by_request(url)
         return analysis_json_data(url,soup)
     else:
         soup = get_soup_by_selenium_without_script(url)
+        # print soup.prettify()
         return analysis_by_tag_return_goods_message(get_goods_list_tag_by_soup(soup), url)
 
 
@@ -372,11 +398,11 @@ def get_goods_list(url):
 
 
 if __name__ == '__main__':
-    url = "https://list.jd.com/list.html?cat=1620,1621,1626"
+    # url = "https://list.jd.com/list.html?cat=1620,1621,1626"
     # url = "https://s.taobao.com/search?initiative_id=tbindexz_20170509&ie=utf8&spm=a21bo.50862.201856-taobao-item.2&sourceId=tb.index&search_type=item&ssid=s5-e&commend=all&imgfile=&q=%E6%89%8B%E6%9C%BA&suggest=0_1&_input_charset=utf-8&wq=shouji&suggest_query=shouji&source=suggest"
     # url = "http://list.mogujie.com/s?q=%E6%89%8B%E6%9C%BA%E5%A3%B3%E8%8B%B9%E6%9E%9C6&from=querytip0&ptp=1._mf1_1239_15261.0.0.5u1T9Y"
     # url = "http://search.dangdang.com/?key=%CA%E9"
-    # url = "http://search.suning.com/%E6%89%8B%E6%9C%BA/"
+    url = "http://search.suning.com/%E6%89%8B%E6%9C%BA/"
     #
     # url = "http://search.yhd.com/c0-0/k%25E9%259B%25B6%25E9%25A3%259F/?tp=1.1.12.0.3.Ljm`JdW-10-4v5ud"
     # url = "http://www.meilishuo.com/search/goods/?page=1&searchKey=%E8%A3%99%E5%AD%90%E5%A4%8F&acm=3.mce.1_4_.17721.33742-33692.3Va85qjefPdEZ.mid_17721-lc_201"
@@ -389,11 +415,18 @@ if __name__ == '__main__':
     # url = 'http://www.meilishuo.com/search/catalog/10057053?action=bags&mt=12.14354.r130506.18023&acm=3.mce.2_10_182yi.14354.0.2PccHqnV8sR9h.m_188513-pos_4?acm=3.mce.2_10_182ya.14354.0.2PccHqnV8sR9h.m_188509-pos_0&mt=12.14354.r130395.18023&action=clothing&page=94&cpc_offset=0'
 
     # url = "https://search.jd.com/Search?keyword=%E7%94%B5%E5%AD%90%E4%B9%A6&enc=utf-8&spm=1.1.5"
+    # url = 'https://search.jd.com/Search?keyword=iphone&enc=utf-8&suggest=1.def.0.V01&wq=ip&pvid=b19b8525baca4b7297df779c50ee3f11'
     # url = 'http://www.meilishuo.com/search/goods/?page=1&searchKey=%E8%BF%9E%E8%A1%A3%E8%A3%99'
     # url ='http://search.suning.com/%E6%89%8B%E6%9C%BA/'
     # print get_goods_list(url)
     # url = 'http://search.dangdang.com/?key=%CA%E9%B3%E6%C5%A3%BD%F2%D3%A2%BA%BA%CB%AB%D3%EF%B6%C1%CE%EF&act=input'
+
+    # url = 'http://list.mogujie.com/s?q=%E8%A1%A3%E6%9C%8D&ptp=1._mf1_1239_15261.0.0.XKvGkz'
+    # url = 'http://www.meilishuo.com/search/goods/?page=1&searchKey=%E8%A1%A3%E6%9C%8D'
+    # url = 'http://search.yhd.com/c0-0/k%25E9%259B%25B6%25E9%25A3%259F/?tp=1.1.12.0.3.Ls_i9Fg-10-4jLMf&ti=3NH23c'
     res  = get_goods_list(url)
+
+
     for each in res:
         print type(each)
         for key,value in each.items():
