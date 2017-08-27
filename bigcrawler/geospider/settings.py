@@ -14,14 +14,14 @@ ITEM_PIPELINES = {
 }
 
 DOWNLOADER_MIDDLEWARES = {
-      'geospider.middlewares.RotateUserAgentMiddleware':123
+    'geospider.middlewares.RotateUserAgentMiddleware':123
 }
 
 REDIS_HOST = '192.168.1.130'
 REDIS_PORT = 6379
 SUBSCRIBE = 'crawler'
 
-LOCAL_HOST = '192.168.1.130'
+LOCAL_HOST = '192.168.1.113'
 
 # STATS_CLASS = 'scrapygraphite.GraphiteStatsCollector'
 STATS_CLASS = 'geospider.statscol.graphite.RedisGraphiteStatsCollector'
