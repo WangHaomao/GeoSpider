@@ -176,16 +176,33 @@ class URLDao(object):
     def delete_url(self, taskid, url):
         self.db.urls.remove({'taskid':taskid, 'url':url})
 
+class IPProxyDao(object):
+    # def __init__(self, db):
+    #     self.db = db
+
+    # def __init__(self, db):
+    #     self.db = db
+    #
+    def __init__(self):
+        self.db = connect_mongodb()
+
+    def find_proxy_status_and_proxys(self):
+        cursor = self.db.proxy.find()
+
+        return cursor[0]
+
 if __name__ == '__main__':
-    db = connect_mongodb()
-    pro = ProcessDao(db)
-    td = TaskDao(db)
-    # task = td.find_by_localhost_and_status('127.0.0.1','running')
-    # print(task)
-    newsdao = NewsDao(db)
-    # list = newsdao.find_urls_by_taksid('aaa')
-    # for i in list:
-    #     print(i)
-    process_list = pro.find_by_localhost_and_pid('127.0.0.1', 8871)
-    print(process_list[0]['taskid'])
-    td.update_processnum('595a541b9c1da91ae4d1c148')
+    # db = connect_mongodb()
+    # pro = ProcessDao(db)
+    # td = TaskDao(db)
+    # # task = td.find_by_localhost_and_status('127.0.0.1','running')
+    # # print(task)
+    # newsdao = NewsDao(db)
+    # # list = newsdao.find_urls_by_taksid('aaa')
+    # # for i in list:
+    # #     print(i)
+    # process_list = pro.find_by_localhost_and_pid('127.0.0.1', 8871)
+    # print(process_list[0]['taskid'])
+    # td.update_processnum('595a541b9c1da91ae4d1c148')
+    pro = IPProxyDao()
+    print pro.find_proxy_status_and_proxys()

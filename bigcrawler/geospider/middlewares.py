@@ -4,6 +4,7 @@
 import random
 from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 from scrapy.contrib.downloadermiddleware.httpproxy import HttpProxyMiddleware
+from geospider.settings import MONGO_URI
 from scrapy import log
 
 class RandomUserAgent(object):
@@ -21,25 +22,26 @@ class RandomUserAgent(object):
         request.headers.setdefault('User-Agent', random.choice(self.agents))
 
 import json
+from geospider.utils.mongodb_helper import IPProxyDao
 class ProxyMiddleWare(HttpProxyMiddleware):
-
-    ip_pool = []
     def __init__(self,ip=''):
         self.ip = ip
-        json_s = '{"ERRORCODE":"0","RESULT":[{"port":"44306","ip":"171.13.36.228"},{"port":"20975","ip":"117.94.204.25"},{"port":"33779","ip":"182.42.44.155"},{"port":"33902","ip":"113.101.137.102"},{"port":"39143","ip":"114.230.127.62"},{"port":"38965","ip":"114.239.3.155"},{"port":"46996","ip":"123.161.154.64"},{"port":"45700","ip":"120.33.247.82"},{"port":"43573","ip":"113.121.41.165"},{"port":"21527","ip":"122.242.92.6"},{"port":"46535","ip":"49.79.58.186"},{"port":"48241","ip":"113.121.47.91"},{"port":"48750","ip":"27.154.183.45"},{"port":"26306","ip":"182.34.20.19"},{"port":"35181","ip":"223.242.177.44"},{"port":"35052","ip":"114.225.84.235"},{"port":"33385","ip":"117.86.20.26"},{"port":"38541","ip":"49.84.70.182"},{"port":"21002","ip":"114.239.1.18"},{"port":"40891","ip":"117.94.207.140"}]}'
-        json_parser = json.loads(json_s)
-        for ip_dic in json_parser["RESULT"]:
-            self.ip_pool.append(ip_dic["ip"] + ":" + ip_dic["port"])
+        self.db_chief =  IPProxyDao()
 
     def process_request(self, request, spider):
-        thisip = random.choice(self.ip_pool)
+        is_use_ip_proxy = False
+        proxy_dic = self.db_chief.find_proxy_status_and_proxys()
+        if(proxy_dic['status'] == 1):
+            try:
+                proxys_list = proxy_dic['proxy'].spilt('#')
+                request.meta["proxy"] = random.choice(proxys_list)
+            except  Exception as e:
+                request.meta["proxy"] = ''
+        else:
+            request.meta["proxy"] = ''
 
-        try:
-            request.meta["proxy"] = "http://%s" % thisip
+        print "current_ip = %s" % request.meta["proxy"]
 
-            print "current_ip = %s" % request.meta["proxy"]
-        except  Exception as e:
-            pass
 
 class RotateUserAgentMiddleware(UserAgentMiddleware):
     def __init__(self, user_agent=''):
@@ -50,9 +52,8 @@ class RotateUserAgentMiddleware(UserAgentMiddleware):
         if ua:
             # 显示当前使用的useragent
             # print ("********Current UserAgent:%s************" % ua)
-
             # 记录
-            log.msg('Current UserAgent: ' + ua, level=log.INFO)
+            # log.msg('Current UserAgent: ' + ua, level=log.INFO)
             request.headers.setdefault('User-Agent', ua)
 
             # the default user_agent_list composes chrome,I E,firefox,Mozilla,opera,netscape

@@ -45,3 +45,27 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
     % (callback.__module__, view_name))
 ValueError: The view crawlermanage.views.setproxy didn't return an HttpResponse object. It returned None instead.
+2017-08-28 18:15:57,575 [Thread-7:140332545074944] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-08-28 20:23:07,005 [Thread-34:140332553467648] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/extractmultiple/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 523, in extractmultiple
+    goods_list = get_goods_list(url)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py", line 387, in get_goods_list
+    return analysis_json_data(url,soup)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/ecommerce/pageParser/shopping_itemsList_parser.py", line 304, in analysis_json_data
+    json_praser = json.loads(shop_json)
+  File "/usr/lib/python2.7/json/__init__.py", line 339, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python2.7/json/decoder.py", line 364, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python2.7/json/decoder.py", line 382, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
