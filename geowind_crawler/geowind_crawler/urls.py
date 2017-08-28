@@ -37,7 +37,6 @@ urlpatterns = [
     url(r'^crawlermanage/temparticle/$', views.temparticle, name='temparticle'),
     url(r'^crawlermanage/editprocess/$', views.editprocess, name='editprocess'),
     url(r'^crawlermanage/settings/$', views.settings, name='settings'),
-    url(r'^crawlermanage/setproxy/$', views.setproxy, name='setproxy'),
 
 
     # url(r'^crawlermanage/$','crawlermanage.views.login'),

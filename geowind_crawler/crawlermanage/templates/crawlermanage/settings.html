@@ -117,7 +117,7 @@
 
         <li>
           <a href="{% url 'settings' %}">
-            <i class="fa fa-share"></i> <span>设置</span>
+            <i class="fa fa-cog"></i> <span>设置</span>
           </a>
         </li>
       </ul>
@@ -205,36 +205,56 @@ https://192.168.1.113:80"></textarea>
 <script type="text/javascript">
   $(function() {
     $("#switch-state").bootstrapSwitch();
+    //获取ip代理
+    $.post('/crawlermanage/settings/', {'op':'getproxy'}, function(data) {
+      if(data!=null){
+        var proxy_list = data['proxy'];
+        var status = data['status'];
+        proxy_list = proxy_list.replace('#', '\n');
+        $('#proxy').val(proxy_list);
+        if(status == '1') {
+          var state = $("#switch-state").bootstrapSwitch('state');
+          if(state==false) {
+            $("#switch-state").bootstrapSwitch('toggleState');
+          }
+          $("#ips_div").fadeIn('slow');
+          $('#ips_div').css('display', '');
+        } else {
+          if(state==true) {
+            $("#switch-state").bootstrapSwitch('toggleState');
+          }
+          $("#ips_div").fadeOut("slow");
+        }
+      }
+    }, 'json');
 
   })
 
+  //开关按钮事件监听
   $("#switch-state").on('switchChange.bootstrapSwitch', function(event, state) {
     //console.log(this); // DOM element
     //console.log(event); // jQuery event
     //console.log(state); // true | false
+    //打开开关textarea出现，关掉开关textarea隐藏
     if(state==true) {
       $("#ips_div").fadeIn('slow');
       $('#ips_div').css('display', '');
     } else {
       $("#ips_div").fadeOut("slow");
     }
+    //修改代理状态数据库
+    $.post('/crawlermanage/settings/', {'op':'switch','state':state});
   });
+  //单击编辑按钮
   $('#edit').click(function() {
     $('#proxy').attr('disabled',false);
   })
+  //单击确定按钮
   $("#submit").click(function() {
     var proxy = $('#proxy').val();
     var status = $("#switch-state").bootstrapSwitch('state');
-    $.post('/crawlermanage/setproxy/', {
-      proxy:proxy,status:status
-    }, function(data) {
-      if(data!=null){
-        if (data['status']=='success') {
-          alert('设置成功')
-        }
-        
-      }
-    }, 'json')
+    //修改数据库代理ip
+    $.post('/crawlermanage/settings/', {'op':'setproxy',proxy:proxy,status:status});
     $('#proxy').attr('disabled',true);
   });
 </script>
