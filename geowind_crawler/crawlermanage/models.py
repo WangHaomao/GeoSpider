@@ -81,3 +81,4 @@ class TempGoods(Document):
 
 class Proxy(Document):
     proxy = StringField(max_length=5000)
+    status = StringField(max_length=2)

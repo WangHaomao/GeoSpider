@@ -45,3 +45,123 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
     % (callback.__module__, view_name))
 ValueError: The view crawlermanage.views.setproxy didn't return an HttpResponse object. It returned None instead.
+2017-08-28 11:42:57,216 [Thread-3:139744142948096] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-08-28 11:42:58,013 [Thread-6:139744117769984] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/index/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 52, in index
+    return render(request, 'crawlermanage/index.html')
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader_tags.py", line 60, in render
+    result = self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'settings' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-08-28 11:43:50,859 [Thread-8:140347797612288] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-08-28 12:28:46,113 [Thread-6:139734775211776] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 123, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 62, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 100, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/crawlermanage/settings/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2017-08-28 12:28:48,007 [Thread-7:139734766819072] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 123, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 62, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 100, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/crawlermanage/settings/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2017-08-28 12:28:59,294 [Thread-12:139734766819072] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 123, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 62, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 100, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/crawlermanage/settings/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2017-08-28 12:29:17,259 [Thread-18:139734775211776] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-08-28 12:29:19,157 [Thread-19:139734766819072] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-08-28 12:29:41,148 [Thread-29:139734783604480] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-08-28 12:29:43,034 [Thread-32:139734792521472] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-08-28 12:29:50,365 [Thread-35:139734783604480] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-08-28 12:30:18,813 [Thread-36:139734783604480] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-08-28 12:30:31,214 [Thread-39:139734792521472] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-08-28 12:38:52,892 [Thread-4:140627991459584] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-08-28 12:48:15,587 [Thread-27:140627991459584] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-08-28 12:48:42,395 [Thread-32:140627991459584] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.

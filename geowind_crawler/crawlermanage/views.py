@@ -536,21 +536,36 @@ def temparticle(request):
     return render(request, 'crawlermanage/newsdetail.html', {'news': news})
 
 def settings(request):
-    return render_to_response('crawlermanage/settings.html')
-
-def setproxy(request):
-    proxy = request.POST.get('proxy')
-    status = request.POST.get('status')
-    proxy_str = proxy.replace('\n', '#')
-    logger.info(type(status))
-    logger.info(proxy_str)
-    if status is False:
-        status = '0'
+    if request.method == 'POST':
+        op = request.POST.get('op')
+        if op=='setproxy':
+            proxy = request.POST.get('proxy')
+            status = request.POST.get('status')
+            proxy_str = proxy.replace('\n', '#')
+            if status is False:
+                status = '0'
+            else:
+                status = '1'
+            Proxy.objects.delete()
+            p = Proxy.objects.create(proxy=proxy_str, status=status)
+        elif op=='getproxy':
+            proxy_list = Proxy.objects.all()
+            if len(proxy_list) != 0:
+                proxy = proxy_list.get(0)
+                # logger.info(proxy['proxy'])
+                # logger.info(proxy['status'])
+                ret = {'proxy': proxy['proxy'], 'status': proxy['status']}
+                return HttpResponse(json.dumps(ret))
+        elif op == 'switch':
+            state = request.POST.get('state')
+            logger.info(state)
+            proxy_list = Proxy.objects.all()
+            if len(proxy_list) != 0:
+                proxy = proxy_list.get(0)
+                if state == 'true':
+                    proxy.update(status='1')
+                elif state == 'false':
+                    proxy.update(status='0')
+                    logger.info(proxy['status'])
     else:
-        status = '1'
-    proxy_str = status+'#'+proxy_str
-    p = Proxy.objects.create(proxy=proxy_str)
-
-
-
-
+        return render_to_response('crawlermanage/settings.html')
