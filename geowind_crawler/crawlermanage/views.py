@@ -249,7 +249,7 @@ def layout(request):
         ret = {'status': 'success'}
         return HttpResponse(json.dumps(ret))
     else:
-        return render_to_response('crawlermanage/layout.html', {'ips': ips})
+        return render_to_response('crawlermanage/layout.html', {'ips': ips,'urls':"['abc.com 新闻','bccca.com 电商','cacc.com 新闻']"})
 
 
 '''
@@ -569,3 +569,22 @@ def settings(request):
                     logger.info(proxy['status'])
     else:
         return render_to_response('crawlermanage/settings.html')
+from django.core import serializers
+def domain_autocomplete(request):
+
+    query = request.POST.get('query')
+    logger.info('aaaaa')
+
+    ret = "<a class=\"cat\" href=\"#\"></a>"
+    #mimetype = 'application/json'
+    json_resp = json.dumps({
+        "items": [
+                {'name':'https://stackoverflow.com/questions/9232748/twitter-bootstrap-typeahead-ajax-example','age':'12','id':'002'},
+                {'name':'https://stackoverflow.com/questions/9232748/twitter-bootstrap-typeahead-ajax-example','age':'13','id':'001'}
+        ]
+    })
+
+    return HttpResponse(json_resp)
+
+def debug(request):
+    return render(request, 'crawlermanage/htmldebug_page.html')

@@ -14,7 +14,9 @@
   <link rel="stylesheet" href="../../static/plugins/select2/select2.min.css">
   <link rel="stylesheet" href="../../static/dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="../../static/dist/css/skins/_all-skins.min.css">
-  <!-- <link rel="stylesheet" href="../../static/plugins/iCheck/all.css"> -->
+
+  <link rel="stylesheet" href="../../static/plugins/bootstrapTable/bootstrap-table.min.css">
+  <link rel="stylesheet" href="../../static/plugins/bootstrap3-editable/css/bootstrap-editable.css">
 
 </head>
 {% endblock %}
@@ -85,7 +87,7 @@
       </ul>
 {% endblock %}
 {% block maincontent %}
-<div class="box box-primary">
+        <div class="box box-primary">
           <div class="box-header with-border">
             <h3 class="box-title">通用任务设置</h3>
           </div>
@@ -100,63 +102,106 @@
                   <p style="color: red;">{{error1}}</p>
                 {% endif %} -->
               </div>
-              <!-- textarea -->
+
+
+
+
+
               <div class="form-group">
-                <label>起始URL（有多个用回车分割，如下）</label>
-                <textarea id="starturls" class="form-control" rows="8" placeholder="https://www.geowind.com
+                  <ul id="myTab" class="nav nav-tabs">
+                       <li class="active"><a href="#home" data-toggle="tab">单例输入</a></li>
+                       <li><a href="#ios" data-toggle="tab">批量输入</a></li>
+                  </ul>
+                          <div class='box' style="border-top:0px;">
+                      <div id="myTabContent" class="tab-content">
+                         <div class="tab-pane fade in active" id="home">
+                              <div class="form-group col-sm-10" style="padding-left:0px;">
+                           <!--<div class="form-group">-->
+                                 <label>目标域名</label>
+                    <input placeholder="回车将选中选项加入下面富文本框" type="text" class="span10 form-control"  id="starturl_sin" data-provide="typeahead" data-items="5" />
+                             </div>
+                             <div class="form-group col-sm-2" style="padding-left:0px;padding-right:0px;">
+                           <!--<div class="form-group">-->
+                                 <label>网站类型</label>
+                                 <select class="form-control" id="webtype_sin">
+                                     <option value="non_select">请选择</option>
+                                     <option value="ecommerce">电商（全网）</option>
+                                     <option value="ecommerce_keywords">电商（关键字）</option>
+                                     <option value="news">新闻</option>
+                                     <option value="blog">博客</option>
+                                 </select>
+                             </div>
+                             <div class="form-group" id="ecommerce_keywords_sin" style="display: none">
+                                <label>关键字（有多个用英文符“,”分割，如下）</label>
+                                <textarea id="keywords_sin" class="form-control" rows="3" placeholder="手机,笔记本,iphone"></textarea>
+                              </div>
+
+
+                             <div class="col-sm-offset-2 col-sm-10" style="padding-right:0px;">
+
+                                 <button id="button_sin" type="button" class="btn pull-right">点击添加</button>
+                             </div>
+
+                         </div>
+                         <div class="tab-pane fade" id="ios">
+                              <label>目标域名</label>
+                              <textarea id="starturl_mul" class="form-control" rows="8" placeholder="https://www.geowind.com
 http://www.bootstrap.com"></textarea>
-                <!-- {% if error2 %}
-                  <p style="color: red;">{{error2}}</p>
-                {% endif %} -->
-              </div>
+                             <div class="form-group">
+                                 <label>网站类型</label>
+
+                                 <select class="form-control" id="webtype_mul">
+                                     <option value="non_select">请选择</option>
+                                     <option value="ecommerce">电商（全网）</option>
+                                     <option value="ecommerce_keywords">电商（关键字）</option>
+                                     <option value="news">新闻</option>
+                                     <option value="blog">博客</option>
+                                 </select>
+
+                                <!--$("#select2").val("10000 水稻").trigger("change");-->
+
+                            <div class="form-group" id="ecommerce_keywords_mul" style="display: none">
+                                <label>关键字（有多个用英文符“,”分割，如下）</label>
+                                <textarea id="keywords_mul" class="form-control" rows="3" placeholder="手机,笔记本,iphone"></textarea>
+                            </div>
+                             </div>
+                             <div class="col-sm-offset-2 col-sm-10" style="padding-right:0px;">
+                                 <button id="button_mul" type="button" class="btn pull-right">点击添加</button>
+                             </div>
+                         </div>
+                      </div>
+                          </div>
+
+                      <label>任务信息简介</label>
+
+                    <div class="form-group">
+                         <table id="table">
+                          </table>
+                          <div class="form-group" id="ecommerce_keywords" style="display: none">
+                            <label>关键字（有多个用英文符“,”分割，如下）</label>
+                            <textarea id="keywords" class="form-control" rows="3" placeholder="手机,笔记本,iphone"></textarea>
+                            <!-- {% if error2 %}
+                              <p style="color: red;">{{error2}}</p>
+                            {% endif %} -->
+                          </div>
+                      <div>
+              <div>
+              <!-- textarea -->
+             <!--<div class="form-group">-->
+                <!--<label>起始URL（有多个用回车分割，如下）</label>-->
+                <!--<input placeholder="回车将选中选项加入下面富文本框" type="text" class="span10 form-control"  id="urls_search" data-provide="typeahead" data-items="5" />-->
+              <!--</div>-->
+              <!--<div class="form-group">-->
+                <!--&lt;!&ndash;<label>起始URL（有多个用回车分割，如下）</label>&ndash;&gt;-->
+                <!--<textarea id="starturls" class="form-control" rows="8" placeholder="https://www.geowind.com-->
+<!--http://www.bootstrap.com"></textarea>-->
+              <!--</div>-->
 
               <div class="form-group">
                 <label>任务描述</label>
                 <textarea id="describe" class="form-control" rows="3" placeholder="点击输入"></textarea>
                   <p style="color: red;">{{error2}}</p>
               </div>
-
-              <!-- select -->
-              <div class="form-group">
-                <label>网站类型</label>
-                <select class="form-control" id="webtype" onchange="webtypeChange()">
-                  <option value="ecommerce">电商（全网）</option>
-                  <option value="ecommerce_keywords">电商（关键字）</option>
-                  <option value="news">新闻</option>
-                  <option value="blog">博客</option>
-                </select>
-              </div>
-
-              <div class="form-group" id="ecommerce_keywords" style="display: none">
-                <label>关键字（有多个用英文符“,”分割，如下）</label>
-                <textarea id="keywords" class="form-control" rows="3" placeholder="手机,笔记本,iphone"></textarea>
-                <!-- {% if error2 %}
-                  <p style="color: red;">{{error2}}</p>
-                {% endif %} -->
-              </div>
-
-              <!-- radio -->
-              <!--<div class="form-group">-->
-                <!--<label>运行模式</label>-->
-                <!--<div class="radio">-->
-                  <!--<label>-->
-                    <!--<input type="radio" name="runmodel" id="optionsRadios1" value="option1" checked>-->
-                    <!--均衡模式&mdash;默认模式运行，消耗内存比较小-->
-                  <!--</label>-->
-                <!--</div>-->
-                <!--<div class="radio">-->
-                  <!--<label>-->
-                    <!--<input type="radio" name="runmodel" id="optionsRadios2" value="option2">-->
-                    <!--进程最大&mdash;启动额定的最大进程数，速度快，但内存消耗大-->
-                  <!--</label>-->
-                <!--</div>-->
-                <!--<div class="radio">-->
-                  <!--<label>-->
-                    <!--<input type="radio" name="runmodel" id="optionsRadios3" value="option3" disabled>-->
-                    <!--还在思考-->
-                  <!--</label>-->
-                <!--</div>-->
-              <!--</div>-->
 
               <!-- 下拉列表：高级设置 -->
               <label class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> 高级参数（点击设置）</label>
@@ -185,18 +230,6 @@ http://www.bootstrap.com"></textarea>
                           </div>
                       </td>
                     </tr>
-                    <!-- <tr>
-                      <th><label>优先抓取（视网站类型变化）</label></th>
-                      <td>
-                        <div class="form-group">
-                          <select class="form-control select2" multiple="multiple" data-placeholder="默认均衡抓取" style="width: 100%;">
-                            <option>商品优先</option>
-                            <option>评论优先</option>
-                            <option>店铺优先</option>
-                          </select>
-                        </div>
-                      </td>
-                    </tr> -->
                     <tr>
                       <th><label>分布式主机</label></th>
                       <td>
@@ -235,15 +268,16 @@ http://www.bootstrap.com"></textarea>
 
               </div>
 
-              <div class="box-footer">
-                <button type="button" class="btn btn-default">取消</button>
-                <button id="submit" type="button" class="btn btn-primary pull-right">确认</button>
+              <div class="box-footer" style="padding-right:0px;">
+                <!--<button type="button" class="btn btn-default">取消</button>-->
+
+                 <div class="col-sm-offset-2 col-sm-10" style="padding-right:0px;padding-left:0px;">
+                     <button id="submit" type="button" class="btn btn-primary pull-right">开始抓取</button>
+                 </div>
               </div>
             <!--</form>-->
           </div>
           <!-- /.box-body -->
-        </div>
-        <div class="box-body">
         </div>
 {% endblock %}
 {% block script %}
@@ -258,6 +292,10 @@ http://www.bootstrap.com"></textarea>
 
 <script src="../../static/plugins/bootstrap3-editable/js/moment.js"></script>
 <script src="../../static/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="../../static/plugins/bootstrap3-typeahead/bootstrap3-typeahead.min.js"></script>
+<script src="../../static/plugins/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="../../static/plugins/bootstrapTable/bootstrap-table-editable.js"></script>
+<script src="../../static/plugins/bootstrap3-editable/js/bootstrap-editable.js"></script>
 <script>
   $(function () {
     // $("#example1").DataTable();
@@ -269,16 +307,96 @@ http://www.bootstrap.com"></textarea>
       "info": true,
       "autoWidth": false
     });
+    //自动提示
 
-    $(".select2").select2();
-    // $('#reservationtime').daterangepicker({
-    //   forceUpdate: true,
-    //   callback: function(startDate, endDate, period){
-    //     var title = startDate.format('L') + ' – ' + endDate.format('L');
-    //     $(this).val(title)
-    //   }
-    // });
-    
+    $("#starturl_sin").typeahead({
+
+
+        source: function (query, process) {
+            return $.ajax({
+                url: '/crawlermanage/domainautocomplete/',
+                type: 'post',
+                data: {name: query},
+                success: function (result) {
+                    result = eval('('+result+')');
+                    //console.log(result);
+                    //console.log(typeof(result));
+                    //console.log(result['items'])
+                    //return process(result.options);
+
+                    var resultList = result.items.map(function (item) {
+                          var aItem = {id: item.id, name: item.name};
+                          return JSON.stringify(aItem);
+                    });
+                    return process(resultList);
+                },
+            });
+        },
+        highlighter: function (obj) {
+            var item = JSON.parse(obj);
+            var query = this.query.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&');
+            return item.name.replace(new RegExp('(' + query + ')', 'ig'), function ($1, match) {
+                return '<strong>' + match + '</strong>'
+            });
+        },
+        updater: function (obj) {
+            var item = JSON.parse(obj);
+            console.log(item.id);
+
+            webtype_sin = 'ecommerce_keywords';
+            $("#webtype_sin").val(webtype_sin).trigger("change");
+
+            console.log(webtype_sin);
+            if(webtype_sin == 'ecommerce_keywords') {
+               $("#ecommerce_keywords_sin").fadeIn('slow');
+               $('#ecommerce_keywords_sin').css('display', '');
+            } else {
+               $("#ecommerce_keywords_sin").fadeOut("slow");
+            }
+
+            return item.name;
+        }
+
+
+
+        /*
+        source: function (query, process) {
+            return $.post('/crawlermanage/domainautocomplete/', { query: query }, function (result) {
+                    result = eval('('+result+')');
+                    console.log(result);
+                    console.log(typeof(result));
+                    console.log(result['items'])
+                    //return process(result.options);
+
+                    var resultList = result.items.map(function (item) {
+                          var aItem = {id: item.id, name: item.name};
+                          return JSON.stringify(aItem);
+                    });
+                    return process(resultList);
+                });
+            }
+        }
+        */
+
+
+
+    });
+
+
+
+    /*
+    var subjects = {{urls|safe}};
+	$('#starturl_sin').typeahead({source: subjects,
+        updater: function (item) {//选中
+            console.log("'" + item + "' selected.");
+            //tem = item.substring(0, item.indexOf(','));
+
+            return item;
+        }
+    })
+    */
+
+
     $('#reservationtime').daterangepicker({
         timePicker: true,
         timePickerIncrement: 1,
@@ -330,19 +448,243 @@ http://www.bootstrap.com"></textarea>
         if (data['status']=='success') {
           location.href = '/crawlermanage/tasks'
         }
-        
+
       }
     }, 'json')
   });
 
-  $("#webtype").click(function(){
-     webtype = $(this).val();
-     if(webtype == 'ecommerce_keywords') {
-        $("#ecommerce_keywords").fadeIn('slow');
-        $('#ecommerce_keywords').css('display', '');
+  $("#webtype_mul").click(function(){
+     webtype_mul = $(this).val();
+     if(webtype_mul == 'ecommerce_keywords') {
+        $("#ecommerce_keywords_mul").fadeIn('slow');
+        $('#ecommerce_keywords_mul').css('display', '');
      } else {
-        $("#ecommerce_keywords").fadeOut("slow");
+        $("#ecommerce_keywords_mul").fadeOut("slow");
      }
   });
+  $("#webtype_sin").click(function(){
+
+     webtype_sin = $(this).val();
+     //console.log(webtype_sin);
+     if(webtype_sin == 'ecommerce_keywords') {
+        $("#ecommerce_keywords_sin").fadeIn('slow');
+        $('#ecommerce_keywords_sin').css('display', '');
+     } else {
+        $("#ecommerce_keywords_sin").fadeOut("slow");
+     }
+  });
+
+  function onKeyDown(event){
+                var e = event || window.event || arguments.callee.caller.arguments[0];
+                if(e && e.keyCode==27){ // 按 Esc
+                    //要做的事情
+                }
+                if(e && e.keyCode==113){ // 按 F2
+                     //要做的事情
+                }
+                if(e && e.keyCode==13){ // enter 键
+                     alert("此处回车触发搜索事件");
+                }
+
+            }
 </script>
+
+
+<script>
+var $table = $('#table'),
+        $remove = $('#remove'),
+        selections = [];
+
+
+    function getHeight() {
+        return $(window).height() - $('h1').outerHeight(true);
+    }
+
+
+    function initTable() {
+        $("#table").bootstrapTable({
+            //height: getHeight(),
+            columns: [
+
+					{
+                        title: 'ID',
+                        field: 'id',
+                        sortable: true,
+                        visible:false
+
+                    },
+                    {
+                        title: 'URL',
+                        field: 'url',
+                        sortable: true,
+                        width: '40%'
+
+                    },
+                    {
+                        field: 'type',
+                        title: '类型',
+                        sortable: true,
+                        align: 'center',
+                        editable: {
+                            type: 'select',
+                            value: status,
+							source:
+							[{ value: 'ecommerce', text: "电商(全网)" },
+							{ value: 'ecommerce_keywords', text: "电商(关键字)" },
+							{ value:'news',text:"新闻"},
+							{ value:'blog',text:"博客"}],
+						}
+					},
+					{
+					    field: 'KEYWORD',
+                        title: '关键字',
+                        field: 'keyword',
+                        editable: true
+
+                    },
+                    {
+                        field: 'action',
+                        title: '操作',
+                        align: 'center',
+                        events: operateEvents,
+                        formatter: operateFormatter,
+                        width: '5%'
+                    }
+
+            ]
+        });
+
+        // sometimes footer render error.
+        setTimeout(function () {
+            $table.bootstrapTable('resetView');
+        }, 200);
+        $table.on('check.bs.table uncheck.bs.table ' +
+                'check-all.bs.table uncheck-all.bs.table', function () {
+            $remove.prop('disabled', !$table.bootstrapTable('getSelections').length);
+            // save your data, here just save the current page
+            selections = getIdSelections();
+            // push or splice the selections if you want to save all data selections
+        });
+        $table.on('expand-row.bs.table', function (e, index, row, $detail) {
+            if (index % 2 == 1) {
+                $detail.html('Loading from ajax request...');
+                $.get('LICENSE', function (res) {
+                    $detail.html(res.replace(/\n/g, '<br>'));
+                });
+            }
+        });
+        $table.on('all.bs.table', function (e, name, args) {
+            console.log(name, args);
+        });
+        $remove.click(function () {
+            var ids = getIdSelections();
+            $table.bootstrapTable('remove', {
+                field: 'id',
+                values: ids
+            });
+            $remove.prop('disabled', true);
+        });
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView', {
+                height: getHeight()
+            });
+        });
+    }
+
+    function operateFormatter(value, row, index) {
+        return [
+        	/*
+            '<a class="like" href="javascript:void(0)" title="Like">',
+            '<i class="glyphicon glyphicon-heart"></i>',
+            '</a>  ',*/
+            '<a class="remove" href="javascript:void(0)" title="Remove">',
+            '<i class="glyphicon glyphicon-remove"></i>',
+            '</a>'
+        ].join('');
+    }
+    window.operateEvents = {
+        'click .like': function (e, value, row, index) {
+            alert('You click like action, row: ' + JSON.stringify(row));
+        },
+        'click .remove': function (e, value, row, index) {
+            $table.bootstrapTable('remove', {
+                field: 'id',
+                values: [row.id]
+            });
+        }
+    };
+    var button_sin = $('#button_sin');
+    var button_mul = $('#button_mul');
+
+    $(function () {
+        initTable();
+        button_sin.click(function () {
+            //$("#webtype_sin").val("ecommerce_keywords").trigger("change");
+
+            starturl = $('#starturl_sin').val();
+            webtype = $('#webtype_sin').val();
+            keywords = '';
+            console.log(webtype);
+
+            if(webtype == 'ecommerce_keywords'){
+                keywords = $('#keywords_sin').val();
+                if(keywords.replace(' ','').replace('\n','').replace('\r\n','') == ''){
+                    alert('至少输入一个关键字');
+                    return;
+                }
+            }else if(webtype=='non_select'){
+                alert('请选择url类型');
+                return ;
+            }
+
+            console.log(keywords);
+
+            $table.bootstrapTable('append',randomData(starturl,webtype,keywords,'sin'));
+
+            $table.bootstrapTable('scrollTo', 'bottom');
+
+        });
+
+        button_mul.click(function () {
+            starturl = $('#starturl_mul').val();
+            starturl_list = starturl.split('\n');
+            webtype = $('#webtype_mul').val();
+            keywords = '';
+            console.log(webtype);
+
+            if(webtype == 'ecommerce_keywords'){
+                keywords = $('#keywords_mul').val();
+                if(keywords.replace(' ','').replace('\n','').replace('\r\n','') == ''){
+                    alert('至少输入一个关键字');
+                    return;
+                }
+            }else if(webtype=='non_select'){
+                alert('请选择url类型');
+                return ;
+            }
+
+            console.log(keywords);
+            $table.bootstrapTable('append',randomData(starturl_list,webtype,keywords,'mul'));
+
+            $table.bootstrapTable('scrollTo', 'bottom');
+        });
+    });
+    function randomData(starturl,webtype,keywords,op) {
+        var random_id=100*Math.random();
+
+        res_urls = ''
+        if( op == 'sin'){
+            res_urls = '<li style=\'list-style-type:none;\'><a href=\''+ starturl +'\' target=\'_blank\'>' + starturl + '</a></li>';
+
+        }else{
+            for(var i = 0;i<starturl.length;i++){
+                res_urls+= '<li style=\'list-style-type:none;\'><a href=\''+ starturl[i] +'\' target=\'_blank\'>' + starturl[i] + '</a></li>';
+            }
+        }
+
+        row = {id:random_id,url:res_urls,keyword:keywords,'type':webtype}
+
+        return row;
+    }
+	</script>
 {% endblock %}
