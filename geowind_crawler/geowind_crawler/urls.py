@@ -38,6 +38,10 @@ urlpatterns = [
     url(r'^crawlermanage/editprocess/$', views.editprocess, name='editprocess'),
     url(r'^crawlermanage/settings/$', views.settings, name='settings'),
 
+    url(r'^crawlermanage/domainautocomplete/$', views.domain_autocomplete, name='domainautocomplete'),
+    url(r'^crawlermanage/debug/$', views.debug, name='debug'),
+
+
 
     # url(r'^crawlermanage/$','crawlermanage.views.login'),
     # url(r'^crawlermanage/login/$','crawlermanage.views.login'),
