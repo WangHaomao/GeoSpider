@@ -2280,3 +2280,85 @@ Traceback (most recent call last):
   File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 198, in _get_response
     "returned None instead." % (callback.__module__, view_name)
 ValueError: The view crawlermanage.views.layout didn't return an HttpResponse object. It returned None instead.
+2017-09-02 09:04:01,200 [Thread-3:140509814408960] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-09-02 09:05:38,388 [Thread-26:140509804967680] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.layout didn't return an HttpResponse object. It returned None instead.
+2017-09-02 09:05:38,402 [Thread-27:140509814408960] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.layout didn't return an HttpResponse object. It returned None instead.
+2017-09-02 11:38:26,530 [Thread-6:139992564598528] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 46, in login
+    django.contrib.auth.login(request, user)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 111, in login
+    request.session[SESSION_KEY] = user._meta.pk.value_to_string(user)
+AttributeError: 'QuerySet' object has no attribute '_meta'
+2017-09-02 11:40:10,797 [Thread-3:140423187941120] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 46, in login
+    django_login(request, user)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 111, in login
+    request.session[SESSION_KEY] = user._meta.pk.value_to_string(user)
+AttributeError: 'QuerySet' object has no attribute '_meta'
+2017-09-02 11:46:13,040 [Thread-2:140554305926912] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 47, in login
+    if user.is_active:
+AttributeError: 'NoneType' object has no attribute 'is_active'
+2017-09-02 11:46:18,776 [Thread-3:140554305926912] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 47, in login
+    if user.is_active:
+AttributeError: 'NoneType' object has no attribute 'is_active'
+2017-09-02 11:50:10,471 [Thread-3:139971119933184] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 46, in login
+    django_login(request, user)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 111, in login
+    request.session[SESSION_KEY] = user._meta.pk.value_to_string(user)
+AttributeError: 'QuerySet' object has no attribute '_meta'
+2017-09-02 12:14:22,273 [Thread-3:140183010576128] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 48, in login
+    user = authenticate(username=username, password=password)
+TypeError: authenticate() takes at least 1 argument (2 given)
+2017-09-02 12:15:05,789 [Thread-3:139689144510208] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 50, in login
+    django_login(request, user)
+  File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 111, in login
+    request.session[SESSION_KEY] = user._meta.pk.value_to_string(user)
+AttributeError: 'QuerySet' object has no attribute '_meta'

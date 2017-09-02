@@ -10431,3 +10431,676 @@ Traceback (most recent call last):
     (bit, current))  # missing attribute
 VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
 2017-09-02 16:54:36,672 [Thread-294:140426094831360] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32058
+2017-09-02 09:03:55,698 [Dummy-1:140509855086336] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 09:03:55,710 [Dummy-1:140509855086336] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 09:03:59,745 [Thread-2:140509814408960] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 09:04:01,205 [Thread-3:140509814408960] [django.template:927] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-09-02 09:04:07,284 [Thread-7:140509814408960] [django.template:927] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fcafd085190>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 09:04:07,293 [Thread-7:140509814408960] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fcafd085190>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 09:04:07,294 [Thread-7:140509814408960] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fcafd085190>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 09:04:07,305 [Thread-7:140509814408960] [django.template:927] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 09:04:57,715 [Thread-13:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable 'tasklist' in template 'crawlermanage/tasks.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [tasklist] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'csrf_token\': <SimpleLazyObject: <function _get_val at 0x7fcafd077b18>>, \'user\': <SimpleLazyObject: <function <lambda> at 0x7fcafd077de8>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fcafd099350>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'WARNING\': 30, \'SUCCESS\': 25, \'ERROR\': 40}, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fcafd0859d0>, u\'request\': <WSGIRequest: GET \'/crawlermanage/tasks/\'>}, {}, {\'p2\': <crawlermanage.utils.page.paging instance at 0x7fcafd0389e0>, \'status\': \'currenttask\', \'pausing_count\': 4, \'error_count\': 0, \'p\': <crawlermanage.utils.page.paging instance at 0x7fcafd038560>, \'running_count\': 1, \'stopping_count\': 52}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n\\n\\n<!--<div class="box">-\'>, <Variable Node: running_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: pausing_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: stopping_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: error_count>, <TextNode: u\'</span>\\n            </div\'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n\\n            </ul>\\n     \'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n\\n\\n\\n                  <di\'>, <For Node: for task in tasklist, tail_len: 11>, <TextNode: u\'\\n\\t\\t\\t                \\n  \\t\\t\'>, <For Node: for i in p.p_content, tail_len: 33>, <TextNode: u\'\\n                        \'>, <Variable Node: p.p_count>, <TextNode: u\'</span> \\u6761\\u8bb0\\u5f55\\uff0c\\u603b <span  clas\'>, <Variable Node: p.p_pages>, <TextNode: u\'</span> \\u9875\\uff0c\\u5f53\\u524d\\u5728<span class=\'>, <Variable Node: p.page>, <TextNode: u\'</span>\\u9875\\n                \'>, <django.template.defaulttags.URLNode object at 0x7fcafd071910>, <TextNode: u\'?page=\'>, <Variable Node: p.p_previous>, <TextNode: u\'">&laquo;</a></li>\\n      \'>, <django.template.defaulttags.URLNode object at 0x7fcafd071ad0>, <TextNode: u\'?page=1">\\u9996\\u9875</a></li>\\n    \'>, <For Node: for i in p.p_range, tail_len: 9>, <TextNode: u\'\\n                        \'>, <django.template.defaulttags.URLNode object at 0x7fcafc7f8190>, <TextNode: u\'?page=\'>, <Variable Node: p.p_pages>, <TextNode: u\'">\\u5c3e\\u9875</a></li>\\n           \'>, <django.template.defaulttags.URLNode object at 0x7fcafc7f8390>, <TextNode: u\'?page=\'>, <Variable Node: p.p_next>, <TextNode: u\'">&raquo;</a></li>\\n      \'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n              <!--<div c\'>, <For Node: for i in p2.p_content, tail_len: 27>, <TextNode: u\'\\n                        \'>, <Variable Node: p2.p_count>, <TextNode: u\'</span> \\u6761\\u8bb0\\u5f55\\uff0c\\u603b <span  clas\'>, <Variable Node: p2.p_pages>, <TextNode: u\'</span> \\u9875\\uff0c\\u5f53\\u524d\\u5728<span class=\'>, <Variable Node: p2.page>, <TextNode: u\'</span>\\u9875\\n                \'>, <django.template.defaulttags.URLNode object at 0x7fcafd111a10>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_previous>, <TextNode: u\'">&laquo;</a></li>\\n      \'>, <django.template.defaulttags.URLNode object at 0x7fcafd0f8d50>, <TextNode: u\'?page2=1">\\u9996\\u9875</a></li>\\n   \'>, <For Node: for i in p2.p_range, tail_len: 9>, <TextNode: u\'\\n                        \'>, <django.template.defaulttags.URLNode object at 0x7fcafc7ff550>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_pages>, <TextNode: u\'">\\u5c3e\\u9875</a></li>\\n           \'>, <django.template.defaulttags.URLNode object at 0x7fcafc7ff710>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_next>, <TextNode: u\'">&raquo;</a></li>\\n      \'>]>}, {}]'
+2017-09-02 09:04:57,767 [Thread-13:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable 'page' in template 'crawlermanage/tasks.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [page] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'csrf_token\': <SimpleLazyObject: <function _get_val at 0x7fcafd077b18>>, \'user\': <SimpleLazyObject: <function <lambda> at 0x7fcafd077de8>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fcafd099350>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'WARNING\': 30, \'SUCCESS\': 25, \'ERROR\': 40}, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fcafd0859d0>, u\'request\': <WSGIRequest: GET \'/crawlermanage/tasks/\'>}, {}, {\'p2\': <crawlermanage.utils.page.paging instance at 0x7fcafd0389e0>, \'status\': \'currenttask\', \'pausing_count\': 4, \'error_count\': 0, \'p\': <crawlermanage.utils.page.paging instance at 0x7fcafd038560>, \'running_count\': 1, \'stopping_count\': 52}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: page>, <TextNode: u\'"\\n                  if(pa\'>]>}]'
+2017-09-02 09:05:01,505 [Thread-14:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fcafd0dc390>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 09:05:01,514 [Thread-14:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fcafd0dc390>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 09:05:01,527 [Thread-14:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fcafd0dc390>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 09:05:01,531 [Thread-14:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 09:05:08,213 [Thread-15:140509804967680] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 09:05:08,248 [Thread-15:140509804967680] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 09:05:08,300 [Thread-16:140509804967680] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 09:05:08,339 [Thread-16:140509804967680] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 09:05:10,438 [Thread-17:140509804967680] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 09:05:10,484 [Thread-17:140509804967680] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 09:05:11,091 [Thread-18:140509804967680] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 09:05:11,123 [Thread-18:140509804967680] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 09:05:11,184 [Thread-19:140509804967680] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 09:05:11,220 [Thread-19:140509804967680] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 09:05:11,294 [Thread-20:140509804967680] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 09:05:11,349 [Thread-20:140509804967680] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 09:05:11,549 [Thread-21:140509804967680] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 09:05:11,575 [Thread-21:140509804967680] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 09:05:11,603 [Thread-22:140509804967680] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 09:05:11,634 [Thread-22:140509804967680] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 09:05:11,733 [Thread-23:140509804967680] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 09:05:11,775 [Thread-23:140509804967680] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 09:05:19,180 [Thread-24:140509804967680] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 09:05:19,219 [Thread-24:140509804967680] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 09:05:19,254 [Thread-25:140509804967680] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 09:05:19,289 [Thread-25:140509804967680] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 09:05:38,379 [Thread-26:140509804967680] [crawlermanage.views:219] [INFO]- ecommerce_ttt
+2017-09-02 09:05:38,384 [Thread-26:140509804967680] [crawlermanage.views:248] [INFO]- running
+2017-09-02 09:05:38,388 [Thread-27:140509814408960] [crawlermanage.views:219] [INFO]- ecommerce_ttt(西服,裤子)
+2017-09-02 09:05:38,400 [Thread-27:140509814408960] [crawlermanage.views:248] [INFO]- running
+2017-09-02 09:05:38,585 [Thread-29:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable 'tasklist' in template 'crawlermanage/tasks.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [tasklist] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'csrf_token\': <SimpleLazyObject: <function _get_val at 0x7fcafd03d2a8>>, \'user\': <SimpleLazyObject: <function <lambda> at 0x7fcafd03daa0>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fcafc8187d0>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'WARNING\': 30, \'SUCCESS\': 25, \'ERROR\': 40}, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fcafd0718d0>, u\'request\': <WSGIRequest: GET \'/crawlermanage/tasks/\'>}, {}, {\'p2\': <crawlermanage.utils.page.paging instance at 0x7fcafc816fc8>, \'status\': \'currenttask\', \'pausing_count\': 4, \'error_count\': 0, \'p\': <crawlermanage.utils.page.paging instance at 0x7fcafc816e60>, \'running_count\': 3, \'stopping_count\': 52}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n\\n\\n<!--<div class="box">-\'>, <Variable Node: running_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: pausing_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: stopping_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: error_count>, <TextNode: u\'</span>\\n            </div\'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n\\n            </ul>\\n     \'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n\\n\\n\\n                  <di\'>, <For Node: for task in tasklist, tail_len: 11>, <TextNode: u\'\\n\\t\\t\\t                \\n  \\t\\t\'>, <For Node: for i in p.p_content, tail_len: 33>, <TextNode: u\'\\n                        \'>, <Variable Node: p.p_count>, <TextNode: u\'</span> \\u6761\\u8bb0\\u5f55\\uff0c\\u603b <span  clas\'>, <Variable Node: p.p_pages>, <TextNode: u\'</span> \\u9875\\uff0c\\u5f53\\u524d\\u5728<span class=\'>, <Variable Node: p.page>, <TextNode: u\'</span>\\u9875\\n                \'>, <django.template.defaulttags.URLNode object at 0x7fcafc7f8390>, <TextNode: u\'?page=\'>, <Variable Node: p.p_previous>, <TextNode: u\'">&laquo;</a></li>\\n      \'>, <django.template.defaulttags.URLNode object at 0x7fcafc7f8650>, <TextNode: u\'?page=1">\\u9996\\u9875</a></li>\\n    \'>, <For Node: for i in p.p_range, tail_len: 9>, <TextNode: u\'\\n                        \'>, <django.template.defaulttags.URLNode object at 0x7fcafc7f8fd0>, <TextNode: u\'?page=\'>, <Variable Node: p.p_pages>, <TextNode: u\'">\\u5c3e\\u9875</a></li>\\n           \'>, <django.template.defaulttags.URLNode object at 0x7fcafc7f8950>, <TextNode: u\'?page=\'>, <Variable Node: p.p_next>, <TextNode: u\'">&raquo;</a></li>\\n      \'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n              <!--<div c\'>, <For Node: for i in p2.p_content, tail_len: 27>, <TextNode: u\'\\n                        \'>, <Variable Node: p2.p_count>, <TextNode: u\'</span> \\u6761\\u8bb0\\u5f55\\uff0c\\u603b <span  clas\'>, <Variable Node: p2.p_pages>, <TextNode: u\'</span> \\u9875\\uff0c\\u5f53\\u524d\\u5728<span class=\'>, <Variable Node: p2.page>, <TextNode: u\'</span>\\u9875\\n                \'>, <django.template.defaulttags.URLNode object at 0x7fcafd0e3590>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_previous>, <TextNode: u\'">&laquo;</a></li>\\n      \'>, <django.template.defaulttags.URLNode object at 0x7fcafd0e34d0>, <TextNode: u\'?page2=1">\\u9996\\u9875</a></li>\\n   \'>, <For Node: for i in p2.p_range, tail_len: 9>, <TextNode: u\'\\n                        \'>, <django.template.defaulttags.URLNode object at 0x7fcafc7b95d0>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_pages>, <TextNode: u\'">\\u5c3e\\u9875</a></li>\\n           \'>, <django.template.defaulttags.URLNode object at 0x7fcafc7b9a50>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_next>, <TextNode: u\'">&raquo;</a></li>\\n      \'>]>}, {}]'
+2017-09-02 09:05:38,649 [Thread-29:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable 'page' in template 'crawlermanage/tasks.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [page] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'csrf_token\': <SimpleLazyObject: <function _get_val at 0x7fcafd03d2a8>>, \'user\': <SimpleLazyObject: <function <lambda> at 0x7fcafd03daa0>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fcafc8187d0>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'WARNING\': 30, \'SUCCESS\': 25, \'ERROR\': 40}, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fcafd0718d0>, u\'request\': <WSGIRequest: GET \'/crawlermanage/tasks/\'>}, {}, {\'p2\': <crawlermanage.utils.page.paging instance at 0x7fcafc816fc8>, \'status\': \'currenttask\', \'pausing_count\': 4, \'error_count\': 0, \'p\': <crawlermanage.utils.page.paging instance at 0x7fcafc816e60>, \'running_count\': 3, \'stopping_count\': 52}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: page>, <TextNode: u\'"\\n                  if(pa\'>]>}]'
+2017-09-02 09:05:42,157 [Thread-30:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 09:05:42,164 [Thread-30:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 09:05:42,170 [Thread-30:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 09:05:42,177 [Thread-30:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 09:05:42,183 [Thread-30:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 09:05:42,192 [Thread-30:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 09:05:42,199 [Thread-30:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 09:05:42,206 [Thread-30:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 09:05:42,219 [Thread-30:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 09:05:42,231 [Thread-30:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 09:05:42,231 [Thread-30:140509804967680] [django.template:927] [DEBUG]- Exception while resolving variable 'page' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [page] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'csrf_token\': <SimpleLazyObject: <function _get_val at 0x7fcafd03d668>>, \'user\': <SimpleLazyObject: <function <lambda> at 0x7fcafd03d848>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fcafd0409d0>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'WARNING\': 30, \'SUCCESS\': 25, \'ERROR\': 40}, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fcafc80e250>, u\'request\': <WSGIRequest: GET \'/crawlermanage/ecommercedata/?taskid=59aa74629c1da91fb7e1012d\'>}, {}, {\'p2\': <crawlermanage.utils.page.paging instance at 0x7fcafdb513f8>, \'p\': <crawlermanage.utils.page.paging instance at 0x7fcafd10b5a8>, \'status\': \'goods\'}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: page>, <TextNode: u\'"\\n                  if(pa\'>]>}]'
+2017-09-02 09:05:46,187 [Thread-31:140509804967680] [crawlermanage.views:264] [INFO]- 59aa74629c1da91fb7e1012d
+2017-09-02 09:05:46,192 [Thread-31:140509804967680] [crawlermanage.views:267] [INFO]- running
+2017-09-02 09:05:49,750 [Thread-32:140509814408960] [crawlermanage.views:264] [INFO]- 59aa74629c1da91fb7e1012e
+2017-09-02 09:05:49,755 [Thread-32:140509814408960] [crawlermanage.views:267] [INFO]- running
+2017-09-02 09:05:53,915 [Thread-33:140509519542016] [django.template:927] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fcafc7f8a90>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 09:05:53,922 [Thread-33:140509519542016] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fcafc7f8a90>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 09:05:53,924 [Thread-33:140509519542016] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fcafc7f8a90>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 09:05:53,928 [Thread-33:140509519542016] [django.template:927] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 11:09:23,253 [Dummy-1:140480547981056] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:09:23,258 [Dummy-1:140480547981056] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:17:35,493 [Dummy-1:140366405494528] [django.db.backends:89] [DEBUG]- (0.005) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:17:35,495 [Dummy-1:140366405494528] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:18:05,439 [Dummy-1:140252003522304] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:18:05,442 [Dummy-1:140252003522304] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:18:58,306 [Dummy-1:139886090307328] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:18:58,309 [Dummy-1:139886090307328] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:19:10,393 [Thread-3:139885839898368] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:19:14,555 [Thread-7:139885608433408] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:19:16,406 [Thread-11:139885608433408] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:19:17,544 [Thread-15:139885608433408] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:19:18,867 [Thread-19:139885608433408] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:19:20,204 [Thread-23:139885608433408] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:19:21,420 [Thread-27:139885608433408] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:19:22,772 [Thread-31:139885608433408] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:19:29,438 [Thread-32:139885608433408] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:19:31,984 [Thread-36:139885848291072] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:19:33,416 [Thread-40:139885600040704] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:20:13,547 [Dummy-1:140522428909312] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:20:13,550 [Dummy-1:140522428909312] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:20:18,369 [Thread-3:140522178275072] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:20:29,197 [Dummy-1:140489700632320] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:20:29,201 [Dummy-1:140489700632320] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:20:32,940 [Thread-3:140489445598976] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:22:40,957 [Dummy-1:140536130320128] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:22:40,959 [Dummy-1:140536130320128] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:22:47,102 [Thread-3:140535879849728] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:22:58,245 [Thread-7:140535863064320] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:23:12,378 [Dummy-1:140295509374720] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:23:12,380 [Dummy-1:140295509374720] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:23:15,880 [Thread-3:140295467722496] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:24:07,342 [Thread-8:140295459329792] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:24:09,219 [Thread-12:140295459329792] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:24:10,429 [Thread-16:140295459329792] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:24:11,715 [Thread-20:140295459329792] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:24:14,952 [Thread-24:140295459329792] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:24:20,188 [Thread-28:140295459329792] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:24:22,521 [Thread-32:140295459329792] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:24:24,043 [Thread-36:140295459329792] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:24:39,635 [Thread-37:140295459329792] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:24:42,712 [Thread-41:140295476115200] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:25:02,225 [Dummy-1:140260656219904] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:25:02,228 [Dummy-1:140260656219904] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:25:03,408 [Thread-3:140260403046144] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:25:06,236 [Thread-7:140260394653440] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:25:13,078 [Thread-9:140260403046144] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:25:24,700 [Dummy-1:140664526673664] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:25:24,702 [Dummy-1:140664526673664] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:26:00,668 [Thread-6:140664485996288] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:31:52,621 [Dummy-1:140419584747264] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:31:52,629 [Dummy-1:140419584747264] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:32:11,631 [Dummy-1:140117650528000] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:32:11,633 [Dummy-1:140117650528000] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:33:30,812 [Dummy-1:140447807563520] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:33:30,814 [Dummy-1:140447807563520] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:34:14,145 [Dummy-1:139821058295552] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:34:14,147 [Dummy-1:139821058295552] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:38:10,236 [Dummy-1:139992806762240] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:38:10,246 [Dummy-1:139992806762240] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:38:17,045 [Thread-2:139992564598528] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:38:19,721 [Thread-3:139992564598528] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:38:24,317 [Thread-5:139992547288832] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:38:26,334 [Thread-6:139992564598528] [django.db.backends:89] [DEBUG]- (0.001) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'hta4wodnq3lz5qqjtcvr8nilgohxxxvu' LIMIT 1; args=(u'hta4wodnq3lz5qqjtcvr8nilgohxxxvu',)
+2017-09-02 11:38:26,337 [Thread-6:139992564598528] [django.db.backends:89] [DEBUG]- (0.000) BEGIN; args=None
+2017-09-02 11:38:26,338 [Thread-6:139992564598528] [django.db.backends:89] [DEBUG]- (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'hta4wodnq3lz5qqjtcvr8nilgohxxxvu', 'NWI1ZDNjZTRhMTJmMzM1YWJiNmMxNmZjYzY3ZTk0ZGRhMjhkYThiMzp7fQ==', '2017-09-16 11:38:26.336949'; args=(u'hta4wodnq3lz5qqjtcvr8nilgohxxxvu', u'NWI1ZDNjZTRhMTJmMzM1YWJiNmMxNmZjYzY3ZTk0ZGRhMjhkYThiMzp7fQ==', u'2017-09-16 11:38:26.336949')
+2017-09-02 11:38:26,453 [Thread-6:139992564598528] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'hta4wodnq3lz5qqjtcvr8nilgohxxxvu'; args=(u'hta4wodnq3lz5qqjtcvr8nilgohxxxvu',)
+2017-09-02 11:38:26,454 [Thread-6:139992564598528] [django.db.backends:89] [DEBUG]- (0.000) BEGIN; args=None
+2017-09-02 11:38:26,455 [Thread-6:139992564598528] [django.db.backends:89] [DEBUG]- (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('hta4wodnq3lz5qqjtcvr8nilgohxxxvu'); args=(u'hta4wodnq3lz5qqjtcvr8nilgohxxxvu',)
+2017-09-02 11:40:03,333 [Dummy-1:140423438407424] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:40:03,339 [Dummy-1:140423438407424] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:40:08,947 [Thread-2:140423196333824] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:40:10,595 [Thread-3:140423187941120] [django.db.backends:89] [DEBUG]- (0.001) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'czkb9e2qcl2wu536mmhhfy30mddwklz4' LIMIT 1; args=(u'czkb9e2qcl2wu536mmhhfy30mddwklz4',)
+2017-09-02 11:40:10,595 [Thread-3:140423187941120] [django.db.backends:89] [DEBUG]- (0.000) BEGIN; args=None
+2017-09-02 11:40:10,596 [Thread-3:140423187941120] [django.db.backends:89] [DEBUG]- (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'czkb9e2qcl2wu536mmhhfy30mddwklz4', 'NWI1ZDNjZTRhMTJmMzM1YWJiNmMxNmZjYzY3ZTk0ZGRhMjhkYThiMzp7fQ==', '2017-09-16 11:40:10.595792'; args=(u'czkb9e2qcl2wu536mmhhfy30mddwklz4', u'NWI1ZDNjZTRhMTJmMzM1YWJiNmMxNmZjYzY3ZTk0ZGRhMjhkYThiMzp7fQ==', u'2017-09-16 11:40:10.595792')
+2017-09-02 11:40:10,730 [Thread-3:140423187941120] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'czkb9e2qcl2wu536mmhhfy30mddwklz4'; args=(u'czkb9e2qcl2wu536mmhhfy30mddwklz4',)
+2017-09-02 11:40:10,731 [Thread-3:140423187941120] [django.db.backends:89] [DEBUG]- (0.000) BEGIN; args=None
+2017-09-02 11:40:10,732 [Thread-3:140423187941120] [django.db.backends:89] [DEBUG]- (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('czkb9e2qcl2wu536mmhhfy30mddwklz4'); args=(u'czkb9e2qcl2wu536mmhhfy30mddwklz4',)
+2017-09-02 11:46:07,643 [Dummy-1:140554345293568] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:46:07,645 [Dummy-1:140554345293568] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:46:12,958 [Thread-2:140554305926912] [django.db.backends:89] [DEBUG]- (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=(u'admin',)
+2017-09-02 11:46:18,672 [Thread-3:140554305926912] [django.db.backends:89] [DEBUG]- (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=(u'admin',)
+2017-09-02 11:47:16,884 [Dummy-1:140273279215360] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:47:16,886 [Dummy-1:140273279215360] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:47:21,267 [Dummy-1:140470414677760] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:47:21,269 [Dummy-1:140470414677760] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:47:23,651 [Thread-2:140470172538624] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:47:37,728 [Thread-7:140470172538624] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:47:43,411 [Thread-11:140470172538624] [django.template:927] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fc1c231f190>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 11:47:43,424 [Thread-11:140470172538624] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fc1c231f190>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 11:47:43,424 [Thread-11:140470172538624] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fc1c231f190>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 11:47:43,429 [Thread-11:140470172538624] [django.template:927] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 11:47:46,118 [Thread-17:140470172538624] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:47:51,302 [Thread-22:140470172538624] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:50:06,058 [Dummy-1:139971160610560] [django.db.backends:89] [DEBUG]- (0.003) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 11:50:06,061 [Dummy-1:139971160610560] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 11:50:08,598 [Thread-2:139971119933184] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 11:50:10,222 [Thread-3:139971119933184] [django.db.backends:89] [DEBUG]- (0.001) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = '3yoc2hy5u0z7xwt5iqka366wj3zx5dgy' LIMIT 1; args=(u'3yoc2hy5u0z7xwt5iqka366wj3zx5dgy',)
+2017-09-02 11:50:10,223 [Thread-3:139971119933184] [django.db.backends:89] [DEBUG]- (0.000) BEGIN; args=None
+2017-09-02 11:50:10,224 [Thread-3:139971119933184] [django.db.backends:89] [DEBUG]- (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT '3yoc2hy5u0z7xwt5iqka366wj3zx5dgy', 'NWI1ZDNjZTRhMTJmMzM1YWJiNmMxNmZjYzY3ZTk0ZGRhMjhkYThiMzp7fQ==', '2017-09-16 11:50:10.223196'; args=(u'3yoc2hy5u0z7xwt5iqka366wj3zx5dgy', u'NWI1ZDNjZTRhMTJmMzM1YWJiNmMxNmZjYzY3ZTk0ZGRhMjhkYThiMzp7fQ==', u'2017-09-16 11:50:10.223196')
+2017-09-02 11:50:10,368 [Thread-3:139971119933184] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = '3yoc2hy5u0z7xwt5iqka366wj3zx5dgy'; args=(u'3yoc2hy5u0z7xwt5iqka366wj3zx5dgy',)
+2017-09-02 11:50:10,368 [Thread-3:139971119933184] [django.db.backends:89] [DEBUG]- (0.000) BEGIN; args=None
+2017-09-02 11:50:10,369 [Thread-3:139971119933184] [django.db.backends:89] [DEBUG]- (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('3yoc2hy5u0z7xwt5iqka366wj3zx5dgy'); args=(u'3yoc2hy5u0z7xwt5iqka366wj3zx5dgy',)
+2017-09-02 12:02:07,014 [Dummy-1:140179743352576] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 12:02:07,016 [Dummy-1:140179743352576] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 12:02:31,197 [Dummy-1:139698822825728] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 12:02:31,202 [Dummy-1:139698822825728] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 12:02:32,272 [Thread-2:139698576029440] [django.db.backends:89] [DEBUG]- (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=(u'admin',)
+2017-09-02 12:02:34,648 [Thread-3:139698576029440] [django.db.backends:89] [DEBUG]- (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=(u'admin',)
+2017-09-02 12:02:37,589 [Thread-4:139698576029440] [django.db.backends:89] [DEBUG]- (0.005) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=(u'admin',)
+2017-09-02 12:02:41,996 [Thread-5:139698576029440] [django.db.backends:89] [DEBUG]- (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=(u'admin',)
+2017-09-02 12:02:47,532 [Thread-6:139698576029440] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 12:02:49,538 [Thread-7:139698567636736] [django.db.backends:89] [DEBUG]- (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=(u'admin',)
+2017-09-02 12:02:53,136 [Thread-8:139698559244032] [django.db.backends:89] [DEBUG]- (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=(u'admin',)
+2017-09-02 12:05:42,942 [Thread-14:139698550851328] [django.template:927] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f0e283ae398>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f0e28401390>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0e283a6f50>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0e284011d0>, u'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>}, {}, {'username': u'', 'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': 'localhost:8000', 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5e50>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f0e28401c90>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5a50>, u'LANGUAGE_CODE': 'en-us', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+2017-09-02 12:05:42,944 [Thread-14:139698550851328] [django.template:927] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f0e283ae398>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f0e28401390>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0e283a6f50>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0e284011d0>, u'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>}, {}, {'username': u'', 'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': 'localhost:8000', 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5e50>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f0e28401c90>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5a50>, u'LANGUAGE_CODE': 'en-us', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+2017-09-02 12:05:45,455 [Thread-20:139698559244032] [django.db.backends:89] [DEBUG]- (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=(u'admin',)
+2017-09-02 12:05:45,540 [Thread-20:139698559244032] [django.template:927] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f0e28420cf8>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f0e28354990>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0e28354910>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0e28354790>, u'request': <WSGIRequest: POST '/admin/login/?next=/admin/'>}, {}, {'username': u'', 'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': 'localhost:8000', 'form': <AdminAuthenticationForm bound=True, valid=False, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5e50>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f0e28354b10>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5a50>, u'LANGUAGE_CODE': 'en-us', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+2017-09-02 12:05:45,541 [Thread-20:139698559244032] [django.template:927] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f0e28420cf8>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f0e28354990>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0e28354910>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0e28354790>, u'request': <WSGIRequest: POST '/admin/login/?next=/admin/'>}, {}, {'username': u'', 'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': 'localhost:8000', 'form': <AdminAuthenticationForm bound=True, valid=False, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5e50>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f0e28354b10>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5a50>, u'LANGUAGE_CODE': 'en-us', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+2017-09-02 12:05:52,649 [Thread-22:139698559244032] [django.db.backends:89] [DEBUG]- (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=(u'admin',)
+2017-09-02 12:05:52,730 [Thread-22:139698559244032] [django.template:927] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f0e286ca8c0>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f0e2839a8d0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0e283cf650>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0e2839a710>, u'request': <WSGIRequest: POST '/admin/login/?next=/admin/'>}, {}, {'username': u'', 'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': 'localhost:8000', 'form': <AdminAuthenticationForm bound=True, valid=False, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5e50>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f0e2839a910>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5a50>, u'LANGUAGE_CODE': 'en-us', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+2017-09-02 12:05:52,731 [Thread-22:139698559244032] [django.template:927] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f0e286ca8c0>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f0e2839a8d0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0e283cf650>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0e2839a710>, u'request': <WSGIRequest: POST '/admin/login/?next=/admin/'>}, {}, {'username': u'', 'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': 'localhost:8000', 'form': <AdminAuthenticationForm bound=True, valid=False, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5e50>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f0e2839a910>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5a50>, u'LANGUAGE_CODE': 'en-us', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+2017-09-02 12:05:57,355 [Thread-23:139698559244032] [django.db.backends:89] [DEBUG]- (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=(u'admin',)
+2017-09-02 12:05:57,443 [Thread-23:139698559244032] [django.template:927] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f0e28420c08>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f0e283c7ed0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0e283634d0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0e283c7d10>, u'request': <WSGIRequest: POST '/admin/login/?next=/admin/'>}, {}, {'username': u'', 'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': 'localhost:8000', 'form': <AdminAuthenticationForm bound=True, valid=False, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5e50>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f0e283c7dd0>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5a50>, u'LANGUAGE_CODE': 'en-us', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+2017-09-02 12:05:57,445 [Thread-23:139698559244032] [django.template:927] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f0e28420c08>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f0e283c7ed0>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0e283634d0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0e283c7d10>, u'request': <WSGIRequest: POST '/admin/login/?next=/admin/'>}, {}, {'username': u'', 'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': 'localhost:8000', 'form': <AdminAuthenticationForm bound=True, valid=False, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5e50>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f0e283c7dd0>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5a50>, u'LANGUAGE_CODE': 'en-us', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+2017-09-02 12:06:02,533 [Thread-24:139698559244032] [django.db.backends:89] [DEBUG]- (0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'admin'; args=(u'admin',)
+2017-09-02 12:06:02,611 [Thread-24:139698559244032] [django.template:927] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f0e2b2622a8>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f0e28391710>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0e2839aad0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0e28391550>, u'request': <WSGIRequest: POST '/admin/login/?next=/admin/'>}, {}, {'username': u'', 'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': 'localhost:8000', 'form': <AdminAuthenticationForm bound=True, valid=False, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5e50>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f0e28391610>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5a50>, u'LANGUAGE_CODE': 'en-us', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+2017-09-02 12:06:02,612 [Thread-24:139698559244032] [django.template:927] [DEBUG]- Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [is_popup] in u"[{'False': False, 'None': None, 'True': True}, {u'csrf_token': <SimpleLazyObject: <function _get_val at 0x7f0e2b2622a8>>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x7f0e28391710>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x7f0e2839aad0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'SUCCESS': 25, 'ERROR': 40}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f0e28391550>, u'request': <WSGIRequest: POST '/admin/login/?next=/admin/'>}, {}, {'username': u'', 'app_path': u'/admin/login/?next=/admin/', 'available_apps': [], 'site_name': 'localhost:8000', 'form': <AdminAuthenticationForm bound=True, valid=False, fields=(username;password)>, 'title': u'Log in', 'site_header': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5e50>, 'site': <django.contrib.sites.requests.RequestSite object at 0x7f0e28391610>, 'next': u'/admin/', 'site_title': <django.utils.functional.__proxy__ object at 0x7f0e2b1d5a50>, u'LANGUAGE_CODE': 'en-us', 'has_permission': False, 'site_url': '/', u'LANGUAGE_BIDI': False}]"
+2017-09-02 12:06:11,967 [Thread-25:139698559244032] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 12:13:58,165 [Dummy-1:140670647924480] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 12:13:58,167 [Dummy-1:140670647924480] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 12:14:19,265 [Dummy-1:140183252813568] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 12:14:19,267 [Dummy-1:140183252813568] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 12:14:20,444 [Thread-2:140183010576128] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 12:15:02,395 [Dummy-1:139689180788480] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 12:15:02,398 [Dummy-1:139689180788480] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 12:15:03,871 [Thread-2:139689144510208] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 12:15:05,611 [Thread-3:139689144510208] [django.db.backends:89] [DEBUG]- (0.001) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 's5kx8hy33prckfvken6p84jv5p657yd5' LIMIT 1; args=(u's5kx8hy33prckfvken6p84jv5p657yd5',)
+2017-09-02 12:15:05,613 [Thread-3:139689144510208] [django.db.backends:89] [DEBUG]- (0.000) BEGIN; args=None
+2017-09-02 12:15:05,615 [Thread-3:139689144510208] [django.db.backends:89] [DEBUG]- (0.000) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 's5kx8hy33prckfvken6p84jv5p657yd5', 'NWI1ZDNjZTRhMTJmMzM1YWJiNmMxNmZjYzY3ZTk0ZGRhMjhkYThiMzp7fQ==', '2017-09-16 12:15:05.611896'; args=(u's5kx8hy33prckfvken6p84jv5p657yd5', u'NWI1ZDNjZTRhMTJmMzM1YWJiNmMxNmZjYzY3ZTk0ZGRhMjhkYThiMzp7fQ==', u'2017-09-16 12:15:05.611896')
+2017-09-02 12:15:05,703 [Thread-3:139689144510208] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 's5kx8hy33prckfvken6p84jv5p657yd5'; args=(u's5kx8hy33prckfvken6p84jv5p657yd5',)
+2017-09-02 12:15:05,704 [Thread-3:139689144510208] [django.db.backends:89] [DEBUG]- (0.000) BEGIN; args=None
+2017-09-02 12:15:05,707 [Thread-3:139689144510208] [django.db.backends:89] [DEBUG]- (0.000) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('s5kx8hy33prckfvken6p84jv5p657yd5'); args=(u's5kx8hy33prckfvken6p84jv5p657yd5',)
+2017-09-02 12:18:47,245 [Dummy-1:140056984344320] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 12:18:47,248 [Dummy-1:140056984344320] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2017-09-02 12:18:50,324 [Thread-2:140056736036608] [django.template:927] [DEBUG]- Exception while resolving variable 'error' in template 'crawlermanage/login.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error] in u"[{'False': False, 'None': None, 'True': True}]"
+2017-09-02 12:18:54,433 [Thread-6:140056736036608] [django.template:927] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f618c5bccd0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 12:18:54,442 [Thread-6:140056736036608] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f618c5bccd0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 12:18:54,442 [Thread-6:140056736036608] [django.template:927] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7f618c5bccd0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 12:18:54,448 [Thread-6:140056736036608] [django.template:927] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 12:19:01,702 [Thread-13:140056736036608] [django.template:927] [DEBUG]- Exception while resolving variable 'tasklist' in template 'crawlermanage/tasks.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [tasklist] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'csrf_token\': <SimpleLazyObject: <function _get_val at 0x7f618c5bd9b0>>, \'user\': <SimpleLazyObject: <function <lambda> at 0x7f618c5bdd70>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f618c560f50>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'WARNING\': 30, \'SUCCESS\': 25, \'ERROR\': 40}, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f618c5601d0>, u\'request\': <WSGIRequest: GET \'/crawlermanage/tasks/\'>}, {}, {\'p2\': <crawlermanage.utils.page.paging instance at 0x7f618c549f80>, \'status\': \'currenttask\', \'pausing_count\': 4, \'error_count\': 0, \'p\': <crawlermanage.utils.page.paging instance at 0x7f618c549c20>, \'running_count\': 3, \'stopping_count\': 52}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n\\n\\n<!--<div class="box">-\'>, <Variable Node: running_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: pausing_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: stopping_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: error_count>, <TextNode: u\'</span>\\n            </div\'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n\\n            </ul>\\n     \'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n\\n\\n\\n                  <di\'>, <For Node: for task in tasklist, tail_len: 11>, <TextNode: u\'\\n\\t\\t\\t                \\n  \\t\\t\'>, <For Node: for i in p.p_content, tail_len: 33>, <TextNode: u\'\\n                        \'>, <Variable Node: p.p_count>, <TextNode: u\'</span> \\u6761\\u8bb0\\u5f55\\uff0c\\u603b <span  clas\'>, <Variable Node: p.p_pages>, <TextNode: u\'</span> \\u9875\\uff0c\\u5f53\\u524d\\u5728<span class=\'>, <Variable Node: p.page>, <TextNode: u\'</span>\\u9875\\n                \'>, <django.template.defaulttags.URLNode object at 0x7f618c530290>, <TextNode: u\'?page=\'>, <Variable Node: p.p_previous>, <TextNode: u\'">&laquo;</a></li>\\n      \'>, <django.template.defaulttags.URLNode object at 0x7f618c530450>, <TextNode: u\'?page=1">\\u9996\\u9875</a></li>\\n    \'>, <For Node: for i in p.p_range, tail_len: 9>, <TextNode: u\'\\n                        \'>, <django.template.defaulttags.URLNode object at 0x7f618c530ad0>, <TextNode: u\'?page=\'>, <Variable Node: p.p_pages>, <TextNode: u\'">\\u5c3e\\u9875</a></li>\\n           \'>, <django.template.defaulttags.URLNode object at 0x7f618c530cd0>, <TextNode: u\'?page=\'>, <Variable Node: p.p_next>, <TextNode: u\'">&raquo;</a></li>\\n      \'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n              <!--<div c\'>, <For Node: for i in p2.p_content, tail_len: 27>, <TextNode: u\'\\n                        \'>, <Variable Node: p2.p_count>, <TextNode: u\'</span> \\u6761\\u8bb0\\u5f55\\uff0c\\u603b <span  clas\'>, <Variable Node: p2.p_pages>, <TextNode: u\'</span> \\u9875\\uff0c\\u5f53\\u524d\\u5728<span class=\'>, <Variable Node: p2.page>, <TextNode: u\'</span>\\u9875\\n                \'>, <django.template.defaulttags.URLNode object at 0x7f618c5b76d0>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_previous>, <TextNode: u\'">&laquo;</a></li>\\n      \'>, <django.template.defaulttags.URLNode object at 0x7f618c5b7610>, <TextNode: u\'?page2=1">\\u9996\\u9875</a></li>\\n   \'>, <For Node: for i in p2.p_range, tail_len: 9>, <TextNode: u\'\\n                        \'>, <django.template.defaulttags.URLNode object at 0x7f618c595c10>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_pages>, <TextNode: u\'">\\u5c3e\\u9875</a></li>\\n           \'>, <django.template.defaulttags.URLNode object at 0x7f618c595c50>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_next>, <TextNode: u\'">&raquo;</a></li>\\n      \'>]>}, {}]'
+2017-09-02 12:19:01,760 [Thread-13:140056736036608] [django.template:927] [DEBUG]- Exception while resolving variable 'page' in template 'crawlermanage/tasks.html'.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [page] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'csrf_token\': <SimpleLazyObject: <function _get_val at 0x7f618c5bd9b0>>, \'user\': <SimpleLazyObject: <function <lambda> at 0x7f618c5bdd70>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7f618c560f50>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'WARNING\': 30, \'SUCCESS\': 25, \'ERROR\': 40}, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7f618c5601d0>, u\'request\': <WSGIRequest: GET \'/crawlermanage/tasks/\'>}, {}, {\'p2\': <crawlermanage.utils.page.paging instance at 0x7f618c549f80>, \'status\': \'currenttask\', \'pausing_count\': 4, \'error_count\': 0, \'p\': <crawlermanage.utils.page.paging instance at 0x7f618c549c20>, \'running_count\': 3, \'stopping_count\': 52}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: page>, <TextNode: u\'"\\n                  if(pa\'>]>}]'
+2017-09-02 12:19:14,979 [Thread-14:140056736036608] [crawlermanage.views:262] [INFO]- 59ab0a56c5d5865b24624d0b
+2017-09-02 12:19:14,984 [Thread-14:140056736036608] [crawlermanage.views:265] [INFO]- waitting
+2017-09-02 12:49:43,207 [Dummy-1:140196682446592] [django.db.backends:89] [DEBUG]- (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2017-09-02 12:49:43,209 [Dummy-1:140196682446592] [django.db.backends:89] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()

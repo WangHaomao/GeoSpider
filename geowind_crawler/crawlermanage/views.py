@@ -4,6 +4,7 @@ import logging
 import sys
 import time
 
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 
@@ -13,7 +14,6 @@ from crawlermanage.utils.echarts import create_chart1, create_chart2, create_cha
 from crawlermanage.utils.ecommerce.pageParser.shopping_detail_parser import get_goods_dict
 from crawlermanage.utils.ecommerce.pageParser.shopping_navigation_parser import get_nav
 from crawlermanage.utils.ecommerce.pageParser.shopping_itemsList_parser import get_goods_list
-from crawlermanage.utils.ecommerce.spiderUtils.parser_util import get_soup_by_request
 from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
 from crawlermanage.utils.settings_helper import get_attr
@@ -47,7 +47,6 @@ def login(request):
     else:
         return render_to_response('crawlermanage/login.html')
 
-
 def index(request):
     return render(request, 'crawlermanage/index.html')
 
@@ -57,8 +56,6 @@ def index(request):
     p:正在进行、等待运行、出现故障的任务
     p2:结束的任务
 '''
-
-
 def tasks(request):
     page = request.GET.get('page')
     page2 = request.GET.get('page2')
@@ -92,7 +89,6 @@ def tasks(request):
 '''
     编辑爬虫状态：暂停/唤醒/结束
 '''
-
 
 def edittask(request):
     if request.method == 'POST':
