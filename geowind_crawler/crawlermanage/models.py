@@ -82,3 +82,8 @@ class TempGoods(Document):
 class Proxy(Document):
     proxy = StringField(max_length=5000)
     status = StringField(max_length=2)
+
+class Prewebsite(Document):
+    url = StringField(max_length=5000)
+    name = StringField(max_length=1000)
+    webtype = StringField(max_length=500)
