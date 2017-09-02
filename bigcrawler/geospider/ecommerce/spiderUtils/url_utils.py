@@ -163,4 +163,5 @@ if __name__ == '__main__':
     print(get_partial_url('http://news.qq.com/gsdfgsd/fdsf/sdfsd/sdf'))
     print(get_url_domain('http://www.people.com.cn/'))
     print(get_domain('http://www.xinhuanet.com/'))
+    print(get_domain('http://news.qq.com/gsdfgsd/fdsf/sdfsd/sdf'))
     # print x.bit_length()

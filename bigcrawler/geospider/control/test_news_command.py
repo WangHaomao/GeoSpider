@@ -8,7 +8,7 @@ from scrapy import cmdline
 from geospider.spiders.blog_spider import BlogSpider
 from geospider.spiders.news_spider import NewsSpider
 import pymongo
-client = pymongo.MongoClient('mongodb://localhost:27017')
+client = pymongo.MongoClient('mongodb://192.168.1.130:27017')
 db_name = 'geospider'
 db = client[db_name]
 
@@ -17,14 +17,14 @@ def start():
     #print conn_table.find_one({'_id': ObjectId('591eb2df9c1da9154b001832')}).get('starturls')
 
     b = deepcopy(NewsSpider)
-    b.name='aaa'
-    b.redis_key = "aaa:start_urls"
-    r = redis.Redis(host='127.0.0.1', port=6379, db=0)
+    b.name='aaanews'
+    b.redis_key = "aaanews:start_urls"
+    r = redis.Redis(host='192.168.1.130', port=6379, db=0)
     # r.sadd("myspider:start_urls", 'http://news.qq.com/')
-    r.lpush("aaa:start_urls", "http://news.qq.com/")
+    r.lpush("aaanews:start_urls", "http://www.yangtse.com/")
     # r.lpush("aaa:start_urls", "http://news.sohu.com/")
-    b.allowed_domains=["news.qq.com"]
-    cmdline.execute("scrapy crawl aaa".split())
+    b.allowed_domains=["yangtse.com"]
+    cmdline.execute("scrapy crawl aaanews".split())
 
     # process = CrawlerProcess(get_project_settings())
     # process.crawl(news_spider)
