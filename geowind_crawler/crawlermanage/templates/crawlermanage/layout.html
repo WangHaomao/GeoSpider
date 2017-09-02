@@ -172,9 +172,10 @@ http://www.bootstrap.com"></textarea>
                       </div>
                           </div>
 
-                      <label>任务信息简介</label>
 
-                    <div class="form-group">
+
+                    <div class="form-group" style="display: none" id="mytable">
+                        <label>任务信息简介</label>
                          <table id="table">
                           </table>
                           <div class="form-group" id="ecommerce_keywords" style="display: none">
@@ -185,6 +186,8 @@ http://www.bootstrap.com"></textarea>
                             {% endif %} -->
                           </div>
                       <div>
+                          </div>
+                    </div>
               <div>
               <!-- textarea -->
              <!--<div class="form-group">-->
@@ -721,9 +724,9 @@ var $table = $('#table'),
                 alert('请选择url类型');
                 return ;
             }
+            $('#starturl_sin').val('');
 
-            console.log(keywords);
-
+$('#mytable').css('display', '');
             $table.bootstrapTable('append',randomData(starturl,webtype,keywords,'sin'));
 
             $table.bootstrapTable('scrollTo', 'bottom');
@@ -750,8 +753,9 @@ var $table = $('#table'),
             }
 
             $('#starturl_mul').val('');
-
+$('#mytable').css('display', '');
             console.log(keywords);
+
             $table.bootstrapTable('append',randomData(starturl_list,webtype,keywords,'mul'));
 
             $table.bootstrapTable('scrollTo', 'bottom');

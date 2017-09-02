@@ -10431,3 +10431,518 @@ Traceback (most recent call last):
     (bit, current))  # missing attribute
 VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
 2017-09-02 16:54:36,672 [Thread-294:140426094831360] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32058
+2017-09-02 16:56:37,628 [Thread-295:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'tasklist' in template 'crawlermanage/tasks.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [tasklist] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'csrf_token\': <SimpleLazyObject: <function _get_val at 0x7fb78ce94320>>, \'user\': <SimpleLazyObject: <function <lambda> at 0x7fb78df33ed8>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fb78cec5390>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'WARNING\': 30, \'SUCCESS\': 25, \'ERROR\': 40}, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fb78ce9bc90>, u\'request\': <WSGIRequest: GET \'/crawlermanage/tasks/\'>}, {}, {\'p2\': <crawlermanage.utils.page.paging instance at 0x7fb78ede53f8>, \'status\': \'currenttask\', \'pausing_count\': 4, \'error_count\': 0, \'p\': <crawlermanage.utils.page.paging instance at 0x7fb78ed4acf8>, \'running_count\': 1, \'stopping_count\': 52}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n\\n\\n<!--<div class="box">-\'>, <Variable Node: running_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: pausing_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: stopping_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: error_count>, <TextNode: u\'</span>\\n            </div\'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n\\n            </ul>\\n     \'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n\\n\\n\\n                  <di\'>, <For Node: for task in tasklist, tail_len: 11>, <TextNode: u\'\\n\\t\\t\\t                \\n  \\t\\t\'>, <For Node: for i in p.p_content, tail_len: 33>, <TextNode: u\'\\n                        \'>, <Variable Node: p.p_count>, <TextNode: u\'</span> \\u6761\\u8bb0\\u5f55\\uff0c\\u603b <span  clas\'>, <Variable Node: p.p_pages>, <TextNode: u\'</span> \\u9875\\uff0c\\u5f53\\u524d\\u5728<span class=\'>, <Variable Node: p.page>, <TextNode: u\'</span>\\u9875\\n                \'>, <django.template.defaulttags.URLNode object at 0x7fb78ce2a2d0>, <TextNode: u\'?page=\'>, <Variable Node: p.p_previous>, <TextNode: u\'">&laquo;</a></li>\\n      \'>, <django.template.defaulttags.URLNode object at 0x7fb78ce2ae90>, <TextNode: u\'?page=1">\\u9996\\u9875</a></li>\\n    \'>, <For Node: for i in p.p_range, tail_len: 9>, <TextNode: u\'\\n                        \'>, <django.template.defaulttags.URLNode object at 0x7fb78ce665d0>, <TextNode: u\'?page=\'>, <Variable Node: p.p_pages>, <TextNode: u\'">\\u5c3e\\u9875</a></li>\\n           \'>, <django.template.defaulttags.URLNode object at 0x7fb78ce66e10>, <TextNode: u\'?page=\'>, <Variable Node: p.p_next>, <TextNode: u\'">&raquo;</a></li>\\n      \'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n              <!--<div c\'>, <For Node: for i in p2.p_content, tail_len: 27>, <TextNode: u\'\\n                        \'>, <Variable Node: p2.p_count>, <TextNode: u\'</span> \\u6761\\u8bb0\\u5f55\\uff0c\\u603b <span  clas\'>, <Variable Node: p2.p_pages>, <TextNode: u\'</span> \\u9875\\uff0c\\u5f53\\u524d\\u5728<span class=\'>, <Variable Node: p2.page>, <TextNode: u\'</span>\\u9875\\n                \'>, <django.template.defaulttags.URLNode object at 0x7fb78ce4a050>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_previous>, <TextNode: u\'">&laquo;</a></li>\\n      \'>, <django.template.defaulttags.URLNode object at 0x7fb78ced1a90>, <TextNode: u\'?page2=1">\\u9996\\u9875</a></li>\\n   \'>, <For Node: for i in p2.p_range, tail_len: 9>, <TextNode: u\'\\n                        \'>, <django.template.defaulttags.URLNode object at 0x7fb78ce25650>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_pages>, <TextNode: u\'">\\u5c3e\\u9875</a></li>\\n           \'>, <django.template.defaulttags.URLNode object at 0x7fb78ce25510>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_next>, <TextNode: u\'">&raquo;</a></li>\\n      \'>]>}, {}]'
+2017-09-02 16:56:37,643 [Thread-295:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'page' in template 'crawlermanage/tasks.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [page] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'csrf_token\': <SimpleLazyObject: <function _get_val at 0x7fb78ce94320>>, \'user\': <SimpleLazyObject: <function <lambda> at 0x7fb78df33ed8>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fb78cec5390>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'WARNING\': 30, \'SUCCESS\': 25, \'ERROR\': 40}, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fb78ce9bc90>, u\'request\': <WSGIRequest: GET \'/crawlermanage/tasks/\'>}, {}, {\'p2\': <crawlermanage.utils.page.paging instance at 0x7fb78ede53f8>, \'status\': \'currenttask\', \'pausing_count\': 4, \'error_count\': 0, \'p\': <crawlermanage.utils.page.paging instance at 0x7fb78ed4acf8>, \'running_count\': 1, \'stopping_count\': 52}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: page>, <TextNode: u\'"\\n                  if(pa\'>]>}]'
+2017-09-02 16:56:37,644 [Thread-295:140426094831360] [django.server:124] [INFO]- "GET /crawlermanage/tasks/ HTTP/1.1" 200 40224
+2017-09-02 16:56:39,462 [Thread-296:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 16:56:39,466 [Thread-296:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 16:56:39,469 [Thread-296:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 16:56:39,474 [Thread-296:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 16:56:39,477 [Thread-296:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 16:56:39,481 [Thread-296:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 16:56:39,484 [Thread-296:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 16:56:39,488 [Thread-296:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 16:56:39,492 [Thread-296:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 16:56:39,497 [Thread-296:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable '0' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [0] in u'[]'
+2017-09-02 16:56:39,497 [Thread-296:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'page' in template 'crawlermanage/ecommercedata.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [page] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'csrf_token\': <SimpleLazyObject: <function _get_val at 0x7fb78df3e6e0>>, \'user\': <SimpleLazyObject: <function <lambda> at 0x7fb78df3e0c8>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fb78ce2c5d0>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'WARNING\': 30, \'SUCCESS\': 25, \'ERROR\': 40}, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fb78ce2c510>, u\'request\': <WSGIRequest: GET \'/crawlermanage/ecommercedata/?taskid=59aae123c5d58615ed0908a9\'>}, {}, {\'p2\': <crawlermanage.utils.page.paging instance at 0x7fb78ed63c20>, \'p\': <crawlermanage.utils.page.paging instance at 0x7fb78ed3f8c0>, \'status\': \'goods\'}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: page>, <TextNode: u\'"\\n                  if(pa\'>]>}]'
+2017-09-02 16:56:39,498 [Thread-296:140426094831360] [django.server:124] [INFO]- "GET /crawlermanage/ecommercedata/?taskid=59aae123c5d58615ed0908a9 HTTP/1.1" 200 15214
+2017-09-02 16:56:43,896 [Thread-297:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78ce2aa90>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 16:56:43,898 [Thread-297:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78ce2aa90>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 16:56:43,899 [Thread-297:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78ce2aa90>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 16:56:43,901 [Thread-297:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 16:56:43,903 [Thread-297:140426094831360] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32058
+2017-09-02 16:56:47,045 [Thread-298:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:56:47,061 [Thread-298:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:56:47,062 [Thread-298:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:56:47,097 [Thread-299:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:56:47,111 [Thread-299:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:56:47,112 [Thread-299:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:56:47,287 [Thread-300:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:56:47,301 [Thread-300:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:56:47,301 [Thread-300:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:56:47,405 [Thread-301:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:56:47,420 [Thread-301:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:56:47,421 [Thread-301:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:56:47,533 [Thread-302:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:56:47,550 [Thread-302:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:56:47,550 [Thread-302:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:56:47,633 [Thread-303:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:56:47,646 [Thread-303:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:56:47,646 [Thread-303:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:57:26,184 [Thread-304:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:57:26,216 [Thread-304:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:57:26,216 [Thread-304:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:57:26,259 [Thread-305:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:57:26,271 [Thread-305:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:57:26,272 [Thread-305:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:57:26,418 [Thread-306:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:57:26,433 [Thread-306:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:57:26,434 [Thread-306:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:57:26,506 [Thread-307:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:57:26,518 [Thread-307:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:57:26,519 [Thread-307:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:57:26,593 [Thread-308:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:57:26,607 [Thread-308:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:57:26,608 [Thread-308:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:57:27,251 [Thread-309:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:57:27,265 [Thread-309:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:57:27,266 [Thread-309:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:57:27,416 [Thread-310:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:57:27,432 [Thread-310:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:57:27,433 [Thread-310:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:57:28,074 [Thread-311:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:57:28,085 [Thread-311:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:57:28,086 [Thread-311:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:57:28,231 [Thread-312:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:57:28,243 [Thread-312:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:57:28,244 [Thread-312:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:57:28,721 [Thread-313:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:57:28,736 [Thread-313:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:57:28,736 [Thread-313:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:57:28,829 [Thread-314:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 16:57:28,842 [Thread-314:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 16:57:28,842 [Thread-314:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 16:59:11,614 [Thread-315:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78cea6650>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 16:59:11,615 [Thread-315:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78cea6650>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 16:59:11,615 [Thread-315:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78cea6650>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 16:59:11,617 [Thread-315:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 16:59:11,618 [Thread-315:140426094831360] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32062
+2017-09-02 16:59:16,811 [Thread-316:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78ce7aa10>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 16:59:16,813 [Thread-316:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78ce7aa10>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 16:59:16,813 [Thread-316:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78ce7aa10>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 16:59:16,815 [Thread-316:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 16:59:16,817 [Thread-316:140426094831360] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32062
+2017-09-02 17:01:38,784 [Thread-317:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78cea6110>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:01:38,786 [Thread-317:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78cea6110>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:01:38,787 [Thread-317:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78cea6110>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:01:38,790 [Thread-317:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:01:38,791 [Thread-317:140426094831360] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32148
+2017-09-02 17:01:47,064 [Thread-318:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df50cd0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:01:47,066 [Thread-318:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df50cd0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:01:47,066 [Thread-318:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df50cd0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:01:47,068 [Thread-318:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:01:47,069 [Thread-318:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32148
+2017-09-02 17:01:56,816 [Thread-319:140426094831360] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 17:01:56,831 [Thread-319:140426094831360] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 17:01:56,831 [Thread-319:140426094831360] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 17:03:18,549 [Thread-320:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78cea6550>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:03:18,550 [Thread-320:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78cea6550>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:03:18,550 [Thread-320:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78cea6550>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:03:18,552 [Thread-320:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:03:18,552 [Thread-320:140426094831360] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32165
+2017-09-02 17:04:05,832 [Thread-322:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0a8d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:05,834 [Thread-322:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0a8d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:05,835 [Thread-322:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0a8d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:05,838 [Thread-322:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:04:05,839 [Thread-322:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32198
+2017-09-02 17:04:06,733 [Thread-323:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78e7d67d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:06,735 [Thread-323:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78e7d67d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:06,735 [Thread-323:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78e7d67d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:06,739 [Thread-323:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:04:06,742 [Thread-323:140426094831360] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32198
+2017-09-02 17:04:07,055 [Thread-324:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78ce7a5d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:07,056 [Thread-324:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78ce7a5d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:07,056 [Thread-324:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78ce7a5d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:07,059 [Thread-324:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:04:07,060 [Thread-324:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32198
+2017-09-02 17:04:07,291 [Thread-325:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78e9f9d50>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:07,292 [Thread-325:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78e9f9d50>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:07,292 [Thread-325:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78e9f9d50>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:07,294 [Thread-325:140426094831360] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:04:07,295 [Thread-325:140426094831360] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32198
+2017-09-02 17:04:17,584 [Thread-327:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0a550>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:17,586 [Thread-327:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0a550>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:17,587 [Thread-327:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0a550>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:17,590 [Thread-327:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:04:17,591 [Thread-327:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32229
+2017-09-02 17:04:18,232 [Thread-328:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78ce7a1d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:18,233 [Thread-328:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78ce7a1d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:18,234 [Thread-328:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78ce7a1d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:18,235 [Thread-328:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:04:18,236 [Thread-328:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32229
+2017-09-02 17:04:18,829 [Thread-329:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0ab10>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:18,830 [Thread-329:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0ab10>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:18,831 [Thread-329:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0ab10>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:18,832 [Thread-329:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:04:18,833 [Thread-329:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32229
+2017-09-02 17:04:39,370 [Thread-330:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df501d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:39,371 [Thread-330:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df501d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:39,372 [Thread-330:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df501d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:04:39,375 [Thread-330:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:04:39,377 [Thread-330:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32228
+2017-09-02 17:04:43,132 [Thread-331:140426103224064] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 17:04:43,144 [Thread-331:140426103224064] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 17:04:43,145 [Thread-331:140426103224064] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 17:04:43,296 [Thread-332:140426103224064] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 17:04:43,309 [Thread-332:140426103224064] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 17:04:43,310 [Thread-332:140426103224064] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 17:04:44,338 [Thread-333:140426103224064] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 17:04:44,355 [Thread-333:140426103224064] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 17:04:44,356 [Thread-333:140426103224064] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 17:05:04,692 [Thread-334:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0a790>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:05:04,695 [Thread-334:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0a790>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:05:04,695 [Thread-334:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0a790>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:05:04,698 [Thread-334:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:05:04,699 [Thread-334:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32228
+2017-09-02 17:05:12,958 [Thread-335:140426103224064] [crawlermanage.views:578] [INFO]- aaaaa
+2017-09-02 17:05:12,969 [Thread-335:140426103224064] [crawlermanage.views:586] [INFO]- .. queryset mid-iteration ..
+2017-09-02 17:05:12,971 [Thread-335:140426103224064] [django.server:124] [INFO]- "POST /crawlermanage/domainautocomplete/ HTTP/1.1" 200 7514
+2017-09-02 17:18:45,898 [Thread-336:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/settings.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n      <div class="box bo\'>, <IfNode>, <TextNode: u\' -->\\n                  <b\'>]>}]'
+2017-09-02 17:18:45,898 [Thread-336:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/settings/ HTTP/1.1" 200 9321
+2017-09-02 17:18:46,118 [Thread-337:140426103224064] [django.server:124] [INFO]- "POST /crawlermanage/settings/ HTTP/1.1" 200 76
+2017-09-02 17:18:48,529 [Thread-338:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df505d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:18:48,531 [Thread-338:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df505d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:18:48,531 [Thread-338:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df505d0>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:18:48,533 [Thread-338:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:18:48,534 [Thread-338:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32228
+2017-09-02 17:18:51,101 [Thread-339:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/settings.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n      <div class="box bo\'>, <IfNode>, <TextNode: u\' -->\\n                  <b\'>]>}]'
+2017-09-02 17:18:51,103 [Thread-339:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/settings/ HTTP/1.1" 200 9321
+2017-09-02 17:18:51,305 [Thread-340:140426103224064] [django.server:124] [INFO]- "POST /crawlermanage/settings/ HTTP/1.1" 200 76
+2017-09-02 17:18:59,505 [Thread-341:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error1' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error1] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0a750>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:18:59,506 [Thread-341:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0a750>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:18:59,507 [Thread-341:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'error2' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [error2] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n        <div class="box \'>, <django.template.defaulttags.CsrfTokenNode object at 0x7fb78df0a750>, <TextNode: u\'-->\\n              <!-- te\'>, <IfNode>, <TextNode: u\' -->\\n              </div>\'>, <IfNode>, <TextNode: u\' -->\\n                    \'>, <Variable Node: error2>, <TextNode: u\'</p>\\n              </div>\'>, <For Node: for i in ips, tail_len: 5>, <TextNode: u\'\\n                        \'>]>}]'
+2017-09-02 17:18:59,509 [Thread-341:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'urls' in template 'crawlermanage/layout.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [urls] in u'[{\'False\': False, \'None\': None, \'True\': True}, {\'ips\': [<Machine: Machine object>, <Machine: Machine object>, <Machine: Machine object>]}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: urls|safe>, <TextNode: u";\\n\\t$(\'#starturl_sin\').typ">]>}]'
+2017-09-02 17:18:59,510 [Thread-341:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/layout/ HTTP/1.1" 200 32228
+2017-09-02 17:35:54,682 [Thread-342:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'tasklist' in template 'crawlermanage/tasks.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [tasklist] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'csrf_token\': <SimpleLazyObject: <function _get_val at 0x7fb78df33ed8>>, \'user\': <SimpleLazyObject: <function <lambda> at 0x7fb78df3eb90>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fb78cea6250>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'WARNING\': 30, \'SUCCESS\': 25, \'ERROR\': 40}, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fb78df0a610>, u\'request\': <WSGIRequest: GET \'/crawlermanage/tasks/\'>}, {}, {\'p2\': <crawlermanage.utils.page.paging instance at 0x7fb78df4efc8>, \'status\': \'currenttask\', \'pausing_count\': 4, \'error_count\': 0, \'p\': <crawlermanage.utils.page.paging instance at 0x7fb78ed55170>, \'running_count\': 3, \'stopping_count\': 52}, {\'block\': <Block Node: maincontent. Contents: [<TextNode: u\'\\n\\n\\n<!--<div class="box">-\'>, <Variable Node: running_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: pausing_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: stopping_count>, <TextNode: u\'</span>\\n            </div\'>, <Variable Node: error_count>, <TextNode: u\'</span>\\n            </div\'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n\\n            </ul>\\n     \'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n\\n\\n\\n                  <di\'>, <For Node: for task in tasklist, tail_len: 11>, <TextNode: u\'\\n\\t\\t\\t                \\n  \\t\\t\'>, <For Node: for i in p.p_content, tail_len: 33>, <TextNode: u\'\\n                        \'>, <Variable Node: p.p_count>, <TextNode: u\'</span> \\u6761\\u8bb0\\u5f55\\uff0c\\u603b <span  clas\'>, <Variable Node: p.p_pages>, <TextNode: u\'</span> \\u9875\\uff0c\\u5f53\\u524d\\u5728<span class=\'>, <Variable Node: p.page>, <TextNode: u\'</span>\\u9875\\n                \'>, <django.template.defaulttags.URLNode object at 0x7fb78ce25450>, <TextNode: u\'?page=\'>, <Variable Node: p.p_previous>, <TextNode: u\'">&laquo;</a></li>\\n      \'>, <django.template.defaulttags.URLNode object at 0x7fb78ce25dd0>, <TextNode: u\'?page=1">\\u9996\\u9875</a></li>\\n    \'>, <For Node: for i in p.p_range, tail_len: 9>, <TextNode: u\'\\n                        \'>, <django.template.defaulttags.URLNode object at 0x7fb78ce1e290>, <TextNode: u\'?page=\'>, <Variable Node: p.p_pages>, <TextNode: u\'">\\u5c3e\\u9875</a></li>\\n           \'>, <django.template.defaulttags.URLNode object at 0x7fb78ce1e190>, <TextNode: u\'?page=\'>, <Variable Node: p.p_next>, <TextNode: u\'">&raquo;</a></li>\\n      \'>, <IfEqualNode>, <TextNode: u\'\\n                \'>, <IfEqualNode>, <TextNode: u\'\\n              <!--<div c\'>, <For Node: for i in p2.p_content, tail_len: 27>, <TextNode: u\'\\n                        \'>, <Variable Node: p2.p_count>, <TextNode: u\'</span> \\u6761\\u8bb0\\u5f55\\uff0c\\u603b <span  clas\'>, <Variable Node: p2.p_pages>, <TextNode: u\'</span> \\u9875\\uff0c\\u5f53\\u524d\\u5728<span class=\'>, <Variable Node: p2.page>, <TextNode: u\'</span>\\u9875\\n                \'>, <django.template.defaulttags.URLNode object at 0x7fb78e7d0c90>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_previous>, <TextNode: u\'">&laquo;</a></li>\\n      \'>, <django.template.defaulttags.URLNode object at 0x7fb78e7d0410>, <TextNode: u\'?page2=1">\\u9996\\u9875</a></li>\\n   \'>, <For Node: for i in p2.p_range, tail_len: 9>, <TextNode: u\'\\n                        \'>, <django.template.defaulttags.URLNode object at 0x7fb78e7d0bd0>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_pages>, <TextNode: u\'">\\u5c3e\\u9875</a></li>\\n           \'>, <django.template.defaulttags.URLNode object at 0x7fb78e7d0dd0>, <TextNode: u\'?page2=\'>, <Variable Node: p2.p_next>, <TextNode: u\'">&raquo;</a></li>\\n      \'>]>}, {}]'
+2017-09-02 17:35:54,702 [Thread-342:140426103224064] [django.template:925] [DEBUG]- Exception while resolving variable 'page' in template 'crawlermanage/tasks.html'.
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [page] in u'[{\'False\': False, \'None\': None, \'True\': True}, {u\'csrf_token\': <SimpleLazyObject: <function _get_val at 0x7fb78df33ed8>>, \'user\': <SimpleLazyObject: <function <lambda> at 0x7fb78df3eb90>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x7fb78cea6250>, \'DEFAULT_MESSAGE_LEVELS\': {\'DEBUG\': 10, \'INFO\': 20, \'WARNING\': 30, \'SUCCESS\': 25, \'ERROR\': 40}, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x7fb78df0a610>, u\'request\': <WSGIRequest: GET \'/crawlermanage/tasks/\'>}, {}, {\'p2\': <crawlermanage.utils.page.paging instance at 0x7fb78df4efc8>, \'status\': \'currenttask\', \'pausing_count\': 4, \'error_count\': 0, \'p\': <crawlermanage.utils.page.paging instance at 0x7fb78ed55170>, \'running_count\': 3, \'stopping_count\': 52}, {\'block\': <Block Node: script. Contents: [<TextNode: u\'\\n<script src="../../stati\'>, <Variable Node: page>, <TextNode: u\'"\\n                  if(pa\'>]>}]'
+2017-09-02 17:35:54,703 [Thread-342:140426103224064] [django.server:124] [INFO]- "GET /crawlermanage/tasks/ HTTP/1.1" 200 43685
