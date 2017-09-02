@@ -270,13 +270,14 @@
                                     {%ifequal i.webtype 'blog'%}
                                     <a href="{%url 'blogdata'%}?taskid={{i.id}}">
                                     {%endifequal%}
-                                    结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">详情</a></td>
+                                    结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">详情</a><span>-</span><a href="{%url 'export'%}?taskid={{i.id}}">导出</a></td>
                               </tr>
                               {% endfor %}
                             </tbody>
                       </table>
                       <div>
-                        <div id="pagination_div1">
+                        <div id="pagination_div1" class="form-inline">
+
                             <ul class="pagination" >
                             共 <span  class="badge">{{p.p_count}}</span> 条记录，总 <span  class="badge">{{p.p_pages}}</span> 页，当前在<span class="badge">{{p.page}}</span>页
                             </ul>
@@ -321,7 +322,7 @@
                       <!-- /.box-header -->
                       <div class="box-body table-responsive no-padding">
                       <!-- 服务器分页开始 -->
-                      <table class="table">
+                      <table class="table col-sm-10">
                             <thead>
                               <tr>
                                 <th>ID</th>
@@ -376,6 +377,7 @@
                               {% endfor %}
                             </tbody>
                       </table>
+
                       <div>
                         <div id="pagination_div1">
                             <ul class="pagination" >
@@ -395,7 +397,9 @@
                                 </ul>
                             </nav>
                         </div>
+
                       </div>
+
                       <!-- 服务器分页结束 -->
                       </div>
                       <!-- /.box-body -->

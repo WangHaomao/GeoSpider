@@ -3,9 +3,13 @@ import json
 import logging
 import sys
 import time
+import xlwt
+import os
 
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, HttpResponse
+
+from django.http import HttpResponseRedirect, HttpResponse,StreamingHttpResponse
 from django.shortcuts import render, render_to_response
 
 from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores, Blog, TempArticle, Proxy, Prewebsite
@@ -14,9 +18,12 @@ from crawlermanage.utils.echarts import create_chart1, create_chart2, create_cha
 from crawlermanage.utils.ecommerce.pageParser.shopping_detail_parser import get_goods_dict
 from crawlermanage.utils.ecommerce.pageParser.shopping_navigation_parser import get_nav
 from crawlermanage.utils.ecommerce.pageParser.shopping_itemsList_parser import get_goods_list
+from crawlermanage.utils.ecommerce.spiderUtils.parser_util import get_soup_by_request
+from crawlermanage.utils.export import ecommerce_export, news_and_blog_export
 from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
 from crawlermanage.utils.settings_helper import get_attr
+
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -585,8 +592,135 @@ def domain_autocomplete(request):
     })
     return HttpResponse(json_resp)
 
+
+
+def file_iterator(file_name, chunk_size=512):
+    with open(file_name) as f:
+        while True:
+            c = f.read(chunk_size)
+            if c:
+                yield c
+            else:
+                break
+def news_and_blog_export(res_taskid,is_news):
+    if(is_news == 'news'):
+        newslist = News.objects.filter(taskid=res_taskid)
+    else:
+        newslist = Blog.objects.filter(taskid=res_taskid)
+
+    style1 = xlwt.easyxf(num_format_str='D-MMM-YY')
+    wbook = xlwt.Workbook()
+    wsheet = wbook.add_sheet('export data')
+
+    # logger.info(newslist)
+    # logger.info(type(newslist))
+    col = 1
+    for each in newslist:
+        row = 0
+
+        each_dic = []
+        each_dic.append(each['title'])
+        each_dic.append(each['url'])
+        each_dic.append(each['time'])
+        each_dic.append(each['keywords'])
+        each_dic.append(each['article'])
+
+        for k in each_dic:
+            wsheet.write(col, row, k)
+            row += 1
+        col += 1
+
+    task_message = Task.objects.filter(id=res_taskid).get(0)
+    title = task_message['taskname'] + '(' + ','.join(list(task_message['starturls'])) + ')'
+
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+
+    filepath = base_dir + '/media/dataexport/' + res_taskid + '.xls'
+
+    if (os.path.exists(filepath)):
+        os.remove(filepath)
+
+    wbook.save(filepath)
+    return filepath
+def ecommerce_export(res_taskid):
+    res_taskid = '5960a659c5d5860f15e6d470'
+
+
+    goodslist = Goods.objects.filter(taskid=res_taskid)
+    storeslist = Stores.objects.filter(taskid=res_taskid)
+
+    style1 = xlwt.easyxf(num_format_str='D-MMM-YY')
+    wbook = xlwt.Workbook()
+    goods_sheet = wbook.add_sheet('goods')
+    stores_sheet = wbook.add_sheet('stores')
+
+    task_message = Task.objects.filter(id=res_taskid).get(0)
+    title = task_message['taskname'] + '(' + ','.join(list(task_message['starturls'])) + ')'
+
+
+
+    col = 1
+    for each in goodslist:
+        row = 0
+        each_dic = []
+        each_dic.append(each['title'])
+        each_dic.append(each['price'])
+        each_dic.append(each['detail_url'])
+        each_dic.append(each['comment_degree'])
+        each_dic.append(each['pic_url'])
+
+        for k in each_dic:
+            goods_sheet.write(col, row, k)
+            row += 1
+        col += 1
+    goods_sheet.write_merge(0, 0, 0, 4, title)
+
+    col = 1
+    for each in storeslist:
+        row = 0
+        each_dic = []
+        each_dic.append(each['name'])
+        each_dic.append(each['store_url'])
+        each_dic.append(each['comment_degree'])
+
+        for k in each_dic:
+            stores_sheet.write(col, row, k)
+            row += 1
+        col += 1
+
+    stores_sheet.write_merge(0, 0, 0, 2, title)
+
+
+
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+
+    filepath = base_dir + '/media/dataexport/' + res_taskid + '.xls'
+
+    if (os.path.exists(filepath)):
+        os.remove(filepath)
+
+    wbook.save(filepath)
+
+    return filepath
+
+
+def export(request):
+    taskdid = request.GET.get('taskid', '')
+    logger.info(taskdid)
+    task = Task.objects.get(id=taskdid)
+    if(task['webtype'] == 'ecommerce'):
+        filename =  ecommerce_export(taskdid)
+    else:
+        filename = news_and_blog_export(taskdid, task['webtype'])
+
+    response = StreamingHttpResponse(file_iterator(filename))
+    response['Content-Type'] = 'application/octet-stream'
+    response['Content-Disposition'] = 'attachment;filename="{0}"'.format(filename)
+    return response
+
+
 def debug(request):
-    base_dir = get_attr('BASE_DIR')
+    pass
     # absolute_path = base_dir + ur"/crawlermanage/static/websitename/blog.txt"
     #
     # with open(absolute_path) as f:
@@ -604,4 +738,26 @@ def debug(request):
     # logger.info(message)
 
 
+
+
     return render(request, 'crawlermanage/htmldebug_page.html')
+
+
+
+# def debug(request):
+#     base_dir = get_attr('BASE_DIR')
+    # absolute_path = base_dir + ur"/crawlermanage/static/websitename/blog.txt"
+    #
+    # with open(absolute_path) as f:
+    #     message = f.read()
+    #     logger.info( message)
+    #
+    #     f.close()
+    #
+    #
+    # for each in  message.split('\n'):
+    #     each_name = each.split(' ')[1]
+    #     each_url = each.split(' ')[0]
+    #     Prewebsite.objects.create(url=each_url, name=each_name, webtype='blog')
+    #
+    # logger.info(message)

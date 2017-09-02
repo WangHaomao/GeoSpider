@@ -2280,6 +2280,7 @@ Traceback (most recent call last):
   File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 198, in _get_response
     "returned None instead." % (callback.__module__, view_name)
 ValueError: The view crawlermanage.views.layout didn't return an HttpResponse object. It returned None instead.
+<<<<<<< HEAD
 2017-09-02 09:04:01,200 [Thread-3:140509814408960] [django.request:182] [WARNING]- Not Found: /favicon.ico
 2017-09-02 09:05:38,388 [Thread-26:140509804967680] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
 Traceback (most recent call last):
@@ -2362,3 +2363,824 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/contrib/auth/__init__.py", line 111, in login
     request.session[SESSION_KEY] = user._meta.pk.value_to_string(user)
 AttributeError: 'QuerySet' object has no attribute '_meta'
+=======
+2017-09-02 18:47:30,083 [Thread-4:139688585787136] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 623, in debug
+    each_dic = dict(each)
+ValueError: dictionary update sequence element #1 has length 5; 2 is required
+2017-09-02 18:48:44,798 [Thread-2:140186961512192] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 625, in debug
+    each_dic = dict(each)
+ValueError: dictionary update sequence element #1 has length 5; 2 is required
+2017-09-02 18:49:10,415 [Thread-2:139993499789056] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 625, in debug
+    each_dic = dict(each)
+ValueError: dictionary update sequence element #1 has length 5; 2 is required
+2017-09-02 18:49:25,237 [Thread-2:140126167615232] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 627, in debug
+    each_dic = dict(each)
+ValueError: dictionary update sequence element #1 has length 5; 2 is required
+2017-09-02 18:56:22,032 [Thread-2:139660323976960] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 641, in debug
+    task_message = Task.objects.filter(taskid=res_taskid).get(0)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 273, in get
+    result = queryset.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1547, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1590, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/visitor.py", line 89, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/transform.py", line 63, in query
+    raise InvalidQueryError(e)
+InvalidQueryError: Cannot resolve field "taskid"
+2017-09-02 18:59:17,406 [Thread-2:139987023456000] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 640, in debug
+    task_message = Task.objects.filter(taskid=res_taskid).get(0)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 273, in get
+    result = queryset.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1547, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1590, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/visitor.py", line 89, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/transform.py", line 63, in query
+    raise InvalidQueryError(e)
+InvalidQueryError: Cannot resolve field "taskid"
+2017-09-02 18:59:20,055 [Thread-3:139987023456000] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 640, in debug
+    task_message = Task.objects.filter(taskid=res_taskid).get(0)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 273, in get
+    result = queryset.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1547, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1590, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/visitor.py", line 89, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/transform.py", line 63, in query
+    raise InvalidQueryError(e)
+InvalidQueryError: Cannot resolve field "taskid"
+2017-09-02 18:59:21,032 [Thread-4:139987023456000] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 640, in debug
+    task_message = Task.objects.filter(taskid=res_taskid).get(0)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 273, in get
+    result = queryset.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1466, in next
+    raw_doc = self._cursor.next()
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1547, in _cursor
+    self._cursor_obj = self._collection.find(self._query,
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 1590, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/visitor.py", line 89, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/visitor.py", line 155, in accept
+    return visitor.visit_query(self)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/visitor.py", line 78, in visit_query
+    return transform.query(self.document, **query.query)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/mongoengine/queryset/transform.py", line 63, in query
+    raise InvalidQueryError(e)
+InvalidQueryError: Cannot resolve field "taskid"
+2017-09-02 19:00:31,813 [Thread-2:140146391308032] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 641, in debug
+    title = task_message['taskname'] + '(' + task_message['starturls'].join(',') + ')'
+AttributeError: 'BaseList' object has no attribute 'join'
+2017-09-02 19:01:15,191 [Thread-2:139920143664896] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('~/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: '~/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:06:05,987 [Thread-2:140422345127680] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('/media/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 13] Permission denied: '/media/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:07:42,713 [Thread-8:140422303164160] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('/media/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 13] Permission denied: '/media/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:10:13,321 [Thread-2:139668775397120] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('../media/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: '../media/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:10:22,856 [Thread-2:140396296025856] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('./media/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: './media/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:10:34,794 [Thread-2:139842424342272] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('/media/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 13] Permission denied: '/media/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:12:52,458 [Thread-2:139746783426304] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('/media/dataexport/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: '/media/dataexport/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:12:52,967 [Thread-3:139746783426304] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-09-02 19:12:53,791 [Thread-4:139746783426304] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('/media/dataexport/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: '/media/dataexport/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:12:56,741 [Thread-5:139746783426304] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('/media/dataexport/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: '/media/dataexport/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:12:57,806 [Thread-6:139746783426304] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('/media/dataexport/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: '/media/dataexport/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:12:59,929 [Thread-7:139746783426304] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('/media/dataexport/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: '/media/dataexport/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:13:01,258 [Thread-8:139746783426304] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('/media/dataexport/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: '/media/dataexport/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:13:02,535 [Thread-9:139746783426304] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('/media/dataexport/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: '/media/dataexport/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:13:20,556 [Thread-10:139746783426304] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('/media/dataexport/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: '/media/dataexport/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:13:21,057 [Thread-11:139746783426304] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-09-02 19:13:22,154 [Thread-12:139746783426304] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/debug/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 643, in debug
+    wbook.save('/media/dataexport/'+res_taskid + '.xls')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: '/media/dataexport/5960a659c5d5860f15e6d470.xls'
+2017-09-02 19:45:26,611 [Thread-43:140601535035136] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view crawlermanage.views.layout didn't return an HttpResponse object. It returned None instead.
+2017-09-02 19:45:26,618 [Thread-42:140601257359104] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view crawlermanage.views.layout didn't return an HttpResponse object. It returned None instead.
+2017-09-02 20:02:51,927 [Thread-184:140601240573696] [django.request:152] [WARNING]- Not Found: /favicon.ico
+2017-09-02 20:03:20,539 [Thread-185:140601240573696] [django.request:152] [WARNING]- Not Found: /
+2017-09-02 20:32:36,339 [Thread-2:140103798032128] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 92, in tasks
+    'stopping_count': stopping_count, 'error_count': error_count})
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'export' not found. 'export' is not a valid view function or pattern name.
+2017-09-02 20:32:49,053 [Thread-8:140103619954432] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 92, in tasks
+    'stopping_count': stopping_count, 'error_count': error_count})
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'export' not found. 'export' is not a valid view function or pattern name.
+2017-09-02 20:38:39,939 [Thread-9:140103619954432] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 92, in tasks
+    'stopping_count': stopping_count, 'error_count': error_count})
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'export' not found. 'export' is not a valid view function or pattern name.
+2017-09-02 20:39:32,228 [Thread-10:140103619954432] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/tasks/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 92, in tasks
+    'stopping_count': stopping_count, 'error_count': error_count})
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 207, in render
+    return self._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 216, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/base.py", line 957, in render_annotated
+    return self.render(context)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/template/defaulttags.py", line 458, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/urls/base.py", line 91, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 497, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+NoReverseMatch: Reverse for 'export' not found. 'export' is not a valid view function or pattern name.
+2017-09-02 20:39:37,757 [Thread-3:139934431119104] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    "returned None instead." % (callback.__module__, view_name)
+ValueError: The view crawlermanage.views.export didn't return an HttpResponse object. It returned None instead.
+2017-09-02 20:49:08,673 [Thread-3:140141937456896] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 615, in export
+    filename = news_and_blog_export(taskdid, task['webtype'])
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/export.py", line 47, in news_and_blog_export
+    wbook.save(filepath)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: u'/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/media/dataexport/5960a632c5d5860f15e6d46f.xls'
+2017-09-02 20:50:01,567 [Thread-3:139794760926976] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 615, in export
+    wsheet = wbook.add_sheet('export data')
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/export.py", line 47, in news_and_blog_export
+    wbook.save(filepath)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: u'/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/media/dataexport/5960a632c5d5860f15e6d46f.xls'
+2017-09-02 20:50:03,196 [Thread-4:139794760926976] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 615, in export
+    wsheet = wbook.add_sheet('export data')
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/export.py", line 47, in news_and_blog_export
+    wbook.save(filepath)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 710, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: u'/home/haomao/Desktop/project/geowind_crawler/crawlermanage/utils/media/dataexport/5960a632c5d5860f15e6d46f.xls'
+2017-09-02 20:53:08,269 [Thread-8:139704976516864] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 714, in export
+    filename =  ecommerce_export(taskdid)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 656, in ecommerce_export
+    goods_sheet = wbook.add_sheet('商品')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 366, in add_sheet
+    sheetname = sheetname.decode(self.encoding)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)
+2017-09-02 20:55:50,641 [Thread-15:139705001694976] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 714, in export
+    filename =  ecommerce_export(taskdid)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 656, in ecommerce_export
+    goods_sheet = wbook.add_sheet('商品')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 366, in add_sheet
+    sheetname = sheetname.decode(self.encoding)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)
+2017-09-02 20:57:17,136 [Thread-22:139705001694976] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 714, in export
+    filename =  ecommerce_export(taskdid)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 656, in ecommerce_export
+    goods_sheet = wbook.add_sheet('商品')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 366, in add_sheet
+    sheetname = sheetname.decode(self.encoding)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)
+2017-09-02 20:58:08,647 [Thread-3:140356332713728] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 714, in export
+    filename =  ecommerce_export(taskdid)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 656, in ecommerce_export
+    goods_sheet = wbook.add_sheet('商品')
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Workbook.py", line 366, in add_sheet
+    sheetname = sheetname.decode(self.encoding)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe5 in position 0: ordinal not in range(128)
+2017-09-02 20:59:38,205 [Thread-3:140402527061760] [django.request:135] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 714, in export
+    filename =  ecommerce_export(taskdid)
+  File "/home/haomao/Desktop/project/geowind_crawler/crawlermanage/views.py", line 693, in ecommerce_export
+    goods_sheet.write_merge(0, 0, 0, 2, title)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Worksheet.py", line 1114, in write_merge
+    self.write(r1, c1, label, style)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Worksheet.py", line 1088, in write
+    self.row(r).write(c, label, style)
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Row.py", line 235, in write
+    StrCell(self.__idx, col, style_index, self.__parent_wb.add_str(label))
+  File "/home/haomao/pythonVir/mainenv/local/lib/python2.7/site-packages/xlwt/Row.py", line 154, in insert_cell
+    raise Exception(msg)
+Exception: Attempt to overwrite cell: sheetname=u'goods' rowx=0 colx=0
+>>>>>>> e67fb1ddadf85ff6e60bf2ff32e93869807ebf20

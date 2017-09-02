@@ -40,7 +40,7 @@ urlpatterns = [
 
     url(r'^crawlermanage/domainautocomplete/$', views.domain_autocomplete, name='domainautocomplete'),
     url(r'^crawlermanage/debug/$', views.debug, name='debug'),
-
+    url(r'^crawlermanage/export/$', views.export, name='export'),
 
 
     # url(r'^crawlermanage/$','crawlermanage.views.login'),

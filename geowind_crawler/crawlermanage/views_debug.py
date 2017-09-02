@@ -3,7 +3,6 @@ import logging
 from datetime import datetime
 
 import xlwt
-logger = logging.getLogger('crawlermanage.views')
 def extract():
 
     res_taskid = '5960a659c5d5860f15e6d470'
@@ -27,7 +26,7 @@ def extract():
     title = task_message['taskname']+'('+task_message['starturls'].join(',')+')'
 
 
-    wbook.save('res_taskid'+'.xls')
+    wbook.save(res_taskid+'.xls')
 
 def get_xls_by_taskid(res_taskid):
     filename = basePath + req.GET['url']
@@ -41,7 +40,7 @@ def get_xls_by_taskid(res_taskid):
                 else:
                     break
 
-    response = StreamingHttpResponse(file_iterator(filename))
+    # response = StreamingHttpResponse(file_iterator(filename))
     response = StreamingHttpResponse(file_iterator(filename))
     response['Content-Type'] = 'application/octet-stream'
     response['Content-Disposition'] = 'attachment;filename="{0}"'.format(filename)

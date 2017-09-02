@@ -145,8 +145,8 @@
                          </div>
                          <div class="tab-pane fade" id="ios">
                               <label>目标域名</label>
-                              <textarea id="starturl_mul" class="form-control" rows="8" placeholder="https://www.geowind.com
-http://www.bootstrap.com"></textarea>
+                              <textarea id="starturl_mul" class="form-control" rows="8" placeholder="https://www.jd.com
+http://news.sohu.com"></textarea>
                              <div class="form-group">
                                  <label>网站类型</label>
 
@@ -172,9 +172,10 @@ http://www.bootstrap.com"></textarea>
                       </div>
                           </div>
 
-                      <label>任务信息简介</label>
 
-                    <div class="form-group">
+
+                    <div class="form-group" style="display: none" id="mytable">
+                        <label>任务信息简介</label>
                          <table id="table">
                           </table>
                           <div class="form-group" id="ecommerce_keywords" style="display: none">
@@ -185,6 +186,8 @@ http://www.bootstrap.com"></textarea>
                             {% endif %} -->
                           </div>
                       <div>
+                          </div>
+                    </div>
               <div>
               <!-- textarea -->
              <!--<div class="form-group">-->
@@ -717,13 +720,18 @@ var $table = $('#table'),
                 }
                 $('#keywords_sin').val('');
 
-            }else if(webtype=='non_select'){
+            }if(starturl.replace(' ','').replace('\n','').replace('\r\n','') == ''){
+                alert('请输入URL');
+                return ;
+            }if(webtype =='non_select'){
                 alert('请选择url类型');
                 return ;
             }
 
-            console.log(keywords);
 
+            $('#starturl_sin').val('');
+
+$('#mytable').css('display', '');
             $table.bootstrapTable('append',randomData(starturl,webtype,keywords,'sin'));
 
             $table.bootstrapTable('scrollTo', 'bottom');
@@ -744,14 +752,20 @@ var $table = $('#table'),
                     return;
                 }
                 $('#keywords_mul').val('');
-            }else if(webtype=='non_select'){
+            }
+            if(starturl.replace(' ','').replace('\n','').replace('\r\n','') == ''){
+                alert('请输入URL');
+                return ;
+            }
+            if(webtype=='non_select'){
                 alert('请选择url类型');
                 return ;
             }
 
             $('#starturl_mul').val('');
-
+$('#mytable').css('display', '');
             console.log(keywords);
+
             $table.bootstrapTable('append',randomData(starturl_list,webtype,keywords,'mul'));
 
             $table.bootstrapTable('scrollTo', 'bottom');
