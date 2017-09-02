@@ -31,9 +31,9 @@ class ProxyMiddleWare(HttpProxyMiddleware):
     def process_request(self, request, spider):
         is_use_ip_proxy = False
         proxy_dic = self.db_chief.find_proxy_status_and_proxys()
-        if(proxy_dic['status'] == 1):
+        if(proxy_dic['status'] == '1'):
             try:
-                proxys_list = proxy_dic['proxy'].spilt('#')
+                proxys_list = str(proxy_dic['proxy']).split('#')
                 request.meta["proxy"] = random.choice(proxys_list)
             except  Exception as e:
                 request.meta["proxy"] = ''

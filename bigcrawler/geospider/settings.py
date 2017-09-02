@@ -20,12 +20,11 @@ DOWNLOADER_MIDDLEWARES = {
     'geospider.middlewares.RotateUserAgentMiddleware':123,
     'geospider.middlewares.ProxyMiddleWare':124,
 }
-
 #相关IP设置，包括数据库，状态监控等等
 REDIS_HOST = '192.168.1.130'
 REDIS_PORT = 6379
 SUBSCRIBE = 'crawler'
-LOCAL_HOST = '192.168.1.130'
+LOCAL_HOST = '192.168.1.111'
 # STATS_CLASS = 'scrapygraphite.GraphiteStatsCollector'
 STATS_CLASS = 'geospider.statscol.graphite.RedisGraphiteStatsCollector'
 GRAPHITE_HOST = '123.207.230.48'
@@ -44,3 +43,15 @@ LOG_LEVEL= 'DEBUG'
 import logging
 logging.getLogger('cluster.matrix').setLevel(logging.WARNING)
 logging.getLogger('chardet.charsetprober').setLevel(logging.WARNING)
+
+
+import logging
+from scrapy.utils.log import configure_logging
+
+configure_logging(install_root_handler=False)
+logging.basicConfig(
+    filename='log.txt',
+    filemode = 'a',
+    format='%(levelname)s: %(message)s',
+    level=logging.DEBUG
+)
