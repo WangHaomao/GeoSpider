@@ -145,8 +145,8 @@
                          </div>
                          <div class="tab-pane fade" id="ios">
                               <label>目标域名</label>
-                              <textarea id="starturl_mul" class="form-control" rows="8" placeholder="https://www.geowind.com
-http://www.bootstrap.com"></textarea>
+                              <textarea id="starturl_mul" class="form-control" rows="8" placeholder="https://www.jd.com
+http://news.sohu.com"></textarea>
                              <div class="form-group">
                                  <label>网站类型</label>
 
@@ -720,10 +720,15 @@ var $table = $('#table'),
                 }
                 $('#keywords_sin').val('');
 
-            }else if(webtype=='non_select'){
+            }if(starturl.replace(' ','').replace('\n','').replace('\r\n','') == ''){
+                alert('请输入URL');
+                return ;
+            }if(webtype =='non_select'){
                 alert('请选择url类型');
                 return ;
             }
+
+
             $('#starturl_sin').val('');
 
 $('#mytable').css('display', '');
@@ -747,7 +752,12 @@ $('#mytable').css('display', '');
                     return;
                 }
                 $('#keywords_mul').val('');
-            }else if(webtype=='non_select'){
+            }
+            if(starturl.replace(' ','').replace('\n','').replace('\r\n','') == ''){
+                alert('请输入URL');
+                return ;
+            }
+            if(webtype=='non_select'){
                 alert('请选择url类型');
                 return ;
             }
