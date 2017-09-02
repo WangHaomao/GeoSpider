@@ -7,7 +7,7 @@ import time
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render, render_to_response
 
-from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores, Blog, TempArticle, Proxy
+from crawlermanage.models import Task, News, Process, Machine, User, Goods, Stores, Blog, TempArticle, Proxy, Prewebsite
 from crawlermanage.utils.article_parser import extract, test, readFile, extract_content, get_article_data
 from crawlermanage.utils.echarts import create_chart1, create_chart2, create_chart3, create_chart4
 from crawlermanage.utils.ecommerce.pageParser.shopping_detail_parser import get_goods_dict
@@ -215,14 +215,16 @@ def layout(request):
         slave = request.POST.get('slave', '')
         processnum = request.POST.get('processnum', '')
         keywords = request.POST.get('keywords', '')
+
+        logger.info(taskname)
+
         keyword_list = []
         if keywords != '':
             keyword_list = keywords.split(',')
-        logger.info(keywords)
         if processnum == '':
             processnum = 1
         processnum = int(processnum)
-        list_url = starturls.split('\n')
+        list_url = starturls.split(',')
         starttime = ''
         endtime = ''
         if reservationtime == '':
@@ -246,10 +248,10 @@ def layout(request):
         logger.info(status)
         msg = 'op=starttask&taskid=' + taskid  # + "&status=" + status
         messager.publish('crawler', msg)
-        ret = {'status': 'success'}
-        return HttpResponse(json.dumps(ret))
+        #ret = {'status': 'success'}
+        #return HttpResponse(json.dumps(ret))
     else:
-        return render_to_response('crawlermanage/layout.html', {'ips': ips,'urls':"['abc.com 新闻','bccca.com 电商','cacc.com 新闻']"})
+        return render_to_response('crawlermanage/layout.html', {'ips': ips})
 
 
 '''
@@ -577,14 +579,33 @@ def domain_autocomplete(request):
 
     ret = "<a class=\"cat\" href=\"#\"></a>"
     #mimetype = 'application/json'
+    res_website = Prewebsite.objects.all()
+    items = []
+    for i in res_website:
+        items.append({'url':i['url'], 'name':i['name'], 'webtype':i['webtype']})
+    logger.info(res_website)
     json_resp = json.dumps({
-        "items": [
-                {'name':'https://stackoverflow.com/questions/9232748/twitter-bootstrap-typeahead-ajax-example','age':'12','id':'002'},
-                {'name':'https://stackoverflow.com/questions/9232748/twitter-bootstrap-typeahead-ajax-example','age':'13','id':'001'}
-        ]
+        "items":items
     })
-
     return HttpResponse(json_resp)
 
 def debug(request):
+    base_dir = get_attr('BASE_DIR')
+    # absolute_path = base_dir + ur"/crawlermanage/static/websitename/blog.txt"
+    #
+    # with open(absolute_path) as f:
+    #     message = f.read()
+    #     logger.info( message)
+    #
+    #     f.close()
+    #
+    #
+    # for each in  message.split('\n'):
+    #     each_name = each.split(' ')[1]
+    #     each_url = each.split(' ')[0]
+    #     Prewebsite.objects.create(url=each_url, name=each_name, webtype='blog')
+    #
+    # logger.info(message)
+
+
     return render(request, 'crawlermanage/htmldebug_page.html')

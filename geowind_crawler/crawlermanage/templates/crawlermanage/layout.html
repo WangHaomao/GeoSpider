@@ -269,7 +269,7 @@ http://www.bootstrap.com"></textarea>
               </div>
 
               <div class="box-footer" style="padding-right:0px;">
-                <!--<button type="button" class="btn btn-default">取消</button>-->
+                <!--<button id="cancel" type="button" class="btn btn-default">取消</button>-->
 
                  <div class="col-sm-offset-2 col-sm-10" style="padding-right:0px;padding-left:0px;">
                      <button id="submit" type="button" class="btn btn-primary pull-right">开始抓取</button>
@@ -316,7 +316,7 @@ http://www.bootstrap.com"></textarea>
             return $.ajax({
                 url: '/crawlermanage/domainautocomplete/',
                 type: 'post',
-                data: {name: query},
+                data: {url: query},
                 success: function (result) {
                     result = eval('('+result+')');
                     //console.log(result);
@@ -325,7 +325,7 @@ http://www.bootstrap.com"></textarea>
                     //return process(result.options);
 
                     var resultList = result.items.map(function (item) {
-                          var aItem = {id: item.id, name: item.name};
+                          var aItem = {url: item.url, name: item.name,webtype:item.webtype};
                           return JSON.stringify(aItem);
                     });
                     return process(resultList);
@@ -335,15 +335,15 @@ http://www.bootstrap.com"></textarea>
         highlighter: function (obj) {
             var item = JSON.parse(obj);
             var query = this.query.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&');
-            return item.name.replace(new RegExp('(' + query + ')', 'ig'), function ($1, match) {
+            return item.url.replace(new RegExp('(' + query + ')', 'ig'), function ($1, match) {
                 return '<strong>' + match + '</strong>'
             });
         },
         updater: function (obj) {
             var item = JSON.parse(obj);
-            console.log(item.id);
+            console.log(item.webtype);
 
-            webtype_sin = 'ecommerce_keywords';
+            webtype_sin = item.webtype;
             $("#webtype_sin").val(webtype_sin).trigger("change");
 
             console.log(webtype_sin);
@@ -354,7 +354,7 @@ http://www.bootstrap.com"></textarea>
                $("#ecommerce_keywords_sin").fadeOut("slow");
             }
 
-            return item.name;
+            return item.url;
         }
 
 
@@ -418,40 +418,125 @@ http://www.bootstrap.com"></textarea>
 
   });
 
+
+  function get_url(url_li) {
+        var url_set = new Set();
+        var li_list = url_li.split("</li>");
+        for(var i=0; i<li_list.length-1; i++) {
+            url_set.add(li_list[i].split("href='")[1].split("'")[0])
+        }
+        return url_set;
+    }
+
+  function set_to_str(set) {
+    var list_str = ''
+    for (var x of set) {
+       list_str = list_str + x +',';
+    }
+    return list_str.substring(0, list_str.length-1);
+  }
+
+
+
   $("#submit").click(function() {
+
+    var data = $("#table").bootstrapTable('getData');
+    console.log(data)
+
+    var news_req = new Set();
+    var blog_req = new Set();
+    var ecommerce_req = new Set();
+    var ecommerce_keywords_data = new Array();
+
+    for(var i=0; i<data.length; i++) {
+        var temp_set = get_url(data[i].url);
+        if(data[i].webtype=='news') {
+            for (var x of temp_set) {
+               news_req.add(x);
+            }
+        } else if(data[i].webtype == 'blog') {
+            for (var x of temp_set) {
+               blog_req.add(x);
+            }
+        } else if(data[i].webtype == 'ecommerce') {
+            for (var x of temp_set) {
+               ecommerce_req.add(x);
+            }
+        } else if(data[i].webtype == 'ecommerce_keywords') {
+            ecommerce_keywords_data.push(data[i]);
+        }
+    }
+
     taskname = $('#taskname').val()
-    starturls = $('#starturls').val()
+    //starturls = $('#starturls').val()
     describe = $('#describe').val()
-    webtype = $('#webtype').val()
+    //webtype = $('#webtype').val()
     reservationtime = $('#reservationtime').val()
     slave = $('#slave').val()
     processnum = $('#processnum').val()
-    keywords = $('#keywords').val()
-    if(taskname=='' || starturls=='') {
+    //keywords = $('#keywords').val()
+    if(taskname=='') {
       alert('请完善信息...')
       return
     }
     if(slave!=null) {
       slave = slave.toString()
     }
-    $.post('/crawlermanage/layout/', {
-      taskname:taskname,
-      starturls:starturls,
-      describe:describe,
-      webtype:webtype,
-      reservationtime:reservationtime,
-      slave:slave,
-      processnum:processnum,
-      keywords:keywords
-    }, function(data) {
-      if(data!=null){
-        if (data['status']=='success') {
-          location.href = '/crawlermanage/tasks'
-        }
 
-      }
-    }, 'json')
+    if(news_req.size > 0) {
+        $.post('/crawlermanage/layout/', {
+          taskname:'news_'+taskname,
+          starturls:set_to_str(news_req),
+          describe:describe,
+          webtype:'news',
+          reservationtime:reservationtime,
+          slave:slave,
+          processnum:processnum
+        })
+    }
+    if(blog_req.size > 0){
+        $.post('/crawlermanage/layout/', {
+          taskname:'blog_'+taskname,
+          starturls:set_to_str(blog_req),
+          describe:describe,
+          webtype:'blog',
+          reservationtime:reservationtime,
+          slave:slave,
+          processnum:processnum
+        })
+    }
+    if(ecommerce_req.size > 0) {
+        $.post('/crawlermanage/layout/', {
+          taskname:'ecommerce_'+taskname,
+          starturls:set_to_str(ecommerce_req),
+          describe:describe,
+          webtype:'ecommerce',
+          reservationtime:reservationtime,
+          slave:slave,
+          processnum:processnum
+        })
+    }
+
+    for(var i=0; i<ecommerce_keywords_data.length; i++) {
+        var temp_set = get_url(data[i].url);
+        $.post('/crawlermanage/layout/', {
+          taskname:'ecommerce_'+taskname+'('+ ecommerce_keywords_data[i].keywords +')',
+          starturls:set_to_str(temp_set),
+          keywords:ecommerce_keywords_data[i].keywords,
+          describe:describe,
+          webtype:'ecommerce_keywords',
+          reservationtime:reservationtime,
+          slave:slave,
+          processnum:processnum
+        })
+    }
+
+
+    location.href = '/crawlermanage/tasks'
+
   });
+
+
 
   $("#webtype_mul").click(function(){
      webtype_mul = $(this).val();
@@ -487,10 +572,7 @@ http://www.bootstrap.com"></textarea>
                 }
 
             }
-</script>
 
-
-<script>
 var $table = $('#table'),
         $remove = $('#remove'),
         selections = [];
@@ -521,7 +603,7 @@ var $table = $('#table'),
 
                     },
                     {
-                        field: 'type',
+                        field: 'webtype',
                         title: '类型',
                         sortable: true,
                         align: 'center',
@@ -536,9 +618,8 @@ var $table = $('#table'),
 						}
 					},
 					{
-					    field: 'KEYWORD',
                         title: '关键字',
-                        field: 'keyword',
+                        field: 'keywords',
                         editable: true
 
                     },
@@ -618,6 +699,8 @@ var $table = $('#table'),
 
     $(function () {
         initTable();
+
+
         button_sin.click(function () {
             //$("#webtype_sin").val("ecommerce_keywords").trigger("change");
 
@@ -632,6 +715,8 @@ var $table = $('#table'),
                     alert('至少输入一个关键字');
                     return;
                 }
+                $('#keywords_sin').val('');
+
             }else if(webtype=='non_select'){
                 alert('请选择url类型');
                 return ;
@@ -658,10 +743,13 @@ var $table = $('#table'),
                     alert('至少输入一个关键字');
                     return;
                 }
+                $('#keywords_mul').val('');
             }else if(webtype=='non_select'){
                 alert('请选择url类型');
                 return ;
             }
+
+            $('#starturl_mul').val('');
 
             console.log(keywords);
             $table.bootstrapTable('append',randomData(starturl_list,webtype,keywords,'mul'));
@@ -682,7 +770,7 @@ var $table = $('#table'),
             }
         }
 
-        row = {id:random_id,url:res_urls,keyword:keywords,'type':webtype}
+        row = {id:random_id,url:res_urls,keywords:keywords,'webtype':webtype}
 
         return row;
     }
