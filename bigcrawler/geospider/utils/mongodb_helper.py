@@ -177,19 +177,32 @@ class URLDao(object):
         self.db.urls.remove({'taskid':taskid, 'url':url})
 
 class IPProxyDao(object):
-    # def __init__(self, db):
-    #     self.db = db
-
-    # def __init__(self, db):
-    #     self.db = db
-    #
-    def __init__(self):
-        self.db = connect_mongodb()
+    def __init__(self, db):
+        self.db = db
 
     def find_proxy_status_and_proxys(self):
-        cursor = self.db.proxy.find()
+        try:
+            cursor = self.db.proxy.find()
+            print('---------------------------------')
+            if (cursor == None or len(cursor) == 0):
+                proxy_dic = {}
+                proxy_dic['status'] = '0'
+                proxy_dic['proxy'] = ''
+                return proxy_dic
+            else:
+                print(cursor[0])
+                return cursor[0]
 
-        return cursor[0]
+        except:
+            proxy_dic = {}
+            proxy_dic['status'] = '0'
+            proxy_dic['proxy'] = ''
+            return proxy_dic
+
+
+
+
+
 
 if __name__ == '__main__':
     # db = connect_mongodb()

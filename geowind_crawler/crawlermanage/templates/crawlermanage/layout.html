@@ -81,7 +81,7 @@
 
         <li>
           <a href="{% url 'settings' %}">
-            <i class="fa fa-cog"></i> <span>设置</span>
+            <i class="fa fa-cog"></i> <span>系统设置</span>
           </a>
         </li>
       </ul>
@@ -300,6 +300,7 @@ http://news.sohu.com"></textarea>
 <script src="../../static/plugins/bootstrapTable/bootstrap-table-editable.js"></script>
 <script src="../../static/plugins/bootstrap3-editable/js/bootstrap-editable.js"></script>
 <script>
+  $(".select2").select2();
   $(function () {
     // $("#example1").DataTable();
     $('#example1').DataTable({
@@ -470,13 +471,13 @@ http://news.sohu.com"></textarea>
         }
     }
 
-    taskname = $('#taskname').val()
+    var taskname = $('#taskname').val()
     //starturls = $('#starturls').val()
-    describe = $('#describe').val()
+    var describe = $('#describe').val()
     //webtype = $('#webtype').val()
-    reservationtime = $('#reservationtime').val()
-    slave = $('#slave').val()
-    processnum = $('#processnum').val()
+    var reservationtime = $('#reservationtime').val()
+    var slave = $('#slave').val()
+    var processnum = $('#processnum').val()
     //keywords = $('#keywords').val()
     if(taskname=='') {
       alert('请完善信息...')
@@ -484,6 +485,60 @@ http://news.sohu.com"></textarea>
     }
     if(slave!=null) {
       slave = slave.toString()
+    }
+
+    //'{"name":"2323","sex":"afasdf","age":"6262"}'
+    var news_str='', blog_str='', ecommerce_str='', all_data='';
+    if(news_req.size > 0) {
+       news_str = '{"webtype":"news","starturls":"'+set_to_str(news_req)+'","keywords":""}';
+       all_data = news_str + ',';
+    }
+    if(blog_req.size > 0) {
+      blog_str = '{"webtype":"blog","starturls":"'+set_to_str(blog_req)+'","keywords":""}';
+      all_data = all_data +  blog_str + ',';
+    }
+    if(ecommerce_req.size > 0) {
+      ecommerce_str = '{"webtype":"ecommerce","starturls":"'+set_to_str(ecommerce_req)+'","keywords":""}';
+      all_data = all_data + ecommerce_str + ',';
+    } 
+    for(var i=0; i<ecommerce_keywords_data.length; i++) {
+        var temp_set = get_url(data[i].url);
+        var temp = '{"webtype":"ecommerce_keywords","starturls":"'+set_to_str(temp_set)+'","keywords":"'+ecommerce_keywords_data[i].keywords+'"}';
+        all_data = all_data + temp + ',';
+    }
+    all_data = all_data.substring(0, all_data.length-1);
+    
+    all_data = '[' + all_data + ']';
+
+  
+
+    $.post('/crawlermanage/layout/', {
+        taskname:taskname,
+        webtype_urls_keywords:all_data,
+        describe:describe,
+        reservationtime:reservationtime,
+        slave:slave,
+        processnum:processnum
+    }, function(data) {
+      if(data['status'] == 'success') {
+        location.href = '/crawlermanage/tasks'
+      }
+    }, 'json')
+
+    /*
+    for(var i=0; i<ecommerce_keywords_data.length; i++) {
+        var temp_set = get_url(data[i].url);
+        $.post('/crawlermanage/layout/', {
+          taskname:'ecommerce_'+taskname+'('+ ecommerce_keywords_data[i].keywords +')',
+          starturls:set_to_str(temp_set),
+          keywords:ecommerce_keywords_data[i].keywords,
+          describe:describe,
+          webtype:'ecommerce_keywords',
+          reservationtime:reservationtime,
+          slave:slave,
+          processnum:processnum
+        })
+
     }
 
     if(news_req.size > 0) {
@@ -520,22 +575,10 @@ http://news.sohu.com"></textarea>
         })
     }
 
-    for(var i=0; i<ecommerce_keywords_data.length; i++) {
-        var temp_set = get_url(data[i].url);
-        $.post('/crawlermanage/layout/', {
-          taskname:'ecommerce_'+taskname+'('+ ecommerce_keywords_data[i].keywords +')',
-          starturls:set_to_str(temp_set),
-          keywords:ecommerce_keywords_data[i].keywords,
-          describe:describe,
-          webtype:'ecommerce_keywords',
-          reservationtime:reservationtime,
-          slave:slave,
-          processnum:processnum
-        })
-    }
-
 
     location.href = '/crawlermanage/tasks'
+
+    */
 
   });
 

@@ -22,11 +22,14 @@ class RandomUserAgent(object):
         request.headers.setdefault('User-Agent', random.choice(self.agents))
 
 import json
-from geospider.utils.mongodb_helper import IPProxyDao
+from geospider.utils.mongodb_helper import IPProxyDao, connect_mongodb
+
+
 class ProxyMiddleWare(HttpProxyMiddleware):
     def __init__(self,ip=''):
         self.ip = ip
-        self.db_chief =  IPProxyDao()
+        mongodb = connect_mongodb()
+        self.db_chief =  IPProxyDao(mongodb)
 
     def process_request(self, request, spider):
         is_use_ip_proxy = False
@@ -35,6 +38,8 @@ class ProxyMiddleWare(HttpProxyMiddleware):
             try:
                 proxys_list = str(proxy_dic['proxy']).split('#')
                 request.meta["proxy"] = random.choice(proxys_list)
+
+                print '代理开启'
             except  Exception as e:
                 request.meta["proxy"] = ''
         else:

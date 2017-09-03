@@ -6,7 +6,6 @@ import time
 import xlwt
 import os
 
-from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, HttpResponse
 
 from django.http import HttpResponseRedirect, HttpResponse,StreamingHttpResponse
@@ -18,7 +17,6 @@ from crawlermanage.utils.echarts import create_chart1, create_chart2, create_cha
 from crawlermanage.utils.ecommerce.pageParser.shopping_detail_parser import get_goods_dict
 from crawlermanage.utils.ecommerce.pageParser.shopping_navigation_parser import get_nav
 from crawlermanage.utils.ecommerce.pageParser.shopping_itemsList_parser import get_goods_list
-from crawlermanage.utils.ecommerce.spiderUtils.parser_util import get_soup_by_request
 from crawlermanage.utils.export import ecommerce_export, news_and_blog_export
 from crawlermanage.utils.message import Message
 from crawlermanage.utils.page import paging
@@ -206,28 +204,48 @@ def newsdata(request):
     布置爬虫任务
 '''
 
+'''发布任务'''
+def layout_task(taskname, list_url, starttime, endtime, webtype, describe, slave_list, status, processnum, keywords):
+    logger.info(taskname)
+    keyword_list = []
+    if keywords != '':
+        keyword_list = keywords.split(',')
+
+    # 学习功能，将新url加入数据库
+    for url in list_url:
+        #logger.info(url)
+        result = Prewebsite.objects.filter(url=url)
+        #logger.info(len(result))
+        if len(result) == 0:
+            Prewebsite.objects.create(url=url, webtype=webtype)
+
+    task = Task.objects.create(taskname=taskname, starturls=list_url, starttime=starttime, endtime=endtime,
+                               webtype=webtype, describe=describe, slave=slave_list, status=status,
+                               processnum=processnum, keywords=keyword_list)
+    taskid = str(task['id'])
+    #logger.info(status)
+    msg = 'op=starttask&taskid=' + taskid  # + "&status=" + status
+    messager.publish('crawler', msg)
+
 
 def layout(request):
     ips = Machine.objects.all()
     if request.method == 'POST':
         taskname = request.POST.get('taskname', '')
-        starturls = request.POST.get('starturls', '')
+        #starturls = request.POST.get('starturls', '')
         describe = request.POST.get('describe', '')
-        webtype = request.POST.get('webtype', '')
+        #webtype = request.POST.get('webtype', '')
         reservationtime = request.POST.get('reservationtime', '')
         slave = request.POST.get('slave', '')
         processnum = request.POST.get('processnum', '')
-        keywords = request.POST.get('keywords', '')
+        #keywords = request.POST.get('keywords', '')
 
-        logger.info(taskname)
-
-        keyword_list = []
-        if keywords != '':
-            keyword_list = keywords.split(',')
+        #进程数量
         if processnum == '':
             processnum = 1
         processnum = int(processnum)
-        list_url = starturls.split(',')
+
+        #起始时间及状态
         starttime = ''
         endtime = ''
         if reservationtime == '':
@@ -238,21 +256,56 @@ def layout(request):
             starttime = temp[0].strip()
             endtime = temp[1].strip()
             status = 'waitting'
+
+        #从机ip
         slave_list = []
         if slave == '':
             slave = get_attr('LOCAL_HOST')
         slave_list = slave.split(',')
-        if webtype == 'ecommerce_keywords':
-            webtype = 'ecommerce'
-        task = Task.objects.create(taskname=taskname, starturls=list_url, starttime=starttime, endtime=endtime,
-                                   webtype=webtype, describe=describe, slave=slave_list, status=status,
-                                   processnum=processnum, keywords=keyword_list)
-        taskid = str(task['id'])
-        logger.info(status)
-        msg = 'op=starttask&taskid=' + taskid  # + "&status=" + status
-        messager.publish('crawler', msg)
-        #ret = {'status': 'success'}
-        #return HttpResponse(json.dumps(ret))
+
+
+        webtype_urls_keywords = request.POST.get('webtype_urls_keywords', '')
+        logger.info(webtype_urls_keywords)
+        json_data = json.loads(webtype_urls_keywords)
+
+        logger.info(json_data)
+
+        news_url_list = []
+        blog_url_list = []
+        ecommerce_url_list = []
+        ecommerce_keywords_json = []
+
+        for j in json_data:
+            if j['webtype'] == 'news':
+                news_url_list = j['starturls'].split(',')
+            elif j['webtype'] == 'blog':
+                blog_url_list = j['starturls'].split(',')
+            elif j['webtype'] == 'ecommerce':
+                ecommerce_url_list = j['starturls'].split(',')
+            elif j['webtype'] == 'ecommerce_keywords':
+                ecommerce_keywords_json.append(j)
+
+        logger.info(ecommerce_keywords_json)
+        logger.info(news_url_list)
+        #发布新闻任务
+        if len(news_url_list) != 0:
+            layout_task('news_'+taskname, news_url_list, starttime, endtime, 'news', describe, slave_list, status,
+                    processnum, '')
+        #发布博客任务
+        if len(blog_url_list) != 0:
+            layout_task('blog_'+taskname, blog_url_list, starttime, endtime, 'blog', describe, slave_list, status,
+                    processnum, '')
+        #发布电商任务
+        if len(ecommerce_url_list) != 0:
+            layout_task('ecommerce_' + taskname, ecommerce_url_list, starttime, endtime, 'ecommerce', describe, slave_list, status,
+                    processnum, '')
+        for t in ecommerce_keywords_json:
+            layout_task('ecommerce_' + taskname+'('+ t['keywords'] +')', t['starturls'].split(','), starttime, endtime, 'ecommerce', describe,
+                        slave_list, status, processnum, t['keywords'])
+
+        ret = {'status': 'success'}
+        return HttpResponse(json.dumps(ret))
+        #return HttpResponseRedirect('/crawlermanage/tasks')
     else:
         return render_to_response('crawlermanage/layout.html', {'ips': ips})
 
@@ -578,9 +631,7 @@ from django.core import serializers
 def domain_autocomplete(request):
 
     query = request.POST.get('query')
-    logger.info('aaaaa')
 
-    ret = "<a class=\"cat\" href=\"#\"></a>"
     #mimetype = 'application/json'
     res_website = Prewebsite.objects.all()
     items = []
@@ -744,20 +795,3 @@ def debug(request):
 
 
 
-# def debug(request):
-#     base_dir = get_attr('BASE_DIR')
-    # absolute_path = base_dir + ur"/crawlermanage/static/websitename/blog.txt"
-    #
-    # with open(absolute_path) as f:
-    #     message = f.read()
-    #     logger.info( message)
-    #
-    #     f.close()
-    #
-    #
-    # for each in  message.split('\n'):
-    #     each_name = each.split(' ')[1]
-    #     each_url = each.split(' ')[0]
-    #     Prewebsite.objects.create(url=each_url, name=each_name, webtype='blog')
-    #
-    # logger.info(message)

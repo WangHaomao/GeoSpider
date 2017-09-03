@@ -21,15 +21,15 @@ DOWNLOADER_MIDDLEWARES = {
     'geospider.middlewares.ProxyMiddleWare':124,
 }
 #相关IP设置，包括数据库，状态监控等等
-REDIS_HOST = '192.168.1.130'
+REDIS_HOST = '192.168.1.105'
 REDIS_PORT = 6379
 SUBSCRIBE = 'crawler'
-LOCAL_HOST = '192.168.1.111'
+LOCAL_HOST = '192.168.1.105'
 # STATS_CLASS = 'scrapygraphite.GraphiteStatsCollector'
 STATS_CLASS = 'geospider.statscol.graphite.RedisGraphiteStatsCollector'
 GRAPHITE_HOST = '123.207.230.48'
 GRAPHITE_PORT = 2003
-MONGO_URI = 'mongodb://192.168.1.130/'
+MONGO_URI = 'mongodb://192.168.1.105/'
 MONGO_DATABASE = 'geospider'
 MONGO_COLLECTION = 'news'
 ROBOTSTXT_OBEY = False
