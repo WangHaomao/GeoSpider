@@ -3905,3 +3905,131 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
     % (callback.__module__, view_name))
 ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-09-03 12:16:55,865 [Thread-3:139788672808704] [django.request:182] [WARNING]- Not Found: /favicon.ico
+2017-09-03 12:33:25,331 [Thread-59:139788681201408] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 763, in export
+    filename =  ecommerce_export(taskdid)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 708, in ecommerce_export
+    task_message = Task.objects.filter(id=res_taskid).get(0)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-09-03 12:35:52,353 [Thread-67:139788292187904] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 763, in export
+    filename =  ecommerce_export(taskdid)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 708, in ecommerce_export
+    task_message = Task.objects.filter(id=res_taskid).get(0)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-09-03 12:40:50,389 [Thread-70:139788654974720] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 763, in export
+    filename =  ecommerce_export(taskdid)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 708, in ecommerce_export
+    task_message = Task.objects.filter(id=res_taskid).get(0)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-09-03 12:41:58,880 [Thread-74:139788654974720] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 763, in export
+    filename =  ecommerce_export(taskdid)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 708, in ecommerce_export
+    task_message = Task.objects.filter(id=res_taskid).get(0)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-09-03 12:43:43,622 [Thread-2:140504632157952] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/export/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 763, in export
+    filename =  ecommerce_export(taskdid)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 708, in ecommerce_export
+    task_message = Task.objects.get(id=res_taskid)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 277, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: Task matching query does not exist.
+2017-09-03 12:57:00,271 [Thread-23:140419768084224] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-09-03 12:57:08,399 [Thread-24:140419768084224] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-09-03 13:01:03,173 [Thread-34:140419768084224] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-09-03 13:10:52,767 [Thread-37:140419749988096] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-09-03 13:10:53,510 [Thread-38:140419741595392] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-09-03 13:11:14,221 [Thread-47:140419518162688] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-09-03 13:12:04,868 [Thread-48:140419518162688] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-09-03 14:20:25,512 [Thread-67:140240010344192] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/layout/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 305, in layout
+    slave_list, status, processnum, t['keywords'])
+  File "/home/kui/work/python/workspace/project/geowind_crawler/crawlermanage/views.py", line 224, in layout_task
+    processnum=processnum, keywords=keyword_list)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/queryset/base.py", line 294, in create
+    return self._document(**kwargs).save(force_insert=True)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/document.py", line 323, in save
+    self.validate(clean=clean)
+  File "/usr/local/lib/python2.7/dist-packages/mongoengine/base/document.py", line 402, in validate
+    raise ValidationError(message, errors=errors)
+ValidationError: ValidationError (Task:None) (String value is too long: ['taskname'])
+2017-09-03 14:24:57,613 [Thread-102:140240010344192] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.
+2017-09-03 14:25:36,746 [Thread-103:140240010344192] [django.request:284] [ERROR]- Internal Server Error: /crawlermanage/settings/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view crawlermanage.views.settings didn't return an HttpResponse object. It returned None instead.

@@ -282,7 +282,7 @@ def layout(request):
                 blog_url_list = j['starturls'].split(',')
             elif j['webtype'] == 'ecommerce':
                 ecommerce_url_list = j['starturls'].split(',')
-            elif j['webtype'] == 'ecommerce_keywords':
+            else:
                 ecommerce_keywords_json.append(j)
 
         logger.info(ecommerce_keywords_json)
@@ -300,6 +300,7 @@ def layout(request):
             layout_task('ecommerce_' + taskname, ecommerce_url_list, starttime, endtime, 'ecommerce', describe, slave_list, status,
                     processnum, '')
         for t in ecommerce_keywords_json:
+            logger.info(t)
             layout_task('ecommerce_' + taskname+'('+ t['keywords'] +')', t['starturls'].split(','), starttime, endtime, 'ecommerce', describe,
                         slave_list, status, processnum, t['keywords'])
 
@@ -694,8 +695,6 @@ def news_and_blog_export(res_taskid,is_news):
     wbook.save(filepath)
     return filepath
 def ecommerce_export(res_taskid):
-    res_taskid = '5960a659c5d5860f15e6d470'
-
 
     goodslist = Goods.objects.filter(taskid=res_taskid)
     storeslist = Stores.objects.filter(taskid=res_taskid)
@@ -705,7 +704,7 @@ def ecommerce_export(res_taskid):
     goods_sheet = wbook.add_sheet('goods')
     stores_sheet = wbook.add_sheet('stores')
 
-    task_message = Task.objects.filter(id=res_taskid).get(0)
+    task_message = Task.objects.get(id=res_taskid)
     title = task_message['taskname'] + '(' + ','.join(list(task_message['starturls'])) + ')'
 
 

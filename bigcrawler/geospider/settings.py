@@ -42,16 +42,16 @@ LOG_LEVEL= 'DEBUG'
 #除去一些没必要的日志输出
 import logging
 logging.getLogger('cluster.matrix').setLevel(logging.WARNING)
-logging.getLogger('chardet.charsetprober').setLevel(logging.WARNING)
+logging.getLogger('chardet.charsetprober').setLevel(logging.ERROR)
 
 
-import logging
-from scrapy.utils.log import configure_logging
-
-configure_logging(install_root_handler=False)
-logging.basicConfig(
-    filename='log.txt',
-    filemode = 'a',
-    format='%(levelname)s: %(message)s',
-    level=logging.DEBUG
-)
+# import logging
+# from scrapy.utils.log import configure_logging
+#
+# configure_logging(install_root_handler=False)
+# logging.basicConfig(
+#     filename='log.txt',
+#     filemode = 'a',
+#     format='%(levelname)s: %(message)s',
+#     level=logging.DEBUG
+# )

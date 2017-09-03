@@ -28,8 +28,7 @@ from geospider.utils.mongodb_helper import IPProxyDao, connect_mongodb
 class ProxyMiddleWare(HttpProxyMiddleware):
     def __init__(self,ip=''):
         self.ip = ip
-        mongodb = connect_mongodb()
-        self.db_chief =  IPProxyDao(mongodb)
+        self.db_chief =IPProxyDao()
 
     def process_request(self, request, spider):
         is_use_ip_proxy = False

@@ -140,10 +140,10 @@ def analysis_by_tag_return_goods_message(goods_list_tag, url):
                             max_title_len = len(tag_text)
                             res_title = tag_text
 
-                            print res_title
+                            # print res_title
 
 
-            print "-----------------------one goods-----------------------"
+            # print "-----------------------one goods-----------------------"
             res_goods_dict['title'] = res_title
             res_goods_dict['price'] = res_price
             res_goods_dict['pic_url'] = res_pic_url
@@ -203,7 +203,7 @@ def analysis_by_tag(goods_list_tag, url):
     # debug
     pprint.pprint(res_max_list)
     # urls_clustering(res_max_list)
-    print len(res_max_list)
+    # print len(res_max_list)
 
     return res_max_list
 
@@ -339,7 +339,7 @@ def analysis_json_data(url, soup):
             if (tmp_len > maxlen):
                 maxlen = tmp_len
                 shop_json = x
-    print "json--%s" % shop_json
+    # print "json--%s" % shop_json
     json_praser = json.loads(shop_json)
     get_json_path(json_praser, "")
 
@@ -358,8 +358,8 @@ def analysis_json_data(url, soup):
                 max_path_len = second_dic[tmp_str]
                 max_path_str = tmp_str
 
-    print max_path_str
-    print len(max_path_str.split('/'))
+    # print max_path_str
+    # print len(max_path_str.split('/'))
 
     def not_empty(s):
         return s and s.strip()
@@ -390,22 +390,22 @@ def analysis_json_data(url, soup):
 
             if ("price" in key and res_goods_dic.has_key('price') is False):
                 res_goods_dic['price'] = value
-                print value
+                # print value
             elif ("title" in key and res_goods_dic.has_key('title') is False):
                 res_goods_dic['title'] = re.sub('(?is)<.*?>', '', value)
-                print value
+                # print value
             elif ("detail" in key and res_goods_dic.has_key('detail_url') is False):
-                print value, key
+                # print value, key
                 res_goods_dic['detail_url'] = url_sifter(url, value)
                 # detail_urls_list.append(url_sifter(url, value))
             # elif("comment" in key):
             #     print value
             elif ((("img" in key) or ('pic' in key )or (".jpg" in value) or ('.png' in value) and res_goods_dic.has_key('pic_url') is False)):
                 res_goods_dic['pic_url'] = pic_url_sifter(url,value)
-                print value
+                # print value
                 # pic_urls_list.append(url_sifter(url, value))
         res_goods_dic_list.append(res_goods_dic)
-        print "-------------------"
+        # print "-------------------"
     return res_goods_dic_list
 
 

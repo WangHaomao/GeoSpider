@@ -445,6 +445,11 @@ http://news.sohu.com"></textarea>
   $("#submit").click(function() {
 
     var data = $("#table").bootstrapTable('getData');
+    
+    if(data.length==0){
+      alert("请输入URL")
+      return;
+    }
     console.log(data)
 
     var news_req = new Set();
@@ -502,15 +507,13 @@ http://news.sohu.com"></textarea>
       all_data = all_data + ecommerce_str + ',';
     } 
     for(var i=0; i<ecommerce_keywords_data.length; i++) {
-        var temp_set = get_url(data[i].url);
+        var temp_set = get_url(ecommerce_keywords_data[i].url);
         var temp = '{"webtype":"ecommerce_keywords","starturls":"'+set_to_str(temp_set)+'","keywords":"'+ecommerce_keywords_data[i].keywords+'"}';
         all_data = all_data + temp + ',';
     }
     all_data = all_data.substring(0, all_data.length-1);
     
     all_data = '[' + all_data + ']';
-
-  
 
     $.post('/crawlermanage/layout/', {
         taskname:taskname,

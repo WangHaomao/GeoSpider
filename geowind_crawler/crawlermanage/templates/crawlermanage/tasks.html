@@ -372,7 +372,7 @@
                                     {%endifequal%}
 
 
-                                        结果</a><span> &nbsp;</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">管理</a></td>
+                                        结果</a><span>-</span><a href="{%url 'taskdetail'%}?taskid={{i.id}}">详情</a><span>-</span><a href="{%url 'export'%}?taskid={{i.id}}">导出</a></td>
                               </tr>
                               {% endfor %}
                             </tbody>
